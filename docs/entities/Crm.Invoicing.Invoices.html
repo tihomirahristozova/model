@@ -94,6 +94,11 @@ Default Search Member:<br>
 <li><a href="Crm.Invoicing.Invoices.html">Crm.Invoicing.Invoices</a>
 <ul>
 <li><a href="Crm.Invoicing.InvoiceLines.html">Crm.Invoicing.InvoiceLines</a></li>
+<li><a href="Finance.Excise.ExciseAdministrativeDocuments.html">Finance.Excise.ExciseAdministrativeDocuments</a>
+<ul>
+<li><a href="Finance.Excise.ExciseAdministrativeDocumentLines.html">Finance.Excise.ExciseAdministrativeDocumentLines</a></li>
+</ul>
+</li>
 <li><a href="General.DocumentAmounts.html">General.DocumentAmounts</a>
 <ul>
 <li><a href="General.DocumentAmountReferencedDocuments.html">General.DocumentAmountReferencedDocuments</a></li>
@@ -472,6 +477,11 @@ Default Search Member:<br>
 <td>DocumentAmounts</td>
 <td><a href="General.DocumentAmounts.html">DocumentAmounts</a></td>
 <td>List of <code>DocumentAmount</code>(General.DocumentAmounts.md) child objects, based on the <code>General.DocumentAmount.Document</code>(General.DocumentAmounts.md#document) back reference (Inherited from <a href="General.Documents.html">Documents</a>)</td>
+</tr>
+<tr>
+<td>ExciseAdministrative<br>Documents</td>
+<td><a href="Finance.Excise.ExciseAdministrativeDocuments.html">ExciseAdministrativeDocuments</a></td>
+<td>List of <code>ExciseAdministrative&lt;br /&gt;Document</code>(Finance.Excise.ExciseAdministrative<br>Documents.md) child objects, based on the <code>Finance.Excise.ExciseAdministrative&lt;br /&gt;Document.Document</code>(Finance.Excise.ExciseAdministrative<br>Documents.md#document) back reference (Inherited from <a href="General.Documents.html">Documents</a>)</td>
 </tr>
 <tr>
 <td>FileAttachments</td>
@@ -1295,22 +1305,22 @@ if set to true the current document is included.<br>
 <h2 id="business-rules">Business Rules</h2>
 <ul>
 <li><a href="../business-rules/R27060.html">R27060 Invoice - Has Lines</a></li>
+<li><a href="../business-rules/R27061.html">R27061 Invoice - Delivery Date</a></li>
+<li><a href="../business-rules/R27063.html">R27063 Invoice - Product Is Stocked</a></li>
 <li><a href="../business-rules/R27212.html">R27212 Invoice - Line Fixed Measurement Ratios</a></li>
 <li><a href="../business-rules/R27300.html">R27300 Invoice - Product Is Fixed Asset</a></li>
-<li><a href="../business-rules/R27451.html">R27451 Invoice - Line Amount Sign Restriction</a></li>
 <li><a href="../business-rules/R27456.html">R27456 Invoice - Check For Over Invoiced Quantity</a></li>
-<li><a href="../business-rules/R27519.html">R27519 Invoice - Line Serial Number</a></li>
 <li><a href="../business-rules/R28121.html">R28121 Invoice - Parent Sales Order Line</a></li>
+<li><a href="../business-rules/R28122.html">R28122 Invoice - Automatic Order Linking</a></li>
 <li><a href="../business-rules/R28177.html">R28177 Invoice - Total Amount Sign Restriction</a></li>
-<li><a href="../business-rules/R28258.html">R28258 Invoice - Set VAT Deviation</a></li>
 <li><a href="../business-rules/R31203.html">R31203 Invoice - Deal Type Late Default</a></li>
 <li>...</li>
 </ul>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>
 <ul>
+<li><a href="../business-rules/R30383-10.html">R30383-10 Invoice - Set VAT Cash Reporting Mode</a></li>
 <li><a href="../business-rules/R30383-11.html">R30383-11 Invoice - Set Payment Type</a></li>
 <li><a href="../business-rules/R30383-12.html">R30383-12 Invoice - Set Payment Type Description</a></li>
-<li><a href="../business-rules/R30383-13.html">R30383-13 Invoice - Set Payment Account</a></li>
 <li><a href="../business-rules/R30383-17.html">R30383-17 Invoice - Set To Party</a></li>
 <li><a href="../business-rules/R30383-18.html">R30383-18 Invoice - Convert Line Prices</a></li>
 <li><a href="../business-rules/R30383-31.html">R30383-31 Invoice - Set Deal Type</a></li>

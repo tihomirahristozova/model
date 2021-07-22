@@ -145,6 +145,11 @@ Aggregate Root:<br>
 <td>The cargo type supported by this transportation vehicle. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
+<td><a href="Logistics.Shipment.TransportationVehicles.html#carrier">Carrier</a></td>
+<td><a href="Logistics.Shipment.Carriers.html">Carriers</a> (nullable)</td>
+<td>The carrier, operating the vehicle. null for our own vehicles. <code>Filter(multi eq)</code></td>
+</tr>
+<tr>
 <td><a href="Logistics.Shipment.TransportationVehicles.html#enterprisecompany">EnterpriseCompany</a></td>
 <td><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a></td>
 <td>The enterprise company to which the transportation vehicle will be bound. <code>Required</code> <code>Filter(multi eq)</code></td>
@@ -194,6 +199,10 @@ Aggregate Root:<br>
 <h3 id="cargotype">CargoType</h3>
 <p>The cargo type supported by this transportation vehicle. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Logistics.Shipment.CargoTypes.html">CargoTypes</a></strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<h3 id="carrier">Carrier</h3>
+<p>The carrier, operating the vehicle. null for our own vehicles. <code>Filter(multi eq)</code></p>
+<p><em>Type</em>: <strong><a href="Logistics.Shipment.Carriers.html">Carriers</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="enterprisecompany">EnterpriseCompany</h3>
 <p>The enterprise company to which the transportation vehicle will be bound. <code>Required</code> <code>Filter(multi eq)</code></p>

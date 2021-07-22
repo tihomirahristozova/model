@@ -36,6 +36,7 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [CargoType](Logistics.Shipment.TransportationVehicles.md#cargotype) | [CargoTypes](Logistics.Shipment.CargoTypes.md) | The cargo type supported by this transportation vehicle. `Required` `Filter(multi eq)` |
+| [Carrier](Logistics.Shipment.TransportationVehicles.md#carrier) | [Carriers](Logistics.Shipment.Carriers.md) (nullable) | The carrier, operating the vehicle. null for our own vehicles. `Filter(multi eq)` |
 | [EnterpriseCompany](Logistics.Shipment.TransportationVehicles.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company to which the transportation vehicle will be bound. `Required` `Filter(multi eq)` |
 | [TransportationMode](Logistics.Shipment.TransportationVehicles.md#transportationmode) | [TransportationModes](Logistics.Shipment.TransportationModes.md) | The mode of transportation provided by this transportation vehicle. The same base vehicle might be used for more than one mode. `Required` `Filter(multi eq)` |
 | [Vehicle](Logistics.Shipment.TransportationVehicles.md#vehicle) | [Vehicles](Applications.Fleet.Vehicles.md) | The definition of the base vehicle. `Required` `Filter(multi eq)` `Owner` |
@@ -93,6 +94,13 @@ _Maximum Length_: **2147483647**
 The cargo type supported by this transportation vehicle. `Required` `Filter(multi eq)`
 
 _Type_: **[CargoTypes](Logistics.Shipment.CargoTypes.md)**  
+_Supported Filters_: **Equals, EqualsIn**  
+
+### Carrier
+
+The carrier, operating the vehicle. null for our own vehicles. `Filter(multi eq)`
+
+_Type_: **[Carriers](Logistics.Shipment.Carriers.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### EnterpriseCompany

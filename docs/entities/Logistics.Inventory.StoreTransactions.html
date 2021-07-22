@@ -95,6 +95,11 @@ Default Search Member:<br>
 <ul>
 <li><a href="Logistics.Inventory.StoreTransactionLines.html">Logistics.Inventory.StoreTransactionLines</a></li>
 <li><a href="Logistics.Inventory.TransactionCostCorrectionsSummary.html">Logistics.Inventory.TransactionCostCorrectionsSummary</a></li>
+<li><a href="Finance.Excise.ExciseAdministrativeDocuments.html">Finance.Excise.ExciseAdministrativeDocuments</a>
+<ul>
+<li><a href="Finance.Excise.ExciseAdministrativeDocumentLines.html">Finance.Excise.ExciseAdministrativeDocumentLines</a></li>
+</ul>
+</li>
 <li><a href="General.DocumentAmounts.html">General.DocumentAmounts</a>
 <ul>
 <li><a href="General.DocumentAmountReferencedDocuments.html">General.DocumentAmountReferencedDocuments</a></li>
@@ -418,6 +423,11 @@ Default Search Member:<br>
 <td>DocumentAmounts</td>
 <td><a href="General.DocumentAmounts.html">DocumentAmounts</a></td>
 <td>List of <code>DocumentAmount</code>(General.DocumentAmounts.md) child objects, based on the <code>General.DocumentAmount.Document</code>(General.DocumentAmounts.md#document) back reference (Inherited from <a href="General.Documents.html">Documents</a>)</td>
+</tr>
+<tr>
+<td>ExciseAdministrative<br>Documents</td>
+<td><a href="Finance.Excise.ExciseAdministrativeDocuments.html">ExciseAdministrativeDocuments</a></td>
+<td>List of <code>ExciseAdministrative&lt;br /&gt;Document</code>(Finance.Excise.ExciseAdministrative<br>Documents.md) child objects, based on the <code>Finance.Excise.ExciseAdministrative&lt;br /&gt;Document.Document</code>(Finance.Excise.ExciseAdministrative<br>Documents.md#document) back reference (Inherited from <a href="General.Documents.html">Documents</a>)</td>
 </tr>
 <tr>
 <td>FileAttachments</td>
@@ -1007,16 +1017,16 @@ if set to true the current document is included.<br>
 </ul>
 <h2 id="business-rules">Business Rules</h2>
 <ul>
+<li><a href="../business-rules/R18067.html">R18067 StoreTransaction - Store Enterprise Company</a></li>
+<li><a href="../business-rules/R26709.html">R26709 StoreTransaction - Line Product Use Lots</a></li>
 <li><a href="../business-rules/R27243.html">R27243  StoreTransaction - Line Quantity Base</a></li>
+<li><a href="../business-rules/R27305.html">R27305 StoreTransaction - Parent Store Order Movement Type</a></li>
 <li><a href="../business-rules/R27322.html">R27322 StoreTransaction - Parent Store Order Line</a></li>
 <li><a href="../business-rules/R28301.html">R28301 StoreTransaction - Line Lot Keep Product</a></li>
 <li><a href="../business-rules/R28370.html">R28370 StoreTransaction - Can User Release Issue Receipt Transaction</a></li>
-<li><a href="../business-rules/R28660.html">R28660 StoreTransaction - Product Is Stocked</a></li>
-<li><a href="../business-rules/R29157.html">R29157 StoreTransaction - Set Quantity Base 2</a></li>
 <li><a href="../business-rules/R29159.html">R29159 StoreTransaction -  Is Quantity Base 2 Null</a></li>
 <li><a href="../business-rules/R29161.html">R29161 StoreTransaction - Line Quantity Base 2</a></li>
 <li><a href="../business-rules/R29163.html">R29163 StoreTransaction - Line Quantity Base 2 Has The Same Sign</a></li>
-<li><a href="../business-rules/R31412.html">R31412 StoreTransaction - Check Line Store Bin</a></li>
 <li>...</li>
 </ul>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>

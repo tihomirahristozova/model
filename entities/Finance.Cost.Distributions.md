@@ -22,6 +22,8 @@ Aggregate Tree
   * [Finance.Cost.DistributionCosts](Finance.Cost.DistributionCosts.md)  
   * [Finance.Cost.DistributionOutputs](Finance.Cost.DistributionOutputs.md)  
   * [Finance.Cost.DistributionResults](Finance.Cost.DistributionResults.md)  
+  * [Finance.Excise.ExciseAdministrativeDocuments](Finance.Excise.ExciseAdministrativeDocuments.md)  
+    * [Finance.Excise.ExciseAdministrativeDocumentLines](Finance.Excise.ExciseAdministrativeDocumentLines.md)  
   * [General.DocumentAmounts](General.DocumentAmounts.md)  
     * [General.DocumentAmountReferencedDocuments](General.DocumentAmountReferencedDocuments.md)  
   * [General.DocumentComments](General.DocumentComments.md)  
@@ -94,6 +96,7 @@ Aggregate Tree
 | Costs | [DistributionCosts](Finance.Cost.DistributionCosts.md) | List of `DistributionCost`(Finance.Cost.DistributionCosts.md) child objects, based on the `Finance.Cost.DistributionCost.CostDistribution`(Finance.Cost.DistributionCosts.md#costdistribution) back reference 
 | DistributedAmounts | [DocumentDistributedAmounts](General.DocumentDistributedAmounts.md) | List of `DocumentDistributed<br />Amount`(General.DocumentDistributedAmounts.md) child objects, based on the `General.DocumentDistributedAmount.Document`(General.DocumentDistributedAmounts.md#document) back reference (Inherited from [Documents](General.Documents.md)) 
 | DocumentAmounts | [DocumentAmounts](General.DocumentAmounts.md) | List of `DocumentAmount`(General.DocumentAmounts.md) child objects, based on the `General.DocumentAmount.Document`(General.DocumentAmounts.md#document) back reference (Inherited from [Documents](General.Documents.md)) 
+| ExciseAdministrative<br />Documents | [ExciseAdministrativeDocuments](Finance.Excise.ExciseAdministrativeDocuments.md) | List of `ExciseAdministrative<br />Document`(Finance.Excise.ExciseAdministrative<br />Documents.md) child objects, based on the `Finance.Excise.ExciseAdministrative<br />Document.Document`(Finance.Excise.ExciseAdministrative<br />Documents.md#document) back reference (Inherited from [Documents](General.Documents.md)) 
 | FileAttachments | [DocumentFileAttachments](General.DocumentFileAttachments.md) | List of `DocumentFileAttachment`(General.DocumentFileAttachments.md) child objects, based on the `General.DocumentFileAttachment.Document`(General.DocumentFileAttachments.md#document) back reference (Inherited from [Documents](General.Documents.md)) 
 | LineAmounts | [DocumentLineAmounts](General.DocumentLineAmounts.md) | List of `DocumentLineAmount`(General.DocumentLineAmounts.md) child objects, based on the `General.DocumentLineAmount.Document`(General.DocumentLineAmounts.md#document) back reference (Inherited from [Documents](General.Documents.md)) 
 | Outputs | [DistributionOutputs](Finance.Cost.DistributionOutputs.md) | List of `DistributionOutput`(Finance.Cost.DistributionOutputs.md) child objects, based on the `Finance.Cost.DistributionOutput.CostDistribution`(Finance.Cost.DistributionOutputs.md#costdistribution) back reference 

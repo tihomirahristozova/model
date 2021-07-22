@@ -16,6 +16,7 @@ A vehicle, which is used for transportation. One actual vehicle might be defined
 | Name | Type | Description |
 | - | - | --- |
 |[Cargo_Type_Id](#cargo_type_id)|`uniqueidentifier` |The cargo type supported by this transportation vehicle.|
+|[Carrier_Id](#carrier_id)|`uniqueidentifier` |The carrier, operating the vehicle. NULL for our own vehicles.|
 |[Code](#code)|`nvarchar(16)` |The unique code (or call sign) of this transportation vehicle.|
 |[Enterprise_Company_Id](#enterprise_company_id)|`uniqueidentifier` |The enterprise company to which the transportation vehicle will be bound.|
 |[Max_Cargo_Weight_Kg](#max_cargo_weight_kg)|`int` |The maximum weight of the cargo (in kg), which can be transported. NULL when this is unknown and no limit should be enforced.|
@@ -64,6 +65,43 @@ The cargo type supported by this transportation vehicle.
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+
+### Carrier_Id
+
+
+The carrier, operating the vehicle. NULL for our own vehicles.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|Referenced Table|[Log_Carriers](Log_Carriers.md)|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Carrier_Id - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
 
 ### Code
 

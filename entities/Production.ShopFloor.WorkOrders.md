@@ -23,6 +23,8 @@ Aggregate Tree
   * [Production.ShopFloor.WorkOrderItems](Production.ShopFloor.WorkOrderItems.md)  
     * [Production.ShopFloor.WorkOrderItemOperations](Production.ShopFloor.WorkOrderItemOperations.md)  
       * [Production.Resources.Load](Production.Resources.Load.md)  
+  * [Finance.Excise.ExciseAdministrativeDocuments](Finance.Excise.ExciseAdministrativeDocuments.md)  
+    * [Finance.Excise.ExciseAdministrativeDocumentLines](Finance.Excise.ExciseAdministrativeDocumentLines.md)  
   * [General.DocumentAmounts](General.DocumentAmounts.md)  
     * [General.DocumentAmountReferencedDocuments](General.DocumentAmountReferencedDocuments.md)  
   * [General.DocumentComments](General.DocumentComments.md)  
@@ -101,6 +103,7 @@ Aggregate Tree
 | Comments | [DocumentComments](General.DocumentComments.md) | List of `DocumentComment`(General.DocumentComments.md) child objects, based on the `General.DocumentComment.Document`(General.DocumentComments.md#document) back reference (Inherited from [Documents](General.Documents.md)) 
 | DistributedAmounts | [DocumentDistributedAmounts](General.DocumentDistributedAmounts.md) | List of `DocumentDistributed<br />Amount`(General.DocumentDistributedAmounts.md) child objects, based on the `General.DocumentDistributedAmount.Document`(General.DocumentDistributedAmounts.md#document) back reference (Inherited from [Documents](General.Documents.md)) 
 | DocumentAmounts | [DocumentAmounts](General.DocumentAmounts.md) | List of `DocumentAmount`(General.DocumentAmounts.md) child objects, based on the `General.DocumentAmount.Document`(General.DocumentAmounts.md#document) back reference (Inherited from [Documents](General.Documents.md)) 
+| ExciseAdministrative<br />Documents | [ExciseAdministrativeDocuments](Finance.Excise.ExciseAdministrativeDocuments.md) | List of `ExciseAdministrative<br />Document`(Finance.Excise.ExciseAdministrative<br />Documents.md) child objects, based on the `Finance.Excise.ExciseAdministrative<br />Document.Document`(Finance.Excise.ExciseAdministrative<br />Documents.md#document) back reference (Inherited from [Documents](General.Documents.md)) 
 | FileAttachments | [DocumentFileAttachments](General.DocumentFileAttachments.md) | List of `DocumentFileAttachment`(General.DocumentFileAttachments.md) child objects, based on the `General.DocumentFileAttachment.Document`(General.DocumentFileAttachments.md#document) back reference (Inherited from [Documents](General.Documents.md)) 
 | ItemIngredients | [WorkOrderItemIngredients](Production.ShopFloor.WorkOrderItemIngredients.md) | List of `WorkOrderItemIngredient`(Production.ShopFloor.WorkOrderItemIngredients.md) child objects, based on the `Production.ShopFloor.WorkOrderItemIngredient.WorkOrder`(Production.ShopFloor.WorkOrderItemIngredients.md#workorder) back reference 
 | Items | [WorkOrderItems](Production.ShopFloor.WorkOrderItems.md) | List of `WorkOrderItem`(Production.ShopFloor.WorkOrderItems.md) child objects, based on the `Production.ShopFloor.WorkOrderItem.WorkOrder`(Production.ShopFloor.WorkOrderItems.md#workorder) back reference 

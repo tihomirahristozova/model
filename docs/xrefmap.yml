@@ -628,6 +628,12 @@ references:
 - uid: Finance.Excise
   name: Finance.Excise Namespace
   href: entities/Finance.Excise.html
+- uid: Finance.Excise.ExciseAdministrativeDocumentLines
+  name: Finance.Excise.ExciseAdministrativeDocumentLines Entity
+  href: entities/Finance.Excise.ExciseAdministrativeDocumentLines.html
+- uid: Finance.Excise.ExciseAdministrativeDocuments
+  name: Finance.Excise.ExciseAdministrativeDocuments Entity
+  href: entities/Finance.Excise.ExciseAdministrativeDocuments.html
 - uid: Finance.Excise.ExciseOperationTypes
   name: Finance.Excise.ExciseOperationTypes Entity
   href: entities/Finance.Excise.ExciseOperationTypes.html

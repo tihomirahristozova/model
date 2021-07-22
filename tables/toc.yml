@@ -418,6 +418,10 @@
 - name: Exc
   href: Exc.md
   items:
+  - name: Exc_Excise_Administrative_Document_Lines
+    href: Exc_Excise_Administrative_Document_Lines.md
+  - name: Exc_Excise_Administrative_Documents
+    href: Exc_Excise_Administrative_Documents.md
   - name: Exc_Excise_Operation_Types
     href: Exc_Excise_Operation_Types.md
   - name: Exc_Measuring_Transactions

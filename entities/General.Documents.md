@@ -18,6 +18,8 @@ An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a
 
 Aggregate Tree  
 * [General.Documents](General.Documents.md)  
+  * [Finance.Excise.ExciseAdministrativeDocuments](Finance.Excise.ExciseAdministrativeDocuments.md)  
+    * [Finance.Excise.ExciseAdministrativeDocumentLines](Finance.Excise.ExciseAdministrativeDocumentLines.md)  
   * [General.DocumentAmounts](General.DocumentAmounts.md)  
     * [General.DocumentAmountReferencedDocuments](General.DocumentAmountReferencedDocuments.md)  
   * [General.DocumentComments](General.DocumentComments.md)  
@@ -86,6 +88,7 @@ Aggregate Tree
 | Comments | [DocumentComments](General.DocumentComments.md) | List of `DocumentComment`(General.DocumentComments.md) child objects, based on the `General.DocumentComment.Document`(General.DocumentComments.md#document) back reference 
 | DistributedAmounts | [DocumentDistributedAmounts](General.DocumentDistributedAmounts.md) | List of `DocumentDistributed<br />Amount`(General.DocumentDistributedAmounts.md) child objects, based on the `General.DocumentDistributedAmount.Document`(General.DocumentDistributedAmounts.md#document) back reference 
 | DocumentAmounts | [DocumentAmounts](General.DocumentAmounts.md) | List of `DocumentAmount`(General.DocumentAmounts.md) child objects, based on the `General.DocumentAmount.Document`(General.DocumentAmounts.md#document) back reference 
+| ExciseAdministrative<br />Documents | [ExciseAdministrativeDocuments](Finance.Excise.ExciseAdministrativeDocuments.md) | List of `ExciseAdministrative<br />Document`(Finance.Excise.ExciseAdministrative<br />Documents.md) child objects, based on the `Finance.Excise.ExciseAdministrative<br />Document.Document`(Finance.Excise.ExciseAdministrative<br />Documents.md#document) back reference 
 | FileAttachments | [DocumentFileAttachments](General.DocumentFileAttachments.md) | List of `DocumentFileAttachment`(General.DocumentFileAttachments.md) child objects, based on the `General.DocumentFileAttachment.Document`(General.DocumentFileAttachments.md#document) back reference 
 | LineAmounts | [DocumentLineAmounts](General.DocumentLineAmounts.md) | List of `DocumentLineAmount`(General.DocumentLineAmounts.md) child objects, based on the `General.DocumentLineAmount.Document`(General.DocumentLineAmounts.md#document) back reference 
 | Prints | [DocumentPrints](General.DocumentPrints.md) | List of `DocumentPrint`(General.DocumentPrints.md) child objects, based on the `General.DocumentPrint.Document`(General.DocumentPrints.md#document) back reference 
