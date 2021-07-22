@@ -90,7 +90,11 @@
 </tr>
 <tr>
 <td><strong>Attribute</strong></td>
-<td>AmountToPay</td>
+<td>
+<ul>
+<li></li>
+</ul>
+</td>
 </tr>
 <tr>
 <td><strong>Layer</strong></td>
@@ -112,10 +116,15 @@
 <td><strong>Action</strong></td>
 <td>Validate that:
 <br><br>
-If (SalesOrderPaymentPlan[SalesOrder].Count() &gt; 0)
+If ((SalesOrder.SalesOrderPaymentPlan.Count() &gt; 0) &amp;&amp; (SalesOrder.AmountToPay &gt;= 0))
 <br><br>
-SUM(SalesOrderPaymentPlan[SalesOrder].Amount) &gt;= AmountToPay *
+SUM (SalesOrder.SalesOrderPaymentPlan.Amount) &gt;= SalesOrder.AmountToPay *
 <br><br>
+OR
+<br><br>
+If ((SalesOrder.SalesOrderPaymentPlan.Count() &gt; 0) &amp;&amp; (SalesOrder.AmountToPay &lt; 0))
+<br><br>
+SUM (SalesOrder.SalesOrderPaymentPlan.Amount) &lt;= SalesOrder.AmountToPay *
 * for more information see <a class="xref" href="https://erpnetdocs.github.io/tech/modules/crm/sales/amount-to-pay.html">Amount To
 Pay</a></td>
 </tr>
@@ -125,9 +134,9 @@ Pay</a></td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>
-<td>The payment plan of '{DocumentText}' doesn't cover the amount to pay of the sales
-order. The total sum of the lines in the payment plan should be equal or greater than
-the amount to pay of the sales order (it is recommended that the payment plan has a
+<td>The payment plan of '{DocumentText}' does not cover the amount to pay of the sales
+order. The total sum of the lines in the payment plan should be greater than or equal
+to the amount to pay of the sales order (it is recommended that the payment plan has a
 line marked as 'remainder').
 <br><br>
 Please, recalculate the payment plan.</td>
