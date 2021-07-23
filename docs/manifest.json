@@ -9101,6 +9101,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "business-rules/R32246.md",
+      "output": {
+        ".html": {
+          "relative_path": "business-rules/R32246.html",
+          "hash": "LNLKWG6kCOAmk1jhYcjK/A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "data-types.md",
       "output": {
         ".html": {
@@ -10447,7 +10459,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Crm.Invoicing.InvoiceLines.html",
-          "hash": "JdeFF8ovjY6odVbTiJmg+g=="
+          "hash": "dUsNu2nnSH23LN9+GFCvZA=="
         }
       },
       "is_incremental": false,
@@ -10483,7 +10495,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Crm.Invoicing.Invoices.html",
-          "hash": "gb5vFwQK+EJJtDQZ9qbW5A=="
+          "hash": "YWt3NJOx6TKr3lwRlLZnaQ=="
         }
       },
       "is_incremental": false,
@@ -10999,7 +11011,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Crm.Sales.SalesOrders.html",
-          "hash": "4SruihaCzs6PRWmOI52v1Q=="
+          "hash": "xvpNF9s2bayICER1GRUodQ=="
         }
       },
       "is_incremental": false,
@@ -11731,7 +11743,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Finance.Intrastat.Declarations.html",
-          "hash": "Nd3qD2oLo51j7i3aA+ryFw=="
+          "hash": "xXlt9TzOAmoaeqCfmIbZZw=="
         }
       },
       "is_incremental": false,
@@ -11815,7 +11827,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Finance.Payments.PaymentOrders.html",
-          "hash": "BN5GzgQgWsVr6ctaaCbVNQ=="
+          "hash": "1iVT3r7eWd5XVzMtKAICng=="
         }
       },
       "is_incremental": false,
@@ -11899,7 +11911,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Finance.Payments.PaymentTransactions.html",
-          "hash": "x6kFnEO1LomiFsozJxxbRw=="
+          "hash": "uYP9KpMQpJC2LtPg48cutQ=="
         }
       },
       "is_incremental": false,
@@ -11995,7 +12007,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Finance.Vat.Entries.html",
-          "hash": "IDqYcvOI1vBvUM+rTyzD+g=="
+          "hash": "q1YvT3DpPugXE7PKal0dnQ=="
         }
       },
       "is_incremental": false,
@@ -12631,7 +12643,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/General.Documents.html",
-          "hash": "SMfdMkcMHbNBmpqHklaMJQ=="
+          "hash": "uCeYpCg6pK8X3Svrk9Gcwg=="
         }
       },
       "is_incremental": false,
@@ -12991,7 +13003,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/General.Products.Products.html",
-          "hash": "QtlqA+TnKsSWp1XMxgkJtQ=="
+          "hash": "SFRYdrA7C6WKhnph2KqRkQ=="
         }
       },
       "is_incremental": false,
@@ -13543,7 +13555,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Logistics.Inventory.StoreTransactions.html",
-          "hash": "I3nQON4mTzA+RoZz8l1d6Q=="
+          "hash": "yIAuQ56eltQuTRy38a2gPg=="
         }
       },
       "is_incremental": false,
@@ -13735,7 +13747,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Logistics.Procurement.PurchaseInvoiceLines.html",
-          "hash": "QKQlnJ7UMeCMouxeyk8u+A=="
+          "hash": "YR2PpbSd+VyC7bmawB+vNg=="
         }
       },
       "is_incremental": false,
@@ -14551,7 +14563,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Production.ShopFloor.WorkOrderItems.html",
-          "hash": "0qDQNqIE7laYPjK1i7r9jQ=="
+          "hash": "5J51StJLDiC1kvanLPsBNQ=="
         }
       },
       "is_incremental": false,
