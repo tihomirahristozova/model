@@ -1,0 +1,48 @@
+---
+erp.type: business-rule
+erp.entity: Finance.Vat.Entries
+---
+
+# R32246 Entry - Void Apply Date Is Not Part Of Released BG VAT Declaration Period
++----------------------+-----------------------------------------------------------------------------------------------+
+| **Code**             | R32246                                                                                        |
++----------------------+-----------------------------------------------------------------------------------------------+
+| **Entity**           | @Finance.Vat.Entries                                                                          |
++----------------------+-----------------------------------------------------------------------------------------------+
+| **Name**             | VoidApplyDateIsNotPartOfReleasedBGVATDeclarationPeriod                                        |
++----------------------+-----------------------------------------------------------------------------------------------+
+| **Attribute**        | ApplyDate                                                                                     |
++----------------------+-----------------------------------------------------------------------------------------------+
+| **Layer**            | Back-End                                                                                      |
++----------------------+-----------------------------------------------------------------------------------------------+
+| **Events**           | Voiding                                                                                       |
++----------------------+-----------------------------------------------------------------------------------------------+
+| **Priority**         | Normal                                                                                        |
++----------------------+-----------------------------------------------------------------------------------------------+
+| **Modify**           | NO                                                                                            |
++----------------------+-----------------------------------------------------------------------------------------------+
+| **Action**           | If (Entry.State >= 30)                                                                        |
+|                      | <br/><br/>                                                                                    |
+|                      | Validate that:                                                                                |
+|                      | <br/><br/>                                                                                    |
+|                      | BGVATDeclarations [VATPeriodEnd >= Entry.ApplyDate && VATPeriodStart <= Entry.ApplyDate,      |
+|                      | Void == false, State >= 30, BGVATDeclaration.EnterpriseCompany ==                             |
+|                      | Entry.EnterpriseCompany].Count() == 0                                                         |
++----------------------+-----------------------------------------------------------------------------------------------+
+| **Description**      | If a VAT Declaration is released for a certain period, than the user cannot void entries that |
+|                      | are part of the period of the declaration. The releasing of the declaration shows that        |
+|                      | that this is the final version of the declaration and it is sent to the National Revenue      |
+|                      | Agency. No entries must be voided in such VAT period.                                         |                                                
++----------------------+-----------------------------------------------------------------------------------------------+
+| **Message**          | VAT entry '{DocumentText}' cannot be voided because the entry is included in released VAT     |
+|                      | declarations (i.e. there are declarations for VAT periods that include the apply date         | 
+|                      | of the entry).                                                                                |
++----------------------+-----------------------------------------------------------------------------------------------+
+| **Introduced In      |                                                                                               |
+| Version**            |                                                                                               |
++----------------------+-----------------------------------------------------------------------------------------------+
+| **Revocable**        | NO                                                                                            |
++----------------------+-----------------------------------------------------------------------------------------------+
+
+*\* For more information about the Business Rules Documentation Template and a short explanation of each column, see
+topic [System Business Rules](../templates/template-description-system-business-rules.md).*
