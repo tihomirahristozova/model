@@ -13,6 +13,7 @@ User-defined read-only calculated attribute. Entity: Sys_Calculated_Attributes
 | - | - | --- |
 |[Calculated_Attribute_Id](#calculated_attribute_id)|`uniqueidentifier` `PK`||
 |[Caption](#caption)|`nvarchar(512)` `ML`|The multi-language caption, used to display the attribute.|
+|[Hint](#hint)|`nvarchar(max)` `ML`|The hint, which is displayed alongside the attribute.|
 |[Is_Active](#is_active)|`bit` |True if the attribute is activated and added to the repository.|
 |[Name](#name)|`nvarchar(128)` |The unique name of the attribute within the repository.|
 |[Notes](#notes)|`nvarchar(max)` ||
@@ -84,6 +85,43 @@ The multi-language caption, used to display the attribute.
 |UI Width|Medium|
 |User Login|no|
 |Visible|yes|
+
+### Hint
+
+
+The hint, which is displayed alongside the attribute.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|2147483647|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|nvarchar(max) (MultiLanguage) (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Hint - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
+|Like|None|no|no|
 
 ### Is_Active
 
