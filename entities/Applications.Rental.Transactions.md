@@ -20,8 +20,6 @@ An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a
 Aggregate Tree  
 * [Applications.Rental.Transactions](Applications.Rental.Transactions.md)  
   * [Applications.Rental.TransactionLines](Applications.Rental.TransactionLines.md)  
-  * [Finance.Excise.ExciseAdministrativeDocuments](Finance.Excise.ExciseAdministrativeDocuments.md)  
-    * [Finance.Excise.ExciseAdministrativeDocumentLines](Finance.Excise.ExciseAdministrativeDocumentLines.md)  
   * [General.DocumentAmounts](General.DocumentAmounts.md)  
     * [General.DocumentAmountReferencedDocuments](General.DocumentAmountReferencedDocuments.md)  
   * [General.DocumentComments](General.DocumentComments.md)  
@@ -95,7 +93,6 @@ Aggregate Tree
 | Comments | [DocumentComments](General.DocumentComments.md) | List of `DocumentComment`(General.DocumentComments.md) child objects, based on the `General.DocumentComment.Document`(General.DocumentComments.md#document) back reference (Inherited from [Documents](General.Documents.md)) 
 | DistributedAmounts | [DocumentDistributedAmounts](General.DocumentDistributedAmounts.md) | List of `DocumentDistributed<br />Amount`(General.DocumentDistributedAmounts.md) child objects, based on the `General.DocumentDistributedAmount.Document`(General.DocumentDistributedAmounts.md#document) back reference (Inherited from [Documents](General.Documents.md)) 
 | DocumentAmounts | [DocumentAmounts](General.DocumentAmounts.md) | List of `DocumentAmount`(General.DocumentAmounts.md) child objects, based on the `General.DocumentAmount.Document`(General.DocumentAmounts.md#document) back reference (Inherited from [Documents](General.Documents.md)) 
-| ExciseAdministrative<br />Documents | [ExciseAdministrativeDocuments](Finance.Excise.ExciseAdministrativeDocuments.md) | List of `ExciseAdministrative<br />Document`(Finance.Excise.ExciseAdministrative<br />Documents.md) child objects, based on the `Finance.Excise.ExciseAdministrative<br />Document.Document`(Finance.Excise.ExciseAdministrative<br />Documents.md#document) back reference (Inherited from [Documents](General.Documents.md)) 
 | FileAttachments | [DocumentFileAttachments](General.DocumentFileAttachments.md) | List of `DocumentFileAttachment`(General.DocumentFileAttachments.md) child objects, based on the `General.DocumentFileAttachment.Document`(General.DocumentFileAttachments.md#document) back reference (Inherited from [Documents](General.Documents.md)) 
 | LineAmounts | [DocumentLineAmounts](General.DocumentLineAmounts.md) | List of `DocumentLineAmount`(General.DocumentLineAmounts.md) child objects, based on the `General.DocumentLineAmount.Document`(General.DocumentLineAmounts.md#document) back reference (Inherited from [Documents](General.Documents.md)) 
 | Lines | [TransactionLines](Applications.Rental.TransactionLines.md) | List of `TransactionLine`(Applications.Rental.TransactionLines.md) child objects, based on the `Applications.Rental.TransactionLine.RentTransaction`(Applications.Rental.TransactionLines.md#renttransaction) back reference 

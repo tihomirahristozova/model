@@ -255,12 +255,18 @@
       href: Crm.Marketing.BonusPrograms.md
     - name: Campaigns
       href: Crm.Marketing.Campaigns.md
+    - name: CompanySizeClasses
+      href: Crm.Marketing.CompanySizeClasses.md
     - name: DistributionChannels
       href: Crm.Marketing.DistributionChannels.md
     - name: ForecastItems
       href: Crm.Marketing.ForecastItems.md
+    - name: Industries
+      href: Crm.Marketing.Industries.md
     - name: MarketingActivities
       href: Crm.Marketing.MarketingActivities.md
+    - name: MarketingSolutions
+      href: Crm.Marketing.MarketingSolutions.md
     - name: ProductDistributionChannels
       href: Crm.Marketing.ProductDistributionChannels.md
     - name: TargetGroupMembers
@@ -444,8 +450,6 @@
       href: Finance.Excise.ExciseAdministrativeDocumentLines.md
     - name: ExciseAdministrativeDocuments
       href: Finance.Excise.ExciseAdministrativeDocuments.md
-    - name: ExciseOperationTypes
-      href: Finance.Excise.ExciseOperationTypes.md
     - name: MeasuringTransactions
       href: Finance.Excise.MeasuringTransactions.md
     - name: TaxWarehouses

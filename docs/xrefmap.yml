@@ -361,15 +361,24 @@ references:
 - uid: Crm.Marketing.Campaigns
   name: Crm.Marketing.Campaigns Entity
   href: entities/Crm.Marketing.Campaigns.html
+- uid: Crm.Marketing.CompanySizeClasses
+  name: Crm.Marketing.CompanySizeClasses Entity
+  href: entities/Crm.Marketing.CompanySizeClasses.html
 - uid: Crm.Marketing.DistributionChannels
   name: Crm.Marketing.DistributionChannels Entity
   href: entities/Crm.Marketing.DistributionChannels.html
 - uid: Crm.Marketing.ForecastItems
   name: Crm.Marketing.ForecastItems Entity
   href: entities/Crm.Marketing.ForecastItems.html
+- uid: Crm.Marketing.Industries
+  name: Crm.Marketing.Industries Entity
+  href: entities/Crm.Marketing.Industries.html
 - uid: Crm.Marketing.MarketingActivities
   name: Crm.Marketing.MarketingActivities Entity
   href: entities/Crm.Marketing.MarketingActivities.html
+- uid: Crm.Marketing.MarketingSolutions
+  name: Crm.Marketing.MarketingSolutions Entity
+  href: entities/Crm.Marketing.MarketingSolutions.html
 - uid: Crm.Marketing.ProductDistributionChannels
   name: Crm.Marketing.ProductDistributionChannels Entity
   href: entities/Crm.Marketing.ProductDistributionChannels.html

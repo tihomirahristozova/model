@@ -5,7 +5,7 @@
 
 Entity: [Finance.Excise.ExciseAdministrativeDocumentLines](~/entities/Finance.Excise.ExciseAdministrativeDocumentLines.md)
 
-The details of the movement of each excise product for each excise document. Entity: Exc_Excise_Administrative_Document_Lines
+The details of the movement of each excise product for each excise document. Entity: Exc_Excise_Administrative_Document_Lines (Introduced in version 21.1.3.54)
 
 ## Owner Tables Hierarchy
 
@@ -103,6 +103,7 @@ Consecutive line number within the document.
 | Property | Value |
 | - | - |
 |Auto Complete|no|
+|Autoincrement|1|
 |Data Filter|no|
 |Default Value|None|
 |Enter Stop|yes|
@@ -200,6 +201,7 @@ The quantity being sold, in the measurement unit, specified in Quantity Unit.
 |Data Filter|no|
 |Default Value|1|
 |Enter Stop|yes|
+|Format|N3|
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|

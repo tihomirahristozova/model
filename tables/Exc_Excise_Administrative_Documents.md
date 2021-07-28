@@ -5,7 +5,7 @@
 
 Entity: [Finance.Excise.ExciseAdministrativeDocuments](~/entities/Finance.Excise.ExciseAdministrativeDocuments.md)
 
-Represents the data, sent to the customs authorities for the movements of excise goods. Entity: Exc_Excise_Administrative_Documents
+Represents the data, sent to the customs authorities for the movements of excise goods. Entity: Exc_Excise_Administrative_Documents (Introduced in version 21.1.3.54)
 
 ## Owner Tables Hierarchy
 
@@ -83,7 +83,7 @@ The reference code, returned the customs authorities, when the document is expor
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
-|Visible|yes|
+|Visible|no|
 
 #### Document_Id - Supported Filters
 
