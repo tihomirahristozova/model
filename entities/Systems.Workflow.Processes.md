@@ -154,11 +154,11 @@ _Maximum Length_: **64**
 
 ## Business Rules
 
-[!list erp.entity=Systems.Workflow.Processes erp.type=business-rule default-text="None"]
+[!list limit=1000 erp.entity=Systems.Workflow.Processes erp.type=business-rule default-text="None"]
 
 ## Front-End Business Rules
 
-[!list erp.entity=Systems.Workflow.Processes erp.type=front-end-business-rule default-text="None"]
+[!list limit=1000 erp.entity=Systems.Workflow.Processes erp.type=front-end-business-rule default-text="None"]
 
 ## API
 

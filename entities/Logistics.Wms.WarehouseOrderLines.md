@@ -208,11 +208,11 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ## Business Rules
 
-[!list erp.entity=Logistics.Wms.WarehouseOrderLines erp.type=business-rule default-text="None"]
+[!list limit=1000 erp.entity=Logistics.Wms.WarehouseOrderLines erp.type=business-rule default-text="None"]
 
 ## Front-End Business Rules
 
-[!list erp.entity=Logistics.Wms.WarehouseOrderLines erp.type=front-end-business-rule default-text="None"]
+[!list limit=1000 erp.entity=Logistics.Wms.WarehouseOrderLines erp.type=front-end-business-rule default-text="None"]
 
 ## API
 

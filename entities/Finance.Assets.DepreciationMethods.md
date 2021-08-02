@@ -127,11 +127,11 @@ _Default Value_: **True**
 
 ## Business Rules
 
-[!list erp.entity=Finance.Assets.DepreciationMethods erp.type=business-rule default-text="None"]
+[!list limit=1000 erp.entity=Finance.Assets.DepreciationMethods erp.type=business-rule default-text="None"]
 
 ## Front-End Business Rules
 
-[!list erp.entity=Finance.Assets.DepreciationMethods erp.type=front-end-business-rule default-text="None"]
+[!list limit=1000 erp.entity=Finance.Assets.DepreciationMethods erp.type=front-end-business-rule default-text="None"]
 
 ## API
 

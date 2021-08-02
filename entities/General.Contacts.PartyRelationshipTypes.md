@@ -59,11 +59,11 @@ _Maximum Length_: **50**
 
 ## Business Rules
 
-[!list erp.entity=General.Contacts.PartyRelationshipTypes erp.type=business-rule default-text="None"]
+[!list limit=1000 erp.entity=General.Contacts.PartyRelationshipTypes erp.type=business-rule default-text="None"]
 
 ## Front-End Business Rules
 
-[!list erp.entity=General.Contacts.PartyRelationshipTypes erp.type=front-end-business-rule default-text="None"]
+[!list limit=1000 erp.entity=General.Contacts.PartyRelationshipTypes erp.type=front-end-business-rule default-text="None"]
 
 ## API
 

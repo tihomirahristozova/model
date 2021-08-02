@@ -118,11 +118,11 @@ _Maximum Length_: **128**
 
 ## Business Rules
 
-[!list erp.entity=Systems.Core.InformationMessages erp.type=business-rule default-text="None"]
+[!list limit=1000 erp.entity=Systems.Core.InformationMessages erp.type=business-rule default-text="None"]
 
 ## Front-End Business Rules
 
-[!list erp.entity=Systems.Core.InformationMessages erp.type=front-end-business-rule default-text="None"]
+[!list limit=1000 erp.entity=Systems.Core.InformationMessages erp.type=front-end-business-rule default-text="None"]
 
 ## API
 

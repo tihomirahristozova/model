@@ -99,11 +99,11 @@ _Default Value_: **True**
 
 ## Business Rules
 
-[!list erp.entity=Systems.Core.Jobs erp.type=business-rule default-text="None"]
+[!list limit=1000 erp.entity=Systems.Core.Jobs erp.type=business-rule default-text="None"]
 
 ## Front-End Business Rules
 
-[!list erp.entity=Systems.Core.Jobs erp.type=front-end-business-rule default-text="None"]
+[!list limit=1000 erp.entity=Systems.Core.Jobs erp.type=front-end-business-rule default-text="None"]
 
 ## API
 

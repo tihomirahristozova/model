@@ -270,11 +270,11 @@ _Front-End Recalc Expressions:_
 
 ## Business Rules
 
-[!list erp.entity=Production.ShopFloor.WorkOrderItemIngredients erp.type=business-rule default-text="None"]
+[!list limit=1000 erp.entity=Production.ShopFloor.WorkOrderItemIngredients erp.type=business-rule default-text="None"]
 
 ## Front-End Business Rules
 
-[!list erp.entity=Production.ShopFloor.WorkOrderItemIngredients erp.type=front-end-business-rule default-text="None"]
+[!list limit=1000 erp.entity=Production.ShopFloor.WorkOrderItemIngredients erp.type=front-end-business-rule default-text="None"]
 
 ## API
 

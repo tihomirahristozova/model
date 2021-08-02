@@ -70,11 +70,11 @@ _Default Value_: **0**
 
 ## Business Rules
 
-[!list erp.entity=General.Currencies erp.type=business-rule default-text="None"]
+[!list limit=1000 erp.entity=General.Currencies erp.type=business-rule default-text="None"]
 
 ## Front-End Business Rules
 
-[!list erp.entity=General.Currencies erp.type=front-end-business-rule default-text="None"]
+[!list limit=1000 erp.entity=General.Currencies erp.type=front-end-business-rule default-text="None"]
 
 ## API
 

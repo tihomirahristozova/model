@@ -57,11 +57,11 @@ _Supports Order By_: **False**
 
 ## Business Rules
 
-[!list erp.entity=Production.Resources.OperationInstructions erp.type=business-rule default-text="None"]
+[!list limit=1000 erp.entity=Production.Resources.OperationInstructions erp.type=business-rule default-text="None"]
 
 ## Front-End Business Rules
 
-[!list erp.entity=Production.Resources.OperationInstructions erp.type=front-end-business-rule default-text="None"]
+[!list limit=1000 erp.entity=Production.Resources.OperationInstructions erp.type=front-end-business-rule default-text="None"]
 
 ## API
 

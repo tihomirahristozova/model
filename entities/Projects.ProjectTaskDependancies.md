@@ -87,11 +87,11 @@ _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-reference
 
 ## Business Rules
 
-[!list erp.entity=Projects.ProjectTaskDependancies erp.type=business-rule default-text="None"]
+[!list limit=1000 erp.entity=Projects.ProjectTaskDependancies erp.type=business-rule default-text="None"]
 
 ## Front-End Business Rules
 
-[!list erp.entity=Projects.ProjectTaskDependancies erp.type=front-end-business-rule default-text="None"]
+[!list limit=1000 erp.entity=Projects.ProjectTaskDependancies erp.type=front-end-business-rule default-text="None"]
 
 ## API
 

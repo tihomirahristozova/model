@@ -136,11 +136,11 @@ _Default Value_: **CurrentDateTime**
 
 ## Business Rules
 
-[!list erp.entity=Systems.Core.Translations erp.type=business-rule default-text="None"]
+[!list limit=1000 erp.entity=Systems.Core.Translations erp.type=business-rule default-text="None"]
 
 ## Front-End Business Rules
 
-[!list erp.entity=Systems.Core.Translations erp.type=front-end-business-rule default-text="None"]
+[!list limit=1000 erp.entity=Systems.Core.Translations erp.type=front-end-business-rule default-text="None"]
 
 ## API
 

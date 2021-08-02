@@ -93,11 +93,11 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ## Business Rules
 
-[!list erp.entity=Crm.Dealers erp.type=business-rule default-text="None"]
+[!list limit=1000 erp.entity=Crm.Dealers erp.type=business-rule default-text="None"]
 
 ## Front-End Business Rules
 
-[!list erp.entity=Crm.Dealers erp.type=front-end-business-rule default-text="None"]
+[!list limit=1000 erp.entity=Crm.Dealers erp.type=front-end-business-rule default-text="None"]
 
 ## API
 

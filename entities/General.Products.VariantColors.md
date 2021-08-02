@@ -60,11 +60,11 @@ _Supports Order By_: **True**
 
 ## Business Rules
 
-[!list erp.entity=General.Products.VariantColors erp.type=business-rule default-text="None"]
+[!list limit=1000 erp.entity=General.Products.VariantColors erp.type=business-rule default-text="None"]
 
 ## Front-End Business Rules
 
-[!list erp.entity=General.Products.VariantColors erp.type=front-end-business-rule default-text="None"]
+[!list limit=1000 erp.entity=General.Products.VariantColors erp.type=front-end-business-rule default-text="None"]
 
 ## API
 
