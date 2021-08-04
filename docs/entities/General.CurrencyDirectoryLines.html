@@ -154,7 +154,7 @@ Aggregate Root:<br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>1</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
-<code>IIF( ( ( ( ( obj.FromCurrency != null) AndAlso ( obj.CurrencyDirectory.ToCurrency != null)) AndAlso ( obj.FromCurrency == obj.CurrencyDirectory.ToCurrency)) OrElse ( obj.RateDivisor == 0)), 1, obj.RateDivisor)</code></p>
+<code>IIF( ( ( obj.RateDivisor == 0) OrElse ( ( ( obj.FromCurrency != null) AndAlso ( obj.CurrencyDirectory.ToCurrency != null)) AndAlso ( obj.FromCurrency == obj.CurrencyDirectory.ToCurrency))), 1, obj.RateDivisor)</code></p>
 <h3 id="ratemultiplier">RateMultiplier</h3>
 <p>The multiplier for conversion from From_Currency to Directory.To_Currency. <code>Required</code> <code>Default(1)</code></p>
 <p><em>Type</em>: <strong>decimal (18, 6)</strong><br>
@@ -162,7 +162,7 @@ Aggregate Root:<br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>1</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
-<code>IIF( ( ( ( ( obj.FromCurrency != null) AndAlso ( obj.CurrencyDirectory.ToCurrency != null)) AndAlso ( obj.FromCurrency == obj.CurrencyDirectory.ToCurrency)) OrElse ( obj.RateMultiplier == 0)), 1, obj.RateMultiplier)</code></p>
+<code>IIF( ( ( obj.RateMultiplier == 0) OrElse ( ( ( obj.FromCurrency != null) AndAlso ( obj.CurrencyDirectory.ToCurrency != null)) AndAlso ( obj.FromCurrency == obj.CurrencyDirectory.ToCurrency))), 1, obj.RateMultiplier)</code></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="currencydirectory">CurrencyDirectory</h3>
 <p>The <code>CurrencyDirectory</code>(General.CurrencyDirectoryLines.md#currencydirectory) to which this CurrencyDirectoryLine belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>

@@ -446,10 +446,6 @@
   - name: Excise
     href: Finance.Excise.md
     items:
-    - name: ExciseAdministrativeDocumentLines
-      href: Finance.Excise.ExciseAdministrativeDocumentLines.md
-    - name: ExciseAdministrativeDocuments
-      href: Finance.Excise.ExciseAdministrativeDocuments.md
     - name: MeasuringTransactions
       href: Finance.Excise.MeasuringTransactions.md
     - name: TaxWarehouses

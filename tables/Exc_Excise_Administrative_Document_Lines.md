@@ -1,12 +1,6 @@
 # Table Exc_Excise_Administrative_Document_Lines
 
 
-## Entity
-
-Entity: [Finance.Excise.ExciseAdministrativeDocumentLines](~/entities/Finance.Excise.ExciseAdministrativeDocumentLines.md)
-
-The details of the movement of each excise product for each excise document. Entity: Exc_Excise_Administrative_Document_Lines (Introduced in version 21.1.3.54)
-
 ## Owner Tables Hierarchy
 
 * [Exc_Excise_Administrative_Documents](Exc_Excise_Administrative_Documents.md)
