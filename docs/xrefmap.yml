@@ -1039,18 +1039,6 @@ references:
 - uid: General.Sequences
   name: General.Sequences Entity
   href: entities/General.Sequences.html
-- uid: jobs-J30632
-  name: J30632 Notifications - Deletе Old Notifications
-  href: jobs/J30632-notifications-delete-old-notifications.html
-- uid: jobs-J30724
-  name: J30724 Scheduled Document Events - Run Scheduled Events
-  href: jobs/J30724-scheduled-document-events-run-scheduled-events.html
-- uid: jobs-J30777
-  name: J30777 Documents - Document State Change
-  href: jobs/J30777-documents-document-state-change.html
-- uid: jobs-J30903
-  name: J30903 Document Print Images - Deletе Old Document Print Images
-  href: jobs/J30903-document-print-images-delete-old-document-print-images.html
 - uid: Logistics
   name: Logistics Namespace
   href: entities/Logistics.html
@@ -1684,6 +1672,3 @@ references:
 - uid: Systems.Workflow.Routes
   name: Systems.Workflow.Routes Entity
   href: entities/Systems.Workflow.Routes.html
-- uid: template-description-jobs
-  name: template-description-jobs
-  href: templates/template-description-jobs.html

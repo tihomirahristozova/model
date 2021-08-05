@@ -16145,54 +16145,6 @@
       "version": ""
     },
     {
-      "type": "Conceptual",
-      "source_relative_path": "jobs/J30632-notifications-delete-old-notifications.md",
-      "output": {
-        ".html": {
-          "relative_path": "jobs/J30632-notifications-delete-old-notifications.html",
-          "hash": "Zg9NSemXxgZK7yBledqr+Q=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "jobs/J30724-scheduled-document-events-run-scheduled-events.md",
-      "output": {
-        ".html": {
-          "relative_path": "jobs/J30724-scheduled-document-events-run-scheduled-events.html",
-          "hash": "cxPmaTfHX+8/QDxgaZ6NxA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "jobs/J30777-documents-document-state-change.md",
-      "output": {
-        ".html": {
-          "relative_path": "jobs/J30777-documents-document-state-change.html",
-          "hash": "ttHv6pWU/VsvMOZyj0uvLA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "jobs/J30903-document-print-images-delete-old-document-print-images.md",
-      "output": {
-        ".html": {
-          "relative_path": "jobs/J30903-document-print-images-delete-old-document-print-images.html",
-          "hash": "H+2ic9esuQDST5oj9B+/Nw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
       "type": "Resource",
       "source_relative_path": "logo.svg",
       "output": {
@@ -18012,7 +17964,7 @@
       "output": {
         ".html": {
           "relative_path": "tables/Crm_Industries.html",
-          "hash": "A6Ydjs2GXsMQFffhXM8k9w=="
+          "hash": "SReAUqyy3oJ14O6briEs9g=="
         }
       },
       "is_incremental": false,
@@ -23809,18 +23761,6 @@
         ".html": {
           "relative_path": "tables/toc.html",
           "hash": "OXXZnWNm/YH65xF9/MqQ0A=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "templates/template-description-jobs.md",
-      "output": {
-        ".html": {
-          "relative_path": "templates/template-description-jobs.html",
-          "hash": "KfbRQRIGWxyzmKkaNztHEQ=="
         }
       },
       "is_incremental": false,
