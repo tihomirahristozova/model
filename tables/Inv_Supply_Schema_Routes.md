@@ -18,7 +18,7 @@ Obsolete. Not used. Entity: Inv_Supply_Schema_Routes
 |[Destination_Store_Id](#destination_store_id)|`uniqueidentifier` |Obsolete. Not used.|
 |[Notes](#notes)|`nvarchar(254)` ||
 |[Row_Version](#row_version)|`timestamp` ||
-|[Schema_XML](#schema_xml)|`nvarchar(1073741823)` |Obsolete. Not used. (Used by the schematic control)|
+|[Schema_XML](#schema_xml)|`nvarchar(max)` |Obsolete. Not used. (Used by the schematic control)|
 |[Source_Store_Id](#source_store_id)|`uniqueidentifier` |Obsolete. Not used.|
 |[Supply_Schema_Id](#supply_schema_id)|`uniqueidentifier` ||
 |[Supply_Schema_Route_Id](#supply_schema_route_id)|`uniqueidentifier` `PK`||
@@ -130,7 +130,7 @@ Obsolete. Not used. (Used by the schematic control)
 |Enter Stop|yes|
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
-|Max Length|1073741823|
+|Max Length|2147483647|
 |Order|2147483647|
 |Ownership Reference|no|
 |Pasword|no|
@@ -141,7 +141,7 @@ Obsolete. Not used. (Used by the schematic control)
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(1073741823) (Allows NULL)|
+|Type|nvarchar(max) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

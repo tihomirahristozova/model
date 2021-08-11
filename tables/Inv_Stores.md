@@ -30,7 +30,7 @@ Represents the physical warehouses. Entity: Inv_Stores
 |[Party_Id](#party_id)|`uniqueidentifier` |The party of the store. Each store is a party and is stored based on a party definition.|
 |[Responsible_Party_Id](#responsible_party_id)|`uniqueidentifier` |Primary responsible party (usually employee) for the stock in the store.|
 |[Row_Version](#row_version)|`timestamp` ||
-|[Schema_XML](#schema_xml)|`nvarchar(1073741823)` |Obsolete. Not used.|
+|[Schema_XML](#schema_xml)|`nvarchar(max)` |Obsolete. Not used.|
 |[Store_Code](#store_code)|`nvarchar(16)` ||
 |[Store_Group_Id](#store_group_id)|`uniqueidentifier` |The store group, to which this store belongs.|
 |[Store_Name](#store_name)|`nvarchar(254)` `ML`|Name of the store|
@@ -572,7 +572,7 @@ Obsolete. Not used.
 |Enter Stop|yes|
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
-|Max Length|1073741823|
+|Max Length|2147483647|
 |Order|2147483647|
 |Ownership Reference|no|
 |Pasword|no|
@@ -583,7 +583,7 @@ Obsolete. Not used.
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(1073741823) (Allows NULL)|
+|Type|nvarchar(max) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

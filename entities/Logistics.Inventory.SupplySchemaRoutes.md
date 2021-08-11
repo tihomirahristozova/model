@@ -27,7 +27,7 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [Id](Logistics.Inventory.SupplySchemaRoutes.md#id) | guid |  
 | [Notes](Logistics.Inventory.SupplySchemaRoutes.md#notes) | string (254) __nullable__ | Notes for this SupplySchemaRoute. 
-| [SchemaXML](Logistics.Inventory.SupplySchemaRoutes.md#schemaxml) | string (1073741823) __nullable__ | Obsolete. Not used. (Used by the schematic control). 
+| [SchemaXML](Logistics.Inventory.SupplySchemaRoutes.md#schemaxml) | string (max) __nullable__ | Obsolete. Not used. (Used by the schematic control). 
 | [TransitTimeDays](Logistics.Inventory.SupplySchemaRoutes.md#transittimedays) | int32 | Obsolete. Not used. (Time needed for the delivery of the goods using this route). `Required` `Default(0)` 
 
 ## References
@@ -61,10 +61,10 @@ _Maximum Length_: **254**
 
 Obsolete. Not used. (Used by the schematic control).
 
-_Type_: **string (1073741823) __nullable__**  
+_Type_: **string (max) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
-_Maximum Length_: **1073741823**  
+_Maximum Length_: **2147483647**  
 
 ### TransitTimeDays
 

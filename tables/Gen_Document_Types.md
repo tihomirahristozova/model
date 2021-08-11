@@ -21,7 +21,7 @@ List of user-defined document types. Each type has associated system entity (obj
 |[Id](#id)|`uniqueidentifier` `PK`|The unique Id of the document type|
 |[Notes](#notes)|`nvarchar(254)` ||
 |[Row_Version](#row_version)|`timestamp` ||
-|[Schema_XML](#schema_xml)|`nvarchar(1073741823)` |Obsolete. Not used.|
+|[Schema_XML](#schema_xml)|`nvarchar(max)` |Obsolete. Not used.|
 |[Sequence_Id](#sequence_id)|`uniqueidentifier` |The sequence that will be used to give new numbers to the documents of this type|
 |[Transitional_Document](#transitional_document)|`bit` |If checked determines that the documents from this type are automatically managed by the system and don't require management from the users|
 |[Type_Name](#type_name)|`nvarchar(254)` `ML`|Description of the document type|
@@ -363,7 +363,7 @@ Obsolete. Not used.
 |Enter Stop|yes|
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
-|Max Length|1073741823|
+|Max Length|2147483647|
 |Order|2147483647|
 |Ownership Reference|no|
 |Pasword|no|
@@ -374,7 +374,7 @@ Obsolete. Not used.
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(1073741823) (Allows NULL)|
+|Type|nvarchar(max) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

@@ -21,11 +21,11 @@ Each template line contains the posting to a single set of debit and credit acco
 |[Amount_Condition](#amount_condition)|`nvarchar(1)` Allowed: `+`, `-`|Condition for the amount. The line is accounted only when the condition is matched. The condition can be one of: NULL - no condition, the line should be accounted unconditionally; '+' - The amount should be positive; '-' - The amount should be negative. The amount is matched as returned from the source, before applying the Multiplier.|
 |[Amount_Row_Id](#amount_row_id)|`uniqueidentifier` |The id of the row from the amount rowset where the amount is located. NULL means to account one by one for all rows within the rowset|
 |[Amount_Row_Name](#amount_row_name)|`nvarchar(254)` |The name of definition, specified in Amount_Row_Id. NULL means that no Amount_Row_Id is specified or there is no name|
-|[Amount_Source_Filter](#amount_source_filter)|`nvarchar(1073741823)` |Filter that further specifies which rows from the amount rowset determine the amount|
+|[Amount_Source_Filter](#amount_source_filter)|`nvarchar(max)` |Filter that further specifies which rows from the amount rowset determine the amount|
 |[Amount_Source_Name](#amount_source_name)|`nvarchar(64)` |The source rowset for the amount. For example: DocLines, DocHeader, Additional Amounts, Stock Types, etc.|
 |[Credit_Account_Id](#credit_account_id)|`uniqueidentifier` |The account which should be credited|
 |[Debit_Account_Id](#debit_account_id)|`uniqueidentifier` |The account which should be debited|
-|[Filter_XML](#filter_xml)|`nvarchar(1073741823)` |The line is accounted only when the filter is satisfied compared with the source document header|
+|[Filter_XML](#filter_xml)|`nvarchar(max)` |The line is accounted only when the filter is satisfied compared with the source document header|
 |[Line_No](#line_no)|`int` |Consecutive number of the line within the template. Determines the order of execution of the template lines.|
 |[Multiplier](#multiplier)|`decimal(18, 6)` |Factor by which the amount from the source will be multiplied|
 |[Notes](#notes)|`nvarchar(254)` ||
@@ -177,7 +177,7 @@ Filter that further specifies which rows from the amount rowset determine the am
 |Enter Stop|no|
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
-|Max Length|1073741823|
+|Max Length|2147483647|
 |Order|8|
 |Ownership Reference|no|
 |Pasword|no|
@@ -188,7 +188,7 @@ Filter that further specifies which rows from the amount rowset determine the am
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(1073741823) (Allows NULL)|
+|Type|nvarchar(max) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Short|
 |User Login|no|
@@ -311,7 +311,7 @@ The line is accounted only when the filter is satisfied compared with the source
 |Enter Stop|no|
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
-|Max Length|1073741823|
+|Max Length|2147483647|
 |Order|2|
 |Ownership Reference|no|
 |Pasword|no|
@@ -322,7 +322,7 @@ The line is accounted only when the filter is satisfied compared with the source
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(1073741823) (Allows NULL)|
+|Type|nvarchar(max) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Short|
 |User Login|no|

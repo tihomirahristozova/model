@@ -15,7 +15,7 @@ Hierarchical repository of configuration options. Entity: Gen_Config
 |[Description](#description)|`nvarchar(254)` ||
 |[Is_Active](#is_active)|`bit` |Indicates whether this config entry is active. Inactive config entries are not taken into account.|
 |[Key_Path](#key_path)|`nvarchar(128)` |Full path of the configuration option|
-|[Key_Value](#key_value)|`nvarchar(1073741823)` |The value of the configuration option|
+|[Key_Value](#key_value)|`nvarchar(max)` |The value of the configuration option|
 |[Row_Version](#row_version)|`timestamp` ||
 |[User_Login](#user_login)|`nvarchar(64)` |If not NULL, the configuration option is specific to the user|
 |[User_Machine](#user_machine)|`nvarchar(64)` |If not NULL, the configuration option is specific to the machine|
@@ -168,7 +168,7 @@ The value of the configuration option
 |Enter Stop|yes|
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
-|Max Length|1073741823|
+|Max Length|2147483647|
 |Order|2147483647|
 |Ownership Reference|no|
 |Pasword|no|
@@ -179,7 +179,7 @@ The value of the configuration option
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(1073741823) (Allows NULL)|
+|Type|nvarchar(max) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Long|
 |User Login|no|

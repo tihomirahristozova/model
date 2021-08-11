@@ -51,7 +51,7 @@ Aggregate Tree
 | [PartyUniqueNumber](Logistics.Inventory.Stores.md#partyuniquenumber) | string (16) __nullable__ | Unique number of the party (National number for persons, Registration number for companies). `Filter(eq;like)` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md)) 
 | [PartyUpdateTime](Logistics.Inventory.Stores.md#partyupdatetime) | datetime __nullable__ | Date and time when the Party was last updated. `Filter(ge;le)` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md)) 
 | [PartyUpdateUser](Logistics.Inventory.Stores.md#partyupdateuser) | string (64) __nullable__ | Login name of the user, who last updated the Party. `Filter(like)` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md)) 
-| [SchemaXML](Logistics.Inventory.Stores.md#schemaxml) | string (1073741823) __nullable__ | Obsolete. Not used. 
+| [SchemaXML](Logistics.Inventory.Stores.md#schemaxml) | string (max) __nullable__ | Obsolete. Not used. 
 | [Unmanaged](Logistics.Inventory.Stores.md#unmanaged) | boolean | If false the system will expect the user to process the store transactions. If true the system will auto-generate them. `Required` `Default(true)` 
 | [UpdateTime](Logistics.Inventory.Stores.md#updatetime) | datetime __nullable__ | Date and time when the Store was last updated. `Filter(ge;le)` `ReadOnly` 
 | [UpdateUser](Logistics.Inventory.Stores.md#updateuser) | string (64) __nullable__ | Login name of the user, who last updated the Store. `Filter(like)` `ReadOnly` 
@@ -263,10 +263,10 @@ _Maximum Length_: **64**
 
 Obsolete. Not used.
 
-_Type_: **string (1073741823) __nullable__**  
+_Type_: **string (max) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
-_Maximum Length_: **1073741823**  
+_Maximum Length_: **2147483647**  
 
 ### Unmanaged
 

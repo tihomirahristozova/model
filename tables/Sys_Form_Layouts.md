@@ -18,7 +18,7 @@ Contains user layouts of the screen forms. Entity: Sys_Form_Layouts
 |[Layout](#layout)|`varbinary` |The byte storage of the layout.|
 |[Layout_Format](#layout_format)|`nvarchar(1)` Allowed: `D`, `L`, `U`|The format of the data in the Layout column. Values can be: 'U' - uncompressed; 'L' - LZO compressed; 'D' - Deflate compressed.|
 |[Layout_Name](#layout_name)|`nvarchar(64)` |The name of a named layout. Standard layouts have empty string names.|
-|[Layout_Xml](#layout_xml)|`nvarchar(1073741823)` ||
+|[Layout_Xml](#layout_xml)|`nvarchar(max)` ||
 |[Machine_Name](#machine_name)|`nvarchar(128)` ||
 |[Panel_Name](#panel_name)|`nvarchar(64)` |The visual panel, for which the layout is applied.|
 |[Role_Id](#role_id)|`uniqueidentifier` |The role, for which the layout is applied.|
@@ -278,7 +278,7 @@ The name of a named layout. Standard layouts have empty string names.
 |Enter Stop|yes|
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
-|Max Length|1073741823|
+|Max Length|2147483647|
 |Order|2147483647|
 |Ownership Reference|no|
 |Pasword|no|
@@ -289,7 +289,7 @@ The name of a named layout. Standard layouts have empty string names.
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(1073741823) (Allows NULL)|
+|Type|nvarchar(max) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|100|
 |User Login|no|

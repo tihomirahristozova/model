@@ -26,7 +26,7 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [AllowedValuesEntityName](General.CustomProperties.md#allowedvaluesentityname) | string (64) __nullable__ | When not null, specifies that the allowed values are retrieved from the specified entity. `Filter(eq)` 
-| [AllowedValuesFilterXML](General.CustomProperties.md#allowedvaluesfilterxml) | string (1073741823) __nullable__ | When not null specifies the filter to apply when extracting allowed values from entity. 
+| [AllowedValuesFilterXML](General.CustomProperties.md#allowedvaluesfilterxml) | string (max) __nullable__ | When not null specifies the filter to apply when extracting allowed values from entity. 
 | [Code](General.CustomProperties.md#code) | string (40) | Unique property code. `Required` `Filter(multi eq;like)` `ORD` 
 | [EntityName](General.CustomProperties.md#entityname) | string (64) | The entity for which the property is applicable. `Required` `Filter(eq)` `ORD` 
 | [Hint](General.CustomProperties.md#hint) | [MultilanguageString](../data-types.md#multilanguagestring) __nullable__ | The hint, which is displayed alongside the property. `Filter(multi eq;like)` `Introduced in version 20.1` 
@@ -69,10 +69,10 @@ _Maximum Length_: **64**
 
 When not null specifies the filter to apply when extracting allowed values from entity.
 
-_Type_: **string (1073741823) __nullable__**  
+_Type_: **string (max) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
-_Maximum Length_: **1073741823**  
+_Maximum Length_: **2147483647**  
 
 ### Code
 

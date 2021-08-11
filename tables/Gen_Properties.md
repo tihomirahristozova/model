@@ -12,7 +12,7 @@ User-defined properties, which can supplement the system properties of almost al
 | Name | Type | Description |
 | - | - | --- |
 |[Allowed_Values_Entity_Name](#allowed_values_entity_name)|`nvarchar(64)` |When not NULL, specifies that the allowed values are retrieved from the specified entity|
-|[Allowed_Values_Filter_XML](#allowed_values_filter_xml)|`nvarchar(1073741823)` |When not NULL specifies the filter to apply when extracting allowed values from entity|
+|[Allowed_Values_Filter_XML](#allowed_values_filter_xml)|`nvarchar(max)` |When not NULL specifies the filter to apply when extracting allowed values from entity|
 |[Allowed_Values_Parent_Property_Id](#allowed_values_parent_property_id)|`uniqueidentifier` |Specifies the user defined property, which is used for filtering the allowed values by value of the parent property|
 |[Allowed_Values_Property_Id](#allowed_values_property_id)|`uniqueidentifier` |When not null, specifies that the current property can have the same allowed values as the specified property. Also, this makes the current and the specified property copy-compatible.|
 |[Entity_Name](#entity_name)|`nvarchar(64)` |The entity for which the property is applicable.|
@@ -79,7 +79,7 @@ When not NULL specifies the filter to apply when extracting allowed values from 
 |Enter Stop|no|
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
-|Max Length|1073741823|
+|Max Length|2147483647|
 |Order|2147483647|
 |Ownership Reference|no|
 |Pasword|no|
@@ -90,7 +90,7 @@ When not NULL specifies the filter to apply when extracting allowed values from 
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(1073741823) (Allows NULL)|
+|Type|nvarchar(max) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|100|
 |User Login|no|

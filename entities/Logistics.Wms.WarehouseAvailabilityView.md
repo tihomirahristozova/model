@@ -24,7 +24,6 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [CatchBalance](Logistics.Wms.WarehouseAvailabilityView.md#catchbalance) | decimal (38, 3) __nullable__ | Catch (measured) quantity for the transaction. Positive values indicate transactions. Negative values are used for adjustments. null when catch measurement is not configured for the product. `Filter(eq;ge;le)` `Inherited from Wms_Warehouse_<br />Transactions_Table.Catch_Quantity` 
-| [Cnt](Logistics.Wms.WarehouseAvailabilityView.md#cnt) | int64 |  
 | [QuantityAvailable](Logistics.Wms.WarehouseAvailabilityView.md#quantityavailable) | decimal (38, 3) | The transacted net change in quantity. Positive values indicate transactions. Negative values are used for adjustments. `Required` `Default(0)` `Filter(multi eq;ge;le)` `Inherited from Wms_Warehouse_<br />Transactions_Table.Quantity` 
 
 ## References
@@ -51,12 +50,6 @@ Catch (measured) quantity for the transaction. Positive values indicate transact
 _Type_: **decimal (38, 3) __nullable__**  
 _Inherited From_: **Wms_Warehouse_Transactions_Table.Catch_Quantity**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
-_Supports Order By_: **False**  
-
-### Cnt
-
-_Type_: **int64**  
-_Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
 ### QuantityAvailable

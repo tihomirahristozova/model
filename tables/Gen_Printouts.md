@@ -19,7 +19,7 @@ Contains data about binding of printout layouts to specific user-defined documen
 |[Application_Name](#application_name)|`nvarchar(64)` |The application which stored and uses the printout|
 |[Backward_Compatibility](#backward_compatibility)|`bit` |Obsolete. Not used.|
 |[Copies](#copies)|`int` |Number of copies that should be printed when using direct printing|
-|[Definition](#definition)|`nvarchar(1073741823)` |Obsolete. Not used.|
+|[Definition](#definition)|`nvarchar(max)` |Obsolete. Not used.|
 |[Definition_Format](#definition_format)|`nvarchar(16)` |Obsolete. Not used.|
 |[Document_Type_Id](#document_type_id)|`uniqueidentifier` |The document type to which this printout layout is bound.|
 |[Enterprise_Company_Id](#enterprise_company_id)|`uniqueidentifier` ||
@@ -170,7 +170,7 @@ Obsolete. Not used.
 |Enter Stop|yes|
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
-|Max Length|1073741823|
+|Max Length|2147483647|
 |Order|2147483647|
 |Ownership Reference|no|
 |Pasword|no|
@@ -181,7 +181,7 @@ Obsolete. Not used.
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(1073741823) (Allows NULL)|
+|Type|nvarchar(max) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

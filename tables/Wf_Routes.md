@@ -20,7 +20,7 @@ Contains document routes, which specify which document generation procedures wil
 |[Allow_Obsolete_Generation](#allow_obsolete_generation)|`bit` |Allows the usage of unsupported generation procedures (marked as obsolete). This is a user override of the system prohibition of the usage of obsolete procedures.|
 |[Allowed_Generation_Types](#allowed_generation_types)|`nvarchar(1)` Allowed: `A`, `B`, `M`|Determines the possible types of the generation of the destination document: A=Auto, M=Manual, B=Both (Auto and Manual)|
 |[Condition_Enterprise_Company_Id](#condition_enterprise_company_id)|`uniqueidentifier` |The enterprise company for which this route is activated.|
-|[Condition_Filter_XML](#condition_filter_xml)|`nvarchar(1073741823)` |Contains filter condition, which the document must match in order to execute the route.|
+|[Condition_Filter_XML](#condition_filter_xml)|`nvarchar(max)` |Contains filter condition, which the document must match in order to execute the route.|
 |[Condition_States_Bit_Mask](#condition_states_bit_mask)|`int` |The system states for which to execute the specified route.|
 |[Condition_User_Status_Id](#condition_user_status_id)|`uniqueidentifier` |The user-defined status, for which the document route is activated.|
 |[Connected_Party_Condition](#connected_party_condition)|`nvarchar(1)` Allowed: `A`, `C`, `U`|A - any party; C - connected party: to_party is enterprise company; U - unconnected party - not enterprise company;|
@@ -234,7 +234,7 @@ Contains filter condition, which the document must match in order to execute the
 |Enter Stop|no|
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
-|Max Length|1073741823|
+|Max Length|2147483647|
 |Order|2147483647|
 |Ownership Reference|no|
 |Pasword|no|
@@ -245,7 +245,7 @@ Contains filter condition, which the document must match in order to execute the
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(1073741823) (Allows NULL)|
+|Type|nvarchar(max) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Short|
 |User Login|no|

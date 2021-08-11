@@ -29,7 +29,7 @@ Aggregate Root:
 | [ApplicationName](General.Printouts.md#applicationname) | string (64) | The application which stored and uses the printout. `Required` 
 | [BackwardCompatibility](General.Printouts.md#backwardcompatibility) | boolean | Obsolete. Not used. `Required` `Default(false)` 
 | [Copies](General.Printouts.md#copies) | int32 | Number of copies that should be printed when using direct printing. `Required` `Default(1)` 
-| [Definition](General.Printouts.md#definition) | string (1073741823) __nullable__ | Obsolete. Not used. 
+| [Definition](General.Printouts.md#definition) | string (max) __nullable__ | Obsolete. Not used. 
 | [DefinitionFormat](General.Printouts.md#definitionformat) | string (16) __nullable__ | Obsolete. Not used. `Default("default")` 
 | [Id](General.Printouts.md#id) | guid |  
 | [IsDefault](General.Printouts.md#isdefault) | boolean | True if this is the default printout for the application form. `Required` `Default(false)` `Filter(eq)` 
@@ -103,10 +103,10 @@ _Default Value_: **1**
 
 Obsolete. Not used.
 
-_Type_: **string (1073741823) __nullable__**  
+_Type_: **string (max) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
-_Maximum Length_: **1073741823**  
+_Maximum Length_: **2147483647**  
 
 ### DefinitionFormat
 
