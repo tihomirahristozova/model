@@ -237,6 +237,7 @@ The industry, for which this solution is appropriate. NULL if not applicable.
 
 | Property | Value |
 | - | - |
+|Attributes|IsLongString|
 |Auto Complete|no|
 |Data Filter|no|
 |Default Value|None|
