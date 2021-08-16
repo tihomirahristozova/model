@@ -1,6 +1,12 @@
 # Table Exc_Excise_Administrative_Documents
 
 
+## Entity
+
+Entity: [Finance.Excise.ExciseAdministrativeDocuments](~/entities/Finance.Excise.ExciseAdministrativeDocuments.md)
+
+Represents the data, sent to the customs authorities for the movements of excise goods. Entity: Exc_Excise_Administrative_Documents (Introduced in version 21.1.3.54)
+
 ## Owner Tables Hierarchy
 
 * [Gen_Documents](Gen_Documents.md)
@@ -56,6 +62,7 @@ The reference code, returned the customs authorities, when the document is expor
 | Property | Value |
 | - | - |
 |Auto Complete|no|
+|Base Table.Column|[Gen_Documents](Gen_Documents.md).[Id](Gen_Documents.md#id)|
 |Data Filter|no|
 |Default Value|None|
 |Enter Stop|yes|
@@ -110,7 +117,7 @@ The reference code, returned the customs authorities, when the document is expor
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
-|Visible|yes|
+|Visible|no|
 
 #### Excise_Administrative_Document_Id - Supported Filters
 
@@ -156,6 +163,7 @@ The other party, receiving the goods (Consignee).
 | Property | Value |
 | - | - |
 |Auto Complete|no|
+|Base Table.Column|[Gen_Parties](Gen_Parties.md).[Id](Gen_Parties.md#id)|
 |Data Filter|no|
 |Default Value|None|
 |Enter Stop|yes|
@@ -257,6 +265,7 @@ The carrier used for the transportation of the goods.
 | Property | Value |
 | - | - |
 |Auto Complete|no|
+|Base Table.Column|[Log_Carriers](Log_Carriers.md).[Carrier_Id](Log_Carriers.md#carrier_id)|
 |Data Filter|no|
 |Default Value|None|
 |Enter Stop|yes|
