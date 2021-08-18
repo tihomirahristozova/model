@@ -55,8 +55,6 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Default Value_: **1**  
 
-_Front-End Recalc Expressions:_  
-`IIF( ( ( obj.RateDivisor == 0) OrElse ( ( ( obj.FromCurrency != null) AndAlso ( obj.CurrencyDirectory.ToCurrency != null)) AndAlso ( obj.FromCurrency == obj.CurrencyDirectory.ToCurrency))), 1, obj.RateDivisor)`
 ### RateMultiplier
 
 The multiplier for conversion from From_Currency to Directory.To_Currency. `Required` `Default(1)`
@@ -66,8 +64,6 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Default Value_: **1**  
 
-_Front-End Recalc Expressions:_  
-`IIF( ( ( obj.RateMultiplier == 0) OrElse ( ( ( obj.FromCurrency != null) AndAlso ( obj.CurrencyDirectory.ToCurrency != null)) AndAlso ( obj.FromCurrency == obj.CurrencyDirectory.ToCurrency))), 1, obj.RateMultiplier)`
 
 ## Reference Details
 
