@@ -17700,7 +17700,7 @@
       "output": {
         ".html": {
           "relative_path": "tables/Crm.html",
-          "hash": "ZOVxDfQ04A/gprQggot5vA=="
+          "hash": "c8tdWPlFNUTaHI85UBuu6Q=="
         }
       },
       "is_incremental": false,
@@ -18037,6 +18037,18 @@
         ".html": {
           "relative_path": "tables/Crm_Invoices_Options.html",
           "hash": "ty8Rlg41YriAfUCUuIlREg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tables/Crm_Leads.md",
+      "output": {
+        ".html": {
+          "relative_path": "tables/Crm_Leads.html",
+          "hash": "60s4D2iGDIYCFtGi4EfRkg=="
         }
       },
       "is_incremental": false,
@@ -23748,7 +23760,7 @@
       "output": {
         ".html": {
           "relative_path": "tables/index.html",
-          "hash": "guDPLW9UCo9k1+5kYYwOjA=="
+          "hash": "Oon2H7k4WjGwugDu+6zFhA=="
         }
       },
       "is_incremental": false,
@@ -23760,7 +23772,7 @@
       "output": {
         ".html": {
           "relative_path": "tables/toc.html",
-          "hash": "OXXZnWNm/YH65xF9/MqQ0A=="
+          "hash": "CLZQ2OV0yaCzjfatHMY88w=="
         }
       },
       "is_incremental": false,
