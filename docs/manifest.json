@@ -9165,7 +9165,19 @@
       "output": {
         ".html": {
           "relative_path": "business-rules/R32348.html",
-          "hash": "xmG4CHszmlLF3e21lxsKrQ=="
+          "hash": "TEagQ2rG/XjjbOIHUfaZsA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "business-rules/R32350.md",
+      "output": {
+        ".html": {
+          "relative_path": "business-rules/R32350.html",
+          "hash": "1yCF0hGMAHnkmM/8NhMnKg=="
         }
       },
       "is_incremental": false,
