@@ -295,6 +295,8 @@
     items:
     - name: Deals
       href: Crm.Presales.Deals.md
+    - name: Leads
+      href: Crm.Presales.Leads.md
     - name: OfferLines
       href: Crm.Presales.OfferLines.md
     - name: Offers

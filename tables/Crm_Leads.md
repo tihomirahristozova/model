@@ -1,6 +1,12 @@
 # Table Crm_Leads
 
 
+## Entity
+
+Entity: [Crm.Presales.Leads](~/entities/Crm.Presales.Leads.md)
+
+Leads are potential customers for your products. Because leads are usually processed in a hurry or imported from external lists, personal and company information is saved in a less structured way. With the advancement of the qualification process (including deduplication), the information is structured in the usual Person and Company entities. When successfully processed, leads can be converted to Opportunities. Entity: Crm_Leads (Introduced in version 21.1.3.78)
+
 ## Summary
 
 | Name | Type | Description |
@@ -912,7 +918,7 @@ The system stage of the lead - New, Qualifying, Marketing Qualified Lead, Sales 
 |Allowed Values|`NEW`, `QUA`, `MQL`, `SQL`, `CLO`|
 |Auto Complete|no|
 |Data Filter|no|
-|Default Value|None|
+|Default Value|NEW|
 |Enter Stop|yes|
 |Ignore for Insert Order|no|
 |Is Entity Name|no|

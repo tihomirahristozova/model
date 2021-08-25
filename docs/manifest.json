@@ -9141,7 +9141,7 @@
       "output": {
         ".html": {
           "relative_path": "business-rules/R32346.html",
-          "hash": "kZDikUg9rEjdY1Vwx8aqyA=="
+          "hash": "iMolN4+2uc6fhzmnDMbgIg=="
         }
       },
       "is_incremental": false,
@@ -9153,7 +9153,7 @@
       "output": {
         ".html": {
           "relative_path": "business-rules/R32347.html",
-          "hash": "uLPJqfML3HoOwj+qlz4IjA=="
+          "hash": "hfQzt5ufPYYFs5zHSvp/4g=="
         }
       },
       "is_incremental": false,
@@ -9165,7 +9165,7 @@
       "output": {
         ".html": {
           "relative_path": "business-rules/R32350.html",
-          "hash": "M5qBvpYAujO/awimX+R4lw=="
+          "hash": "uMQevFsTEA4F1dNRYiL/jQ=="
         }
       },
       "is_incremental": false,
@@ -9177,7 +9177,7 @@
       "output": {
         ".html": {
           "relative_path": "business-rules/R32359.html",
-          "hash": "2Y81CutH9p4PUmsb1cGRqQ=="
+          "hash": "Bh9J9No5+8WgkFKuwQwhww=="
         }
       },
       "is_incremental": false,
@@ -10531,7 +10531,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Crm.Invoicing.InvoiceLines.html",
-          "hash": "nujMiPmyOtqCMyqtcDCjVA=="
+          "hash": "yF3iIrEXCmRhwAST6ctvrg=="
         }
       },
       "is_incremental": false,
@@ -10875,6 +10875,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "entities/Crm.Presales.Leads.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Crm.Presales.Leads.html",
+          "hash": "HHDgEM9D4eZIdzi6sD+H5A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "entities/Crm.Presales.OfferLines.md",
       "output": {
         ".html": {
@@ -10915,7 +10927,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Crm.Presales.html",
-          "hash": "zcFI7gZRX5Kq+UbyFeaihw=="
+          "hash": "YTNiA729oQjNmYnMLBA66g=="
         }
       },
       "is_incremental": false,
@@ -11071,7 +11083,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Crm.Sales.SalesOrderLines.html",
-          "hash": "qxMe5ZOra2PUA6vfDM4oYQ=="
+          "hash": "PUALiipvGzEKtJgW+KmhnA=="
         }
       },
       "is_incremental": false,
@@ -13375,7 +13387,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Logistics.Inventory.CostCorrectionLines.html",
-          "hash": "C3Kcum3JUegZMzSZS24w6w=="
+          "hash": "ZRfx0L4l/nclynEkKC+NDw=="
         }
       },
       "is_incremental": false,
@@ -15907,7 +15919,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/toc.html",
-          "hash": "gY7jEktclc0XRdyoG7Z5sw=="
+          "hash": "3dE5AZGo3AgVJsQ6Dr/FCw=="
         }
       },
       "is_incremental": false,
@@ -18048,7 +18060,7 @@
       "output": {
         ".html": {
           "relative_path": "tables/Crm_Invoice_Lines.html",
-          "hash": "gGGj4vuX91J3CAvNgjFKlw=="
+          "hash": "QqsCP+uluqjX7MXYEFTF+g=="
         }
       },
       "is_incremental": false,
@@ -18108,7 +18120,7 @@
       "output": {
         ".html": {
           "relative_path": "tables/Crm_Leads.html",
-          "hash": "60s4D2iGDIYCFtGi4EfRkg=="
+          "hash": "BQ28Ul7t6+XSAmJAq3tUaA=="
         }
       },
       "is_incremental": false,
@@ -18324,7 +18336,7 @@
       "output": {
         ".html": {
           "relative_path": "tables/Crm_Sales_Order_Lines.html",
-          "hash": "iwmcj8Hxhf0N0a/2+Q6Xlg=="
+          "hash": "SCGJ77saBljn79FC0ZvIQA=="
         }
       },
       "is_incremental": false,

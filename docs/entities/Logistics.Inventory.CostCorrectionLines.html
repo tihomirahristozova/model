@@ -145,6 +145,11 @@ Aggregate Root:<br>
 <td>The <code>CostCorrection</code>(Logistics.Inventory.CostCorrectionLines.md#costcorrection) to which this CostCorrectionLine belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 <tr>
+<td><a href="Logistics.Inventory.CostCorrectionLines.html#document">Document</a></td>
+<td><a href="Logistics.Inventory.CostCorrections.html">CostCorrections</a></td>
+<td>The <code>CostCorrection</code>(Logistics.Inventory.CostCorrectionLines.md#costcorrection) to which this CostCorrectionLine belongs. <code>Required</code> <code>Filter(multi eq)</code></td>
+</tr>
+<tr>
 <td><a href="Logistics.Inventory.CostCorrectionLines.html#transactionline">TransactionLine</a></td>
 <td><a href="Logistics.Inventory.StoreTransactionLines.html">StoreTransactionLines</a></td>
 <td>The transaction line, which is corrected. <code>Required</code> <code>Filter(multi eq)</code></td>
@@ -188,6 +193,11 @@ Aggregate Root:<br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em><a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a></em>: <strong>True</strong></p>
+<h3 id="document">Document</h3>
+<p>The <code>CostCorrection</code>(Logistics.Inventory.CostCorrectionLines.md#costcorrection) to which this CostCorrectionLine belongs. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p><em>Type</em>: <strong><a href="Logistics.Inventory.CostCorrections.html">CostCorrections</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="transactionline">TransactionLine</h3>
 <p>The transaction line, which is corrected. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Logistics.Inventory.StoreTransactionLines.html">StoreTransactionLines</a></strong><br>

@@ -418,6 +418,9 @@ references:
 - uid: Crm.Presales.Deals
   name: Crm.Presales.Deals Entity
   href: entities/Crm.Presales.Deals.html
+- uid: Crm.Presales.Leads
+  name: Crm.Presales.Leads Entity
+  href: entities/Crm.Presales.Leads.html
 - uid: Crm.Presales.OfferLines
   name: Crm.Presales.OfferLines Entity
   href: entities/Crm.Presales.OfferLines.html
