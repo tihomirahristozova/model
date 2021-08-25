@@ -115,7 +115,8 @@ needed</a></td>
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td>IF <em>new record</em> SET CreationTimestampUtc = NOW(UTC)</td>
+<td>IF <em>new record</em> SET CreationTimestampUtc = NOW(UTC)
+ELSE SET CreationTimestampUtc = Database Value</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
