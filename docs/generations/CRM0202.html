@@ -169,6 +169,14 @@ Invoice.DealType = InvoiceOrder.DealType
 Invoice.ApplyDate = InvoiceOrder.ApplyDate
 
 Invoice.PaymentDueStartDate = InvoiceOrder.PaymentDueStartDate
+
+Invoice.IntrastatTransactionNatureCode = InvoiceOrder.SalesOrder.IntrastatTransactionNatureCode
+
+Invoice.DeliveryTermsCode = InvoiceOrder.SalesOrder.DeliveryTermsCode
+
+Invoice.IntrastatTransportModeCode = InvoiceOrder.SalesOrder.IntrastatTransportModeCode
+
+Invoice.IntrastatTransportCountry = InvoiceOrder.SalesOrder.IntrastatTransportCountry
 </code></pre>
 <p>The rest of the Document table attributes which are not listed here are filled in as described in <a href="../reference/standard-document-attributes.html">Standard Document Attributes</a>.</p>
 <div class="NOTE">
@@ -269,6 +277,10 @@ if InvoiceOrderLine.SalesOrderLine.HasValue then
     InvoiceLine.SalesOrderAmount = InvoiceOrderLine.REMAINING(MLineAmount)
 InvoiceLine.SerialNumber = InvoiceOrderLine.SerialNumber
 InvoiceLine.ParentLineNo = InvoiceOrderLine.LineNo
+InvoiceLine.IntrastatTransactionNatureCode = InvoiceOrderLine.SalesOrderLine.IntrastatTransactionNatureCode
+InvoiceLine.DeliveryTermsCode = InvoiceOrderLine.SalesOrderLine.DeliveryTermsCode
+InvoiceLine.IntrastatTransportModeCode = InvoiceOrderLine.SalesOrderLine.IntrastatTransportModeCode
+InvoiceLine.IntrastatTransportCountry = InvoiceOrderLine.SalesOrderLine.IntrastatTransportCountry
 </code></pre>
 </article>
           </div>
