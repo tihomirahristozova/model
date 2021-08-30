@@ -9,15 +9,17 @@ Contains payment options for user documnet types for sales orders. Entity: Crm_D
 
 ## Default Visualization
 Default Display Text Format:  
-_{Id}_  
+_{DocumentType.Code}: {DocumentType.EntityName:T}_  
 Default Search Member:  
-_Id_  
+_DocumentType.Code_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
 
-Aggregate Tree  
-* [Crm.Sales.DocumentTypePaymentOptions](Crm.Sales.DocumentTypePaymentOptions.md)  
+Aggregate Parent:  
+[General.DocumentTypes](General.DocumentTypes.md)  
+Aggregate Root:  
+[General.DocumentTypes](General.DocumentTypes.md)  
 
 ## Attributes
 
@@ -31,7 +33,7 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [DeferredPayment<br />MinimalAmmount<br />Currency](Crm.Sales.DocumentTypePaymentOptions.md#deferredpaymentminimalammountcurrency) | [Currencies](General.Currencies.md) | The currency of Deferred Payment Minimal Amount. `Required` `Filter(multi eq)` |
-| [DocumentType](Crm.Sales.DocumentTypePaymentOptions.md#documenttype) | [DocumentTypes](General.DocumentTypes.md) | The document type for which the payment option applies. `Required` `Filter(multi eq)` |
+| [DocumentType](Crm.Sales.DocumentTypePaymentOptions.md#documenttype) | [DocumentTypes](General.DocumentTypes.md) | The document type for which the payment option applies. `Required` `Filter(multi eq)` `Owner` |
 | [EnterpriseCompany](Crm.Sales.DocumentTypePaymentOptions.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company for which the payment options are specified. `Required` `Filter(multi eq)` |
 
 
@@ -64,11 +66,12 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### DocumentType
 
-The document type for which the payment option applies. `Required` `Filter(multi eq)`
+The document type for which the payment option applies. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[DocumentTypes](General.DocumentTypes.md)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
+_[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
 
 ### EnterpriseCompany
 

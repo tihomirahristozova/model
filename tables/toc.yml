@@ -315,6 +315,8 @@
     href: Crm_Invoices.md
   - name: Crm_Invoices_Options
     href: Crm_Invoices_Options.md
+  - name: Crm_Lead_User_Stages
+    href: Crm_Lead_User_Stages.md
   - name: Crm_Leads
     href: Crm_Leads.md
   - name: Crm_Line_Discounts

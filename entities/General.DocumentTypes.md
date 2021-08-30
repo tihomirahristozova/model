@@ -22,6 +22,7 @@ Aggregate Tree
   * [Crm.Presales.OffersOptions](Crm.Presales.OffersOptions.md)  
   * [Crm.Sales.DefaultSalesOrderDocumentProperties](Crm.Sales.DefaultSalesOrderDocumentProperties.md)  
   * [Crm.Sales.DefaultSalesOrderPaymentPlans](Crm.Sales.DefaultSalesOrderPaymentPlans.md)  
+  * [Crm.Sales.DocumentTypePaymentOptions](Crm.Sales.DocumentTypePaymentOptions.md)  
   * [Crm.Sales.SalesOrdersOptions](Crm.Sales.SalesOrdersOptions.md)  
   * [General.DocumentTypeAmounts](General.DocumentTypeAmounts.md)  
   * [General.DocumentTypeEnterpriseCompanies](General.DocumentTypeEnterpriseCompanies.md)  
@@ -71,6 +72,7 @@ Aggregate Tree
 | InvoicesOptions | [InvoicesOptions](Crm.Invoicing.InvoicesOptions.md) | List of `InvoicesOption`(Crm.Invoicing.InvoicesOptions.md) child objects, based on the `Crm.Invoicing.InvoicesOption.DocumentType`(Crm.Invoicing.InvoicesOptions.md#documenttype) back reference 
 | Notifications | [DocumentTypeNotifications](General.DocumentTypeNotifications.md) | List of `DocumentTypeNotification`(General.DocumentTypeNotifications.md) child objects, based on the `General.DocumentTypeNotification.DocumentType`(General.DocumentTypeNotifications.md#documenttype) back reference 
 | OffersOptions | [OffersOptions](Crm.Presales.OffersOptions.md) | List of `OffersOption`(Crm.Presales.OffersOptions.md) child objects, based on the `Crm.Presales.OffersOption.DocumentType`(Crm.Presales.OffersOptions.md#documenttype) back reference 
+| PaymentOptions | [DocumentTypePaymentOptions](Crm.Sales.DocumentTypePaymentOptions.md) | List of `DocumentTypePayment<br />Option`(Crm.Sales.DocumentTypePaymentOptions.md) child objects, based on the `Crm.Sales.DocumentTypePaymentOption.DocumentType`(Crm.Sales.DocumentTypePaymentOptions.md#documenttype) back reference 
 | Printouts | [Printouts](General.Printouts.md) | List of `Printout`(General.Printouts.md) child objects, based on the `General.Printout.DocumentType`(General.Printouts.md#documenttype) back reference 
 | Routes | [Routes](Systems.Workflow.Routes.md) | List of `Route`(Systems.Workflow.Routes.md) child objects, based on the `Systems.Workflow.Route.DocumentType`(Systems.Workflow.Routes.md#documenttype) back reference 
 | SalesOrdersOptions | [SalesOrdersOptions](Crm.Sales.SalesOrdersOptions.md) | List of `SalesOrdersOption`(Crm.Sales.SalesOrdersOptions.md) child objects, based on the `Crm.Sales.SalesOrdersOption.DocumentType`(Crm.Sales.SalesOrdersOptions.md#documenttype) back reference 

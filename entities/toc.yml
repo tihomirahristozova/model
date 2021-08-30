@@ -297,6 +297,8 @@
       href: Crm.Presales.Deals.md
     - name: Leads
       href: Crm.Presales.Leads.md
+    - name: LeadUserStages
+      href: Crm.Presales.LeadUserStages.md
     - name: OfferLines
       href: Crm.Presales.OfferLines.md
     - name: Offers
@@ -454,6 +456,8 @@
       href: Finance.Excise.ExciseAdministrativeDocuments.md
     - name: ExciseOperationTypes
       href: Finance.Excise.ExciseOperationTypes.md
+    - name: ExcisePurposeCodes
+      href: Finance.Excise.ExcisePurposeCodes.md
     - name: MeasuringTransactions
       href: Finance.Excise.MeasuringTransactions.md
     - name: TaxWarehouses

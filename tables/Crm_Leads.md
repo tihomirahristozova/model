@@ -350,6 +350,7 @@ The user-defined sub-stage of the lead. This also defines the step in the sales 
 |Picture|no|
 |Primary Key|no|
 |Readonly|no|
+|Referenced Table|[Crm_Lead_User_Stages](Crm_Lead_User_Stages.md)|
 |RTF|no|
 |Sortable|no|
 |Summary Type|None|

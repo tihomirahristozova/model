@@ -119,7 +119,7 @@ Default Search Member:<br>
 <tr>
 <td><a href="Systems.Security.TrustedApplications.html#basicauthenticationallowed">BasicAuthenticationAllowed</a></td>
 <td>boolean</td>
-<td>Even if only one application has this turned ON, it allows the basic authentication for the whole database. Use with caution! If a user is specified in System User, the basic authentication is allowed only for this user. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
+<td>If true, this application allows login with user name and password. When a client application uses basic authentication it must provide the application uri along with user name and password. Use with caution, because basic authentication is less secure than oauth! If a user is specified in System User, the basic authentication is allowed only for this user. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Security.TrustedApplications.html#clienttype">ClientType</a></td>
@@ -236,7 +236,7 @@ Default Search Member:<br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>254</strong></p>
 <h3 id="basicauthenticationallowed">BasicAuthenticationAllowed</h3>
-<p>Even if only one application has this turned ON, it allows the basic authentication for the whole database. Use with caution! If a user is specified in System User, the basic authentication is allowed only for this user. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></p>
+<p>If true, this application allows login with user name and password. When a client application uses basic authentication it must provide the application uri along with user name and password. Use with caution, because basic authentication is less secure than oauth! If a user is specified in System User, the basic authentication is allowed only for this user. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>

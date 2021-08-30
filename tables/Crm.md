@@ -28,6 +28,7 @@
 * [Crm_Invoice_Orders](Crm_Invoice_Orders.md)
 * [Crm_Invoices](Crm_Invoices.md)
 * [Crm_Invoices_Options](Crm_Invoices_Options.md)
+* [Crm_Lead_User_Stages](Crm_Lead_User_Stages.md)
 * [Crm_Leads](Crm_Leads.md)
 * [Crm_Line_Discounts](Crm_Line_Discounts.md)
 * [Crm_Marketing_Solutions](Crm_Marketing_Solutions.md)

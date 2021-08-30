@@ -105,7 +105,7 @@
 <tr>
 <td><a href="#basic_authentication_allowed">Basic_Authentication_Allowed</a></td>
 <td><code>bit</code></td>
-<td>Even if only one application has this turned ON, it allows the basic authentication for the whole database. Use with caution! If a user is specified in System User, the basic authentication is allowed only for this user.</td>
+<td>If true, this application allows login with user name and password. When a client application uses basic authentication it must provide the application uri along with user name and password. Use with caution, because basic authentication is less secure than oauth! If a user is specified in System User, the basic authentication is allowed only for this user.</td>
 </tr>
 <tr>
 <td><a href="#client_type">Client_Type</a></td>
@@ -405,7 +405,7 @@
 </tbody>
 </table>
 <h3 id="basic_authentication_allowed">Basic_Authentication_Allowed</h3>
-<p>Even if only one application has this turned ON, it allows the basic authentication for the whole database. Use with caution! If a user is specified in System User, the basic authentication is allowed only for this user.</p>
+<p>If true, this application allows login with user name and password. When a client application uses basic authentication it must provide the application uri along with user name and password. Use with caution, because basic authentication is less secure than oauth! If a user is specified in System User, the basic authentication is allowed only for this user.</p>
 <table>
 <thead>
 <tr>

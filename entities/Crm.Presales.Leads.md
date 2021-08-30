@@ -26,7 +26,6 @@ Aggregate Tree
 | [CompanyName](Crm.Presales.Leads.md#companyname) | string (64) __nullable__ | The name of the company, which the person works for (in relation to the current lead). `Filter(like)` 
 | [CreationTimestampUtc](Crm.Presales.Leads.md#creationtimestamputc) | datetime | System assigned date and time (in UTC), when the lead was initially created. `Required` `Filter(ge;le)` `ReadOnly` 
 | [Id](Crm.Presales.Leads.md#id) | guid |  
-| [LeadUserStageId](Crm.Presales.Leads.md#leaduserstageid) | guid __nullable__ | The user-defined sub-stage of the lead. This also defines the step in the sales sequence and the next appropriate activity to engage the lead. null when the user stage is undefined (the pure System Stage defines the stage). `Filter(multi eq)` 
 | [MQLTimestampUtc](Crm.Presales.Leads.md#mqltimestamputc) | datetime __nullable__ | System assigned date and time (in UTC), when the lead was first promoted to Marketing Qualified Lead (MQL). `Filter(ge;le)` `ReadOnly` 
 | [PersonEmail](Crm.Presales.Leads.md#personemail) | string (64) __nullable__ | The email address of the sales lead person. 
 | [PersonFirstName](Crm.Presales.Leads.md#personfirstname) | string (64) __nullable__ | The first name of the person, representing the sales lead. `Filter(like)` 
@@ -48,6 +47,7 @@ Aggregate Tree
 | [ConvertedToDeal](Crm.Presales.Leads.md#convertedtodeal) | [Deals](Crm.Presales.Deals.md) (nullable) | Filled when the lead is converted to opportunity (deal). `Filter(multi eq)` |
 | [IdentifiedCompany](Crm.Presales.Leads.md#identifiedcompany) | [Companies](General.Contacts.Companies.md) (nullable) | Filled when the company is identified within our database. `Filter(multi eq)` |
 | [IdentifiedPerson](Crm.Presales.Leads.md#identifiedperson) | [Persons](General.Contacts.Persons.md) (nullable) | Filled when the person is identified and recorded in our master records. `Filter(multi eq)` |
+| [LeadUserStage](Crm.Presales.Leads.md#leaduserstage) | [LeadUserStages](Crm.Presales.LeadUserStages.md) (nullable) | The user-defined sub-stage of the lead. This also defines the step in the sales sequence and the next appropriate activity to engage the lead. null when the user stage is undefined (the pure System Stage defines the stage). `Filter(multi eq)` |
 | [MarketingCompanySize](Crm.Presales.Leads.md#marketingcompanysize) | [CompanySizeClasses](Crm.Marketing.CompanySizeClasses.md) (nullable) | The size class of the company. `Filter(multi eq)` |
 | [MarketingIndustry](Crm.Presales.Leads.md#marketingindustry) | [Industries](Crm.Marketing.Industries.md) (nullable) | The industry (for marketing purposes) of the lead. `Filter(multi eq)` |
 | [MarketingSolution](Crm.Presales.Leads.md#marketingsolution) | [MarketingSolutions](Crm.Marketing.MarketingSolutions.md) (nullable) | The marketing solution, in which the lead is interested or which generated the lead. `Filter(multi eq)` |
@@ -74,20 +74,15 @@ _Type_: **datetime**
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
+_Back-End Default Expression:_  
+`IIF( ( obj.MQLTimestampUtc == null), Convert( DateTime.UtcNow, Nullable`1), obj.MQLTimestampUtc)`
+
 ### Id
 
 _Type_: **guid**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
-
-### LeadUserStageId
-
-The user-defined sub-stage of the lead. This also defines the step in the sales sequence and the next appropriate activity to engage the lead. null when the user stage is undefined (the pure System Stage defines the stage). `Filter(multi eq)`
-
-_Type_: **guid __nullable__**  
-_Indexed_: **True**  
-_Supported Filters_: **Equals, EqualsIn**  
 
 ### MQLTimestampUtc
 
@@ -234,6 +229,14 @@ _Supported Filters_: **Equals, EqualsIn**
 Filled when the person is identified and recorded in our master records. `Filter(multi eq)`
 
 _Type_: **[Persons](General.Contacts.Persons.md) (nullable)**  
+_Supported Filters_: **Equals, EqualsIn**  
+
+### LeadUserStage
+
+The user-defined sub-stage of the lead. This also defines the step in the sales sequence and the next appropriate activity to engage the lead. null when the user stage is undefined (the pure System Stage defines the stage). `Filter(multi eq)`
+
+_Type_: **[LeadUserStages](Crm.Presales.LeadUserStages.md) (nullable)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### MarketingCompanySize

@@ -7,6 +7,7 @@ uid: Finance.Excise
 - [ExciseAdministrativeDocumentLines](Finance.Excise.ExciseAdministrativeDocumentLines.md)  
 - [ExciseAdministrativeDocuments](Finance.Excise.ExciseAdministrativeDocuments.md)  
 - [ExciseOperationTypes](Finance.Excise.ExciseOperationTypes.md)  
+- [ExcisePurposeCodes](Finance.Excise.ExcisePurposeCodes.md)  
 - [MeasuringTransactions](Finance.Excise.MeasuringTransactions.md)  
 - [TaxWarehouses](Finance.Excise.TaxWarehouses.md)  
 

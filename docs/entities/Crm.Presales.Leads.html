@@ -118,11 +118,6 @@ Default Search Member:<br>
 <td></td>
 </tr>
 <tr>
-<td><a href="Crm.Presales.Leads.html#leaduserstageid">LeadUserStageId</a></td>
-<td>guid <strong>nullable</strong></td>
-<td>The user-defined sub-stage of the lead. This also defines the step in the sales sequence and the next appropriate activity to engage the lead. null when the user stage is undefined (the pure System Stage defines the stage). <code>Filter(multi eq)</code></td>
-</tr>
-<tr>
 <td><a href="Crm.Presales.Leads.html#mqltimestamputc">MQLTimestampUtc</a></td>
 <td>datetime <strong>nullable</strong></td>
 <td>System assigned date and time (in UTC), when the lead was first promoted to Marketing Qualified Lead (MQL). <code>Filter(ge;le)</code> <code>ReadOnly</code></td>
@@ -215,6 +210,11 @@ Default Search Member:<br>
 <td>Filled when the person is identified and recorded in our master records. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
+<td><a href="Crm.Presales.Leads.html#leaduserstage">LeadUserStage</a></td>
+<td><a href="Crm.Presales.LeadUserStages.html">LeadUserStages</a> (nullable)</td>
+<td>The user-defined sub-stage of the lead. This also defines the step in the sales sequence and the next appropriate activity to engage the lead. null when the user stage is undefined (the pure System Stage defines the stage). <code>Filter(multi eq)</code></td>
+</tr>
+<tr>
 <td><a href="Crm.Presales.Leads.html#marketingcompanysize">MarketingCompanySize</a></td>
 <td><a href="Crm.Marketing.CompanySizeClasses.html">CompanySizeClasses</a> (nullable)</td>
 <td>The size class of the company. <code>Filter(multi eq)</code></td>
@@ -253,16 +253,13 @@ Default Search Member:<br>
 <p><em>Type</em>: <strong>datetime</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
+<p><em>Back-End Default Expression:</em><br>
+<code>IIF( ( obj.MQLTimestampUtc == null), Convert( DateTime.UtcNow, Nullable</code>1), obj.MQLTimestampUtc)`</p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
-<h3 id="leaduserstageid">LeadUserStageId</h3>
-<p>The user-defined sub-stage of the lead. This also defines the step in the sales sequence and the next appropriate activity to engage the lead. null when the user stage is undefined (the pure System Stage defines the stage). <code>Filter(multi eq)</code></p>
-<p><em>Type</em>: <strong>guid <strong>nullable</strong></strong><br>
-<em>Indexed</em>: <strong>True</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="mqltimestamputc">MQLTimestampUtc</h3>
 <p>System assigned date and time (in UTC), when the lead was first promoted to Marketing Qualified Lead (MQL). <code>Filter(ge;le)</code> <code>ReadOnly</code></p>
 <p><em>Type</em>: <strong>datetime <strong>nullable</strong></strong><br>
@@ -380,6 +377,11 @@ Allowed values for the <code>SystemStage</code>(Crm.Presales.Leads.md#systemstag
 <h3 id="identifiedperson">IdentifiedPerson</h3>
 <p>Filled when the person is identified and recorded in our master records. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.Contacts.Persons.html">Persons</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<h3 id="leaduserstage">LeadUserStage</h3>
+<p>The user-defined sub-stage of the lead. This also defines the step in the sales sequence and the next appropriate activity to engage the lead. null when the user stage is undefined (the pure System Stage defines the stage). <code>Filter(multi eq)</code></p>
+<p><em>Type</em>: <strong><a href="Crm.Presales.LeadUserStages.html">LeadUserStages</a> (nullable)</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="marketingcompanysize">MarketingCompanySize</h3>
 <p>The size class of the company. <code>Filter(multi eq)</code></p>

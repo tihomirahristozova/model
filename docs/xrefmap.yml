@@ -421,6 +421,9 @@ references:
 - uid: Crm.Presales.Leads
   name: Crm.Presales.Leads Entity
   href: entities/Crm.Presales.Leads.html
+- uid: Crm.Presales.LeadUserStages
+  name: Crm.Presales.LeadUserStages Entity
+  href: entities/Crm.Presales.LeadUserStages.html
 - uid: Crm.Presales.OfferLines
   name: Crm.Presales.OfferLines Entity
   href: entities/Crm.Presales.OfferLines.html
@@ -649,6 +652,9 @@ references:
 - uid: Finance.Excise.ExciseOperationTypes
   name: Finance.Excise.ExciseOperationTypes Entity
   href: entities/Finance.Excise.ExciseOperationTypes.html
+- uid: Finance.Excise.ExcisePurposeCodes
+  name: Finance.Excise.ExcisePurposeCodes Entity
+  href: entities/Finance.Excise.ExcisePurposeCodes.html
 - uid: Finance.Excise.MeasuringTransactions
   name: Finance.Excise.MeasuringTransactions Entity
   href: entities/Finance.Excise.MeasuringTransactions.html

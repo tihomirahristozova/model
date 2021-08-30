@@ -9093,7 +9093,7 @@
       "output": {
         ".html": {
           "relative_path": "business-rules/R32222.html",
-          "hash": "3yntPDNWKbCSrKUtvvf9Bw=="
+          "hash": "BVmfVA+f+EETNRLBa72LjQ=="
         }
       },
       "is_incremental": false,
@@ -10875,11 +10875,23 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "entities/Crm.Presales.LeadUserStages.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Crm.Presales.LeadUserStages.html",
+          "hash": "P9KucgzuzywjAmDfZLKpfg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "entities/Crm.Presales.Leads.md",
       "output": {
         ".html": {
           "relative_path": "entities/Crm.Presales.Leads.html",
-          "hash": "HHDgEM9D4eZIdzi6sD+H5A=="
+          "hash": "tIlAtPAK6Yyt/jid7X/l6Q=="
         }
       },
       "is_incremental": false,
@@ -10927,7 +10939,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Crm.Presales.html",
-          "hash": "YTNiA729oQjNmYnMLBA66g=="
+          "hash": "GvgKIVlNSeXQtf8bK31Mpg=="
         }
       },
       "is_incremental": false,
@@ -11071,7 +11083,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Crm.Sales.DocumentTypePaymentOptions.html",
-          "hash": "b0ioPUCDeKW2SaRIvCl7Mg=="
+          "hash": "9g0Va2VaAWFQzF36i1EClA=="
         }
       },
       "is_incremental": false,
@@ -11787,6 +11799,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "entities/Finance.Excise.ExcisePurposeCodes.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Finance.Excise.ExcisePurposeCodes.html",
+          "hash": "n2LLGcst4JlVW2HuPoPYGg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "entities/Finance.Excise.MeasuringTransactions.md",
       "output": {
         ".html": {
@@ -11827,7 +11851,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Finance.Excise.html",
-          "hash": "rfKltTUg5AInMIQ8qYVFqg=="
+          "hash": "Q+V69BigeKa9skhFygnnQg=="
         }
       },
       "is_incremental": false,
@@ -11839,7 +11863,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Finance.Intrastat.CommodityCodes.html",
-          "hash": "agFGY4SQ0SGGWXPm5l4Ztg=="
+          "hash": "+HvCmJC08hu318OUJjwe0A=="
         }
       },
       "is_incremental": false,
@@ -12739,7 +12763,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/General.DocumentTypes.html",
-          "hash": "GJYv4UoCcYPqmDDT9UcGKw=="
+          "hash": "0b6zv5M5bTIzWN0Zb1Q3pg=="
         }
       },
       "is_incremental": false,
@@ -15715,7 +15739,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Systems.Security.TrustedApplications.html",
-          "hash": "7cvN+VRH/vqPseOsVUtBtw=="
+          "hash": "0XdkOpTbLoNx2QTxViZvEw=="
         }
       },
       "is_incremental": false,
@@ -15919,7 +15943,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/toc.html",
-          "hash": "3dE5AZGo3AgVJsQ6Dr/FCw=="
+          "hash": "sXTHAIEv9QR3gRITtnbAiw=="
         }
       },
       "is_incremental": false,
@@ -17772,7 +17796,7 @@
       "output": {
         ".html": {
           "relative_path": "tables/Crm.html",
-          "hash": "c8tdWPlFNUTaHI85UBuu6Q=="
+          "hash": "KnLPf/TgM2hZJxRRoCEuxw=="
         }
       },
       "is_incremental": false,
@@ -18116,11 +18140,23 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "tables/Crm_Lead_User_Stages.md",
+      "output": {
+        ".html": {
+          "relative_path": "tables/Crm_Lead_User_Stages.html",
+          "hash": "MczV+IzuimgF7TPclvfpEg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "tables/Crm_Leads.md",
       "output": {
         ".html": {
           "relative_path": "tables/Crm_Leads.html",
-          "hash": "BQ28Ul7t6+XSAmJAq3tUaA=="
+          "hash": "yFdxwbAc4vANQJq2hp0XPA=="
         }
       },
       "is_incremental": false,
@@ -18768,7 +18804,7 @@
       "output": {
         ".html": {
           "relative_path": "tables/Exc_Excise_Administrative_Document_Lines.html",
-          "hash": "t5Ja9pqSG5D7fxT7m2XngQ=="
+          "hash": "Fkb/iUUP7kehLnZfNZpnaQ=="
         }
       },
       "is_incremental": false,
@@ -22776,7 +22812,7 @@
       "output": {
         ".html": {
           "relative_path": "tables/Sec_Trusted_Applications.html",
-          "hash": "gBOQ3WjDImoeQw7Fv4tTlA=="
+          "hash": "ZJOG74KrExSjILxlpBOUiQ=="
         }
       },
       "is_incremental": false,
@@ -23832,7 +23868,7 @@
       "output": {
         ".html": {
           "relative_path": "tables/index.html",
-          "hash": "Oon2H7k4WjGwugDu+6zFhA=="
+          "hash": "nTvRmkAXoy+W7CsOjAn1zA=="
         }
       },
       "is_incremental": false,
@@ -23844,7 +23880,7 @@
       "output": {
         ".html": {
           "relative_path": "tables/toc.html",
-          "hash": "CLZQ2OV0yaCzjfatHMY88w=="
+          "hash": "X5rPWt31FVPTm2eADHcYsw=="
         }
       },
       "is_incremental": false,

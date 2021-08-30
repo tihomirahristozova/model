@@ -83,15 +83,15 @@
 <p>Contains payment options for user documnet types for sales orders. Entity: Crm_Document_Type_Payment_Options</p>
 <h2 id="default-visualization">Default Visualization</h2>
 <p>Default Display Text Format:<br>
-<em>{Id}</em><br>
+<em>{DocumentType.Code}: {DocumentType.EntityName:T}</em><br>
 Default Search Member:<br>
-<em>Id</em></p>
+<em>DocumentType.Code</em></p>
 <h2 id="aggregate">Aggregate</h2>
 <p>An <a href="https://docs.erp.net/tech/advanced/concepts/aggregates.html">aggregate</a> is a cluster of domain objects that can be treated as a single unit.</p>
-<p>Aggregate Tree</p>
-<ul>
-<li><a href="Crm.Sales.DocumentTypePaymentOptions.html">Crm.Sales.DocumentTypePaymentOptions</a></li>
-</ul>
+<p>Aggregate Parent:<br>
+<a href="General.DocumentTypes.html">General.DocumentTypes</a><br>
+Aggregate Root:<br>
+<a href="General.DocumentTypes.html">General.DocumentTypes</a></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -132,7 +132,7 @@ Default Search Member:<br>
 <tr>
 <td><a href="Crm.Sales.DocumentTypePaymentOptions.html#documenttype">DocumentType</a></td>
 <td><a href="General.DocumentTypes.html">DocumentTypes</a></td>
-<td>The document type for which the payment option applies. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>The document type for which the payment option applies. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.DocumentTypePaymentOptions.html#enterprisecompany">EnterpriseCompany</a></td>
@@ -158,10 +158,11 @@ Default Search Member:<br>
 <p><em>Type</em>: <strong><a href="General.Currencies.html">Currencies</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="documenttype">DocumentType</h3>
-<p>The document type for which the payment option applies. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>The document type for which the payment option applies. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="General.DocumentTypes.html">DocumentTypes</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em><a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a></em>: <strong>True</strong></p>
 <h3 id="enterprisecompany">EnterpriseCompany</h3>
 <p>The enterprise company for which the payment options are specified. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a></strong><br>
