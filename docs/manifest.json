@@ -11794,7 +11794,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Finance.Excise.ExciseAdministrativeDocumentLines.html",
-          "hash": "7VH0W4c8+BPnIdKMOlg/4g=="
+          "hash": "Ena+r9ewi/hzq2zLhnsnAA=="
         }
       },
       "is_incremental": false,
@@ -11830,7 +11830,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Finance.Excise.ExcisePurposeCodes.html",
-          "hash": "n2LLGcst4JlVW2HuPoPYGg=="
+          "hash": "n4EueQO7BuwtXz3AEpf+Mg=="
         }
       },
       "is_incremental": false,
@@ -13174,7 +13174,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/General.Products.Products.html",
-          "hash": "Nyt2y1N/7uws0/PIUB2z8g=="
+          "hash": "OgrngfSCE2lfBELmDdK74Q=="
         }
       },
       "is_incremental": false,
@@ -18819,7 +18819,7 @@
       "output": {
         ".html": {
           "relative_path": "tables/Exc.html",
-          "hash": "KEt3ZCe8cLhawBYH5cGIQQ=="
+          "hash": "UpYN6m611YwHBDHztRucLg=="
         }
       },
       "is_incremental": false,
@@ -18831,7 +18831,7 @@
       "output": {
         ".html": {
           "relative_path": "tables/Exc_Excise_Administrative_Document_Lines.html",
-          "hash": "Fkb/iUUP7kehLnZfNZpnaQ=="
+          "hash": "N8kwQ2qVCe0u34Y5KJnWLA=="
         }
       },
       "is_incremental": false,
@@ -18856,6 +18856,18 @@
         ".html": {
           "relative_path": "tables/Exc_Excise_Operation_Types.html",
           "hash": "cVWvCOZMpb/WoieVezJcoQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tables/Exc_Excise_Purpose_Codes.md",
+      "output": {
+        ".html": {
+          "relative_path": "tables/Exc_Excise_Purpose_Codes.html",
+          "hash": "yKBXus3K2tJhVWPV2Xxpig=="
         }
       },
       "is_incremental": false,
@@ -20019,7 +20031,7 @@
       "output": {
         ".html": {
           "relative_path": "tables/Gen_Products.html",
-          "hash": "GS+x52r2up5+1dQVfbJAJA=="
+          "hash": "aTzkr3LeU2lO+4hdOEJRmQ=="
         }
       },
       "is_incremental": false,
@@ -23895,7 +23907,7 @@
       "output": {
         ".html": {
           "relative_path": "tables/index.html",
-          "hash": "nTvRmkAXoy+W7CsOjAn1zA=="
+          "hash": "ZX333oFUbVJ26HcgjVKsyw=="
         }
       },
       "is_incremental": false,
@@ -23907,7 +23919,7 @@
       "output": {
         ".html": {
           "relative_path": "tables/toc.html",
-          "hash": "X5rPWt31FVPTm2eADHcYsw=="
+          "hash": "FBAlPUXkhepjtnZV+LQocg=="
         }
       },
       "is_incremental": false,

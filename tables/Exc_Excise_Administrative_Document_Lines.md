@@ -19,6 +19,7 @@ The details of the movement of each excise product for each excise document. Ent
 |[Excise_Administrative_Document_Id](#excise_administrative_document_id)|`uniqueidentifier` ||
 |[Excise_Administrative_Document_Line_Id](#excise_administrative_document_line_id)|`uniqueidentifier` `PK`||
 |[Line_No](#line_no)|`int` |Consecutive line number within the document.|
+|[Measuring_Transaction_Id](#measuring_transaction_id)|`uniqueidentifier` |Transaction of product input or output, measured with specialized measuring device for excise purposes.|
 |[Notes](#notes)|`nvarchar(max)` ||
 |[Product_Id](#product_id)|`uniqueidentifier` |The product being sold.|
 |[Quantity](#quantity)|`decimal(12, 3)` |The quantity being sold, in the measurement unit, specified in Quantity Unit.|
@@ -39,7 +40,7 @@ The details of the movement of each excise product for each excise document. Ent
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|1|
 |Ownership Reference|yes|
 |Pasword|no|
 |Picture|no|
@@ -73,7 +74,7 @@ The details of the movement of each excise product for each excise document. Ent
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|0|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -110,7 +111,7 @@ Consecutive line number within the document.
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|2|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -126,6 +127,43 @@ Consecutive line number within the document.
 |User Login|no|
 |Visible|yes|
 
+### Measuring_Transaction_Id
+
+
+Transaction of product input or output, measured with specialized measuring device for excise purposes.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|8|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|Referenced Table|[Exc_Measuring_Transactions](Exc_Measuring_Transactions.md)|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Measuring_Transaction_Id - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
+
 ### Notes
 
 | Property | Value |
@@ -138,7 +176,7 @@ Consecutive line number within the document.
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|2147483647|
-|Order|2147483647|
+|Order|7|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -168,7 +206,7 @@ The product being sold.
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|3|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -206,7 +244,7 @@ The quantity being sold, in the measurement unit, specified in Quantity Unit.
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|4|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -236,7 +274,7 @@ The quantity in base measurement category for the product.
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|6|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -266,7 +304,7 @@ The measurement unit of Quantity.
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|5|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|

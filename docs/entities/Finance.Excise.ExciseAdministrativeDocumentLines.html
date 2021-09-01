@@ -150,6 +150,11 @@ Aggregate Root:<br>
 <td>The <code>ExciseAdministrative&lt;br /&gt;Document</code>(Finance.Excise.ExciseAdministrative<br>DocumentLines.md#exciseadministrativedocument) to which this ExciseAdministrative<br>DocumentLine belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 <tr>
+<td><a href="Finance.Excise.ExciseAdministrativeDocumentLines.html#measuringtransaction">MeasuringTransaction</a></td>
+<td><a href="Finance.Excise.MeasuringTransactions.html">MeasuringTransactions</a> (nullable)</td>
+<td>Transaction of product input or output, measured with specialized measuring device for excise purposes. <code>Filter(multi eq)</code> <code>Introduced in version 21.1.3.87</code></td>
+</tr>
+<tr>
 <td><a href="Finance.Excise.ExciseAdministrativeDocumentLines.html#product">Product</a></td>
 <td><a href="General.Products.Products.html">Products</a></td>
 <td>The product being sold. <code>Required</code> <code>Filter(multi eq)</code></td>
@@ -205,6 +210,10 @@ Aggregate Root:<br>
 <p><em>Type</em>: <strong><a href="Finance.Excise.ExciseAdministrativeDocuments.html">ExciseAdministrativeDocuments</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em><a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a></em>: <strong>True</strong></p>
+<h3 id="measuringtransaction">MeasuringTransaction</h3>
+<p>Transaction of product input or output, measured with specialized measuring device for excise purposes. <code>Filter(multi eq)</code> <code>Introduced in version 21.1.3.87</code></p>
+<p><em>Type</em>: <strong><a href="Finance.Excise.MeasuringTransactions.html">MeasuringTransactions</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="product">Product</h3>
 <p>The product being sold. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.Products.Products.html">Products</a></strong><br>

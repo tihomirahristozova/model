@@ -153,6 +153,11 @@ Default Search Member:<br>
 <td>The description of the product.</td>
 </tr>
 <tr>
+<td><a href="General.Products.Products.html#excisealcoholicstrength">ExciseAlcoholicStrength</a></td>
+<td>decimal (5, 2) <strong>nullable</strong></td>
+<td>The alcoholic strength, which will be used for Excise reporting purposes. null if the product is not subject to alcoholic Excise reporting. <code>Introduced in version 21.1.3.87</code></td>
+</tr>
+<tr>
 <td><a href="General.Products.Products.html#expiryperioddays">ExpiryPeriodDays</a></td>
 <td>int32 <strong>nullable</strong></td>
 <td>Total default expiry period for the product (in days) from the date of production to the date of expiry.</td>
@@ -515,6 +520,11 @@ Allowed values for the <code>CostingMethod</code>(General.Products.Products.md#c
 <h3 id="description">Description</h3>
 <p>The description of the product.</p>
 <p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a> <strong>nullable</strong></strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="excisealcoholicstrength">ExciseAlcoholicStrength</h3>
+<p>The alcoholic strength, which will be used for Excise reporting purposes. null if the product is not subject to alcoholic Excise reporting. <code>Introduced in version 21.1.3.87</code></p>
+<p><em>Type</em>: <strong>decimal (5, 2) <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="expiryperioddays">ExpiryPeriodDays</h3>

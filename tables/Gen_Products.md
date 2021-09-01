@@ -23,6 +23,7 @@ Products are the different items in the enterprise, which can be purchased, stor
 |[Creation_User](#creation_user)|`nvarchar(64)` Readonly||
 |[Description](#description)|`nvarchar(max)` `ML`|The description of the product|
 |[Enterprise_Company_Id](#enterprise_company_id)|`uniqueidentifier` |When not NULL, specifies that the product is specific to a given enterprise company and may be used only in documents from this enterprise company.|
+|[Excise_Alcoholic_Strength](#excise_alcoholic_strength)|`decimal(5, 2)` |The alcoholic strength, which will be used for Excise reporting purposes. NULL if the product is not subject to alcoholic Excise reporting.|
 |[Expiry_Period_Days](#expiry_period_days)|`int` |Total default expiry period for the product (in days) from the date of production to the date of expiry|
 |[Flushing_Method](#flushing_method)|`nvarchar(1)` Allowed: `B`, `F`, `M`|Consumption method for work orders. M=Manual, using Consuption Journals, F=Forward (on release), B=Backward (on finish)|
 |[Guarantee_Period_Days](#guarantee_period_days)|`int` |Default guarantee period length in days. 0 means no guarantee. Should be non-NULL for serviced products and NULL for the others|
@@ -220,7 +221,7 @@ Specifies what type of cargo this product is. Required when generating transport
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|45|
+|Order|44|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -473,6 +474,36 @@ When not NULL, specifies that the product is specific to a given enterprise comp
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|yes|no|
+
+### Excise_Alcoholic_Strength
+
+
+The alcoholic strength, which will be used for Excise reporting purposes. NULL if the product is not subject to alcoholic Excise reporting.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|45|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|decimal(5, 2) (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Short|
+|User Login|no|
+|Visible|no|
 
 ### Expiry_Period_Days
 
@@ -1221,7 +1252,7 @@ Default measurement unit to use, when creating new purchase documents with this 
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|44|
+|Order|2147483647|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|

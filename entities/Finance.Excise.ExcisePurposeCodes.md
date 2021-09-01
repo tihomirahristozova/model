@@ -5,7 +5,7 @@ uid: Finance.Excise.ExcisePurposeCodes
 
 **Namespace:** [Finance.Excise](Finance.Excise.md)  
 
-Purpose codes specify the different purposes recognized by the authorities for determining the excise rate. Entity: Exc_Excise_Purpose_Codes
+Purpose codes specify the different purposes recognized by the authorities for determining the excise rate. Entity: Exc_Excise_Purpose_Codes (Introduced in version 21.1.3.87)
 
 ## Default Visualization
 Default Display Text Format:  
@@ -23,9 +23,9 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Finance.Excise.ExcisePurposeCodes.md#code) | string (32) | The unique code of the ExcisePurposeCode. `Required` `ORD` 
+| [Code](Finance.Excise.ExcisePurposeCodes.md#code) | string (32) | The unique code of the ExcisePurposeCode. `Required` `Filter(eq;like)` `ORD` 
 | [Id](Finance.Excise.ExcisePurposeCodes.md#id) | guid |  
-| [Name](Finance.Excise.ExcisePurposeCodes.md#name) | string (254) | The name of this ExcisePurposeCode. `Required` 
+| [Name](Finance.Excise.ExcisePurposeCodes.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | The name of this ExcisePurposeCode. `Required` `Filter(like)` 
 | [Notes](Finance.Excise.ExcisePurposeCodes.md#notes) | string (max) __nullable__ | Notes for this ExcisePurposeCode. 
 
 
@@ -33,11 +33,11 @@ Aggregate Tree
 
 ### Code
 
-The unique code of the ExcisePurposeCode. `Required` `ORD`
+The unique code of the ExcisePurposeCode. `Required` `Filter(eq;like)` `ORD`
 
 _Type_: **string (32)**  
 _Indexed_: **True**  
-_Supported Filters_: **NotFilterable**  
+_Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
 _Maximum Length_: **32**  
 
@@ -50,12 +50,11 @@ _Default Value_: **NewGuid**
 
 ### Name
 
-The name of this ExcisePurposeCode. `Required`
+The name of this ExcisePurposeCode. `Required` `Filter(like)`
 
-_Type_: **string (254)**  
-_Supported Filters_: **NotFilterable**  
+_Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
+_Supported Filters_: **Like**  
 _Supports Order By_: **False**  
-_Maximum Length_: **254**  
 
 ### Notes
 
