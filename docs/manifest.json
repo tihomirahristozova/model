@@ -494,6 +494,33 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "business-rules/R26761-1.md",
+      "output": {
+        ".html": {
+          "relative_path": "business-rules/R26761-1.html",
+          "hash": "3nCuGydgLhlzsTuNGTtJ5g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "business-rules/R26761-2.md",
+      "output": {
+        ".html": {
+          "relative_path": "business-rules/R26761-2.html",
+          "hash": "BlIiaaef0WeO+dvB8G2rlg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "business-rules/R26764.md",
       "output": {
         ".html": {
@@ -11203,7 +11230,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Finance.Accounting.AccountGroups.html",
-          "hash": "sBmsiqTKqL+lksga+hLlVg=="
+          "hash": "a056MT/8MJFRFOHJA5eODQ=="
         }
       },
       "is_incremental": false,
