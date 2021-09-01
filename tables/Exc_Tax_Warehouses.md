@@ -13,7 +13,9 @@ Contains excise-related data for warehouses (stores), which are defined as tax w
 | - | - | --- |
 |[Row_Version](#row_version)|`timestamp` ||
 |[Store_Id](#store_id)|`uniqueidentifier` |The base warehouse (store), which is declared as tax warehouse.|
+|[Tax_Warehouse_Excise_Number](#tax_warehouse_excise_number)|`nvarchar(32)` |The excise identification number of the tax warehouse, issued by the competent authorities.|
 |[Tax_Warehouse_Id](#tax_warehouse_id)|`uniqueidentifier` `PK`||
+|[Trader_Excise_Number](#trader_excise_number)|`nvarchar(32)` |The excise identification number of the owner of the Tax Warehouse.|
 
 ## Columns
 
@@ -81,6 +83,36 @@ The base warehouse (store), which is declared as tax warehouse.
 | - | - | - | - |
 |Equals|`NULL`|no|no|
 
+### Tax_Warehouse_Excise_Number
+
+
+The excise identification number of the tax warehouse, issued by the competent authorities.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|-|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|32|
+|Order|3|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|nvarchar(32)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
 ### Tax_Warehouse_Id
 
 | Property | Value |
@@ -113,5 +145,35 @@ The base warehouse (store), which is declared as tax warehouse.
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+
+### Trader_Excise_Number
+
+
+The excise identification number of the owner of the Tax Warehouse.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|-|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|32|
+|Order|2|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|nvarchar(32)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
 
 

@@ -112,23 +112,21 @@ If &quot;ParentLine.PersistLots == True&quot;,  then &quot;StoreOrderLine.Lot =
 </tr>
 <tr>
 <td><strong>Description</strong></td>
-<td>On First Released and Corrective on the current Store Order is finding the Parent document (if
-present such) and a revision is done whether the field &quot;Persist Lots&quot; is marked.
-<br><br>
-In this revision each line of Store Order is checked and for this line is found the parent line
-(connection is established with Parent_Line_Id) and if in Parent line the field &quot;Persist Lots&quot;
-is marked, then checked in Store Order line value in the field 'Lot' must be equal to the value
-in its parent line.</td>
+<td>The current validation checks that for each of the lines in the current Store Order if
+'Parent line number' is filled in and 'Persist Lot' is checked marked in the parent document line
+, then the Lot from parent line is the same as the Lot specified in the current store order line.</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>
-<td>There are not implemented requirements for Persist Lots in Parent document from Store Orders
-with line numbers:[LineNo]</td>
+<td>The field Lot has an invalid value.
+The lot in line number '{LineNo}' in document '{DocumentText}' must be the same as the lot
+of the parent document line because the field Persist Lot is check marked in the parent line.
+Please make sure that the lots in both lines are the same.</td>
 </tr>
 <tr>
 <td><strong>Introduced In
 Version</strong></td>
-<td>2017</td>
+<td>2021</td>
 </tr>
 <tr>
 <td><strong>Revocable</strong></td>
