@@ -105,7 +105,7 @@ Default Search Member:<br>
 <tr>
 <td><a href="Finance.Excise.ExciseOperationTypes.html#code">Code</a></td>
 <td>string (16)</td>
-<td>The unique code of the ExciseOperationType. <code>Required</code> <code>Filter(multi eq;like)</code></td>
+<td>The unique code of the ExciseOperationType. <code>Required</code> <code>Filter(multi eq;like)</code> <code>ORD</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Excise.ExciseOperationTypes.html#id">Id</a></td>
@@ -126,10 +126,11 @@ Default Search Member:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="code">Code</h3>
-<p>The unique code of the ExciseOperationType. <code>Required</code> <code>Filter(multi eq;like)</code></p>
+<p>The unique code of the ExciseOperationType. <code>Required</code> <code>Filter(multi eq;like)</code> <code>ORD</code></p>
 <p><em>Type</em>: <strong>string (16)</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Supports Order By</em>: <strong>True</strong><br>
 <em>Maximum Length</em>: <strong>16</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>

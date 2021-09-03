@@ -649,9 +649,18 @@ references:
 - uid: Finance.Excise.ExciseAdministrativeDocuments
   name: Finance.Excise.ExciseAdministrativeDocuments Entity
   href: entities/Finance.Excise.ExciseAdministrativeDocuments.html
+- uid: Finance.Excise.ExciseDutyRates
+  name: Finance.Excise.ExciseDutyRates Entity
+  href: entities/Finance.Excise.ExciseDutyRates.html
 - uid: Finance.Excise.ExciseOperationTypes
   name: Finance.Excise.ExciseOperationTypes Entity
   href: entities/Finance.Excise.ExciseOperationTypes.html
+- uid: Finance.Excise.ExciseProductCategories
+  name: Finance.Excise.ExciseProductCategories Entity
+  href: entities/Finance.Excise.ExciseProductCategories.html
+- uid: Finance.Excise.ExciseProducts
+  name: Finance.Excise.ExciseProducts Entity
+  href: entities/Finance.Excise.ExciseProducts.html
 - uid: Finance.Excise.ExcisePurposeCodes
   name: Finance.Excise.ExcisePurposeCodes Entity
   href: entities/Finance.Excise.ExcisePurposeCodes.html

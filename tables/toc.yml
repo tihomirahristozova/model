@@ -432,8 +432,14 @@
     href: Exc_Excise_Administrative_Document_Lines.md
   - name: Exc_Excise_Administrative_Documents
     href: Exc_Excise_Administrative_Documents.md
+  - name: Exc_Excise_Duty_Rates
+    href: Exc_Excise_Duty_Rates.md
   - name: Exc_Excise_Operation_Types
     href: Exc_Excise_Operation_Types.md
+  - name: Exc_Excise_Product_Categories
+    href: Exc_Excise_Product_Categories.md
+  - name: Exc_Excise_Products
+    href: Exc_Excise_Products.md
   - name: Exc_Excise_Purpose_Codes
     href: Exc_Excise_Purpose_Codes.md
   - name: Exc_Measuring_Transactions

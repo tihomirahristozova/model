@@ -23,7 +23,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Finance.Excise.ExciseOperationTypes.md#code) | string (16) | The unique code of the ExciseOperationType. `Required` `Filter(multi eq;like)` 
+| [Code](Finance.Excise.ExciseOperationTypes.md#code) | string (16) | The unique code of the ExciseOperationType. `Required` `Filter(multi eq;like)` `ORD` 
 | [Id](Finance.Excise.ExciseOperationTypes.md#id) | guid |  
 | [Name](Finance.Excise.ExciseOperationTypes.md#name) | string (254) | The name of this ExciseOperationType. `Required` `Filter(multi eq;like)` 
 | [Notes](Finance.Excise.ExciseOperationTypes.md#notes) | string (max) __nullable__ | Notes for this ExciseOperationType. 
@@ -33,11 +33,12 @@ Aggregate Tree
 
 ### Code
 
-The unique code of the ExciseOperationType. `Required` `Filter(multi eq;like)`
+The unique code of the ExciseOperationType. `Required` `Filter(multi eq;like)` `ORD`
 
 _Type_: **string (16)**  
+_Indexed_: **True**  
 _Supported Filters_: **Equals, Like, EqualsIn**  
-_Supports Order By_: **False**  
+_Supports Order By_: **True**  
 _Maximum Length_: **16**  
 
 ### Id

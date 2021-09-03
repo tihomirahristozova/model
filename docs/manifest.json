@@ -11814,11 +11814,47 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "entities/Finance.Excise.ExciseDutyRates.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Finance.Excise.ExciseDutyRates.html",
+          "hash": "awEdcK0UxqaKHKqrV7pIGg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "entities/Finance.Excise.ExciseOperationTypes.md",
       "output": {
         ".html": {
           "relative_path": "entities/Finance.Excise.ExciseOperationTypes.html",
-          "hash": "8iUQnW8O2hYLxkUgC3RoHw=="
+          "hash": "eIkL/GxEgBii4Pu0MfKeJQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "entities/Finance.Excise.ExciseProductCategories.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Finance.Excise.ExciseProductCategories.html",
+          "hash": "YZincz8Kjfh6BHSsqGGoSg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "entities/Finance.Excise.ExciseProducts.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Finance.Excise.ExciseProducts.html",
+          "hash": "nnsuHy7Ghu5lp4zmIZTRUg=="
         }
       },
       "is_incremental": false,
@@ -11878,7 +11914,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Finance.Excise.html",
-          "hash": "Q+V69BigeKa9skhFygnnQg=="
+          "hash": "yKIJGKsHZZz+gol+h9PUsg=="
         }
       },
       "is_incremental": false,
@@ -15970,7 +16006,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/toc.html",
-          "hash": "sXTHAIEv9QR3gRITtnbAiw=="
+          "hash": "Je76hMmH9omm6zghQALX8A=="
         }
       },
       "is_incremental": false,
@@ -18819,7 +18855,7 @@
       "output": {
         ".html": {
           "relative_path": "tables/Exc.html",
-          "hash": "UpYN6m611YwHBDHztRucLg=="
+          "hash": "WXG5L2mUCJqkqhnrux83uw=="
         }
       },
       "is_incremental": false,
@@ -18851,11 +18887,47 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "tables/Exc_Excise_Duty_Rates.md",
+      "output": {
+        ".html": {
+          "relative_path": "tables/Exc_Excise_Duty_Rates.html",
+          "hash": "jNctpJzJpdLAyP31cIGY9w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "tables/Exc_Excise_Operation_Types.md",
       "output": {
         ".html": {
           "relative_path": "tables/Exc_Excise_Operation_Types.html",
-          "hash": "cVWvCOZMpb/WoieVezJcoQ=="
+          "hash": "qaOmpNnxwGgWhLE0zeFw4w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tables/Exc_Excise_Product_Categories.md",
+      "output": {
+        ".html": {
+          "relative_path": "tables/Exc_Excise_Product_Categories.html",
+          "hash": "ssoqOgdYG5pvMFO4utbo/g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tables/Exc_Excise_Products.md",
+      "output": {
+        ".html": {
+          "relative_path": "tables/Exc_Excise_Products.html",
+          "hash": "WsqWM5Li6SCpHSIT4FK50g=="
         }
       },
       "is_incremental": false,
@@ -23907,7 +23979,7 @@
       "output": {
         ".html": {
           "relative_path": "tables/index.html",
-          "hash": "ZX333oFUbVJ26HcgjVKsyw=="
+          "hash": "y7MeNt+LuR3yE2WkyJ6HCw=="
         }
       },
       "is_incremental": false,
@@ -23919,7 +23991,7 @@
       "output": {
         ".html": {
           "relative_path": "tables/toc.html",
-          "hash": "FBAlPUXkhepjtnZV+LQocg=="
+          "hash": "nTsNxp1Wz3RRvh131WSFVg=="
         }
       },
       "is_incremental": false,

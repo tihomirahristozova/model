@@ -454,8 +454,14 @@
       href: Finance.Excise.ExciseAdministrativeDocumentLines.md
     - name: ExciseAdministrativeDocuments
       href: Finance.Excise.ExciseAdministrativeDocuments.md
+    - name: ExciseDutyRates
+      href: Finance.Excise.ExciseDutyRates.md
     - name: ExciseOperationTypes
       href: Finance.Excise.ExciseOperationTypes.md
+    - name: ExciseProductCategories
+      href: Finance.Excise.ExciseProductCategories.md
+    - name: ExciseProducts
+      href: Finance.Excise.ExciseProducts.md
     - name: ExcisePurposeCodes
       href: Finance.Excise.ExcisePurposeCodes.md
     - name: MeasuringTransactions
