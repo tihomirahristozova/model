@@ -446,6 +446,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "business-rules/R26712.md",
+      "output": {
+        ".html": {
+          "relative_path": "business-rules/R26712.html",
+          "hash": "Lq8dz46k/kin5NT56mmTPg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "business-rules/R26720.md",
       "output": {
         ".html": {
@@ -9180,7 +9192,7 @@
       "output": {
         ".html": {
           "relative_path": "business-rules/R32347.html",
-          "hash": "hfQzt5ufPYYFs5zHSvp/4g=="
+          "hash": "K0k4N7LT0mf6mp7ceEWA+w=="
         }
       },
       "is_incremental": false,
@@ -14182,7 +14194,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Logistics.Shipment.ShipmentOrders.html",
-          "hash": "YvtU99F3PZUYy4p6dxUhag=="
+          "hash": "ZOrezbcRuoOC6ln80FIfnQ=="
         }
       },
       "is_incremental": false,
