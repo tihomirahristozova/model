@@ -31,7 +31,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Store](Finance.Excise.TaxWarehouses.md#store) | [Stores](Logistics.Inventory.Stores.md) | The base warehouse (store), which is declared as tax warehouse. `Required` `Filter(multi eq)` |
+| [EnterpriseCompany](Finance.Excise.TaxWarehouses.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The Enterprise company to which the tax warehouse belongs. `Required` `Filter(multi eq)` `Introduced in version 21.1.3.91` |
 
 
 ## Attribute Details
@@ -66,12 +66,11 @@ _Default Value_: **-**
 
 ## Reference Details
 
-### Store
+### EnterpriseCompany
 
-The base warehouse (store), which is declared as tax warehouse. `Required` `Filter(multi eq)`
+The Enterprise company to which the tax warehouse belongs. `Required` `Filter(multi eq)` `Introduced in version 21.1.3.91`
 
-_Type_: **[Stores](Logistics.Inventory.Stores.md)**  
-_Indexed_: **True**  
+_Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 
