@@ -9,9 +9,9 @@ Defines the parameters, which are tracked for the assets of the different types.
 
 ## Default Visualization
 Default Display Text Format:  
-_{ManagedAssetType.Code}: {ManagedAssetType.Name:T}_  
+_{ManagedAssetType.Name:T} #{ManagedAssetType.Code}_  
 Default Search Member:  
-_ManagedAssetType.Code_  
+_ManagedAssetType.Name_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

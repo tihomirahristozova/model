@@ -9,9 +9,9 @@ Contains the tax group codes for the product types. The tax group codes are used
 
 ## Default Visualization
 Default Display Text Format:  
-_{ProductType.Code}: {ProductType.Name:T}_  
+_{ProductType.Name:T} #{ProductType.Code}_  
 Default Search Member:  
-_ProductType.Code_  
+_ProductType.Name_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

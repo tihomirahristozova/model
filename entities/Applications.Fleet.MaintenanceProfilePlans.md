@@ -9,9 +9,9 @@ Contains the plans, included in the maintenance profile. Entity: Fleet_Maintenan
 
 ## Default Visualization
 Default Display Text Format:  
-_{MaintenanceProfile.Code}: {MaintenanceProfile.Name:T}_  
+_{MaintenanceProfile.Name:T} #{MaintenanceProfile.Code}_  
 Default Search Member:  
-_MaintenanceProfile.Code_  
+_MaintenanceProfile.Name_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

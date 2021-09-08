@@ -9,9 +9,9 @@ Represents a mode of transportation, like water, air, road, etc. Entity: Log_Tra
 
 ## Default Visualization
 Default Display Text Format:  
-_{Code}: {Name:T}_  
+_{Name:T} #{Code}_  
 Default Search Member:  
-_Code_  
+_Name_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

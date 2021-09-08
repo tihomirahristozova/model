@@ -9,9 +9,9 @@ Consumables are products, which are usually sold accompanying an asset rental. E
 
 ## Default Visualization
 Default Display Text Format:  
-_{RentalAsset.RentalAssetCode}: {RentalAsset.RentalAssetName:T}_  
+_{RentalAsset.RentalAssetName:T} #{RentalAsset.RentalAssetCode}_  
 Default Search Member:  
-_RentalAsset.RentalAssetCode_  
+_RentalAsset.RentalAssetName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

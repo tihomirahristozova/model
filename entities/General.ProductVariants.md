@@ -9,9 +9,9 @@ Contains definitions of different variants of a product. The variants are differ
 
 ## Default Visualization
 Default Display Text Format:  
-_{BarCode}: {Name:T}_  
+_{Name:T} #{BarCode}_  
 Default Search Member:  
-_BarCode_  
+_Name_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

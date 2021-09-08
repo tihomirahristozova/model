@@ -9,9 +9,9 @@ Contains the actual correspondance filters, which specify how each financial sta
 
 ## Default Visualization
 Default Display Text Format:  
-_{FinancialStatementNode.Code}: {FinancialStatementNode.Name:T}_  
+_{FinancialStatementNode.Name:T} #{FinancialStatementNode.Code}_  
 Default Search Member:  
-_FinancialStatementNode.Code_  
+_FinancialStatementNode.Name_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

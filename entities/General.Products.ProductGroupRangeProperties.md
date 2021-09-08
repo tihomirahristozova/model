@@ -9,9 +9,9 @@ When specified for a product group, provides a way for automatical creation of n
 
 ## Default Visualization
 Default Display Text Format:  
-_{ProductGroup.NextPartNumber}: {ProductGroup.Name:T}_  
+_{ProductGroup.Name:T} #{ProductGroup.NextPartNumber}_  
 Default Search Member:  
-_ProductGroup.NextPartNumber_  
+_ProductGroup.Name_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

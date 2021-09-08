@@ -9,9 +9,9 @@ Groups the rentable assets in hierarchy of logical groups. Entity: Rent_Asset_Gr
 
 ## Default Visualization
 Default Display Text Format:  
-_{RentalAssetGroupCode}: {RentalAssetGroupName:T}_  
+_{RentalAssetGroupName:T} #{RentalAssetGroupCode}_  
 Default Search Member:  
-_RentalAssetGroupCode_  
+_RentalAssetGroupName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

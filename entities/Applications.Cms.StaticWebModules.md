@@ -10,9 +10,9 @@ A web module, which contains one web page with static text. Entity: Cms_Static_W
 
 ## Default Visualization
 Default Display Text Format:  
-_{LanguageCode}: {Name:T}_  
+_{Name:T} #{LanguageCode}_  
 Default Search Member:  
-_LanguageCode_  
+_Name_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

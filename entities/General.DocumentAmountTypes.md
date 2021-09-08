@@ -9,9 +9,9 @@ Represents the different types of additional amounts which are calculated for th
 
 ## Default Visualization
 Default Display Text Format:  
-_{AmountTypeCode}: {AmountTypeName:T}_  
+_{AmountTypeName:T} #{AmountTypeCode}_  
 Default Search Member:  
-_AmountTypeCode_  
+_AmountTypeName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

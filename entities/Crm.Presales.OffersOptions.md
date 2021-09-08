@@ -9,9 +9,9 @@ Contains options for user defined document types for Offers. Entity: Crm_Offers_
 
 ## Default Visualization
 Default Display Text Format:  
-_{DocumentType.Code}: {DocumentType.EntityName:T}_  
+_{DocumentType.EntityName:T} #{DocumentType.Code}_  
 Default Search Member:  
-_DocumentType.Code_  
+_DocumentType.EntityName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

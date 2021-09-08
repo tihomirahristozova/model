@@ -9,9 +9,9 @@ Specifies a legislation, which is applicable for a party. A single party can hav
 
 ## Default Visualization
 Default Display Text Format:  
-_{Party.PartyCode}: {Party.PartyName:T}_  
+_{Party.PartyName:T} #{Party.PartyCode}_  
 Default Search Member:  
-_Party.PartyCode_  
+_Party.PartyName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

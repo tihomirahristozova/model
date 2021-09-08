@@ -9,9 +9,9 @@ Contains the list of responsible parties (usually persons) for the stores. Store
 
 ## Default Visualization
 Default Display Text Format:  
-_{Store.PartyCode}: {Store.PartyName:T}_  
+_{Store.PartyName:T} #{Store.PartyCode}_  
 Default Search Member:  
-_Store.PartyCode_  
+_Store.PartyName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

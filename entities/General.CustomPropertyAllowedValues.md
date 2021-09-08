@@ -9,9 +9,9 @@ User-defined properties allowed values. Can be specified only for properties wit
 
 ## Default Visualization
 Default Display Text Format:  
-_{Property.Code}: {Property.AllowedValuesEntityName:T}_  
+_{Property.AllowedValuesEntityName:T} #{Property.Code}_  
 Default Search Member:  
-_Property.Code_  
+_Property.AllowedValuesEntityName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

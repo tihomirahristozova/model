@@ -9,9 +9,9 @@ Additional product codes, categorized by coding systems. Entity: Gen_Product_Cod
 
 ## Default Visualization
 Default Display Text Format:  
-_{Product.PartNumber}: {Product.Name:T}_  
+_{Product.Name:T} #{Product.PartNumber}_  
 Default Search Member:  
-_Product.PartNumber_  
+_Product.Name_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

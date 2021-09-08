@@ -9,9 +9,9 @@ Contains relationship between process and joint controllers. For processes with 
 
 ## Default Visualization
 Default Display Text Format:  
-_{PersonalDataProcess.Code}: {PersonalDataProcess.Name:T}_  
+_{PersonalDataProcess.Name:T} #{PersonalDataProcess.Code}_  
 Default Search Member:  
-_PersonalDataProcess.Code_  
+_PersonalDataProcess.Name_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

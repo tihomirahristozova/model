@@ -9,9 +9,9 @@ List of user-defined document types. Each type has associated system entity (obj
 
 ## Default Visualization
 Default Display Text Format:  
-_{Code}: {EntityName:T}_  
+_{EntityName:T} #{Code}_  
 Default Search Member:  
-_Code_  
+_EntityName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

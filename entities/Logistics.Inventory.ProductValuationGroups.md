@@ -9,9 +9,9 @@ Contains the available valuation groups for products. They are used in reconcili
 
 ## Default Visualization
 Default Display Text Format:  
-_{ValuationGroupCode}: {ValuationGroupName:T}_  
+_{ValuationGroupName:T} #{ValuationGroupCode}_  
 Default Search Member:  
-_ValuationGroupCode_  
+_ValuationGroupName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

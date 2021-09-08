@@ -9,9 +9,9 @@ The bank accounts of a party. Entity: Gen_Party_Bank_Accounts
 
 ## Default Visualization
 Default Display Text Format:  
-_{BankAccountCode}: {BankBranchName:T}_  
+_{BankBranchName:T} #{BankAccountCode}_  
 Default Search Member:  
-_BankAccountCode_  
+_BankBranchName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

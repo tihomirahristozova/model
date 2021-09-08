@@ -9,9 +9,9 @@ Hierarchical chart of account groups. Entity: Acc_Account_Groups
 
 ## Default Visualization
 Default Display Text Format:  
-_{Number}: {Name:T}_  
+_{Name:T} #{Number}_  
 Default Search Member:  
-_Number_  
+_Name_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

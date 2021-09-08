@@ -9,9 +9,9 @@ Represents participant in a project, with a specific role. The same participant 
 
 ## Default Visualization
 Default Display Text Format:  
-_{Project.Code}: {Project.Name:T}_  
+_{Project.Name:T} #{Project.Code}_  
 Default Search Member:  
-_Project.Code_  
+_Project.Name_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

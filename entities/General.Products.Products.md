@@ -9,9 +9,9 @@ Products are the different items in the enterprise, which can be purchased, stor
 
 ## Default Visualization
 Default Display Text Format:  
-_{PartNumber}: {Name:T}_  
+_{Name:T} #{PartNumber}_  
 Default Search Member:  
-_PartNumber_  
+_Name_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

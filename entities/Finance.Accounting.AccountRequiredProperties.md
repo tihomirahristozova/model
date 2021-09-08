@@ -9,9 +9,9 @@ Defines the required properties for new vouchers, for each account. Entity: Acc_
 
 ## Default Visualization
 Default Display Text Format:  
-_{Account.AccountFullNumber}: {Account.Name:T}_  
+_{Account.Name:T} #{Account.AccountFullNumber}_  
 Default Search Member:  
-_Account.AccountFullNumber_  
+_Account.Name_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

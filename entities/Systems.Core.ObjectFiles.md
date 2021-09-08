@@ -9,9 +9,9 @@ Contains files attached to objects. Entity: Sys_Object_Files
 
 ## Default Visualization
 Default Display Text Format:  
-_{PurposeCode}: {FileName:T}_  
+_{FileName:T} #{PurposeCode}_  
 Default Search Member:  
-_PurposeCode_  
+_FileName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
