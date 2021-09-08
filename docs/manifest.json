@@ -6168,7 +6168,7 @@
       "output": {
         ".html": {
           "relative_path": "business-rules/R30887.html",
-          "hash": "dJFW3BVFRABCjQDfESEgmw=="
+          "hash": "J1duCYq/r0aY44F/sW92KA=="
         }
       },
       "is_incremental": false,
@@ -9224,6 +9224,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "business-rules/R32417.md",
+      "output": {
+        ".html": {
+          "relative_path": "business-rules/R32417.html",
+          "hash": "jDOFJzvWGJu2oPZ6iqKD5A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "data-types.md",
       "output": {
         ".html": {
@@ -11914,7 +11926,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Finance.Excise.TaxWarehouses.html",
-          "hash": "CtNpCZErVm4xrhBPhMGPMA=="
+          "hash": "yhodmT7WW+LSMWkx7hs1kA=="
         }
       },
       "is_incremental": false,
