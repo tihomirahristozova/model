@@ -10,7 +10,7 @@ Contains order for internal warehouse operation or plan for execution of warehou
 
 ## Default Visualization
 Default Display Text Format:  
-_{DocumentType.Code}:{DocumentNo} - {DocumentType.TypeName:T}_  
+_{DocumentType.TypeName:T} {DocumentNo}_  
 Default Search Member:  
 _DocumentNo_  
 

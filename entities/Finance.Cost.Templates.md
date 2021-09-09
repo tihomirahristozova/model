@@ -9,7 +9,7 @@ Cost templates specify how to calculate and allocate costs. Entity: Cost_Templat
 
 ## Default Visualization
 Default Display Text Format:  
-_{CostTemplateName:T} #{CostTemplateCode}_  
+_{CostTemplateName:T} : {CostTemplateCode}_  
 Default Search Member:  
 _CostTemplateName_  
 

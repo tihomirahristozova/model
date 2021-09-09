@@ -9,7 +9,7 @@ Hierarchy of store groups. Entity: Inv_Store_Groups
 
 ## Default Visualization
 Default Display Text Format:  
-_{Name:T} #{Code}_  
+_{Name:T} : {Code}_  
 Default Search Member:  
 _Name_  
 

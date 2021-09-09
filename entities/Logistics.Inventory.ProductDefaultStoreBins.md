@@ -9,7 +9,7 @@ The default store bins in which products should be placed. Entity: Inv_Product_D
 
 ## Default Visualization
 Default Display Text Format:  
-_{Product.Name:T} #{Product.PartNumber}_  
+_{Product.Name:T} : {Product.PartNumber}_  
 Default Search Member:  
 _Product.Name_  
 

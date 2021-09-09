@@ -9,7 +9,7 @@ Hierarchical categorization of the products. Entity: Gen_Product_Groups
 
 ## Default Visualization
 Default Display Text Format:  
-_{Name:T} #{NextPartNumber}_  
+_{Name:T} : {NextPartNumber}_  
 Default Search Member:  
 _Name_  
 

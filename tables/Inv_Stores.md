@@ -34,6 +34,7 @@ Represents the physical warehouses. Entity: Inv_Stores
 |[Store_Code](#store_code)|`nvarchar(16)` ||
 |[Store_Group_Id](#store_group_id)|`uniqueidentifier` |The store group, to which this store belongs.|
 |[Store_Name](#store_name)|`nvarchar(254)` `ML`|Name of the store|
+|[Tax_Warehouse_Id](#tax_warehouse_id)|`uniqueidentifier` |Excise Tax Warehouse for this Store. NULL means that the Store is not an Excise Tax Warehouse.|
 |[Unmanaged](#unmanaged)|`bit` |If 0 the system will expect the user to process the store transactions. If 1 the system will auto-generate them|
 |[Update_Time](#update_time)|`datetime` Readonly||
 |[Update_User](#update_user)|`nvarchar(64)` Readonly||
@@ -695,6 +696,43 @@ Name of the store
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Like|None|no|no|
+
+### Tax_Warehouse_Id
+
+
+Excise Tax Warehouse for this Store. NULL means that the Store is not an Excise Tax Warehouse.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|Referenced Table|[Exc_Tax_Warehouses](Exc_Tax_Warehouses.md)|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Tax_Warehouse_Id - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
 
 ### Unmanaged
 

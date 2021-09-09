@@ -9,7 +9,7 @@ When specified for a product type, contains the suggested user-defined propertie
 
 ## Default Visualization
 Default Display Text Format:  
-_{ProductType.Name:T} #{ProductType.Code}_  
+_{ProductType.Name:T} : {ProductType.Code}_  
 Default Search Member:  
 _ProductType.Name_  
 

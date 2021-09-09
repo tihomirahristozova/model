@@ -9,7 +9,7 @@ When specified for a product group, provides a way for automatical creation of n
 
 ## Default Visualization
 Default Display Text Format:  
-_{ProductGroup.Name:T} #{ProductGroup.NextPartNumber}_  
+_{ProductGroup.Name:T} : {ProductGroup.NextPartNumber}_  
 Default Search Member:  
 _ProductGroup.Name_  
 

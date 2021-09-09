@@ -9,7 +9,7 @@ Contains custom percent ratios for additional amount distribution over products.
 
 ## Default Visualization
 Default Display Text Format:  
-_{Product.Name:T} #{Product.PartNumber}_  
+_{Product.Name:T} : {Product.PartNumber}_  
 Default Search Member:  
 _Product.Name_  
 

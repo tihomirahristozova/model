@@ -9,7 +9,7 @@ Categorization of company sizes for marketing purposes. Size classes might depen
 
 ## Default Visualization
 Default Display Text Format:  
-_{Name:T} #{Code}_  
+_{Name:T} : {Code}_  
 Default Search Member:  
 _Name_  
 
@@ -24,13 +24,13 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Code](Crm.Marketing.CompanySizeClasses.md#code) | string (32) | The unique code of the CompanySizeClass. `Required` `Filter(eq;like)` `ORD` 
-| [FromEmployees](Crm.Marketing.CompanySizeClasses.md#fromemployees) | int32 __nullable__ | Minimal number of employees for this size class. null if this is not relevant to this size class. 
-| [FromRevenue](Crm.Marketing.CompanySizeClasses.md#fromrevenue) | decimal (15, 0) __nullable__ | Minimal revenue for this size class. Currency is Revenue Currency. null if this is not relevant to this size class. 
+| [FromEmployees](Crm.Marketing.CompanySizeClasses.md#fromemployees) | int32 __nullable__ | Minimal number of employees for this size class. null if this is not relevant to this size class. `Filter(eq)` 
+| [FromRevenue](Crm.Marketing.CompanySizeClasses.md#fromrevenue) | decimal (15, 0) __nullable__ | Minimal revenue for this size class. Currency is Revenue Currency. null if this is not relevant to this size class. `Filter(eq)` 
 | [Id](Crm.Marketing.CompanySizeClasses.md#id) | guid |  
-| [Name](Crm.Marketing.CompanySizeClasses.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Company size class name (multi-language). `Required` `Filter(like)` 
+| [Name](Crm.Marketing.CompanySizeClasses.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Company size class name (multi-language). `Required` `Filter(eq;like)` 
 | [Notes](Crm.Marketing.CompanySizeClasses.md#notes) | string (max) __nullable__ | Notes for this CompanySizeClass. 
-| [ToEmployees](Crm.Marketing.CompanySizeClasses.md#toemployees) | int32 __nullable__ | Maximum number of employees for this size class. null if this is not relevant to this size class. 
-| [ToRevenue](Crm.Marketing.CompanySizeClasses.md#torevenue) | decimal (15, 0) __nullable__ | Maximal revenue for this size class. Currency is Revenue Currency. null if this is not relevant to this size class. 
+| [ToEmployees](Crm.Marketing.CompanySizeClasses.md#toemployees) | int32 __nullable__ | Maximum number of employees for this size class. null if this is not relevant to this size class. `Filter(eq)` 
+| [ToRevenue](Crm.Marketing.CompanySizeClasses.md#torevenue) | decimal (15, 0) __nullable__ | Maximal revenue for this size class. Currency is Revenue Currency. null if this is not relevant to this size class. `Filter(eq)` 
 
 ## References
 
@@ -53,18 +53,18 @@ _Maximum Length_: **32**
 
 ### FromEmployees
 
-Minimal number of employees for this size class. null if this is not relevant to this size class.
+Minimal number of employees for this size class. null if this is not relevant to this size class. `Filter(eq)`
 
 _Type_: **int32 __nullable__**  
-_Supported Filters_: **NotFilterable**  
+_Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 
 ### FromRevenue
 
-Minimal revenue for this size class. Currency is Revenue Currency. null if this is not relevant to this size class.
+Minimal revenue for this size class. Currency is Revenue Currency. null if this is not relevant to this size class. `Filter(eq)`
 
 _Type_: **decimal (15, 0) __nullable__**  
-_Supported Filters_: **NotFilterable**  
+_Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 
 ### Id
@@ -76,10 +76,10 @@ _Default Value_: **NewGuid**
 
 ### Name
 
-Company size class name (multi-language). `Required` `Filter(like)`
+Company size class name (multi-language). `Required` `Filter(eq;like)`
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
-_Supported Filters_: **Like**  
+_Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 
 ### Notes
@@ -93,18 +93,18 @@ _Maximum Length_: **2147483647**
 
 ### ToEmployees
 
-Maximum number of employees for this size class. null if this is not relevant to this size class.
+Maximum number of employees for this size class. null if this is not relevant to this size class. `Filter(eq)`
 
 _Type_: **int32 __nullable__**  
-_Supported Filters_: **NotFilterable**  
+_Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 
 ### ToRevenue
 
-Maximal revenue for this size class. Currency is Revenue Currency. null if this is not relevant to this size class.
+Maximal revenue for this size class. Currency is Revenue Currency. null if this is not relevant to this size class. `Filter(eq)`
 
 _Type_: **decimal (15, 0) __nullable__**  
-_Supported Filters_: **NotFilterable**  
+_Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 
 

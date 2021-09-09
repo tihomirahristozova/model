@@ -9,7 +9,7 @@ Contains the plans, included in the maintenance profile. Entity: Fleet_Maintenan
 
 ## Default Visualization
 Default Display Text Format:  
-_{MaintenanceProfile.Name:T} #{MaintenanceProfile.Code}_  
+_{MaintenanceProfile.Name:T} : {MaintenanceProfile.Code}_  
 Default Search Member:  
 _MaintenanceProfile.Name_  
 

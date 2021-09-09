@@ -9,7 +9,7 @@ Contains options for user defined document types for Offers. Entity: Crm_Offers_
 
 ## Default Visualization
 Default Display Text Format:  
-_{DocumentType.EntityName:T} #{DocumentType.Code}_  
+_{DocumentType.EntityName:T} : {DocumentType.Code}_  
 Default Search Member:  
 _DocumentType.EntityName_  
 

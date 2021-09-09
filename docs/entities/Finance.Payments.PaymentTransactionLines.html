@@ -83,9 +83,9 @@
 <p>Contains the distibution of the payments' amounts among the source payment orders. Entity: Cash_Payment_Transaction_Lines</p>
 <h2 id="default-visualization">Default Visualization</h2>
 <p>Default Display Text Format:<br>
-<em>{PaymentTransaction.DocumentType.Code}:{PaymentTransaction.DocumentNo} - {PaymentTransaction.DocumentType.TypeName:T}</em><br>
+<em>{PaymentTransaction.DocumentType.TypeName:T} {PaymentTransaction.DocumentNo}</em><br>
 Default Search Member:<br>
-<em>PaymentTransaction.DocumentType.Code</em></p>
+<em>PaymentTransaction.DocumentType.TypeName</em></p>
 <h2 id="aggregate">Aggregate</h2>
 <p>An <a href="https://docs.erp.net/tech/advanced/concepts/aggregates.html">aggregate</a> is a cluster of domain objects that can be treated as a single unit.</p>
 <p>Aggregate Parent:<br>

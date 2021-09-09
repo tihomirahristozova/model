@@ -9,7 +9,7 @@ Groups the rentable assets in hierarchy of logical groups. Entity: Rent_Asset_Gr
 
 ## Default Visualization
 Default Display Text Format:  
-_{RentalAssetGroupName:T} #{RentalAssetGroupCode}_  
+_{RentalAssetGroupName:T} : {RentalAssetGroupCode}_  
 Default Search Member:  
 _RentalAssetGroupName_  
 

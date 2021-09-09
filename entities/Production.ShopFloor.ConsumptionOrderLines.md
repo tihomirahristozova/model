@@ -9,7 +9,7 @@ Detail lines of orders for material consumption. Entity: Prd_Consumption_Order_L
 
 ## Default Visualization
 Default Display Text Format:  
-_{ConsumptionOrder.DocumentType.Code}:{ConsumptionOrder.DocumentNo}:{LineOrd} - {ConsumptionOrder.DocumentType.TypeName:T}_  
+_{LineOrd} : {ConsumptionOrder.DocumentNo} {ConsumptionOrder.DocumentType.TypeName:T}_  
 Default Search Member:  
 _ConsumptionOrder.DocumentNo_  
 

@@ -9,7 +9,7 @@ Specifies the base amounts on which an amount depends. . Entity: Gen_Document_Am
 
 ## Default Visualization
 Default Display Text Format:  
-_{DocumentAmountType.AmountTypeName:T} #{DocumentAmountType.AmountTypeCode}_  
+_{DocumentAmountType.AmountTypeName:T} : {DocumentAmountType.AmountTypeCode}_  
 Default Search Member:  
 _DocumentAmountType.AmountTypeName_  
 

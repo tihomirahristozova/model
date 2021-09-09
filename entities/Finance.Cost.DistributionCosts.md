@@ -9,9 +9,9 @@ The cost types and their amounts which are distributed by a Cost Distribution do
 
 ## Default Visualization
 Default Display Text Format:  
-_{CostDistribution.DocumentType.Code}:{CostDistribution.DocumentNo} - {CostDistribution.DocumentType.TypeName:T}_  
+_{CostDistribution.DocumentType.TypeName:T} {CostDistribution.DocumentNo}_  
 Default Search Member:  
-_CostDistribution.DocumentType.Code_  
+_CostDistribution.DocumentType.TypeName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

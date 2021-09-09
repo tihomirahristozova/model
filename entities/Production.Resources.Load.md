@@ -9,9 +9,9 @@ Contains scheduled operations usage of the resources. Entity: Prd_Load
 
 ## Default Visualization
 Default Display Text Format:  
-_{WorkOrderItemOperation.WorkOrderItem.WorkOrder.DocumentType.Code}:{WorkOrderItemOperation.WorkOrderItem.WorkOrder.DocumentNo}:{WorkOrderItemOperation.WorkOrderItem.LineOrd} - {WorkOrderItemOperation.WorkOrderItem.WorkOrder.DocumentType.TypeName:T}_  
+_{WorkOrderItemOperation.WorkOrderItem.LineOrd} : {WorkOrderItemOperation.WorkOrderItem.WorkOrder.DocumentNo} {WorkOrderItemOperation.WorkOrderItem.WorkOrder.DocumentType.TypeName:T}_  
 Default Search Member:  
-_WorkOrderItemOperation.WorkOrderItem.WorkOrder.DocumentType.Code_  
+_WorkOrderItemOperation.WorkOrderItem.LineOrd_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

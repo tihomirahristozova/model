@@ -9,7 +9,7 @@ Hierarchical sales person grouping. Entity: Crm_Sales_Person_Groups
 
 ## Default Visualization
 Default Display Text Format:  
-_{Name:T} #{Code}_  
+_{Name:T} : {Code}_  
 Default Search Member:  
 _Name_  
 

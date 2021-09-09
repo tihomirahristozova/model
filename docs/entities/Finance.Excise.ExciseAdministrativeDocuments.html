@@ -84,7 +84,7 @@
 <p>Represents the data, sent to the customs authorities for the movements of excise goods. Entity: Exc_Excise_Administrative_Documents (Introduced in version 21.1.3.54)</p>
 <h2 id="default-visualization">Default Visualization</h2>
 <p>Default Display Text Format:<br>
-<em>{DocumentType.Code}:{DocumentNo} - {DocumentType.TypeName:T}</em><br>
+<em>{DocumentType.TypeName:T} {DocumentNo}</em><br>
 Default Search Member:<br>
 <em>DocumentNo</em></p>
 <h2 id="aggregate">Aggregate</h2>
@@ -325,6 +325,11 @@ Default Search Member:<br>
 <td><a href="Finance.Excise.ExciseAdministrativeDocuments.html#primecausedocument">PrimeCauseDocument</a></td>
 <td><a href="General.Documents.html">Documents</a> (nullable)</td>
 <td>The document that is the prime cause for creation of the current document. <code>Filter(multi eq)</code> (Inherited from <a href="General.Documents.html">Documents</a>)</td>
+</tr>
+<tr>
+<td><a href="Finance.Excise.ExciseAdministrativeDocuments.html#reporterperson">ReporterPerson</a></td>
+<td><a href="General.Contacts.Persons.html">Persons</a></td>
+<td>Reporter Person. <code>Required</code> <code>Filter(multi eq)</code> <code>Introduced in version 21.1.3.92</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Excise.ExciseAdministrativeDocuments.html#responsibleperson">ResponsiblePerson</a></td>
@@ -701,6 +706,10 @@ Enumeration of document system states<br>
 <p>The document that is the prime cause for creation of the current document. <code>Filter(multi eq)</code> (Inherited from <a href="General.Documents.html">Documents</a>)</p>
 <p><em>Type</em>: <strong><a href="General.Documents.html">Documents</a> (nullable)</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<h3 id="reporterperson">ReporterPerson</h3>
+<p>Reporter Person. <code>Required</code> <code>Filter(multi eq)</code> <code>Introduced in version 21.1.3.92</code></p>
+<p><em>Type</em>: <strong><a href="General.Contacts.Persons.html">Persons</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="responsibleperson">ResponsiblePerson</h3>
 <p>The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc. <code>Filter(multi eq)</code> (Inherited from <a href="General.Documents.html">Documents</a>)</p>

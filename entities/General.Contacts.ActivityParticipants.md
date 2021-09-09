@@ -9,9 +9,9 @@ Contains the additional participants in the activities. These are the participat
 
 ## Default Visualization
 Default Display Text Format:  
-_{Activity.DocumentType.Code}:{Activity.DocumentNo} - {Activity.DocumentType.TypeName:T}_  
+_{Activity.DocumentType.TypeName:T} {Activity.DocumentNo}_  
 Default Search Member:  
-_Activity.DocumentType.Code_  
+_Activity.DocumentType.TypeName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

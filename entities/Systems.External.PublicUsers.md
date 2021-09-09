@@ -9,7 +9,7 @@ uid: Systems.External.PublicUsers
 
 ## Default Visualization
 Default Display Text Format:  
-_{CompanyName:T} #{PhoneNumber}_  
+_{CompanyName:T} : {PhoneNumber}_  
 Default Search Member:  
 _CompanyName_  
 

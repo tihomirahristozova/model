@@ -100,7 +100,7 @@
 <tr>
 <td><a href="#company_size_class_id">Company_Size_Class_Id</a></td>
 <td><code>uniqueidentifier</code> <code>PK</code></td>
-<td></td>
+<td>Company size class</td>
 </tr>
 <tr>
 <td><a href="#from_employees">From_Employees</a></td>
@@ -270,6 +270,7 @@
 </tbody>
 </table>
 <h3 id="company_size_class_id">Company_Size_Class_Id</h3>
+<p>Company size class</p>
 <table>
 <thead>
 <tr>
@@ -487,6 +488,25 @@
 </tr>
 </tbody>
 </table>
+<h4 id="from_employees---supported-filters">From_Employees - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>yes</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
 <h3 id="from_revenue">From_Revenue</h3>
 <p>Minimal revenue for this size class. Currency is Revenue Currency. NULL if this is not relevant to this size class.</p>
 <table>
@@ -584,6 +604,25 @@
 <tr>
 <td>Visible</td>
 <td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="from_revenue---supported-filters">From_Revenue - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>yes</td>
+<td>no</td>
 </tr>
 </tbody>
 </table>
@@ -698,6 +737,12 @@
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>no</td>
+<td>no</td>
+</tr>
 <tr>
 <td>Like</td>
 <td>None</td>
@@ -1131,6 +1176,25 @@
 </tr>
 </tbody>
 </table>
+<h4 id="to_employees---supported-filters">To_Employees - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>yes</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
 <h3 id="to_revenue">To_Revenue</h3>
 <p>Maximal revenue for this size class. Currency is Revenue Currency. NULL if this is not relevant to this size class.</p>
 <table>
@@ -1228,6 +1292,25 @@
 <tr>
 <td>Visible</td>
 <td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="to_revenue---supported-filters">To_Revenue - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>yes</td>
+<td>no</td>
 </tr>
 </tbody>
 </table>

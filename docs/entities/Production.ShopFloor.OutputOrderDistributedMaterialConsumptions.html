@@ -83,9 +83,9 @@
 <p>Contains the quantity of materials distributed over the output order lines. Entity: Prd_Output_Order_Distributed_Material_Consumptions</p>
 <h2 id="default-visualization">Default Visualization</h2>
 <p>Default Display Text Format:<br>
-<em>{OutputOrderLine.OutputOrder.DocumentType.Code}:{OutputOrderLine.OutputOrder.DocumentNo}:{OutputOrderLine.LineOrd} - {OutputOrderLine.OutputOrder.DocumentType.TypeName:T}</em><br>
+<em>{OutputOrderLine.LineOrd} : {OutputOrderLine.OutputOrder.DocumentNo} {OutputOrderLine.OutputOrder.DocumentType.TypeName:T}</em><br>
 Default Search Member:<br>
-<em>OutputOrderLine.OutputOrder.DocumentType.Code</em></p>
+<em>OutputOrderLine.LineOrd</em></p>
 <h2 id="aggregate">Aggregate</h2>
 <p>An <a href="https://docs.erp.net/tech/advanced/concepts/aggregates.html">aggregate</a> is a cluster of domain objects that can be treated as a single unit.</p>
 <p>Aggregate Parent:<br>

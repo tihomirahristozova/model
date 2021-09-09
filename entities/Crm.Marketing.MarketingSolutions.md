@@ -9,7 +9,7 @@ The solutions which we are offering to our clients. The solutions usually depend
 
 ## Default Visualization
 Default Display Text Format:  
-_{Name:T} #{Code}_  
+_{Name:T} : {Code}_  
 Default Search Member:  
 _Name_  
 
@@ -25,7 +25,7 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [Code](Crm.Marketing.MarketingSolutions.md#code) | string (32) | The unique code of the MarketingSolution. `Required` `Filter(eq;like)` `ORD` 
 | [Id](Crm.Marketing.MarketingSolutions.md#id) | guid |  
-| [Name](Crm.Marketing.MarketingSolutions.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | The name of this MarketingSolution. `Required` `Filter(like)` 
+| [Name](Crm.Marketing.MarketingSolutions.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | The name of this MarketingSolution. `Required` `Filter(eq;like)` 
 | [Notes](Crm.Marketing.MarketingSolutions.md#notes) | string (max) __nullable__ | Notes for this MarketingSolution. 
 
 ## References
@@ -58,10 +58,10 @@ _Default Value_: **NewGuid**
 
 ### Name
 
-The name of this MarketingSolution. `Required` `Filter(like)`
+The name of this MarketingSolution. `Required` `Filter(eq;like)`
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
-_Supported Filters_: **Like**  
+_Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 
 ### Notes

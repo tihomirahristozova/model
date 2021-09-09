@@ -9,7 +9,7 @@ The detail line of purchase control data. The purchase control is used to tally 
 
 ## Default Visualization
 Default Display Text Format:  
-_{PurchaseControlDocument.DocumentType.Code}:{PurchaseControlDocument.DocumentNo}:{LineNo} - {PurchaseControlDocument.DocumentType.TypeName:T}_  
+_{LineNo} : {PurchaseControlDocument.DocumentNo} {PurchaseControlDocument.DocumentType.TypeName:T}_  
 Default Search Member:  
 _PurchaseControlDocument.DocumentNo_  
 

@@ -9,7 +9,7 @@ Represents detail lines of shipments. Each line contains the shipment of one pro
 
 ## Default Visualization
 Default Display Text Format:  
-_{Shipment.DocumentType.Code}:{Shipment.DocumentNo}:{LineNo} - {Shipment.DocumentType.TypeName:T}_  
+_{LineNo} : {Shipment.DocumentNo} {Shipment.DocumentType.TypeName:T}_  
 Default Search Member:  
 _Shipment.DocumentNo_  
 

@@ -9,7 +9,7 @@ Specifies a legislation, which is applicable for a party. A single party can hav
 
 ## Default Visualization
 Default Display Text Format:  
-_{Party.PartyName:T} #{Party.PartyCode}_  
+_{Party.PartyName:T} : {Party.PartyCode}_  
 Default Search Member:  
 _Party.PartyName_  
 

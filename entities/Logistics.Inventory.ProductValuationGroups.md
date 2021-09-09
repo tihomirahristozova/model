@@ -9,7 +9,7 @@ Contains the available valuation groups for products. They are used in reconcili
 
 ## Default Visualization
 Default Display Text Format:  
-_{ValuationGroupName:T} #{ValuationGroupCode}_  
+_{ValuationGroupName:T} : {ValuationGroupCode}_  
 Default Search Member:  
 _ValuationGroupName_  
 

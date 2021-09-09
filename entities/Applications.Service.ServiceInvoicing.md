@@ -9,7 +9,7 @@ Contains invoicing ratios for the listed services. Entity: Srv_Service_Invoicing
 
 ## Default Visualization
 Default Display Text Format:  
-_{Service.Name:T} #{Service.Code}_  
+_{Service.Name:T} : {Service.Code}_  
 Default Search Member:  
 _Service.Name_  
 

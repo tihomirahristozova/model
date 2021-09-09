@@ -10,7 +10,7 @@ Service Orders are issued when a new servicing is required. Entity: Srv_Service_
 
 ## Default Visualization
 Default Display Text Format:  
-_{DocumentType.Code}:{DocumentNo} - {DocumentType.TypeName:T}_  
+_{DocumentType.TypeName:T} {DocumentNo}_  
 Default Search Member:  
 _DocumentNo_  
 

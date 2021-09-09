@@ -9,7 +9,7 @@ Organizational hierarchy of asset groups. Entity: Eam_Managed_Asset_Groups (Intr
 
 ## Default Visualization
 Default Display Text Format:  
-_{Name:T} #{Code}_  
+_{Name:T} : {Code}_  
 Default Search Member:  
 _Name_  
 

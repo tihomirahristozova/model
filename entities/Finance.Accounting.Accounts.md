@@ -9,7 +9,7 @@ Contains the leaf level of the chart of accounts. Entity: Acc_Accounts
 
 ## Default Visualization
 Default Display Text Format:  
-_{Name:T} #{AccountFullNumber}_  
+_{Name:T} : {AccountFullNumber}_  
 Default Search Member:  
 _Name_  
 

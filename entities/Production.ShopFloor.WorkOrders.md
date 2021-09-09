@@ -10,7 +10,7 @@ Scheduled and released production orders. Each order can contain the production 
 
 ## Default Visualization
 Default Display Text Format:  
-_{DocumentType.Code}:{DocumentNo} - {DocumentType.TypeName:T}_  
+_{DocumentType.TypeName:T} {DocumentNo}_  
 Default Search Member:  
 _DocumentNo_  
 

@@ -9,9 +9,9 @@ Contains the products, that are contracted (listed) with a customer. Entity: Crm
 
 ## Default Visualization
 Default Display Text Format:  
-_{Customer.Number}_  
+_{Customer.Party.PartyName:T} : {Customer.Number}_  
 Default Search Member:  
-_Customer.Number_  
+_Customer.Party.PartyName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

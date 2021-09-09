@@ -12,6 +12,7 @@ Contains excise-related data for warehouses (stores), which are defined as tax w
 | Name | Type | Description |
 | - | - | --- |
 |[Enterprise_Company_Id](#enterprise_company_id)|`uniqueidentifier` |The Enterprise company to which the tax warehouse belongs.|
+|[Name](#name)|`nvarchar(254)` `ML`|Tax Warehouse Name (Multilanguage)|
 |[Row_Version](#row_version)|`timestamp` ||
 |[Tax_Warehouse_Excise_Number](#tax_warehouse_excise_number)|`nvarchar(32)` |The excise identification number of the tax warehouse, issued by the competent authorities.|
 |[Tax_Warehouse_Id](#tax_warehouse_id)|`uniqueidentifier` `PK`||
@@ -33,7 +34,7 @@ The Enterprise company to which the tax warehouse belongs.
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|3|
+|Order|4|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -55,6 +56,42 @@ The Enterprise company to which the tax warehouse belongs.
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+
+### Name
+
+
+Tax Warehouse Name (Multilanguage)
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|254|
+|Order|1|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|nvarchar(254) (MultiLanguage)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Name - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Like|None|no|no|
 
 ### Row_Version
 
@@ -97,7 +134,7 @@ The excise identification number of the tax warehouse, issued by the competent a
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|32|
-|Order|2|
+|Order|3|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -160,7 +197,7 @@ The excise identification number of the owner of the Tax Warehouse.
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|32|
-|Order|1|
+|Order|2|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|

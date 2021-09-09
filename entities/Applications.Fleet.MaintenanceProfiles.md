@@ -9,7 +9,7 @@ Profiles contain multiple maintenance plans and can be assigned directly to a ve
 
 ## Default Visualization
 Default Display Text Format:  
-_{Name:T} #{Code}_  
+_{Name:T} : {Code}_  
 Default Search Member:  
 _Name_  
 

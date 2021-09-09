@@ -9,7 +9,7 @@ Contains detail lines of purchase orders. Entity: Scm_Purchase_Order_Lines
 
 ## Default Visualization
 Default Display Text Format:  
-_{PurchaseOrder.DocumentType.Code}:{PurchaseOrder.DocumentNo}:{LineNo} - {PurchaseOrder.DocumentType.TypeName:T}_  
+_{LineNo} : {PurchaseOrder.DocumentNo} {PurchaseOrder.DocumentType.TypeName:T}_  
 Default Search Member:  
 _PurchaseOrder.DocumentNo_  
 

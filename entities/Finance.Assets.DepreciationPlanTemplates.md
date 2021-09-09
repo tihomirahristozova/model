@@ -9,7 +9,7 @@ Specifies the default depreciation methods for the asset categories. Different m
 
 ## Default Visualization
 Default Display Text Format:  
-_{AssetCategory.Name:T} #{AssetCategory.Code}_  
+_{AssetCategory.Name:T} : {AssetCategory.Code}_  
 Default Search Member:  
 _AssetCategory.Name_  
 

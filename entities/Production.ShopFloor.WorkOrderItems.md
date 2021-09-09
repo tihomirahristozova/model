@@ -9,7 +9,7 @@ The different items that are produced with a work order. Entity: Prd_Work_Order_
 
 ## Default Visualization
 Default Display Text Format:  
-_{WorkOrder.DocumentType.Code}:{WorkOrder.DocumentNo}:{LineOrd} - {WorkOrder.DocumentType.TypeName:T}_  
+_{LineOrd} : {WorkOrder.DocumentNo} {WorkOrder.DocumentType.TypeName:T}_  
 Default Search Member:  
 _WorkOrder.DocumentNo_  
 

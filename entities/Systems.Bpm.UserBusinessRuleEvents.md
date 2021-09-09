@@ -9,7 +9,7 @@ Represents event registration of a business rule. Entity: Sys_User_Business_Rule
 
 ## Default Visualization
 Default Display Text Format:  
-_{UserBusinessRule.RepositoryName:T} #{UserBusinessRule.Code}_  
+_{UserBusinessRule.RepositoryName:T} : {UserBusinessRule.Code}_  
 Default Search Member:  
 _UserBusinessRule.RepositoryName_  
 

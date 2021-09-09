@@ -83,9 +83,9 @@
 <p>Contains the services, which were agreed for this service activity (repair), before its starting. Entity: Srv_Service_Activity_Agreed_Services</p>
 <h2 id="default-visualization">Default Visualization</h2>
 <p>Default Display Text Format:<br>
-<em>{ServiceActivityService.ServiceActivity.DocumentType.Code}:{ServiceActivityService.ServiceActivity.DocumentNo}:{ServiceActivityService.LineNo} - {ServiceActivityService.ServiceActivity.DocumentType.TypeName:T}</em><br>
+<em>{ServiceActivityService.LineNo} : {ServiceActivityService.ServiceActivity.DocumentNo} {ServiceActivityService.ServiceActivity.DocumentType.TypeName:T}</em><br>
 Default Search Member:<br>
-<em>ServiceActivityService.ServiceActivity.DocumentType.Code</em></p>
+<em>ServiceActivityService.LineNo</em></p>
 <h2 id="aggregate">Aggregate</h2>
 <p>An <a href="https://docs.erp.net/tech/advanced/concepts/aggregates.html">aggregate</a> is a cluster of domain objects that can be treated as a single unit.</p>
 <p>Aggregate Parent:<br>

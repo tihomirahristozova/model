@@ -9,9 +9,9 @@ Represents costs allocated to product outputs. Entity: Cost_Calculation_Product_
 
 ## Default Visualization
 Default Display Text Format:  
-_{Calculation.DocumentType.Code}:{Calculation.DocumentNo} - {Calculation.DocumentType.TypeName:T}_  
+_{Calculation.DocumentType.TypeName:T} {Calculation.DocumentNo}_  
 Default Search Member:  
-_Calculation.DocumentType.Code_  
+_Calculation.DocumentType.TypeName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

@@ -9,9 +9,9 @@ Contains the details of the Intrastat declarations, issued by the enterprise com
 
 ## Default Visualization
 Default Display Text Format:  
-_{IntrastatDeclaration.DocumentType.Code}:{IntrastatDeclaration.DocumentNo} - {IntrastatDeclaration.DocumentType.TypeName:T}_  
+_{IntrastatDeclaration.DocumentType.TypeName:T} {IntrastatDeclaration.DocumentNo}_  
 Default Search Member:  
-_IntrastatDeclaration.DocumentType.Code_  
+_IntrastatDeclaration.DocumentType.TypeName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

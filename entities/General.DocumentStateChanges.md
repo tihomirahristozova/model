@@ -9,9 +9,9 @@ History of document state changes. Entity: Gen_Document_State_Changes
 
 ## Default Visualization
 Default Display Text Format:  
-_{Document.DocumentType.Code}:{Document.DocumentNo} - {Document.DocumentType.TypeName:T}_  
+_{Document.DocumentType.TypeName:T} {Document.DocumentNo}_  
 Default Search Member:  
-_Document.DocumentType.Code_  
+_Document.DocumentType.TypeName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

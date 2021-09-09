@@ -9,7 +9,7 @@ Contains the locations to which the assets are assigned at various moments in ti
 
 ## Default Visualization
 Default Display Text Format:  
-_{ManagedAsset.Name:T} #{ManagedAsset.Code}_  
+_{ManagedAsset.Name:T} : {ManagedAsset.Code}_  
 Default Search Member:  
 _ManagedAsset.Name_  
 

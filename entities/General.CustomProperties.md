@@ -9,7 +9,7 @@ User-defined properties, which can supplement the system properties of almost al
 
 ## Default Visualization
 Default Display Text Format:  
-_{AllowedValuesEntityName:T} #{Code}_  
+_{AllowedValuesEntityName:T} : {Code}_  
 Default Search Member:  
 _AllowedValuesEntityName_  
 

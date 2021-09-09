@@ -9,7 +9,7 @@ Types of costs. Entity: Cost_Types
 
 ## Default Visualization
 Default Display Text Format:  
-_{Name:T} #{Code}_  
+_{Name:T} : {Code}_  
 Default Search Member:  
 _Name_  
 

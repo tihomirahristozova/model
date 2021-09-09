@@ -9,7 +9,7 @@ The fixed assets. Entity: Ast_Assets
 
 ## Default Visualization
 Default Display Text Format:  
-_{Name:T} #{Code}_  
+_{Name:T} : {Code}_  
 Default Search Member:  
 _Name_  
 

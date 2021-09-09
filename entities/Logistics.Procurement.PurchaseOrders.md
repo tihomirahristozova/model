@@ -10,7 +10,7 @@ Contains purchase order headers. The purchase orders are documents, sent to a su
 
 ## Default Visualization
 Default Display Text Format:  
-_{DocumentType.Code}:{DocumentNo} - {DocumentType.TypeName:T}_  
+_{DocumentType.TypeName:T} {DocumentNo}_  
 Default Search Member:  
 _DocumentNo_  
 

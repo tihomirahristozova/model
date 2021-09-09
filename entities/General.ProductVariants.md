@@ -9,7 +9,7 @@ Contains definitions of different variants of a product. The variants are differ
 
 ## Default Visualization
 Default Display Text Format:  
-_{Name:T} #{BarCode}_  
+_{Name:T} : {BarCode}_  
 Default Search Member:  
 _Name_  
 

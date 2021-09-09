@@ -9,7 +9,7 @@ Contains the hierarchical structure of the user-defined financial statements. En
 
 ## Default Visualization
 Default Display Text Format:  
-_{Name:T} #{Code}_  
+_{Name:T} : {Code}_  
 Default Search Member:  
 _Name_  
 

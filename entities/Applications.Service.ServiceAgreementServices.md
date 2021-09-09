@@ -9,9 +9,9 @@ Contains the free services, included in the service agreement. Entity: Srv_Servi
 
 ## Default Visualization
 Default Display Text Format:  
-_{ServiceAgreement.DocumentType.Code}:{ServiceAgreement.DocumentNo} - {ServiceAgreement.DocumentType.TypeName:T}_  
+_{ServiceAgreement.DocumentType.TypeName:T} {ServiceAgreement.DocumentNo}_  
 Default Search Member:  
-_ServiceAgreement.DocumentType.Code_  
+_ServiceAgreement.DocumentType.TypeName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

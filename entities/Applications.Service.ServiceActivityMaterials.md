@@ -9,7 +9,7 @@ Contains the materials, which were actually used during the service activity (re
 
 ## Default Visualization
 Default Display Text Format:  
-_{ServiceActivity.DocumentType.Code}:{ServiceActivity.DocumentNo}:{LineNo} - {ServiceActivity.DocumentType.TypeName:T}_  
+_{LineNo} : {ServiceActivity.DocumentNo} {ServiceActivity.DocumentType.TypeName:T}_  
 Default Search Member:  
 _ServiceActivity.DocumentNo_  
 

@@ -9,7 +9,7 @@ Contains the types of maintenance and maintained assets in the maintenance order
 
 ## Default Visualization
 Default Display Text Format:  
-_{MaintenanceOrder.DocumentType.Code}:{MaintenanceOrder.DocumentNo}:{LineNo} - {MaintenanceOrder.DocumentType.TypeName:T}_  
+_{LineNo} : {MaintenanceOrder.DocumentNo} {MaintenanceOrder.DocumentType.TypeName:T}_  
 Default Search Member:  
 _MaintenanceOrder.DocumentNo_  
 

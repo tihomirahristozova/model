@@ -9,7 +9,7 @@ Pictures of products. Entity: Gen_Product_Pictures
 
 ## Default Visualization
 Default Display Text Format:  
-_{Product.Name:T} #{Product.PartNumber}_  
+_{Product.Name:T} : {Product.PartNumber}_  
 Default Search Member:  
 _Product.Name_  
 

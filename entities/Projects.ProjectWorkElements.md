@@ -9,7 +9,7 @@ Contains the work elements from the work breakdown structure, which are included
 
 ## Default Visualization
 Default Display Text Format:  
-_{Project.Name:T} #{Project.Code}_  
+_{Project.Name:T} : {Project.Code}_  
 Default Search Member:  
 _Project.Name_  
 

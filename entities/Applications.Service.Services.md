@@ -9,7 +9,7 @@ Contains the services, which can be performed. Entity: Srv_Services
 
 ## Default Visualization
 Default Display Text Format:  
-_{Name:T} #{Code}_  
+_{Name:T} : {Code}_  
 Default Search Member:  
 _Name_  
 

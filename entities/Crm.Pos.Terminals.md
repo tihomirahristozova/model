@@ -9,7 +9,7 @@ Represents a POS workplace for 1 person, with all the attached devices. (Not to 
 
 ## Default Visualization
 Default Display Text Format:  
-_{PosTerminalName:T} #{PosTerminalCode}_  
+_{PosTerminalName:T} : {PosTerminalCode}_  
 Default Search Member:  
 _PosTerminalName_  
 

@@ -9,7 +9,7 @@ Defines the types of maintenances, which are allowed for assets of the different
 
 ## Default Visualization
 Default Display Text Format:  
-_{ManagedAssetType.Name:T} #{ManagedAssetType.Code}_  
+_{ManagedAssetType.Name:T} : {ManagedAssetType.Code}_  
 Default Search Member:  
 _ManagedAssetType.Name_  
 

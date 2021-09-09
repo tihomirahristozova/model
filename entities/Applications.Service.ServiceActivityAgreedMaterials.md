@@ -9,9 +9,9 @@ Contains the materials, which were agreed for this service activity (repair), be
 
 ## Default Visualization
 Default Display Text Format:  
-_{ServiceActivityMaterial.ServiceActivity.DocumentType.Code}:{ServiceActivityMaterial.ServiceActivity.DocumentNo}:{ServiceActivityMaterial.LineNo} - {ServiceActivityMaterial.ServiceActivity.DocumentType.TypeName:T}_  
+_{ServiceActivityMaterial.LineNo} : {ServiceActivityMaterial.ServiceActivity.DocumentNo} {ServiceActivityMaterial.ServiceActivity.DocumentType.TypeName:T}_  
 Default Search Member:  
-_ServiceActivityMaterial.ServiceActivity.DocumentType.Code_  
+_ServiceActivityMaterial.LineNo_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

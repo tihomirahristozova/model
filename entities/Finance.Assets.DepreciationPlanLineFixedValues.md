@@ -9,9 +9,9 @@ When specified, contains user-defined asset depreciation values for each depreci
 
 ## Default Visualization
 Default Display Text Format:  
-_{DepreciationPlanLine.DepreciationPlan.DocumentType.Code}:{DepreciationPlanLine.DepreciationPlan.DocumentNo}:{DepreciationPlanLine.LineNo} - {DepreciationPlanLine.DepreciationPlan.DocumentType.TypeName:T}_  
+_{DepreciationPlanLine.LineNo} : {DepreciationPlanLine.DepreciationPlan.DocumentNo} {DepreciationPlanLine.DepreciationPlan.DocumentType.TypeName:T}_  
 Default Search Member:  
-_DepreciationPlanLine.DepreciationPlan.DocumentType.Code_  
+_DepreciationPlanLine.LineNo_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

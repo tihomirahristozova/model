@@ -9,7 +9,7 @@ The details of the movement of each excise product for each excise document. Ent
 
 ## Default Visualization
 Default Display Text Format:  
-_{ExciseAdministrativeDocument.DocumentType.Code}:{ExciseAdministrativeDocument.DocumentNo}:{LineNo} - {ExciseAdministrativeDocument.DocumentType.TypeName:T}_  
+_{LineNo} : {ExciseAdministrativeDocument.DocumentNo} {ExciseAdministrativeDocument.DocumentType.TypeName:T}_  
 Default Search Member:  
 _ExciseAdministrativeDocument.DocumentNo_  
 

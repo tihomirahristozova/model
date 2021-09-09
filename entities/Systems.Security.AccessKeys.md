@@ -9,7 +9,7 @@ Access keys provide the basic locking mechanism for data security. Each record c
 
 ## Default Visualization
 Default Display Text Format:  
-_{Name:T} #{Code}_  
+_{Name:T} : {Code}_  
 Default Search Member:  
 _Name_  
 

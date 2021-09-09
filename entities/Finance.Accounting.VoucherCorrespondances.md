@@ -9,9 +9,9 @@ Obsolete. Not used. Entity: Acc_Voucher_Correspondances
 
 ## Default Visualization
 Default Display Text Format:  
-_{Voucher.DocumentType.Code}:{Voucher.DocumentNo} - {Voucher.DocumentType.TypeName:T}_  
+_{Voucher.DocumentType.TypeName:T} {Voucher.DocumentNo}_  
 Default Search Member:  
-_Voucher.DocumentType.Code_  
+_Voucher.DocumentType.TypeName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

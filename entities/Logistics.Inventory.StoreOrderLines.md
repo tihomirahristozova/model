@@ -9,7 +9,7 @@ Detail lines of store orders. Each line represents one planned stock transaction
 
 ## Default Visualization
 Default Display Text Format:  
-_{StoreOrder.DocumentType.Code}:{StoreOrder.DocumentNo}:{LineNo} - {StoreOrder.DocumentType.TypeName:T}_  
+_{LineNo} : {StoreOrder.DocumentNo} {StoreOrder.DocumentType.TypeName:T}_  
 Default Search Member:  
 _StoreOrder.DocumentNo_  
 

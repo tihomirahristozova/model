@@ -83,9 +83,9 @@
 <p>Contains the materials, which were agreed for this service activity (repair), before its starting. Entity: Srv_Service_Activity_Agreed_Materials</p>
 <h2 id="default-visualization">Default Visualization</h2>
 <p>Default Display Text Format:<br>
-<em>{ServiceActivityMaterial.ServiceActivity.DocumentType.Code}:{ServiceActivityMaterial.ServiceActivity.DocumentNo}:{ServiceActivityMaterial.LineNo} - {ServiceActivityMaterial.ServiceActivity.DocumentType.TypeName:T}</em><br>
+<em>{ServiceActivityMaterial.LineNo} : {ServiceActivityMaterial.ServiceActivity.DocumentNo} {ServiceActivityMaterial.ServiceActivity.DocumentType.TypeName:T}</em><br>
 Default Search Member:<br>
-<em>ServiceActivityMaterial.ServiceActivity.DocumentType.Code</em></p>
+<em>ServiceActivityMaterial.LineNo</em></p>
 <h2 id="aggregate">Aggregate</h2>
 <p>An <a href="https://docs.erp.net/tech/advanced/concepts/aggregates.html">aggregate</a> is a cluster of domain objects that can be treated as a single unit.</p>
 <p>Aggregate Parent:<br>

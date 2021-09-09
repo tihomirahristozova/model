@@ -9,7 +9,7 @@ Contains the serviceable objects. The service objects can be covered by service 
 
 ## Default Visualization
 Default Display Text Format:  
-_{Name:T} #{SerialNumber}_  
+_{Name:T} : {SerialNumber}_  
 Default Search Member:  
 _Name_  
 

@@ -9,9 +9,9 @@ Contains the consumables, which are sold accompanying asset rentals. Entity: Ren
 
 ## Default Visualization
 Default Display Text Format:  
-_{LeaseLine.LeaseContract.DocumentType.Code}:{LeaseLine.LeaseContract.DocumentNo} - {LeaseLine.LeaseContract.DocumentType.TypeName:T}_  
+_{LeaseLine.LeaseContract.DocumentType.TypeName:T} {LeaseLine.LeaseContract.DocumentNo}_  
 Default Search Member:  
-_LeaseLine.LeaseContract.DocumentType.Code_  
+_LeaseLine.LeaseContract.DocumentType.TypeName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

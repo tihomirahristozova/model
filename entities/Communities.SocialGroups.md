@@ -9,7 +9,7 @@ Represents a group of users, sharing interest in the group topic. Entity: Cmm_So
 
 ## Default Visualization
 Default Display Text Format:  
-_{Name:T} #{Code}_  
+_{Name:T} : {Code}_  
 Default Search Member:  
 _Name_  
 

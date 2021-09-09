@@ -83,7 +83,7 @@
 <p>The industries, for which we are offering solutions. Entity: Crm_Industries (Introduced in version 21.1.3.59)</p>
 <h2 id="default-visualization">Default Visualization</h2>
 <p>Default Display Text Format:<br>
-<em>{Name:T} #{Code}</em><br>
+<em>{Name:T} : {Code}</em><br>
 Default Search Member:<br>
 <em>Name</em></p>
 <h2 id="aggregate">Aggregate</h2>
@@ -115,7 +115,7 @@ Default Search Member:<br>
 <tr>
 <td><a href="Crm.Marketing.Industries.html#name">Name</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString</a></td>
-<td>Industry name (multi-language). <code>Required</code> <code>Filter(like)</code></td>
+<td>Industry name (multi-language). <code>Required</code> <code>Filter(eq;like)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Marketing.Industries.html#notes">Notes</a></td>
@@ -138,9 +138,9 @@ Default Search Member:<br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="name">Name</h3>
-<p>Industry name (multi-language). <code>Required</code> <code>Filter(like)</code></p>
+<p>Industry name (multi-language). <code>Required</code> <code>Filter(eq;like)</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a></strong><br>
-<em>Supported Filters</em>: <strong>Like</strong><br>
+<em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="notes">Notes</h3>
 <p>Notes for this Industry.</p>

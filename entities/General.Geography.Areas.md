@@ -9,7 +9,7 @@ Areas are user-defined division of the sales territories. Entity: Gen_Areas
 
 ## Default Visualization
 Default Display Text Format:  
-_{Name:T} #{Code}_  
+_{Name:T} : {Code}_  
 Default Search Member:  
 _Name_  
 

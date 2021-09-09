@@ -9,7 +9,7 @@ The industries, for which we are offering solutions. Entity: Crm_Industries (Int
 
 ## Default Visualization
 Default Display Text Format:  
-_{Name:T} #{Code}_  
+_{Name:T} : {Code}_  
 Default Search Member:  
 _Name_  
 
@@ -25,7 +25,7 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [Code](Crm.Marketing.Industries.md#code) | string (32) | The unique code of the Industry. `Required` `Filter(eq;like)` `ORD` 
 | [Id](Crm.Marketing.Industries.md#id) | guid |  
-| [Name](Crm.Marketing.Industries.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Industry name (multi-language). `Required` `Filter(like)` 
+| [Name](Crm.Marketing.Industries.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Industry name (multi-language). `Required` `Filter(eq;like)` 
 | [Notes](Crm.Marketing.Industries.md#notes) | string (max) __nullable__ | Notes for this Industry. 
 
 
@@ -50,10 +50,10 @@ _Default Value_: **NewGuid**
 
 ### Name
 
-Industry name (multi-language). `Required` `Filter(like)`
+Industry name (multi-language). `Required` `Filter(eq;like)`
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
-_Supported Filters_: **Like**  
+_Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 
 ### Notes

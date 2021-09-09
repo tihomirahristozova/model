@@ -9,9 +9,9 @@ Detail records (lines) of targets for sales persons. Entity: Crm_Sales_Person_Ta
 
 ## Default Visualization
 Default Display Text Format:  
-_{SalesPersonTarget.DocumentType.Code}:{SalesPersonTarget.DocumentNo} - {SalesPersonTarget.DocumentType.TypeName:T}_  
+_{SalesPersonTarget.DocumentType.TypeName:T} {SalesPersonTarget.DocumentNo}_  
 Default Search Member:  
-_SalesPersonTarget.DocumentType.Code_  
+_SalesPersonTarget.DocumentType.TypeName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

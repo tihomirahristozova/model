@@ -21,6 +21,8 @@ Represents the data, sent to the customs authorities for the movements of excise
 |[Excise_Administrative_Document_Id](#excise_administrative_document_id)|`uniqueidentifier` `PK`||
 |[Is_Deferred_Submission](#is_deferred_submission)|`bit` |Indicates whether the movement has begun under the cover of a paper administrative document.|
 |[Other_Party_Id](#other_party_id)|`uniqueidentifier` |The other party, receiving the goods (Consignee).|
+|[Reporter_Person_Id](#reporter_person_id)|`uniqueidentifier` ||
+|[Reporter_Person_Id](#reporter_person_id)|`uniqueidentifier` ||
 |[Row_Version](#row_version)|`timestamp` ||
 |[Tax_Warehouse_Id](#tax_warehouse_id)|`uniqueidentifier` |Our warehouse, dispatching the goods (Consignor).|
 |[Transportation_Carrier_Id](#transportation_carrier_id)|`uniqueidentifier` |The carrier used for the transportation of the goods.|
@@ -227,6 +229,76 @@ The other party, receiving the goods (Consignee).
 |Visible|yes|
 
 #### Other_Party_Id - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|no|no|
+
+### Reporter_Person_Id
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Base Table.Column|[Cm_Persons](Cm_Persons.md).[Person_Id](Cm_Persons.md#person_id)|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|9|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|Referenced Table|[Cm_Persons](Cm_Persons.md)|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Reporter_Person_Id - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|no|no|
+
+### Reporter_Person_Id
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Base Table.Column|[Cm_Persons](Cm_Persons.md).[Person_Id](Cm_Persons.md#person_id)|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|9|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|Referenced Table|[Cm_Persons](Cm_Persons.md)|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Reporter_Person_Id - Supported Filters
 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |

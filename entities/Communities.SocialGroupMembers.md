@@ -9,7 +9,7 @@ Represents the membership of a user in a social group. Entity: Cmm_Social_Group_
 
 ## Default Visualization
 Default Display Text Format:  
-_{SocialGroup.Name:T} #{SocialGroup.Code}_  
+_{SocialGroup.Name:T} : {SocialGroup.Code}_  
 Default Search Member:  
 _SocialGroup.Name_  
 

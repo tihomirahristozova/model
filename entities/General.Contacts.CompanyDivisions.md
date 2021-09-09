@@ -10,7 +10,7 @@ Stores company divisions structure. The divisions are parties and as such, can b
 
 ## Default Visualization
 Default Display Text Format:  
-_{PartyName:T} #{PartyCode}_  
+_{PartyName:T} : {PartyCode}_  
 Default Search Member:  
 _PartyName_  
 

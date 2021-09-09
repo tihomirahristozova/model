@@ -10,7 +10,7 @@ Represents the data, sent to the customs authorities for the movements of excise
 
 ## Default Visualization
 Default Display Text Format:  
-_{DocumentType.Code}:{DocumentNo} - {DocumentType.TypeName:T}_  
+_{DocumentType.TypeName:T} {DocumentNo}_  
 Default Search Member:  
 _DocumentNo_  
 
@@ -78,6 +78,7 @@ Aggregate Tree
 | [OtherParty](Finance.Excise.ExciseAdministrativeDocuments.md#otherparty) | [Parties](General.Contacts.Parties.md) | The other party, receiving the goods (Consignee). `Required` `Filter(multi eq)` |
 | [Parent](Finance.Excise.ExciseAdministrativeDocuments.md#parent) | [Documents](General.Documents.md) (nullable) | In a multi-document tree, this is the direct parent document. If this is the root it is null. `Filter(multi eq)` (Inherited from [Documents](General.Documents.md)) |
 | [PrimeCauseDocument](Finance.Excise.ExciseAdministrativeDocuments.md#primecausedocument) | [Documents](General.Documents.md) (nullable) | The document that is the prime cause for creation of the current document. `Filter(multi eq)` (Inherited from [Documents](General.Documents.md)) |
+| [ReporterPerson](Finance.Excise.ExciseAdministrativeDocuments.md#reporterperson) | [Persons](General.Contacts.Persons.md) | Reporter Person. `Required` `Filter(multi eq)` `Introduced in version 21.1.3.92` |
 | [ResponsiblePerson](Finance.Excise.ExciseAdministrativeDocuments.md#responsibleperson) | [Persons](General.Contacts.Persons.md) (nullable) | The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc. `Filter(multi eq)` (Inherited from [Documents](General.Documents.md)) |
 | [ReverseOfDocument](Finance.Excise.ExciseAdministrativeDocuments.md#reverseofdocument) | [Documents](General.Documents.md) (nullable) | The document which the current document is reverse of. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) |
 | [Sequence](Finance.Excise.ExciseAdministrativeDocuments.md#sequence) | [Sequences](General.Sequences.md) (nullable) | The sequence that will be used to give new numbers to the documents of this type. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) |
@@ -453,6 +454,13 @@ The document that is the prime cause for creation of the current document. `Filt
 
 _Type_: **[Documents](General.Documents.md) (nullable)**  
 _Indexed_: **True**  
+_Supported Filters_: **Equals, EqualsIn**  
+
+### ReporterPerson
+
+Reporter Person. `Required` `Filter(multi eq)` `Introduced in version 21.1.3.92`
+
+_Type_: **[Persons](General.Contacts.Persons.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ResponsiblePerson

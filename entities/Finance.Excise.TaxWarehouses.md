@@ -9,9 +9,9 @@ Contains excise-related data for warehouses (stores), which are defined as tax w
 
 ## Default Visualization
 Default Display Text Format:  
-_{TaxWarehouseExciseNumber}_  
+_{Name:T} : {TaxWarehouseExciseNumber}_  
 Default Search Member:  
-_TaxWarehouseExciseNumber_  
+_Name_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -24,6 +24,7 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](Finance.Excise.TaxWarehouses.md#id) | guid |  
+| [Name](Finance.Excise.TaxWarehouses.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Tax Warehouse Name (Multilanguage). `Required` `Filter(like)` `Introduced in version 21.1.3.93` 
 | [TaxWarehouseExciseNumber](Finance.Excise.TaxWarehouses.md#taxwarehouseexcisenumber) | string (32) | The excise identification number of the tax warehouse, issued by the competent authorities. `Required` `Default("-")` `Introduced in version 21.1.3.87` 
 | [TraderExciseNumber](Finance.Excise.TaxWarehouses.md#traderexcisenumber) | string (32) | The excise identification number of the owner of the Tax Warehouse. `Required` `Default("-")` `Introduced in version 21.1.3.87` 
 
@@ -42,6 +43,14 @@ _Type_: **guid**
 _Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
+
+### Name
+
+Tax Warehouse Name (Multilanguage). `Required` `Filter(like)` `Introduced in version 21.1.3.93`
+
+_Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
+_Supported Filters_: **Like**  
+_Supports Order By_: **False**  
 
 ### TaxWarehouseExciseNumber
 

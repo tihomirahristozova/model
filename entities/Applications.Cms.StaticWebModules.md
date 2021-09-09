@@ -10,7 +10,7 @@ A web module, which contains one web page with static text. Entity: Cms_Static_W
 
 ## Default Visualization
 Default Display Text Format:  
-_{Name:T} #{LanguageCode}_  
+_{Name:T} : {LanguageCode}_  
 Default Search Member:  
 _Name_  
 

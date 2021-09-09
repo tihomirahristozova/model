@@ -9,7 +9,7 @@ Contains the user-defined financial statement definitions. Entity: Acc_Financial
 
 ## Default Visualization
 Default Display Text Format:  
-_{Name:T} #{Code}_  
+_{Name:T} : {Code}_  
 Default Search Member:  
 _Name_  
 

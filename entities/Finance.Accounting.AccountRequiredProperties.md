@@ -9,7 +9,7 @@ Defines the required properties for new vouchers, for each account. Entity: Acc_
 
 ## Default Visualization
 Default Display Text Format:  
-_{Account.Name:T} #{Account.AccountFullNumber}_  
+_{Account.Name:T} : {Account.AccountFullNumber}_  
 Default Search Member:  
 _Account.Name_  
 

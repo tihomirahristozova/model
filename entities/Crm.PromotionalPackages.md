@@ -9,7 +9,7 @@ Promotional packages are packages of products, which are sold together at a spec
 
 ## Default Visualization
 Default Display Text Format:  
-_{Name:T} #{Code}_  
+_{Name:T} : {Code}_  
 Default Search Member:  
 _Name_  
 

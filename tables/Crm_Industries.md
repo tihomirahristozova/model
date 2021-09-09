@@ -120,6 +120,7 @@ Industry name (multi-language).
 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
+|Equals|`NULL`|no|no|
 |Like|None|no|no|
 
 ### Notes

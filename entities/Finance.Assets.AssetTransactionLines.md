@@ -9,9 +9,9 @@ Asset value transaction lines. Each line changes the values of one asset in one 
 
 ## Default Visualization
 Default Display Text Format:  
-_{AssetTransaction.DocumentType.Code}:{AssetTransaction.DocumentNo} - {AssetTransaction.DocumentType.TypeName:T}_  
+_{AssetTransaction.DocumentType.TypeName:T} {AssetTransaction.DocumentNo}_  
 Default Search Member:  
-_AssetTransaction.DocumentType.Code_  
+_AssetTransaction.DocumentType.TypeName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

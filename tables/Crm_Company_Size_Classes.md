@@ -12,7 +12,7 @@ Categorization of company sizes for marketing purposes. Size classes might depen
 | Name | Type | Description |
 | - | - | --- |
 |[Code](#code)|`nvarchar(32)` ||
-|[Company_Size_Class_Id](#company_size_class_id)|`uniqueidentifier` `PK`||
+|[Company_Size_Class_Id](#company_size_class_id)|`uniqueidentifier` `PK`|Company size class|
 |[From_Employees](#from_employees)|`int` |Minimal number of employees for this size class. NULL if this is not relevant to this size class.|
 |[From_Revenue](#from_revenue)|`decimal(15, 0)` |Minimal revenue for this size class. Currency is Revenue Currency. NULL if this is not relevant to this size class.|
 |[Name](#name)|`nvarchar(254)` `ML`|Company size class name (multi-language).|
@@ -59,6 +59,9 @@ Categorization of company sizes for marketing purposes. Size classes might depen
 |Like|None|no|no|
 
 ### Company_Size_Class_Id
+
+
+Company size class
 
 | Property | Value |
 | - | - |
@@ -121,6 +124,12 @@ Minimal number of employees for this size class. NULL if this is not relevant to
 |User Login|no|
 |Visible|yes|
 
+#### From_Employees - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
+
 ### From_Revenue
 
 
@@ -150,6 +159,12 @@ Minimal revenue for this size class. Currency is Revenue Currency. NULL if this 
 |UI Width|Medium|
 |User Login|no|
 |Visible|yes|
+
+#### From_Revenue - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
 
 ### Name
 
@@ -185,6 +200,7 @@ Company size class name (multi-language).
 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
+|Equals|`NULL`|no|no|
 |Like|None|no|no|
 
 ### Notes
@@ -309,6 +325,12 @@ Maximum number of employees for this size class. NULL if this is not relevant to
 |User Login|no|
 |Visible|yes|
 
+#### To_Employees - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
+
 ### To_Revenue
 
 
@@ -338,5 +360,11 @@ Maximal revenue for this size class. Currency is Revenue Currency. NULL if this 
 |UI Width|Medium|
 |User Login|no|
 |Visible|yes|
+
+#### To_Revenue - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
 
 

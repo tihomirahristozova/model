@@ -9,7 +9,7 @@ Contains the properties, that are required to be set, when creating new products
 
 ## Default Visualization
 Default Display Text Format:  
-_{ProductGroup.Name:T} #{ProductGroup.NextPartNumber}_  
+_{ProductGroup.Name:T} : {ProductGroup.NextPartNumber}_  
 Default Search Member:  
 _ProductGroup.Name_  
 

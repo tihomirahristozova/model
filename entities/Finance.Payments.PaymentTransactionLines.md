@@ -9,9 +9,9 @@ Contains the distibution of the payments' amounts among the source payment order
 
 ## Default Visualization
 Default Display Text Format:  
-_{PaymentTransaction.DocumentType.Code}:{PaymentTransaction.DocumentNo} - {PaymentTransaction.DocumentType.TypeName:T}_  
+_{PaymentTransaction.DocumentType.TypeName:T} {PaymentTransaction.DocumentNo}_  
 Default Search Member:  
-_PaymentTransaction.DocumentType.Code_  
+_PaymentTransaction.DocumentType.TypeName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

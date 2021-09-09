@@ -83,9 +83,9 @@
 <p>Bulk payment order document line. Each line usually creates one payment order. Entity: Cash_Bulk_Payment_Order_Lines</p>
 <h2 id="default-visualization">Default Visualization</h2>
 <p>Default Display Text Format:<br>
-<em>{BulkPaymentOrder.DocumentType.Code}:{BulkPaymentOrder.DocumentNo} - {BulkPaymentOrder.DocumentType.TypeName:T}</em><br>
+<em>{BulkPaymentOrder.DocumentType.TypeName:T} {BulkPaymentOrder.DocumentNo}</em><br>
 Default Search Member:<br>
-<em>BulkPaymentOrder.DocumentType.Code</em></p>
+<em>BulkPaymentOrder.DocumentType.TypeName</em></p>
 <h2 id="aggregate">Aggregate</h2>
 <p>An <a href="https://docs.erp.net/tech/advanced/concepts/aggregates.html">aggregate</a> is a cluster of domain objects that can be treated as a single unit.</p>
 <p>Aggregate Parent:<br>

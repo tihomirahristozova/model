@@ -9,7 +9,7 @@ Provides a way to apply different filtering of the property allowed values for t
 
 ## Default Visualization
 Default Display Text Format:  
-_{Property.AllowedValuesEntityName:T} #{Property.Code}_  
+_{Property.AllowedValuesEntityName:T} : {Property.Code}_  
 Default Search Member:  
 _Property.AllowedValuesEntityName_  
 

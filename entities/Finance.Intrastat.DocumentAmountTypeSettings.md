@@ -9,7 +9,7 @@ Specifies the additional amounts, which are added to the invoiced and statistica
 
 ## Default Visualization
 Default Display Text Format:  
-_{DocumentAmountType.AmountTypeName:T} #{DocumentAmountType.AmountTypeCode}_  
+_{DocumentAmountType.AmountTypeName:T} : {DocumentAmountType.AmountTypeCode}_  
 Default Search Member:  
 _DocumentAmountType.AmountTypeName_  
 

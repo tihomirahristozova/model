@@ -9,9 +9,9 @@ Customer contracts list. For each combination of Enterprise Company and external
 
 ## Default Visualization
 Default Display Text Format:  
-_{Number}_  
+_{Party.PartyName:T} : {Number}_  
 Default Search Member:  
-_Number_  
+_Party.PartyName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

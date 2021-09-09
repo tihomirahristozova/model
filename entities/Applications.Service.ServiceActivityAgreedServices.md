@@ -9,9 +9,9 @@ Contains the services, which were agreed for this service activity (repair), bef
 
 ## Default Visualization
 Default Display Text Format:  
-_{ServiceActivityService.ServiceActivity.DocumentType.Code}:{ServiceActivityService.ServiceActivity.DocumentNo}:{ServiceActivityService.LineNo} - {ServiceActivityService.ServiceActivity.DocumentType.TypeName:T}_  
+_{ServiceActivityService.LineNo} : {ServiceActivityService.ServiceActivity.DocumentNo} {ServiceActivityService.ServiceActivity.DocumentType.TypeName:T}_  
 Default Search Member:  
-_ServiceActivityService.ServiceActivity.DocumentType.Code_  
+_ServiceActivityService.LineNo_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

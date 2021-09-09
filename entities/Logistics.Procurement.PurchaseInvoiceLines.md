@@ -9,7 +9,7 @@ Contains detail lines for purchase invoice documents. Entity: Scm_Purchase_Invoi
 
 ## Default Visualization
 Default Display Text Format:  
-_{PurchaseInvoice.DocumentType.Code}:{PurchaseInvoice.DocumentNo}:{LineNo} - {PurchaseInvoice.DocumentType.TypeName:T}_  
+_{LineNo} : {PurchaseInvoice.DocumentNo} {PurchaseInvoice.DocumentType.TypeName:T}_  
 Default Search Member:  
 _PurchaseInvoice.DocumentNo_  
 

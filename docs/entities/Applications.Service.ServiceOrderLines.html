@@ -83,9 +83,9 @@
 <p>Contains the details and problem symptoms for each object, which requires servicing. Entity: Srv_Service_Order_Lines</p>
 <h2 id="default-visualization">Default Visualization</h2>
 <p>Default Display Text Format:<br>
-<em>{ServiceOrder.DocumentType.Code}:{ServiceOrder.DocumentNo} - {ServiceOrder.DocumentType.TypeName:T}</em><br>
+<em>{ServiceOrder.DocumentType.TypeName:T} {ServiceOrder.DocumentNo}</em><br>
 Default Search Member:<br>
-<em>ServiceOrder.DocumentType.Code</em></p>
+<em>ServiceOrder.DocumentType.TypeName</em></p>
 <h2 id="aggregate">Aggregate</h2>
 <p>An <a href="https://docs.erp.net/tech/advanced/concepts/aggregates.html">aggregate</a> is a cluster of domain objects that can be treated as a single unit.</p>
 <p>Aggregate Parent:<br>

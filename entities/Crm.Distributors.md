@@ -9,7 +9,7 @@ Distributors are external for the enterprise persons or companies who obtain sal
 
 ## Default Visualization
 Default Display Text Format:  
-_{Party.PartyName:T} #{Party.PartyCode}_  
+_{Party.PartyName:T} : {Party.PartyCode}_  
 Default Search Member:  
 _Party.PartyName_  
 

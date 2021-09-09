@@ -231,6 +231,7 @@ The industry, for which this solution is appropriate. NULL if not applicable.
 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
+|Equals|`NULL`|no|no|
 |Like|None|no|no|
 
 ### Notes

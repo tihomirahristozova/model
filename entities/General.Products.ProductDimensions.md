@@ -9,7 +9,7 @@ Contains convertion ratios between the supported measument categories for each p
 
 ## Default Visualization
 Default Display Text Format:  
-_{Product.Name:T} #{Product.PartNumber}_  
+_{Product.Name:T} : {Product.PartNumber}_  
 Default Search Member:  
 _Product.Name_  
 

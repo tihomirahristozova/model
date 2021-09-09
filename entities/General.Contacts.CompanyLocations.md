@@ -10,7 +10,7 @@ Stores company locations. The locations are parties and as such, can be organize
 
 ## Default Visualization
 Default Display Text Format:  
-_{PartyName:T} #{PartyCode}_  
+_{PartyName:T} : {PartyCode}_  
 Default Search Member:  
 _PartyName_  
 
