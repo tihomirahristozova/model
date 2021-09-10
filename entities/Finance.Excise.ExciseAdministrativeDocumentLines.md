@@ -25,6 +25,8 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [ExciseAmount](Finance.Excise.ExciseAdministrativeDocumentLines.md#exciseamount) | [Amount (14, 2)](../data-types.md#amount) |  
+| [ExciseAmountBase](Finance.Excise.ExciseAdministrativeDocumentLines.md#exciseamountbase) | [Amount (14, 2)](../data-types.md#amount) |  
 | [Id](Finance.Excise.ExciseAdministrativeDocumentLines.md#id) | guid |  
 | [LineNo](Finance.Excise.ExciseAdministrativeDocumentLines.md#lineno) | int32 | Consecutive line number within the document. `Required` 
 | [Notes](Finance.Excise.ExciseAdministrativeDocumentLines.md#notes) | string (max) __nullable__ | Notes for this ExciseAdministrative<br />DocumentLine. 
@@ -43,6 +45,20 @@ Aggregate Root:
 
 
 ## Attribute Details
+
+### ExciseAmount
+
+_Type_: **[Amount (14, 2)](../data-types.md#amount)**  
+_Supported Filters_: **Equals, GreaterThanOrLessThan**  
+_Supports Order By_: **False**  
+_Default Value_: **Constant**  
+
+### ExciseAmountBase
+
+_Type_: **[Amount (14, 2)](../data-types.md#amount)**  
+_Supported Filters_: **Equals, GreaterThanOrLessThan**  
+_Supports Order By_: **False**  
+_Default Value_: **Constant**  
 
 ### Id
 

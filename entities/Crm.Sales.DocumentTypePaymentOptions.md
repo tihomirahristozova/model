@@ -9,9 +9,9 @@ Contains payment options for user documnet types for sales orders. Entity: Crm_D
 
 ## Default Visualization
 Default Display Text Format:  
-_{DocumentType.EntityName:T} : {DocumentType.Code}_  
+_{DocumentType.TypeName} : {DocumentType.Code}_  
 Default Search Member:  
-_DocumentType.EntityName_  
+_DocumentType.TypeName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

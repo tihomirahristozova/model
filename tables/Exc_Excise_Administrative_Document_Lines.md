@@ -18,6 +18,8 @@ The details of the movement of each excise product for each excise document. Ent
 | - | - | --- |
 |[Excise_Administrative_Document_Id](#excise_administrative_document_id)|`uniqueidentifier` ||
 |[Excise_Administrative_Document_Line_Id](#excise_administrative_document_line_id)|`uniqueidentifier` `PK`||
+|[Excise_Amount](#excise_amount)|`decimal(14, 2)` ||
+|[Excise_Amount_Base](#excise_amount_base)|`decimal(14, 2)` ||
 |[Line_No](#line_no)|`int` |Consecutive line number within the document.|
 |[Measuring_Transaction_Id](#measuring_transaction_id)|`uniqueidentifier` |Transaction of product input or output, measured with specialized measuring device for excise purposes.|
 |[Notes](#notes)|`nvarchar(max)` ||
@@ -95,6 +97,74 @@ The details of the movement of each excise product for each excise document. Ent
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+
+### Excise_Amount
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|0|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|9|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|decimal(14, 2)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Excise_Amount - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|no|
+
+### Excise_Amount_Base
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|0|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|10|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|decimal(14, 2)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Excise_Amount_Base - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|no|
 
 ### Line_No
 

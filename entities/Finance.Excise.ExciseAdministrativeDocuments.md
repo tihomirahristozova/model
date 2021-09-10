@@ -46,6 +46,8 @@ Aggregate Tree
 | [DocumentNotes](Finance.Excise.ExciseAdministrativeDocuments.md#documentnotes) | string (max) __nullable__ | Notes for this Document. (Inherited from [Documents](General.Documents.md)) 
 | [DocumentVersion](Finance.Excise.ExciseAdministrativeDocuments.md#documentversion) | int32 | Consecutive version number, starting with 1. Each update produces a new version of the document. `Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [EntityName](Finance.Excise.ExciseAdministrativeDocuments.md#entityname) | string (64) | The entity name of the document header. `Required` `Filter(eq)` `ORD` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
+| [ExciseAlcoholicStrength](Finance.Excise.ExciseAdministrativeDocuments.md#excisealcoholicstrength) | decimal (5, 2) __nullable__ | The alcoholic strength, which will be used for Excise reporting purposes. null  if the product is not subject to alcoholic Excise reporting. `Introduced in version 21.1.3.94` 
+| [ExciseDutyRateValue](Finance.Excise.ExciseAdministrativeDocuments.md#excisedutyratevalue) | decimal (10, 6) __nullable__ | The rate which should be applied for the specified product and purpose. null means not assigned yet. `Introduced in version 21.1.3.94` 
 | [Id](Finance.Excise.ExciseAdministrativeDocuments.md#id) | guid |  
 | [IsDeferredSubmission](Finance.Excise.ExciseAdministrativeDocuments.md#isdeferredsubmission) | boolean | Indicates whether the movement has begun under the cover of a paper administrative document. `Required` `Default(false)` 
 | [ParentDocument<br />RelationshipType](Finance.Excise.ExciseAdministrativeDocuments.md#parentdocumentrelationshiptype) | [ParentDocument<br />RelationshipType](Finance.Excise.ExciseAdministrativeDocuments.md#parentdocumentrelationshiptype) __nullable__ | Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
@@ -72,6 +74,9 @@ Aggregate Tree
 | [DocumentType](Finance.Excise.ExciseAdministrativeDocuments.md#documenttype) | [DocumentTypes](General.DocumentTypes.md) | The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.md)) |
 | [EnterpriseCompany](Finance.Excise.ExciseAdministrativeDocuments.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company which issued the document. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.md)) |
 | [EnterpriseCompanyLocation](Finance.Excise.ExciseAdministrativeDocuments.md#enterprisecompanylocation) | [CompanyLocations](General.Contacts.CompanyLocations.md) (nullable) | The enterprise company location which issued the document. null means that there is only one location within the enterprise company and locations are not used. `Filter(multi eq)` (Inherited from [Documents](General.Documents.md)) |
+| [ExciseDutyRate](Finance.Excise.ExciseAdministrativeDocuments.md#excisedutyrate) | [ExciseDutyRates](Finance.Excise.ExciseDutyRates.md) | The Duty rate specified by the taxation and customs authorities. `Required` `Filter(multi eq)` `Introduced in version 21.1.3.94` |
+| [ExciseProduct](Finance.Excise.ExciseAdministrativeDocuments.md#exciseproduct) | [ExciseProducts](Finance.Excise.ExciseProducts.md) | The Excise product code defined by the taxation and customs authorities. `Required` `Filter(multi eq)` `Introduced in version 21.1.3.94` |
+| [ExcisePurposeCode](Finance.Excise.ExciseAdministrativeDocuments.md#excisepurposecode) | [ExcisePurposeCodes](Finance.Excise.ExcisePurposeCodes.md) | The Purpose codes specify the different purposes recognized by the authorities for determining the excise rate. `Required` `Filter(multi eq)` `Introduced in version 21.1.3.94` |
 | [FromCompanyDivision](Finance.Excise.ExciseAdministrativeDocuments.md#fromcompanydivision) | [CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable) | The division of the company, issuing the document. null when the document is not issued by any specific division. `Filter(multi eq)` (Inherited from [Documents](General.Documents.md)) |
 | [FromParty](Finance.Excise.ExciseAdministrativeDocuments.md#fromparty) | [Parties](General.Contacts.Parties.md) | The party which issued the document. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.md)) |
 | [MasterDocument](Finance.Excise.ExciseAdministrativeDocuments.md#masterdocument) | [Documents](General.Documents.md) | In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.md)) |
@@ -214,6 +219,22 @@ _Indexed_: **True**
 _Supported Filters_: **Equals**  
 _Supports Order By_: **True**  
 _Maximum Length_: **64**  
+
+### ExciseAlcoholicStrength
+
+The alcoholic strength, which will be used for Excise reporting purposes. null  if the product is not subject to alcoholic Excise reporting. `Introduced in version 21.1.3.94`
+
+_Type_: **decimal (5, 2) __nullable__**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+
+### ExciseDutyRateValue
+
+The rate which should be applied for the specified product and purpose. null means not assigned yet. `Introduced in version 21.1.3.94`
+
+_Type_: **decimal (10, 6) __nullable__**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 ### Id
 
@@ -409,6 +430,27 @@ _Supported Filters_: **Equals, EqualsIn**
 The enterprise company location which issued the document. null means that there is only one location within the enterprise company and locations are not used. `Filter(multi eq)` (Inherited from [Documents](General.Documents.md))
 
 _Type_: **[CompanyLocations](General.Contacts.CompanyLocations.md) (nullable)**  
+_Supported Filters_: **Equals, EqualsIn**  
+
+### ExciseDutyRate
+
+The Duty rate specified by the taxation and customs authorities. `Required` `Filter(multi eq)` `Introduced in version 21.1.3.94`
+
+_Type_: **[ExciseDutyRates](Finance.Excise.ExciseDutyRates.md)**  
+_Supported Filters_: **Equals, EqualsIn**  
+
+### ExciseProduct
+
+The Excise product code defined by the taxation and customs authorities. `Required` `Filter(multi eq)` `Introduced in version 21.1.3.94`
+
+_Type_: **[ExciseProducts](Finance.Excise.ExciseProducts.md)**  
+_Supported Filters_: **Equals, EqualsIn**  
+
+### ExcisePurposeCode
+
+The Purpose codes specify the different purposes recognized by the authorities for determining the excise rate. `Required` `Filter(multi eq)` `Introduced in version 21.1.3.94`
+
+_Type_: **[ExcisePurposeCodes](Finance.Excise.ExcisePurposeCodes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### FromCompanyDivision
