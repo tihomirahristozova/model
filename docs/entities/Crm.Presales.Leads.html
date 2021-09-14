@@ -105,7 +105,7 @@ Default Search Member:<br>
 <tr>
 <td><a href="Crm.Presales.Leads.html#companyname">CompanyName</a></td>
 <td>string (64) <strong>nullable</strong></td>
-<td>The name of the company, which the person works for (in relation to the current lead). <code>Filter(like)</code></td>
+<td>The name of the company, which the person works for (in relation to the current lead). <code>Filter(eq;like)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Presales.Leads.html#creationtimestamputc">CreationTimestampUtc</a></td>
@@ -125,27 +125,27 @@ Default Search Member:<br>
 <tr>
 <td><a href="Crm.Presales.Leads.html#personemail">PersonEmail</a></td>
 <td>string (64) <strong>nullable</strong></td>
-<td>The email address of the sales lead person.</td>
+<td>The email address of the sales lead person. <code>Filter(eq;like)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Presales.Leads.html#personfirstname">PersonFirstName</a></td>
 <td>string (64) <strong>nullable</strong></td>
-<td>The first name of the person, representing the sales lead. <code>Filter(like)</code></td>
+<td>The first name of the person, representing the sales lead. <code>Filter(eq;like)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Presales.Leads.html#personlastname">PersonLastName</a></td>
 <td>string (64) <strong>nullable</strong></td>
-<td>The last name of the person, representing the sales lead. <code>Filter(like)</code></td>
+<td>The last name of the person, representing the sales lead. <code>Filter(eq;like)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Presales.Leads.html#personmobilephone">PersonMobilePhone</a></td>
 <td>string (32) <strong>nullable</strong></td>
-<td>The mobile phone of the sales lead person.</td>
+<td>The mobile phone of the sales lead person. <code>Filter(like)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Presales.Leads.html#personsalutation">PersonSalutation</a></td>
 <td>string (16) <strong>nullable</strong></td>
-<td>Salutation for the sales lead person.</td>
+<td>Salutation for the sales lead person. <code>Filter(eq;like)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Presales.Leads.html#personwebprofile">PersonWebProfile</a></td>
@@ -155,12 +155,12 @@ Default Search Member:<br>
 <tr>
 <td><a href="Crm.Presales.Leads.html#personworkphone">PersonWorkPhone</a></td>
 <td>string (32) <strong>nullable</strong></td>
-<td>The work phone of the sales lead person.</td>
+<td>The work phone of the sales lead person. <code>Filter(like)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Presales.Leads.html#roleincompany">RoleInCompany</a></td>
 <td>string (32) <strong>nullable</strong></td>
-<td>The role of the person in the company.</td>
+<td>The role of the person in the company. <code>Filter(eq;like)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Presales.Leads.html#sqltimestamputc">SQLTimestampUtc</a></td>
@@ -243,9 +243,9 @@ Default Search Member:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="companyname">CompanyName</h3>
-<p>The name of the company, which the person works for (in relation to the current lead). <code>Filter(like)</code></p>
+<p>The name of the company, which the person works for (in relation to the current lead). <code>Filter(eq;like)</code></p>
 <p><em>Type</em>: <strong>string (64) <strong>nullable</strong></strong><br>
-<em>Supported Filters</em>: <strong>Like</strong><br>
+<em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>64</strong></p>
 <h3 id="creationtimestamputc">CreationTimestampUtc</h3>
@@ -266,33 +266,33 @@ Default Search Member:<br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="personemail">PersonEmail</h3>
-<p>The email address of the sales lead person.</p>
+<p>The email address of the sales lead person. <code>Filter(eq;like)</code></p>
 <p><em>Type</em>: <strong>string (64) <strong>nullable</strong></strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>64</strong></p>
 <h3 id="personfirstname">PersonFirstName</h3>
-<p>The first name of the person, representing the sales lead. <code>Filter(like)</code></p>
+<p>The first name of the person, representing the sales lead. <code>Filter(eq;like)</code></p>
 <p><em>Type</em>: <strong>string (64) <strong>nullable</strong></strong><br>
-<em>Supported Filters</em>: <strong>Like</strong><br>
+<em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>64</strong></p>
 <h3 id="personlastname">PersonLastName</h3>
-<p>The last name of the person, representing the sales lead. <code>Filter(like)</code></p>
+<p>The last name of the person, representing the sales lead. <code>Filter(eq;like)</code></p>
 <p><em>Type</em>: <strong>string (64) <strong>nullable</strong></strong><br>
-<em>Supported Filters</em>: <strong>Like</strong><br>
+<em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>64</strong></p>
 <h3 id="personmobilephone">PersonMobilePhone</h3>
-<p>The mobile phone of the sales lead person.</p>
+<p>The mobile phone of the sales lead person. <code>Filter(like)</code></p>
 <p><em>Type</em>: <strong>string (32) <strong>nullable</strong></strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>32</strong></p>
 <h3 id="personsalutation">PersonSalutation</h3>
-<p>Salutation for the sales lead person.</p>
+<p>Salutation for the sales lead person. <code>Filter(eq;like)</code></p>
 <p><em>Type</em>: <strong>string (16) <strong>nullable</strong></strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>16</strong></p>
 <h3 id="personwebprofile">PersonWebProfile</h3>
@@ -302,15 +302,15 @@ Default Search Member:<br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>64</strong></p>
 <h3 id="personworkphone">PersonWorkPhone</h3>
-<p>The work phone of the sales lead person.</p>
+<p>The work phone of the sales lead person. <code>Filter(like)</code></p>
 <p><em>Type</em>: <strong>string (32) <strong>nullable</strong></strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>32</strong></p>
 <h3 id="roleincompany">RoleInCompany</h3>
-<p>The role of the person in the company.</p>
+<p>The role of the person in the company. <code>Filter(eq;like)</code></p>
 <p><em>Type</em>: <strong>string (32) <strong>nullable</strong></strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>32</strong></p>
 <h3 id="sqltimestamputc">SQLTimestampUtc</h3>

@@ -117,11 +117,18 @@ Legislations</strong></td>
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td></td>
+<td>Calls TemplateLine.UpdateLineProperties(bool isDebit, Account account,
+EnterpriseOneTransaction tr)
+and then for each TemplateLineProperty
+if (AmountSourceName != NULL &amp;&amp;
+TemplateLineProperty.PropertyValueSourceType == NULL &amp;&amp;
+(AmountSourceName == &quot;Exchange_Difference&quot; || AmountSourceName == &quot;Account_Balance&quot;))
+then TemplateLineProperty.PropertyValueSourceType = &quot;Account item key&quot;</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
-<td>When CreditAccount or DebitAccount is changed,</td>
+<td>When CreditAccount or DebitAccount is changed, Template Line Properties should be updated
+according to Account's Key Properties.</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>

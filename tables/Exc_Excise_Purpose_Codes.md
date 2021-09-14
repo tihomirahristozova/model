@@ -13,6 +13,7 @@ Purpose codes specify the different purposes recognized by the authorities for d
 | - | - | --- |
 |[Code](#code)|`nvarchar(32)` ||
 |[Excise_Purpose_Code_Id](#excise_purpose_code_id)|`uniqueidentifier` `PK`||
+|[Is_Default](#is_default)|`bit` |Excise Purpose Codes which is the default for documents.|
 |[Name](#name)|`nvarchar(254)` `ML`||
 |[Notes](#notes)|`nvarchar(max)` ||
 |[Row_Version](#row_version)|`timestamp` ||
@@ -30,7 +31,7 @@ Purpose codes specify the different purposes recognized by the authorities for d
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|32|
-|Order|2147483647|
+|Order|1|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -64,7 +65,7 @@ Purpose codes specify the different purposes recognized by the authorities for d
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|0|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -86,6 +87,36 @@ Purpose codes specify the different purposes recognized by the authorities for d
 | - | - | - | - |
 |Equals|`NULL`|no|no|
 
+### Is_Default
+
+
+Excise Purpose Codes which is the default for documents.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|False|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|4|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|bit|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
 ### Name
 
 | Property | Value |
@@ -97,7 +128,7 @@ Purpose codes specify the different purposes recognized by the authorities for d
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|254|
-|Order|2147483647|
+|Order|2|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -130,7 +161,7 @@ Purpose codes specify the different purposes recognized by the authorities for d
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|2147483647|
-|Order|2147483647|
+|Order|3|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|

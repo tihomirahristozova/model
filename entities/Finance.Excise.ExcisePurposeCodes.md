@@ -25,6 +25,7 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [Code](Finance.Excise.ExcisePurposeCodes.md#code) | string (32) | The unique code of the ExcisePurposeCode. `Required` `Filter(eq;like)` `ORD` 
 | [Id](Finance.Excise.ExcisePurposeCodes.md#id) | guid |  
+| [IsDefault](Finance.Excise.ExcisePurposeCodes.md#isdefault) | boolean | Excise Purpose Codes which is the default for documents. `Required` `Default(false)` `Introduced in version 21.1.4.0` 
 | [Name](Finance.Excise.ExcisePurposeCodes.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | The name of this ExcisePurposeCode. `Required` `Filter(like)` 
 | [Notes](Finance.Excise.ExcisePurposeCodes.md#notes) | string (max) __nullable__ | Notes for this ExcisePurposeCode. 
 
@@ -47,6 +48,16 @@ _Type_: **guid**
 _Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
+
+### IsDefault
+
+Excise Purpose Codes which is the default for documents. `Required` `Default(false)` `Introduced in version 21.1.4.0`
+
+_Type_: **boolean**  
+_Indexed_: **True**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+_Default Value_: **False**  
 
 ### Name
 

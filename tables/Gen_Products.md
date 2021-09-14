@@ -24,6 +24,7 @@ Products are the different items in the enterprise, which can be purchased, stor
 |[Description](#description)|`nvarchar(max)` `ML`|The description of the product|
 |[Enterprise_Company_Id](#enterprise_company_id)|`uniqueidentifier` |When not NULL, specifies that the product is specific to a given enterprise company and may be used only in documents from this enterprise company.|
 |[Excise_Alcoholic_Strength](#excise_alcoholic_strength)|`decimal(5, 2)` |The alcoholic strength, which will be used for Excise reporting purposes. NULL if the product is not subject to alcoholic Excise reporting.|
+|[Excise_Product_Id](#excise_product_id)|`uniqueidentifier` |Specifies excise product code for this product. NULL means unspecified.|
 |[Expiry_Period_Days](#expiry_period_days)|`int` |Total default expiry period for the product (in days) from the date of production to the date of expiry|
 |[Flushing_Method](#flushing_method)|`nvarchar(1)` Allowed: `B`, `F`, `M`|Consumption method for work orders. M=Manual, using Consuption Journals, F=Forward (on release), B=Backward (on finish)|
 |[Guarantee_Period_Days](#guarantee_period_days)|`int` |Default guarantee period length in days. 0 means no guarantee. Should be non-NULL for serviced products and NULL for the others|
@@ -504,6 +505,43 @@ The alcoholic strength, which will be used for Excise reporting purposes. NULL i
 |UI Width|Short|
 |User Login|no|
 |Visible|no|
+
+### Excise_Product_Id
+
+
+Specifies excise product code for this product. NULL means unspecified.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|46|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|Referenced Table|[Exc_Excise_Products](Exc_Excise_Products.md)|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Excise_Product_Id - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
 
 ### Expiry_Period_Days
 

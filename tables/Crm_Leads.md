@@ -148,6 +148,7 @@ The name of the company, which the person works for (in relation to the current 
 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
+|Equals|`NULL`|yes|no|
 |Like|None|no|no|
 
 ### Converted_To_Deal_Id
@@ -581,6 +582,13 @@ The email address of the sales lead person.
 |User Login|no|
 |Visible|yes|
 
+#### Person_Email - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
+|Like|None|no|no|
+
 ### Person_First_Name
 
 
@@ -615,6 +623,7 @@ The first name of the person, representing the sales lead.
 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
+|Equals|`NULL`|yes|no|
 |Like|None|no|no|
 
 ### Person_Last_Name
@@ -651,6 +660,7 @@ The last name of the person, representing the sales lead.
 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
+|Equals|`NULL`|yes|no|
 |Like|None|no|no|
 
 ### Person_Mobile_Phone
@@ -683,6 +693,12 @@ The mobile phone of the sales lead person.
 |User Login|no|
 |Visible|yes|
 
+#### Person_Mobile_Phone - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Like|None|no|no|
+
 ### Person_Salutation
 
 
@@ -712,6 +728,13 @@ Salutation for the sales lead person.
 |UI Width|Medium|
 |User Login|no|
 |Visible|yes|
+
+#### Person_Salutation - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
+|Like|None|no|no|
 
 ### Person_Web_Profile
 
@@ -779,6 +802,12 @@ The work phone of the sales lead person.
 |User Login|no|
 |Visible|yes|
 
+#### Person_Work_Phone - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Like|None|no|no|
+
 ### Role_In_Company
 
 
@@ -808,6 +837,13 @@ The role of the person in the company.
 |UI Width|Medium|
 |User Login|no|
 |Visible|yes|
+
+#### Role_In_Company - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
+|Like|None|no|no|
 
 ### Row_Version
 
