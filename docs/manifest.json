@@ -3936,7 +3936,7 @@
       "output": {
         ".html": {
           "relative_path": "business-rules/R30055.html",
-          "hash": "ZjAcMkgNbk65nbjVEDF8OA=="
+          "hash": "x4k8WF2fL3NWhgyFYOgWDg=="
         }
       },
       "is_incremental": false,
@@ -9176,6 +9176,66 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "business-rules/R32336-1.md",
+      "output": {
+        ".html": {
+          "relative_path": "business-rules/R32336-1.html",
+          "hash": "xniO1CNpvPqrKGtPH/hGXg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "business-rules/R32336-2.md",
+      "output": {
+        ".html": {
+          "relative_path": "business-rules/R32336-2.html",
+          "hash": "7OleZBZ2APpVZW8ErB4W/Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "business-rules/R32336-3.md",
+      "output": {
+        ".html": {
+          "relative_path": "business-rules/R32336-3.html",
+          "hash": "irJkD7qV0anHOhldbouAbQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "business-rules/R32336-4.md",
+      "output": {
+        ".html": {
+          "relative_path": "business-rules/R32336-4.html",
+          "hash": "byVK4f2TOgrxGj5Te7p38A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "business-rules/R32336-5.md",
+      "output": {
+        ".html": {
+          "relative_path": "business-rules/R32336-5.html",
+          "hash": "zmSv3cJ9Whi/CEVVAi3hOg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "business-rules/R32346.md",
       "output": {
         ".html": {
@@ -11410,7 +11470,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Finance.Accounting.TemplateLines.html",
-          "hash": "GJdcntfZRx8cEcKSql2XFA=="
+          "hash": "qhmvqf5tkgPoKDwnSmLCKQ=="
         }
       },
       "is_incremental": false,
@@ -11434,7 +11494,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Finance.Accounting.Templates.html",
-          "hash": "dD56XV+ZRiK0M5KpXSKr+A=="
+          "hash": "hjRnGCmI4LG6tsbVvpUJyA=="
         }
       },
       "is_incremental": false,
