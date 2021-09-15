@@ -222,6 +222,8 @@ Aggregate Root:<br>
 <p><em>Type</em>: <strong>decimal (10, 6) <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
+<p><em>Front-End Recalc Expressions:</em><br>
+<code>obj.ExciseDutyRate.ExciseDutyRateField</code></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
@@ -269,6 +271,8 @@ Aggregate Root:<br>
 <p>The Duty rate specified by the taxation and customs authorities. <code>Filter(multi eq)</code> <code>Introduced in version 21.1.3.97</code></p>
 <p><em>Type</em>: <strong><a href="Finance.Excise.ExciseDutyRates.html">ExciseDutyRates</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<p><em>Front-End Recalc Expressions:</em><br>
+<code>obj.DetermineExciseDutyRate( obj.ExciseProduct, obj.ExcisePurposeCode)</code></p>
 <h3 id="exciseproduct">ExciseProduct</h3>
 <p>The Excise product code defined by the taxation and customs authorities. <code>Filter(multi eq)</code> <code>Introduced in version 21.1.3.97</code></p>
 <p><em>Type</em>: <strong><a href="Finance.Excise.ExciseProducts.html">ExciseProducts</a> (nullable)</strong><br>
@@ -289,6 +293,8 @@ Aggregate Root:<br>
 <p>The measurement unit of Quantity. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.MeasurementUnits.html">MeasurementUnits</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<p><em>Front-End Recalc Expressions:</em><br>
+<code>obj.Product.MeasurementUnit</code></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>None</p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>

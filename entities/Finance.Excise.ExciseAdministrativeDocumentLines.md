@@ -81,6 +81,8 @@ _Type_: **decimal (10, 6) __nullable__**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
+_Front-End Recalc Expressions:_  
+`obj.ExciseDutyRate.ExciseDutyRateField`
 ### Id
 
 _Type_: **guid**  
@@ -154,6 +156,8 @@ The Duty rate specified by the taxation and customs authorities. `Filter(multi e
 _Type_: **[ExciseDutyRates](Finance.Excise.ExciseDutyRates.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
+_Front-End Recalc Expressions:_  
+`obj.DetermineExciseDutyRate( obj.ExciseProduct, obj.ExcisePurposeCode)`
 ### ExciseProduct
 
 The Excise product code defined by the taxation and customs authorities. `Filter(multi eq)` `Introduced in version 21.1.3.97`
@@ -189,6 +193,8 @@ The measurement unit of Quantity. `Required` `Filter(multi eq)`
 _Type_: **[MeasurementUnits](General.MeasurementUnits.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
+_Front-End Recalc Expressions:_  
+`obj.Product.MeasurementUnit`
 
 
 ## Business Rules
