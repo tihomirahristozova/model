@@ -1908,7 +1908,7 @@
       "output": {
         ".html": {
           "relative_path": "business-rules/R28071.html",
-          "hash": "LnjCcRS+trYE06PjyMyWJg=="
+          "hash": "NsNRlzV+mFLxDER3sGDEiw=="
         }
       },
       "is_incremental": false,
@@ -16468,6 +16468,18 @@
         ".html": {
           "relative_path": "reference/metrics.html",
           "hash": "vhzvrNzA5dZ5O52y3AngAw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "reference/serial-numbers-business-rules.md",
+      "output": {
+        ".html": {
+          "relative_path": "reference/serial-numbers-business-rules.html",
+          "hash": "H6vZMhaYbOI0i0ikS+eDWg=="
         }
       },
       "is_incremental": false,

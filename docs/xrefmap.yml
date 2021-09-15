@@ -1486,6 +1486,9 @@ references:
 - uid: Projects.WorkReports
   name: Projects.WorkReports Entity
   href: entities/Projects.WorkReports.html
+- uid: serial-numbers-business-rules
+  name: Serial Numbers Business Rules
+  href: reference/serial-numbers-business-rules.html
 - uid: system-business-rules
   name: System Business Rules
   href: templates/template-description-system-business-rules.html
