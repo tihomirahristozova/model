@@ -110,6 +110,10 @@
 <td><a class="xref" href="https://erpnetdocs.github.io/tech/advanced/documents/document-generation-and-transitional-documents.html">NO</a></td>
 </tr>
 <tr>
+<td style="text-align: left;">Supports Single Execution</td>
+<td>YES</td>
+</tr>
+<tr>
 <td style="text-align: left;">Replaces</td>
 <td>-</td>
 </tr>
@@ -151,7 +155,7 @@ ExciseAdministrativeDocument.CurrencyDirectory = StoreTransaction.CurrencyDirect
 <thead>
 <tr>
 <th style="text-align: left;">Name</th>
-<th>StoreOrderLineToStoreTransactionLine</th>
+<th>StoreTransactionLineToExciseAdministrativeDocumentLine</th>
 </tr>
 </thead>
 <tbody>
@@ -231,13 +235,13 @@ ExciseAdministrativeDocumentLine.ExciseAmountBase = CalculateExciseAmountBase(Ex
 
 ExciseAdministrativeDocumentLine.ExciseAmount = QuantityBase * ExciseDutyRateValue
 </code></pre>
-<p>Functions:</p>
-<p>DefaultExcisePurposeCode - return this ExcisePurposeCode which has check &quot;Is Default&quot; in ExcisePurposeCodes table.</p>
+<h6 id="functions">Functions:</h6>
+<p><strong>DefaultExcisePurposeCode</strong> - return this ExcisePurposeCode which has check &quot;Is Default&quot; in ExcisePurposeCodes table.</p>
 <p><a href="https://docs.erp.net/model/entities/Finance.Excise.ExcisePurposeCodes.html">https://docs.erp.net/model/entities/Finance.Excise.ExcisePurposeCodes.html</a></p>
-<p>DetermineExciseDutyRate (ExciseProduct, ExcisePurposeCode, Currency) - return this ExciseDutyRate which has match with the two parameters ExciseProduct and ExcisePurposeCode in ExciseDutyRates table.</p>
+<p><strong>DetermineExciseDutyRate (ExciseProduct, ExcisePurposeCode, Currency)</strong> - return this ExciseDutyRate which has match with the two parameters ExciseProduct and ExcisePurposeCode in ExciseDutyRates table.</p>
 <p><a href="https://docs.erp.net/model/entities/Finance.Excise.ExciseDutyRates.html">https://docs.erp.net/model/entities/Finance.Excise.ExciseDutyRates.html</a></p>
-<p>Convert(ExciseDutyRate.ExciseDutyRateField, DocumentCurrency)  - convert ExciseDutyRate.ExciseDutyRateField to DocumentCurrency.</p>
-<p>CalculateExciseAmountBase(ExciseProduct, QuantityBase, ExciseAlcoholicStrength) - calculate ExciseAmountBase with ExciseProduct.ExciseProductCategory.CalculationAlgorithm and parameters Quantity и ExciseAlcoholicStrength.</p>
+<p><strong>Convert(ExciseDutyRate.ExciseDutyRateField, DocumentCurrency)</strong>  - convert ExciseDutyRate.ExciseDutyRateField to DocumentCurrency.</p>
+<p><strong>CalculateExciseAmountBase(ExciseProduct, QuantityBase, ExciseAlcoholicStrength)</strong> - calculate ExciseAmountBase with ExciseProduct.ExciseProductCategory.CalculationAlgorithm and parameters Quantity и ExciseAlcoholicStrength.</p>
 <p><a href="https://docs.erp.net/model/entities/Finance.Excise.ExciseProductCategories.html#calculationalgorithm">https://docs.erp.net/model/entities/Finance.Excise.ExciseProductCategories.html#calculationalgorithm</a></p>
 </article>
           </div>
