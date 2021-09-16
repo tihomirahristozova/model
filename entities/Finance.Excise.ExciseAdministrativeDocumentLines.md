@@ -27,7 +27,7 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [ExciseAlcoholicStrength](Finance.Excise.ExciseAdministrativeDocumentLines.md#excisealcoholicstrength) | decimal (5, 2) __nullable__ | The alcoholic strength, which will be used for Excise reporting purposes. null  if the product is not subject to alcoholic Excise reporting. `Introduced in version 21.1.3.97` 
 | [ExciseAmount](Finance.Excise.ExciseAdministrativeDocumentLines.md#exciseamount) | [Amount (14, 2)](../data-types.md#amount) |  
-| [ExciseAmountBase](Finance.Excise.ExciseAdministrativeDocumentLines.md#exciseamountbase) | [Amount (14, 2)](../data-types.md#amount) |  
+| [ExciseAmountBase](Finance.Excise.ExciseAdministrativeDocumentLines.md#exciseamountbase) | decimal (14, 2) |  
 | [ExciseDutyRateValue](Finance.Excise.ExciseAdministrativeDocumentLines.md#excisedutyratevalue) | decimal (10, 6) __nullable__ | The rate which should be applied for the specified product and purpose. null means not assigned yet. `Introduced in version 21.1.3.97` 
 | [Id](Finance.Excise.ExciseAdministrativeDocumentLines.md#id) | guid |  
 | [LineNo](Finance.Excise.ExciseAdministrativeDocumentLines.md#lineno) | int32 | Consecutive line number within the document. `Required` 
@@ -68,11 +68,13 @@ _Default Value_: **Constant**
 
 ### ExciseAmountBase
 
-_Type_: **[Amount (14, 2)](../data-types.md#amount)**  
+_Type_: **decimal (14, 2)**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
-_Default Value_: **Constant**  
+_Default Value_: **0**  
 
+_Front-End Recalc Expressions:_  
+`IIF( ( obj.CalculateExciseAmountBase( obj.ExciseProduct, obj.QuantityBase, obj.ExciseAlcoholicStrength) == null), Convert( obj.ExciseAmountBase, Nullable`1), obj.CalculateExciseAmountBase( obj.ExciseProduct, obj.QuantityBase, obj.ExciseAlcoholicStrength))`
 ### ExciseDutyRateValue
 
 The rate which should be applied for the specified product and purpose. null means not assigned yet. `Introduced in version 21.1.3.97`
