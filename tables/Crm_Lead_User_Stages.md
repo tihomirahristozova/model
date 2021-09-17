@@ -48,6 +48,13 @@ User-defined stages of the lead processing workflow. Entity: Crm_Lead_User_Stage
 |User Login|no|
 |Visible|yes|
 
+#### Code - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|no|no|
+|Like|None|no|no|
+
 ### Description
 
 
@@ -145,6 +152,12 @@ Multi-language name of the user stage.
 |User Login|no|
 |Visible|yes|
 
+#### Name - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Like|None|no|no|
+
 ### Notes
 
 | Property | Value |
@@ -223,11 +236,17 @@ The system stage, on which the user stage is based. System stages are New, Quali
 |RTF|no|
 |Sortable|no|
 |Summary Type|None|
-|Supports EQUALS_IN|no|
+|Supports EQUALS_IN|yes|
 |Type|nvarchar(3)|
 |UI Memo Editor|no|
 |UI Width|Short|
 |User Login|no|
 |Visible|yes|
+
+#### System_Stage - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|no|no|
 
 

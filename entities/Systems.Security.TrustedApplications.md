@@ -214,7 +214,6 @@ _Maximum Length_: **254**
 The user, which will be used when the application logins as a service. `Filter(multi eq)`
 
 _Type_: **[Users](Systems.Security.Users.md) (nullable)**  
-_Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

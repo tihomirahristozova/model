@@ -327,9 +327,9 @@ Default Search Member:<br>
 <td>The document that is the prime cause for creation of the current document. <code>Filter(multi eq)</code> (Inherited from <a href="General.Documents.html">Documents</a>)</td>
 </tr>
 <tr>
-<td><a href="Finance.Excise.ExciseAdministrativeDocuments.html#reporterperson">ReporterPerson</a></td>
+<td><a href="Finance.Excise.ExciseAdministrativeDocuments.html#reportingperson">ReportingPerson</a></td>
 <td><a href="General.Contacts.Persons.html">Persons</a></td>
-<td></td>
+<td>This is the person submitting the declaration. <code>Required</code> <code>Filter(multi eq)</code> <code>Introduced in version 21.1.3.92</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Excise.ExciseAdministrativeDocuments.html#responsibleperson">ResponsiblePerson</a></td>
@@ -707,7 +707,8 @@ Enumeration of document system states<br>
 <p><em>Type</em>: <strong><a href="General.Documents.html">Documents</a> (nullable)</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
-<h3 id="reporterperson">ReporterPerson</h3>
+<h3 id="reportingperson">ReportingPerson</h3>
+<p>This is the person submitting the declaration. <code>Required</code> <code>Filter(multi eq)</code> <code>Introduced in version 21.1.3.92</code></p>
 <p><em>Type</em>: <strong><a href="General.Contacts.Persons.html">Persons</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="responsibleperson">ResponsiblePerson</h3>

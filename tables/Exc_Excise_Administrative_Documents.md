@@ -21,7 +21,7 @@ Represents the data, sent to the customs authorities for the movements of excise
 |[Excise_Administrative_Document_Id](#excise_administrative_document_id)|`uniqueidentifier` `PK`||
 |[Is_Deferred_Submission](#is_deferred_submission)|`bit` |Indicates whether the movement has begun under the cover of a paper administrative document.|
 |[Other_Party_Id](#other_party_id)|`uniqueidentifier` |The other party, receiving the goods (Consignee).|
-|[Reporter_Person_Id](#reporter_person_id)|`uniqueidentifier` ||
+|[Reporting_Person_Id](#reporting_person_id)|`uniqueidentifier` |This is the person submitting the declaration.|
 |[Row_Version](#row_version)|`timestamp` ||
 |[Tax_Warehouse_Id](#tax_warehouse_id)|`uniqueidentifier` |Our warehouse, dispatching the goods (Consignor).|
 |[Transportation_Carrier_Id](#transportation_carrier_id)|`uniqueidentifier` |The carrier used for the transportation of the goods.|
@@ -233,7 +233,10 @@ The other party, receiving the goods (Consignee).
 | - | - | - | - |
 |Equals|`NULL`|no|no|
 
-### Reporter_Person_Id
+### Reporting_Person_Id
+
+
+This is the person submitting the declaration.
 
 | Property | Value |
 | - | - |
@@ -262,7 +265,7 @@ The other party, receiving the goods (Consignee).
 |User Login|no|
 |Visible|yes|
 
-#### Reporter_Person_Id - Supported Filters
+#### Reporting_Person_Id - Supported Filters
 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |

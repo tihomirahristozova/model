@@ -205,7 +205,7 @@ ExciseAdministrativeDocument.CurrencyDirectory = StoreTransaction.CurrencyDirect
 </tbody>
 </table>
 <p>The lines of the new document are created based on the data for the Fulfilled Part of quantities by ExciseAdministrativeDocument that are already created (for more information, see topic <a href="../reference/discrepancy-system.html">Discrepancy System</a>). The new ExciseAdministrativeDocument is created as follows:</p>
-<pre><code>ExciseAdministrativeDocumentLine.LineNo = StoreTransactionLine.LineNo
+<pre><code>ExciseAdministrativeDocumentLine.LineNo = Autonumber
 
 ExciseAdministrativeDocumentLine.ParentLineNo = StoreTransactionLine.LineNo
 
@@ -229,7 +229,7 @@ ExciseAdministrativeDocumentLine.ExcisePurposeCode = DefaultExcisePurposeCode
 
 ExciseAdministrativeDocumentLine.ExciseDutyRate = DetermineExciseDutyRate(ExciseProduct, ExcisePurposeCode, Currency)
 
-ExciseAdministrativeDocumentLine.ExciseDutyRateValue = Convert(ExciseDutyRate.ExciseDutyRateField, DocumentCurrency).
+ExciseAdministrativeDocumentLine.ExciseDutyRateValue = ExciseDutyRate.ExciseDutyRateField
 
 ExciseAdministrativeDocumentLine.ExciseAmountBase = CalculateExciseAmountBase(ExciseProduct, QuantityBase, ExciseAlcoholicStrength)
 
@@ -240,7 +240,6 @@ ExciseAdministrativeDocumentLine.ExciseAmount = QuantityBase * ExciseDutyRateVal
 <p><a href="https://docs.erp.net/model/entities/Finance.Excise.ExcisePurposeCodes.html">https://docs.erp.net/model/entities/Finance.Excise.ExcisePurposeCodes.html</a></p>
 <p><strong>DetermineExciseDutyRate (ExciseProduct, ExcisePurposeCode, Currency)</strong> - return this ExciseDutyRate which has match with the two parameters ExciseProduct and ExcisePurposeCode in ExciseDutyRates table.</p>
 <p><a href="https://docs.erp.net/model/entities/Finance.Excise.ExciseDutyRates.html">https://docs.erp.net/model/entities/Finance.Excise.ExciseDutyRates.html</a></p>
-<p><strong>Convert(ExciseDutyRate.ExciseDutyRateField, DocumentCurrency)</strong>  - convert ExciseDutyRate.ExciseDutyRateField to DocumentCurrency.</p>
 <p><strong>CalculateExciseAmountBase(ExciseProduct, QuantityBase, ExciseAlcoholicStrength)</strong> - calculate ExciseAmountBase with ExciseProduct.ExciseProductCategory.CalculationAlgorithm and parameters Quantity и ExciseAlcoholicStrength.</p>
 <p><a href="https://docs.erp.net/model/entities/Finance.Excise.ExciseProductCategories.html#calculationalgorithm">https://docs.erp.net/model/entities/Finance.Excise.ExciseProductCategories.html#calculationalgorithm</a></p>
 </article>

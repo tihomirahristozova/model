@@ -105,7 +105,7 @@ Default Search Member:<br>
 <tr>
 <td><a href="Crm.Presales.LeadUserStages.html#code">Code</a></td>
 <td>string (32)</td>
-<td>The unique code of the LeadUserStage. <code>Required</code> <code>ORD</code></td>
+<td>The unique code of the LeadUserStage. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Presales.LeadUserStages.html#description">Description</a></td>
@@ -120,7 +120,7 @@ Default Search Member:<br>
 <tr>
 <td><a href="Crm.Presales.LeadUserStages.html#name">Name</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString</a></td>
-<td>Multi-language name of the user stage. <code>Required</code></td>
+<td>Multi-language name of the user stage. <code>Required</code> <code>Filter(like)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Presales.LeadUserStages.html#notes">Notes</a></td>
@@ -130,16 +130,16 @@ Default Search Member:<br>
 <tr>
 <td><a href="Crm.Presales.LeadUserStages.html#systemstage">SystemStage</a></td>
 <td><a href="Crm.Presales.LeadUserStages.html#systemstage">SystemStage</a></td>
-<td>The system stage, on which the user stage is based. System stages are New, Qualifying, Marketing Qualified Lead, Sales Qualified Lead, Closed. (NEW, QUA, MQL, SQL, CLO). <code>Required</code></td>
+<td>The system stage, on which the user stage is based. System stages are New, Qualifying, Marketing Qualified Lead, Sales Qualified Lead, Closed. (NEW, QUA, MQL, SQL, CLO). <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="code">Code</h3>
-<p>The unique code of the LeadUserStage. <code>Required</code> <code>ORD</code></p>
+<p>The unique code of the LeadUserStage. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></p>
 <p><em>Type</em>: <strong>string (32)</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>True</strong><br>
 <em>Maximum Length</em>: <strong>32</strong></p>
 <h3 id="description">Description</h3>
@@ -154,9 +154,9 @@ Default Search Member:<br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="name">Name</h3>
-<p>Multi-language name of the user stage. <code>Required</code></p>
+<p>Multi-language name of the user stage. <code>Required</code> <code>Filter(like)</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a></strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="notes">Notes</h3>
 <p>Notes for this LeadUserStage.</p>
@@ -165,7 +165,7 @@ Default Search Member:<br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>2147483647</strong></p>
 <h3 id="systemstage">SystemStage</h3>
-<p>The system stage, on which the user stage is based. System stages are New, Qualifying, Marketing Qualified Lead, Sales Qualified Lead, Closed. (NEW, QUA, MQL, SQL, CLO). <code>Required</code></p>
+<p>The system stage, on which the user stage is based. System stages are New, Qualifying, Marketing Qualified Lead, Sales Qualified Lead, Closed. (NEW, QUA, MQL, SQL, CLO). <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Crm.Presales.LeadUserStages.html#systemstage">SystemStage</a></strong><br>
 Allowed values for the <code>SystemStage</code>(Crm.Presales.Leads.md#systemstage) data attribute<br>
 <em>Allowed Values (Crm.Presales.LeadsRepository.SystemStage Enum Members)</em></p>
@@ -199,7 +199,7 @@ Allowed values for the <code>SystemStage</code>(Crm.Presales.Leads.md#systemstag
 </tr>
 </tbody>
 </table>
-<p><em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<p><em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>None</p>
