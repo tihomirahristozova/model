@@ -59,6 +59,8 @@ _Type_: **decimal (5, 2) __nullable__**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
+_Front-End Recalc Expressions:_  
+`obj.Product.ExciseAlcoholicStrength`
 ### ExciseAmount
 
 _Type_: **[Amount (14, 2)](../data-types.md#amount)**  
@@ -66,6 +68,8 @@ _Supported Filters_: **Equals, GreaterThanOrLessThan**
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
 
+_Front-End Recalc Expressions:_  
+`new Amount( ( ( Convert( obj.QuantityBase.Value, Nullable`1) * obj.ExciseDutyRateValue) ?? 0), Convert( obj.GetAggregateParent( ), ExciseAdministrativeDocument).DocumentCurrency)`
 ### ExciseAmountBase
 
 _Type_: **decimal (14, 2)**  
@@ -174,6 +178,8 @@ The Purpose codes specify the different purposes recognized by the authorities f
 _Type_: **[ExcisePurposeCodes](Finance.Excise.ExcisePurposeCodes.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
+_Front-End Recalc Expressions:_  
+`IIF( ( obj.LineNo == obj.LineNo), obj.Transaction.Query( ).FirstOrDefault( epc => epc.IsDefault), null)`
 ### MeasuringTransaction
 
 Transaction of product input or output, measured with specialized measuring device for excise purposes. `Filter(multi eq)` `Introduced in version 21.1.3.87`

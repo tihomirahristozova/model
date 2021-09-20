@@ -117,6 +117,12 @@ Excise Purpose Codes which is the default for documents.
 |User Login|no|
 |Visible|yes|
 
+#### Is_Default - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|no|no|
+
 ### Name
 
 | Property | Value |
