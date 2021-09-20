@@ -398,6 +398,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "business-rules/R26280.md",
+      "output": {
+        ".html": {
+          "relative_path": "business-rules/R26280.html",
+          "hash": "mBsdnkDgAxJfDmkAQVQxuw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "business-rules/R26331.md",
       "output": {
         ".html": {
@@ -13609,7 +13621,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Logistics.Inventory.CostCorrections.html",
-          "hash": "xVhlyPr+yaVFk0cBPOmYeA=="
+          "hash": "6PPrJitlUWVaABl8onoirg=="
         }
       },
       "is_incremental": false,
