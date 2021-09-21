@@ -9,9 +9,9 @@ Fulfillment ledger for documents. Entity: Gen_Document_Fulfillments (Introduced 
 
 ## Default Visualization
 Default Display Text Format:  
-_{Id}_  
+_{DestinationEntityName:T}_  
 Default Search Member:  
-_Id_  
+_DestinationEntityName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -24,6 +24,7 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [CreationTimeUtc](General.DocumentFulfillments.md#creationtimeutc) | datetime | The exact time in UTC, when the fulfillment was created in the system. `Required` `Default(NowUtc)` `Filter(multi eq;ge;le)` 
+| [DestinationEntityName](General.DocumentFulfillments.md#destinationentityname) | string (64) | The name of the entity which fulfills the line. Used to differentiate between different fulfillment types. For example, sales order line can be fulfilled, for different purposes, by store order line and invoice order line. `Required` `Default("")` `Filter(eq)` `Introduced in version 22.1.4.7` 
 | [DocumentLineId](General.DocumentFulfillments.md#documentlineid) | guid | The Id of the fulfilled line within the document. The attribute contains the Id and is not a reference, because it references different entities depending on document entity type and line type. `Required` `Filter(multi eq)` 
 | [FulfillmentType](General.DocumentFulfillments.md#fulfillmenttype) | [FulfillmentType](General.DocumentFulfillments.md#fulfillmenttype) | Type of fulfillment: P=Planned; C=Completed. `Required` `Filter(multi eq)` `Introduced in version 21.1.1.26` 
 | [Id](General.DocumentFulfillments.md#id) | guid |  
@@ -50,6 +51,16 @@ _Type_: **datetime**
 _Supported Filters_: **Equals, GreaterThanOrLessThan, EqualsIn**  
 _Supports Order By_: **False**  
 _Default Value_: **CurrentDateTimeUtc**  
+
+### DestinationEntityName
+
+The name of the entity which fulfills the line. Used to differentiate between different fulfillment types. For example, sales order line can be fulfilled, for different purposes, by store order line and invoice order line. `Required` `Default("")` `Filter(eq)` `Introduced in version 22.1.4.7`
+
+_Type_: **string (64)**  
+_Supported Filters_: **Equals**  
+_Supports Order By_: **False**  
+_Maximum Length_: **64**  
+_Default Value_: ****  
 
 ### DocumentLineId
 
