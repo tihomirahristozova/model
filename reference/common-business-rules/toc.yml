@@ -1,10 +1,10 @@
-- name: All entities business rules
-  href: all-entities-business-rules.md
-- name: Logistics documents business rules
-  href: logistics-documents-business-rules.md
-- name: Serial numbers business rules
-  href: serial-numbers-business-rules.md
-- name: Lot business rules
+- name: All entities
+  href: all-entities-.md
+- name: Logistics documents
+  href: logistics-documents.md
+- name: Serial numbers 
+  href: serial-numbers.md
+- name: Lots 
   href: ~/business-rules/R28170.md
 - name: Code validation
   href: code-validation.md
