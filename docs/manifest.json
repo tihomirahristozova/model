@@ -330,7 +330,7 @@
       "output": {
         ".html": {
           "relative_path": "business-rules/R22776.html",
-          "hash": "qdQgX+qIwEVdrwsgX/FG3w=="
+          "hash": "Q9sulifLKwgPrL8FWLsJIQ=="
         }
       },
       "is_incremental": false,
@@ -517,12 +517,15 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "business-rules/R26759.md",
       "output": {
         ".html": {
           "relative_path": "business-rules/R26759.html",
-          "hash": "maaTEr176M1B5C8TShvBnw=="
+          "hash": "Jd4lt2YMbbXLmqyHhmAT+g=="
         }
       },
       "is_incremental": false,
@@ -541,12 +544,15 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "business-rules/R26761-1.md",
       "output": {
         ".html": {
           "relative_path": "business-rules/R26761-1.html",
-          "hash": "3nCuGydgLhlzsTuNGTtJ5g=="
+          "hash": "hSFbrn4mCPBBMpHU1tHvZQ=="
         }
       },
       "is_incremental": false,
@@ -597,7 +603,7 @@
       "output": {
         ".html": {
           "relative_path": "business-rules/R26824.html",
-          "hash": "L2lEHFdJXQDA0Fim6rJhgQ=="
+          "hash": "jcG2lCfphsTGz+jMuIwafg=="
         }
       },
       "is_incremental": false,
@@ -1219,12 +1225,15 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "business-rules/R27170.md",
       "output": {
         ".html": {
           "relative_path": "business-rules/R27170.html",
-          "hash": "Brc4G/HOz9wGJOrrljmBbQ=="
+          "hash": "Ff9RrgPReRee+N/r++gpCg=="
         }
       },
       "is_incremental": false,
@@ -1680,7 +1689,7 @@
       "output": {
         ".html": {
           "relative_path": "business-rules/R27458.html",
-          "hash": "ujZvuInC3pz+PepKr8yF3w=="
+          "hash": "EnTRERHzE8U9AhSEq9fYEQ=="
         }
       },
       "is_incremental": false,
@@ -1812,7 +1821,7 @@
       "output": {
         ".html": {
           "relative_path": "business-rules/R27519.html",
-          "hash": "FZjsDsFAQV4lXuQxiP/kMw=="
+          "hash": "BGsOXx/p/E9tchaEI7bjDw=="
         }
       },
       "is_incremental": false,
@@ -1836,7 +1845,7 @@
       "output": {
         ".html": {
           "relative_path": "business-rules/R27579.html",
-          "hash": "8DCgo8CEazc7TaoJbRg/OQ=="
+          "hash": "LHQrq9AA8RmwPZ6WZKrs2Q=="
         }
       },
       "is_incremental": false,
@@ -1920,7 +1929,7 @@
       "output": {
         ".html": {
           "relative_path": "business-rules/R28071.html",
-          "hash": "NsNRlzV+mFLxDER3sGDEiw=="
+          "hash": "10U+FSd8BrExoSlOOYuTZw=="
         }
       },
       "is_incremental": false,
@@ -1932,7 +1941,7 @@
       "output": {
         ".html": {
           "relative_path": "business-rules/R28074.html",
-          "hash": "xlOEE2EK9+exnt7kSfcAag=="
+          "hash": "TTJOwGawrcCIfhriKdC9Wg=="
         }
       },
       "is_incremental": false,
@@ -1944,7 +1953,7 @@
       "output": {
         ".html": {
           "relative_path": "business-rules/R28075.html",
-          "hash": "FfFSkOV3BPEu4SE4C9kFrQ=="
+          "hash": "19uTDJRhn9+UodBE2zKQxg=="
         }
       },
       "is_incremental": false,
@@ -1956,7 +1965,7 @@
       "output": {
         ".html": {
           "relative_path": "business-rules/R28087.html",
-          "hash": "xaV6SRpVVdFEKm4to/RuNA=="
+          "hash": "Nk7W5B/+h/9KoYndwENgww=="
         }
       },
       "is_incremental": false,
@@ -1968,7 +1977,7 @@
       "output": {
         ".html": {
           "relative_path": "business-rules/R28098.html",
-          "hash": "UhbYxRa3ZncnqIWNsAY8wQ=="
+          "hash": "MRCdG7KLQfODmYF4aoQtvQ=="
         }
       },
       "is_incremental": false,
@@ -1992,7 +2001,7 @@
       "output": {
         ".html": {
           "relative_path": "business-rules/R28101.html",
-          "hash": "MRzm0aQBT0fGnVsz0x9FdQ=="
+          "hash": "x4Ffb35EFLH6pctdHF5DIA=="
         }
       },
       "is_incremental": false,
@@ -2100,7 +2109,7 @@
       "output": {
         ".html": {
           "relative_path": "business-rules/R28170.html",
-          "hash": "YBew+rrx64a7XVq9ujmCzw=="
+          "hash": "9HLa11ueKy/vyqX6gHK1CA=="
         }
       },
       "is_incremental": false,
@@ -2832,7 +2841,7 @@
       "output": {
         ".html": {
           "relative_path": "business-rules/R28526.html",
-          "hash": "Jc932/RbavqiwjBs260Jog=="
+          "hash": "7hPKBGuywtQKnSH7XtZyVQ=="
         }
       },
       "is_incremental": false,
@@ -3000,7 +3009,7 @@
       "output": {
         ".html": {
           "relative_path": "business-rules/R28718.html",
-          "hash": "Jo6dBEc82gcX4nfiaX9KJQ=="
+          "hash": "MGJRe5F+6bULoJhR95W5aA=="
         }
       },
       "is_incremental": false,
@@ -3096,7 +3105,7 @@
       "output": {
         ".html": {
           "relative_path": "business-rules/R28797.html",
-          "hash": "nvesATQNpYCeBC5xdz5J2w=="
+          "hash": "j10/Tn7uG6WTe79+KKQRHA=="
         }
       },
       "is_incremental": false,
@@ -3108,7 +3117,7 @@
       "output": {
         ".html": {
           "relative_path": "business-rules/R28799.html",
-          "hash": "T/fOwh59Xj+Z0y3hAoicxg=="
+          "hash": "+7IgeyZcJFdoekh053xotQ=="
         }
       },
       "is_incremental": false,
@@ -3132,7 +3141,7 @@
       "output": {
         ".html": {
           "relative_path": "business-rules/R28834.html",
-          "hash": "pcCWNE5Qh91y3XNY1DXBkw=="
+          "hash": "ADWdbzAEeLvJCbwcCX/FAg=="
         }
       },
       "is_incremental": false,
@@ -3288,7 +3297,7 @@
       "output": {
         ".html": {
           "relative_path": "business-rules/R28979.html",
-          "hash": "Pww3Ts5w6jDY+BpsTjRDqQ=="
+          "hash": "Kjz2fm+HV/cMJPxavbDWZg=="
         }
       },
       "is_incremental": false,
@@ -3816,7 +3825,7 @@
       "output": {
         ".html": {
           "relative_path": "business-rules/R29860.html",
-          "hash": "Zu0X7bvo8f97mAOqpfc+FA=="
+          "hash": "X27OwEYnTnbpQEpwCjwbHg=="
         }
       },
       "is_incremental": false,
@@ -3828,7 +3837,7 @@
       "output": {
         ".html": {
           "relative_path": "business-rules/R29861.html",
-          "hash": "1HTLvo8NzuNJHQwtNbkt3w=="
+          "hash": "R8VbWRUcT2X3cJA3lCqzJQ=="
         }
       },
       "is_incremental": false,
@@ -5724,7 +5733,7 @@
       "output": {
         ".html": {
           "relative_path": "business-rules/R30707-1.html",
-          "hash": "teZ2kH+iVHobcBThmqDi+A=="
+          "hash": "F/qYUIo4VHd6g60tShMnyg=="
         }
       },
       "is_incremental": false,
@@ -5736,7 +5745,7 @@
       "output": {
         ".html": {
           "relative_path": "business-rules/R30707-2.html",
-          "hash": "+hX7Y1/QYLdJ1at0biKO4w=="
+          "hash": "3lazeIj/JYwM+R4vKSIisQ=="
         }
       },
       "is_incremental": false,
@@ -6432,7 +6441,7 @@
       "output": {
         ".html": {
           "relative_path": "business-rules/R31249.html",
-          "hash": "Z646mUkYGnIonvWSFM384A=="
+          "hash": "8K4lakt5XYde5f/hnG2WrQ=="
         }
       },
       "is_incremental": false,
@@ -6456,7 +6465,7 @@
       "output": {
         ".html": {
           "relative_path": "business-rules/R31300.html",
-          "hash": "OV6mrC1XG2IVpPJiHCA0qg=="
+          "hash": "wmpbvrUVR8x2FagEGiudvw=="
         }
       },
       "is_incremental": false,
@@ -6468,7 +6477,7 @@
       "output": {
         ".html": {
           "relative_path": "business-rules/R31316.html",
-          "hash": "Q7brGNwV2KqEyY6EAbKDdg=="
+          "hash": "x3Wp8SWLudS4eP12EPzy4A=="
         }
       },
       "is_incremental": false,
@@ -16462,15 +16471,63 @@
       "version": ""
     },
     {
+      "type": "Conceptual",
+      "source_relative_path": "reference/common-business-rules/all-entities-business-rules.md",
+      "output": {
+        ".html": {
+          "relative_path": "reference/common-business-rules/all-entities-business-rules.html",
+          "hash": "m4e6/f9iReuLHFzDDSoFtQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "log_codes": [
         "InvalidFileLink"
       ],
       "type": "Conceptual",
-      "source_relative_path": "reference/code-validation.md",
+      "source_relative_path": "reference/common-business-rules/code-validation.md",
       "output": {
         ".html": {
-          "relative_path": "reference/code-validation.html",
-          "hash": "OVp7p3mc0VzqHma4JHdHYw=="
+          "relative_path": "reference/common-business-rules/code-validation.html",
+          "hash": "sIYt9W2Pa5Dyt0Svf/aObA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "reference/common-business-rules/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "reference/common-business-rules/index.html",
+          "hash": "RMgRAgK+XLmZWzmGbAnzYQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "reference/common-business-rules/logistics-documents-business-rules.md",
+      "output": {
+        ".html": {
+          "relative_path": "reference/common-business-rules/logistics-documents-business-rules.html",
+          "hash": "2FlJn4eNZpISFNjSbAh7RQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "reference/common-business-rules/serial-numbers-business-rules.md",
+      "output": {
+        ".html": {
+          "relative_path": "reference/common-business-rules/serial-numbers-business-rules.html",
+          "hash": "1nIiMaMmuiu52v8q1+YQFg=="
         }
       },
       "is_incremental": false,
@@ -16490,35 +16547,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "reference/logistics-documents.md",
-      "output": {
-        ".html": {
-          "relative_path": "reference/logistics-documents.html",
-          "hash": "jrf8/EceA8rnOpiH1VATUg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "reference/metrics.md",
       "output": {
         ".html": {
           "relative_path": "reference/metrics.html",
           "hash": "p88Isvz1KZmgzDUZMKsiag=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "reference/serial-numbers-business-rules.md",
-      "output": {
-        ".html": {
-          "relative_path": "reference/serial-numbers-business-rules.html",
-          "hash": "HbTBefH01DyAKZT/D+YWEg=="
         }
       },
       "is_incremental": false,
@@ -16542,7 +16575,7 @@
       "output": {
         ".html": {
           "relative_path": "reference/toc.html",
-          "hash": "aeeDdYngqF3CBIEgQ/62yw=="
+          "hash": "+n869URe3Hk+j3AkPmeg6Q=="
         }
       },
       "is_incremental": false,
@@ -24210,7 +24243,7 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "y7tMPy4GqMJTYm+Sybf7CQ=="
+          "hash": "04sP3nuP81vcyxYeY8yAvQ=="
         }
       },
       "is_incremental": false,
