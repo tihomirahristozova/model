@@ -1,4 +1,4 @@
-# Code Validation
+# Code validation
 
 
 This validation is applied for data attributes containing code.
