@@ -9,8 +9,8 @@ This topic contains subtopics with business rules which are apllied for all enti
 
 ## Business Rules
 
-[!list limit=1000 erp.entity=logistics-documents erp.type=business-rule default-text="None"]
+[!list limit=1000 erp.entity=all-entities erp.type=business-rule default-text="None"]
 
 ## Front-End Business Rules
 
-[!list limit=1000 erp.entity=logistics-documents erp.type=front-end-business-rule default-text="None"]
+[!list limit=1000 erp.entity=all-entities erp.type=front-end-business-rule default-text="None"]
