@@ -325,12 +325,15 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "business-rules/R22776.md",
       "output": {
         ".html": {
           "relative_path": "business-rules/R22776.html",
-          "hash": "Q9sulifLKwgPrL8FWLsJIQ=="
+          "hash": "MyzLtquaTSqvSsSpZblK4A=="
         }
       },
       "is_incremental": false,
@@ -2841,7 +2844,7 @@
       "output": {
         ".html": {
           "relative_path": "business-rules/R28526.html",
-          "hash": "7hPKBGuywtQKnSH7XtZyVQ=="
+          "hash": "jWS6qZgG2OPcbGN7E4iXmQ=="
         }
       },
       "is_incremental": false,
@@ -3004,12 +3007,15 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "business-rules/R28718.md",
       "output": {
         ".html": {
           "relative_path": "business-rules/R28718.html",
-          "hash": "MGJRe5F+6bULoJhR95W5aA=="
+          "hash": "Cp8enz2/+FsPeZ3wGfPXyw=="
         }
       },
       "is_incremental": false,
@@ -3100,12 +3106,15 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "business-rules/R28797.md",
       "output": {
         ".html": {
           "relative_path": "business-rules/R28797.html",
-          "hash": "j10/Tn7uG6WTe79+KKQRHA=="
+          "hash": "lkJG55En2JDWwb3u6JSoPg=="
         }
       },
       "is_incremental": false,
@@ -5745,7 +5754,7 @@
       "output": {
         ".html": {
           "relative_path": "business-rules/R30707-2.html",
-          "hash": "3lazeIj/JYwM+R4vKSIisQ=="
+          "hash": "vcb+BQMi9Zfbk5OXUcuAlA=="
         }
       },
       "is_incremental": false,
