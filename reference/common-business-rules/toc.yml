@@ -2,3 +2,5 @@
   href: logistics-documents-business-rules.md
 - name: Serial numbers business rules
   href: serial-numbers-business-rules.md
+- name: Lot business rules
+  href: ~/business-rules/R28170.md
