@@ -1315,6 +1315,9 @@ references:
 - uid: Logistics.Wms.WarehouseZones
   name: Logistics.Wms.WarehouseZones Entity
   href: entities/Logistics.Wms.WarehouseZones.html
+- uid: logistics-documents
+  name: Logistics Documents
+  href: reference/logistics-documents.html
 - uid: Production
   name: Production Namespace
   href: entities/Production.html
