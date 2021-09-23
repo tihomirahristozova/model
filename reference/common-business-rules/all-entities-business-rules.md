@@ -2,7 +2,7 @@
 uid: all-entities
 ---
 
-# All entities business rules
+# All entities
 
 This topic contains subtopics with business rules which are apllied for all entities of the system.
 
