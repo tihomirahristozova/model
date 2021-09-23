@@ -2,5 +2,7 @@
   href: entities/
 - name: Table Model
   href: tables/
+- name: Reference
+  href: reference/toc.yml
 - name: Return to DOCS ⏶
   href: https://docs.erp.net/
