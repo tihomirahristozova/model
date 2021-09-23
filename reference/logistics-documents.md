@@ -9,8 +9,8 @@ Similar principles and rules often apply to these lines.
 
 ## Business Rules
 
-[!list limit=1000 erp.entity=LogisticsDocuments erp.type=business-rule default-text="None"]
+[!list limit=1000 erp.entity=logistics-documents erp.type=business-rule default-text="None"]
 
 ## Front-End Business Rules
 
-[!list limit=1000 erp.entity=LogisticsDocuments erp.type=front-end-business-rule default-text="None"]
+[!list limit=1000 erp.entity=logistics-documents erp.type=front-end-business-rule default-text="None"]
