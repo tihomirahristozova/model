@@ -11,7 +11,7 @@ The promotional packages, included in a sales order. Entity: Crm_Sales_Order_Pro
 Default Display Text Format:  
 _{SalesOrder.DocumentType.TypeName:T} {SalesOrder.DocumentNo}_  
 Default Search Member:  
-_SalesOrder.DocumentType.TypeName_  
+__  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

@@ -11,7 +11,7 @@ Contains supplier conditions (contracts). Entity: Scm_Suppliers
 Default Display Text Format:  
 _{Number}_  
 Default Search Member:  
-_Number_  
+__  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

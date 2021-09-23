@@ -11,7 +11,7 @@ Contains recipients, to which personal data is disclosed. Entity: Pdm_Personal_D
 Default Display Text Format:  
 _{PersonalDataProcess.Name:T} : {PersonalDataProcess.Code}_  
 Default Search Member:  
-_PersonalDataProcess.Name_  
+__  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

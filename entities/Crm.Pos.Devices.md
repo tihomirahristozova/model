@@ -11,7 +11,7 @@ Represents one POS device, attached to a POS terminal. Entity: Pos_Devices (Intr
 Default Display Text Format:  
 _{PosTerminal.PosTerminalName:T} : {PosTerminal.PosTerminalCode}_  
 Default Search Member:  
-_PosTerminal.PosTerminalName_  
+__  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

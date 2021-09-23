@@ -11,7 +11,7 @@ Contains design layouts for document printouts. Entity: Gen_Printout_Layouts
 Default Display Text Format:  
 _{DocumentEntityName:T}_  
 Default Search Member:  
-_DocumentEntityName_  
+__  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

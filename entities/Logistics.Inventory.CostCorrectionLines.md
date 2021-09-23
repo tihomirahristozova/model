@@ -11,7 +11,7 @@ Cost correction detail lines. One line is created for each corrected transaction
 Default Display Text Format:  
 _{CostCorrection.DocumentType.TypeName:T} {CostCorrection.DocumentNo}_  
 Default Search Member:  
-_CostCorrection.DocumentType.TypeName_  
+__  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

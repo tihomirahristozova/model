@@ -11,7 +11,7 @@ Contains one or more sequence generators for each sequence. Many sequence genera
 Default Display Text Format:  
 _{Sequence.Name:T}_  
 Default Search Member:  
-_Sequence.Name_  
+__  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

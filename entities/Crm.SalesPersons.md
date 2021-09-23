@@ -11,7 +11,7 @@ Sales persons (or representatives) are sellers inside the enterprise company who
 Default Display Text Format:  
 _{Person.PartyName:T} : {Person.PartyCode}_  
 Default Search Member:  
-_Person.PartyName_  
+__  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

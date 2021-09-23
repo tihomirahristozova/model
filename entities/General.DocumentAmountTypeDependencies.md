@@ -11,7 +11,7 @@ Specifies the base amounts on which an amount depends. . Entity: Gen_Document_Am
 Default Display Text Format:  
 _{DocumentAmountType.AmountTypeName:T} : {DocumentAmountType.AmountTypeCode}_  
 Default Search Member:  
-_DocumentAmountType.AmountTypeName_  
+__  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

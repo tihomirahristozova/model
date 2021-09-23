@@ -11,7 +11,7 @@ Member parties of a marketing target group. Entity: Crm_Target_Group_Members
 Default Display Text Format:  
 _{TargetGroup.Name:T} : {TargetGroup.Code}_  
 Default Search Member:  
-_TargetGroup.Name_  
+__  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

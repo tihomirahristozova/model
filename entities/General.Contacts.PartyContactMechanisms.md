@@ -11,7 +11,7 @@ Specifies the contact mechanisms, which are attached to the parties. Currently e
 Default Display Text Format:  
 _{Party.PartyName:T} : {Party.PartyCode}_  
 Default Search Member:  
-_Party.PartyName_  
+__  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

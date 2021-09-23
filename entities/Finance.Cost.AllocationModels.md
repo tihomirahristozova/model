@@ -11,7 +11,7 @@ User-defined models for cost allocation. Entity: Cost_Allocation_Models
 Default Display Text Format:  
 _{CostAllocationModelName:T}_  
 Default Search Member:  
-_CostAllocationModelName_  
+__  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

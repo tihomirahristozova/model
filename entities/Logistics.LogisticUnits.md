@@ -11,7 +11,7 @@ Composition of products established for transport and/or storage which needs to 
 Default Display Text Format:  
 _{SerialCode}_  
 Default Search Member:  
-_SerialCode_  
+__  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

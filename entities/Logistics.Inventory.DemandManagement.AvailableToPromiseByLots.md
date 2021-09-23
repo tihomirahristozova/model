@@ -11,7 +11,7 @@ Quantities available to promise for the different date periods. Also contains th
 Default Display Text Format:  
 _{ATPBaseValue}: {CurrentAvailabilityBaseValue}_  
 Default Search Member:  
-_ATPBaseValue_  
+__  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

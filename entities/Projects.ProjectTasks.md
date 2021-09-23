@@ -11,7 +11,7 @@ Represents one task of a project. Entity: Prj_Project_Tasks
 Default Display Text Format:  
 _{TaskName:T}_  
 Default Search Member:  
-_TaskName_  
+__  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

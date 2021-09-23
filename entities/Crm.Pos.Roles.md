@@ -11,7 +11,7 @@ Represents a role, which can be assigned to POS operators (like Cashier, Manager
 Default Display Text Format:  
 _{PosRoleName:T} : {PosRoleCode}_  
 Default Search Member:  
-_PosRoleName_  
+__  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

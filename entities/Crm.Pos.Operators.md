@@ -11,7 +11,7 @@ Represents one operator (person) in one POS location. Entity: Pos_Operators (Int
 Default Display Text Format:  
 _{PosOperatorCode}_  
 Default Search Member:  
-_PosOperatorCode_  
+__  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

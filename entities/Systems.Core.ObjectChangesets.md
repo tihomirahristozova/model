@@ -11,7 +11,7 @@ A set of changes, performed in one request. Entity: Sys_Object_Changesets (Intro
 Default Display Text Format:  
 _{ApplicationName:T}_  
 Default Search Member:  
-_ApplicationName_  
+__  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

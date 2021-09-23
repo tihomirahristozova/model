@@ -11,7 +11,7 @@ Represents the segments which comprise the route of the trips. Entity: Fleet_Tri
 Default Display Text Format:  
 _{Trip.DocumentType.TypeName:T} {Trip.DocumentNo}_  
 Default Search Member:  
-_Trip.DocumentType.TypeName_  
+__  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

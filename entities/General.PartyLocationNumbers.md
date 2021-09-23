@@ -11,7 +11,7 @@ Location numbers for a party. Depending on the partner with which we are doing a
 Default Display Text Format:  
 _{LocationNumber}_  
 Default Search Member:  
-_LocationNumber_  
+__  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

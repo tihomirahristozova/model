@@ -11,7 +11,7 @@ Represents an article in a news web module. Entity: Cms_News_Web_Module_Articles
 Default Display Text Format:  
 _{LanguageCode}_  
 Default Search Member:  
-_LanguageCode_  
+__  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

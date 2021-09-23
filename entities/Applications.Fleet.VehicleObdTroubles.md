@@ -11,7 +11,7 @@ Contains troubles, reported by the on-board diagnostics (OBD) of the vehicle. En
 Default Display Text Format:  
 _{DiagnosticTroubleCode}_  
 Default Search Member:  
-_DiagnosticTroubleCode_  
+__  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

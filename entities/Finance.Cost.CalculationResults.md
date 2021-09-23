@@ -11,7 +11,7 @@ Contains the results of cost calculations. Entity: Cost_Calculation_Results
 Default Display Text Format:  
 _{Calculation.DocumentType.TypeName:T} {Calculation.DocumentNo}_  
 Default Search Member:  
-_Calculation.DocumentType.TypeName_  
+__  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

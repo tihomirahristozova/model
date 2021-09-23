@@ -11,7 +11,7 @@ Contains the way to obtain the values for each required property of both the deb
 Default Display Text Format:  
 _{TemplateLine.AmountColumnName:T}_  
 Default Search Member:  
-_TemplateLine.AmountColumnName_  
+__  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

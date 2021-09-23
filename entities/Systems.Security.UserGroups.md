@@ -11,7 +11,7 @@ Contains the user group members. Entity: Sec_User_Groups
 Default Display Text Format:  
 _{User.Login}_  
 Default Search Member:  
-_User.Login_  
+__  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

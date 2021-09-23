@@ -11,7 +11,7 @@ Contains the output data for the specified period. This is the output on which c
 Default Display Text Format:  
 _{CostDistribution.DocumentType.TypeName:T} {CostDistribution.DocumentNo}_  
 Default Search Member:  
-_CostDistribution.DocumentType.TypeName_  
+__  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

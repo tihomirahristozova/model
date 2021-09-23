@@ -11,7 +11,7 @@ Contains the memnbers of vehicle crews. Entity: Fleet_Crew_Members
 Default Display Text Format:  
 _{Crew.Name:T}_  
 Default Search Member:  
-_Crew.Name_  
+__  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

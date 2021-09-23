@@ -11,7 +11,7 @@ Returns the remaining (unfulfilled) quantity and cost for each Store Order Line 
 Default Display Text Format:  
 _{StoreOrderLineId}: {DocumentDate}_  
 Default Search Member:  
-_StoreOrderLineId_  
+__  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

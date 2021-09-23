@@ -11,7 +11,7 @@ Reaction of a user to any social comment to an object of the system. Entity: Cmm
 Default Display Text Format:  
 _{Id}_  
 Default Search Member:  
-_Id_  
+__  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

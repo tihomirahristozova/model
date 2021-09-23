@@ -11,7 +11,7 @@ Contains all transactions of Record of Handover / Handing-Over Record lines. Ent
 Default Display Text Format:  
 _{RentTransaction.DocumentType.TypeName:T} {RentTransaction.DocumentNo}_  
 Default Search Member:  
-_RentTransaction.DocumentType.TypeName_  
+__  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

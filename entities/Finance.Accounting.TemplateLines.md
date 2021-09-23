@@ -11,7 +11,7 @@ Each template line contains the posting to a single set of debit and credit acco
 Default Display Text Format:  
 _{AmountColumnName:T}_  
 Default Search Member:  
-_AmountColumnName_  
+__  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

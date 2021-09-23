@@ -11,7 +11,7 @@ Template for material usage of a principal recipe. Entity: Prd_Principal_Recipe_
 Default Display Text Format:  
 _{IngredientName:T}_  
 Default Search Member:  
-_IngredientName_  
+__  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

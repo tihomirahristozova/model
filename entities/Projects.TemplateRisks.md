@@ -11,7 +11,7 @@ Contains project risks, which will be copied to projects, based on the template.
 Default Display Text Format:  
 _{RiskName:T}_  
 Default Search Member:  
-_RiskName_  
+__  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

@@ -28,6 +28,8 @@ The details of the movement of each excise product for each excise document. Ent
 |[Line_No](#line_no)|`int` |Consecutive line number within the document.|
 |[Measuring_Transaction_Id](#measuring_transaction_id)|`uniqueidentifier` |Transaction of product input or output, measured with specialized measuring device for excise purposes.|
 |[Notes](#notes)|`nvarchar(max)` ||
+|[Parent_Document_Id](#parent_document_id)|`uniqueidentifier` |The document, which the current line executes. Null when the current line does not execute another line.|
+|[Parent_Line_No](#parent_line_no)|`int` |The number of the line within the parent document, which the current line executes. Null when the current line does not execute line.|
 |[Product_Id](#product_id)|`uniqueidentifier` |The product being sold.|
 |[Quantity](#quantity)|`decimal(12, 3)` |The quantity being sold, in the measurement unit, specified in Quantity Unit.|
 |[Quantity_Base](#quantity_base)|`decimal(12, 3)` |The quantity in base measurement category for the product.|
@@ -433,6 +435,73 @@ Transaction of product input or output, measured with specialized measuring devi
 |Summary Type|None|
 |Supports EQUALS_IN|no|
 |Type|nvarchar(max) (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+### Parent_Document_Id
+
+
+The document, which the current line executes. Null when the current line does not execute another line.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|16|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|Referenced Table|[Gen_Documents](Gen_Documents.md)|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Parent_Document_Id - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
+
+### Parent_Line_No
+
+
+The number of the line within the parent document, which the current line executes. Null when the current line does not execute line.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|17|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

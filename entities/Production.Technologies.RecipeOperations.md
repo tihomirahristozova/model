@@ -11,7 +11,7 @@ Contains the routing (operation list) of the recipes. Entity: Prd_Recipe_Operati
 Default Display Text Format:  
 _{Recipe.Name:T}_  
 Default Search Member:  
-_Recipe.Name_  
+__  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

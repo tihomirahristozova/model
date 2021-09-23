@@ -11,7 +11,7 @@ When specified for a product type, contains the suggested user-defined propertie
 Default Display Text Format:  
 _{ProductType.Name:T} : {ProductType.Code}_  
 Default Search Member:  
-_ProductType.Name_  
+__  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

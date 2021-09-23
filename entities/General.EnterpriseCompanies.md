@@ -11,7 +11,7 @@ The companies in the enterprise that issue documents. Entity: Gen_Enterprise_Com
 Default Display Text Format:  
 _{Company.PartyName:T} : {Company.RegistrationNumber}_  
 Default Search Member:  
-_Company.PartyName_  
+__  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

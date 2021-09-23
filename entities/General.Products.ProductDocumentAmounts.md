@@ -11,7 +11,7 @@ Contains custom percent ratios for additional amount distribution over products.
 Default Display Text Format:  
 _{Product.Name:T} : {Product.PartNumber}_  
 Default Search Member:  
-_Product.Name_  
+__  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

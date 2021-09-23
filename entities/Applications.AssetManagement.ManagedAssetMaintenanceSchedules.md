@@ -11,7 +11,7 @@ Contains the maintenance schedules for the managed assets. Entity: Eam_Managed_A
 Default Display Text Format:  
 _{ManagedAsset.Name:T} : {ManagedAsset.Code}_  
 Default Search Member:  
-_ManagedAsset.Name_  
+__  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

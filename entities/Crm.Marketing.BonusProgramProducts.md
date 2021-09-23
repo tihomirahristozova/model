@@ -11,7 +11,7 @@ Provides a way to specify additional (to the one specified in Bonus Program.Cond
 Default Display Text Format:  
 _{BonusProgram.Name:T}_  
 Default Search Member:  
-_BonusProgram.Name_  
+__  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

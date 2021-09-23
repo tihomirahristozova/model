@@ -11,7 +11,7 @@ Represents the payment orders with their covered amounts. Entity: Cash_Payment_B
 Default Display Text Format:  
 _{OrderAmountValue}: {PaidAmountValue}_  
 Default Search Member:  
-_OrderAmountValue_  
+__  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

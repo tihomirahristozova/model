@@ -11,7 +11,7 @@ Mass payment line, which is distribution of an amount among payment orders. Each
 Default Display Text Format:  
 _{PaymentSlipAmount.PartyName:T}_  
 Default Search Member:  
-_PaymentSlipAmount.PartyName_  
+__  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

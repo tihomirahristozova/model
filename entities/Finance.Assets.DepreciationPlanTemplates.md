@@ -11,7 +11,7 @@ Specifies the default depreciation methods for the asset categories. Different m
 Default Display Text Format:  
 _{AssetCategory.Name:T} : {AssetCategory.Code}_  
 Default Search Member:  
-_AssetCategory.Name_  
+__  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

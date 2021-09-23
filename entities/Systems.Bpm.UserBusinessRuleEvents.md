@@ -11,7 +11,7 @@ Represents event registration of a business rule. Entity: Sys_User_Business_Rule
 Default Display Text Format:  
 _{UserBusinessRule.RepositoryName:T} : {UserBusinessRule.Code}_  
 Default Search Member:  
-_UserBusinessRule.RepositoryName_  
+__  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

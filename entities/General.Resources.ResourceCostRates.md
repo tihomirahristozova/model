@@ -11,7 +11,7 @@ Contains cost rates for different periods for resources. Each record is valid un
 Default Display Text Format:  
 _{Resource.Name:T}_  
 Default Search Member:  
-_Resource.Name_  
+__  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

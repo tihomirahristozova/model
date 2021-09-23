@@ -11,7 +11,7 @@ Each list represents a unique collection of public users. Entity: Ext_Public_Use
 Default Display Text Format:  
 _{Name:T}_  
 Default Search Member:  
-_Name_  
+__  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

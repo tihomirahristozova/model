@@ -11,7 +11,7 @@ Hierarchical structure of the company departments. The departments and divisions
 Default Display Text Format:  
 _{DepartmentName:T}_  
 Default Search Member:  
-_DepartmentName_  
+__  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

@@ -11,7 +11,7 @@ The external authentication providers, linked to the domain. Contains data about
 Default Display Text Format:  
 _{DisplayName:T}_  
 Default Search Member:  
-_DisplayName_  
+__  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

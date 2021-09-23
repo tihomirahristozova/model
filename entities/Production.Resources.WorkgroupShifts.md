@@ -11,7 +11,7 @@ Contains the working shifts of the wrokgroups. Entity: Prd_Workgroup_Shifts
 Default Display Text Format:  
 _{ShiftName:T}_  
 Default Search Member:  
-_ShiftName_  
+__  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

@@ -11,7 +11,7 @@ Authorization of a trusted application to access the data on behalf of a context
 Default Display Text Format:  
 _{TrustedApplication.Name:T}_  
 Default Search Member:  
-_TrustedApplication.Name_  
+__  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

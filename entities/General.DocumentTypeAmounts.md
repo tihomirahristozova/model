@@ -11,7 +11,7 @@ Specifies amount types, that should be automatically added to documents of a giv
 Default Display Text Format:  
 _{DocumentType.TypeName} : {DocumentType.Code}_  
 Default Search Member:  
-_DocumentType.TypeName_  
+__  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

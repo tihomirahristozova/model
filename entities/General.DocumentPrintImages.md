@@ -11,7 +11,7 @@ Contains the data of a printout of a document as it was obtained from the data s
 Default Display Text Format:  
 _{PrintoutLayout.DocumentEntityName:T}_  
 Default Search Member:  
-_PrintoutLayout.DocumentEntityName_  
+__  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

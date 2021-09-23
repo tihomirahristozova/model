@@ -11,7 +11,7 @@ Represents the membership of a user in a social group. Entity: Cmm_Social_Group_
 Default Display Text Format:  
 _{SocialGroup.Name:T} : {SocialGroup.Code}_  
 Default Search Member:  
-_SocialGroup.Name_  
+__  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

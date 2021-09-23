@@ -11,7 +11,7 @@ Contains supply rules, which are used by the procurement planning system. Entity
 Default Display Text Format:  
 _{BuyerName:T}_  
 Default Search Member:  
-_BuyerName_  
+__  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

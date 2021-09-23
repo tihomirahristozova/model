@@ -11,7 +11,7 @@ Represents user mailboxes. Entity: Mail_Boxes
 Default Display Text Format:  
 _{SentItemsFolderName:T}_  
 Default Search Member:  
-_SentItemsFolderName_  
+__  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

@@ -11,7 +11,7 @@ History of each saved version of each document. Entity: Gen_Document_Versions
 Default Display Text Format:  
 _{Document.DocumentType.TypeName:T} {Document.DocumentNo}_  
 Default Search Member:  
-_Document.DocumentType.TypeName_  
+__  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

@@ -11,7 +11,7 @@ Attribute values of an object change. Entity: Sys_Attribute_Changes_View
 Default Display Text Format:  
 _{ObjectChangeId}: {AttributeName}_  
 Default Search Member:  
-_ObjectChangeId_  
+__  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

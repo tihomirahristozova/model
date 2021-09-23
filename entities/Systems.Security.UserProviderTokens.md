@@ -11,7 +11,7 @@ Stores verification tokens for users - e.g. tokens for email, phone or two-facto
 Default Display Text Format:  
 _{LoginProviderName:T}_  
 Default Search Member:  
-_LoginProviderName_  
+__  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

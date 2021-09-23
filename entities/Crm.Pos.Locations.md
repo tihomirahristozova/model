@@ -11,7 +11,7 @@ Defines a company location as POS enabled location. Entity: Pos_Locations (Intro
 Default Display Text Format:  
 _{PosLocationCode}_  
 Default Search Member:  
-_PosLocationCode_  
+__  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

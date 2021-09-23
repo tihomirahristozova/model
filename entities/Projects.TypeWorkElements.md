@@ -11,7 +11,7 @@ The work elements of the work breakdown structure of each project type. Entity: 
 Default Display Text Format:  
 _{WorkElementName:T} : {WorkElementCode}_  
 Default Search Member:  
-_WorkElementName_  
+__  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

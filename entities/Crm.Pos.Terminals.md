@@ -11,7 +11,7 @@ Represents a POS workplace for 1 person, with all the attached devices. (Not to 
 Default Display Text Format:  
 _{PosTerminalName:T} : {PosTerminalCode}_  
 Default Search Member:  
-_PosTerminalName_  
+__  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

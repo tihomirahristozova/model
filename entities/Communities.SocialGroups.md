@@ -11,7 +11,7 @@ Represents a group of users, sharing interest in the group topic. Entity: Cmm_So
 Default Display Text Format:  
 _{Name:T} : {Code}_  
 Default Search Member:  
-_Name_  
+__  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

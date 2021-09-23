@@ -11,7 +11,7 @@ Contains the actual and history of equipment, installed on the vehicles. Entity:
 Default Display Text Format:  
 _{Vehicle.EngineIdentificationNumber}_  
 Default Search Member:  
-_Vehicle.EngineIdentificationNumber_  
+__  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

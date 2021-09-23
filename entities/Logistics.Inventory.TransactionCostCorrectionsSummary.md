@@ -11,7 +11,7 @@ Summary of cost corrections, grouped by the line corrected. Entity: Inv_Transact
 Default Display Text Format:  
 _{BaseCostAdjustmentValue}: {CostCorrectionAmountValue}_  
 Default Search Member:  
-_BaseCostAdjustmentValue_  
+__  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

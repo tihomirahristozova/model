@@ -11,7 +11,7 @@ Contains the rentable assets. Entity: Rent_Assets
 Default Display Text Format:  
 _{RentalAssetName:T} : {RentalAssetCode}_  
 Default Search Member:  
-_RentalAssetName_  
+__  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

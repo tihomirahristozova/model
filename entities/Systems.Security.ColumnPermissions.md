@@ -11,7 +11,7 @@ User permissions for accessing the system data columns. Entity: Sec_Column_Permi
 Default Display Text Format:  
 _{ColumnName:T}_  
 Default Search Member:  
-_ColumnName_  
+__  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

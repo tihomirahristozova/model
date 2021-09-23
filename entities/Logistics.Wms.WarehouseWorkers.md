@@ -11,7 +11,7 @@ Human or robot worker, which can execute warehouse tasks. Entity: Wms_Warehouse_
 Default Display Text Format:  
 _{Name:T}_  
 Default Search Member:  
-_Name_  
+__  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

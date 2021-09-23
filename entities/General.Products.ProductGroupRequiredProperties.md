@@ -11,7 +11,7 @@ Contains the properties, that are required to be set, when creating new products
 Default Display Text Format:  
 _{ProductGroup.Name:T} : {ProductGroup.NextPartNumber}_  
 Default Search Member:  
-_ProductGroup.Name_  
+__  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

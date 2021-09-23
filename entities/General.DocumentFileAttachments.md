@@ -11,7 +11,7 @@ Contains files, attached to the documents. Entity: Gen_Document_File_Attachments
 Default Display Text Format:  
 _{FileName:T}_  
 Default Search Member:  
-_FileName_  
+__  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

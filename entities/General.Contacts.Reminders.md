@@ -11,7 +11,7 @@ Reminders for activities. The reminders are alarms, which can be turned off. Eac
 Default Display Text Format:  
 _{Activity.DocumentType.TypeName:T} {Activity.DocumentNo}_  
 Default Search Member:  
-_Activity.DocumentType.TypeName_  
+__  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

@@ -11,7 +11,7 @@ The detail lines of rental contracts. Each line contains rental conditions for o
 Default Display Text Format:  
 _{LeaseContract.DocumentType.TypeName:T} {LeaseContract.DocumentNo}_  
 Default Search Member:  
-_LeaseContract.DocumentType.TypeName_  
+__  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

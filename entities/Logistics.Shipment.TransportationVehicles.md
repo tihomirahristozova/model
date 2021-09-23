@@ -11,7 +11,7 @@ A vehicle, which is used for transportation. One actual vehicle might be defined
 Default Display Text Format:  
 _{Code}_  
 Default Search Member:  
-_Code_  
+__  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

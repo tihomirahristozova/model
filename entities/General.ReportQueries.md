@@ -11,7 +11,7 @@ Contains the sub-queries, which a report contains. Entity: Gen_Report_Queries
 Default Display Text Format:  
 _{TableName:T}_  
 Default Search Member:  
-_TableName_  
+__  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

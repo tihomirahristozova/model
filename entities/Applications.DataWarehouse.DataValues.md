@@ -11,7 +11,7 @@ The actual values in the general data warehouse. Entity: Dw_Data_Values (Introdu
 Default Display Text Format:  
 _{Id}_  
 Default Search Member:  
-_Id_  
+__  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
