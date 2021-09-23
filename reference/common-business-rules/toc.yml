@@ -1,3 +1,5 @@
+- name: Entities business rules
+  href: entities-business-rules.md
 - name: Logistics documents business rules
   href: logistics-documents-business-rules.md
 - name: Serial numbers business rules
