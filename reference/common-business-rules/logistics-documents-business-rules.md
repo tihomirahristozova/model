@@ -2,7 +2,7 @@
 uid: logistics-documents
 ---
 
-# Logistics Documents
+# Logistics documents business rules
 
 Logistic documents is an impoverishing term for all documents in the system, in the lines of which the fields for Product and Quantity are present. 
 Similar principles and rules often apply to these lines. 
