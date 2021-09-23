@@ -2,8 +2,8 @@
 sorted: true
 references:
 - uid: all-entities
-  name: All entities business rules
-  href: reference/common-business-rules/all-entities-business-rules.html
+  name: All entities
+  href: reference/common-business-rules/all-entities.html
 - uid: Applications
   name: Applications Namespace
   href: entities/Applications.html
@@ -1319,8 +1319,8 @@ references:
   name: Logistics.Wms.WarehouseZones Entity
   href: entities/Logistics.Wms.WarehouseZones.html
 - uid: logistics-documents
-  name: Logistics documents business rules
-  href: reference/common-business-rules/logistics-documents-business-rules.html
+  name: Logistics documents
+  href: reference/common-business-rules/logistics-documents.html
 - uid: Production
   name: Production Namespace
   href: entities/Production.html
@@ -1493,8 +1493,8 @@ references:
   name: Projects.WorkReports Entity
   href: entities/Projects.WorkReports.html
 - uid: serial-numbers-business-rules
-  name: Serial Numbers Business Rules
-  href: reference/common-business-rules/serial-numbers-business-rules.html
+  name: Serial numbers
+  href: reference/common-business-rules/serial-numbers.html
 - uid: system-business-rules
   name: System Business Rules
   href: templates/template-description-system-business-rules.html
