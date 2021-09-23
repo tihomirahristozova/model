@@ -1,5 +1,5 @@
 - name: Logistics documents
   href: logistics-documents.md
-- name: Serial numbers business rules
-  href: serial-numbers-business-rules.md
-  
+- name: Common business rules
+  href: common-business-rules//toc.yml
+  topicHref: common-business-rules/index.md  
