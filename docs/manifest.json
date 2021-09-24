@@ -9368,6 +9368,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "business-rules/R32489.md",
+      "output": {
+        ".html": {
+          "relative_path": "business-rules/R32489.html",
+          "hash": "p9AEpgyPSsPQ/+A7DsYvIg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "data-types.md",
       "output": {
         ".html": {
@@ -12814,7 +12826,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/General.DocumentFulfillments.html",
-          "hash": "vboCTS19xsNtq53dxNy3yw=="
+          "hash": "s/yg0hS4ZFCWxBXkbpD7cw=="
         }
       },
       "is_incremental": false,
