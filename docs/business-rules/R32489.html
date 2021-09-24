@@ -118,11 +118,11 @@
 </tr>
 <tr>
 <td>Action</td>
-<td>IF CreationTimeUtc.DatabaseValue = NULL, SET CreationTimeUtc = NOW(UTC) <br> ELSE <br> CreationTimeUtc = Database Value</td>
+<td>If (CreationTimeUtc.DatabaseValue == NULL), then SET CreationTimeUtc = NOW(UTC) <br> else CreationTimeUtc = CreationTimeUtc.DatabaseValue</td>
 </tr>
 <tr>
 <td>Description</td>
-<td>If Creation Time Utc does not have a value then set current time in UTC. Once this field has a value, it can no longer be changed.</td>
+<td>If Creation Time Utc does not have a value, then set current time in UTC. Once this field has a value, it can no longer be changed.</td>
 </tr>
 <tr>
 <td>Message</td>
