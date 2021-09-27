@@ -9,7 +9,7 @@ Defines the parameters, which are tracked for the assets of the different types.
 
 ## Default Visualization
 Default Display Text Format:  
-_{ManagedAssetType.Name:T} : {ManagedAssetType.Code}_  
+_{ManagedAssetType.Name}_  
 Default Search Member:  
 __  
 

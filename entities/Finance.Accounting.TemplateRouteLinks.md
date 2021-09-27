@@ -9,7 +9,7 @@ When specified denotes that another route uses the template, initially bound to 
 
 ## Default Visualization
 Default Display Text Format:  
-_{Route.ProcedureName:T}_  
+_{Route.ProcedureName}_  
 Default Search Member:  
 __  
 

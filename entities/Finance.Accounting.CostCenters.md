@@ -9,7 +9,7 @@ Defines cost centers and their relation to profit centers. Entity: Acc_Cost_Cent
 
 ## Default Visualization
 Default Display Text Format:  
-_{Name:T}_  
+_{Name}_  
 Default Search Member:  
 __  
 

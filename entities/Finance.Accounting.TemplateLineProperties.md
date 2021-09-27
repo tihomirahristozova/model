@@ -9,7 +9,7 @@ Contains the way to obtain the values for each required property of both the deb
 
 ## Default Visualization
 Default Display Text Format:  
-_{TemplateLine.AmountColumnName:T}_  
+_{TemplateLine.AmountColumnName}_  
 Default Search Member:  
 __  
 

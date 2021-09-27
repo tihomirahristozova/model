@@ -9,7 +9,7 @@ Contains the actual correspondance filters, which specify how each financial sta
 
 ## Default Visualization
 Default Display Text Format:  
-_{FinancialStatementNode.Name:T} : {FinancialStatementNode.Code}_  
+_{FinancialStatementNode.Name:T}_  
 Default Search Member:  
 __  
 

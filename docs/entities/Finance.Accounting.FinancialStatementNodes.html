@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Finance.Accounting.FinancialStatementNodes Entity | ERP.net Domain Model </title>
+    <title> | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Finance.Accounting.FinancialStatementNodes Entity | ERP.net Domain Model ">
+    <meta name="title" content=" | ERP.net Domain Model ">
     <meta name="generator" content="docfx 2.56.9.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
@@ -76,140 +76,8 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Finance.Accounting.FinancialStatementNodes">
-<h1 id="financeaccountingfinancialstatementnodes-entity">Finance.Accounting.FinancialStatementNodes Entity</h1>
+            <article class="content wrap" id="_content" data-uid="">
 
-<p><strong>Namespace:</strong> <a href="Finance.Accounting.html">Finance.Accounting</a></p>
-<p>Contains the hierarchical structure of the user-defined financial statements. Entity: Acc_Financial_Statement_Nodes</p>
-<h2 id="default-visualization">Default Visualization</h2>
-<p>Default Display Text Format:<br>
-<em>{Name:T} : {Code}</em><br>
-Default Search Member:<br>
-__</p>
-<h2 id="aggregate">Aggregate</h2>
-<p>An <a href="https://docs.erp.net/tech/advanced/concepts/aggregates.html">aggregate</a> is a cluster of domain objects that can be treated as a single unit.</p>
-<p>Aggregate Parent:<br>
-<a href="Finance.Accounting.FinancialStatements.html">Finance.Accounting.FinancialStatements</a><br>
-Aggregate Root:<br>
-<a href="Finance.Accounting.FinancialStatements.html">Finance.Accounting.FinancialStatements</a></p>
-<h2 id="attributes">Attributes</h2>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="Finance.Accounting.FinancialStatementNodes.html#code">Code</a></td>
-<td>string (3)</td>
-<td>Identifying code of the financial statement node. Unique within the parent financial statement node. <code>Required</code> <code>Filter(eq;like)</code></td>
-</tr>
-<tr>
-<td><a href="Finance.Accounting.FinancialStatementNodes.html#fullpath">FullPath</a></td>
-<td>string (25) <strong>nullable</strong></td>
-<td>Full identification path of the financial statement node. <code>Filter(like)</code> <code>ReadOnly</code></td>
-</tr>
-<tr>
-<td><a href="Finance.Accounting.FinancialStatementNodes.html#id">Id</a></td>
-<td>guid</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Finance.Accounting.FinancialStatementNodes.html#name">Name</a></td>
-<td><a href="../data-types.html#multilanguagestring">MultilanguageString</a></td>
-<td>Name of the financial statement node. <code>Required</code> <code>Filter(like)</code></td>
-</tr>
-<tr>
-<td><a href="Finance.Accounting.FinancialStatementNodes.html#parentfullpath">ParentFullPath</a></td>
-<td>string (25) <strong>nullable</strong></td>
-<td>Parent financial statement node specified through its full identification path. <code>Filter(like)</code></td>
-</tr>
-</tbody>
-</table>
-<h2 id="references">References</h2>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="Finance.Accounting.FinancialStatementNodes.html#financialstatement">FinancialStatement</a></td>
-<td><a href="Finance.Accounting.FinancialStatements.html">FinancialStatements</a></td>
-<td>The <code>FinancialStatement</code>(Finance.Accounting.FinancialStatementNodes.md#financialstatement) to which this FinancialStatementNode belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
-</tr>
-</tbody>
-</table>
-<h2 id="child-collections">Child Collections</h2>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Correspondances</td>
-<td><a href="Finance.Accounting.FinancialStatementNodeCorrespondances.html">FinancialStatementNodeCorrespondances</a></td>
-<td>List of <code>FinancialStatement&lt;br /&gt;NodeCorrespondance</code>(Finance.Accounting.FinancialStatement<br>NodeCorrespondances.md) child objects, based on the <code>Finance.Accounting.FinancialStatement&lt;br /&gt;NodeCorrespondance.FinancialStatementNode</code>(Finance.Accounting.FinancialStatement<br>NodeCorrespondances.md#financialstatementnode) back reference</td>
-</tr>
-</tbody>
-</table>
-<h2 id="attribute-details">Attribute Details</h2>
-<h3 id="code">Code</h3>
-<p>Identifying code of the financial statement node. Unique within the parent financial statement node. <code>Required</code> <code>Filter(eq;like)</code></p>
-<p><em>Type</em>: <strong>string (3)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, Like</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Maximum Length</em>: <strong>3</strong></p>
-<h3 id="fullpath">FullPath</h3>
-<p>Full identification path of the financial statement node. <code>Filter(like)</code> <code>ReadOnly</code></p>
-<p><em>Type</em>: <strong>string (25) <strong>nullable</strong></strong><br>
-<em>Supported Filters</em>: <strong>Like</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Maximum Length</em>: <strong>25</strong></p>
-<h3 id="id">Id</h3>
-<p><em>Type</em>: <strong>guid</strong><br>
-<em>Indexed</em>: <strong>True</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong></p>
-<h3 id="name">Name</h3>
-<p>Name of the financial statement node. <code>Required</code> <code>Filter(like)</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a></strong><br>
-<em>Supported Filters</em>: <strong>Like</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
-<h3 id="parentfullpath">ParentFullPath</h3>
-<p>Parent financial statement node specified through its full identification path. <code>Filter(like)</code></p>
-<p><em>Type</em>: <strong>string (25) <strong>nullable</strong></strong><br>
-<em>Supported Filters</em>: <strong>Like</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Maximum Length</em>: <strong>25</strong></p>
-<h2 id="reference-details">Reference Details</h2>
-<h3 id="financialstatement">FinancialStatement</h3>
-<p>The <code>FinancialStatement</code>(Finance.Accounting.FinancialStatementNodes.md#financialstatement) to which this FinancialStatementNode belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
-<p><em>Type</em>: <strong><a href="Finance.Accounting.FinancialStatements.html">FinancialStatements</a></strong><br>
-<em>Indexed</em>: <strong>True</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em><a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a></em>: <strong>True</strong></p>
-<h2 id="business-rules">Business Rules</h2>
-<ul>
-<li><a href="../business-rules/R26759.html">R26759 FinancialStatementNode - Financial Statement Node Code</a></li>
-</ul>
-<h2 id="front-end-business-rules">Front-End Business Rules</h2>
-<p>None</p>
-<h2 id="api">API</h2>
-<p>Domain API Query:
-<a href="https://demodb.my.erp.net/api/domain/odata/Finance_Accounting_FinancialStatementNodes?$top=10">https://demodb.my.erp.net/api/domain/odata/Finance_Accounting_FinancialStatementNodes?$top=10</a></p>
-<p>Domain API Query Builder:
-<a href="https://demodb.my.erp.net/api/domain/querybuilder#Finance_Accounting_FinancialStatementNodes?$top=10">https://demodb.my.erp.net/api/domain/querybuilder#Finance_Accounting_FinancialStatementNodes?$top=10</a></p>
 </article>
           </div>
           

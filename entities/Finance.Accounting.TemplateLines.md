@@ -9,7 +9,7 @@ Each template line contains the posting to a single set of debit and credit acco
 
 ## Default Visualization
 Default Display Text Format:  
-_{AmountColumnName:T}_  
+_{AmountColumnName}_  
 Default Search Member:  
 __  
 

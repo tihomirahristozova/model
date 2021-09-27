@@ -9,7 +9,7 @@ Accounting templates are used to automate the postings for repetitive business t
 
 ## Default Visualization
 Default Display Text Format:  
-_{Name:T}_  
+_{Name}_  
 Default Search Member:  
 __  
 

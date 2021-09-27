@@ -9,7 +9,7 @@ Obsolete. Not used. Entity: Acc_Voucher_Correspondances
 
 ## Default Visualization
 Default Display Text Format:  
-_{Voucher.DocumentType.TypeName:T} {Voucher.DocumentNo}_  
+_{Voucher.EntityName}_  
 Default Search Member:  
 __  
 

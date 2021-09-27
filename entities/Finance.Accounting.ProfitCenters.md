@@ -9,7 +9,7 @@ Defines company profit centers and their relative weight for automatic balance t
 
 ## Default Visualization
 Default Display Text Format:  
-_{Name:T}_  
+_{Name}_  
 Default Search Member:  
 __  
 
