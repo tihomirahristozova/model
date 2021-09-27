@@ -115,16 +115,22 @@ needed</a></td>
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td>If (SystemStage &gt;= SQL) &amp;&amp; (SQLTimestampUtc == NULL)
+<td>IF SystemStage &gt;= SQL &amp; SQLTimestampUtc.DatabaseValue = NULL
 <br><br>
-Set:
+SET:
 <br><br>
-SQLTimestampUtc = DateTime.Now() (UTC)</td>
+SQLTimestampUtc = NOW(UTC)
+<br><br>
+ELSE
+<br><br>
+SQLTimestampUtc = Database Value</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
-<td>When the lead is initially promoted to SQL /Sales Qualified Lead/, the current time
-in UTC is set in the SQL Timestamp Utc field.</td>
+<td>If SystemStage is set to SQL or greater and SQLTimestampUtc in Database is empty</td>
+</tr>
+<tr>
+<td colspan="2">then set SQLTimestamp with current time in UTC.                                       |</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>
