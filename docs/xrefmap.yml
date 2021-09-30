@@ -535,12 +535,6 @@ references:
 - uid: Finance.Assets
   name: Finance.Assets Namespace
   href: entities/Finance.Assets.html
-- uid: Finance.Assets.AssetCategories
-  name: Finance.Assets.AssetCategories Entity
-  href: entities/Finance.Assets.AssetCategories.html
-- uid: Finance.Assets.AssetGroups
-  name: Finance.Assets.AssetGroups Entity
-  href: entities/Finance.Assets.AssetGroups.html
 - uid: Finance.Assets.AssetOrderLines
   name: Finance.Assets.AssetOrderLines Entity
   href: entities/Finance.Assets.AssetOrderLines.html

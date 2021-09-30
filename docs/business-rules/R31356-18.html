@@ -98,7 +98,7 @@
 </tr>
 <tr>
 <td><strong>Events</strong></td>
-<td>AttributeChanged(ProducedQuantityBase)</td>
+<td>AttributeChanged(ProducedQuantity)</td>
 </tr>
 <tr>
 <td><strong>Priority</strong></td>
@@ -115,9 +115,9 @@ needed</a></td>
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td>oldProducedQuantityBase = oldProducedQuantityBase (if null then 0);
-coef = newProducedQuantityBase;
-if (oldProducedQuantityBase != 0) coef = coef / oldProducedQuantityBase;
+<td>oldProducedQuantity = oldProducedQuantity (if null then 0);
+coef = newProducedQuantity;
+if (oldProducedQuantity != 0) coef = coef / oldProducedQuantity;
 <br><br>
 foreach (Ingredients)
 {
@@ -136,8 +136,8 @@ Operation.RunTimeMinutes = (Operation.RunTimeMinutes * coef);
 </tr>
 <tr>
 <td><strong>Description</strong></td>
-<td>When Produced Quantity Base is changed, the ratio between the new and the old value
-is used to recalculate Used Quantity is Ingredients and Run time Minutes in Operation
+<td>When Produced Quantity is changed, the ratio between the new and the old value is
+used to recalculate Used Quantity is Ingredients and Run time Minutes in Operation
 in order to change them with the same ratio. </td>
 </tr>
 <tr>

@@ -9,7 +9,7 @@ Contains the scheduled maintenances for the managed assets. Each maintenance can
 
 ## Default Visualization
 Default Display Text Format:  
-_{ManagedAsset.Name}_  
+_{ManagedAsset.Name:T}_  
 Default Search Member:  
 __  
 
