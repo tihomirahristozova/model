@@ -234,6 +234,10 @@ WarehouseOrderLine.ToWarehouseLocation = NULL
 WarehouseOrderLine.WarehouseWorker = NULL
 
 WarehouseOrderLine.Notes = WarehouseRequisitionLine.Notes
+
+WarehouseOrderLine.ParentDocument = WarehouseRequisition
+
+WarehouseOrderLine.ParentLineNo = WarehouseRequisitionLine.LineNo
 </code></pre>
 <p>If WarehouseRequisitionLineOrderLine.Product.AllowVariableMeasurementRatios = True, throw an error:</p>
 <pre><code>Line number '{WarehouseRequisitionLine.Line}' in document '{WarehouseRequisition.DocumentText}' contains a product '{WarehouseRequisitionLine.Product.PartNumber}' which uses Variable Measurement

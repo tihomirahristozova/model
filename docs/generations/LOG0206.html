@@ -233,7 +233,7 @@ ExciseAdministrativeDocumentLine.ExciseDutyRateValue = ExciseDutyRate.ExciseDuty
 
 ExciseAdministrativeDocumentLine.ExciseAmountBase = CalculateExciseAmountBase(ExciseProduct, QuantityBase, ExciseAlcoholicStrength)
 
-ExciseAdministrativeDocumentLine.ExciseAmount = QuantityBase * ExciseDutyRateValue
+ExciseAdministrativeDocumentLine.ExciseAmount = ExciseAmountBase * ExciseDutyRateValue
 </code></pre>
 <h6 id="functions">Functions:</h6>
 <p><strong>DefaultExcisePurposeCode</strong> - return this ExcisePurposeCode which has check &quot;Is Default&quot; in ExcisePurposeCodes table.</p>

@@ -9,7 +9,7 @@ Asset value transaction lines. Each line changes the values of one asset in one 
 
 ## Default Visualization
 Default Display Text Format:  
-_{AssetTransaction.DocumentType.TypeName:T} {AssetTransaction.DocumentNo}_  
+_{AssetTransaction.EntityName}_  
 Default Search Member:  
 __  
 

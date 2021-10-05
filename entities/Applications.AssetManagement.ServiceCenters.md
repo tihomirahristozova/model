@@ -9,7 +9,7 @@ Contains data about the service centers, which can maintain the assets. Entity: 
 
 ## Default Visualization
 Default Display Text Format:  
-_{Id}_  
+_{Id}: {EnterpriseCompanyId}_  
 Default Search Member:  
 __  
 

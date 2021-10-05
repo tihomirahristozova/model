@@ -37,9 +37,6 @@ references:
 - uid: Applications.AssetManagement.ManagedAssetTypeMaintenanceTypes
   name: Applications.AssetManagement.ManagedAssetTypeMaintenanceTypes Entity
   href: entities/Applications.AssetManagement.ManagedAssetTypeMaintenanceTypes.html
-- uid: Applications.AssetManagement.ManagedAssetTypes
-  name: Applications.AssetManagement.ManagedAssetTypes Entity
-  href: entities/Applications.AssetManagement.ManagedAssetTypes.html
 - uid: Applications.AssetManagement.ManagedAssetTypeTrackedParameters
   name: Applications.AssetManagement.ManagedAssetTypeTrackedParameters Entity
   href: entities/Applications.AssetManagement.ManagedAssetTypeTrackedParameters.html
