@@ -314,6 +314,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "business-rules/R20971-1.1.md",
+      "output": {
+        ".html": {
+          "relative_path": "business-rules/R20971-1.1.html",
+          "hash": "1+Uf/5GE7Mznj/GI9b5DAQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "business-rules/R20971-1.md",
       "output": {
         ".html": {
@@ -14032,7 +14044,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Logistics.Inventory.TransferOrderLines.html",
-          "hash": "dzNvRfDuSQaTWZ+8K4R+8g=="
+          "hash": "9VCcj5TJuA+EkEsJyrGF0w=="
         }
       },
       "is_incremental": false,
