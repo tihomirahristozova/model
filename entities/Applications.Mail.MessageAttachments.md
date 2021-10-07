@@ -9,7 +9,7 @@ Represents attachments to mail messages. Entity: Mail_Message_Attachments
 
 ## Default Visualization
 Default Display Text Format:  
-_{Name:T}_  
+_{Name}_  
 Default Search Member:  
 __  
 

@@ -9,7 +9,7 @@ History of document state changes. Entity: Gen_Document_State_Changes
 
 ## Default Visualization
 Default Display Text Format:  
-_{Document.DocumentType.TypeName:T} {Document.DocumentNo}_  
+_{Document.EntityName}_  
 Default Search Member:  
 __  
 

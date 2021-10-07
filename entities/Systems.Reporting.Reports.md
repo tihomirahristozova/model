@@ -9,7 +9,7 @@ User-defined reports. Reports retrieve data from data sources and present it in 
 
 ## Default Visualization
 Default Display Text Format:  
-_{QueryName:T}_  
+_{QueryName}_  
 Default Search Member:  
 __  
 

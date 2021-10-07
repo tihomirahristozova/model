@@ -1253,8 +1253,16 @@
 - name: VAT
   href: VAT.md
   items:
+  - name: VAT_Box_Types
+    href: VAT_Box_Types.md
+  - name: VAT_Deal_Type_Document_Amounts
+    href: VAT_Deal_Type_Document_Amounts.md
   - name: VAT_Deal_Types
     href: VAT_Deal_Types.md
+  - name: VAT_Declaration_Lines
+    href: VAT_Declaration_Lines.md
+  - name: VAT_Declarations
+    href: VAT_Declarations.md
   - name: VAT_Entries
     href: VAT_Entries.md
 - name: Wf
@@ -1287,6 +1295,8 @@
     href: Wms_Warehouse_Order_Lines.md
   - name: Wms_Warehouse_Orders
     href: Wms_Warehouse_Orders.md
+  - name: Wms_Warehouse_Policies
+    href: Wms_Warehouse_Policies.md
   - name: Wms_Warehouse_Requisition_Fulfillments
     href: Wms_Warehouse_Requisition_Fulfillments.md
   - name: Wms_Warehouse_Requisition_Lines

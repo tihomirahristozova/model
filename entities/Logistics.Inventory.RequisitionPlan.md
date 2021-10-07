@@ -9,7 +9,7 @@ The current requisition (MRP) plan. The data is deleted and re-created upon each
 
 ## Default Visualization
 Default Display Text Format:  
-_{Id}_  
+_{Id}: {FirmPlannedOrderReceiptsValue}_  
 Default Search Member:  
 __  
 

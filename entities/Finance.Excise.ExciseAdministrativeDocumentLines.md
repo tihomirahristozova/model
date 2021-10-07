@@ -71,7 +71,7 @@ _Supports Order By_: **False**
 _Default Value_: **Constant**  
 
 _Front-End Recalc Expressions:_  
-`new Amount( ( ( Convert( obj.QuantityBase.Value, Nullable`1) * obj.ExciseDutyRateValue) ?? 0), Convert( obj.GetAggregateParent( ), ExciseAdministrativeDocument).DocumentCurrency)`
+`new Amount( ( ( Convert( obj.ExciseAmountBase, Nullable`1) * obj.ExciseDutyRateValue) ?? 0), Convert( obj.GetAggregateParent( ), ExciseAdministrativeDocument).DocumentCurrency)`
 ### ExciseAmountBase
 
 _Type_: **decimal (14, 2)**  
@@ -191,7 +191,7 @@ _Type_: **[ExcisePurposeCodes](Finance.Excise.ExcisePurposeCodes.md) (nullable)*
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Front-End Recalc Expressions:_  
-`IIF( ( obj.LineNo == obj.LineNo), obj.Transaction.Query( ).FirstOrDefault( epc => epc.IsDefault), null)`
+`IIF( ( obj.LineNo == obj.LineNo), obj.DefaultExcisePurposeCode( ), null)`
 ### MeasuringTransaction
 
 Transaction of product input or output, measured with specialized measuring device for excise purposes. `Filter(multi eq)` `Introduced in version 21.1.3.87`

@@ -9,7 +9,7 @@ Contains one or more sequence generators for each sequence. Many sequence genera
 
 ## Default Visualization
 Default Display Text Format:  
-_{Sequence.Name:T}_  
+_{Sequence.Name}_  
 Default Search Member:  
 __  
 

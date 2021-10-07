@@ -9,7 +9,7 @@ Contains deal types supported by the system as well as user-defined types. Entit
 
 ## Default Visualization
 Default Display Text Format:  
-_{Name:T}_  
+_{Name}_  
 Default Search Member:  
 __  
 
@@ -18,6 +18,7 @@ An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a
 
 Aggregate Tree  
 * [Finance.Vat.DealTypes](Finance.Vat.DealTypes.md)  
+  * [Finance.Vat.DealTypeDocumentAmounts](Finance.Vat.DealTypeDocumentAmounts.md)  
 
 ## Attributes
 
@@ -33,6 +34,12 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Country](Finance.Vat.DealTypes.md#country) | [Countries](General.Geography.Countries.md) | The country for which this deal type applies. The country is matched against the country of the enterprise company. `Required` `Filter(multi eq)` |
+
+## Child Collections
+
+| Name | Type | Description |
+| ---- | ---- | --- |
+| DocumentAmounts | [DealTypeDocumentAmounts](Finance.Vat.DealTypeDocumentAmounts.md) | List of `DealTypeDocumentAmount`(Finance.Vat.DealTypeDocumentAmounts.md) child objects, based on the `Finance.Vat.DealTypeDocumentAmount.DealType`(Finance.Vat.DealTypeDocumentAmounts.md#dealtype) back reference 
 
 
 ## Attribute Details

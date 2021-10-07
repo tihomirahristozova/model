@@ -9,7 +9,7 @@ Defines the relationships between the parties. The data is preserved over time. 
 
 ## Default Visualization
 Default Display Text Format:  
-_{Id}_  
+_{Id}: {FromPartyId}_  
 Default Search Member:  
 __  
 

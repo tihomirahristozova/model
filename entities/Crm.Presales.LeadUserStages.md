@@ -9,7 +9,7 @@ User-defined stages of the lead processing workflow. Entity: Crm_Lead_User_Stage
 
 ## Default Visualization
 Default Display Text Format:  
-_{Name:T} : {Code}_  
+_{Name:T}_  
 Default Search Member:  
 __  
 

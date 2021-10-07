@@ -9,7 +9,7 @@ Contains the calculated costs allocated to the different Cost Types. Entity: Cos
 
 ## Default Visualization
 Default Display Text Format:  
-_{Calculation.DocumentType.TypeName:T} {Calculation.DocumentNo}_  
+_{Calculation.EntityName}_  
 Default Search Member:  
 __  
 

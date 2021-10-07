@@ -9,7 +9,7 @@ Leads are potential customers for your products. Because leads are usually proce
 
 ## Default Visualization
 Default Display Text Format:  
-_{CompanyName:T}_  
+_{CompanyName}_  
 Default Search Member:  
 __  
 

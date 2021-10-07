@@ -265,7 +265,7 @@ _Indexed_: **True**
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Front-End Recalc Expressions:_  
-`IIF( ( obj.WorkOrderItem != null), null, obj.WorkOrderItem)`
+`IIF( ( obj.DistributeBy != null), null, obj.WorkOrderItem)`
 
 
 ## Business Rules

@@ -9,7 +9,7 @@ Contains capacity of workgroup resources available for production. Entity: Prd_C
 
 ## Default Visualization
 Default Display Text Format:  
-_{WorkgroupResource.Workgroup.Name:T}_  
+_{WorkgroupResource.Workgroup.Name}_  
 Default Search Member:  
 __  
 

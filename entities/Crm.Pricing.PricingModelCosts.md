@@ -9,7 +9,7 @@ List of costs, associated with a pricing model. Entity: Crm_Pricing_Model_Costs
 
 ## Default Visualization
 Default Display Text Format:  
-_{PricingModel.Name:T}_  
+_{PricingModel.Name}_  
 Default Search Member:  
 __  
 

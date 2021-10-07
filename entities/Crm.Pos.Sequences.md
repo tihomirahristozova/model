@@ -9,7 +9,7 @@ Stores the last issued fiscal sales number for each POS device. Entity: Pos_Sequ
 
 ## Default Visualization
 Default Display Text Format:  
-_{Id}_  
+_{Id}: {PosDeviceId}_  
 Default Search Member:  
 __  
 

@@ -9,7 +9,7 @@ Member parties of a marketing target group. Entity: Crm_Target_Group_Members
 
 ## Default Visualization
 Default Display Text Format:  
-_{TargetGroup.Name:T} : {TargetGroup.Code}_  
+_{TargetGroup.Name}_  
 Default Search Member:  
 __  
 

@@ -9,7 +9,7 @@ Contains permissions, which are honored only by client applications and are used
 
 ## Default Visualization
 Default Display Text Format:  
-_{ApplicationName:T}_  
+_{ApplicationName}_  
 Default Search Member:  
 __  
 

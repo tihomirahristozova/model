@@ -9,7 +9,7 @@ Options per document type for the transfer orders. Entity: Inv_Transfer_Orders_O
 
 ## Default Visualization
 Default Display Text Format:  
-_{Id}_  
+_{Id}: {DocumentTypeId}_  
 Default Search Member:  
 __  
 

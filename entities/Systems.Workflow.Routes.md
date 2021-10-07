@@ -9,7 +9,7 @@ Contains document routes, which specify which document generation procedures wil
 
 ## Default Visualization
 Default Display Text Format:  
-_{ProcedureName:T}_  
+_{ProcedureName}_  
 Default Search Member:  
 __  
 

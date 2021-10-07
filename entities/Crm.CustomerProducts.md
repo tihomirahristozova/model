@@ -9,7 +9,7 @@ Contains the products, that are contracted (listed) with a customer. Entity: Crm
 
 ## Default Visualization
 Default Display Text Format:  
-_{Customer.Party.PartyName:T} : {Customer.Number}_  
+_{Customer}_  
 Default Search Member:  
 __  
 

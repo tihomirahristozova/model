@@ -9,7 +9,7 @@ When specified, contains user-defined asset depreciation values for each depreci
 
 ## Default Visualization
 Default Display Text Format:  
-_{DepreciationPlanLine.LineNo} : {DepreciationPlanLine.DepreciationPlan.DocumentNo} {DepreciationPlanLine.DepreciationPlan.DocumentType.TypeName:T}_  
+_{DepreciationPlanLine.DepreciationPlan.EntityName}_  
 Default Search Member:  
 __  
 

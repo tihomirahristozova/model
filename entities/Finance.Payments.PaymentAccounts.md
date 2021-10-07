@@ -9,7 +9,7 @@ Payment accounts are cash, bank and other accounts, which are used in payments. 
 
 ## Default Visualization
 Default Display Text Format:  
-_{Name:T} : {Code}_  
+_{Name:T}_  
 Default Search Member:  
 __  
 

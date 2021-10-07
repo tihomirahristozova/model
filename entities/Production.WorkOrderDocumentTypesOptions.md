@@ -9,7 +9,7 @@ Options for user-defined Work Order document types. Entity: Prd_Work_Order_Docum
 
 ## Default Visualization
 Default Display Text Format:  
-_{Id}_  
+_{Id}: {DocumentTypeId}_  
 Default Search Member:  
 __  
 

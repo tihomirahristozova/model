@@ -519,8 +519,16 @@
       href: Finance.Vat.BGVATDeclaringPersons.md
     - name: BGVATDocumentTypeVATCodes
       href: Finance.Vat.BGVATDocumentTypeVATCodes.md
+    - name: BoxTypes
+      href: Finance.Vat.BoxTypes.md
+    - name: DealTypeDocumentAmounts
+      href: Finance.Vat.DealTypeDocumentAmounts.md
     - name: DealTypes
       href: Finance.Vat.DealTypes.md
+    - name: DeclarationLines
+      href: Finance.Vat.DeclarationLines.md
+    - name: Declarations
+      href: Finance.Vat.Declarations.md
     - name: Entries
       href: Finance.Vat.Entries.md
 - name: General
@@ -888,6 +896,8 @@
       href: Logistics.Wms.WarehouseOrderLines.md
     - name: WarehouseOrders
       href: Logistics.Wms.WarehouseOrders.md
+    - name: WarehousePolicies
+      href: Logistics.Wms.WarehousePolicies.md
     - name: WarehouseRequisitionFulfillments
       href: Logistics.Wms.WarehouseRequisitionFulfillments.md
     - name: WarehouseRequisitionLines
@@ -1021,6 +1031,11 @@
     href: Projects.WorkReportResources.md
   - name: WorkReports
     href: Projects.WorkReports.md
+- name: Public
+  href: Public.md
+  items:
+  - name: Users
+    href: Public.Users.md
 - name: Systems
   href: Systems.md
   items:

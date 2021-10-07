@@ -9,7 +9,7 @@ User-defined models for cost allocation. Entity: Cost_Allocation_Models
 
 ## Default Visualization
 Default Display Text Format:  
-_{CostAllocationModelName:T}_  
+_{CostAllocationModelName}_  
 Default Search Member:  
 __  
 

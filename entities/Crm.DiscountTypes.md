@@ -9,7 +9,7 @@ Contains the different types of discounts, which can be applied to sales lines. 
 
 ## Default Visualization
 Default Display Text Format:  
-_{Name:T} : {Code}_  
+_{Name}_  
 Default Search Member:  
 __  
 

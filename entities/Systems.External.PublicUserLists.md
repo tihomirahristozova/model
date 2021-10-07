@@ -9,7 +9,7 @@ Each list represents a unique collection of public users. Entity: Ext_Public_Use
 
 ## Default Visualization
 Default Display Text Format:  
-_{Name:T}_  
+_{Name}_  
 Default Search Member:  
 __  
 

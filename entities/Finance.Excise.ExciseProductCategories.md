@@ -9,7 +9,7 @@ Product Category is defined by the taxation and customs authorities. Also specif
 
 ## Default Visualization
 Default Display Text Format:  
-_{Name:T} : {Code}_  
+_{Name:T}_  
 Default Search Member:  
 __  
 

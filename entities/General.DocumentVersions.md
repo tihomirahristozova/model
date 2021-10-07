@@ -9,7 +9,7 @@ History of each saved version of each document. Entity: Gen_Document_Versions
 
 ## Default Visualization
 Default Display Text Format:  
-_{Document.DocumentType.TypeName:T} {Document.DocumentNo}_  
+_{Document.EntityName}_  
 Default Search Member:  
 __  
 

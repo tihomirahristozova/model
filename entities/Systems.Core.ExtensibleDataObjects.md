@@ -9,7 +9,7 @@ Extends data in other tables with attached files, custom properties, etc. Each r
 
 ## Default Visualization
 Default Display Text Format:  
-_{Id}_  
+_{Id}: {EntityType}_  
 Default Search Member:  
 __  
 

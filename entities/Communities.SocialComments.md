@@ -9,7 +9,7 @@ User comment to any object in the system. Entity: Cmm_Social_Comments (Introduce
 
 ## Default Visualization
 Default Display Text Format:  
-_{Id}_  
+_{Id}: {DataObjectId}_  
 Default Search Member:  
 __  
 

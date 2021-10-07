@@ -9,7 +9,7 @@ Theoretical or actual content of a logistic unit. Entity: Log_Logistic_Unit_Cont
 
 ## Default Visualization
 Default Display Text Format:  
-_{LotNumber}_  
+_{LogisticUnit}_  
 Default Search Member:  
 __  
 

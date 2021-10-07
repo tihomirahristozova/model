@@ -9,7 +9,7 @@ Contains the rentable assets. Entity: Rent_Assets
 
 ## Default Visualization
 Default Display Text Format:  
-_{RentalAssetName:T} : {RentalAssetCode}_  
+_{RentalAssetName}_  
 Default Search Member:  
 __  
 

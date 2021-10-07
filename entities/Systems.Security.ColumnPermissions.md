@@ -9,7 +9,7 @@ User permissions for accessing the system data columns. Entity: Sec_Column_Permi
 
 ## Default Visualization
 Default Display Text Format:  
-_{ColumnName:T}_  
+_{ColumnName}_  
 Default Search Member:  
 __  
 

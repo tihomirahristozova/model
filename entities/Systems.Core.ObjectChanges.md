@@ -9,7 +9,7 @@ Actual tracked changes to one object. Entity: Sys_Object_Changes (Introduced in 
 
 ## Default Visualization
 Default Display Text Format:  
-_{RepositoryName:T}_  
+_{RepositoryName}_  
 Default Search Member:  
 __  
 

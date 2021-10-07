@@ -9,7 +9,7 @@ Groups of resource types. Entity: Prd_Resource_Groups
 
 ## Default Visualization
 Default Display Text Format:  
-_{Name:T}_  
+_{Name}_  
 Default Search Member:  
 __  
 

@@ -9,7 +9,7 @@ Options for sales orders of specific user defined document type. Entity: Crm_Sal
 
 ## Default Visualization
 Default Display Text Format:  
-_{DocumentType.TypeName} : {DocumentType.Code}_  
+_{DocumentType.EntityName}_  
 Default Search Member:  
 __  
 

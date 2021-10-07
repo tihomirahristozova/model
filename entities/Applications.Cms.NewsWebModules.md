@@ -10,7 +10,7 @@ Represents a web module, containing news. Entity: Cms_News_Web_Modules
 
 ## Default Visualization
 Default Display Text Format:  
-_{Name:T}_  
+_{Name}_  
 Default Search Member:  
 __  
 

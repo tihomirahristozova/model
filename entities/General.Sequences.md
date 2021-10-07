@@ -9,7 +9,7 @@ Provides numbering sequences, applicable for use in a multi-threaded environment
 
 ## Default Visualization
 Default Display Text Format:  
-_{Name:T}_  
+_{Name}_  
 Default Search Member:  
 __  
 

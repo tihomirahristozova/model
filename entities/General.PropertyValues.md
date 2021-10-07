@@ -9,7 +9,7 @@ The actual values of the user-defined properties for each actual entity. Entity:
 
 ## Default Visualization
 Default Display Text Format:  
-_{Id}_  
+_{Id}: {EntityItemId}_  
 Default Search Member:  
 __  
 

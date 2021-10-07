@@ -9,7 +9,7 @@ The different steps performed to create products. Entity: Prd_Operations
 
 ## Default Visualization
 Default Display Text Format:  
-_{Name:T}_  
+_{Name}_  
 Default Search Member:  
 __  
 

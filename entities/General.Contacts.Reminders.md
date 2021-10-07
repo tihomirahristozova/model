@@ -9,7 +9,7 @@ Reminders for activities. The reminders are alarms, which can be turned off. Eac
 
 ## Default Visualization
 Default Display Text Format:  
-_{Activity.DocumentType.TypeName:T} {Activity.DocumentNo}_  
+_{Activity.EntityName}_  
 Default Search Member:  
 __  
 

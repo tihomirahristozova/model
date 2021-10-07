@@ -9,7 +9,7 @@ Contains the free services, included in the service agreement. Entity: Srv_Servi
 
 ## Default Visualization
 Default Display Text Format:  
-_{ServiceAgreement.DocumentType.TypeName:T} {ServiceAgreement.DocumentNo}_  
+_{ServiceAgreement.EntityName}_  
 Default Search Member:  
 __  
 

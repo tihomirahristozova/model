@@ -9,7 +9,7 @@ Contains contacting mechanisms - telephone numbers, addresses, web sites, etc. C
 
 ## Default Visualization
 Default Display Text Format:  
-_{Name:T}_  
+_{Name}_  
 Default Search Member:  
 __  
 

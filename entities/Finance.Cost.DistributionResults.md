@@ -9,7 +9,7 @@ Contains the results of a cost distribution calculation. Entity: Cost_Distributi
 
 ## Default Visualization
 Default Display Text Format:  
-_{CostDistribution.DocumentType.TypeName:T} {CostDistribution.DocumentNo}_  
+_{CostDistribution.EntityName}_  
 Default Search Member:  
 __  
 

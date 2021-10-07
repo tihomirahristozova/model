@@ -9,7 +9,7 @@ Contains design layouts for document printouts. Entity: Gen_Printout_Layouts
 
 ## Default Visualization
 Default Display Text Format:  
-_{DocumentEntityName:T}_  
+_{DocumentEntityName}_  
 Default Search Member:  
 __  
 

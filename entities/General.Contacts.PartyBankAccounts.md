@@ -9,7 +9,7 @@ The bank accounts of a party. Entity: Gen_Party_Bank_Accounts
 
 ## Default Visualization
 Default Display Text Format:  
-_{BankBranchName:T} : {BankAccountCode}_  
+_{BankBranchName:T}_  
 Default Search Member:  
 __  
 

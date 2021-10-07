@@ -9,7 +9,7 @@ Contains options for generation of payment transactions. Each option set is assi
 
 ## Default Visualization
 Default Display Text Format:  
-_{Id}_  
+_{Id}: {RouteId}_  
 Default Search Member:  
 __  
 

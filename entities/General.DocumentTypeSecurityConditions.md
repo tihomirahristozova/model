@@ -9,7 +9,7 @@ Provides rules to conditionally secure new documents. Entity: Gen_Document_Type_
 
 ## Default Visualization
 Default Display Text Format:  
-_{Id}_  
+_{Id}: {DocumentTypeId}_  
 Default Search Member:  
 __  
 

@@ -9,7 +9,7 @@ Defines the types of relationships possible between the parties. Entity: Cm_Part
 
 ## Default Visualization
 Default Display Text Format:  
-_{RelationshipTypeName:T}_  
+_{RelationshipTypeName}_  
 Default Search Member:  
 __  
 

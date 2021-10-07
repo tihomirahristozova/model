@@ -9,7 +9,7 @@ Obsolete. Not used. Entity: Sec_User_Access_Keys
 
 ## Default Visualization
 Default Display Text Format:  
-_{User.Login}_  
+_{User.Name:T}_  
 Default Search Member:  
 __  
 

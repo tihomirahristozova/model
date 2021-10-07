@@ -9,7 +9,7 @@ The price lists, which are updated by the pricing model. Entity: Crm_Pricing_Mod
 
 ## Default Visualization
 Default Display Text Format:  
-_{PricingModel.Name:T}_  
+_{PricingModel.Name}_  
 Default Search Member:  
 __  
 

@@ -9,7 +9,7 @@ Contains the roles of the participants of each project type. Entity: Prj_Type_Ro
 
 ## Default Visualization
 Default Display Text Format:  
-_{RoleName:T}_  
+_{RoleName}_  
 Default Search Member:  
 __  
 

@@ -9,7 +9,7 @@ Folders are the base for the file storage within the system. Each folder is a da
 
 ## Default Visualization
 Default Display Text Format:  
-_{Name:T}_  
+_{Name}_  
 Default Search Member:  
 __  
 

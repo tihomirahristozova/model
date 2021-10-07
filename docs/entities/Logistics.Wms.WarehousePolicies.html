@@ -1,0 +1,317 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Logistics.Wms.WarehousePolicies Entity | ERP.net Domain Model </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Logistics.Wms.WarehousePolicies Entity | ERP.net Domain Model ">
+    <meta name="generator" content="docfx 2.56.9.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Logistics.Wms.WarehousePolicies">
+<h1 id="logisticswmswarehousepolicies-entity">Logistics.Wms.WarehousePolicies Entity</h1>
+
+<p><strong>Namespace:</strong> <a href="Logistics.Wms.html">Logistics.Wms</a></p>
+<p>Warehouse Policies is a hierarchical system for applying policies to warehouse operations. Entity: Wms_Warehouse_Policies (Introduced in version 22.1.4.23)</p>
+<h2 id="default-visualization">Default Visualization</h2>
+<p>Default Display Text Format:<br>
+<em>{Warehouse.Name:T}</em><br>
+Default Search Member:<br>
+__</p>
+<h2 id="aggregate">Aggregate</h2>
+<p>An <a href="https://docs.erp.net/tech/advanced/concepts/aggregates.html">aggregate</a> is a cluster of domain objects that can be treated as a single unit.</p>
+<p>Aggregate Parent:<br>
+<a href="Logistics.Wms.Warehouses.html">Logistics.Wms.Warehouses</a><br>
+Aggregate Root:<br>
+<a href="Logistics.Wms.Warehouses.html">Logistics.Wms.Warehouses</a></p>
+<h2 id="attributes">Attributes</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="Logistics.Wms.WarehousePolicies.html#fromdate">FromDate</a></td>
+<td>date <strong>nullable</strong></td>
+<td>When set, specifies the activation date of the policy. <code>Filter(eq;ge;le)</code></td>
+</tr>
+<tr>
+<td><a href="Logistics.Wms.WarehousePolicies.html#id">Id</a></td>
+<td>guid</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="Logistics.Wms.WarehousePolicies.html#importance">Importance</a></td>
+<td>int32</td>
+<td>The importance of the policy, relative to other applicable policies. Higher numbers indicate higher importance. <code>Required</code> <code>Default(0)</code> <code>Filter(eq;ge;le)</code></td>
+</tr>
+<tr>
+<td><a href="Logistics.Wms.WarehousePolicies.html#note">Note</a></td>
+<td>string (max) <strong>nullable</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="Logistics.Wms.WarehousePolicies.html#policykind">PolicyKind</a></td>
+<td><a href="Logistics.Wms.WarehousePolicies.html#policykind">PolicyKind</a></td>
+<td>The kind of policy, which is being applied. <code>Required</code> <code>Filter(multi eq)</code></td>
+</tr>
+<tr>
+<td><a href="Logistics.Wms.WarehousePolicies.html#todate">ToDate</a></td>
+<td>date <strong>nullable</strong></td>
+<td>When set, specifies the de-activation date of the policy. <code>Filter(eq;ge;le)</code></td>
+</tr>
+<tr>
+<td><a href="Logistics.Wms.WarehousePolicies.html#value">Value</a></td>
+<td>string (64)</td>
+<td>The value specified for the policy. For boolean policies, allowed values are &quot;true&quot; and &quot;false&quot;. <code>Required</code> <code>Filter(eq;ge;le)</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="references">References</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="Logistics.Wms.WarehousePolicies.html#product">Product</a></td>
+<td><a href="General.Products.Products.html">Products</a> (nullable)</td>
+<td>When set, specifies that the policy will apply to the specified product only. <code>Filter(multi eq)</code></td>
+</tr>
+<tr>
+<td><a href="Logistics.Wms.WarehousePolicies.html#producttype">ProductType</a></td>
+<td><a href="General.Products.ProductTypes.html">ProductTypes</a> (nullable)</td>
+<td>When set, specifies that the policy will apply to the specified product type only. <code>Filter(multi eq)</code></td>
+</tr>
+<tr>
+<td><a href="Logistics.Wms.WarehousePolicies.html#warehouse">Warehouse</a></td>
+<td><a href="Logistics.Wms.Warehouses.html">Warehouses</a></td>
+<td>The warehouse for which the policy is defined. . <code>Required</code> <code>Filter(multi eq)</code> <code>ReadOnly</code> <code>Owner</code></td>
+</tr>
+<tr>
+<td><a href="Logistics.Wms.WarehousePolicies.html#zone">Zone</a></td>
+<td><a href="Logistics.Wms.WarehouseZones.html">WarehouseZones</a> (nullable)</td>
+<td>When set, specifies that the policy will apply to the specified zone and its sub-zones. <code>Filter(multi eq)</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="attribute-details">Attribute Details</h2>
+<h3 id="fromdate">FromDate</h3>
+<p>When set, specifies the activation date of the policy. <code>Filter(eq;ge;le)</code></p>
+<p><em>Type</em>: <strong>date <strong>nullable</strong></strong><br>
+<em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
+<h3 id="importance">Importance</h3>
+<p>The importance of the policy, relative to other applicable policies. Higher numbers indicate higher importance. <code>Required</code> <code>Default(0)</code> <code>Filter(eq;ge;le)</code></p>
+<p><em>Type</em>: <strong>int32</strong><br>
+<em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>0</strong></p>
+<h3 id="note">Note</h3>
+<p><em>Type</em>: <strong>string (max) <strong>nullable</strong></strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>2147483647</strong></p>
+<h3 id="policykind">PolicyKind</h3>
+<p>The kind of policy, which is being applied. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p><em>Type</em>: <strong><a href="Logistics.Wms.WarehousePolicies.html#policykind">PolicyKind</a></strong><br>
+Allowed values for the <code>PolicyKind</code>(Logistics.Wms.WarehousePolicies.md#policykind) data attribute<br>
+<em>Allowed Values (Logistics.Wms.WarehousePoliciesRepository.PolicyKind Enum Members)</em></p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AllowProductChange</td>
+<td>AllowProductChange value. Stored as 'APC'. <br> <em>Database Value:</em> 'APC' <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'AllowProductChange'</td>
+</tr>
+<tr>
+<td>AllowLotChange</td>
+<td>AllowLotChange value. Stored as 'ATC'. <br> <em>Database Value:</em> 'ATC' <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'AllowLotChange'</td>
+</tr>
+<tr>
+<td>AllowLocationChange</td>
+<td>AllowLocationChange value. Stored as 'ALC'. <br> <em>Database Value:</em> 'ALC' <br> <em>Model Value:</em> 2 <br> <em>Domain API Value:</em> 'AllowLocationChange'</td>
+</tr>
+<tr>
+<td>AllowUnitChange</td>
+<td>AllowUnitChange value. Stored as 'AUC'. <br> <em>Database Value:</em> 'AUC' <br> <em>Model Value:</em> 3 <br> <em>Domain API Value:</em> 'AllowUnitChange'</td>
+</tr>
+<tr>
+<td>RequireSourceScan</td>
+<td>Require scanning of the source location when moving/dispatching. Stored as 'RSS'. <br> <em>Database Value:</em> 'RSS' <br> <em>Model Value:</em> 4 <br> <em>Domain API Value:</em> 'RequireSourceScan'</td>
+</tr>
+<tr>
+<td>RequireDestinationScan</td>
+<td>Require scanning of the destination location when moving/receiving. Stored as 'RDS'. <br> <em>Database Value:</em> 'RDS' <br> <em>Model Value:</em> 5 <br> <em>Domain API Value:</em> 'RequireDestinationScan'</td>
+</tr>
+<tr>
+<td>AllowLineSkip</td>
+<td>Allow skipping of an order line when executing (allow quantity = 0). Stored as 'ALS'. <br> <em>Database Value:</em> 'ALS' <br> <em>Model Value:</em> 6 <br> <em>Domain API Value:</em> 'AllowLineSkip'</td>
+</tr>
+</tbody>
+</table>
+<p><em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="todate">ToDate</h3>
+<p>When set, specifies the de-activation date of the policy. <code>Filter(eq;ge;le)</code></p>
+<p><em>Type</em>: <strong>date <strong>nullable</strong></strong><br>
+<em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="value">Value</h3>
+<p>The value specified for the policy. For boolean policies, allowed values are &quot;true&quot; and &quot;false&quot;. <code>Required</code> <code>Filter(eq;ge;le)</code></p>
+<p><em>Type</em>: <strong>string (64)</strong><br>
+<em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>64</strong></p>
+<h2 id="reference-details">Reference Details</h2>
+<h3 id="product">Product</h3>
+<p>When set, specifies that the policy will apply to the specified product only. <code>Filter(multi eq)</code></p>
+<p><em>Type</em>: <strong><a href="General.Products.Products.html">Products</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<h3 id="producttype">ProductType</h3>
+<p>When set, specifies that the policy will apply to the specified product type only. <code>Filter(multi eq)</code></p>
+<p><em>Type</em>: <strong><a href="General.Products.ProductTypes.html">ProductTypes</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<h3 id="warehouse">Warehouse</h3>
+<p>The warehouse for which the policy is defined. . <code>Required</code> <code>Filter(multi eq)</code> <code>ReadOnly</code> <code>Owner</code></p>
+<p><em>Type</em>: <strong><a href="Logistics.Wms.Warehouses.html">Warehouses</a></strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em><a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a></em>: <strong>True</strong></p>
+<h3 id="zone">Zone</h3>
+<p>When set, specifies that the policy will apply to the specified zone and its sub-zones. <code>Filter(multi eq)</code></p>
+<p><em>Type</em>: <strong><a href="Logistics.Wms.WarehouseZones.html">WarehouseZones</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<h2 id="business-rules">Business Rules</h2>
+<p>None</p>
+<h2 id="front-end-business-rules">Front-End Business Rules</h2>
+<p>None</p>
+<h2 id="api">API</h2>
+<p>Domain API Query:
+<a href="https://demodb.my.erp.net/api/domain/odata/Logistics_Wms_WarehousePolicies?$top=10">https://demodb.my.erp.net/api/domain/odata/Logistics_Wms_WarehousePolicies?$top=10</a></p>
+<p>Domain API Query Builder:
+<a href="https://demodb.my.erp.net/api/domain/querybuilder#Logistics_Wms_WarehousePolicies?$top=10">https://demodb.my.erp.net/api/domain/querybuilder#Logistics_Wms_WarehousePolicies?$top=10</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/ErpNetDocs/model/blob/master/entities/Logistics.Wms.WarehousePolicies.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

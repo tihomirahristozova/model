@@ -9,7 +9,7 @@ User-defined document statuses. Entity: Gen_Document_Type_User_Statuses
 
 ## Default Visualization
 Default Display Text Format:  
-_{UserStatusName:T}_  
+_{UserStatusName}_  
 Default Search Member:  
 __  
 

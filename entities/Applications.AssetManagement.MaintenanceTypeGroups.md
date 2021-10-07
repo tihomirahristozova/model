@@ -9,7 +9,7 @@ Represents the hierarchy of the groups of maintenance types. Entity: Eam_Mainten
 
 ## Default Visualization
 Default Display Text Format:  
-_{Name:T} : {Code}_  
+_{Name:T}_  
 Default Search Member:  
 __  
 

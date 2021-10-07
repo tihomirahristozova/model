@@ -9,7 +9,7 @@ Contains the sub-queries, which a report contains. Entity: Gen_Report_Queries
 
 ## Default Visualization
 Default Display Text Format:  
-_{TableName:T}_  
+_{TableName}_  
 Default Search Member:  
 __  
 

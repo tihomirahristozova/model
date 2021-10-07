@@ -9,7 +9,7 @@ Contains the materials, which were agreed for this service activity (repair), be
 
 ## Default Visualization
 Default Display Text Format:  
-_{ServiceActivityMaterial.LineNo} : {ServiceActivityMaterial.ServiceActivity.DocumentNo} {ServiceActivityMaterial.ServiceActivity.DocumentType.TypeName:T}_  
+_{ServiceActivityMaterial.ServiceActivity.EntityName}_  
 Default Search Member:  
 __  
 

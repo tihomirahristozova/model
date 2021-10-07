@@ -9,7 +9,7 @@ Contains the output data for the specified period. This is the output on which c
 
 ## Default Visualization
 Default Display Text Format:  
-_{CostDistribution.DocumentType.TypeName:T} {CostDistribution.DocumentNo}_  
+_{CostDistribution.EntityName}_  
 Default Search Member:  
 __  
 

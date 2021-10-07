@@ -9,7 +9,7 @@ The abstract basic building block of web sites. Each module can render multiple 
 
 ## Default Visualization
 Default Display Text Format:  
-_{Name:T}_  
+_{Name}_  
 Default Search Member:  
 __  
 

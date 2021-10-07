@@ -377,7 +377,7 @@ Allowed values for the <code>DistributeBy</code>(Production.ShopFloor.WorkOrderI
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
-<code>IIF( ( obj.WorkOrderItem != null), null, obj.WorkOrderItem)</code></p>
+<code>IIF( ( obj.DistributeBy != null), null, obj.WorkOrderItem)</code></p>
 <h2 id="business-rules">Business Rules</h2>
 <ul>
 <li><a href="../business-rules/R28603.html">R28603 WorkOrderItemIngredient - Distribute By Measurement Category Must Be Null</a></li>

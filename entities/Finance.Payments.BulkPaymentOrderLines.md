@@ -9,7 +9,7 @@ Bulk payment order document line. Each line usually creates one payment order. E
 
 ## Default Visualization
 Default Display Text Format:  
-_{BulkPaymentOrder.DocumentType.TypeName:T} {BulkPaymentOrder.DocumentNo}_  
+_{BulkPaymentOrder.EntityName}_  
 Default Search Member:  
 __  
 

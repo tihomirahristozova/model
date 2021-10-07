@@ -9,7 +9,7 @@ The promotional packages, included in a sales order. Entity: Crm_Sales_Order_Pro
 
 ## Default Visualization
 Default Display Text Format:  
-_{SalesOrder.DocumentType.TypeName:T} {SalesOrder.DocumentNo}_  
+_{SalesOrder.EntityName}_  
 Default Search Member:  
 __  
 

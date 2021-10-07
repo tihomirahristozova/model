@@ -9,7 +9,7 @@ Each record contains a consumed material, reported by the related Work Report. E
 
 ## Default Visualization
 Default Display Text Format:  
-_{WorkReport.DocumentType.TypeName:T} {WorkReport.DocumentNo}_  
+_{WorkReport.EntityName}_  
 Default Search Member:  
 __  
 

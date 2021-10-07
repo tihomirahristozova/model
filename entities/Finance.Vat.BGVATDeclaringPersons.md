@@ -9,7 +9,7 @@ National data: Contains the persons, which are authorized to issue and sign VAT 
 
 ## Default Visualization
 Default Display Text Format:  
-_{EnterpriseCompany.Company.PartyName:T} : {EnterpriseCompany.Company.RegistrationNumber}_  
+_{EnterpriseCompany}_  
 Default Search Member:  
 __  
 

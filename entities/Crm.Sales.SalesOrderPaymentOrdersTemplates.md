@@ -9,7 +9,7 @@ Contains options for generation of payment orders. Each option set is assigned t
 
 ## Default Visualization
 Default Display Text Format:  
-_{Route.ProcedureName:T}_  
+_{Route.ProcedureName}_  
 Default Search Member:  
 __  
 

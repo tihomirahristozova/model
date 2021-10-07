@@ -9,7 +9,7 @@ Specifies user-defined distribution pattern of additonal amount for specific doc
 
 ## Default Visualization
 Default Display Text Format:  
-_{Document.DocumentType.TypeName:T} {Document.DocumentNo}_  
+_{Document.EntityName}_  
 Default Search Member:  
 __  
 

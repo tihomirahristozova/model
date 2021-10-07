@@ -9,7 +9,7 @@ Template for material usage of a principal recipe. Entity: Prd_Principal_Recipe_
 
 ## Default Visualization
 Default Display Text Format:  
-_{IngredientName:T}_  
+_{IngredientName}_  
 Default Search Member:  
 __  
 

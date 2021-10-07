@@ -9,7 +9,7 @@ Purpose codes specify the different purposes recognized by the authorities for d
 
 ## Default Visualization
 Default Display Text Format:  
-_{Name:T} : {Code}_  
+_{Name:T}_  
 Default Search Member:  
 __  
 

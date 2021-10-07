@@ -9,7 +9,7 @@ Contains the planned, running and completed projects of the enterprises. Entity:
 
 ## Default Visualization
 Default Display Text Format:  
-_{Name:T} : {Code}_  
+_{Name}_  
 Default Search Member:  
 __  
 

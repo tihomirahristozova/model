@@ -9,7 +9,7 @@ Obsolete. Not used. Entity: Gen_Document_Manual_Distributed_Amounts
 
 ## Default Visualization
 Default Display Text Format:  
-_{Id}_  
+_{Id}: {DocumentId}_  
 Default Search Member:  
 __  
 

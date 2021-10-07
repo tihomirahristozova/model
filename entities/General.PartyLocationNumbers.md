@@ -9,7 +9,7 @@ Location numbers for a party. Depending on the partner with which we are doing a
 
 ## Default Visualization
 Default Display Text Format:  
-_{LocationNumber}_  
+_{Party.PartyName:T}_  
 Default Search Member:  
 __  
 

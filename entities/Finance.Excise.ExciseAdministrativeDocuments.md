@@ -78,15 +78,15 @@ Aggregate Tree
 | [OtherParty](Finance.Excise.ExciseAdministrativeDocuments.md#otherparty) | [Parties](General.Contacts.Parties.md) | The other party, receiving the goods (Consignee). `Required` `Filter(multi eq)` |
 | [Parent](Finance.Excise.ExciseAdministrativeDocuments.md#parent) | [Documents](General.Documents.md) (nullable) | In a multi-document tree, this is the direct parent document. If this is the root it is null. `Filter(multi eq)` (Inherited from [Documents](General.Documents.md)) |
 | [PrimeCauseDocument](Finance.Excise.ExciseAdministrativeDocuments.md#primecausedocument) | [Documents](General.Documents.md) (nullable) | The document that is the prime cause for creation of the current document. `Filter(multi eq)` (Inherited from [Documents](General.Documents.md)) |
-| [ReportingPerson](Finance.Excise.ExciseAdministrativeDocuments.md#reportingperson) | [Persons](General.Contacts.Persons.md) | This is the person submitting the declaration. `Required` `Filter(multi eq)` `Introduced in version 21.1.3.92` |
+| [ReportingPerson](Finance.Excise.ExciseAdministrativeDocuments.md#reportingperson) | [Persons](General.Contacts.Persons.md) (nullable) | This is the person submitting the declaration. `Filter(multi eq)` `Introduced in version 21.1.3.92` |
 | [ResponsiblePerson](Finance.Excise.ExciseAdministrativeDocuments.md#responsibleperson) | [Persons](General.Contacts.Persons.md) (nullable) | The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc. `Filter(multi eq)` (Inherited from [Documents](General.Documents.md)) |
 | [ReverseOfDocument](Finance.Excise.ExciseAdministrativeDocuments.md#reverseofdocument) | [Documents](General.Documents.md) (nullable) | The document which the current document is reverse of. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) |
 | [Sequence](Finance.Excise.ExciseAdministrativeDocuments.md#sequence) | [Sequences](General.Sequences.md) (nullable) | The sequence that will be used to give new numbers to the documents of this type. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) |
 | [TaxWarehouse](Finance.Excise.ExciseAdministrativeDocuments.md#taxwarehouse) | [TaxWarehouses](Finance.Excise.TaxWarehouses.md) | Our warehouse, dispatching the goods (Consignor). `Required` `Filter(multi eq)` |
 | [ToCompanyDivision](Finance.Excise.ExciseAdministrativeDocuments.md#tocompanydivision) | [CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable) | The division of the company, receiving the document. null when the document is not received by any specific division. `Filter(multi eq)` (Inherited from [Documents](General.Documents.md)) |
 | [ToParty](Finance.Excise.ExciseAdministrativeDocuments.md#toparty) | [Parties](General.Contacts.Parties.md) (nullable) | The party which should receive the document. `Filter(multi eq)` (Inherited from [Documents](General.Documents.md)) |
-| [TransportationCarrier](Finance.Excise.ExciseAdministrativeDocuments.md#transportationcarrier) | [Carriers](Logistics.Shipment.Carriers.md) | The carrier used for the transportation of the goods. `Required` `Filter(multi eq)` |
-| [TransportationVehicle](Finance.Excise.ExciseAdministrativeDocuments.md#transportationvehicle) | [TransportationVehicles](Logistics.Shipment.TransportationVehicles.md) | The vehicle, used for the transportation of the goods. `Required` `Filter(multi eq)` |
+| [TransportationCarrier](Finance.Excise.ExciseAdministrativeDocuments.md#transportationcarrier) | [Carriers](Logistics.Shipment.Carriers.md) (nullable) | The carrier used for the transportation of the goods. `Filter(multi eq)` |
+| [TransportationVehicle](Finance.Excise.ExciseAdministrativeDocuments.md#transportationvehicle) | [TransportationVehicles](Logistics.Shipment.TransportationVehicles.md) (nullable) | The vehicle, used for the transportation of the goods. `Filter(multi eq)` |
 | [UserStatus](Finance.Excise.ExciseAdministrativeDocuments.md#userstatus) | [DocumentTypeUserStatuses](General.DocumentTypeUserStatuses.md) (nullable) | The user status of this document if applicable for this document type. null means unknown or not yet set. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) |
 
 ## Child Collections
@@ -458,9 +458,9 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### ReportingPerson
 
-This is the person submitting the declaration. `Required` `Filter(multi eq)` `Introduced in version 21.1.3.92`
+This is the person submitting the declaration. `Filter(multi eq)` `Introduced in version 21.1.3.92`
 
-_Type_: **[Persons](General.Contacts.Persons.md)**  
+_Type_: **[Persons](General.Contacts.Persons.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ResponsiblePerson
@@ -510,16 +510,16 @@ _Back-End Default Expression:_
 
 ### TransportationCarrier
 
-The carrier used for the transportation of the goods. `Required` `Filter(multi eq)`
+The carrier used for the transportation of the goods. `Filter(multi eq)`
 
-_Type_: **[Carriers](Logistics.Shipment.Carriers.md)**  
+_Type_: **[Carriers](Logistics.Shipment.Carriers.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### TransportationVehicle
 
-The vehicle, used for the transportation of the goods. `Required` `Filter(multi eq)`
+The vehicle, used for the transportation of the goods. `Filter(multi eq)`
 
-_Type_: **[TransportationVehicles](Logistics.Shipment.TransportationVehicles.md)**  
+_Type_: **[TransportationVehicles](Logistics.Shipment.TransportationVehicles.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### UserStatus

@@ -9,7 +9,7 @@ Contains the public web sites. Entity: Cms_Web_Sites
 
 ## Default Visualization
 Default Display Text Format:  
-_{Name:T}_  
+_{Name}_  
 Default Search Member:  
 __  
 

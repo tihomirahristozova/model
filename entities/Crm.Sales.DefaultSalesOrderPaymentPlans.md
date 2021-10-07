@@ -9,7 +9,7 @@ Default payment plan for new documents of the specified document type. Entity: C
 
 ## Default Visualization
 Default Display Text Format:  
-_{DocumentType.TypeName} : {DocumentType.Code}_  
+_{DocumentType.EntityName}_  
 Default Search Member:  
 __  
 

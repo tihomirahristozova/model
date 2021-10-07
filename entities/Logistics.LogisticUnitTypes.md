@@ -9,7 +9,7 @@ Types of logistic units, like EU-PALLET, 40x40 pallet, ISO container, etc. Entit
 
 ## Default Visualization
 Default Display Text Format:  
-_{Name:T} : {Code}_  
+_{Name:T}_  
 Default Search Member:  
 __  
 

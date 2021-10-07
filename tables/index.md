@@ -675,7 +675,11 @@
 
 ## [VAT](VAT.md)
 
+* [VAT_Box_Types](VAT_Box_Types.md)
+* [VAT_Deal_Type_Document_Amounts](VAT_Deal_Type_Document_Amounts.md)
 * [VAT_Deal_Types](VAT_Deal_Types.md)
+* [VAT_Declaration_Lines](VAT_Declaration_Lines.md)
+* [VAT_Declarations](VAT_Declarations.md)
 * [VAT_Entries](VAT_Entries.md)
 
 ## [Wf](Wf.md)
@@ -695,6 +699,7 @@
 * [Wms_Warehouse_Order_Fulfillments](Wms_Warehouse_Order_Fulfillments.md)
 * [Wms_Warehouse_Order_Lines](Wms_Warehouse_Order_Lines.md)
 * [Wms_Warehouse_Orders](Wms_Warehouse_Orders.md)
+* [Wms_Warehouse_Policies](Wms_Warehouse_Policies.md)
 * [Wms_Warehouse_Requisition_Fulfillments](Wms_Warehouse_Requisition_Fulfillments.md)
 * [Wms_Warehouse_Requisition_Lines](Wms_Warehouse_Requisition_Lines.md)
 * [Wms_Warehouse_Requisitions](Wms_Warehouse_Requisitions.md)

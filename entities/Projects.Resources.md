@@ -9,7 +9,7 @@ Contains the enterprise resources, which are available for including in projects
 
 ## Default Visualization
 Default Display Text Format:  
-_{Name:T}_  
+_{Name}_  
 Default Search Member:  
 __  
 

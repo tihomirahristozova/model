@@ -9,7 +9,7 @@ Contains the documents which are referenced by each document amount. Entity: Gen
 
 ## Default Visualization
 Default Display Text Format:  
-_{DocumentAmount.Document.DocumentType.TypeName:T} {DocumentAmount.Document.DocumentNo}_  
+_{DocumentAmount.Document.EntityName}_  
 Default Search Member:  
 __  
 

@@ -9,7 +9,7 @@ Pricing models are assigned to product groups and are used to automate creation 
 
 ## Default Visualization
 Default Display Text Format:  
-_{Name:T}_  
+_{Name}_  
 Default Search Member:  
 __  
 

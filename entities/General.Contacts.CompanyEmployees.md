@@ -9,7 +9,7 @@ Contains the company employee contracts. Entity: Cm_Company_Employees
 
 ## Default Visualization
 Default Display Text Format:  
-_{ContractCode}_  
+_{Person.PartyName:T}_  
 Default Search Member:  
 __  
 

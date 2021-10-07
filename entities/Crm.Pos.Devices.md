@@ -9,7 +9,7 @@ Represents one POS device, attached to a POS terminal. Entity: Pos_Devices (Intr
 
 ## Default Visualization
 Default Display Text Format:  
-_{PosTerminal.PosTerminalName:T} : {PosTerminal.PosTerminalCode}_  
+_{PosTerminal.PosTerminalName:T}_  
 Default Search Member:  
 __  
 

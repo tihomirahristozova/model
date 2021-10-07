@@ -9,7 +9,7 @@ Detail records (lines) of promotional package definition. Entity: Crm_Promotiona
 
 ## Default Visualization
 Default Display Text Format:  
-_{PromotionalPackage.Name:T} : {PromotionalPackage.Code}_  
+_{PromotionalPackage.Name}_  
 Default Search Member:  
 __  
 

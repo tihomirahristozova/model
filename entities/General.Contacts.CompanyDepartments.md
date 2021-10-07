@@ -9,7 +9,7 @@ Hierarchical structure of the company departments. The departments and divisions
 
 ## Default Visualization
 Default Display Text Format:  
-_{DepartmentName:T}_  
+_{DepartmentName}_  
 Default Search Member:  
 __  
 

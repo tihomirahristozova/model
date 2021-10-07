@@ -9,7 +9,7 @@ Application, which is trusted to access the ERP data. Entity: Sec_Trusted_Applic
 
 ## Default Visualization
 Default Display Text Format:  
-_{Name:T}_  
+_{Name}_  
 Default Search Member:  
 __  
 

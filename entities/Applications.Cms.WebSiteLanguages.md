@@ -9,7 +9,7 @@ Specifies a language, supported by the web site. Entity: Cms_Web_Site_Languages
 
 ## Default Visualization
 Default Display Text Format:  
-_{LanguageCode}_  
+_{WebSite.Name}_  
 Default Search Member:  
 __  
 

@@ -225,7 +225,7 @@ Aggregate Root:<br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
-<code>new Amount( ( ( Convert( obj.QuantityBase.Value, Nullable</code>1) * obj.ExciseDutyRateValue) ?? 0), Convert( obj.GetAggregateParent( ), ExciseAdministrativeDocument).DocumentCurrency)`</p>
+<code>new Amount( ( ( Convert( obj.ExciseAmountBase, Nullable</code>1) * obj.ExciseDutyRateValue) ?? 0), Convert( obj.GetAggregateParent( ), ExciseAdministrativeDocument).DocumentCurrency)`</p>
 <h3 id="exciseamountbase">ExciseAmountBase</h3>
 <p><em>Type</em>: <strong>decimal (14, 2)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
@@ -305,7 +305,7 @@ Aggregate Root:<br>
 <p><em>Type</em>: <strong><a href="Finance.Excise.ExcisePurposeCodes.html">ExcisePurposeCodes</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
-<code>IIF( ( obj.LineNo == obj.LineNo), obj.Transaction.Query( ).FirstOrDefault( epc =&gt; epc.IsDefault), null)</code></p>
+<code>IIF( ( obj.LineNo == obj.LineNo), obj.DefaultExcisePurposeCode( ), null)</code></p>
 <h3 id="measuringtransaction">MeasuringTransaction</h3>
 <p>Transaction of product input or output, measured with specialized measuring device for excise purposes. <code>Filter(multi eq)</code> <code>Introduced in version 21.1.3.87</code></p>
 <p><em>Type</em>: <strong><a href="Finance.Excise.MeasuringTransactions.html">MeasuringTransactions</a> (nullable)</strong><br>

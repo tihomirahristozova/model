@@ -9,7 +9,7 @@ Contains the additional participants in the activities. These are the participat
 
 ## Default Visualization
 Default Display Text Format:  
-_{Activity.DocumentType.TypeName:T} {Activity.DocumentNo}_  
+_{Activity.EntityName}_  
 Default Search Member:  
 __  
 

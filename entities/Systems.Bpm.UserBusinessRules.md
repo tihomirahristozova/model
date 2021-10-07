@@ -9,7 +9,7 @@ Represents user-defined business rule. Entity: Sys_User_Business_Rules
 
 ## Default Visualization
 Default Display Text Format:  
-_{RepositoryName:T} : {Code}_  
+_{RepositoryName}_  
 Default Search Member:  
 __  
 

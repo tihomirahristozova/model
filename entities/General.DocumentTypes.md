@@ -9,7 +9,7 @@ List of user-defined document types. Each type has associated system entity (obj
 
 ## Default Visualization
 Default Display Text Format:  
-_{TypeName} : {Code}_  
+_{TypeName:T}_  
 Default Search Member:  
 __  
 

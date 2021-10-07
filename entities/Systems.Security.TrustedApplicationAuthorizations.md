@@ -9,7 +9,7 @@ Authorization of a trusted application to access the data on behalf of a context
 
 ## Default Visualization
 Default Display Text Format:  
-_{TrustedApplication.Name:T}_  
+_{TrustedApplication.Name}_  
 Default Search Member:  
 __  
 

@@ -9,7 +9,7 @@ Contains the results of cost calculations. Entity: Cost_Calculation_Results
 
 ## Default Visualization
 Default Display Text Format:  
-_{Calculation.DocumentType.TypeName:T} {Calculation.DocumentNo}_  
+_{Calculation.EntityName}_  
 Default Search Member:  
 __  
 

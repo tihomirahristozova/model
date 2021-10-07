@@ -9,7 +9,7 @@ List of external applications. Used to run external applications. Entity: Sys_Ex
 
 ## Default Visualization
 Default Display Text Format:  
-_{EntityName:T}_  
+_{EntityName}_  
 Default Search Member:  
 __  
 

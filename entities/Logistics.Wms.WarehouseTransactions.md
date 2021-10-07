@@ -9,7 +9,7 @@ Represents increase or decrease in the quantity available in a warehouse locatio
 
 ## Default Visualization
 Default Display Text Format:  
-_{Id}_  
+_{Id}: {WarehouseOrderId}_  
 Default Search Member:  
 __  
 

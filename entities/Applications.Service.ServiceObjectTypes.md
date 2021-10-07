@@ -9,7 +9,7 @@ Contins the types of serviceable objects. Entity: Srv_Service_Object_Types
 
 ## Default Visualization
 Default Display Text Format:  
-_{Name:T}_  
+_{Name}_  
 Default Search Member:  
 __  
 

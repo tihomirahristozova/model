@@ -9,7 +9,7 @@ Consumables are products, which are usually sold accompanying an asset rental. E
 
 ## Default Visualization
 Default Display Text Format:  
-_{RentalAsset.RentalAssetName:T} : {RentalAsset.RentalAssetCode}_  
+_{RentalAsset.RentalAssetName}_  
 Default Search Member:  
 __  
 

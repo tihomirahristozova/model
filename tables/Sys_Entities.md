@@ -12,6 +12,7 @@ Contains entities, which have secured access. Entity: Sys_Entities
 | Name | Type | Description |
 | - | - | --- |
 |[Access_Key_Id](#access_key_id)|`uniqueidentifier` |The access key, required to access the secured entity.|
+|[Display_Text_Format](#display_text_format)|`nvarchar(64)` |Interpolated string, containing the default format for displaying values of the entity. NULL means to use the system-wide default.|
 |[Entity_Id](#entity_id)|`uniqueidentifier` `PK`||
 |[Entity_Name](#entity_name)|`nvarchar(64)` |The system name of the entity, which is being secured.|
 |[Log_Create](#log_create)|`bit` |Specifies whether to log every insert for this entity.|
@@ -60,6 +61,36 @@ The access key, required to access the secured entity.
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|yes|no|
+
+### Display_Text_Format
+
+
+Interpolated string, containing the default format for displaying values of the entity. NULL means to use the system-wide default.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|64|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|nvarchar(64) (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
 
 ### Entity_Id
 

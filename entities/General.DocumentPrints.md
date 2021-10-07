@@ -9,7 +9,7 @@ Contains the history of each document print or export. Entity: Gen_Document_Prin
 
 ## Default Visualization
 Default Display Text Format:  
-_{Document.DocumentType.TypeName:T} {Document.DocumentNo}_  
+_{Document.EntityName}_  
 Default Search Member:  
 __  
 

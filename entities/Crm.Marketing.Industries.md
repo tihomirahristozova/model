@@ -9,7 +9,7 @@ The industries, for which we are offering solutions. Entity: Crm_Industries (Int
 
 ## Default Visualization
 Default Display Text Format:  
-_{Name:T} : {Code}_  
+_{Name:T}_  
 Default Search Member:  
 __  
 

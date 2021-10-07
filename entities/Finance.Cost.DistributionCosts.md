@@ -9,7 +9,7 @@ The cost types and their amounts which are distributed by a Cost Distribution do
 
 ## Default Visualization
 Default Display Text Format:  
-_{CostDistribution.DocumentType.TypeName:T} {CostDistribution.DocumentNo}_  
+_{CostDistribution.EntityName}_  
 Default Search Member:  
 __  
 

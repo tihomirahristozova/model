@@ -9,7 +9,7 @@ Customer contracts list. For each combination of Enterprise Company and external
 
 ## Default Visualization
 Default Display Text Format:  
-_{Party.PartyName:T} : {Number}_  
+_{Party.PartyName:T}_  
 Default Search Member:  
 __  
 

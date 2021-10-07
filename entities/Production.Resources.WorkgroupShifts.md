@@ -9,7 +9,7 @@ Contains the working shifts of the wrokgroups. Entity: Prd_Workgroup_Shifts
 
 ## Default Visualization
 Default Display Text Format:  
-_{ShiftName:T}_  
+_{ShiftName}_  
 Default Search Member:  
 __  
 

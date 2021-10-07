@@ -9,7 +9,7 @@ Specification of a logistic unit. The database can contain any kind of specifica
 
 ## Default Visualization
 Default Display Text Format:  
-_{Name:T} : {Code}_  
+_{Name:T}_  
 Default Search Member:  
 __  
 
