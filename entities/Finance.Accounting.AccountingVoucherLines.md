@@ -9,7 +9,7 @@ Contains one debit or credit posting within an accounting voucher. Entity: Acc_V
 
 ## Default Visualization
 Default Display Text Format:  
-_{LineNo} : {Voucher.DocumentNo} {Voucher.DocumentType.TypeName:T}_  
+_{LineNo}. {Voucher.DocumentNo} {Voucher.DocumentType.TypeName:T}_  
 Default Search Member:  
 _Voucher.DocumentNo_  
 

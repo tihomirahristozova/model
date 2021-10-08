@@ -9,7 +9,7 @@ Contains the free materials, included in the service agreement. Entity: Srv_Serv
 
 ## Default Visualization
 Default Display Text Format:  
-_{LineNo} : {ServiceAgreement.DocumentNo} {ServiceAgreement.DocumentType.TypeName:T}_  
+_{LineNo}. {ServiceAgreement.DocumentNo} {ServiceAgreement.DocumentType.TypeName:T}_  
 Default Search Member:  
 _ServiceAgreement.DocumentNo_  
 

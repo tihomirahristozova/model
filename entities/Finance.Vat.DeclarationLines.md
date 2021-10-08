@@ -9,7 +9,7 @@ Contains the VAT declaration lines for declaration, issued by the enterprise com
 
 ## Default Visualization
 Default Display Text Format:  
-_{LineNo} : {Declaration.DocumentNo} {Declaration.DocumentType.TypeName:T}_  
+_{LineNo}. {Declaration.DocumentNo} {Declaration.DocumentType.TypeName:T}_  
 Default Search Member:  
 _Declaration.DocumentNo_  
 

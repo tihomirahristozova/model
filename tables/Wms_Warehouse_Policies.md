@@ -24,7 +24,7 @@ Warehouse Policies is a hierarchical system for applying policies to warehouse o
 |[Row_Version](#row_version)|`timestamp` ||
 |[To_Date](#to_date)|`date` |When set, specifies the de-activation date of the policy.|
 |[Value](#value)|`nvarchar(64)` |The value specified for the policy. For boolean policies, allowed values are "true" and "false".|
-|[Warehouse_Id](#warehouse_id)|`uniqueidentifier` |The warehouse for which the policy is defined.|
+|[Warehouse_Id](#warehouse_id)|`uniqueidentifier` |The warehouse for which the policy is defined. |
 |[Warehouse_Policy_Id](#warehouse_policy_id)|`uniqueidentifier` `PK`||
 |[Zone_Id](#zone_id)|`uniqueidentifier` |When set, specifies that the policy will apply to the specified zone and its sub-zones.|
 
@@ -346,7 +346,7 @@ The value specified for the policy. For boolean policies, allowed values are "tr
 ### Warehouse_Id
 
 
-The warehouse for which the policy is defined.
+The warehouse for which the policy is defined. 
 
 | Property | Value |
 | - | - |

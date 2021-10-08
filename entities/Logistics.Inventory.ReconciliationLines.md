@@ -9,7 +9,7 @@ Store reconciliations (physical counting) detail lines. Each line contains the r
 
 ## Default Visualization
 Default Display Text Format:  
-_{LineOrd} : {Reconciliation.DocumentNo} {Reconciliation.DocumentType.TypeName:T}_  
+_{LineOrd}. {Reconciliation.DocumentNo} {Reconciliation.DocumentType.TypeName:T}_  
 Default Search Member:  
 _Reconciliation.DocumentNo_  
 

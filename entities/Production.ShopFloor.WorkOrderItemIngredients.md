@@ -9,7 +9,7 @@ The materials consumed in the production order operations. Entity: Prd_Work_Orde
 
 ## Default Visualization
 Default Display Text Format:  
-_{LineOrd} : {WorkOrder.DocumentNo} {WorkOrder.DocumentType.TypeName:T}_  
+_{LineOrd}. {WorkOrder.DocumentNo} {WorkOrder.DocumentType.TypeName:T}_  
 Default Search Member:  
 _WorkOrder.DocumentNo_  
 

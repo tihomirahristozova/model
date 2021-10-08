@@ -368,12 +368,18 @@ Consecutive line number within the document.
 |RTF|no|
 |Sortable|no|
 |Summary Type|None|
-|Supports EQUALS_IN|no|
+|Supports EQUALS_IN|yes|
 |Type|int|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
 |Visible|yes|
+
+#### Line_No - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|no|no|
 
 ### Measuring_Transaction_Id
 
@@ -500,12 +506,18 @@ The number of the line within the parent document, which the current line execut
 |RTF|no|
 |Sortable|no|
 |Summary Type|None|
-|Supports EQUALS_IN|no|
+|Supports EQUALS_IN|yes|
 |Type|int (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
 |Visible|yes|
+
+#### Parent_Line_No - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
 
 ### Product_Id
 

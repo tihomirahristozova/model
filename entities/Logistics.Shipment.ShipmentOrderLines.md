@@ -9,7 +9,7 @@ Represents detail lines of orders for shipment of sales orders to customers. Eac
 
 ## Default Visualization
 Default Display Text Format:  
-_{LineNo} : {ShipmentOrder.DocumentNo} {ShipmentOrder.DocumentType.TypeName:T}_  
+_{LineNo}. {ShipmentOrder.DocumentNo} {ShipmentOrder.DocumentType.TypeName:T}_  
 Default Search Member:  
 _ShipmentOrder.DocumentNo_  
 

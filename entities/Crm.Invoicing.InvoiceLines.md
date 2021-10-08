@@ -9,7 +9,7 @@ Detail records (lines) of the invoices. Entity: Crm_Invoice_Lines
 
 ## Default Visualization
 Default Display Text Format:  
-_{LineNo} : {Invoice.DocumentNo} {Invoice.DocumentType.TypeName:T}_  
+_{LineNo}. {Invoice.DocumentNo} {Invoice.DocumentType.TypeName:T}_  
 Default Search Member:  
 _Invoice.DocumentNo_  
 

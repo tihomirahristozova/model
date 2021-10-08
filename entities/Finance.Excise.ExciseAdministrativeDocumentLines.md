@@ -9,7 +9,7 @@ The details of the movement of each excise product for each excise document. Ent
 
 ## Default Visualization
 Default Display Text Format:  
-_{LineNo} : {ExciseAdministrativeDocument.DocumentNo} {ExciseAdministrativeDocument.DocumentType.TypeName:T}_  
+_{LineNo}. {ExciseAdministrativeDocument.DocumentNo} {ExciseAdministrativeDocument.DocumentType.TypeName:T}_  
 Default Search Member:  
 _ExciseAdministrativeDocument.DocumentNo_  
 
@@ -30,9 +30,9 @@ Aggregate Root:
 | [ExciseAmountBase](Finance.Excise.ExciseAdministrativeDocumentLines.md#exciseamountbase) | decimal (14, 2) |  
 | [ExciseDutyRateValue](Finance.Excise.ExciseAdministrativeDocumentLines.md#excisedutyratevalue) | decimal (10, 6) __nullable__ | The rate which should be applied for the specified product and purpose. null means not assigned yet. `Introduced in version 21.1.3.97` 
 | [Id](Finance.Excise.ExciseAdministrativeDocumentLines.md#id) | guid |  
-| [LineNo](Finance.Excise.ExciseAdministrativeDocumentLines.md#lineno) | int32 | Consecutive line number within the document. `Required` 
+| [LineNo](Finance.Excise.ExciseAdministrativeDocumentLines.md#lineno) | int32 | Consecutive line number within the document. `Required` `Filter(multi eq)` 
 | [Notes](Finance.Excise.ExciseAdministrativeDocumentLines.md#notes) | string (max) __nullable__ | Notes for this ExciseAdministrative<br />DocumentLine. 
-| [ParentLineNo](Finance.Excise.ExciseAdministrativeDocumentLines.md#parentlineno) | int32 __nullable__ | The number of the line within the parent document, which the current line executes. Null when the current line does not execute line. `Introduced in version 22.1.4.9` 
+| [ParentLineNo](Finance.Excise.ExciseAdministrativeDocumentLines.md#parentlineno) | int32 __nullable__ | The number of the line within the parent document, which the current line executes. Null when the current line does not execute line. `Filter(multi eq)` `Introduced in version 22.1.4.9` 
 | [Quantity](Finance.Excise.ExciseAdministrativeDocumentLines.md#quantity) | [Quantity (12, 3)](../data-types.md#quantity) | The quantity being sold, in the measurement unit, specified in Quantity Unit. `Unit: QuantityUnit` `Required` `Default(1)` 
 | [QuantityBase](Finance.Excise.ExciseAdministrativeDocumentLines.md#quantitybase) | [Quantity (12, 3)](../data-types.md#quantity) | The quantity in base measurement category for the product. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` 
 
@@ -100,10 +100,10 @@ _Default Value_: **NewGuid**
 
 ### LineNo
 
-Consecutive line number within the document. `Required`
+Consecutive line number within the document. `Required` `Filter(multi eq)`
 
 _Type_: **int32**  
-_Supported Filters_: **NotFilterable**  
+_Supported Filters_: **Equals, EqualsIn**  
 _Supports Order By_: **False**  
 
 _Back-End Default Expression:_  
@@ -122,10 +122,10 @@ _Maximum Length_: **2147483647**
 
 ### ParentLineNo
 
-The number of the line within the parent document, which the current line executes. Null when the current line does not execute line. `Introduced in version 22.1.4.9`
+The number of the line within the parent document, which the current line executes. Null when the current line does not execute line. `Filter(multi eq)` `Introduced in version 22.1.4.9`
 
 _Type_: **int32 __nullable__**  
-_Supported Filters_: **NotFilterable**  
+_Supported Filters_: **Equals, EqualsIn**  
 _Supports Order By_: **False**  
 
 ### Quantity

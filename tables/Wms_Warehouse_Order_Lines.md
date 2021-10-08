@@ -20,6 +20,8 @@ A planned task (operation) in a warehouse order. Entity: Wms_Warehouse_Order_Lin
 |[Logistic_Unit_Id](#logistic_unit_id)|`uniqueidentifier` |Logistic unit, which should be used in the operation.|
 |[Lot_Id](#lot_id)|`uniqueidentifier` |The lot of the product, which should be used. NULL for operations, which are not lot-specific, or when any lot can be used.|
 |[Notes](#notes)|`nvarchar(max)` ||
+|[Parent_Document_Id](#parent_document_id)|`uniqueidentifier` |The document, which the current line executes. Null when the current line does not execute another line.|
+|[Parent_Line_No](#parent_line_no)|`int` |The number of the line within the parent document, which the current line executes. Null when the current line does not execute line.|
 |[Product_Id](#product_id)|`uniqueidentifier` |The product, which should be used for the operation.|
 |[Product_Variant_Id](#product_variant_id)|`uniqueidentifier` |The product variant, which should be used.|
 |[Quantity](#quantity)|`decimal(12, 3)` |The quantity of the product, which should be processed.|
@@ -51,7 +53,7 @@ Unique consecutive line number within the order.
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|2|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -87,7 +89,7 @@ Logistic unit, which should be used in the operation.
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|11|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -124,7 +126,7 @@ The lot of the product, which should be used. NULL for operations, which are not
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|9|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -158,7 +160,7 @@ The lot of the product, which should be used. NULL for operations, which are not
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|2147483647|
-|Order|2147483647|
+|Order|15|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -174,6 +176,79 @@ The lot of the product, which should be used. NULL for operations, which are not
 |User Login|no|
 |Visible|yes|
 
+### Parent_Document_Id
+
+
+The document, which the current line executes. Null when the current line does not execute another line.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|16|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|Referenced Table|[Wms_Warehouse_Requisitions](Wms_Warehouse_Requisitions.md)|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Parent_Document_Id - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
+
+### Parent_Line_No
+
+
+The number of the line within the parent document, which the current line executes. Null when the current line does not execute line.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|17|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Parent_Line_No - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
+
 ### Product_Id
 
 
@@ -188,7 +263,7 @@ The product, which should be used for the operation.
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|7|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -225,7 +300,7 @@ The product variant, which should be used.
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|8|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -263,7 +338,7 @@ The quantity of the product, which should be processed.
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|12|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -300,7 +375,7 @@ The measurement unit of Quantity. NULL for operations, which are not quantity-re
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|13|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -364,7 +439,7 @@ The serial number of the product, which should be used. NULL for operations, whi
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|10|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -402,7 +477,7 @@ The type of the task (operation), which should be performed. REC=Receive; DES=De
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|3|
-|Order|2147483647|
+|Order|4|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -438,7 +513,7 @@ Destination warehouse location. NULL for operations, which do not specify destin
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|14|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -475,7 +550,7 @@ Location, where the opeartion should be performed. NULL for operations, which do
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|6|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -509,7 +584,7 @@ Location, where the opeartion should be performed. NULL for operations, which do
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|1|
 |Ownership Reference|yes|
 |Pasword|no|
 |Picture|no|
@@ -543,7 +618,7 @@ Location, where the opeartion should be performed. NULL for operations, which do
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|0|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -579,7 +654,7 @@ Human or robot worker, which should execute the operation. NULL means that the l
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|3|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -616,7 +691,7 @@ The warehouse zone, in which the operation should be performed. NULL for operati
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|5|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|

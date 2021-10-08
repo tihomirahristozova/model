@@ -1027,6 +1027,11 @@
     href: Prj_Work_Report_Resources.md
   - name: Prj_Work_Reports
     href: Prj_Work_Reports.md
+- name: Public
+  href: Public.md
+  items:
+  - name: Public_Users
+    href: Public_Users.md
 - name: Rent
   href: Rent.md
   items:
