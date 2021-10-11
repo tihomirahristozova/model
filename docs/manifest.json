@@ -5742,7 +5742,7 @@
       "output": {
         ".html": {
           "relative_path": "business-rules/R30704.html",
-          "hash": "8jD62+sKMIUupgev0uRG3w=="
+          "hash": "4XcHtxyKRRIWqz5pVS7zkA=="
         }
       },
       "is_incremental": false,
@@ -9426,7 +9426,19 @@
       "output": {
         ".html": {
           "relative_path": "business-rules/R32512.html",
-          "hash": "4VY9TqWEd4104HaGLgEDmA=="
+          "hash": "zGJJkqOvuPgfU9icED54pQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "business-rules/R32554.md",
+      "output": {
+        ".html": {
+          "relative_path": "business-rules/R32554.html",
+          "hash": "Ae0YwBLBjA5rOiCc+QMOyg=="
         }
       },
       "is_incremental": false,
@@ -14644,7 +14656,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Logistics.Wms.WarehouseOrders.html",
-          "hash": "iSANBV8znHVaVcsZF62q2Q=="
+          "hash": "/CUgVF2HhsrsyP3/owWFSg=="
         }
       },
       "is_incremental": false,
