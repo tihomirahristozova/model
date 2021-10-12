@@ -139,7 +139,7 @@ Generations from Store transactions are used for all other products, which are s
 Also the generation works only if the field Guarantee Period Days has a value. Otherwise, it throws an error for the missing values.</p>
 <h2 id="metrics"><a href="../reference/metrics.html">Metrics</a></h2>
 <p>No metrics are used. A new sub-document is created each time the generation starts, regardless of those already created in previous starts.</p>
-<p>The Service Agreement header is created from the Sales Order header as follows:</p>
+<h4 id="the-service-agreement-header-is-created-from-the-sales-order-header-as-follows">The Service Agreement header is created from the Sales Order header as follows:</h4>
 <pre><code>ServiceAgreement.Customer = SalesOrder.Customer
 ServiceAgreement.StartDateTime = Today
 </code></pre>
