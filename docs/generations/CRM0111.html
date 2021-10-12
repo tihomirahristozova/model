@@ -91,7 +91,7 @@
 </tr>
 <tr>
 <td style="text-align: left;">Sub-document</td>
-<td>Service agreement</td>
+<td>Service Аgreement</td>
 </tr>
 <tr>
 <td style="text-align: left;">Full Name</td>
@@ -128,30 +128,32 @@
 </tbody>
 </table>
 <h2 id="business-logic">Business Logic</h2>
-<p>This generation creates Service agreements only for those types of products, which are defined as serviced, but non-stocked.
-A new Service object is created for each product and it is saved in the Service agreement lines.
-Generations from Store transactions are used for all other products, which are serviced.</p>
+<p>This generation creates Service Agreements only for the products from the current Sale Order that <strong>are serviced</strong> (Product.ProductType.IsServiced = True), but <strong>are not stocked</strong> (Product.ProductType.IsStocked = False). A new Service object is created for each of these products and it is saved in the Service Agreement Lines.</p>
+<p>The generation is used to create Service Agreements only for products that are not stocked. For the other serviced products is used the respective generation from the Store Transactions (which are the result of this Sales Order).</p>
 <p>The generation works only if there is a service type that is marked as default. Otherwise, it throws an error for missing default service type. <br>
-Also the generation works only if the field Guarantee Period Days has a value. Otherwise, it throws an error for the missing values.</p>
+Also, the generation works only if the field Guarantee Period Days has a value. Otherwise, it throws an error for the missing values.</p>
 <h2 id="metrics"><a href="../reference/metrics.html">Metrics</a></h2>
-<p>No metrics are used. A new sub-document is created each time the generation starts, regardless of those already created in previous starts.</p>
+<p>No metrics are used by this generation. A new sub-document is created each time the generation starts, regardless of the sub-documents that have already have been created.</p>
 <p><strong>The Service Agreement header is created from the Sales Order header as follows:</strong></p>
 <pre><code>ServiceAgreement.Customer = SalesOrder.Customer
 ServiceAgreement.StartDateTime = Today
 </code></pre>
-<p>For each sales order with a product, that is defined as serviced, but non-stocked, one service object and one service agreement line are created in the sub-document:</p>
+<p><strong>For each Sales Order Line, which contains a product that is defined as serviced and is not stocked, are created:</strong></p>
+<p><strong>a new service object as follows:</strong></p>
 <pre><code>ServiceObject.Product = SalesOrderLine.Product
 ServiceObject.SerialNumber = SalesOrderLine.SerialNumber
 ServiceObject.ServiceObjectName = SalesOrderLine.Product.ProductName
 ServiceObject.Notes = SalesOrder.DisplayText
 ServiceObject.EnterpriseCompany = ServiceAgreement.EnterpriseCompany
-
-ServiceAgreementLine.LineNo = SalesOrderLine.LineNo
-ServiceAgreementLine.ServiceObject = ServiceObject
+</code></pre>
+<p><strong>and a new Service Agreement Line as follows:</strong></p>
+<pre><code>ServiceAgreementLine.LineNo = SalesOrderLine.LineNo
+ServiceAgreementLine.ServiceObject = the new ServiceObject, created by this generation
 ServiceAgreementLine.Quantity = SalesOrderLine.Quantity
 ServiceAgreementLine.LineStartDateTime = Today
 ServiceAgreementLine.LineEndDateTime = Today + SalesOrderLine.GuaranteePeriodDays
-ServiceAgreementLine.ServiceType = ServiceType
+ServiceAgreementLine.ServiceType = the ServiceType which is marked as default
+ServiceAgreementLine.ParenDocument = SalesOrder
 ServiceAgreementLine.ParentLineNo = SalesOrderLine.LineNo
 </code></pre>
 <div class="NOTE">
