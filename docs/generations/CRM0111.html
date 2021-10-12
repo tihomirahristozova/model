@@ -1,0 +1,203 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>CRM0111 Create Service agreements | ERP.net Domain Model </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="CRM0111 Create Service agreements | ERP.net Domain Model ">
+    <meta name="generator" content="docfx 2.56.9.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="crm0111-create-service-agreements">CRM0111 Create Service agreements</h1>
+
+<h2 id="basic-information">Basic Information</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Module</th>
+<th>Crm.Sales</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Code</td>
+<td>CRM0111</td>
+</tr>
+<tr>
+<td style="text-align: left;">Parent Document</td>
+<td>Sales Order</td>
+</tr>
+<tr>
+<td style="text-align: left;">Sub-document</td>
+<td>Service agreement</td>
+</tr>
+<tr>
+<td style="text-align: left;">Full Name</td>
+<td>Create Service agreements</td>
+</tr>
+<tr>
+<td style="text-align: left;">Status</td>
+<td><a class="xref" href="https://erpnetdocs.github.io/tech/advanced/documents/generation-procedures.html">NEW</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Deterministic</td>
+<td><a class="xref" href="https://erpnetdocs.github.io/tech/advanced/documents/document-generation-and-transitional-documents.html">YES</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Supports Transitional Documents</td>
+<td><a class="xref" href="https://erpnetdocs.github.io/tech/advanced/documents/document-generation-and-transitional-documents.html">NO</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Replaces</td>
+<td>GenerateServiceAgreement</td>
+</tr>
+<tr>
+<td style="text-align: left;">Orphan Rows</td>
+<td>Ignore</td>
+</tr>
+<tr>
+<td style="text-align: left;">Split Function</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: left;">Introduced In Version</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: left;">Date of Suspension</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h2 id="business-logic">Business Logic</h2>
+<p>This generation creates Service agreements only for those types of products, which are defined as serviced, but non-stocked.
+A new Service object is created for each product and it is saved in the Service agreement lines.
+Generations from Store transactions are used for all other products, which are serviced.</p>
+<p>The generation works only if there is a service type that is marked as default. Otherwise, it throws an error for missing default service type.
+Also the generation works only if the field Guarantee Period Days has a value. Otherwise, it throws an error for the missing values.</p>
+<h2 id="metrics"><a href="../reference/metrics.html">Metrics</a></h2>
+<p>No metrics are used. A new sub-document is created each time the generation starts, regardless of those already created in previous starts.</p>
+<p>The Service Agreement header is created from the Sales Order header as follows:</p>
+<pre><code>ServiceAgreement.Customer = SalesOrder.Customer
+ServiceAgreement.StartDateTime = Today
+</code></pre>
+<p>For each sales order with a product, that is defined as serviced, but non-stocked, one service object and one service agreement line are created in the sub-document:</p>
+<pre><code>ServiceObject.Product = SalesOrderLine.Product
+ServiceObject.SerialNumber = SalesOrderLine.SerialNumber
+ServiceObject.ServiceObjectName = SalesOrderLine.Product.ProductName
+ServiceObject.Notes = SalesOrder.DisplayText
+ServiceObject.EnterpriseCompany = ServiceAgreement.EnterpriseCompany
+
+ServiceAgreementLine.LineNo = SalesOrderLine.LineNo
+ServiceAgreementLine.ServiceObject = ServiceObject
+ServiceAgreementLine.Quantity = SalesOrderLine.Quantity
+ServiceAgreementLine.LineStartDateTime = Today
+ServiceAgreementLine.LineEndDateTime = Today + SalesOrderLine.GuaranteePeriodDays
+ServiceAgreementLine.ServiceType = ServiceType
+ServiceAgreementLine.ParentLineNo = SalesOrderLine.LineNo
+</code></pre>
+<div class="NOTE">
+<h5>Note</h5>
+<p>The created service agreement is saved only if there is at least one line in it.</p>
+</div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/ErpNetDocs/model/blob/master/generations/CRM0111.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
