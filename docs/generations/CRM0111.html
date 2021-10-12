@@ -118,10 +118,6 @@
 <td>Ignore</td>
 </tr>
 <tr>
-<td style="text-align: left;">Split Function</td>
-<td></td>
-</tr>
-<tr>
 <td style="text-align: left;">Introduced In Version</td>
 <td></td>
 </tr>
@@ -135,11 +131,11 @@
 <p>This generation creates Service agreements only for those types of products, which are defined as serviced, but non-stocked.
 A new Service object is created for each product and it is saved in the Service agreement lines.
 Generations from Store transactions are used for all other products, which are serviced.</p>
-<p>The generation works only if there is a service type that is marked as default. Otherwise, it throws an error for missing default service type.
+<p>The generation works only if there is a service type that is marked as default. Otherwise, it throws an error for missing default service type. <br>
 Also the generation works only if the field Guarantee Period Days has a value. Otherwise, it throws an error for the missing values.</p>
 <h2 id="metrics"><a href="../reference/metrics.html">Metrics</a></h2>
 <p>No metrics are used. A new sub-document is created each time the generation starts, regardless of those already created in previous starts.</p>
-<h4 id="the-service-agreement-header-is-created-from-the-sales-order-header-as-follows">The Service Agreement header is created from the Sales Order header as follows:</h4>
+<p><strong>The Service Agreement header is created from the Sales Order header as follows:</strong></p>
 <pre><code>ServiceAgreement.Customer = SalesOrder.Customer
 ServiceAgreement.StartDateTime = Today
 </code></pre>
