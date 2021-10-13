@@ -95,12 +95,12 @@
 <tr>
 <td><a href="#email">Email</a></td>
 <td><code>nvarchar(254)</code></td>
-<td></td>
+<td>Unique email of the user. Can be NULL because there may be login providers that don't use emails.</td>
 </tr>
 <tr>
 <td><a href="#person_id">Person_Id</a></td>
 <td><code>uniqueidentifier</code></td>
-<td></td>
+<td>The person from within the system, which is authenticated with this login. NULL means that this user is not associated with a person record in the database.</td>
 </tr>
 <tr>
 <td><a href="#user_id">User_Id</a></td>
@@ -109,13 +109,14 @@
 </tr>
 <tr>
 <td><a href="#user_name">User_Name</a></td>
-<td><code>nvarchar(254)</code></td>
-<td></td>
+<td><code>nvarchar(254)</code> <code>ML</code></td>
+<td>The full name of the user</td>
 </tr>
 </tbody>
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="email">Email</h3>
+<p>Unique email of the user. Can be NULL because there may be login providers that don't use emails.</p>
 <table>
 <thead>
 <tr>
@@ -215,6 +216,7 @@
 </tbody>
 </table>
 <h3 id="person_id">Person_Id</h3>
+<p>The person from within the system, which is authenticated with this login. NULL means that this user is not associated with a person record in the database.</p>
 <table>
 <thead>
 <tr>
@@ -451,6 +453,7 @@
 </tbody>
 </table>
 <h3 id="user_name">User_Name</h3>
+<p>The full name of the user</p>
 <table>
 <thead>
 <tr>
@@ -529,7 +532,7 @@
 </tr>
 <tr>
 <td>Type</td>
-<td>nvarchar(254)</td>
+<td>nvarchar(254) (MultiLanguage)</td>
 </tr>
 <tr>
 <td>UI Memo Editor</td>

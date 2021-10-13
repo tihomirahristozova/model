@@ -23,20 +23,22 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Email](Public.Users.md#email) | string (254) |  
-| [Name](Public.Users.md#name) | string (254) | The name of this User. `Required` 
+| [Email](Public.Users.md#email) | string (254) | Unique email of the user. Can be null because there may be login providers that don't use emails. `Required` 
+| [Name](Public.Users.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | The full name of the user. `Required` 
 | [UserId](Public.Users.md#userid) | guid |  
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Person](Public.Users.md#person) | [Persons](General.Contacts.Persons.md) | Unique person Id. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Cm_Persons_Table.Person_Id` |
+| [Person](Public.Users.md#person) | [Persons](General.Contacts.Persons.md) | The person from within the system, which is authenticated with this login. null means that this user is not associated with a person record in the database. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Cm_Persons_Table.Person_Id` |
 
 
 ## Attribute Details
 
 ### Email
+
+Unique email of the user. Can be null because there may be login providers that don't use emails. `Required`
 
 _Type_: **string (254)**  
 _Supported Filters_: **NotFilterable**  
@@ -45,12 +47,11 @@ _Maximum Length_: **254**
 
 ### Name
 
-The name of this User. `Required`
+The full name of the user. `Required`
 
-_Type_: **string (254)**  
+_Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
-_Maximum Length_: **254**  
 
 ### UserId
 
@@ -62,7 +63,7 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### Person
 
-Unique person Id. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Cm_Persons_Table.Person_Id`
+The person from within the system, which is authenticated with this login. null means that this user is not associated with a person record in the database. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Cm_Persons_Table.Person_Id`
 
 _Type_: **[Persons](General.Contacts.Persons.md)**  
 _Inherited From_: **Cm_Persons_Table.Person_Id**  

@@ -11,14 +11,17 @@ Public users profile data. Entity: Public_Users (Introduced in version 22.1.4.22
 
 | Name | Type | Description |
 | - | - | --- |
-|[Email](#email)|`nvarchar(254)` ||
-|[Person_Id](#person_id)|`uniqueidentifier` ||
+|[Email](#email)|`nvarchar(254)` |Unique email of the user. Can be NULL because there may be login providers that don't use emails.|
+|[Person_Id](#person_id)|`uniqueidentifier` |The person from within the system, which is authenticated with this login. NULL means that this user is not associated with a person record in the database.|
 |[User_Id](#user_id)|`uniqueidentifier` ||
-|[User_Name](#user_name)|`nvarchar(254)` ||
+|[User_Name](#user_name)|`nvarchar(254)` `ML`|The full name of the user|
 
 ## Columns
 
 ### Email
+
+
+Unique email of the user. Can be NULL because there may be login providers that don't use emails.
 
 | Property | Value |
 | - | - |
@@ -46,6 +49,9 @@ Public users profile data. Entity: Public_Users (Introduced in version 22.1.4.22
 |Visible|yes|
 
 ### Person_Id
+
+
+The person from within the system, which is authenticated with this login. NULL means that this user is not associated with a person record in the database.
 
 | Property | Value |
 | - | - |
@@ -113,6 +119,9 @@ Public users profile data. Entity: Public_Users (Introduced in version 22.1.4.22
 
 ### User_Name
 
+
+The full name of the user
+
 | Property | Value |
 | - | - |
 |Auto Complete|no|
@@ -132,7 +141,7 @@ Public users profile data. Entity: Public_Users (Introduced in version 22.1.4.22
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(254)|
+|Type|nvarchar(254) (MultiLanguage)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
