@@ -160,6 +160,10 @@ StoreOrder.DocumentCurrency =
 ​                          then ShipmentOrderLines.ParentSalesOrderLine.SalesOrder.DocumentCurrency
 
 ​                          else Error &quot;There are rows in the shipment order that refer sales orders with different currencies&quot;
+
+StoreOrder.FromParty = ShipmentOrder.FromParty
+
+StoreOrder.ToParty = ShipmentOrder.ToParty
 </code></pre>
 <h2 id="fulfillments">Fulfillments</h2>
 <table>
