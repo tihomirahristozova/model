@@ -9,7 +9,7 @@ Contains recipients, to which personal data is disclosed. Entity: Pdm_Personal_D
 
 ## Default Visualization
 Default Display Text Format:  
-_{PersonalDataProcess.Name:T} : {PersonalDataProcess.Code}_  
+_{PersonalDataProcess.Name:T}_  
 Default Search Member:  
 __  
 

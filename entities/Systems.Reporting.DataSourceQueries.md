@@ -9,7 +9,7 @@ Represents a query within a data source. Entity: Sys_Data_Source_Queries
 
 ## Default Visualization
 Default Display Text Format:  
-_{TableName:T}_  
+_{TableName}_  
 Default Search Member:  
 __  
 

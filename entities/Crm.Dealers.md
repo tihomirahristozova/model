@@ -9,7 +9,7 @@ External dealers. Entity: Crm_Dealers
 
 ## Default Visualization
 Default Display Text Format:  
-_{Id}_  
+_{Id}: {PartyId}_  
 Default Search Member:  
 __  
 

@@ -9,7 +9,7 @@ History of work efforts for executing activities (timesheet). Entity: Cm_Activit
 
 ## Default Visualization
 Default Display Text Format:  
-_{Party.PartyName:T} : {Party.PartyCode}_  
+_{Party.PartyName:T}_  
 Default Search Member:  
 __  
 

@@ -9,7 +9,7 @@ Sales persons (or representatives) are sellers inside the enterprise company who
 
 ## Default Visualization
 Default Display Text Format:  
-_{Person.PartyName:T} : {Person.PartyCode}_  
+_{Person.PartyName:T}_  
 Default Search Member:  
 __  
 

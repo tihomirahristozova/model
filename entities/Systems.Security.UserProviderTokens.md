@@ -9,7 +9,7 @@ Stores verification tokens for users - e.g. tokens for email, phone or two-facto
 
 ## Default Visualization
 Default Display Text Format:  
-_{LoginProviderName:T}_  
+_{LoginProviderName}_  
 Default Search Member:  
 __  
 

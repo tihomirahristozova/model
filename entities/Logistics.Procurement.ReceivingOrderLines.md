@@ -9,7 +9,7 @@ Contains detail records of Receiving Orders. Each line contains the receiving of
 
 ## Default Visualization
 Default Display Text Format:  
-_{LineNo} : {ReceivingOrder.DocumentNo} {ReceivingOrder.DocumentType.TypeName:T}_  
+_{LineNo}. {ReceivingOrder.DocumentNo} {ReceivingOrder.DocumentType.TypeName:T}_  
 Default Search Member:  
 _ReceivingOrder.DocumentNo_  
 

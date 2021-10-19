@@ -9,7 +9,7 @@ Hierarchical repository of configuration options. Entity: Gen_Config
 
 ## Default Visualization
 Default Display Text Format:  
-_{Id}_  
+_{Id}: {KeyPath}_  
 Default Search Member:  
 __  
 

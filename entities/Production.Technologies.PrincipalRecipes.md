@@ -9,7 +9,7 @@ List of base recipe models. Recipe models are used by the Product Configurator t
 
 ## Default Visualization
 Default Display Text Format:  
-_{Name:T}_  
+_{Name}_  
 Default Search Member:  
 __  
 

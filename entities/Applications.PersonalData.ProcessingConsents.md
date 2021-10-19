@@ -9,7 +9,7 @@ Consents of data subjects for processing of their personal data. Entity: Pdm_Pro
 
 ## Default Visualization
 Default Display Text Format:  
-_{ParentName:T}_  
+_{ParentName}_  
 Default Search Member:  
 __  
 

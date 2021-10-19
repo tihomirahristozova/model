@@ -9,7 +9,7 @@ Serial numbers, used by the items. Rows are created on first occurrence of the s
 
 ## Default Visualization
 Default Display Text Format:  
-_{Id}_  
+_{Id}: {ProductId}_  
 Default Search Member:  
 __  
 

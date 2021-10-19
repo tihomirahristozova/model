@@ -9,7 +9,7 @@ The jobs, which are configured in the system. Entity: Sys_Jobs (Introduced in ve
 
 ## Default Visualization
 Default Display Text Format:  
-_{Name:T}_  
+_{Name}_  
 Default Search Member:  
 __  
 

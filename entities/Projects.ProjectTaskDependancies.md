@@ -9,7 +9,7 @@ Represents dependancy between project tasks. Entity: Prj_Project_Task_Dependanci
 
 ## Default Visualization
 Default Display Text Format:  
-_{ProjectTask.TaskName:T}_  
+_{ProjectTask.TaskName}_  
 Default Search Member:  
 __  
 

@@ -9,7 +9,7 @@ Contains user-defined data sources, which retrieve rows from multiple queries. E
 
 ## Default Visualization
 Default Display Text Format:  
-_{BaseQueryName:T}_  
+_{BaseQueryName}_  
 Default Search Member:  
 __  
 

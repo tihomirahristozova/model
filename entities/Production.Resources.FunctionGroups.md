@@ -9,7 +9,7 @@ Represents the hierarchy of the function groups. They group the multitude of res
 
 ## Default Visualization
 Default Display Text Format:  
-_{Name:T}_  
+_{Name}_  
 Default Search Member:  
 __  
 

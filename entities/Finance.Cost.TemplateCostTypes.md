@@ -9,7 +9,7 @@ Contains the cost types and their hierachy positions within a cost calculation. 
 
 ## Default Visualization
 Default Display Text Format:  
-_{CostTemplate.CostTemplateName:T} : {CostTemplate.CostTemplateCode}_  
+_{CostTemplate.CostTemplateName}_  
 Default Search Member:  
 __  
 

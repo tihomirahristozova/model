@@ -10,7 +10,7 @@ A web module, which presents a whole product catalog. Entity: Cms_Product_Catalo
 
 ## Default Visualization
 Default Display Text Format:  
-_{Name:T}_  
+_{Name}_  
 Default Search Member:  
 __  
 

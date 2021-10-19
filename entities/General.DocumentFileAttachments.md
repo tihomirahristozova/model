@@ -9,7 +9,7 @@ Contains files, attached to the documents. Entity: Gen_Document_File_Attachments
 
 ## Default Visualization
 Default Display Text Format:  
-_{FileName:T}_  
+_{FileName}_  
 Default Search Member:  
 __  
 

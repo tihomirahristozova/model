@@ -9,7 +9,7 @@ Fulfillment ledger for documents. Entity: Gen_Document_Fulfillments (Introduced 
 
 ## Default Visualization
 Default Display Text Format:  
-_{DestinationEntityName:T}_  
+_{DestinationEntityName}_  
 Default Search Member:  
 __  
 

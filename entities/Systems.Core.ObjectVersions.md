@@ -9,7 +9,7 @@ Contains history of saved version of the managed objects. Entity: Sys_Object_Ver
 
 ## Default Visualization
 Default Display Text Format:  
-_{Object.Id}_  
+_{Object}_  
 Default Search Member:  
 __  
 

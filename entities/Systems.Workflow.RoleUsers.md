@@ -9,7 +9,7 @@ The roles "played" by the security users. Entity: Wf_Role_Users
 
 ## Default Visualization
 Default Display Text Format:  
-_{Role.Name:T}_  
+_{Role.Name}_  
 Default Search Member:  
 __  
 

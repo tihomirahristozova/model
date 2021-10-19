@@ -9,7 +9,7 @@ Contains the user group members. Entity: Sec_User_Groups
 
 ## Default Visualization
 Default Display Text Format:  
-_{User.Login}_  
+_{User.Name:T}_  
 Default Search Member:  
 __  
 

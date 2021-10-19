@@ -9,7 +9,7 @@ Price Lists are used to manage multiple price records, assign to customers, etc.
 
 ## Default Visualization
 Default Display Text Format:  
-_{Name:T}_  
+_{Name}_  
 Default Search Member:  
 __  
 

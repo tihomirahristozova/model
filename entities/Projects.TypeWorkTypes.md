@@ -9,7 +9,7 @@ Contains the work types, that can be performed in projects of this project type.
 
 ## Default Visualization
 Default Display Text Format:  
-_{WorkTypeName:T}_  
+_{WorkTypeName}_  
 Default Search Member:  
 __  
 

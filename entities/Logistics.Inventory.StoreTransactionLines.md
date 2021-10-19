@@ -9,7 +9,7 @@ Details records of Transactions. Each detail contains the movement for one produ
 
 ## Default Visualization
 Default Display Text Format:  
-_{LineNo} : {TransactionObj.DocumentNo} {TransactionObj.DocumentType.TypeName:T}_  
+_{LineNo}. {TransactionObj.DocumentNo} {TransactionObj.DocumentType.TypeName:T}_  
 Default Search Member:  
 _TransactionObj.DocumentNo_  
 

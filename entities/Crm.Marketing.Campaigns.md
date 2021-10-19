@@ -9,7 +9,7 @@ Marketing campaigns. Used to treat target groups with marketing messages, plan b
 
 ## Default Visualization
 Default Display Text Format:  
-_{Name:T}_  
+_{Name}_  
 Default Search Member:  
 __  
 

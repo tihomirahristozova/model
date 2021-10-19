@@ -9,7 +9,7 @@ Contains user-defined translations for non-english languages of the user interfa
 
 ## Default Visualization
 Default Display Text Format:  
-_{ApplicationName:T}_  
+_{ApplicationName}_  
 Default Search Member:  
 __  
 

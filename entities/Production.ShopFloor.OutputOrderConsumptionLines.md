@@ -9,7 +9,7 @@ The internal production consumption of materials. Used only for control purposes
 
 ## Default Visualization
 Default Display Text Format:  
-_{LineNo} : {OutputOrder.DocumentNo} {OutputOrder.DocumentType.TypeName:T}_  
+_{LineNo}. {OutputOrder.DocumentNo} {OutputOrder.DocumentType.TypeName:T}_  
 Default Search Member:  
 _OutputOrder.DocumentNo_  
 

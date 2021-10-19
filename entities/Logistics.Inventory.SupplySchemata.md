@@ -9,7 +9,7 @@ Obsolete. Not used. Entity: Inv_Supply_Schemata
 
 ## Default Visualization
 Default Display Text Format:  
-_{Name:T}_  
+_{Name}_  
 Default Search Member:  
 __  
 

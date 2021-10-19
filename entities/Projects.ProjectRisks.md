@@ -9,7 +9,7 @@ Contains risks, associated to projects. Entity: Prj_Project_Risks
 
 ## Default Visualization
 Default Display Text Format:  
-_{RiskName:T}_  
+_{RiskName}_  
 Default Search Member:  
 __  
 

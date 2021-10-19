@@ -9,7 +9,7 @@ Contains relationship between process and joint controllers. For processes with 
 
 ## Default Visualization
 Default Display Text Format:  
-_{PersonalDataProcess.Name:T} : {PersonalDataProcess.Code}_  
+_{PersonalDataProcess.Name:T}_  
 Default Search Member:  
 __  
 

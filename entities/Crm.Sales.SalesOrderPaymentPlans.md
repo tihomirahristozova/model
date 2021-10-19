@@ -9,7 +9,7 @@ Payment plan of a sales order. Entity: Crm_Sales_Order_Payment_Plans
 
 ## Default Visualization
 Default Display Text Format:  
-_{SalesOrder.DocumentType.TypeName:T} {SalesOrder.DocumentNo}_  
+_{SalesOrder.EntityName}_  
 Default Search Member:  
 __  
 

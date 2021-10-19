@@ -9,7 +9,7 @@ Contains postponed events, which will be executed later. Usually these are large
 
 ## Default Visualization
 Default Display Text Format:  
-_{Id}_  
+_{Id}: {SourceDocumentId}_  
 Default Search Member:  
 __  
 

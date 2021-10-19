@@ -9,7 +9,7 @@ Contains purchase price list headers. Entity: Scm_Purchase_Price_Lists
 
 ## Default Visualization
 Default Display Text Format:  
-_{Name:T}_  
+_{Name}_  
 Default Search Member:  
 __  
 

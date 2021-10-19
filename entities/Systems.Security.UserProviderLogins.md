@@ -9,7 +9,7 @@ External login providers. Entity: Sec_User_Provider_Logins (Introduced in versio
 
 ## Default Visualization
 Default Display Text Format:  
-_{User.Login}_  
+_{User.Name:T}_  
 Default Search Member:  
 __  
 

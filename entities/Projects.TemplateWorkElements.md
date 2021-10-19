@@ -9,7 +9,7 @@ Contains project work elements, which shall be copied to projects, based on the 
 
 ## Default Visualization
 Default Display Text Format:  
-_{ProjectTemplate.ProjectTemplateName:T}_  
+_{ProjectTemplate.ProjectTemplateName}_  
 Default Search Member:  
 __  
 

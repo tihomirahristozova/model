@@ -9,7 +9,7 @@ Obsolete. Not used. Entity: Inv_Transaction_Entry_Templates
 
 ## Default Visualization
 Default Display Text Format:  
-_{Id}_  
+_{Id}: {RouteId}_  
 Default Search Member:  
 __  
 

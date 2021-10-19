@@ -9,7 +9,7 @@ Contains types of equipment, which can be installed on the vehicles. Entity: Fle
 
 ## Default Visualization
 Default Display Text Format:  
-_{Name:T}_  
+_{Name}_  
 Default Search Member:  
 __  
 

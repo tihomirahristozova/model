@@ -9,7 +9,7 @@ Contains the participants in the project tasks. Entity: Prj_Project_Task_Partici
 
 ## Default Visualization
 Default Display Text Format:  
-_{ProjectTask.TaskName:T}_  
+_{ProjectTask.TaskName}_  
 Default Search Member:  
 __  
 

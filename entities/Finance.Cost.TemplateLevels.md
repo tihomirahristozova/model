@@ -9,7 +9,7 @@ Represents named hierarchy levels within a cost calculation. The hierarchy level
 
 ## Default Visualization
 Default Display Text Format:  
-_{LevelName:T}_  
+_{LevelName}_  
 Default Search Member:  
 __  
 

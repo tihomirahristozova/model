@@ -9,7 +9,7 @@ Contains excise-related data for warehouses (stores), which are defined as tax w
 
 ## Default Visualization
 Default Display Text Format:  
-_{Name:T} : {TaxWarehouseExciseNumber}_  
+_{Name:T}_  
 Default Search Member:  
 __  
 

@@ -9,7 +9,7 @@ Each record contains usage of resource, reported by the related Work Report. Ent
 
 ## Default Visualization
 Default Display Text Format:  
-_{WorkReport.DocumentType.TypeName:T} {WorkReport.DocumentNo}_  
+_{WorkReport.EntityName}_  
 Default Search Member:  
 __  
 

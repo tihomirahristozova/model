@@ -9,7 +9,7 @@ Request for one product with a warehouse requisition. Entity: Wms_Warehouse_Requ
 
 ## Default Visualization
 Default Display Text Format:  
-_{LineNo} : {WarehouseRequisition.DocumentNo} {WarehouseRequisition.DocumentType.TypeName:T}_  
+_{LineNo}. {WarehouseRequisition.DocumentNo} {WarehouseRequisition.DocumentType.TypeName:T}_  
 Default Search Member:  
 _WarehouseRequisition.DocumentNo_  
 
@@ -30,7 +30,7 @@ Aggregate Root:
 | [Notes](Logistics.Wms.WarehouseRequisitionLines.md#notes) | string (max) __nullable__ | Notes for this WarehouseRequisitionLine. 
 | [ParentLineNo](Logistics.Wms.WarehouseRequisitionLines.md#parentlineno) | int32 __nullable__ | The number of the line within the parent document, which the current line executes. null when the current line does not execute line. 
 | [Quantity](Logistics.Wms.WarehouseRequisitionLines.md#quantity) | [Quantity (12, 3)](../data-types.md#quantity) | The requested quantity. `Unit: QuantityUnit` `Required` `Filter(eq;ge;le)` 
-| [QuantityBase](Logistics.Wms.WarehouseRequisitionLines.md#quantitybase) | decimal (12, 3) | Quantity in the base measurement unit of the product. `Required` `Filter(multi eq;ge;le)` `Introduced in version 21.1.1.33` 
+| [QuantityBase](Logistics.Wms.WarehouseRequisitionLines.md#quantitybase) | [Quantity (12, 3)](../data-types.md#quantity) | Quantity in the base measurement unit of the product. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Filter(multi eq;ge;le)` `Introduced in version 21.1.1.33` 
 
 ## References
 
@@ -94,9 +94,9 @@ _Supports Order By_: **False**
 
 ### QuantityBase
 
-Quantity in the base measurement unit of the product. `Required` `Filter(multi eq;ge;le)` `Introduced in version 21.1.1.33`
+Quantity in the base measurement unit of the product. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Filter(multi eq;ge;le)` `Introduced in version 21.1.1.33`
 
-_Type_: **decimal (12, 3)**  
+_Type_: **[Quantity (12, 3)](../data-types.md#quantity)**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan, EqualsIn**  
 _Supports Order By_: **False**  
 

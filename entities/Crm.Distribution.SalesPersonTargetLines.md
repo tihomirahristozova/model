@@ -9,7 +9,7 @@ Detail records (lines) of targets for sales persons. Entity: Crm_Sales_Person_Ta
 
 ## Default Visualization
 Default Display Text Format:  
-_{SalesPersonTarget.DocumentType.TypeName:T} {SalesPersonTarget.DocumentNo}_  
+_{SalesPersonTarget.EntityName}_  
 Default Search Member:  
 __  
 

@@ -9,7 +9,7 @@ A planned task (operation) in a warehouse order. Entity: Wms_Warehouse_Order_Lin
 
 ## Default Visualization
 Default Display Text Format:  
-_{LineNo} : {WarehouseOrder.DocumentNo} {WarehouseOrder.DocumentType.TypeName:T}_  
+_{LineNo}. {WarehouseOrder.DocumentNo} {WarehouseOrder.DocumentType.TypeName:T}_  
 Default Search Member:  
 _WarehouseOrder.DocumentNo_  
 
@@ -28,6 +28,7 @@ Aggregate Root:
 | [Id](Logistics.Wms.WarehouseOrderLines.md#id) | guid |  
 | [LineNo](Logistics.Wms.WarehouseOrderLines.md#lineno) | int32 | Unique consecutive line number within the order. `Required` `Filter(eq)` 
 | [Notes](Logistics.Wms.WarehouseOrderLines.md#notes) | string (max) __nullable__ | Notes for this WarehouseOrderLine. 
+| [ParentLineNo](Logistics.Wms.WarehouseOrderLines.md#parentlineno) | int32 __nullable__ | The number of the line within the parent document, which the current line executes. Null when the current line does not execute line. `Filter(multi eq)` `Introduced in version 22.1.4.26` 
 | [Quantity](Logistics.Wms.WarehouseOrderLines.md#quantity) | [Quantity (12, 3)](../data-types.md#quantity) | The quantity of the product, which should be processed. `Unit: QuantityUnit` `Required` `Default(0)` `Filter(eq;ge;le)` 
 | [TaskType](Logistics.Wms.WarehouseOrderLines.md#tasktype) | [TaskType](Logistics.Wms.WarehouseOrderLines.md#tasktype) | The type of the task (operation), which should be performed. REC=Receive; DES=Despatch; MOV=Move; LBL=Label; INS=Inspect; PCK=Pack; UPK=Unpack; KIT=Assemble kit; RKT=Reverse kitting; CNT=Count; TSK=Task. `Required` `Filter(multi eq)` 
 
@@ -38,6 +39,7 @@ Aggregate Root:
 | [Document](Logistics.Wms.WarehouseOrderLines.md#document) | [WarehouseOrders](Logistics.Wms.WarehouseOrders.md) | The `WarehouseOrder`(Logistics.Wms.WarehouseOrderLines.md#warehouseorder) to which this WarehouseOrderLine belongs. `Required` `Filter(multi eq)` |
 | [LogisticUnit](Logistics.Wms.WarehouseOrderLines.md#logisticunit) | [LogisticUnits](Logistics.LogisticUnits.md) (nullable) | Logistic unit, which should be used in the operation. `Filter(multi eq)` `Introduced in version 21.1.1.18` |
 | [Lot](Logistics.Wms.WarehouseOrderLines.md#lot) | [Lots](Logistics.Inventory.Lots.md) (nullable) | The lot of the product, which should be used. null for operations, which are not lot-specific, or when any lot can be used. `Filter(multi eq)` |
+| [ParentDocument](Logistics.Wms.WarehouseOrderLines.md#parentdocument) | [WarehouseRequisitions](Logistics.Wms.WarehouseRequisitions.md) (nullable) | The document, which the current line executes. Null when the current line does not execute another line. `Filter(multi eq)` `Introduced in version 22.1.4.26` |
 | [Product](Logistics.Wms.WarehouseOrderLines.md#product) | [Products](General.Products.Products.md) (nullable) | The product, which should be used for the operation. `Filter(multi eq)` |
 | [ProductVariant](Logistics.Wms.WarehouseOrderLines.md#productvariant) | [ProductVariants](General.ProductVariants.md) (nullable) | The product variant, which should be used. `Filter(multi eq)` `Introduced in version 21.1.1.18` |
 | [QuantityUnit](Logistics.Wms.WarehouseOrderLines.md#quantityunit) | [MeasurementUnits](General.MeasurementUnits.md) (nullable) | The measurement unit of Quantity. null for operations, which are not quantity-related. `Filter(multi eq)` |
@@ -79,6 +81,14 @@ _Type_: **string (max) __nullable__**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
+
+### ParentLineNo
+
+The number of the line within the parent document, which the current line executes. Null when the current line does not execute line. `Filter(multi eq)` `Introduced in version 22.1.4.26`
+
+_Type_: **int32 __nullable__**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Supports Order By_: **False**  
 
 ### Quantity
 
@@ -137,6 +147,13 @@ _Supported Filters_: **Equals, EqualsIn**
 The lot of the product, which should be used. null for operations, which are not lot-specific, or when any lot can be used. `Filter(multi eq)`
 
 _Type_: **[Lots](Logistics.Inventory.Lots.md) (nullable)**  
+_Supported Filters_: **Equals, EqualsIn**  
+
+### ParentDocument
+
+The document, which the current line executes. Null when the current line does not execute another line. `Filter(multi eq)` `Introduced in version 22.1.4.26`
+
+_Type_: **[WarehouseRequisitions](Logistics.Wms.WarehouseRequisitions.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Product

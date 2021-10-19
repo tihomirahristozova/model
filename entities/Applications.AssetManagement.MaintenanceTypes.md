@@ -9,7 +9,7 @@ Types of maintenances which can be scheduled and performed on the managed assets
 
 ## Default Visualization
 Default Display Text Format:  
-_{Name:T} : {Code}_  
+_{Name:T}_  
 Default Search Member:  
 __  
 

@@ -9,7 +9,7 @@ The operations that are performed to produce the product. Entity: Prd_Work_Order
 
 ## Default Visualization
 Default Display Text Format:  
-_{WorkOrderItem.LineOrd} : {WorkOrderItem.WorkOrder.DocumentNo} {WorkOrderItem.WorkOrder.DocumentType.TypeName:T}_  
+_{WorkOrderItem.WorkOrder.EntityName}_  
 Default Search Member:  
 __  
 

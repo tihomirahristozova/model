@@ -83,14 +83,18 @@
 <p>Contains deal types supported by the system as well as user-defined types. Entity: VAT_Deal_Types</p>
 <h2 id="default-visualization">Default Visualization</h2>
 <p>Default Display Text Format:<br>
-<em>{Name:T}</em><br>
+<em>{Name}</em><br>
 Default Search Member:<br>
 __</p>
 <h2 id="aggregate">Aggregate</h2>
 <p>An <a href="https://docs.erp.net/tech/advanced/concepts/aggregates.html">aggregate</a> is a cluster of domain objects that can be treated as a single unit.</p>
 <p>Aggregate Tree</p>
 <ul>
-<li><a href="Finance.Vat.DealTypes.html">Finance.Vat.DealTypes</a></li>
+<li><a href="Finance.Vat.DealTypes.html">Finance.Vat.DealTypes</a>
+<ul>
+<li><a href="Finance.Vat.DealTypeDocumentAmounts.html">Finance.Vat.DealTypeDocumentAmounts</a></li>
+</ul>
+</li>
 </ul>
 <h2 id="attributes">Attributes</h2>
 <table>
@@ -138,6 +142,23 @@ __</p>
 <td><a href="Finance.Vat.DealTypes.html#country">Country</a></td>
 <td><a href="General.Geography.Countries.html">Countries</a></td>
 <td>The country for which this deal type applies. The country is matched against the country of the enterprise company. <code>Required</code> <code>Filter(multi eq)</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="child-collections">Child Collections</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DocumentAmounts</td>
+<td><a href="Finance.Vat.DealTypeDocumentAmounts.html">DealTypeDocumentAmounts</a></td>
+<td>List of <code>DealTypeDocumentAmount</code>(Finance.Vat.DealTypeDocumentAmounts.md) child objects, based on the <code>Finance.Vat.DealTypeDocumentAmount.DealType</code>(Finance.Vat.DealTypeDocumentAmounts.md#dealtype) back reference</td>
 </tr>
 </tbody>
 </table>

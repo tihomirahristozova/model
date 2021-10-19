@@ -9,7 +9,7 @@ Represent an expression within the calculation of a calculated attribute. Entity
 
 ## Default Visualization
 Default Display Text Format:  
-_{CalculatedAttribute.Name:T}_  
+_{CalculatedAttribute.Name}_  
 Default Search Member:  
 __  
 

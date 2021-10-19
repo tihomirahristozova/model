@@ -9,7 +9,7 @@ Contains data about the execution of Upgrade Procedures. Contains status message
 
 ## Default Visualization
 Default Display Text Format:  
-_{Id}_  
+_{Id}: {UpdateProcedure}_  
 Default Search Member:  
 __  
 

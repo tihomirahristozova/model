@@ -9,7 +9,7 @@ Represents one user domain. The users in a domain have different emails. But one
 
 ## Default Visualization
 Default Display Text Format:  
-_{Name:T}_  
+_{Name}_  
 Default Search Member:  
 __  
 

@@ -9,6 +9,7 @@ uid: Logistics.Wms
 - [WarehouseOrderFulfillments](Logistics.Wms.WarehouseOrderFulfillments.md)  
 - [WarehouseOrderLines](Logistics.Wms.WarehouseOrderLines.md)  
 - [WarehouseOrders](Logistics.Wms.WarehouseOrders.md)  
+- [WarehousePolicies](Logistics.Wms.WarehousePolicies.md)  
 - [WarehouseRequisitionFulfillments](Logistics.Wms.WarehouseRequisitionFulfillments.md)  
 - [WarehouseRequisitionLines](Logistics.Wms.WarehouseRequisitionLines.md)  
 - [WarehouseRequisitions](Logistics.Wms.WarehouseRequisitions.md)  

@@ -9,7 +9,7 @@ The storage locations within a store. If there are no differentiated storage loc
 
 ## Default Visualization
 Default Display Text Format:  
-_{Name:T}_  
+_{Name}_  
 Default Search Member:  
 __  
 

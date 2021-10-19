@@ -9,7 +9,7 @@ Obsolete. Not used. Entity: Inv_Supply_Schema_Routes
 
 ## Default Visualization
 Default Display Text Format:  
-_{SupplySchema.Name:T}_  
+_{SupplySchema.Name}_  
 Default Search Member:  
 __  
 

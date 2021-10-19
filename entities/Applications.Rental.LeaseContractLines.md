@@ -9,7 +9,7 @@ The detail lines of rental contracts. Each line contains rental conditions for o
 
 ## Default Visualization
 Default Display Text Format:  
-_{LeaseContract.DocumentType.TypeName:T} {LeaseContract.DocumentNo}_  
+_{LeaseContract.EntityName}_  
 Default Search Member:  
 __  
 

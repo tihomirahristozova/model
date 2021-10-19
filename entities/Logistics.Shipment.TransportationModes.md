@@ -9,7 +9,7 @@ Represents a mode of transportation, like water, air, road, etc. Entity: Log_Tra
 
 ## Default Visualization
 Default Display Text Format:  
-_{Name:T} : {Code}_  
+_{Name}_  
 Default Search Member:  
 __  
 

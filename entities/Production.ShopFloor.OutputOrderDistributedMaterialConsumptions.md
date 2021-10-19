@@ -9,7 +9,7 @@ Contains the quantity of materials distributed over the output order lines. Enti
 
 ## Default Visualization
 Default Display Text Format:  
-_{OutputOrderLine.LineOrd} : {OutputOrderLine.OutputOrder.DocumentNo} {OutputOrderLine.OutputOrder.DocumentType.TypeName:T}_  
+_{OutputOrderLine.OutputOrder.EntityName}_  
 Default Search Member:  
 __  
 

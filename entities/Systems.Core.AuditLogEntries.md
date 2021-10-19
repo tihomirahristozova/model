@@ -9,7 +9,7 @@ Each record represents the occurrence of one logged event. Entity: Sys_Audit_Log
 
 ## Default Visualization
 Default Display Text Format:  
-_{ApplicationName:T}_  
+_{ApplicationName}_  
 Default Search Member:  
 __  
 

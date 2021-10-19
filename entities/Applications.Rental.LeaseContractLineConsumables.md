@@ -9,7 +9,7 @@ Contains the consumables, which are sold accompanying asset rentals. Entity: Ren
 
 ## Default Visualization
 Default Display Text Format:  
-_{LeaseLine.LeaseContract.DocumentType.TypeName:T} {LeaseLine.LeaseContract.DocumentNo}_  
+_{LeaseLine.LeaseContract.EntityName}_  
 Default Search Member:  
 __  
 

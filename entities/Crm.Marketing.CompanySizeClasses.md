@@ -9,7 +9,7 @@ Categorization of company sizes for marketing purposes. Size classes might depen
 
 ## Default Visualization
 Default Display Text Format:  
-_{Name:T} : {Code}_  
+_{Name:T}_  
 Default Search Member:  
 __  
 

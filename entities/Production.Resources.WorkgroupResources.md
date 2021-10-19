@@ -9,7 +9,7 @@ Describes the availability of resources in the active workgroups. Entity: Prd_Wo
 
 ## Default Visualization
 Default Display Text Format:  
-_{Workgroup.Name:T}_  
+_{Workgroup.Name}_  
 Default Search Member:  
 __  
 

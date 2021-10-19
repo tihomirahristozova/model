@@ -9,7 +9,7 @@ Contains the characteristics of operations used to create products. Entity: Prd_
 
 ## Default Visualization
 Default Display Text Format:  
-_{Name:T}_  
+_{Name}_  
 Default Search Member:  
 __  
 

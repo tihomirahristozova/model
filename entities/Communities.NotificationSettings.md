@@ -9,7 +9,7 @@ User notification settings for the different notification classes. Entity: Cmm_N
 
 ## Default Visualization
 Default Display Text Format:  
-_{Id}_  
+_{Id}: {UserId}_  
 Default Search Member:  
 __  
 

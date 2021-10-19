@@ -9,7 +9,7 @@ Discount policies for sales documents. Entity: Crm_Line_Discounts
 
 ## Default Visualization
 Default Display Text Format:  
-_{Id}_  
+_{Id}: {MaxQuantityValue}_  
 Default Search Member:  
 __  
 

@@ -9,7 +9,7 @@ Represents the different types of additional amounts which are calculated for th
 
 ## Default Visualization
 Default Display Text Format:  
-_{AmountTypeName:T} : {AmountTypeCode}_  
+_{AmountTypeName:T}_  
 Default Search Member:  
 __  
 

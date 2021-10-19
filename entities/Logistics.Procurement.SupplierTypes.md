@@ -9,7 +9,7 @@ Supplier types are primarily used to differentiate the security level access to 
 
 ## Default Visualization
 Default Display Text Format:  
-_{Name:T}_  
+_{Name}_  
 Default Search Member:  
 __  
 

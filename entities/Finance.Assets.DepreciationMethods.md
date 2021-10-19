@@ -9,7 +9,7 @@ Depreciation methods. Contains both system-defined and user-defined methods. Ent
 
 ## Default Visualization
 Default Display Text Format:  
-_{Name:T}_  
+_{Name}_  
 Default Search Member:  
 __  
 

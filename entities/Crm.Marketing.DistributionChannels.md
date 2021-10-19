@@ -9,7 +9,7 @@ General list of distribution channels. Used to control prices and availability o
 
 ## Default Visualization
 Default Display Text Format:  
-_{Name:T} : {Code}_  
+_{Name:T}_  
 Default Search Member:  
 __  
 

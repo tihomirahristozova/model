@@ -9,7 +9,7 @@ Service agreement lines represent the individual serviced objects that are cover
 
 ## Default Visualization
 Default Display Text Format:  
-_{ServiceAgreement.DocumentType.TypeName:T} {ServiceAgreement.DocumentNo}_  
+_{ServiceAgreement.EntityName}_  
 Default Search Member:  
 __  
 

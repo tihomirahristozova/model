@@ -9,7 +9,7 @@ The work elements of the work breakdown structure of each project type. Entity: 
 
 ## Default Visualization
 Default Display Text Format:  
-_{WorkElementName:T} : {WorkElementCode}_  
+_{WorkElementName}_  
 Default Search Member:  
 __  
 

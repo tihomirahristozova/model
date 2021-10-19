@@ -9,7 +9,7 @@ The various roles, which the users can play. Entity: Wf_Roles
 
 ## Default Visualization
 Default Display Text Format:  
-_{Name:T}_  
+_{Name}_  
 Default Search Member:  
 __  
 

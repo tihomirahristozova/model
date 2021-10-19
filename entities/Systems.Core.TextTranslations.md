@@ -9,7 +9,7 @@ Obsolete. Not used. Entity: Gen_Text_Translations
 
 ## Default Visualization
 Default Display Text Format:  
-_{ColumnName:T}_  
+_{ColumnName}_  
 Default Search Member:  
 __  
 

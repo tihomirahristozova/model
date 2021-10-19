@@ -83,7 +83,7 @@
 <p>Detail lines of Requistions. Entity: Scm_Requisition_Lines</p>
 <h2 id="default-visualization">Default Visualization</h2>
 <p>Default Display Text Format:<br>
-<em>{LineNo} : {Requisition.DocumentNo} {Requisition.DocumentType.TypeName:T}</em><br>
+<em>{LineNo}. {Requisition.DocumentNo} {Requisition.DocumentType.TypeName:T}</em><br>
 Default Search Member:<br>
 <em>Requisition.DocumentNo</em></p>
 <h2 id="aggregate">Aggregate</h2>
@@ -275,7 +275,9 @@ Aggregate Root:<br>
 <h2 id="business-rules">Business Rules</h2>
 <p>None</p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>
-<p>None</p>
+<ul>
+<li><a href="../business-rules/R32502.html">R32502 RequisitionLine - Update Product Related Fields</a></li>
+</ul>
 <h2 id="api">API</h2>
 <p>Domain API Query:
 <a href="https://demodb.my.erp.net/api/domain/odata/Logistics_Procurement_RequisitionLines?$top=10">https://demodb.my.erp.net/api/domain/odata/Logistics_Procurement_RequisitionLines?$top=10</a></p>

@@ -9,7 +9,7 @@ Contains the services, which were agreed for this service activity (repair), bef
 
 ## Default Visualization
 Default Display Text Format:  
-_{ServiceActivityService.LineNo} : {ServiceActivityService.ServiceActivity.DocumentNo} {ServiceActivityService.ServiceActivity.DocumentType.TypeName:T}_  
+_{ServiceActivityService.ServiceName}_  
 Default Search Member:  
 __  
 

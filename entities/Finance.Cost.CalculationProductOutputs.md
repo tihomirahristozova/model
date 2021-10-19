@@ -9,7 +9,7 @@ Represents costs allocated to product outputs. Entity: Cost_Calculation_Product_
 
 ## Default Visualization
 Default Display Text Format:  
-_{Calculation.DocumentType.TypeName:T} {Calculation.DocumentNo}_  
+_{Calculation.EntityName}_  
 Default Search Member:  
 __  
 

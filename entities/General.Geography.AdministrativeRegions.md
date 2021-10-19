@@ -9,7 +9,7 @@ Hierarchical structure of the legally defined administrative regions. Administra
 
 ## Default Visualization
 Default Display Text Format:  
-_{Name:T} : {Code}_  
+_{Name:T}_  
 Default Search Member:  
 __  
 

@@ -9,7 +9,7 @@ Depreciation document line. Can specify assets, whose depreciation should be cal
 
 ## Default Visualization
 Default Display Text Format:  
-_{Depreciation.DocumentType.TypeName:T} {Depreciation.DocumentNo}_  
+_{Depreciation.EntityName}_  
 Default Search Member:  
 __  
 

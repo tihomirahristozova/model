@@ -83,7 +83,7 @@
 <p>Request for one product with a warehouse requisition. Entity: Wms_Warehouse_Requisition_Lines (Introduced in version 20.1)</p>
 <h2 id="default-visualization">Default Visualization</h2>
 <p>Default Display Text Format:<br>
-<em>{LineNo} : {WarehouseRequisition.DocumentNo} {WarehouseRequisition.DocumentType.TypeName:T}</em><br>
+<em>{LineNo}. {WarehouseRequisition.DocumentNo} {WarehouseRequisition.DocumentType.TypeName:T}</em><br>
 Default Search Member:<br>
 <em>WarehouseRequisition.DocumentNo</em></p>
 <h2 id="aggregate">Aggregate</h2>
@@ -129,8 +129,8 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Logistics.Wms.WarehouseRequisitionLines.html#quantitybase">QuantityBase</a></td>
-<td>decimal (12, 3)</td>
-<td>Quantity in the base measurement unit of the product. <code>Required</code> <code>Filter(multi eq;ge;le)</code> <code>Introduced in version 21.1.1.33</code></td>
+<td><a href="../data-types.html#quantity">Quantity (12, 3)</a></td>
+<td>Quantity in the base measurement unit of the product. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>Filter(multi eq;ge;le)</code> <code>Introduced in version 21.1.1.33</code></td>
 </tr>
 </tbody>
 </table>
@@ -213,8 +213,8 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="quantitybase">QuantityBase</h3>
-<p>Quantity in the base measurement unit of the product. <code>Required</code> <code>Filter(multi eq;ge;le)</code> <code>Introduced in version 21.1.1.33</code></p>
-<p><em>Type</em>: <strong>decimal (12, 3)</strong><br>
+<p>Quantity in the base measurement unit of the product. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>Filter(multi eq;ge;le)</code> <code>Introduced in version 21.1.1.33</code></p>
+<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity (12, 3)</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>

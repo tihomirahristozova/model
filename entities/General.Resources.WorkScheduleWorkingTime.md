@@ -9,7 +9,7 @@ Contains the different working time periods within the work schedule. Entity: Ge
 
 ## Default Visualization
 Default Display Text Format:  
-_{WorkSchedule.Name:T}_  
+_{WorkSchedule.Name}_  
 Default Search Member:  
 __  
 

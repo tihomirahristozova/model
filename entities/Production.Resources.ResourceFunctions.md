@@ -9,7 +9,7 @@ List of functions that a specific resource is able to perform. Entity: Prd_Resou
 
 ## Default Visualization
 Default Display Text Format:  
-_{Resource.Name:T}_  
+_{Resource.Name}_  
 Default Search Member:  
 __  
 

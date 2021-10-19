@@ -9,7 +9,7 @@ A vehicle, which is used for transportation. One actual vehicle might be defined
 
 ## Default Visualization
 Default Display Text Format:  
-_{Code}_  
+_{Vehicle}_  
 Default Search Member:  
 __  
 

@@ -9,7 +9,7 @@ Contains templates for creating new projects. Entity: Prj_Templates
 
 ## Default Visualization
 Default Display Text Format:  
-_{ProjectTemplateName:T}_  
+_{ProjectTemplateName}_  
 Default Search Member:  
 __  
 

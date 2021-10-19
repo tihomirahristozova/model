@@ -9,7 +9,7 @@ Represents one task of a project. Entity: Prj_Project_Tasks
 
 ## Default Visualization
 Default Display Text Format:  
-_{TaskName:T}_  
+_{TaskName}_  
 Default Search Member:  
 __  
 

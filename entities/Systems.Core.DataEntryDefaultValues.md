@@ -9,7 +9,7 @@ Contains user-specified default values for columns in data entry forms. Entity: 
 
 ## Default Visualization
 Default Display Text Format:  
-_{ColumnName:T}_  
+_{ColumnName}_  
 Default Search Member:  
 __  
 

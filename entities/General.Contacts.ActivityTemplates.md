@@ -9,7 +9,7 @@ Templates for automatical generation of activity from any document. Entity: Cm_A
 
 ## Default Visualization
 Default Display Text Format:  
-_{Id}_  
+_{Id}: {RouteId}_  
 Default Search Member:  
 __  
 

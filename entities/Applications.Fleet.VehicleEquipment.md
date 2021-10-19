@@ -9,7 +9,7 @@ Contains the actual and history of equipment, installed on the vehicles. Entity:
 
 ## Default Visualization
 Default Display Text Format:  
-_{Vehicle.EngineIdentificationNumber}_  
+_{Vehicle}_  
 Default Search Member:  
 __  
 

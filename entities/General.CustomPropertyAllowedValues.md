@@ -9,7 +9,7 @@ User-defined properties allowed values. Can be specified only for properties wit
 
 ## Default Visualization
 Default Display Text Format:  
-_{Property.AllowedValuesEntityName:T} : {Property.Code}_  
+_{Property.AllowedValuesEntityName}_  
 Default Search Member:  
 __  
 

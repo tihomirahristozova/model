@@ -9,7 +9,7 @@ Contains exchange rate for a currency against the main currency of currency dire
 
 ## Default Visualization
 Default Display Text Format:  
-_{CurrencyDirectory.DocumentType.TypeName:T} {CurrencyDirectory.DocumentNo}_  
+_{CurrencyDirectory.EntityName}_  
 Default Search Member:  
 __  
 

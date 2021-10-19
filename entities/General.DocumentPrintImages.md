@@ -9,7 +9,7 @@ Contains the data of a printout of a document as it was obtained from the data s
 
 ## Default Visualization
 Default Display Text Format:  
-_{PrintoutLayout.DocumentEntityName:T}_  
+_{PrintoutLayout.DocumentEntityName}_  
 Default Search Member:  
 __  
 

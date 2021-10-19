@@ -9,7 +9,7 @@ Contains the materials of a recipe that make up the product. Entity: Prd_Recipe_
 
 ## Default Visualization
 Default Display Text Format:  
-_{Recipe.Name:T}_  
+_{Recipe.Name}_  
 Default Search Member:  
 __  
 

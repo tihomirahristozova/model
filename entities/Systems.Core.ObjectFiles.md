@@ -9,7 +9,7 @@ Contains files attached to objects. Entity: Sys_Object_Files
 
 ## Default Visualization
 Default Display Text Format:  
-_{FileName:T} : {PurposeCode}_  
+_{FileName}_  
 Default Search Member:  
 __  
 

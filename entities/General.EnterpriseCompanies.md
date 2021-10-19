@@ -9,7 +9,7 @@ The companies in the enterprise that issue documents. Entity: Gen_Enterprise_Com
 
 ## Default Visualization
 Default Display Text Format:  
-_{Company.PartyName:T} : {Company.RegistrationNumber}_  
+_{Company.PartyName:T}_  
 Default Search Member:  
 __  
 

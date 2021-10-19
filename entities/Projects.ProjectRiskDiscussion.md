@@ -9,7 +9,7 @@ Contains discussions on project risks. Entity: Prj_Project_Risk_Discussion
 
 ## Default Visualization
 Default Display Text Format:  
-_{ProjectRisk.RiskName:T}_  
+_{ProjectRisk.RiskName}_  
 Default Search Member:  
 __  
 

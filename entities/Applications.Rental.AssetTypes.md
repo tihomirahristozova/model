@@ -9,7 +9,7 @@ Categorizes the rental assets in specific type categories. Entity: Rent_Asset_Ty
 
 ## Default Visualization
 Default Display Text Format:  
-_{RentalAssetTypeName:T}_  
+_{RentalAssetTypeName}_  
 Default Search Member:  
 __  
 

@@ -9,7 +9,7 @@ Fulfillment ledger for warehouse requisitions. Entity: Wms_Warehouse_Requisition
 
 ## Default Visualization
 Default Display Text Format:  
-_{Id}_  
+_{Id}: {WarehouseRequisitionId}_  
 Default Search Member:  
 __  
 

@@ -9,7 +9,7 @@ Contains the operations within a principal recipe. Entity: Prd_Principal_Recipe_
 
 ## Default Visualization
 Default Display Text Format:  
-_{PrincipalRecipe.Name:T}_  
+_{PrincipalRecipe.Name}_  
 Default Search Member:  
 __  
 

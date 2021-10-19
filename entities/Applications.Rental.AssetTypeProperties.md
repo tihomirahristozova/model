@@ -9,7 +9,7 @@ Contains the properties, which are required for each asset category. Entity: Ren
 
 ## Default Visualization
 Default Display Text Format:  
-_{RentalAssetType.RentalAssetTypeName:T}_  
+_{RentalAssetType.RentalAssetTypeName}_  
 Default Search Member:  
 __  
 

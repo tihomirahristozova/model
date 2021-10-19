@@ -9,7 +9,7 @@ Contains the list of responsible parties (usually persons) for the stores. Store
 
 ## Default Visualization
 Default Display Text Format:  
-_{Store.PartyName:T} : {Store.PartyCode}_  
+_{Store.PartyName:T}_  
 Default Search Member:  
 __  
 

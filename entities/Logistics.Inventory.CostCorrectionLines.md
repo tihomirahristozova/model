@@ -9,7 +9,7 @@ Cost correction detail lines. One line is created for each corrected transaction
 
 ## Default Visualization
 Default Display Text Format:  
-_{CostCorrection.DocumentType.TypeName:T} {CostCorrection.DocumentNo}_  
+_{CostCorrection.EntityName}_  
 Default Search Member:  
 __  
 

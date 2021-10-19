@@ -9,7 +9,7 @@ Product catalogs serve to organize the products for display primarily in web pag
 
 ## Default Visualization
 Default Display Text Format:  
-_{Name:T} : {Code}_  
+_{Name:T}_  
 Default Search Member:  
 __  
 

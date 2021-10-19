@@ -9,7 +9,7 @@ Contains all transactions of Record of Handover / Handing-Over Record lines. Ent
 
 ## Default Visualization
 Default Display Text Format:  
-_{RentTransaction.DocumentType.TypeName:T} {RentTransaction.DocumentNo}_  
+_{RentTransaction.EntityName}_  
 Default Search Member:  
 __  
 

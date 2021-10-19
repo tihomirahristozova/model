@@ -9,7 +9,7 @@ Sales Orders detail records. Entity: Crm_Sales_Order_Lines
 
 ## Default Visualization
 Default Display Text Format:  
-_{LineNo} : {SalesOrder.DocumentNo} {SalesOrder.DocumentType.TypeName:T}_  
+_{LineNo}. {SalesOrder.DocumentNo} {SalesOrder.DocumentType.TypeName:T}_  
 Default Search Member:  
 _SalesOrder.DocumentNo_  
 

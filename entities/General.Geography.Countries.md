@@ -9,7 +9,7 @@ List of countries, listed by their internet suffix code. Entity: Gen_Countries
 
 ## Default Visualization
 Default Display Text Format:  
-_{Name:T} : {Code}_  
+_{Name:T}_  
 Default Search Member:  
 __  
 

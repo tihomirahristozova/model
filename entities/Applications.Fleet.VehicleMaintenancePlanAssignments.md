@@ -9,7 +9,7 @@ Represents assignment of a maintenance plan to a vehicle. Entity: Fleet_Vehicle_
 
 ## Default Visualization
 Default Display Text Format:  
-_{Id}_  
+_{Id}: {VehicleId}_  
 Default Search Member:  
 __  
 

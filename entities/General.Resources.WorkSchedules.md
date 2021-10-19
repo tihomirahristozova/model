@@ -9,7 +9,7 @@ Represents the different working schedules, used by the employees and resources.
 
 ## Default Visualization
 Default Display Text Format:  
-_{Name:T}_  
+_{Name}_  
 Default Search Member:  
 __  
 

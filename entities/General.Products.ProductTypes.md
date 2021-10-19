@@ -9,7 +9,7 @@ Categorization of the products by their nature. Entity: Gen_Product_Types
 
 ## Default Visualization
 Default Display Text Format:  
-_{Name:T} : {Code}_  
+_{Name:T}_  
 Default Search Member:  
 __  
 

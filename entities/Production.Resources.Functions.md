@@ -9,7 +9,7 @@ Definition of the functions that the resources can perform. Entity: Prd_Function
 
 ## Default Visualization
 Default Display Text Format:  
-_{Name:T}_  
+_{Name}_  
 Default Search Member:  
 __  
 

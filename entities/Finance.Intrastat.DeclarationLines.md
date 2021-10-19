@@ -9,7 +9,7 @@ Contains the details of the Intrastat declarations, issued by the enterprise com
 
 ## Default Visualization
 Default Display Text Format:  
-_{IntrastatDeclaration.DocumentType.TypeName:T} {IntrastatDeclaration.DocumentNo}_  
+_{IntrastatDeclaration.EntityName}_  
 Default Search Member:  
 __  
 

@@ -9,7 +9,7 @@ Represents user mailboxes. Entity: Mail_Boxes
 
 ## Default Visualization
 Default Display Text Format:  
-_{SentItemsFolderName:T}_  
+_{SentItemsFolderName}_  
 Default Search Member:  
 __  
 

@@ -9,7 +9,7 @@ Represents a role, which can be assigned to POS operators (like Cashier, Manager
 
 ## Default Visualization
 Default Display Text Format:  
-_{PosRoleName:T} : {PosRoleCode}_  
+_{PosRoleName:T}_  
 Default Search Member:  
 __  
 

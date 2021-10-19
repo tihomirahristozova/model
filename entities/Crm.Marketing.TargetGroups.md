@@ -9,7 +9,7 @@ Marketing target group, containing a fixed list of parties. Entity: Crm_Target_G
 
 ## Default Visualization
 Default Display Text Format:  
-_{Name:T} : {Code}_  
+_{Name}_  
 Default Search Member:  
 __  
 

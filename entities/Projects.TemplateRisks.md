@@ -9,7 +9,7 @@ Contains project risks, which will be copied to projects, based on the template.
 
 ## Default Visualization
 Default Display Text Format:  
-_{RiskName:T}_  
+_{RiskName}_  
 Default Search Member:  
 __  
 

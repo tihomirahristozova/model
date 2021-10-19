@@ -9,7 +9,7 @@ Contains payment options for user documnet types for sales orders. Entity: Crm_D
 
 ## Default Visualization
 Default Display Text Format:  
-_{DocumentType.TypeName} : {DocumentType.Code}_  
+_{DocumentType.EntityName}_  
 Default Search Member:  
 __  
 

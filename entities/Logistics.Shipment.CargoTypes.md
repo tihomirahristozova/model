@@ -9,7 +9,7 @@ Represents a cargo type. Different cargo types might require different types of 
 
 ## Default Visualization
 Default Display Text Format:  
-_{Name:T} : {Code}_  
+_{Name}_  
 Default Search Member:  
 __  
 

@@ -9,7 +9,7 @@ Contains user layouts of the screen forms. Entity: Sys_Form_Layouts
 
 ## Default Visualization
 Default Display Text Format:  
-_{ApplicationName:T}_  
+_{ApplicationName}_  
 Default Search Member:  
 __  
 

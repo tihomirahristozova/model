@@ -9,7 +9,7 @@ Represents the segments which comprise the route of the trips. Entity: Fleet_Tri
 
 ## Default Visualization
 Default Display Text Format:  
-_{Trip.DocumentType.TypeName:T} {Trip.DocumentNo}_  
+_{Trip.EntityName}_  
 Default Search Member:  
 __  
 

@@ -9,7 +9,7 @@ Contains supply rules, which are used by the procurement planning system. Entity
 
 ## Default Visualization
 Default Display Text Format:  
-_{BuyerName:T}_  
+_{BuyerName}_  
 Default Search Member:  
 __  
 

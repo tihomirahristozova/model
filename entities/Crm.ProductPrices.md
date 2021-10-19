@@ -9,7 +9,7 @@ Specific prices of products. A price is applied after matching the specified cri
 
 ## Default Visualization
 Default Display Text Format:  
-_{Id}_  
+_{Id}: {MaxQuantityValue}_  
 Default Search Member:  
 __  
 

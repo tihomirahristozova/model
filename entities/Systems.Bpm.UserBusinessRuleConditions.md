@@ -9,7 +9,7 @@ Represents one condition for the execution of a business rule. Entity: Sys_User_
 
 ## Default Visualization
 Default Display Text Format:  
-_{AttributeName:T}_  
+_{AttributeName}_  
 Default Search Member:  
 __  
 

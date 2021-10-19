@@ -9,7 +9,7 @@ Options per document type for the cost corrections. Entity: Inv_Cost_Corrections
 
 ## Default Visualization
 Default Display Text Format:  
-_{Id}_  
+_{Id}: {DocumentTypeId}_  
 Default Search Member:  
 __  
 

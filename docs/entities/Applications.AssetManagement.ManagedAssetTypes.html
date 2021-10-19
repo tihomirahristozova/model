@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title> | ERP.net Domain Model </title>
+    <title>Applications.AssetManagement.ManagedAssetTypes Entity | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content=" | ERP.net Domain Model ">
+    <meta name="title" content="Applications.AssetManagement.ManagedAssetTypes Entity | ERP.net Domain Model ">
     <meta name="generator" content="docfx 2.56.9.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
@@ -76,8 +76,125 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="">
+            <article class="content wrap" id="_content" data-uid="Applications.AssetManagement.ManagedAssetTypes">
+<h1 id="applicationsassetmanagementmanagedassettypes-entity">Applications.AssetManagement.ManagedAssetTypes Entity</h1>
 
+<p><strong>Namespace:</strong> <a href="Applications.AssetManagement.html">Applications.AssetManagement</a></p>
+<p>Types of managed assets. Used to categorize the assets and the tracked parameters for each type. Entity: Eam_Managed_Asset_Types (Introduced in version 19.1)</p>
+<h2 id="default-visualization">Default Visualization</h2>
+<p>Default Display Text Format:<br>
+<em>{Name:T}</em><br>
+Default Search Member:<br>
+__</p>
+<h2 id="aggregate">Aggregate</h2>
+<p>An <a href="https://docs.erp.net/tech/advanced/concepts/aggregates.html">aggregate</a> is a cluster of domain objects that can be treated as a single unit.</p>
+<p>Aggregate Tree</p>
+<ul>
+<li><a href="Applications.AssetManagement.ManagedAssetTypes.html">Applications.AssetManagement.ManagedAssetTypes</a>
+<ul>
+<li><a href="Applications.AssetManagement.ManagedAssetTypeMaintenanceTypes.html">Applications.AssetManagement.ManagedAssetTypeMaintenanceTypes</a></li>
+<li><a href="Applications.AssetManagement.ManagedAssetTypeTrackedParameters.html">Applications.AssetManagement.ManagedAssetTypeTrackedParameters</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="attributes">Attributes</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="Applications.AssetManagement.ManagedAssetTypes.html#code">Code</a></td>
+<td>string (16)</td>
+<td>Unique code of the asset type. <code>Required</code> <code>Filter(multi eq;like)</code> <code>ORD</code></td>
+</tr>
+<tr>
+<td><a href="Applications.AssetManagement.ManagedAssetTypes.html#id">Id</a></td>
+<td>guid</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="Applications.AssetManagement.ManagedAssetTypes.html#isactive">IsActive</a></td>
+<td>boolean</td>
+<td>Specifies whether the asset type is active for choosing in drop-down choices. <code>Required</code> <code>Default(true)</code></td>
+</tr>
+<tr>
+<td><a href="Applications.AssetManagement.ManagedAssetTypes.html#name">Name</a></td>
+<td><a href="../data-types.html#multilanguagestring">MultilanguageString</a></td>
+<td>Multilanguage name of the asset type. <code>Required</code> <code>Filter(multi eq;like)</code></td>
+</tr>
+<tr>
+<td><a href="Applications.AssetManagement.ManagedAssetTypes.html#notes">Notes</a></td>
+<td>string (max) <strong>nullable</strong></td>
+<td>Notes for this ManagedAssetType.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="child-collections">Child Collections</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MaintenanceTypes</td>
+<td><a href="Applications.AssetManagement.ManagedAssetTypeMaintenanceTypes.html">ManagedAssetTypeMaintenanceTypes</a></td>
+<td>List of <code>ManagedAssetType&lt;br /&gt;MaintenanceType</code>(Applications.AssetManagement.ManagedAssetType<br>MaintenanceTypes.md) child objects, based on the <code>Applications.AssetManagement.ManagedAssetType&lt;br /&gt;MaintenanceType.ManagedAssetType</code>(Applications.AssetManagement.ManagedAssetType<br>MaintenanceTypes.md#managedassettype) back reference</td>
+</tr>
+<tr>
+<td>TrackedParameters</td>
+<td><a href="Applications.AssetManagement.ManagedAssetTypeTrackedParameters.html">ManagedAssetTypeTrackedParameters</a></td>
+<td>List of <code>ManagedAssetType&lt;br /&gt;TrackedParameter</code>(Applications.AssetManagement.ManagedAssetType<br>TrackedParameters.md) child objects, based on the <code>Applications.AssetManagement.ManagedAssetType&lt;br /&gt;TrackedParameter.ManagedAssetType</code>(Applications.AssetManagement.ManagedAssetType<br>TrackedParameters.md#managedassettype) back reference</td>
+</tr>
+</tbody>
+</table>
+<h2 id="attribute-details">Attribute Details</h2>
+<h3 id="code">Code</h3>
+<p>Unique code of the asset type. <code>Required</code> <code>Filter(multi eq;like)</code> <code>ORD</code></p>
+<p><em>Type</em>: <strong>string (16)</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
+<em>Supported Filters</em>: <strong>Equals, Like, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>True</strong><br>
+<em>Maximum Length</em>: <strong>16</strong></p>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
+<h3 id="isactive">IsActive</h3>
+<p>Specifies whether the asset type is active for choosing in drop-down choices. <code>Required</code> <code>Default(true)</code></p>
+<p><em>Type</em>: <strong>boolean</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>True</strong></p>
+<h3 id="name">Name</h3>
+<p>Multilanguage name of the asset type. <code>Required</code> <code>Filter(multi eq;like)</code></p>
+<p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a></strong><br>
+<em>Supported Filters</em>: <strong>Equals, Like, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="notes">Notes</h3>
+<p>Notes for this ManagedAssetType.</p>
+<p><em>Type</em>: <strong>string (max) <strong>nullable</strong></strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>2147483647</strong></p>
+<h2 id="business-rules">Business Rules</h2>
+<p>None</p>
+<h2 id="front-end-business-rules">Front-End Business Rules</h2>
+<p>None</p>
+<h2 id="api">API</h2>
+<p>Domain API Query:
+<a href="https://demodb.my.erp.net/api/domain/odata/Applications_AssetManagement_ManagedAssetTypes?$top=10">https://demodb.my.erp.net/api/domain/odata/Applications_AssetManagement_ManagedAssetTypes?$top=10</a></p>
+<p>Domain API Query Builder:
+<a href="https://demodb.my.erp.net/api/domain/querybuilder#Applications_AssetManagement_ManagedAssetTypes?$top=10">https://demodb.my.erp.net/api/domain/querybuilder#Applications_AssetManagement_ManagedAssetTypes?$top=10</a></p>
 </article>
           </div>
           

@@ -9,7 +9,7 @@ Contains the materials, which are required for a project task. Entity: Prj_Proje
 
 ## Default Visualization
 Default Display Text Format:  
-_{ProjectTask.TaskName:T}_  
+_{ProjectTask.TaskName}_  
 Default Search Member:  
 __  
 

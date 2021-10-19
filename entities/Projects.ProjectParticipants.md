@@ -9,7 +9,7 @@ Represents participant in a project, with a specific role. The same participant 
 
 ## Default Visualization
 Default Display Text Format:  
-_{Project.Name:T} : {Project.Code}_  
+_{Project.Name}_  
 Default Search Member:  
 __  
 

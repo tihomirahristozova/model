@@ -9,7 +9,7 @@ Contains the details and problem symptoms for each object, which requires servic
 
 ## Default Visualization
 Default Display Text Format:  
-_{ServiceOrder.DocumentType.TypeName:T} {ServiceOrder.DocumentNo}_  
+_{ServiceOrder.EntityName}_  
 Default Search Member:  
 __  
 
