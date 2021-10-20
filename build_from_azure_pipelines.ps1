@@ -3,7 +3,8 @@ param(
     [string]$remote,
     [switch]$debug,
     [string]$entities,
-    [string]$tables
+    [string]$tables,
+	[string]$br         # business rules
 )
 
 if ($debug -eq $true) {
@@ -49,6 +50,15 @@ Write-Host "Copy generated tables (.md files)"
 try {
     Remove-Item -Path ".\tables\*.*" -Force
     Copy-Item -Path $tables -Destination "." -Force -Recurse
+}
+catch {  
+    Write-Error $_
+    Exit 400
+}
+
+Write-Host "Copy generated business rules (.md files)"
+try {
+    Copy-Item -Path $br -Destination "." -Force -Recurse
 }
 catch {  
     Write-Error $_
