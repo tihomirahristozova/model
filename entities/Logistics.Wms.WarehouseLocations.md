@@ -9,7 +9,7 @@ One physical location within a warehouse. Locations are the leaf elements of the
 
 ## Default Visualization
 Default Display Text Format:  
-_{Warehouse.Name:T}_  
+_{LocationAddress}_  
 Default Search Member:  
 __  
 

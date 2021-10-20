@@ -38,7 +38,7 @@ The address of the location. Should be unique within the warehouse.
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|32|
-|Order|2147483647|
+|Order|1|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -163,7 +163,7 @@ The warehouse containing the location.
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|0|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|

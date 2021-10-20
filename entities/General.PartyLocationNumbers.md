@@ -59,7 +59,7 @@ _Allowed Values (General.PartyLocationNumbersRepository.LocationCodingSystem Enu
 | Value | Description |
 | ---- | --- |
 | GLN | GS1 Global Location Number (GLN). Stored as 'GLN'. <br /> _Database Value:_ 'GLN' <br /> _Model Value:_ 0 <br /> _Domain API Value:_ 'GLN' |
-| Internal | Internal users have access to internal and external content.. Stored as 'INT'. <br /> _Database Value:_ 'INT' <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'Internal' |
+| Internal | Internal coding system. Stored as 'INT'. <br /> _Database Value:_ 'INT' <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'Internal' |
 
 _Supported Filters_: **Equals, EqualsIn**  
 _Supports Order By_: **False**  

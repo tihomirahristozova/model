@@ -84,9 +84,9 @@ _Allowed Values (Systems.Core.WebSitesRepository.WebSiteType Enum Members)_
 
 | Value | Description |
 | ---- | --- |
-| API | API value. Stored as 'API'. <br /> _Database Value:_ 'API' <br /> _Model Value:_ 0 <br /> _Domain API Value:_ 'API' |
-| ClientCenter | ClientCenter value. Stored as 'CC'. <br /> _Database Value:_ 'CC' <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'ClientCenter' |
-| ID | ID value. Stored as 'ID'. <br /> _Database Value:_ 'ID' <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'ID' |
+| API | Allows external applications to access the ERP resources using REST API.. Stored as 'API'. <br /> _Database Value:_ 'API' <br /> _Model Value:_ 0 <br /> _Domain API Value:_ 'API' |
+| ClientCenter | Allows community users to access ERP resources. Requires working ID site.. Stored as 'CC'. <br /> _Database Value:_ 'CC' <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'ClientCenter' |
+| ID | Handles authorization for external (community) users on behalf of other sites.. Stored as 'ID'. <br /> _Database Value:_ 'ID' <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'ID' |
 | ECommerce | ECommerce value. Stored as 'EC'. <br /> _Database Value:_ 'EC' <br /> _Model Value:_ 3 <br /> _Domain API Value:_ 'ECommerce' |
 | LEGALBG | LEGALBG value. Stored as 'LEG'. <br /> _Database Value:_ 'LEG' <br /> _Model Value:_ 4 <br /> _Domain API Value:_ 'LEGALBG' |
 | SocialInteractions | SocialInteractions value. Stored as 'SI'. <br /> _Database Value:_ 'SI' <br /> _Model Value:_ 5 <br /> _Domain API Value:_ 'SocialInteractions' |

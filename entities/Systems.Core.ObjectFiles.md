@@ -60,9 +60,9 @@ _Allowed Values (Systems.Core.ObjectFilesRepository.ContentLocation Enum Members
 
 | Value | Description |
 | ---- | --- |
-| Embedded | Embedded value. Stored as 'EMB'. <br /> _Database Value:_ 'EMB' <br /> _Model Value:_ 0 <br /> _Domain API Value:_ 'Embedded' |
-| InternetUrl | InternetUrl value. Stored as 'URL'. <br /> _Database Value:_ 'URL' <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'InternetUrl' |
-| FileSystemLink | FileSystemLink value. Stored as 'FSL'. <br /> _Database Value:_ 'FSL' <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'FileSystemLink' |
+| Embedded | The content is stored in the database. Stored as 'EMB'. <br /> _Database Value:_ 'EMB' <br /> _Model Value:_ 0 <br /> _Domain API Value:_ 'Embedded' |
+| InternetUrl | Internet resource location. Stored as 'URL'. <br /> _Database Value:_ 'URL' <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'InternetUrl' |
+| FileSystemLink | Path to the file in the local file system. Stored as 'FSL'. <br /> _Database Value:_ 'FSL' <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'FileSystemLink' |
 
 _Supported Filters_: **Equals, EqualsIn**  
 _Supports Order By_: **False**  
