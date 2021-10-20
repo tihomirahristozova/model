@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>R30505-8 ReceivingOrder - Determine Purchase Price List | ERP.net Domain Model </title>
+    <title>R30505-8 Receiving Order - Set Purchase Price List (Recalc) | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="R30505-8 ReceivingOrder - Determine Purchase Price List | ERP.net Domain Model ">
+    <meta name="title" content="R30505-8 Receiving Order - Set Purchase Price List (Recalc) | ERP.net Domain Model ">
     <meta name="generator" content="docfx 2.56.9.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
@@ -70,11 +70,11 @@
         <div class="article row grid">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="r30505-8-receivingorder---determine-purchase-price-list">R30505-8 ReceivingOrder - Determine Purchase Price List</h1>
+<h1 id="r30505-8-receiving-order---set-purchase-price-list-recalc">R30505-8 Receiving Order - Set Purchase Price List (Recalc)</h1>
 
 <table>
-<col style="width:25%">
-<col style="width:75%">
+<col style="width:18.97%">
+<col style="width:81.03%">
 <tbody>
 <tr>
 <td><strong>Code</strong></td>
@@ -86,11 +86,11 @@
 </tr>
 <tr>
 <td><strong>Name</strong></td>
-<td>DeterminePurchasePriceList</td>
+<td>SetPurchasePriceList</td>
 </tr>
 <tr>
 <td><strong>Attribute</strong></td>
-<td>PurchasePriceList</td>
+<td><a href="../entities/Logistics.Procurement.ReceivingOrders.html#purchasepricelist">PurchasePriceList</a></td>
 </tr>
 <tr>
 <td><strong>Layer</strong></td>
@@ -98,62 +98,36 @@
 </tr>
 <tr>
 <td><strong>Events</strong></td>
-<td>AttributeChanged(Supplier)</td>
+<td>AttributeChanged(DocumentDate, Supplier)</td>
 </tr>
 <tr>
 <td><strong>Priority</strong></td>
-<td>Normal</td>
+<td>Early</td>
 </tr>
 <tr>
 <td><strong>Modify</strong></td>
 <td>YES</td>
 </tr>
 <tr>
-<td><strong>Applicable Legislations</strong></td>
-<td><a class="xref" href="https://erpnetdocs.github.io/tech/reference/country-specific-functionality.html">ALL // no condition needed
-</a></td>
+<td><strong>Applicable
+Legislations</strong></td>
+<td><a class="xref" href="https://erpnetdocs.github.io/tech/reference/country-specific-functionality.html">ALL // no condition needed</a></td>
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td>IF(Supplier !=null)
-<br><br>
-PurchasePriceList = Supplier.GetDefaultPurchasePriceListIfValid(DateTime.Today)
-<br><br>
-<br><br>
-<br><br>
-<em>*Supplier.GetDefaultPurchasePriceListIfValid(validForDate):</em>
-<br><br>
-if (Supplier.DefaultPurchasePriceList.IsExpired(validForDate) or is null)
-{
-issue warning;
-<br><br>
-return null;
-}
-else
-{
-return Supplier.DefaultPurchasePriceList;
-}</td>
+<td>Supplier.GetDefaultPurchasePriceListIfValid(DocumentDate)</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
-<td>When the Supplier is changed, Purchase Price List should be changed to the
-supplier's Default Purchase Price List if it has not expired. In case there is a
-Default Purchase Price List in the definition of the supplier and it has expired, a
-warning is issued. If a supplier or a valid Purchase price list cannot be determined,
-Purchase Price List is set to null.
-<br><br>
-(RecalcExpression)</td>
+<td></td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>
-<td>The supplier '{Supplier.Party.PartyName.GetCurrentOrTransliterated()}' uses
-purchase price list '{Supplier.DefaultPurchasePriceList.Name}' which has expired.</td>
+<td></td>
 </tr>
 <tr>
 <td><strong>Version</strong></td>
-<td>Introduced: 2020.1
-<br><br>
-Updated: 21</td>
+<td></td>
 </tr>
 <tr>
 <td><strong>Revocable</strong></td>
@@ -161,8 +135,7 @@ Updated: 21</td>
 </tr>
 </tbody>
 </table>
-<p><em>* For more information about the Business Rules Documentation Template and a short explanation of each column, see
-topic <a href="../templates/template-description-system-business-rules.html">System Business Rules</a>.</em></p>
+<p><em>* This is auto generated code. Don't change it.</em></p>
 </article>
           </div>
           

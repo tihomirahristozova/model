@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>R31508-9 Purchase Invoice - Set Payment Due Date | ERP.net Domain Model </title>
+    <title>R31508-9 Purchase Invoice - Set Payment Due Date (Recalc) | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="R31508-9 Purchase Invoice - Set Payment Due Date | ERP.net Domain Model ">
+    <meta name="title" content="R31508-9 Purchase Invoice - Set Payment Due Date (Recalc) | ERP.net Domain Model ">
     <meta name="generator" content="docfx 2.56.9.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
@@ -70,15 +70,15 @@
         <div class="article row grid">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="r31508-9-purchase-invoice---set-payment-due-date">R31508-9 Purchase Invoice - Set Payment Due Date</h1>
+<h1 id="r31508-9-purchase-invoice---set-payment-due-date-recalc">R31508-9 Purchase Invoice - Set Payment Due Date (Recalc)</h1>
 
 <table>
-<col style="width:25%">
-<col style="width:75%">
+<col style="width:18.97%">
+<col style="width:81.03%">
 <tbody>
 <tr>
 <td><strong>Code</strong></td>
-<td>R31508-9</td>
+<td>31508-9</td>
 </tr>
 <tr>
 <td><strong>Entity</strong></td>
@@ -90,7 +90,7 @@
 </tr>
 <tr>
 <td><strong>Attribute</strong></td>
-<td>PaymentDueDate</td>
+<td><a href="../entities/Logistics.Procurement.PurchaseInvoices.html#paymentduedate">PaymentDueDate</a></td>
 </tr>
 <tr>
 <td><strong>Layer</strong></td>
@@ -98,9 +98,7 @@
 </tr>
 <tr>
 <td><strong>Events</strong></td>
-<td>AttributeChanged(DocumentDate)
-<br><br>
-AttributeChanged( Supplier)</td>
+<td>AttributeChanged(DocumentDate, Supplier)</td>
 </tr>
 <tr>
 <td><strong>Priority</strong></td>
@@ -111,23 +109,17 @@ AttributeChanged( Supplier)</td>
 <td>YES</td>
 </tr>
 <tr>
-<td><strong>Applicable Legislations</strong></td>
-<td><a class="xref" href="https://erpnetdocs.github.io/tech/reference/country-specific-functionality.html">ALL // no condition
-needed</a></td>
+<td><strong>Applicable
+Legislations</strong></td>
+<td><a class="xref" href="https://erpnetdocs.github.io/tech/reference/country-specific-functionality.html">ALL // no condition needed</a></td>
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td>IF(DocumentDate!=null AND Supplier !=null)
-<br><br>
-PaymentDueDate=DocumentDate+Supplier.DefaultPaymentTermDays</td>
+<td>Convert(DocumentDate.AddDays(Convert(Supplier.DefaultPaymentTermDays, Double)), Object)</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
-<td>When Document Date is changed or Supplier is changed, Payment Due Date is
-recalculated. Payment Due Date is equal to the Document Date plus the Default Payment
-Term Days specified in the Supplier's definition. 
-<br><br>
-(RecalcExpression)</td>
+<td></td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>
@@ -135,9 +127,7 @@ Term Days specified in the Supplier's definition. 
 </tr>
 <tr>
 <td><strong>Version</strong></td>
-<td>Introduced: 21
-<br><br>
-Updated: -</td>
+<td></td>
 </tr>
 <tr>
 <td><strong>Revocable</strong></td>
@@ -145,8 +135,7 @@ Updated: -</td>
 </tr>
 </tbody>
 </table>
-<p><em>* For more information about the Business Rules Documentation Template and a short explanation of each column, see
-topic <a href="../templates/template-description-system-business-rules.html">System Business Rules</a>.</em></p>
+<p><em>* This is auto generated code. Don't change it.</em></p>
 </article>
           </div>
           

@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>R31482-4 VAT Entry - Set Referenced Document No | ERP.net Domain Model </title>
+    <title>R31482-4 Document - Set Referenced Document No (Recalc) | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="R31482-4 VAT Entry - Set Referenced Document No | ERP.net Domain Model ">
+    <meta name="title" content="R31482-4 Document - Set Referenced Document No (Recalc) | ERP.net Domain Model ">
     <meta name="generator" content="docfx 2.56.9.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
@@ -70,15 +70,15 @@
         <div class="article row grid">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="r31482-4-vat-entry---set-referenced-document-no">R31482-4 VAT Entry - Set Referenced Document No</h1>
+<h1 id="r31482-4-document---set-referenced-document-no-recalc">R31482-4 Document - Set Referenced Document No (Recalc)</h1>
 
 <table>
-<col style="width:25%">
-<col style="width:75%">
+<col style="width:18.97%">
+<col style="width:81.03%">
 <tbody>
 <tr>
 <td><strong>Code</strong></td>
-<td>R31482-4</td>
+<td>31482-4</td>
 </tr>
 <tr>
 <td><strong>Entity</strong></td>
@@ -90,7 +90,7 @@
 </tr>
 <tr>
 <td><strong>Attribute</strong></td>
-<td>ReferencedDocumentNo</td>
+<td><a href="../entities/Finance.Vat.Entries.html#referenceddocumentno">ReferencedDocumentNo</a></td>
 </tr>
 <tr>
 <td><strong>Layer</strong></td>
@@ -98,7 +98,7 @@
 </tr>
 <tr>
 <td><strong>Events</strong></td>
-<td>AttributeChanged(Parent)</td>
+<td>AttributeChanged(DocumentNo, ReferencedDocumentNo, Parent)</td>
 </tr>
 <tr>
 <td><strong>Priority</strong></td>
@@ -109,31 +109,17 @@
 <td>YES</td>
 </tr>
 <tr>
-<td><strong>Applicable Legislations</strong></td>
-<td><a class="xref" href="https://erpnetdocs.github.io/tech/reference/country-specific-functionality.html">ALL // no condition
-needed</a></td>
+<td><strong>Applicable
+Legislations</strong></td>
+<td><a class="xref" href="https://erpnetdocs.github.io/tech/reference/country-specific-functionality.html">ALL // no condition needed</a></td>
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td>IF(Parent.IsDocumentTypeEntityInvoice())
-<br><br>
-ReferencedDocumentNo= Parent.DocumentType
-<br><br>
-<br><br>
-<br><br>
-*Document.IsDocumentTypeEntityInvoice():
-<br><br>
-return (DocumentType != null &amp;&amp; (DocumentType.EntityName ==
-InvoicesRepository.TableName ||
-DocumentType.EntityName == PurchaseInvoicesRepository.TableName));</td>
+<td>IIF(Parent.IsDocumentTypeEntityInvoice(), Parent.DocumentNo, ReferencedDocumentNo)</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
-<td>When Parent Document is changed, the Entity of that Parent Document's Document Type
-is checked. If it is Invoices or Purchase Invoices, Referenced Document No is changed
-to the Parent Document's Document No.
-<br><br>
-(RecalcExpression)</td>
+<td></td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>
@@ -141,9 +127,7 @@ to the Parent Document's Document No.
 </tr>
 <tr>
 <td><strong>Version</strong></td>
-<td>Introduced: 21
-<br><br>
-Updated: -</td>
+<td></td>
 </tr>
 <tr>
 <td><strong>Revocable</strong></td>
@@ -151,8 +135,7 @@ Updated: -</td>
 </tr>
 </tbody>
 </table>
-<p><em>* For more information about the Business Rules Documentation Template and a short explanation of each column, see
-topic <a href="../templates/template-description-system-business-rules.html">System Business Rules</a>.</em></p>
+<p><em>* This is auto generated code. Don't change it.</em></p>
 </article>
           </div>
           

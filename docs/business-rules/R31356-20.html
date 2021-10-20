@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>R31356-20 Work Order Item  - Set Produced Standard Quantity Base | ERP.net Domain Model </title>
+    <title>R31356-20 Work Order Item - Set Produced Standard Quantity Base (Recalc) | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="R31356-20 Work Order Item  - Set Produced Standard Quantity Base | ERP.net Domain Model ">
+    <meta name="title" content="R31356-20 Work Order Item - Set Produced Standard Quantity Base (Recalc) | ERP.net Domain Model ">
     <meta name="generator" content="docfx 2.56.9.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
@@ -70,11 +70,11 @@
         <div class="article row grid">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="r31356-20-work-order-item----set-produced-standard-quantity-base">R31356-20 Work Order Item  - Set Produced Standard Quantity Base</h1>
+<h1 id="r31356-20-work-order-item---set-produced-standard-quantity-base-recalc">R31356-20 Work Order Item - Set Produced Standard Quantity Base (Recalc)</h1>
 
 <table>
-<col style="width:25%">
-<col style="width:75%">
+<col style="width:18.97%">
+<col style="width:81.03%">
 <tbody>
 <tr>
 <td><strong>Code</strong></td>
@@ -90,7 +90,7 @@
 </tr>
 <tr>
 <td><strong>Attribute</strong></td>
-<td>ProducedStandardQuantityBase</td>
+<td><a href="../entities/Production.ShopFloor.WorkOrderItems.html#producedstandardquantitybase">ProducedStandardQuantityBase</a></td>
 </tr>
 <tr>
 <td><strong>Layer</strong></td>
@@ -98,8 +98,8 @@
 </tr>
 <tr>
 <td><strong>Events</strong></td>
-<td>AttributeChanged(ProducedQuantityUnit,ProducedQuantity, Product,
-ProducedQuantityBase)</td>
+<td>AttributeChanged(ProducedQuantity, ProducedStandardQuantityBase, ProducedQuantityUnit,
+Product)</td>
 </tr>
 <tr>
 <td><strong>Priority</strong></td>
@@ -110,42 +110,19 @@ ProducedQuantityBase)</td>
 <td>YES</td>
 </tr>
 <tr>
-<td><strong>Applicable Legislations</strong></td>
-<td><a class="xref" href="https://erpnetdocs.github.io/tech/reference/country-specific-functionality.html">ALL // no condition
-needed</a></td>
+<td><strong>Applicable
+Legislations</strong></td>
+<td><a class="xref" href="https://erpnetdocs.github.io/tech/reference/country-specific-functionality.html">ALL // no condition needed</a></td>
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td>IF( ProducedQuantity != null &amp;&amp; ProducedQuantityUnit != null &amp;&amp; Product != null )
-<br><br>
-LateDefault:
-<br><br>
-ProducedStandardQuantityBase =
-<br><br>
-IF(Product.AllowVariableMeasurementRatios)
-ProducedQuantity.ConvertTo(Product.BaseUnit, Product) 
-<br><br>
-ELSE ProducedQuantityBase)
-<br><br>
-<br><br>
-<br><br>
-RecalcExpression:
-<br><br>
-ProducedStandardQuantityBase = ProducedQuantity.ConvertTo(Product.BaseUnit, Product)
-<br><br>
-<br><br></td>
+<td>IIF((((ProducedQuantity != null) AndAlso (ProducedQuantityUnit != null)) AndAlso (Product
+!= null)), ProducedQuantity.ConvertTo(Product.BaseUnit, Product),
+ProducedStandardQuantityBase)</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
-<td>When Product, Produced Quantity, Produced Quantity Base or  Produced Quantity Unit is
-changed, Produced Standard Quantity Base is calculated as the Produced Quantity is
-converted to the Product's Base Unit if the Product is using variable measurement
-ratios. If the Product is not using variable measurement ratios, Produced Standard
-Quantity Base is changed to be equal to Produced Quantity Base.
-<br><br>
-(RecalcExpression)
-<br><br>
-(LateDefault)</td>
+<td></td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>
@@ -153,9 +130,7 @@ Quantity Base is changed to be equal to Produced Quantity Base.
 </tr>
 <tr>
 <td><strong>Version</strong></td>
-<td>Introduced: 21
-<br><br>
-Updated: -</td>
+<td></td>
 </tr>
 <tr>
 <td><strong>Revocable</strong></td>
@@ -163,8 +138,7 @@ Updated: -</td>
 </tr>
 </tbody>
 </table>
-<p><em>* For more information about the Business Rules Documentation Template and a short explanation of each column, see
-topic <a href="../templates/template-description-system-business-rules.html">System Business Rules</a>.</em></p>
+<p><em>* This is auto generated code. Don't change it.</em></p>
 </article>
           </div>
           

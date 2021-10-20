@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>R31398-9 Project Task Resource- Set Resource Usage Hours | ERP.net Domain Model </title>
+    <title>R31398-9 Project Task Resource - Set Resource Usage Hours (Recalc) | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="R31398-9 Project Task Resource- Set Resource Usage Hours | ERP.net Domain Model ">
+    <meta name="title" content="R31398-9 Project Task Resource - Set Resource Usage Hours (Recalc) | ERP.net Domain Model ">
     <meta name="generator" content="docfx 2.56.9.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
@@ -70,15 +70,15 @@
         <div class="article row grid">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="r31398-9-project-task-resource--set-resource-usage-hours">R31398-9 Project Task Resource- Set Resource Usage Hours</h1>
+<h1 id="r31398-9-project-task-resource---set-resource-usage-hours-recalc">R31398-9 Project Task Resource - Set Resource Usage Hours (Recalc)</h1>
 
 <table>
-<col style="width:25%">
-<col style="width:75%">
+<col style="width:18.97%">
+<col style="width:81.03%">
 <tbody>
 <tr>
 <td><strong>Code</strong></td>
-<td>R31398-9</td>
+<td>31398-9</td>
 </tr>
 <tr>
 <td><strong>Entity</strong></td>
@@ -86,11 +86,11 @@
 </tr>
 <tr>
 <td><strong>Name</strong></td>
-<td>SetResourceUsageHours </td>
+<td>SetResourceUsageHours</td>
 </tr>
 <tr>
 <td><strong>Attribute</strong></td>
-<td>ResourceUsageHours</td>
+<td><a href="../entities/Projects.ProjectTaskResources.html#resourceusagehours">ResourceUsageHours</a></td>
 </tr>
 <tr>
 <td><strong>Layer</strong></td>
@@ -98,7 +98,8 @@
 </tr>
 <tr>
 <td><strong>Events</strong></td>
-<td>AttributeChanged(ResourceUsagePercent)</td>
+<td>AttributeChanged(ResourceUsagePercent, ResourceUsageHours, ProjectTask,
+PlannedDurationHours)</td>
 </tr>
 <tr>
 <td><strong>Priority</strong></td>
@@ -109,22 +110,18 @@
 <td>YES</td>
 </tr>
 <tr>
-<td><strong>Applicable Legislations</strong></td>
-<td><a class="xref" href="https://erpnetdocs.github.io/tech/reference/country-specific-functionality.html">ALL // no condition
-needed</a></td>
+<td><strong>Applicable
+Legislations</strong></td>
+<td><a class="xref" href="https://erpnetdocs.github.io/tech/reference/country-specific-functionality.html">ALL // no condition needed</a></td>
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td>IF(ProjectTask!=null)
-<br><br>
-ResourceUsageHours = ProjectTask.PlannedDurationHours*ResourceUsagePercent</td>
+<td>Convert(IIF((ProjectTask != null), (ProjectTask.PlannedDurationHours * ResourceUsagePercent)
+, ResourceUsageHours), Object)</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
-<td>When Resource Usage Percent  is changed, Resource Usage Hours are calculated as the
-product of Resource Usage Percent and Planned Duration Hours of the Project Task. 
-<br><br>
-(RecalcExpression)</td>
+<td></td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>
@@ -132,9 +129,7 @@ product of Resource Usage Percent and Planned Duration Hours of the Project Task
 </tr>
 <tr>
 <td><strong>Version</strong></td>
-<td>Introduced: 21
-<br><br>
-Updated: -</td>
+<td></td>
 </tr>
 <tr>
 <td><strong>Revocable</strong></td>
@@ -142,8 +137,7 @@ Updated: -</td>
 </tr>
 </tbody>
 </table>
-<p><em>* For more information about the Business Rules Documentation Template and a short explanation of each column, see
-topic <a href="../templates/template-description-system-business-rules.html">System Business Rules</a>.</em></p>
+<p><em>* This is auto generated code. Don't change it.</em></p>
 </article>
           </div>
           

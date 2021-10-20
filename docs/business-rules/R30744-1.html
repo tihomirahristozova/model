@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>R30744-1 ProductDimension - Set Convert To Base Multiplier | ERP.net Domain Model </title>
+    <title>R30744-1 Product Dimension - Set Convert To Base Multiplier (Recalc) | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="R30744-1 ProductDimension - Set Convert To Base Multiplier | ERP.net Domain Model ">
+    <meta name="title" content="R30744-1 Product Dimension - Set Convert To Base Multiplier (Recalc) | ERP.net Domain Model ">
     <meta name="generator" content="docfx 2.56.9.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
@@ -70,11 +70,11 @@
         <div class="article row grid">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="r30744-1-productdimension---set-convert-to-base-multiplier">R30744-1 ProductDimension - Set Convert To Base Multiplier</h1>
+<h1 id="r30744-1-product-dimension---set-convert-to-base-multiplier-recalc">R30744-1 Product Dimension - Set Convert To Base Multiplier (Recalc)</h1>
 
 <table>
-<col style="width:18.8%">
-<col style="width:81.2%">
+<col style="width:18.97%">
+<col style="width:81.03%">
 <tbody>
 <tr>
 <td><strong>Code</strong></td>
@@ -90,7 +90,7 @@
 </tr>
 <tr>
 <td><strong>Attribute</strong></td>
-<td>ConvertToBaseMultiplier</td>
+<td><a href="../entities/General.Products.ProductDimensions.html#converttobasemultiplier">ConvertToBaseMultiplier</a></td>
 </tr>
 <tr>
 <td><strong>Layer</strong></td>
@@ -111,22 +111,16 @@
 <tr>
 <td><strong>Applicable
 Legislations</strong></td>
-<td><a class="xref" href="https://erpnetdocs.github.io/tech/reference/country-specific-functionality.html">ALL // no condition needed
-</a></td>
+<td><a class="xref" href="https://erpnetdocs.github.io/tech/reference/country-specific-functionality.html">ALL // no condition needed</a></td>
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td>ConvertToBaseMultiplier = SourceQuantity.Value * SourceQuantityUnit.Multiplier *
-DestQuantityUnit.Divisor</td>
+<td>Convert(((SourceQuantity.Value * SourceQuantityUnit.Multiplier) * DestQuantityUnit.Divisor),
+Object)</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
-<td>Calculates Convert To Base Multilier as a product of the Source Quantity, the Source Quantity
-Unit's multiplier and the destination quantity unit's divisor.
-<br><br>
-(LateDefault)
-<br><br>
-(RecalcExpression)</td>
+<td></td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>
@@ -134,7 +128,7 @@ Unit's multiplier and the destination quantity unit's divisor.
 </tr>
 <tr>
 <td><strong>Version</strong></td>
-<td>Introduced: 2020.1</td>
+<td></td>
 </tr>
 <tr>
 <td><strong>Revocable</strong></td>
@@ -142,8 +136,7 @@ Unit's multiplier and the destination quantity unit's divisor.
 </tr>
 </tbody>
 </table>
-<p><em>* For more information about the Business Rules Documentation Template and a short explanation of each column, see
-topic <a href="../templates/template-description-system-business-rules.html">System Business Rules</a>.</em></p>
+<p><em>* This is auto generated code. Don't change it.</em></p>
 </article>
           </div>
           
