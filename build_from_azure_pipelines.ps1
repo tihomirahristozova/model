@@ -4,7 +4,7 @@ param(
     [switch]$debug,
     [string]$entities,
     [string]$tables,
-	[string]$br         # business rules
+    [string]$br         # business rules
 )
 
 if ($debug -eq $true) {

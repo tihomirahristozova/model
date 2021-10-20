@@ -3,7 +3,7 @@
 The documentation uses a custom, internal ERP.net version of DocFX to build:
 https://github.com/ErpNetDocs/docfx
 
-The entities and attributes are managed automatically from internal entity meta-data.
+The entities, attributes and front-end business rules are managed automatically from internal entity meta-data.
 There is a build each night, which updates the entity topics with the latest changes.
 
 > The model includes the very latest updates from the night builds.
