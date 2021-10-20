@@ -30,15 +30,15 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CatchQuantityUnit](Logistics.Wms.WarehouseAvailabilityView.md#catchquantityunit) | [MeasurementUnits](General.MeasurementUnits.md) (nullable) | The measurement unit of the catch quantity. null when catch measurement is not configured for the product. `Filter(multi eq)` `Inherited from Wms_Warehouse_<br />Transactions_Table.Catch_Quantity_Unit_Id` |
-| [LogisticUnit](Logistics.Wms.WarehouseAvailabilityView.md#logisticunit) | [LogisticUnits](Logistics.LogisticUnits.md) (nullable) | Logistic unit, which was transacted. null when the transaction was not for a logistic unit. `Filter(multi eq)` `Inherited from Wms_Warehouse_<br />Transactions_Table.Logistic_Unit_Id` |
-| [Lot](Logistics.Wms.WarehouseAvailabilityView.md#lot) | [Lots](Logistics.Inventory.Lots.md) (nullable) | The lot which was transacted. null when the transaction was not for a specific lot. `Filter(multi eq)` `Inherited from Wms_Warehouse_<br />Transactions_Table.Lot_Id` |
-| [Product](Logistics.Wms.WarehouseAvailabilityView.md#product) | [Products](General.Products.Products.md) | The product, which was transacted. `Required` `Filter(multi eq)` `Inherited from Wms_Warehouse_<br />Transactions_Table.Product_Id` |
-| [ProductVariant](Logistics.Wms.WarehouseAvailabilityView.md#productvariant) | [ProductVariants](General.ProductVariants.md) (nullable) | The product variant, which was transacted. null when the transaction was not for a product variant. `Filter(multi eq)` `Inherited from Wms_Warehouse_<br />Transactions_Table.Product_Variant_Id` |
-| [QuantityUnit](Logistics.Wms.WarehouseAvailabilityView.md#quantityunit) | [MeasurementUnits](General.MeasurementUnits.md) | The measurement unit of quantity. `Required` `Filter(multi eq)` `Inherited from Wms_Warehouse_<br />Transactions_Table.Quantity_Unit_Id` |
-| [SerialNumber](Logistics.Wms.WarehouseAvailabilityView.md#serialnumber) | [SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable) | The serial number which was transacted. null when the transaction was not for a specific serial number. `Filter(multi eq)` `Inherited from Wms_Warehouse_<br />Transactions_Table.Serial_Number_Id` |
-| [Warehouse](Logistics.Wms.WarehouseAvailabilityView.md#warehouse) | [Warehouses](Logistics.Wms.Warehouses.md) | The warehouse in which the transaction occurred. `Required` `Filter(multi eq)` `Inherited from Wms_Warehouse_<br />Transactions_Table.Warehouse_Id` |
-| [WarehouseLocation](Logistics.Wms.WarehouseAvailabilityView.md#warehouselocation) | [WarehouseLocations](Logistics.Wms.WarehouseLocations.md) | The warehouse location, where the transaction occurred. `Required` `Filter(multi eq)` `Inherited from Wms_Warehouse_<br />Transactions_Table.Warehouse_Location_Id` |
+| [CatchQuantityUnit](Logistics.Wms.WarehouseAvailabilityView.md#catchquantityunit) | [MeasurementUnits](General.MeasurementUnits.md) | The measurement unit of the catch quantity. null when catch measurement is not configured for the product. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Gen_Measurement_<br />Units_Table.Id` |
+| [LogisticUnit](Logistics.Wms.WarehouseAvailabilityView.md#logisticunit) | [LogisticUnits](Logistics.LogisticUnits.md) | Logistic unit, which was transacted. null when the transaction was not for a logistic unit. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Log_Logistic_Units_Table.Logistic_Unit_Id` |
+| [Lot](Logistics.Wms.WarehouseAvailabilityView.md#lot) | [Lots](Logistics.Inventory.Lots.md) | The lot which was transacted. null when the transaction was not for a specific lot. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Inv_Lots_Table.Lot_Id` |
+| [Product](Logistics.Wms.WarehouseAvailabilityView.md#product) | [Products](General.Products.Products.md) | The product, which was transacted. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Gen_Products_Table.Id` |
+| [ProductVariant](Logistics.Wms.WarehouseAvailabilityView.md#productvariant) | [ProductVariants](General.ProductVariants.md) | The product variant, which was transacted. null when the transaction was not for a product variant. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Gen_Product_Variants_Table.Product_Variant_Id` |
+| [QuantityUnit](Logistics.Wms.WarehouseAvailabilityView.md#quantityunit) | [MeasurementUnits](General.MeasurementUnits.md) | The measurement unit of quantity. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Gen_Measurement_<br />Units_Table.Id` |
+| [SerialNumber](Logistics.Wms.WarehouseAvailabilityView.md#serialnumber) | [SerialNumbers](Logistics.Inventory.SerialNumbers.md) | The serial number which was transacted. null when the transaction was not for a specific serial number. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Inv_Serial_Numbers_Table.Id` |
+| [Warehouse](Logistics.Wms.WarehouseAvailabilityView.md#warehouse) | [Warehouses](Logistics.Wms.Warehouses.md) |  |
+| [WarehouseLocation](Logistics.Wms.WarehouseAvailabilityView.md#warehouselocation) | [WarehouseLocations](Logistics.Wms.WarehouseLocations.md) | The warehouse location, where the transaction occurred. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Wms_Warehouse_<br />Locations_Table.Warehouse_Location_Id` |
 
 
 ## Attribute Details
@@ -67,75 +67,82 @@ _Default Value_: **0**
 
 ### CatchQuantityUnit
 
-The measurement unit of the catch quantity. null when catch measurement is not configured for the product. `Filter(multi eq)` `Inherited from Wms_Warehouse_Transactions_Table.Catch_Quantity_Unit_Id`
+The measurement unit of the catch quantity. null when catch measurement is not configured for the product. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Gen_Measurement_Units_Table.Id`
 
-_Type_: **[MeasurementUnits](General.MeasurementUnits.md) (nullable)**  
-_Inherited From_: **Wms_Warehouse_Transactions_Table.Catch_Quantity_Unit_Id**  
+_Type_: **[MeasurementUnits](General.MeasurementUnits.md)**  
+_Inherited From_: **Gen_Measurement_Units_Table.Id**  
 _Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
 
 ### LogisticUnit
 
-Logistic unit, which was transacted. null when the transaction was not for a logistic unit. `Filter(multi eq)` `Inherited from Wms_Warehouse_Transactions_Table.Logistic_Unit_Id`
+Logistic unit, which was transacted. null when the transaction was not for a logistic unit. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Log_Logistic_Units_Table.Logistic_Unit_Id`
 
-_Type_: **[LogisticUnits](Logistics.LogisticUnits.md) (nullable)**  
-_Inherited From_: **Wms_Warehouse_Transactions_Table.Logistic_Unit_Id**  
+_Type_: **[LogisticUnits](Logistics.LogisticUnits.md)**  
+_Inherited From_: **Log_Logistic_Units_Table.Logistic_Unit_Id**  
 _Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
 
 ### Lot
 
-The lot which was transacted. null when the transaction was not for a specific lot. `Filter(multi eq)` `Inherited from Wms_Warehouse_Transactions_Table.Lot_Id`
+The lot which was transacted. null when the transaction was not for a specific lot. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Inv_Lots_Table.Lot_Id`
 
-_Type_: **[Lots](Logistics.Inventory.Lots.md) (nullable)**  
-_Inherited From_: **Wms_Warehouse_Transactions_Table.Lot_Id**  
+_Type_: **[Lots](Logistics.Inventory.Lots.md)**  
+_Inherited From_: **Inv_Lots_Table.Lot_Id**  
 _Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
 
 ### Product
 
-The product, which was transacted. `Required` `Filter(multi eq)` `Inherited from Wms_Warehouse_Transactions_Table.Product_Id`
+The product, which was transacted. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Gen_Products_Table.Id`
 
 _Type_: **[Products](General.Products.Products.md)**  
-_Inherited From_: **Wms_Warehouse_Transactions_Table.Product_Id**  
+_Inherited From_: **Gen_Products_Table.Id**  
 _Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
 
 ### ProductVariant
 
-The product variant, which was transacted. null when the transaction was not for a product variant. `Filter(multi eq)` `Inherited from Wms_Warehouse_Transactions_Table.Product_Variant_Id`
+The product variant, which was transacted. null when the transaction was not for a product variant. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Gen_Product_Variants_Table.Product_Variant_Id`
 
-_Type_: **[ProductVariants](General.ProductVariants.md) (nullable)**  
-_Inherited From_: **Wms_Warehouse_Transactions_Table.Product_Variant_Id**  
+_Type_: **[ProductVariants](General.ProductVariants.md)**  
+_Inherited From_: **Gen_Product_Variants_Table.Product_Variant_Id**  
 _Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
 
 ### QuantityUnit
 
-The measurement unit of quantity. `Required` `Filter(multi eq)` `Inherited from Wms_Warehouse_Transactions_Table.Quantity_Unit_Id`
+The measurement unit of quantity. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Gen_Measurement_Units_Table.Id`
 
 _Type_: **[MeasurementUnits](General.MeasurementUnits.md)**  
-_Inherited From_: **Wms_Warehouse_Transactions_Table.Quantity_Unit_Id**  
+_Inherited From_: **Gen_Measurement_Units_Table.Id**  
 _Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
 
 ### SerialNumber
 
-The serial number which was transacted. null when the transaction was not for a specific serial number. `Filter(multi eq)` `Inherited from Wms_Warehouse_Transactions_Table.Serial_Number_Id`
+The serial number which was transacted. null when the transaction was not for a specific serial number. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Inv_Serial_Numbers_Table.Id`
 
-_Type_: **[SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable)**  
-_Inherited From_: **Wms_Warehouse_Transactions_Table.Serial_Number_Id**  
+_Type_: **[SerialNumbers](Logistics.Inventory.SerialNumbers.md)**  
+_Inherited From_: **Inv_Serial_Numbers_Table.Id**  
 _Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
 
 ### Warehouse
 
-The warehouse in which the transaction occurred. `Required` `Filter(multi eq)` `Inherited from Wms_Warehouse_Transactions_Table.Warehouse_Id`
-
 _Type_: **[Warehouses](Logistics.Wms.Warehouses.md)**  
-_Inherited From_: **Wms_Warehouse_Transactions_Table.Warehouse_Id**  
+_Inherited From_: **Wms_Warehouses_Table.Warehouse_Id**  
 _Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
 
 ### WarehouseLocation
 
-The warehouse location, where the transaction occurred. `Required` `Filter(multi eq)` `Inherited from Wms_Warehouse_Transactions_Table.Warehouse_Location_Id`
+The warehouse location, where the transaction occurred. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Wms_Warehouse_Locations_Table.Warehouse_Location_Id`
 
 _Type_: **[WarehouseLocations](Logistics.Wms.WarehouseLocations.md)**  
-_Inherited From_: **Wms_Warehouse_Transactions_Table.Warehouse_Location_Id**  
+_Inherited From_: **Wms_Warehouse_Locations_Table.Warehouse_Location_Id**  
 _Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
 
 
 ## API

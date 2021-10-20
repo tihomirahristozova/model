@@ -5,7 +5,7 @@
 
 Entity: [Logistics.Inventory.CurrentBalances](~/entities/Logistics.Inventory.CurrentBalances.md)
 
-The current inventory balances, grouped by storage key (Store, Product, Lot, etc.). Entity: Inv_Current_Balances
+The current inventory balances, grouped by storage key (Store, Product, Lot, etc.). Entity: Inv_Current_Balances (Introduced in version 22.1.4.33)
 
 ## Summary
 

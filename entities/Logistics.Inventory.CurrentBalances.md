@@ -5,7 +5,7 @@ uid: Logistics.Inventory.CurrentBalances
 
 **Namespace:** [Logistics.Inventory](Logistics.Inventory.md)  
 
-The current inventory balances, grouped by storage key (Store, Product, Lot, etc.). Entity: Inv_Current_Balances
+The current inventory balances, grouped by storage key (Store, Product, Lot, etc.). Entity: Inv_Current_Balances (Introduced in version 22.1.4.33)
 
 ## Default Visualization
 Default Display Text Format:  
