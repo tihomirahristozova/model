@@ -19,6 +19,7 @@ Warehouse Policies is a hierarchical system for applying policies to warehouse o
 |[Importance](#importance)|`int` |The importance of the policy, relative to other applicable policies. Higher numbers indicate higher importance.|
 |[Note](#note)|`nvarchar(max)` ||
 |[Policy_Kind](#policy_kind)|`nvarchar(3)` Allowed: `APC`, `ATC`, `ALC`, `AUC`, `RSS`, `RDS`, `ALS`|The kind of policy, which is being applied.|
+|[Product_Group_Id](#product_group_id)|`uniqueidentifier` |When set, specifies that the policy will apply to the specified product group only.|
 |[Product_Id](#product_id)|`uniqueidentifier` |When set, specifies that the policy will apply to the specified product only.|
 |[Product_Type_Id](#product_type_id)|`uniqueidentifier` |When set, specifies that the policy will apply to the specified product type only.|
 |[Row_Version](#row_version)|`timestamp` ||
@@ -167,6 +168,43 @@ The kind of policy, which is being applied.
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+
+### Product_Group_Id
+
+
+When set, specifies that the policy will apply to the specified product group only.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|11|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|Referenced Table|[Gen_Product_Groups](Gen_Product_Groups.md)|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|50|
+|User Login|no|
+|Visible|yes|
+
+#### Product_Group_Id - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
 
 ### Product_Id
 

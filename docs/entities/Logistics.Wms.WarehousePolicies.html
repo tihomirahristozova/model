@@ -155,6 +155,11 @@ Aggregate Root:<br>
 <td>When set, specifies that the policy will apply to the specified product only. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
+<td><a href="Logistics.Wms.WarehousePolicies.html#productgroup">ProductGroup</a></td>
+<td><a href="General.Products.ProductGroups.html">ProductGroups</a> (nullable)</td>
+<td>When set, specifies that the policy will apply to the specified product group only. <code>Filter(multi eq)</code> <code>Introduced in version 22.1.4.36</code></td>
+</tr>
+<tr>
 <td><a href="Logistics.Wms.WarehousePolicies.html#producttype">ProductType</a></td>
 <td><a href="General.Products.ProductTypes.html">ProductTypes</a> (nullable)</td>
 <td>When set, specifies that the policy will apply to the specified product type only. <code>Filter(multi eq)</code></td>
@@ -253,6 +258,10 @@ Allowed values for the <code>PolicyKind</code>(Logistics.Wms.WarehousePolicies.m
 <h3 id="product">Product</h3>
 <p>When set, specifies that the policy will apply to the specified product only. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.Products.Products.html">Products</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<h3 id="productgroup">ProductGroup</h3>
+<p>When set, specifies that the policy will apply to the specified product group only. <code>Filter(multi eq)</code> <code>Introduced in version 22.1.4.36</code></p>
+<p><em>Type</em>: <strong><a href="General.Products.ProductGroups.html">ProductGroups</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="producttype">ProductType</h3>
 <p>When set, specifies that the policy will apply to the specified product type only. <code>Filter(multi eq)</code></p>

@@ -7,6 +7,10 @@ Entity: [Crm.Sales.DocumentTypePaymentOptions](~/entities/Crm.Sales.DocumentType
 
 Contains payment options for user documnet types for sales orders. Entity: Crm_Document_Type_Payment_Options
 
+## Owner Tables Hierarchy
+
+* [Gen_Document_Types](Gen_Document_Types.md)
+
 ## Summary
 
 | Name | Type | Description |
@@ -102,7 +106,7 @@ The document type for which the payment option applies.
 |Is Entity Name|no|
 |Max Length|-1|
 |Order|2147483647|
-|Ownership Reference|no|
+|Ownership Reference|yes|
 |Pasword|no|
 |Picture|no|
 |Primary Key|no|

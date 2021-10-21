@@ -34,7 +34,7 @@ Aggregate Tree
 | [BaseOnLines](General.DocumentAmountTypes.md#baseonlines) | boolean | True means that the percentages will be applied over lines plus dependant amounts; false means only dependant amounts. `Required` `Default(true)` 
 | [DefaultPercent](General.DocumentAmountTypes.md#defaultpercent) | decimal (7, 6) __nullable__ | Default percent for amounts for which percent input is allowed; null otherwise. 
 | [Description](General.DocumentAmountTypes.md#description) | string (254) __nullable__ | The description of this DocumentAmountType. 
-| [DistributeBy](General.DocumentAmountTypes.md#distributeby) | [DistributeBy](General.DocumentAmountTypes.md#distributeby) | Specifies how the amount will be distributed among the document lines. Valid values are: ('AMOUNT','MEASUREMENT','PRODUCT DEFINITION'). `Required` `Default("AMOUNT")` `Filter(eq)` 
+| [DistributeBy](General.DocumentAmountTypes.md#distributeby) | [DistributeBy](General.DocumentAmountTypes.md#distributeby) | Specifies how the amount will be distributed among the document lines. Valid values are: ('AMOUNT','MEASUREMENT','PRODUCT DEFINITION','DEAL TYPE'). `Required` `Default("AMOUNT")` `Filter(eq)` 
 | [Id](General.DocumentAmountTypes.md#id) | guid |  
 | [IsActive](General.DocumentAmountTypes.md#isactive) | boolean | True when the amount type is active for new records; false - otherwise. `Required` `Default(true)` `Filter(eq)` 
 | [PercentInputAllowed](General.DocumentAmountTypes.md#percentinputallowed) | boolean | True when the user is allowed to input percent of total for distribution. `Required` `Default(true)` `Filter(eq)` 
@@ -151,7 +151,7 @@ _Maximum Length_: **254**
 
 ### DistributeBy
 
-Specifies how the amount will be distributed among the document lines. Valid values are: ('AMOUNT','MEASUREMENT','PRODUCT DEFINITION'). `Required` `Default("AMOUNT")` `Filter(eq)`
+Specifies how the amount will be distributed among the document lines. Valid values are: ('AMOUNT','MEASUREMENT','PRODUCT DEFINITION','DEAL TYPE'). `Required` `Default("AMOUNT")` `Filter(eq)`
 
 _Type_: **[DistributeBy](General.DocumentAmountTypes.md#distributeby)**  
 Allowed values for the `DistributeBy`(General.DocumentAmountTypes.md#distributeby) data attribute  
@@ -162,6 +162,7 @@ _Allowed Values (General.DocumentAmountTypesRepository.DistributeBy Enum Members
 | Amount | Amount value. Stored as 'AMOUNT'. <br /> _Database Value:_ 'AMOUNT' <br /> _Model Value:_ 0 <br /> _Domain API Value:_ 'Amount' |
 | Measurement | Measurement value. Stored as 'MEASUREMENT'. <br /> _Database Value:_ 'MEASUREMENT' <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'Measurement' |
 | ProductDefinition | ProductDefinition value. Stored as 'PRODUCT DEFINITION'. <br /> _Database Value:_ 'PRODUCT DEFINITION' <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'ProductDefinition' |
+| DealType | DealType value. Stored as 'DEAL TYPE'. <br /> _Database Value:_ 'DEAL TYPE' <br /> _Model Value:_ 3 <br /> _Domain API Value:_ 'DealType' |
 
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  

@@ -13,7 +13,7 @@ Contains the approved Intrastat commodity codes for each period. Entity: Its_Com
 | - | - | --- |
 |[Commodity_Code](#commodity_code)|`nvarchar(8)` |Product code from the Intrastat Combined nomenclature|
 |[Description](#description)|`nvarchar(4000)` `ML`|Description of the product code from the Intrastat Combined nomenclature|
-|[Excise_Alcoholic_Strength](#excise_alcoholic_strength)|`decimal(3, 0)` |Specifies the alcoholic strength for excise products (if applicable).|
+|[Excise_Alcoholic_Strength](#excise_alcoholic_strength)|`decimal(5, 2)` |Specifies the alcoholic strength for excise products (if applicable).|
 |[Excise_Product_Code](#excise_product_code)|`nvarchar(20)` |The code of the product for excise purposes (if applicable). A.k.a. APCode.|
 |[Intrastat_Commodity_Code_Id](#intrastat_commodity_code_id)|`uniqueidentifier` `PK`||
 |[Row_Version](#row_version)|`timestamp` ||
@@ -120,7 +120,7 @@ Specifies the alcoholic strength for excise products (if applicable).
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|decimal(3, 0) (Allows NULL)|
+|Type|decimal(5, 2) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
