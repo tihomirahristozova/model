@@ -99,6 +99,8 @@ _Supported Filters_: **Equals, Like**
 _Supports Order By_: **True**  
 _Maximum Length_: **64**  
 
+_Front-End Recalc Expressions:_  
+`obj.DocumentEntityName`
 ### Notes
 
 Notes for this PrintoutLayout.

@@ -302,6 +302,8 @@ Aggregate Root:<br>
 <p><em>Type</em>: <strong><a href="General.Documents.html">Documents</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<p><em>Back-End Default Expression:</em><br>
+<code>IIF( ( obj.Voucher.DefaultReferencedDocument != null), obj.Voucher.DefaultReferencedDocument, obj.Document)</code></p>
 <h3 id="voucher">Voucher</h3>
 <p>The voucher to which this line is attached. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="Finance.Accounting.AccountingVouchers.html">AccountingVouchers</a></strong><br>

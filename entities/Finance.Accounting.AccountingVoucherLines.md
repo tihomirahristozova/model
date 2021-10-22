@@ -200,6 +200,9 @@ _Type_: **[Documents](General.Documents.md)**
 _Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
+_Back-End Default Expression:_  
+`IIF( ( obj.Voucher.DefaultReferencedDocument != null), obj.Voucher.DefaultReferencedDocument, obj.Document)`
+
 ### Voucher
 
 The voucher to which this line is attached. `Required` `Filter(multi eq)` `Owner`

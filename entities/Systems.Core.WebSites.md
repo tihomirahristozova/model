@@ -95,7 +95,6 @@ _Allowed Values (Systems.Core.WebSitesRepository.WebSiteType Enum Members)_
 | WebClientApplication | WebClientApplication value. Stored as 'APP'. <br /> _Database Value:_ 'APP' <br /> _Model Value:_ 8 <br /> _Domain API Value:_ 'WebClientApplication' |
 | TableAPI | TableAPI value. Stored as 'TAP'. <br /> _Database Value:_ 'TAP' <br /> _Model Value:_ 9 <br /> _Domain API Value:_ 'TableAPI' |
 | DataAccessAPI | DataAccessAPI value. Stored as 'DAP'. <br /> _Database Value:_ 'DAP' <br /> _Model Value:_ 10 <br /> _Domain API Value:_ 'DataAccessAPI' |
-| WMSMobileApp | ERP.net WMS Mobile App. Stored as 'WMS'. <br /> _Database Value:_ 'WMS' <br /> _Model Value:_ 11 <br /> _Domain API Value:_ 'WMSMobileApp' |
 
 _Supported Filters_: **Equals, EqualsIn**  
 _Supports Order By_: **False**  

@@ -202,188 +202,234 @@ Generic enum type for ExpressionOperator properties<br>
 <tr>
 <th>Value</th>
 <th>Description</th>
+<th></th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>ADD</td>
-<td>ADD value. Stored as 'ADD'. <br> <em>Database Value:</em> 'ADD' <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'ADD'</td>
+<td>ADD(Number1, Number2) =&gt; Numer1 + Number2.. Stored as 'ADD'. <br> <em>Database Value:</em> 'ADD' <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'ADD'</td>
+<td></td>
 </tr>
 <tr>
 <td>ADDDAYS</td>
-<td>ADDDAYS value. Stored as 'ADDDAYS'. <br> <em>Database Value:</em> 'ADDDAYS' <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'ADDDAYS'</td>
+<td>ADDDAYS(Date, NumDays) =&gt; Adds the specified number of days to the date.. Stored as 'ADDDAYS'. <br> <em>Database Value:</em> 'ADDDAYS' <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'ADDDAYS'</td>
+<td></td>
 </tr>
 <tr>
 <td>AND</td>
-<td>AND value. Stored as 'AND'. <br> <em>Database Value:</em> 'AND' <br> <em>Model Value:</em> 2 <br> <em>Domain API Value:</em> 'AND'</td>
+<td>AND(Condition1, Condition2) =&gt; Condition1 AND Condition2.. Stored as 'AND'. <br> <em>Database Value:</em> 'AND' <br> <em>Model Value:</em> 2 <br> <em>Domain API Value:</em> 'AND'</td>
+<td></td>
 </tr>
 <tr>
 <td>CAST</td>
-<td>CAST value. Stored as 'CAST'. <br> <em>Database Value:</em> 'CAST' <br> <em>Model Value:</em> 3 <br> <em>Domain API Value:</em> 'CAST'</td>
+<td>CAST(Param, Type) =&gt; Casts the parameter to the specified type.. Stored as 'CAST'. <br> <em>Database Value:</em> 'CAST' <br> <em>Model Value:</em> 3 <br> <em>Domain API Value:</em> 'CAST'</td>
+<td></td>
 </tr>
 <tr>
 <td>CEILING</td>
-<td>CEILING value. Stored as 'CEILING'. <br> <em>Database Value:</em> 'CEILING' <br> <em>Model Value:</em> 4 <br> <em>Domain API Value:</em> 'CEILING'</td>
+<td>CEILING(Number) =&gt; Rounds the number up to the next integer.. Stored as 'CEILING'. <br> <em>Database Value:</em> 'CEILING' <br> <em>Model Value:</em> 4 <br> <em>Domain API Value:</em> 'CEILING'</td>
+<td></td>
 </tr>
 <tr>
 <td>CONCAT</td>
-<td>CONCAT value. Stored as 'CONCAT'. <br> <em>Database Value:</em> 'CONCAT' <br> <em>Model Value:</em> 5 <br> <em>Domain API Value:</em> 'CONCAT'</td>
+<td>CONCAT(String1, String2) =&gt; Concatenates the strings.. Stored as 'CONCAT'. <br> <em>Database Value:</em> 'CONCAT' <br> <em>Model Value:</em> 5 <br> <em>Domain API Value:</em> 'CONCAT'</td>
+<td></td>
 </tr>
 <tr>
 <td>CONVERT</td>
-<td>CONVERT value. Stored as 'CONVERT'. <br> <em>Database Value:</em> 'CONVERT' <br> <em>Model Value:</em> 6 <br> <em>Domain API Value:</em> 'CONVERT'</td>
+<td>CONVERT(Value, NewType) -&gt; Converts a value in the specified new type.. Stored as 'CONVERT'. <br> <em>Database Value:</em> 'CONVERT' <br> <em>Model Value:</em> 6 <br> <em>Domain API Value:</em> 'CONVERT'</td>
+<td></td>
 </tr>
 <tr>
 <td>COUNT</td>
-<td>COUNT value. Stored as 'COUNT'. <br> <em>Database Value:</em> 'COUNT' <br> <em>Model Value:</em> 7 <br> <em>Domain API Value:</em> 'COUNT'</td>
+<td>COUNT(List) -&gt; Gets the number of elements contained in the list. Stored as 'COUNT'. <br> <em>Database Value:</em> 'COUNT' <br> <em>Model Value:</em> 7 <br> <em>Domain API Value:</em> 'COUNT'</td>
+<td></td>
 </tr>
 <tr>
 <td>DIVIDE</td>
-<td>DIVIDE value. Stored as 'DIVIDE'. <br> <em>Database Value:</em> 'DIVIDE' <br> <em>Model Value:</em> 8 <br> <em>Domain API Value:</em> 'DIVIDE'</td>
+<td>DIVIDE(Number1, Number2) =&gt; Numer1 / Number2.. Stored as 'DIVIDE'. <br> <em>Database Value:</em> 'DIVIDE' <br> <em>Model Value:</em> 8 <br> <em>Domain API Value:</em> 'DIVIDE'</td>
+<td></td>
 </tr>
 <tr>
 <td>IN</td>
-<td>IN value. Stored as 'IN'. <br> <em>Database Value:</em> 'IN' <br> <em>Model Value:</em> 9 <br> <em>Domain API Value:</em> 'IN'</td>
+<td>IN(Input, List) =&gt; Returns whether the value of Input is among the specified in the list.. Stored as 'IN'. <br> <em>Database Value:</em> 'IN' <br> <em>Model Value:</em> 9 <br> <em>Domain API Value:</em> 'IN'</td>
+<td></td>
 </tr>
 <tr>
 <td>IIF</td>
-<td>IIF value. Stored as 'IIF'. <br> <em>Database Value:</em> 'IIF' <br> <em>Model Value:</em> 10 <br> <em>Domain API Value:</em> 'IIF'</td>
+<td>IIF(Condition, ResultTrue, ResultFalse) =&gt; Depending on Condition, returns the second or third argument.. Stored as 'IIF'. <br> <em>Database Value:</em> 'IIF' <br> <em>Model Value:</em> 10 <br> <em>Domain API Value:</em> 'IIF'</td>
+<td></td>
 </tr>
 <tr>
 <td>INCNUM</td>
-<td>INCNUM value. Stored as 'INCNUM'. <br> <em>Database Value:</em> 'INCNUM' <br> <em>Model Value:</em> 11 <br> <em>Domain API Value:</em> 'INCNUM'</td>
+<td>The INCNUM operator increases the value of its parameter by 1. The operator can be used only for String values whоose last character is a number.. Stored as 'INCNUM'. <br> <em>Database Value:</em> 'INCNUM' <br> <em>Model Value:</em> 11 <br> <em>Domain API Value:</em> 'INCNUM'</td>
+<td></td>
 </tr>
 <tr>
 <td>EQUAL</td>
-<td>EQUAL value. Stored as 'EQUAL'. <br> <em>Database Value:</em> 'EQUAL' <br> <em>Model Value:</em> 12 <br> <em>Domain API Value:</em> 'EQUAL'</td>
+<td>EQUAL(Value1, Value2) =&gt; Value1 = Value2.. Stored as 'EQUAL'. <br> <em>Database Value:</em> 'EQUAL' <br> <em>Model Value:</em> 12 <br> <em>Domain API Value:</em> 'EQUAL'</td>
+<td></td>
 </tr>
 <tr>
 <td>FILTER</td>
-<td>FILTER value. Stored as 'FILTER'. <br> <em>Database Value:</em> 'FILTER' <br> <em>Model Value:</em> 13 <br> <em>Domain API Value:</em> 'FILTER'</td>
+<td>FILTER(List, Condition) =&gt; Filters the list by the condition.. Stored as 'FILTER'. <br> <em>Database Value:</em> 'FILTER' <br> <em>Model Value:</em> 13 <br> <em>Domain API Value:</em> 'FILTER'</td>
+<td></td>
 </tr>
 <tr>
 <td>FIRST</td>
-<td>FIRST value. Stored as 'FIRST'. <br> <em>Database Value:</em> 'FIRST' <br> <em>Model Value:</em> 14 <br> <em>Domain API Value:</em> 'FIRST'</td>
+<td>FIRST(List) =&gt; Returns the first element in the list.. Stored as 'FIRST'. <br> <em>Database Value:</em> 'FIRST' <br> <em>Model Value:</em> 14 <br> <em>Domain API Value:</em> 'FIRST'</td>
+<td></td>
 </tr>
 <tr>
 <td>FLOOR</td>
-<td>FLOOR value. Stored as 'FLOOR'. <br> <em>Database Value:</em> 'FLOOR' <br> <em>Model Value:</em> 15 <br> <em>Domain API Value:</em> 'FLOOR'</td>
+<td>FLOOR(Number) =&gt; Rounds down to integer.. Stored as 'FLOOR'. <br> <em>Database Value:</em> 'FLOOR' <br> <em>Model Value:</em> 15 <br> <em>Domain API Value:</em> 'FLOOR'</td>
+<td></td>
 </tr>
 <tr>
 <td>FORMATSTRING</td>
-<td>FORMATSTRING value. Stored as 'FORMATSTRING'. <br> <em>Database Value:</em> 'FORMATSTRING' <br> <em>Model Value:</em> 16 <br> <em>Domain API Value:</em> 'FORMATSTRING'</td>
+<td>FORMATSTRING(Object, Format) =&gt; Returns String, formatted by the rules in Format.. Stored as 'FORMATSTRING'. <br> <em>Database Value:</em> 'FORMATSTRING' <br> <em>Model Value:</em> 16 <br> <em>Domain API Value:</em> 'FORMATSTRING'</td>
+<td></td>
 </tr>
 <tr>
 <td>GETVALUE</td>
-<td>GETVALUE value. Stored as 'GETVALUE'. <br> <em>Database Value:</em> 'GETVALUE' <br> <em>Model Value:</em> 17 <br> <em>Domain API Value:</em> 'GETVALUE'</td>
+<td>GETVALUE(Value) =&gt; Get the value from the current object.. Stored as 'GETVALUE'. <br> <em>Database Value:</em> 'GETVALUE' <br> <em>Model Value:</em> 17 <br> <em>Domain API Value:</em> 'GETVALUE'</td>
+<td></td>
 </tr>
 <tr>
 <td>GETOBJVALUE</td>
-<td>GETOBJVALUE value. Stored as 'GETOBJVALUE'. <br> <em>Database Value:</em> 'GETOBJVALUE' <br> <em>Model Value:</em> 18 <br> <em>Domain API Value:</em> 'GETOBJVALUE'</td>
+<td>GETOBJVALUE(Obj, Value) =&gt; obj.Value. Gets the specified value from the object.. Stored as 'GETOBJVALUE'. <br> <em>Database Value:</em> 'GETOBJVALUE' <br> <em>Model Value:</em> 18 <br> <em>Domain API Value:</em> 'GETOBJVALUE'</td>
+<td></td>
 </tr>
 <tr>
 <td>GT</td>
-<td>GT value. Stored as 'GT'. <br> <em>Database Value:</em> 'GT' <br> <em>Model Value:</em> 19 <br> <em>Domain API Value:</em> 'GT'</td>
+<td>GT(Value1, Value2) =&gt; Value1 &gt; Value2.. Stored as 'GT'. <br> <em>Database Value:</em> 'GT' <br> <em>Model Value:</em> 19 <br> <em>Domain API Value:</em> 'GT'</td>
+<td></td>
 </tr>
 <tr>
 <td>GTE</td>
-<td>GTE value. Stored as 'GTE'. <br> <em>Database Value:</em> 'GTE' <br> <em>Model Value:</em> 20 <br> <em>Domain API Value:</em> 'GTE'</td>
+<td>GTE(Value1, Value2) =&gt; Value1 &gt;= Value2.. Stored as 'GTE'. <br> <em>Database Value:</em> 'GTE' <br> <em>Model Value:</em> 20 <br> <em>Domain API Value:</em> 'GTE'</td>
+<td></td>
 </tr>
 <tr>
 <td>LIKE</td>
-<td>Compare by mask. Use * (asterisk) as wildcard char.. Stored as 'LIKE'. <br> <em>Database Value:</em> 'LIKE' <br> <em>Model Value:</em> 21 <br> <em>Domain API Value:</em> 'LIKE'</td>
+<td>LIKE(String, Mask) =&gt; String LIKE Mask (%-match any string. _-match 1 char).. Stored as 'LIKE'. <br> <em>Database Value:</em> 'LIKE' <br> <em>Model Value:</em> 21 <br> <em>Domain API Value:</em> 'LIKE'</td>
+<td></td>
 </tr>
 <tr>
 <td>LIST</td>
-<td>LIST value. Stored as 'LIST'. <br> <em>Database Value:</em> 'LIST' <br> <em>Model Value:</em> 22 <br> <em>Domain API Value:</em> 'LIST'</td>
+<td>LIST(List, Attribute, Separator) =&gt; Returns list with the string values of the specified attribute of the list of objects. The values are separated by the specified separator. Stored as 'LIST'. <br> <em>Database Value:</em> 'LIST' <br> <em>Model Value:</em> 22 <br> <em>Domain API Value:</em> 'LIST'</td>
+<td></td>
 </tr>
 <tr>
 <td>LEFT</td>
-<td>LEFT value. Stored as 'LEFT'. <br> <em>Database Value:</em> 'LEFT' <br> <em>Model Value:</em> 23 <br> <em>Domain API Value:</em> 'LEFT'</td>
+<td>LEFT(String, NumChars) =&gt; Gets the first characters of a string.. Stored as 'LEFT'. <br> <em>Database Value:</em> 'LEFT' <br> <em>Model Value:</em> 23 <br> <em>Domain API Value:</em> 'LEFT'</td>
+<td></td>
 </tr>
 <tr>
 <td>LEN</td>
-<td>LEN value. Stored as 'LEN'. <br> <em>Database Value:</em> 'LEN' <br> <em>Model Value:</em> 24 <br> <em>Domain API Value:</em> 'LEN'</td>
+<td>LEN(String) =&gt; Returns the length of the string.. Stored as 'LEN'. <br> <em>Database Value:</em> 'LEN' <br> <em>Model Value:</em> 24 <br> <em>Domain API Value:</em> 'LEN'</td>
+<td></td>
 </tr>
 <tr>
 <td>LT</td>
-<td>LT value. Stored as 'LT'. <br> <em>Database Value:</em> 'LT' <br> <em>Model Value:</em> 25 <br> <em>Domain API Value:</em> 'LT'</td>
+<td><em>Database Value:</em> 'LT' <br> <em>Model Value:</em> 25 <br> <em>Domain API Value:</em> 'LT'</td>
+<td></td>
 </tr>
 <tr>
 <td>LTE</td>
-<td>LTE value. Stored as 'LTE'. <br> <em>Database Value:</em> 'LTE' <br> <em>Model Value:</em> 26 <br> <em>Domain API Value:</em> 'LTE'</td>
+<td><em>Database Value:</em> 'LTE' <br> <em>Model Value:</em> 26 <br> <em>Domain API Value:</em> 'LTE'</td>
+<td></td>
 </tr>
 <tr>
 <td>MULTIPLY</td>
-<td>MULTIPLY value. Stored as 'MULTIPLY'. <br> <em>Database Value:</em> 'MULTIPLY' <br> <em>Model Value:</em> 27 <br> <em>Domain API Value:</em> 'MULTIPLY'</td>
+<td>MULTIPLY(Number1, Number2) =&gt; Numer1 * Number2.. Stored as 'MULTIPLY'. <br> <em>Database Value:</em> 'MULTIPLY' <br> <em>Model Value:</em> 27 <br> <em>Domain API Value:</em> 'MULTIPLY'</td>
+<td></td>
 </tr>
 <tr>
 <td>NOT</td>
-<td>NOT value. Stored as 'NOT'. <br> <em>Database Value:</em> 'NOT' <br> <em>Model Value:</em> 28 <br> <em>Domain API Value:</em> 'NOT'</td>
+<td>NOT(Condition) =&gt; NOT Condition.. Stored as 'NOT'. <br> <em>Database Value:</em> 'NOT' <br> <em>Model Value:</em> 28 <br> <em>Domain API Value:</em> 'NOT'</td>
+<td></td>
 </tr>
 <tr>
 <td>OR</td>
-<td>OR value. Stored as 'OR'. <br> <em>Database Value:</em> 'OR' <br> <em>Model Value:</em> 29 <br> <em>Domain API Value:</em> 'OR'</td>
+<td>OR(Condition1, Condition2) =&gt; Condition1 OR Condition2.. Stored as 'OR'. <br> <em>Database Value:</em> 'OR' <br> <em>Model Value:</em> 29 <br> <em>Domain API Value:</em> 'OR'</td>
+<td></td>
 </tr>
 <tr>
 <td>ORDERBY</td>
-<td>ORDERBY value. Stored as 'ORDERBY'. <br> <em>Database Value:</em> 'ORDERBY' <br> <em>Model Value:</em> 30 <br> <em>Domain API Value:</em> 'ORDERBY'</td>
+<td>ORDERBY(Attribute, Order, Next_clause) =&gt; Clause, specifying a sort order according to Attribute and the specified order (ASC</td>
+<td>DESC).. Stored as 'ORDERBY'. <br> <em>Database Value:</em> 'ORDERBY' <br> <em>Model Value:</em> 30 <br> <em>Domain API Value:</em> 'ORDERBY'</td>
 </tr>
 <tr>
 <td>POS</td>
-<td>POS value. Stored as 'POS'. <br> <em>Database Value:</em> 'POS' <br> <em>Model Value:</em> 31 <br> <em>Domain API Value:</em> 'POS'</td>
+<td>POS(Term, String) =&gt; Searches term in String, returns first position or -1 if not found.. Stored as 'POS'. <br> <em>Database Value:</em> 'POS' <br> <em>Model Value:</em> 31 <br> <em>Domain API Value:</em> 'POS'</td>
+<td></td>
 </tr>
 <tr>
 <td>REGEX</td>
-<td>REGEX value. Stored as 'REGEX'. <br> <em>Database Value:</em> 'REGEX' <br> <em>Model Value:</em> 32 <br> <em>Domain API Value:</em> 'REGEX'</td>
+<td>REGEX(String, Mask) =&gt; Returns whether the string matches the regex mask.. Stored as 'REGEX'. <br> <em>Database Value:</em> 'REGEX' <br> <em>Model Value:</em> 32 <br> <em>Domain API Value:</em> 'REGEX'</td>
+<td></td>
 </tr>
 <tr>
 <td>REPLACE</td>
-<td>REPLACE value. Stored as 'REPLACE'. <br> <em>Database Value:</em> 'REPLACE' <br> <em>Model Value:</em> 33 <br> <em>Domain API Value:</em> 'REPLACE'</td>
+<td>REPLACE(String, OldValue, NewValue) =&gt; Replaces old with new value in string.. Stored as 'REPLACE'. <br> <em>Database Value:</em> 'REPLACE' <br> <em>Model Value:</em> 33 <br> <em>Domain API Value:</em> 'REPLACE'</td>
+<td></td>
 </tr>
 <tr>
 <td>RIGHT</td>
-<td>RIGHT value. Stored as 'RIGHT'. <br> <em>Database Value:</em> 'RIGHT' <br> <em>Model Value:</em> 34 <br> <em>Domain API Value:</em> 'RIGHT'</td>
+<td>RIGHT(String, NumChars) =&gt; Gets the last characters of a string.. Stored as 'RIGHT'. <br> <em>Database Value:</em> 'RIGHT' <br> <em>Model Value:</em> 34 <br> <em>Domain API Value:</em> 'RIGHT'</td>
+<td></td>
 </tr>
 <tr>
 <td>ROUND</td>
-<td>ROUND value. Stored as 'ROUND'. <br> <em>Database Value:</em> 'ROUND' <br> <em>Model Value:</em> 35 <br> <em>Domain API Value:</em> 'ROUND'</td>
+<td>ROUND(Number, DecimalPlaces) =&gt; Rounds mathematically with the specified precision.. Stored as 'ROUND'. <br> <em>Database Value:</em> 'ROUND' <br> <em>Model Value:</em> 35 <br> <em>Domain API Value:</em> 'ROUND'</td>
+<td></td>
 </tr>
 <tr>
 <td>SELECT</td>
-<td>SELECT value. Stored as 'SELECT'. <br> <em>Database Value:</em> 'SELECT' <br> <em>Model Value:</em> 36 <br> <em>Domain API Value:</em> 'SELECT'</td>
+<td>SELECT(Repository, Clauses) =&gt; Gets the objects, matching the clauses.. Stored as 'SELECT'. <br> <em>Database Value:</em> 'SELECT' <br> <em>Model Value:</em> 36 <br> <em>Domain API Value:</em> 'SELECT'</td>
+<td></td>
 </tr>
 <tr>
 <td>SORT</td>
-<td>SORT value. Stored as 'SORT'. <br> <em>Database Value:</em> 'SORT' <br> <em>Model Value:</em> 37 <br> <em>Domain API Value:</em> 'SORT'</td>
+<td>SORT(List, Attribute, Order) =&gt; Sorts the list according to the attribute and the specified order (ASC</td>
+<td>DESC).. Stored as 'SORT'. <br> <em>Database Value:</em> 'SORT' <br> <em>Model Value:</em> 37 <br> <em>Domain API Value:</em> 'SORT'</td>
 </tr>
 <tr>
 <td>SUBSTRING</td>
-<td>SUBSTRING value. Stored as 'SUBSTRING'. <br> <em>Database Value:</em> 'SUBSTRING' <br> <em>Model Value:</em> 38 <br> <em>Domain API Value:</em> 'SUBSTRING'</td>
+<td>SUBSTRING(String, Start, Len) =&gt; Returns a sub-string with the specified start and length.. Stored as 'SUBSTRING'. <br> <em>Database Value:</em> 'SUBSTRING' <br> <em>Model Value:</em> 38 <br> <em>Domain API Value:</em> 'SUBSTRING'</td>
+<td></td>
 </tr>
 <tr>
 <td>SUM</td>
-<td>SUM value. Stored as 'SUM'. <br> <em>Database Value:</em> 'SUM' <br> <em>Model Value:</em> 39 <br> <em>Domain API Value:</em> 'SUM'</td>
+<td>SUM(List, Value) =&gt; Returns the sum of Value for all elements in the list.. Stored as 'SUM'. <br> <em>Database Value:</em> 'SUM' <br> <em>Model Value:</em> 39 <br> <em>Domain API Value:</em> 'SUM'</td>
+<td></td>
 </tr>
 <tr>
 <td>TODAY</td>
-<td>TODAY value. Stored as 'TODAY'. <br> <em>Database Value:</em> 'TODAY' <br> <em>Model Value:</em> 40 <br> <em>Domain API Value:</em> 'TODAY'</td>
+<td>TODAY() =&gt; Returns the current date.. Stored as 'TODAY'. <br> <em>Database Value:</em> 'TODAY' <br> <em>Model Value:</em> 40 <br> <em>Domain API Value:</em> 'TODAY'</td>
+<td></td>
 </tr>
 <tr>
 <td>TOLOWER</td>
-<td>TOLOWER value. Stored as 'TOLOWER'. <br> <em>Database Value:</em> 'TOLOWER' <br> <em>Model Value:</em> 41 <br> <em>Domain API Value:</em> 'TOLOWER'</td>
+<td>TOLOWER(String) =&gt; Returns the string, converted to lower-case.. Stored as 'TOLOWER'. <br> <em>Database Value:</em> 'TOLOWER' <br> <em>Model Value:</em> 41 <br> <em>Domain API Value:</em> 'TOLOWER'</td>
+<td></td>
 </tr>
 <tr>
 <td>TOP</td>
-<td>TOP value. Stored as 'TOP'. <br> <em>Database Value:</em> 'TOP' <br> <em>Model Value:</em> 42 <br> <em>Domain API Value:</em> 'TOP'</td>
+<td>TOP(Number, Clauses) =&gt; Clause, returning only the first elements.. Stored as 'TOP'. <br> <em>Database Value:</em> 'TOP' <br> <em>Model Value:</em> 42 <br> <em>Domain API Value:</em> 'TOP'</td>
+<td></td>
 </tr>
 <tr>
 <td>TOUPPER</td>
-<td>TOUPPER value. Stored as 'TOUPPER'. <br> <em>Database Value:</em> 'TOUPPER' <br> <em>Model Value:</em> 43 <br> <em>Domain API Value:</em> 'TOUPPER'</td>
+<td>TOUPPER(String) =&gt; Returns the string, converted to upper-case.. Stored as 'TOUPPER'. <br> <em>Database Value:</em> 'TOUPPER' <br> <em>Model Value:</em> 43 <br> <em>Domain API Value:</em> 'TOUPPER'</td>
+<td></td>
 </tr>
 <tr>
 <td>WHERE</td>
-<td>WHERE value. Stored as 'WHERE'. <br> <em>Database Value:</em> 'WHERE' <br> <em>Model Value:</em> 44 <br> <em>Domain API Value:</em> 'WHERE'</td>
+<td>WHERE(Condition1, Condition2) =&gt; Clause, which filters by Condition1 AND Condition2.. Stored as 'WHERE'. <br> <em>Database Value:</em> 'WHERE' <br> <em>Model Value:</em> 44 <br> <em>Domain API Value:</em> 'WHERE'</td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -404,35 +450,35 @@ Generic enum type for ExpressionParameterType properties<br>
 <tbody>
 <tr>
 <td>Constant</td>
-<td>Constant value. Stored as 'CONST'. <br> <em>Database Value:</em> 'CONST' <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'Constant'</td>
+<td>Constant. Format: Date(yyyy-MM-dd), Decimal(9.9), Int(9), String('...'), True/False.. Stored as 'CONST'. <br> <em>Database Value:</em> 'CONST' <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'Constant'</td>
 </tr>
 <tr>
 <td>Attribute</td>
-<td>Attribute value. Stored as 'ATTRIB'. <br> <em>Database Value:</em> 'ATTRIB' <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'Attribute'</td>
+<td>The value of system or user-defined attribute.. Stored as 'ATTRIB'. <br> <em>Database Value:</em> 'ATTRIB' <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'Attribute'</td>
 </tr>
 <tr>
 <td>Reference</td>
-<td>Reference value. Stored as 'REF'. <br> <em>Database Value:</em> 'REF' <br> <em>Model Value:</em> 2 <br> <em>Domain API Value:</em> 'Reference'</td>
+<td>Reference to another object.. Stored as 'REF'. <br> <em>Database Value:</em> 'REF' <br> <em>Model Value:</em> 2 <br> <em>Domain API Value:</em> 'Reference'</td>
 </tr>
 <tr>
 <td>ChildList</td>
-<td>ChildList value. Stored as 'CHILD'. <br> <em>Database Value:</em> 'CHILD' <br> <em>Model Value:</em> 3 <br> <em>Domain API Value:</em> 'ChildList'</td>
+<td>Child lists return detail objects, related to the current master object.. Stored as 'CHILD'. <br> <em>Database Value:</em> 'CHILD' <br> <em>Model Value:</em> 3 <br> <em>Domain API Value:</em> 'ChildList'</td>
 </tr>
 <tr>
 <td>Expression</td>
-<td>Expression value. Stored as 'EXP'. <br> <em>Database Value:</em> 'EXP' <br> <em>Model Value:</em> 4 <br> <em>Domain API Value:</em> 'Expression'</td>
+<td>The value of the expression with the specified number.. Stored as 'EXP'. <br> <em>Database Value:</em> 'EXP' <br> <em>Model Value:</em> 4 <br> <em>Domain API Value:</em> 'Expression'</td>
 </tr>
 <tr>
 <td>Input</td>
-<td>Input value. Stored as 'INPUT'. <br> <em>Database Value:</em> 'INPUT' <br> <em>Model Value:</em> 5 <br> <em>Domain API Value:</em> 'Input'</td>
+<td>The input parameter for the specified expression number.. Stored as 'INPUT'. <br> <em>Database Value:</em> 'INPUT' <br> <em>Model Value:</em> 5 <br> <em>Domain API Value:</em> 'Input'</td>
 </tr>
 <tr>
 <td>Repository</td>
-<td>Repository value. Stored as 'REPO'. <br> <em>Database Value:</em> 'REPO' <br> <em>Model Value:</em> 6 <br> <em>Domain API Value:</em> 'Repository'</td>
+<td>A repository.. Stored as 'REPO'. <br> <em>Database Value:</em> 'REPO' <br> <em>Model Value:</em> 6 <br> <em>Domain API Value:</em> 'Repository'</td>
 </tr>
 <tr>
 <td>System</td>
-<td>System value. Stored as 'SYS'. <br> <em>Database Value:</em> 'SYS' <br> <em>Model Value:</em> 7 <br> <em>Domain API Value:</em> 'System'</td>
+<td>A system value.. Stored as 'SYS'. <br> <em>Database Value:</em> 'SYS' <br> <em>Model Value:</em> 7 <br> <em>Domain API Value:</em> 'System'</td>
 </tr>
 </tbody>
 </table>
@@ -459,35 +505,35 @@ Generic enum type for ExpressionParameterType properties<br>
 <tbody>
 <tr>
 <td>Constant</td>
-<td>Constant value. Stored as 'CONST'. <br> <em>Database Value:</em> 'CONST' <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'Constant'</td>
+<td>Constant. Format: Date(yyyy-MM-dd), Decimal(9.9), Int(9), String('...'), True/False.. Stored as 'CONST'. <br> <em>Database Value:</em> 'CONST' <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'Constant'</td>
 </tr>
 <tr>
 <td>Attribute</td>
-<td>Attribute value. Stored as 'ATTRIB'. <br> <em>Database Value:</em> 'ATTRIB' <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'Attribute'</td>
+<td>The value of system or user-defined attribute.. Stored as 'ATTRIB'. <br> <em>Database Value:</em> 'ATTRIB' <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'Attribute'</td>
 </tr>
 <tr>
 <td>Reference</td>
-<td>Reference value. Stored as 'REF'. <br> <em>Database Value:</em> 'REF' <br> <em>Model Value:</em> 2 <br> <em>Domain API Value:</em> 'Reference'</td>
+<td>Reference to another object.. Stored as 'REF'. <br> <em>Database Value:</em> 'REF' <br> <em>Model Value:</em> 2 <br> <em>Domain API Value:</em> 'Reference'</td>
 </tr>
 <tr>
 <td>ChildList</td>
-<td>ChildList value. Stored as 'CHILD'. <br> <em>Database Value:</em> 'CHILD' <br> <em>Model Value:</em> 3 <br> <em>Domain API Value:</em> 'ChildList'</td>
+<td>Child lists return detail objects, related to the current master object.. Stored as 'CHILD'. <br> <em>Database Value:</em> 'CHILD' <br> <em>Model Value:</em> 3 <br> <em>Domain API Value:</em> 'ChildList'</td>
 </tr>
 <tr>
 <td>Expression</td>
-<td>Expression value. Stored as 'EXP'. <br> <em>Database Value:</em> 'EXP' <br> <em>Model Value:</em> 4 <br> <em>Domain API Value:</em> 'Expression'</td>
+<td>The value of the expression with the specified number.. Stored as 'EXP'. <br> <em>Database Value:</em> 'EXP' <br> <em>Model Value:</em> 4 <br> <em>Domain API Value:</em> 'Expression'</td>
 </tr>
 <tr>
 <td>Input</td>
-<td>Input value. Stored as 'INPUT'. <br> <em>Database Value:</em> 'INPUT' <br> <em>Model Value:</em> 5 <br> <em>Domain API Value:</em> 'Input'</td>
+<td>The input parameter for the specified expression number.. Stored as 'INPUT'. <br> <em>Database Value:</em> 'INPUT' <br> <em>Model Value:</em> 5 <br> <em>Domain API Value:</em> 'Input'</td>
 </tr>
 <tr>
 <td>Repository</td>
-<td>Repository value. Stored as 'REPO'. <br> <em>Database Value:</em> 'REPO' <br> <em>Model Value:</em> 6 <br> <em>Domain API Value:</em> 'Repository'</td>
+<td>A repository.. Stored as 'REPO'. <br> <em>Database Value:</em> 'REPO' <br> <em>Model Value:</em> 6 <br> <em>Domain API Value:</em> 'Repository'</td>
 </tr>
 <tr>
 <td>System</td>
-<td>System value. Stored as 'SYS'. <br> <em>Database Value:</em> 'SYS' <br> <em>Model Value:</em> 7 <br> <em>Domain API Value:</em> 'System'</td>
+<td>A system value.. Stored as 'SYS'. <br> <em>Database Value:</em> 'SYS' <br> <em>Model Value:</em> 7 <br> <em>Domain API Value:</em> 'System'</td>
 </tr>
 </tbody>
 </table>
@@ -514,35 +560,35 @@ Generic enum type for ExpressionParameterType properties<br>
 <tbody>
 <tr>
 <td>Constant</td>
-<td>Constant value. Stored as 'CONST'. <br> <em>Database Value:</em> 'CONST' <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'Constant'</td>
+<td>Constant. Format: Date(yyyy-MM-dd), Decimal(9.9), Int(9), String('...'), True/False.. Stored as 'CONST'. <br> <em>Database Value:</em> 'CONST' <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'Constant'</td>
 </tr>
 <tr>
 <td>Attribute</td>
-<td>Attribute value. Stored as 'ATTRIB'. <br> <em>Database Value:</em> 'ATTRIB' <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'Attribute'</td>
+<td>The value of system or user-defined attribute.. Stored as 'ATTRIB'. <br> <em>Database Value:</em> 'ATTRIB' <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'Attribute'</td>
 </tr>
 <tr>
 <td>Reference</td>
-<td>Reference value. Stored as 'REF'. <br> <em>Database Value:</em> 'REF' <br> <em>Model Value:</em> 2 <br> <em>Domain API Value:</em> 'Reference'</td>
+<td>Reference to another object.. Stored as 'REF'. <br> <em>Database Value:</em> 'REF' <br> <em>Model Value:</em> 2 <br> <em>Domain API Value:</em> 'Reference'</td>
 </tr>
 <tr>
 <td>ChildList</td>
-<td>ChildList value. Stored as 'CHILD'. <br> <em>Database Value:</em> 'CHILD' <br> <em>Model Value:</em> 3 <br> <em>Domain API Value:</em> 'ChildList'</td>
+<td>Child lists return detail objects, related to the current master object.. Stored as 'CHILD'. <br> <em>Database Value:</em> 'CHILD' <br> <em>Model Value:</em> 3 <br> <em>Domain API Value:</em> 'ChildList'</td>
 </tr>
 <tr>
 <td>Expression</td>
-<td>Expression value. Stored as 'EXP'. <br> <em>Database Value:</em> 'EXP' <br> <em>Model Value:</em> 4 <br> <em>Domain API Value:</em> 'Expression'</td>
+<td>The value of the expression with the specified number.. Stored as 'EXP'. <br> <em>Database Value:</em> 'EXP' <br> <em>Model Value:</em> 4 <br> <em>Domain API Value:</em> 'Expression'</td>
 </tr>
 <tr>
 <td>Input</td>
-<td>Input value. Stored as 'INPUT'. <br> <em>Database Value:</em> 'INPUT' <br> <em>Model Value:</em> 5 <br> <em>Domain API Value:</em> 'Input'</td>
+<td>The input parameter for the specified expression number.. Stored as 'INPUT'. <br> <em>Database Value:</em> 'INPUT' <br> <em>Model Value:</em> 5 <br> <em>Domain API Value:</em> 'Input'</td>
 </tr>
 <tr>
 <td>Repository</td>
-<td>Repository value. Stored as 'REPO'. <br> <em>Database Value:</em> 'REPO' <br> <em>Model Value:</em> 6 <br> <em>Domain API Value:</em> 'Repository'</td>
+<td>A repository.. Stored as 'REPO'. <br> <em>Database Value:</em> 'REPO' <br> <em>Model Value:</em> 6 <br> <em>Domain API Value:</em> 'Repository'</td>
 </tr>
 <tr>
 <td>System</td>
-<td>System value. Stored as 'SYS'. <br> <em>Database Value:</em> 'SYS' <br> <em>Model Value:</em> 7 <br> <em>Domain API Value:</em> 'System'</td>
+<td>A system value.. Stored as 'SYS'. <br> <em>Database Value:</em> 'SYS' <br> <em>Model Value:</em> 7 <br> <em>Domain API Value:</em> 'System'</td>
 </tr>
 </tbody>
 </table>
