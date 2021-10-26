@@ -30,6 +30,8 @@ Aggregate Root:
 | [Notes](Logistics.Wms.WarehouseOrderLines.md#notes) | string (max) __nullable__ | Notes for this WarehouseOrderLine. 
 | [ParentLineNo](Logistics.Wms.WarehouseOrderLines.md#parentlineno) | int32 __nullable__ | The number of the line within the parent document, which the current line executes. Null when the current line does not execute line. `Filter(multi eq)` `Introduced in version 22.1.4.26` 
 | [Quantity](Logistics.Wms.WarehouseOrderLines.md#quantity) | [Quantity (12, 3)](../data-types.md#quantity) | The quantity of the product, which should be processed. `Unit: QuantityUnit` `Required` `Default(0)` `Filter(eq;ge;le)` 
+| [QuantityBase](Logistics.Wms.WarehouseOrderLines.md#quantitybase) | [Quantity (12, 3)](../data-types.md#quantity) | The quantity of the stock received/issued in base measurement unit. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Filter(multi eq;ge;le)` `Introduced in version 22.1.4.41` 
+| [StandardQuantity](Logistics.Wms.WarehouseOrderLines.md#standardquantity) | [Quantity (12, 3)](../data-types.md#quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Introduced in version 22.1.4.42` 
 | [TaskType](Logistics.Wms.WarehouseOrderLines.md#tasktype) | [TaskType](Logistics.Wms.WarehouseOrderLines.md#tasktype) | The type of the task (operation), which should be performed. REC=Receive; DES=Despatch; MOV=Move; LBL=Label; INS=Inspect; PCK=Pack; UPK=Unpack; KIT=Assemble kit; RKT=Reverse kitting; CNT=Count; TSK=Task. `Required` `Filter(multi eq)` 
 
 ## References
@@ -98,6 +100,22 @@ _Type_: **[Quantity (12, 3)](../data-types.md#quantity)**
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
+
+### QuantityBase
+
+The quantity of the stock received/issued in base measurement unit. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Filter(multi eq;ge;le)` `Introduced in version 22.1.4.41`
+
+_Type_: **[Quantity (12, 3)](../data-types.md#quantity)**  
+_Supported Filters_: **Equals, GreaterThanOrLessThan, EqualsIn**  
+_Supports Order By_: **False**  
+
+### StandardQuantity
+
+The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Introduced in version 22.1.4.42`
+
+_Type_: **[Quantity (12, 3)](../data-types.md#quantity)**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 ### TaskType
 

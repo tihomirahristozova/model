@@ -141,6 +141,7 @@ Percent by which additional amount is calculated.
 
 | Property | Value |
 | - | - |
+|Attributes|IsPercent|
 |Auto Complete|no|
 |Data Filter|no|
 |Default Value|0|

@@ -25,9 +25,11 @@ A planned task (operation) in a warehouse order. Entity: Wms_Warehouse_Order_Lin
 |[Product_Id](#product_id)|`uniqueidentifier` |The product, which should be used for the operation.|
 |[Product_Variant_Id](#product_variant_id)|`uniqueidentifier` |The product variant, which should be used.|
 |[Quantity](#quantity)|`decimal(12, 3)` |The quantity of the product, which should be processed.|
+|[Quantity_Base](#quantity_base)|`decimal(12, 3)` |The quantity of the stock received/issued in base measurement unit.|
 |[Quantity_Unit_Id](#quantity_unit_id)|`uniqueidentifier` |The measurement unit of Quantity. NULL for operations, which are not quantity-related.|
 |[Row_Version](#row_version)|`timestamp` ||
 |[Serial_Number_Id](#serial_number_id)|`uniqueidentifier` |The serial number of the product, which should be used. NULL for operations, which are not serial number-specific, or when any serial number can be used.|
+|[Standard_Quantity](#standard_quantity)|`decimal(12, 3)` |The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution.|
 |[Task_Type](#task_type)|`nvarchar(3)` Allowed: `REC`, `DES`, `MOV`, `LBL`, `INS`, `PCK`, `UPK`, `KIT`, `RKT`, `CNT`, `TSK`|The type of the task (operation), which should be performed. REC=Receive; DES=Despatch; MOV=Move; LBL=Label; INS=Inspect; PCK=Pack; UPK=Unpack; KIT=Assemble kit; RKT=Reverse kitting; CNT=Count; TSK=Task.|
 |[To_Warehouse_Location_Id](#to_warehouse_location_id)|`uniqueidentifier` |Destination warehouse location. NULL for operations, which do not specify destination location.|
 |[Warehouse_Location_Id](#warehouse_location_id)|`uniqueidentifier` |Location, where the opeartion should be performed. NULL for operations, which do not require location.|
@@ -361,6 +363,43 @@ The quantity of the product, which should be processed.
 |Equals|`NULL`|no|no|
 |GreaterThanOrLessThan|None|no|no|
 
+### Quantity_Base
+
+
+The quantity of the stock received/issued in base measurement unit.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|decimal(12, 3)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Quantity_Base - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|no|
+
 ### Quantity_Unit_Id
 
 
@@ -461,6 +500,36 @@ The serial number of the product, which should be used. NULL for operations, whi
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|yes|no|
+
+### Standard_Quantity
+
+
+The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|decimal(12, 3)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
 
 ### Task_Type
 

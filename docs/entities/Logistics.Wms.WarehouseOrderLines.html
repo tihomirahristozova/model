@@ -128,6 +128,16 @@ Aggregate Root:<br>
 <td>The quantity of the product, which should be processed. <code>Unit: QuantityUnit</code> <code>Required</code> <code>Default(0)</code> <code>Filter(eq;ge;le)</code></td>
 </tr>
 <tr>
+<td><a href="Logistics.Wms.WarehouseOrderLines.html#quantitybase">QuantityBase</a></td>
+<td><a href="../data-types.html#quantity">Quantity (12, 3)</a></td>
+<td>The quantity of the stock received/issued in base measurement unit. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>Filter(multi eq;ge;le)</code> <code>Introduced in version 22.1.4.41</code></td>
+</tr>
+<tr>
+<td><a href="Logistics.Wms.WarehouseOrderLines.html#standardquantity">StandardQuantity</a></td>
+<td><a href="../data-types.html#quantity">Quantity (12, 3)</a></td>
+<td>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>Introduced in version 22.1.4.42</code></td>
+</tr>
+<tr>
 <td><a href="Logistics.Wms.WarehouseOrderLines.html#tasktype">TaskType</a></td>
 <td><a href="Logistics.Wms.WarehouseOrderLines.html#tasktype">TaskType</a></td>
 <td>The type of the task (operation), which should be performed. REC=Receive; DES=Despatch; MOV=Move; LBL=Label; INS=Inspect; PCK=Pack; UPK=Unpack; KIT=Assemble kit; RKT=Reverse kitting; CNT=Count; TSK=Task. <code>Required</code> <code>Filter(multi eq)</code></td>
@@ -243,6 +253,16 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
+<h3 id="quantitybase">QuantityBase</h3>
+<p>The quantity of the stock received/issued in base measurement unit. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>Filter(multi eq;ge;le)</code> <code>Introduced in version 22.1.4.41</code></p>
+<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity (12, 3)</a></strong><br>
+<em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="standardquantity">StandardQuantity</h3>
+<p>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>Introduced in version 22.1.4.42</code></p>
+<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity (12, 3)</a></strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="tasktype">TaskType</h3>
 <p>The type of the task (operation), which should be performed. REC=Receive; DES=Despatch; MOV=Move; LBL=Label; INS=Inspect; PCK=Pack; UPK=Unpack; KIT=Assemble kit; RKT=Reverse kitting; CNT=Count; TSK=Task. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Logistics.Wms.WarehouseOrderLines.html#tasktype">TaskType</a></strong><br>

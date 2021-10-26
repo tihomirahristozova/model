@@ -27,6 +27,7 @@ Request for one product with a warehouse requisition. Entity: Wms_Warehouse_Requ
 |[Quantity_Unit_Id](#quantity_unit_id)|`uniqueidentifier` |The measurement unit of Quantity.|
 |[Row_Version](#row_version)|`timestamp` ||
 |[Serial_Number_Id](#serial_number_id)|`uniqueidentifier` |The requested serial number. NULL means that any serial number can be used or the product does not use serial numbers at all.|
+|[Standard_Quantity](#standard_quantity)|`decimal(12, 3)` |The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution.|
 |[Warehouse_Requisition_Id](#warehouse_requisition_id)|`uniqueidentifier` ||
 |[Warehouse_Requisition_Line_Id](#warehouse_requisition_line_id)|`uniqueidentifier` `PK`||
 
@@ -405,6 +406,36 @@ The requested serial number. NULL means that any serial number can be used or th
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|yes|no|
+
+### Standard_Quantity
+
+
+The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|decimal(12, 3)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
 
 ### Warehouse_Requisition_Id
 

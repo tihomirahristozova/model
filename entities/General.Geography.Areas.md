@@ -26,7 +26,7 @@ Aggregate Tree
 | [Code](General.Geography.Areas.md#code) | string (16) | The unique code of the Area. `Required` `Filter(eq;like)` `ORD` 
 | [FullPath](General.Geography.Areas.md#fullpath) | string (254) __nullable__ | Full path to the area, starting with '/' and containing the area codes of all parent areas using '/' as separator and terminator. For example root area with code 'BG' would have full path = '/BG/'. `Filter(eq;like)` `ReadOnly` 
 | [Id](General.Geography.Areas.md#id) | guid |  
-| [Name](General.Geography.Areas.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | The name of this Area. `Required` `Filter(eq;like)` `ORD` 
+| [Name](General.Geography.Areas.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Obsolete. Not used. `Required` `Filter(eq;like)` `ORD` 
 
 ## References
 
@@ -65,7 +65,7 @@ _Default Value_: **NewGuid**
 
 ### Name
 
-The name of this Area. `Required` `Filter(eq;like)` `ORD`
+Obsolete. Not used. `Required` `Filter(eq;like)` `ORD`
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Indexed_: **True**  
