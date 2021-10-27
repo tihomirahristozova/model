@@ -9650,6 +9650,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "business-rules/R32605.md",
+      "output": {
+        ".html": {
+          "relative_path": "business-rules/R32605.html",
+          "hash": "tqHJ6KypMrWG9BDmFl3uOw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "data-types.md",
       "output": {
         ".html": {
@@ -16132,7 +16144,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Systems.Core.WebSites.html",
-          "hash": "AxZyMBgf52gALnSR2rpw0A=="
+          "hash": "UDphPNNuP1iTw6klCgaspA=="
         }
       },
       "is_incremental": false,
