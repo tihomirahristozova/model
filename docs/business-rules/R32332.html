@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>R32605 WebSites - Default Relative Url | ERP.net Domain Model </title>
+    <title>32332 Accounting Voucher Lines - Item Key (Code) | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="R32605 WebSites - Default Relative Url | ERP.net Domain Model ">
+    <meta name="title" content="32332 Accounting Voucher Lines - Item Key (Code) | ERP.net Domain Model ">
     <meta name="generator" content="docfx 2.56.9.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
@@ -70,74 +70,79 @@
         <div class="article row grid">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="r32605-websites---default-relative-url">R32605 WebSites - Default Relative Url</h1>
+<h1 id="32332-accounting-voucher-lines---item-key-code">32332 Accounting Voucher Lines - Item Key (Code)</h1>
 
 <table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Value</th>
-</tr>
-</thead>
+<col style="width:25%">
+<col style="width:75%">
 <tbody>
 <tr>
-<td>Code</td>
-<td>R32605</td>
+<td><strong>Code</strong></td>
+<td>R32332</td>
 </tr>
 <tr>
-<td>Entity</td>
-<td><a class="xref" href="../entities/Systems.Core.WebSites.html">Systems.Core.WebSites Entity</a></td>
+<td><strong>Entity</strong></td>
+<td><a class="xref" href="../entities/Finance.Accounting.AccountingVoucherLines.html">Finance.Accounting.AccountingVoucherLines Entity</a></td>
 </tr>
 <tr>
-<td>Name</td>
-<td>DefaultRelativeUrl</td>
+<td><strong>Name</strong></td>
+<td>ItemKey(Code)</td>
 </tr>
 <tr>
-<td>Attribute</td>
-<td>RelativeUrl</td>
+<td><strong>Attribute</strong></td>
+<td>ItemKey</td>
 </tr>
 <tr>
-<td>Layer</td>
-<td>Front-End</td>
+<td><strong>Layer</strong></td>
+<td>Back-End</td>
 </tr>
 <tr>
-<td>Events</td>
-<td>AttributeChanged(WebSiteType)</td>
+<td><strong>Events</strong></td>
+<td>Commit</td>
 </tr>
 <tr>
-<td>Priority</td>
+<td><strong>Priority</strong></td>
 <td>Normal</td>
 </tr>
 <tr>
-<td>Modify</td>
-<td>YES</td>
+<td><strong>Modify</strong></td>
+<td>NO</td>
 </tr>
 <tr>
-<td>Applicable Legislations</td>
-<td>ALL // no condition needed</td>
+<td><strong>Applicable Legislations</strong></td>
+<td><a class="xref" href="https://erpnetdocs.github.io/tech/reference/country-specific-functionality.html">ALL // no condition
+needed</a></td>
 </tr>
 <tr>
-<td>Action</td>
-<td>If (RelativeUrl != null), then set a default value in RelativeUrl <br> Default value: <br> If (WebSiteType == ID), then RelativeUrl = 'id'<br>  If (WebSiteType == API), then RelativeUrl = 'api'<br>  If (WebSiteType == ClientCenter), then RelativeUrl = 'cc'<br>  If (WebSiteType == ECommerce), then RelativeUrl = 'shop'<br>  If (WebSiteType == SocialInteractions), then RelativeUrl = 'social'<br>  If (WebSiteType == DigitalMarketplace), then RelativeUrl = 'marketplace'  <br>  If (WebSiteType == UserProfile), then RelativeUrl = 'profile'  <br>  If (WebSiteType == WebClientApplication), then RelativeUrl = 'cl'  <br>  If (WebSiteType == TableAPI), then RelativeUrl = 'tableapi'  <br>  If (WebSiteType == DataAccessAPI), then RelativeUrl = 'dataaccessapi'  <br>  else RelativeUrl = the WebSiteType, written in lower case and without any spaces</td>
+<td><strong>Action</strong></td>
+<td>Validate that:
+<br><br>
+MaintenaceType.MaintenanceTypeCode meets the following requirements: <a href="../reference/common-business-rules/code-validation.html">CODE validation
+</a></td>
 </tr>
 <tr>
-<td>Description</td>
-<td>Loads a default Relative URL according to the selected Web Site Type.</td>
+<td><strong>Description</strong></td>
+<td>The Item Key field of the Accounting Voucher Lines must meet certain validation
+rules as well as all Code fields. The rules are described in
+<a href="../reference/common-business-rules/code-validation.html">CODE validation</a></td>
 </tr>
 <tr>
-<td>Message</td>
-<td>-</td>
+<td><strong>Message</strong></td>
+<td>Attribute 'Accounting Voucher Lines.Item Key' has invalid value.
+This field must contain only letters, numbers or '_./-+ '   symbols</td>
 </tr>
 <tr>
-<td>Introduced In Version</td>
-<td>Introduced: 22<br>Updated: -</td>
+<td><strong>Version</strong></td>
+<td>Introduced: 22</td>
 </tr>
 <tr>
-<td>Revocable</td>
-<td>YES</td>
+<td><strong>Revocable</strong></td>
+<td>NO</td>
 </tr>
 </tbody>
 </table>
+<p><em>* For more information about the Business Rules Documentation Template and a short explanation of each column, see
+topic <a href="../templates/template-description-system-business-rules.html">System Business Rules</a>.</em></p>
 </article>
           </div>
           
@@ -146,7 +151,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/ErpNetDocs/model/blob/master/business-rules/R32605.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/ErpNetDocs/model/blob/master/business-rules/R32332.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
