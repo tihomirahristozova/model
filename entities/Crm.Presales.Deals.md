@@ -25,6 +25,7 @@ Aggregate Tree
   * [General.DocumentDistributedAmounts](General.DocumentDistributedAmounts.md)  
   * [General.DocumentFileAttachments](General.DocumentFileAttachments.md)  
   * [General.DocumentLineAmounts](General.DocumentLineAmounts.md)  
+  * [General.DocumentParties](General.DocumentParties.md)  
   * [General.DocumentPrints](General.DocumentPrints.md)  
   * [General.DocumentStateChanges](General.DocumentStateChanges.md)  
   * [General.DocumentVersions](General.DocumentVersions.md)  
@@ -79,6 +80,7 @@ Aggregate Tree
 | [FromCompanyDivision](Crm.Presales.Deals.md#fromcompanydivision) | [CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable) | The division of the company, issuing the document. null when the document is not issued by any specific division. `Filter(multi eq)` (Inherited from [Documents](General.Documents.md)) |
 | [FromParty](Crm.Presales.Deals.md#fromparty) | [Parties](General.Contacts.Parties.md) | The party which issued the document. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.md)) |
 | [LeadingSalesPerson](Crm.Presales.Deals.md#leadingsalesperson) | [SalesPersons](Crm.SalesPersons.md) | The sales person, responsible for the opportunity. `Required` `Filter(multi eq)` |
+| [MarketingSolution](Crm.Presales.Deals.md#marketingsolution) | [MarketingSolutions](Crm.Marketing.MarketingSolutions.md) (nullable) | The marketing solution, in which the potential client is interested. `Filter(multi eq)` `Introduced in version 22.1.4.42` |
 | [MasterDocument](Crm.Presales.Deals.md#masterdocument) | [Documents](General.Documents.md) | In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.md)) |
 | [Parent](Crm.Presales.Deals.md#parent) | [Documents](General.Documents.md) (nullable) | In a multi-document tree, this is the direct parent document. If this is the root it is null. `Filter(multi eq)` (Inherited from [Documents](General.Documents.md)) |
 | [Party](Crm.Presales.Deals.md#party) | [Parties](General.Contacts.Parties.md) | The prospect customers party. The party might not yet have a customer record. `Required` `Filter(multi eq)` |
@@ -99,6 +101,7 @@ Aggregate Tree
 | DocumentAmounts | [DocumentAmounts](General.DocumentAmounts.md) | List of `DocumentAmount`(General.DocumentAmounts.md) child objects, based on the `General.DocumentAmount.Document`(General.DocumentAmounts.md#document) back reference (Inherited from [Documents](General.Documents.md)) 
 | FileAttachments | [DocumentFileAttachments](General.DocumentFileAttachments.md) | List of `DocumentFileAttachment`(General.DocumentFileAttachments.md) child objects, based on the `General.DocumentFileAttachment.Document`(General.DocumentFileAttachments.md#document) back reference (Inherited from [Documents](General.Documents.md)) 
 | LineAmounts | [DocumentLineAmounts](General.DocumentLineAmounts.md) | List of `DocumentLineAmount`(General.DocumentLineAmounts.md) child objects, based on the `General.DocumentLineAmount.Document`(General.DocumentLineAmounts.md#document) back reference (Inherited from [Documents](General.Documents.md)) 
+| Parties | [DocumentParties](General.DocumentParties.md) | List of `DocumentParty`(General.DocumentParties.md) child objects, based on the `General.DocumentParty.Document`(General.DocumentParties.md#document) back reference (Inherited from [Documents](General.Documents.md)) 
 | Prints | [DocumentPrints](General.DocumentPrints.md) | List of `DocumentPrint`(General.DocumentPrints.md) child objects, based on the `General.DocumentPrint.Document`(General.DocumentPrints.md#document) back reference (Inherited from [Documents](General.Documents.md)) 
 | StateChanges | [DocumentStateChanges](General.DocumentStateChanges.md) | List of `DocumentStateChange`(General.DocumentStateChanges.md) child objects, based on the `General.DocumentStateChange.Document`(General.DocumentStateChanges.md#document) back reference (Inherited from [Documents](General.Documents.md)) 
 | Versions | [DocumentVersions](General.DocumentVersions.md) | List of `DocumentVersion`(General.DocumentVersions.md) child objects, based on the `General.DocumentVersion.Document`(General.DocumentVersions.md#document) back reference (Inherited from [Documents](General.Documents.md)) 
@@ -486,6 +489,13 @@ _Supported Filters_: **Equals, EqualsIn**
 The sales person, responsible for the opportunity. `Required` `Filter(multi eq)`
 
 _Type_: **[SalesPersons](Crm.SalesPersons.md)**  
+_Supported Filters_: **Equals, EqualsIn**  
+
+### MarketingSolution
+
+The marketing solution, in which the potential client is interested. `Filter(multi eq)` `Introduced in version 22.1.4.42`
+
+_Type_: **[MarketingSolutions](Crm.Marketing.MarketingSolutions.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### MasterDocument

@@ -613,6 +613,10 @@
     href: General.DocumentLinks.md
   - name: DocumentManualDistributedAmounts
     href: General.DocumentManualDistributedAmounts.md
+  - name: DocumentParties
+    href: General.DocumentParties.md
+  - name: DocumentPartyRoles
+    href: General.DocumentPartyRoles.md
   - name: DocumentPrintImages
     href: General.DocumentPrintImages.md
   - name: DocumentPrints

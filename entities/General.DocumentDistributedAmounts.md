@@ -26,6 +26,7 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Amount](General.DocumentDistributedAmounts.md#amount) | [Amount (14, 2)](../data-types.md#amount) | The amount which has beed distributed over the current line. The amount is in the currency of the document. `Currency: GetDocumentCurrency()` `Required` `Filter(ge;le)` 
+| [BaseAmount](General.DocumentDistributedAmounts.md#baseamount) | [Amount (14, 2)](../data-types.md#amount) __nullable__ | The calculated base amount for the line in document currency. The base amount is the base, over which the additional amounts are calculated. Null if the base amount is not stored (for amounts distributed in older versions of the system). . `Currency: GetDocumentCurrency()` `Introduced in version 22.1.4.44` 
 | [DocumentLineId](General.DocumentDistributedAmounts.md#documentlineid) | guid __nullable__ | The Id of the line over which the amount is distributed. `Filter(multi eq)` 
 | [Id](General.DocumentDistributedAmounts.md#id) | guid |  
 
@@ -46,6 +47,14 @@ The amount which has beed distributed over the current line. The amount is in th
 
 _Type_: **[Amount (14, 2)](../data-types.md#amount)**  
 _Supported Filters_: **GreaterThanOrLessThan**  
+_Supports Order By_: **False**  
+
+### BaseAmount
+
+The calculated base amount for the line in document currency. The base amount is the base, over which the additional amounts are calculated. Null if the base amount is not stored (for amounts distributed in older versions of the system). . `Currency: GetDocumentCurrency()` `Introduced in version 22.1.4.44`
+
+_Type_: **[Amount (14, 2)](../data-types.md#amount) __nullable__**  
+_Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
 ### DocumentLineId

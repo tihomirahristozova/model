@@ -886,6 +886,12 @@ references:
 - uid: General.DocumentManualDistributedAmounts
   name: General.DocumentManualDistributedAmounts Entity
   href: entities/General.DocumentManualDistributedAmounts.html
+- uid: General.DocumentParties
+  name: General.DocumentParties Entity
+  href: entities/General.DocumentParties.html
+- uid: General.DocumentPartyRoles
+  name: General.DocumentPartyRoles Entity
+  href: entities/General.DocumentPartyRoles.html
 - uid: General.DocumentPrintImages
   name: General.DocumentPrintImages Entity
   href: entities/General.DocumentPrintImages.html

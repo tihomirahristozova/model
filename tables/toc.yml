@@ -545,6 +545,10 @@
     href: Gen_Document_Links.md
   - name: Gen_Document_Manual_Distributed_Amounts
     href: Gen_Document_Manual_Distributed_Amounts.md
+  - name: Gen_Document_Parties
+    href: Gen_Document_Parties.md
+  - name: Gen_Document_Party_Roles
+    href: Gen_Document_Party_Roles.md
   - name: Gen_Document_Print_Images
     href: Gen_Document_Print_Images.md
   - name: Gen_Document_Prints

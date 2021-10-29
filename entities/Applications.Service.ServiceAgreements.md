@@ -28,6 +28,7 @@ Aggregate Tree
   * [General.DocumentDistributedAmounts](General.DocumentDistributedAmounts.md)  
   * [General.DocumentFileAttachments](General.DocumentFileAttachments.md)  
   * [General.DocumentLineAmounts](General.DocumentLineAmounts.md)  
+  * [General.DocumentParties](General.DocumentParties.md)  
   * [General.DocumentPrints](General.DocumentPrints.md)  
   * [General.DocumentStateChanges](General.DocumentStateChanges.md)  
   * [General.DocumentVersions](General.DocumentVersions.md)  
@@ -98,6 +99,7 @@ Aggregate Tree
 | LineAmounts | [DocumentLineAmounts](General.DocumentLineAmounts.md) | List of `DocumentLineAmount`(General.DocumentLineAmounts.md) child objects, based on the `General.DocumentLineAmount.Document`(General.DocumentLineAmounts.md#document) back reference (Inherited from [Documents](General.Documents.md)) 
 | Lines | [ServiceAgreementLines](Applications.Service.ServiceAgreementLines.md) | List of `ServiceAgreementLine`(Applications.Service.ServiceAgreementLines.md) child objects, based on the `Applications.Service.ServiceAgreementLine.ServiceAgreement`(Applications.Service.ServiceAgreementLines.md#serviceagreement) back reference 
 | Materials | [ServiceAgreementMaterials](Applications.Service.ServiceAgreementMaterials.md) | List of `ServiceAgreementMaterial`(Applications.Service.ServiceAgreementMaterials.md) child objects, based on the `Applications.Service.ServiceAgreementMaterial.ServiceAgreement`(Applications.Service.ServiceAgreementMaterials.md#serviceagreement) back reference 
+| Parties | [DocumentParties](General.DocumentParties.md) | List of `DocumentParty`(General.DocumentParties.md) child objects, based on the `General.DocumentParty.Document`(General.DocumentParties.md#document) back reference (Inherited from [Documents](General.Documents.md)) 
 | Prints | [DocumentPrints](General.DocumentPrints.md) | List of `DocumentPrint`(General.DocumentPrints.md) child objects, based on the `General.DocumentPrint.Document`(General.DocumentPrints.md#document) back reference (Inherited from [Documents](General.Documents.md)) 
 | Services | [ServiceAgreementServices](Applications.Service.ServiceAgreementServices.md) | List of `ServiceAgreementService`(Applications.Service.ServiceAgreementServices.md) child objects, based on the `Applications.Service.ServiceAgreementService.ServiceAgreement`(Applications.Service.ServiceAgreementServices.md#serviceagreement) back reference 
 | StateChanges | [DocumentStateChanges](General.DocumentStateChanges.md) | List of `DocumentStateChange`(General.DocumentStateChanges.md) child objects, based on the `General.DocumentStateChange.Document`(General.DocumentStateChanges.md#document) back reference (Inherited from [Documents](General.Documents.md)) 

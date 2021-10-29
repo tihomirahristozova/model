@@ -28,6 +28,7 @@ Aggregate Tree
   * [General.DocumentDistributedAmounts](General.DocumentDistributedAmounts.md)  
   * [General.DocumentFileAttachments](General.DocumentFileAttachments.md)  
   * [General.DocumentLineAmounts](General.DocumentLineAmounts.md)  
+  * [General.DocumentParties](General.DocumentParties.md)  
   * [General.DocumentPrints](General.DocumentPrints.md)  
   * [General.DocumentStateChanges](General.DocumentStateChanges.md)  
   * [General.DocumentVersions](General.DocumentVersions.md)  
@@ -129,6 +130,7 @@ Aggregate Tree
 | FileAttachments | [DocumentFileAttachments](General.DocumentFileAttachments.md) | List of `DocumentFileAttachment`(General.DocumentFileAttachments.md) child objects, based on the `General.DocumentFileAttachment.Document`(General.DocumentFileAttachments.md#document) back reference (Inherited from [Documents](General.Documents.md)) 
 | LineAmounts | [DocumentLineAmounts](General.DocumentLineAmounts.md) | List of `DocumentLineAmount`(General.DocumentLineAmounts.md) child objects, based on the `General.DocumentLineAmount.Document`(General.DocumentLineAmounts.md#document) back reference (Inherited from [Documents](General.Documents.md)) 
 | Lines | [SalesOrderLines](Crm.Sales.SalesOrderLines.md) | List of `SalesOrderLine`(Crm.Sales.SalesOrderLines.md) child objects, based on the `Crm.Sales.SalesOrderLine.SalesOrder`(Crm.Sales.SalesOrderLines.md#salesorder) back reference 
+| Parties | [DocumentParties](General.DocumentParties.md) | List of `DocumentParty`(General.DocumentParties.md) child objects, based on the `General.DocumentParty.Document`(General.DocumentParties.md#document) back reference (Inherited from [Documents](General.Documents.md)) 
 | PaymentPlans | [SalesOrderPaymentPlans](Crm.Sales.SalesOrderPaymentPlans.md) | List of `SalesOrderPaymentPlan`(Crm.Sales.SalesOrderPaymentPlans.md) child objects, based on the `Crm.Sales.SalesOrderPaymentPlan.SalesOrder`(Crm.Sales.SalesOrderPaymentPlans.md#salesorder) back reference 
 | Prints | [DocumentPrints](General.DocumentPrints.md) | List of `DocumentPrint`(General.DocumentPrints.md) child objects, based on the `General.DocumentPrint.Document`(General.DocumentPrints.md#document) back reference (Inherited from [Documents](General.Documents.md)) 
 | PromotionalPackages | [SalesOrderPromotionalPackages](Crm.Sales.SalesOrderPromotionalPackages.md) | List of `SalesOrderPromotional<br />Package`(Crm.Sales.SalesOrderPromotional<br />Packages.md) child objects, based on the `Crm.Sales.SalesOrderPromotional<br />Package.SalesOrder`(Crm.Sales.SalesOrderPromotional<br />Packages.md#salesorder) back reference 

@@ -27,6 +27,8 @@ uid: General
 - [DocumentLineAmounts](General.DocumentLineAmounts.md)  
 - [DocumentLinks](General.DocumentLinks.md)  
 - [DocumentManualDistributedAmounts](General.DocumentManualDistributedAmounts.md)  
+- [DocumentParties](General.DocumentParties.md)  
+- [DocumentPartyRoles](General.DocumentPartyRoles.md)  
 - [DocumentPrintImages](General.DocumentPrintImages.md)  
 - [DocumentPrints](General.DocumentPrints.md)  
 - [Documents](General.Documents.md)  

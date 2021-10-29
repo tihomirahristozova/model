@@ -294,6 +294,8 @@
 * [Gen_Document_Line_Amounts](Gen_Document_Line_Amounts.md)
 * [Gen_Document_Links](Gen_Document_Links.md)
 * [Gen_Document_Manual_Distributed_Amounts](Gen_Document_Manual_Distributed_Amounts.md)
+* [Gen_Document_Parties](Gen_Document_Parties.md)
+* [Gen_Document_Party_Roles](Gen_Document_Party_Roles.md)
 * [Gen_Document_Print_Images](Gen_Document_Print_Images.md)
 * [Gen_Document_Prints](Gen_Document_Prints.md)
 * [Gen_Document_Property_Values](Gen_Document_Property_Values.md)

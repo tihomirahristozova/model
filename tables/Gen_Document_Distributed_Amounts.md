@@ -16,6 +16,7 @@ Contains the amounts which are distributed by the system over the document lines
 | Name | Type | Description |
 | - | - | --- |
 |[Amount](#amount)|`decimal(14, 2)` |The amount which has beed distributed over the current line. The amount is in the currency of the document.|
+|[Base_Amount](#base_amount)|`decimal(14, 2)` |The calculated base amount for the line in document currency. The base amount is the base, over which the additional amounts are calculated. Null if the base amount is not stored (for amounts distributed in older versions of the system). |
 |[Distributed_Amount_Id](#distributed_amount_id)|`uniqueidentifier` `PK`||
 |[Document_Amount_Type_Id](#document_amount_type_id)|`uniqueidentifier` |The type of amount which is distributed.|
 |[Document_Id](#document_id)|`uniqueidentifier` ||
@@ -60,6 +61,36 @@ The amount which has beed distributed over the current line. The amount is in th
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |GreaterThanOrLessThan|None|no|no|
+
+### Base_Amount
+
+
+The calculated base amount for the line in document currency. The base amount is the base, over which the additional amounts are calculated. Null if the base amount is not stored (for amounts distributed in older versions of the system). 
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|decimal(14, 2) (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
 
 ### Distributed_Amount_Id
 
