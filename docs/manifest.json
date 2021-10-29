@@ -338,6 +338,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "business-rules/R21135-2-1.md",
+      "output": {
+        ".html": {
+          "relative_path": "business-rules/R21135-2-1.html",
+          "hash": "AELwCrWfUtq99lvcChnsMA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "business-rules/R22776.md",
       "output": {
         ".html": {
@@ -9354,7 +9366,7 @@
       "output": {
         ".html": {
           "relative_path": "business-rules/R32332.html",
-          "hash": "ZAWLBfTJppJn9lWPa6hpXg=="
+          "hash": "pwkACWg17d+mwALvLt7GVQ=="
         }
       },
       "is_incremental": false,
@@ -9602,6 +9614,54 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "business-rules/R32501-1.md",
+      "output": {
+        ".html": {
+          "relative_path": "business-rules/R32501-1.html",
+          "hash": "8pc7ysIU0aIjXUGYIopVNQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "business-rules/R32501-2.md",
+      "output": {
+        ".html": {
+          "relative_path": "business-rules/R32501-2.html",
+          "hash": "ZRdrb0rRnRL2GPox26JQzQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "business-rules/R32501-3.md",
+      "output": {
+        ".html": {
+          "relative_path": "business-rules/R32501-3.html",
+          "hash": "K+q5KUdWFWSgDf3seFNeIA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "business-rules/R32501-4.md",
+      "output": {
+        ".html": {
+          "relative_path": "business-rules/R32501-4.html",
+          "hash": "WGPnjtpUa/GKJPra35BTsA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "business-rules/R32502.md",
       "output": {
         ".html": {
@@ -9619,6 +9679,42 @@
         ".html": {
           "relative_path": "business-rules/R32512.html",
           "hash": "i7SNkpIiaprljjZzexIDww=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "business-rules/R32515-1.md",
+      "output": {
+        ".html": {
+          "relative_path": "business-rules/R32515-1.html",
+          "hash": "xEn2JXC3cBKZIzPho1R5OQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "business-rules/R32515-2.md",
+      "output": {
+        ".html": {
+          "relative_path": "business-rules/R32515-2.html",
+          "hash": "Ngsk6ISB6LvwR1bhZlKZrQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "business-rules/R32516.md",
+      "output": {
+        ".html": {
+          "relative_path": "business-rules/R32516.html",
+          "hash": "XYXJc0KSGeOPu5eqf5We2Q=="
         }
       },
       "is_incremental": false,
@@ -10300,7 +10396,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Applications.Mail.Messages.html",
-          "hash": "KyAWqACxKDC32MIuAG5g7A=="
+          "hash": "3jOuLdkrnwTymPIunLkJxA=="
         }
       },
       "is_incremental": false,
@@ -11716,7 +11812,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Finance.Accounting.AccountingVoucherLines.html",
-          "hash": "+Nc1dxQTe4H7GThyBIzwwQ=="
+          "hash": "0RhzY8qBWpGqunQdlsLuRg=="
         }
       },
       "is_incremental": false,
@@ -11800,7 +11896,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Finance.Accounting.Operations.html",
-          "hash": "IjpXLlJjgowJ3hA2rmYkrA=="
+          "hash": "V8hTlMZC2gtXs8SgJQL/Pw=="
         }
       },
       "is_incremental": false,
@@ -13528,7 +13624,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/General.PrintoutLayouts.html",
-          "hash": "fBr9OwYuZllygjyMt9FAZQ=="
+          "hash": "edPAwBH5v5vkevnZeEn9OQ=="
         }
       },
       "is_incremental": false,
@@ -15676,7 +15772,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Projects.WorkReportResources.html",
-          "hash": "K743pvOcbOzKwlVLosm45A=="
+          "hash": "aj0lTaD1wAkz9VpeMELQ8g=="
         }
       },
       "is_incremental": false,
@@ -16504,7 +16600,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Systems.Workflow.Routes.html",
-          "hash": "TbkNHY7pI9PPSdVvop3Aog=="
+          "hash": "KjbUlpr+KzLspzVmePkR4A=="
         }
       },
       "is_incremental": false,
@@ -16905,7 +17001,7 @@
       "output": {
         ".html": {
           "relative_path": "reference/common-business-rules/code-validation.html",
-          "hash": "sIYt9W2Pa5Dyt0Svf/aObA=="
+          "hash": "5rd5jYT2MwuF0mbJRGKtxA=="
         }
       },
       "is_incremental": false,
