@@ -5,24 +5,21 @@
 
 Entity: [General.DocumentPartyRoles](~/entities/General.DocumentPartyRoles.md)
 
-Represents the different roles of parties which are associated to the documents. Entity: Gen_Document_Party_Roles (Introduced in version 22.1.4.45)
+Represents the different possible roles of a party associated to a document. Entity: Gen_Document_Party_Roles (Introduced in version 22.1.4.45)
 
 ## Summary
 
 | Name | Type | Description |
 | - | - | --- |
-|[Code](#code)|`nvarchar(32)` |The code of the role.|
+|[Code](#code)|`nvarchar(32)` ||
 |[Document_Party_Role_Id](#document_party_role_id)|`uniqueidentifier` `PK`||
-|[Name](#name)|`nvarchar(254)` |Party role name.|
-|[Notes](#notes)|`nvarchar(512)` ||
+|[Name](#name)|`nvarchar(254)` `ML`|Party role name (multi-language).|
+|[Notes](#notes)|`nvarchar(max)` ||
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
 
 ### Code
-
-
-The code of the role.
 
 | Property | Value |
 | - | - |
@@ -49,6 +46,13 @@ The code of the role.
 |User Login|no|
 |Visible|yes|
 
+#### Code - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|no|no|
+|Like|None|no|no|
+
 ### Document_Party_Role_Id
 
 | Property | Value |
@@ -74,7 +78,7 @@ The code of the role.
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
-|Visible|yes|
+|Visible|no|
 
 #### Document_Party_Role_Id - Supported Filters
 
@@ -85,7 +89,7 @@ The code of the role.
 ### Name
 
 
-Party role name.
+Party role name (multi-language).
 
 | Property | Value |
 | - | - |
@@ -106,23 +110,31 @@ Party role name.
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(254)|
+|Type|nvarchar(254) (MultiLanguage)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
 |Visible|yes|
 
+#### Name - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|no|no|
+|Like|None|no|no|
+
 ### Notes
 
 | Property | Value |
 | - | - |
+|Attributes|IsLongString|
 |Auto Complete|no|
 |Data Filter|no|
 |Default Value|None|
 |Enter Stop|yes|
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
-|Max Length|512|
+|Max Length|2147483647|
 |Order|2147483647|
 |Ownership Reference|no|
 |Pasword|no|
@@ -133,7 +145,7 @@ Party role name.
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(512) (Allows NULL)|
+|Type|nvarchar(max) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

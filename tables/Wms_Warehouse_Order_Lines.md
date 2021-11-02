@@ -20,12 +20,12 @@ A planned task (operation) in a warehouse order. Entity: Wms_Warehouse_Order_Lin
 |[Logistic_Unit_Id](#logistic_unit_id)|`uniqueidentifier` |Logistic unit, which should be used in the operation.|
 |[Lot_Id](#lot_id)|`uniqueidentifier` |The lot of the product, which should be used. NULL for operations, which are not lot-specific, or when any lot can be used.|
 |[Notes](#notes)|`nvarchar(max)` ||
-|[Parent_Document_Id](#parent_document_id)|`uniqueidentifier` |The document, which the current line executes. Null when the current line does not execute another line.|
-|[Parent_Line_No](#parent_line_no)|`int` |The number of the line within the parent document, which the current line executes. Null when the current line does not execute line.|
+|[Parent_Document_Id](#parent_document_id)|`uniqueidentifier` |The document, which the current line executes. null when the current line does not execute another line.|
+|[Parent_Line_No](#parent_line_no)|`int` |The number of the line within the parent document, which the current line executes. null when the current line does not execute another line.|
 |[Product_Id](#product_id)|`uniqueidentifier` |The product, which should be used for the operation.|
 |[Product_Variant_Id](#product_variant_id)|`uniqueidentifier` |The product variant, which should be used.|
 |[Quantity](#quantity)|`decimal(12, 3)` |The quantity of the product, which should be processed.|
-|[Quantity_Base](#quantity_base)|`decimal(12, 3)` |The quantity of the stock received/issued in base measurement unit.|
+|[Quantity_Base](#quantity_base)|`decimal(12, 3)` |Quantity in the base measurement unit of the product.|
 |[Quantity_Unit_Id](#quantity_unit_id)|`uniqueidentifier` |The measurement unit of Quantity. NULL for operations, which are not quantity-related.|
 |[Row_Version](#row_version)|`timestamp` ||
 |[Serial_Number_Id](#serial_number_id)|`uniqueidentifier` |The serial number of the product, which should be used. NULL for operations, which are not serial number-specific, or when any serial number can be used.|
@@ -181,7 +181,7 @@ The lot of the product, which should be used. NULL for operations, which are not
 ### Parent_Document_Id
 
 
-The document, which the current line executes. Null when the current line does not execute another line.
+The document, which the current line executes. null when the current line does not execute another line.
 
 | Property | Value |
 | - | - |
@@ -218,7 +218,7 @@ The document, which the current line executes. Null when the current line does n
 ### Parent_Line_No
 
 
-The number of the line within the parent document, which the current line executes. Null when the current line does not execute line.
+The number of the line within the parent document, which the current line executes. null when the current line does not execute another line.
 
 | Property | Value |
 | - | - |
@@ -366,7 +366,7 @@ The quantity of the product, which should be processed.
 ### Quantity_Base
 
 
-The quantity of the stock received/issued in base measurement unit.
+Quantity in the base measurement unit of the product.
 
 | Property | Value |
 | - | - |

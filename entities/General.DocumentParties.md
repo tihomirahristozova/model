@@ -5,7 +5,7 @@ uid: General.DocumentParties
 
 **Namespace:** [General](General.md)  
 
-Represents the party associated to specific document. Entity: Gen_Document_Parties
+Represents a party associated to a document. Entity: Gen_Document_Parties (Introduced in version 22.1.4.46)
 
 ## Default Visualization
 Default Display Text Format:  
@@ -26,7 +26,7 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](General.DocumentParties.md#id) | guid |  
-| [Notes](General.DocumentParties.md#notes) | string (512) __nullable__ | Notes for this DocumentParty. 
+| [Notes](General.DocumentParties.md#notes) | string (max) __nullable__ | Notes for this DocumentParty. 
 
 ## References
 
@@ -50,10 +50,10 @@ _Default Value_: **NewGuid**
 
 Notes for this DocumentParty.
 
-_Type_: **string (512) __nullable__**  
+_Type_: **string (max) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
-_Maximum Length_: **512**  
+_Maximum Length_: **2147483647**  
 
 
 ## Reference Details

@@ -81,7 +81,7 @@
 
 <h2 id="entity">Entity</h2>
 <p>Entity: <a href="../entities/General.DocumentPartyRoles.html">General.DocumentPartyRoles</a></p>
-<p>Represents the different roles of parties which are associated to the documents. Entity: Gen_Document_Party_Roles (Introduced in version 22.1.4.45)</p>
+<p>Represents the different possible roles of a party associated to a document. Entity: Gen_Document_Party_Roles (Introduced in version 22.1.4.45)</p>
 <h2 id="summary">Summary</h2>
 <table>
 <thead>
@@ -95,7 +95,7 @@
 <tr>
 <td><a href="#code">Code</a></td>
 <td><code>nvarchar(32)</code></td>
-<td>The code of the role.</td>
+<td></td>
 </tr>
 <tr>
 <td><a href="#document_party_role_id">Document_Party_Role_Id</a></td>
@@ -104,12 +104,12 @@
 </tr>
 <tr>
 <td><a href="#name">Name</a></td>
-<td><code>nvarchar(254)</code></td>
-<td>Party role name.</td>
+<td><code>nvarchar(254)</code> <code>ML</code></td>
+<td>Party role name (multi-language).</td>
 </tr>
 <tr>
 <td><a href="#notes">Notes</a></td>
-<td><code>nvarchar(512)</code></td>
+<td><code>nvarchar(max)</code></td>
 <td></td>
 </tr>
 <tr>
@@ -121,7 +121,6 @@
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="code">Code</h3>
-<p>The code of the role.</p>
 <table>
 <thead>
 <tr>
@@ -220,6 +219,31 @@
 </tr>
 </tbody>
 </table>
+<h4 id="code---supported-filters">Code - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>no</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Like</td>
+<td>None</td>
+<td>no</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
 <h3 id="document_party_role_id">Document_Party_Role_Id</h3>
 <table>
 <thead>
@@ -315,7 +339,7 @@
 </tr>
 <tr>
 <td>Visible</td>
-<td>yes</td>
+<td>no</td>
 </tr>
 </tbody>
 </table>
@@ -339,7 +363,7 @@
 </tbody>
 </table>
 <h3 id="name">Name</h3>
-<p>Party role name.</p>
+<p>Party role name (multi-language).</p>
 <table>
 <thead>
 <tr>
@@ -418,7 +442,7 @@
 </tr>
 <tr>
 <td>Type</td>
-<td>nvarchar(254)</td>
+<td>nvarchar(254) (MultiLanguage)</td>
 </tr>
 <tr>
 <td>UI Memo Editor</td>
@@ -438,6 +462,31 @@
 </tr>
 </tbody>
 </table>
+<h4 id="name---supported-filters">Name - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>no</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Like</td>
+<td>None</td>
+<td>no</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
 <h3 id="notes">Notes</h3>
 <table>
 <thead>
@@ -447,6 +496,10 @@
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>Attributes</td>
+<td>IsLongString</td>
+</tr>
 <tr>
 <td>Auto Complete</td>
 <td>no</td>
@@ -473,7 +526,7 @@
 </tr>
 <tr>
 <td>Max Length</td>
-<td>512</td>
+<td>2147483647</td>
 </tr>
 <tr>
 <td>Order</td>
@@ -517,7 +570,7 @@
 </tr>
 <tr>
 <td>Type</td>
-<td>nvarchar(512) (Allows NULL)</td>
+<td>nvarchar(max) (Allows NULL)</td>
 </tr>
 <tr>
 <td>UI Memo Editor</td>

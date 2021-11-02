@@ -5,7 +5,7 @@
 
 Entity: [General.DocumentParties](~/entities/General.DocumentParties.md)
 
-Represents the party associated to specific document. Entity: Gen_Document_Parties
+Represents a party associated to a document. Entity: Gen_Document_Parties (Introduced in version 22.1.4.46)
 
 ## Owner Tables Hierarchy
 
@@ -17,7 +17,7 @@ Represents the party associated to specific document. Entity: Gen_Document_Parti
 | - | - | --- |
 |[Document_Id](#document_id)|`uniqueidentifier` |The document in which the party plays a role.|
 |[Document_Party_Id](#document_party_id)|`uniqueidentifier` `PK`||
-|[Notes](#notes)|`nvarchar(512)` ||
+|[Notes](#notes)|`nvarchar(max)` ||
 |[Party_Id](#party_id)|`uniqueidentifier` |The party, which plays a role in the document.|
 |[Role_Id](#role_id)|`uniqueidentifier` |The role of the party in the document.|
 |[Row_Version](#row_version)|`timestamp` ||
@@ -86,7 +86,7 @@ The document in which the party plays a role.
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
-|Visible|yes|
+|Visible|no|
 
 #### Document_Party_Id - Supported Filters
 
@@ -104,7 +104,7 @@ The document in which the party plays a role.
 |Enter Stop|yes|
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
-|Max Length|512|
+|Max Length|2147483647|
 |Order|2147483647|
 |Ownership Reference|no|
 |Pasword|no|
@@ -115,7 +115,7 @@ The document in which the party plays a role.
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(512) (Allows NULL)|
+|Type|nvarchar(max) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

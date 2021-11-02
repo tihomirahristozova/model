@@ -81,7 +81,7 @@
 
 <h2 id="entity">Entity</h2>
 <p>Entity: <a href="../entities/General.DocumentParties.html">General.DocumentParties</a></p>
-<p>Represents the party associated to specific document. Entity: Gen_Document_Parties</p>
+<p>Represents a party associated to a document. Entity: Gen_Document_Parties (Introduced in version 22.1.4.46)</p>
 <h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
 <li><a href="Gen_Documents.html">Gen_Documents</a></li>
@@ -108,7 +108,7 @@
 </tr>
 <tr>
 <td><a href="#notes">Notes</a></td>
-<td><code>nvarchar(512)</code></td>
+<td><code>nvarchar(max)</code></td>
 <td></td>
 </tr>
 <tr>
@@ -347,7 +347,7 @@
 </tr>
 <tr>
 <td>Visible</td>
-<td>yes</td>
+<td>no</td>
 </tr>
 </tbody>
 </table>
@@ -405,7 +405,7 @@
 </tr>
 <tr>
 <td>Max Length</td>
-<td>512</td>
+<td>2147483647</td>
 </tr>
 <tr>
 <td>Order</td>
@@ -449,7 +449,7 @@
 </tr>
 <tr>
 <td>Type</td>
-<td>nvarchar(512) (Allows NULL)</td>
+<td>nvarchar(max) (Allows NULL)</td>
 </tr>
 <tr>
 <td>UI Memo Editor</td>

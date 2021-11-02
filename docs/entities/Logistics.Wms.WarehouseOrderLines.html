@@ -120,7 +120,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Logistics.Wms.WarehouseOrderLines.html#parentlineno">ParentLineNo</a></td>
 <td>int32 <strong>nullable</strong></td>
-<td>The number of the line within the parent document, which the current line executes. Null when the current line does not execute line. <code>Filter(multi eq)</code> <code>Introduced in version 22.1.4.26</code></td>
+<td>The number of the line within the parent document, which the current line executes. null when the current line does not execute another line. <code>Filter(multi eq)</code> <code>Introduced in version 22.1.4.26</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Wms.WarehouseOrderLines.html#quantity">Quantity</a></td>
@@ -130,7 +130,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Logistics.Wms.WarehouseOrderLines.html#quantitybase">QuantityBase</a></td>
 <td><a href="../data-types.html#quantity">Quantity (12, 3)</a></td>
-<td>The quantity of the stock received/issued in base measurement unit. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>Filter(multi eq;ge;le)</code> <code>Introduced in version 22.1.4.41</code></td>
+<td>Quantity in the base measurement unit of the product. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>Filter(multi eq;ge;le)</code> <code>Introduced in version 22.1.4.41</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Wms.WarehouseOrderLines.html#standardquantity">StandardQuantity</a></td>
@@ -172,7 +172,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Logistics.Wms.WarehouseOrderLines.html#parentdocument">ParentDocument</a></td>
 <td><a href="Logistics.Wms.WarehouseRequisitions.html">WarehouseRequisitions</a> (nullable)</td>
-<td>The document, which the current line executes. Null when the current line does not execute another line. <code>Filter(multi eq)</code> <code>Introduced in version 22.1.4.26</code></td>
+<td>The document, which the current line executes. null when the current line does not execute another line. <code>Filter(multi eq)</code> <code>Introduced in version 22.1.4.26</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Wms.WarehouseOrderLines.html#product">Product</a></td>
@@ -243,7 +243,7 @@ Aggregate Root:<br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>2147483647</strong></p>
 <h3 id="parentlineno">ParentLineNo</h3>
-<p>The number of the line within the parent document, which the current line executes. Null when the current line does not execute line. <code>Filter(multi eq)</code> <code>Introduced in version 22.1.4.26</code></p>
+<p>The number of the line within the parent document, which the current line executes. null when the current line does not execute another line. <code>Filter(multi eq)</code> <code>Introduced in version 22.1.4.26</code></p>
 <p><em>Type</em>: <strong>int32 <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -254,7 +254,7 @@ Aggregate Root:<br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
 <h3 id="quantitybase">QuantityBase</h3>
-<p>The quantity of the stock received/issued in base measurement unit. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>Filter(multi eq;ge;le)</code> <code>Introduced in version 22.1.4.41</code></p>
+<p>Quantity in the base measurement unit of the product. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>Filter(multi eq;ge;le)</code> <code>Introduced in version 22.1.4.41</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity (12, 3)</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -339,7 +339,7 @@ Allowed values for the <code>TaskType</code>(Logistics.Wms.WarehouseOrderLines.m
 <p><em>Type</em>: <strong><a href="Logistics.Inventory.Lots.html">Lots</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="parentdocument">ParentDocument</h3>
-<p>The document, which the current line executes. Null when the current line does not execute another line. <code>Filter(multi eq)</code> <code>Introduced in version 22.1.4.26</code></p>
+<p>The document, which the current line executes. null when the current line does not execute another line. <code>Filter(multi eq)</code> <code>Introduced in version 22.1.4.26</code></p>
 <p><em>Type</em>: <strong><a href="Logistics.Wms.WarehouseRequisitions.html">WarehouseRequisitions</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="product">Product</h3>

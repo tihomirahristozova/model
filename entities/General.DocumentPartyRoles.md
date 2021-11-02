@@ -5,11 +5,11 @@ uid: General.DocumentPartyRoles
 
 **Namespace:** [General](General.md)  
 
-Represents the different roles of parties which are associated to the documents. Entity: Gen_Document_Party_Roles (Introduced in version 22.1.4.45)
+Represents the different possible roles of a party associated to a document. Entity: Gen_Document_Party_Roles (Introduced in version 22.1.4.45)
 
 ## Default Visualization
 Default Display Text Format:  
-_{Name}_  
+_{Name:T}_  
 Default Search Member:  
 __  
 
@@ -23,21 +23,21 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](General.DocumentPartyRoles.md#code) | string (32) | The code of the role. `Required` `ORD` 
+| [Code](General.DocumentPartyRoles.md#code) | string (32) | The unique code of the DocumentPartyRole. `Required` `Filter(eq;like)` `ORD` 
 | [Id](General.DocumentPartyRoles.md#id) | guid |  
-| [Name](General.DocumentPartyRoles.md#name) | string (254) | Party role name. `Required` 
-| [Notes](General.DocumentPartyRoles.md#notes) | string (512) __nullable__ | Notes for this DocumentPartyRole. 
+| [Name](General.DocumentPartyRoles.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Party role name (multi-language). `Required` `Filter(eq;like)` 
+| [Notes](General.DocumentPartyRoles.md#notes) | string (max) __nullable__ | Notes for this DocumentPartyRole. 
 
 
 ## Attribute Details
 
 ### Code
 
-The code of the role. `Required` `ORD`
+The unique code of the DocumentPartyRole. `Required` `Filter(eq;like)` `ORD`
 
 _Type_: **string (32)**  
 _Indexed_: **True**  
-_Supported Filters_: **NotFilterable**  
+_Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
 _Maximum Length_: **32**  
 
@@ -50,21 +50,20 @@ _Default Value_: **NewGuid**
 
 ### Name
 
-Party role name. `Required`
+Party role name (multi-language). `Required` `Filter(eq;like)`
 
-_Type_: **string (254)**  
-_Supported Filters_: **NotFilterable**  
+_Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
+_Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
-_Maximum Length_: **254**  
 
 ### Notes
 
 Notes for this DocumentPartyRole.
 
-_Type_: **string (512) __nullable__**  
+_Type_: **string (max) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
-_Maximum Length_: **512**  
+_Maximum Length_: **2147483647**  
 
 
 
