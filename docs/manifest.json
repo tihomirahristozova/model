@@ -265,12 +265,15 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "business-rules/R20750-3.md",
       "output": {
         ".html": {
           "relative_path": "business-rules/R20750-3.html",
-          "hash": "qYFyndAPa1c1/kxLMkGWVg=="
+          "hash": "/QJ2wji9lyTKa3C875+bIg=="
         }
       },
       "is_incremental": false,
@@ -307,6 +310,18 @@
         ".html": {
           "relative_path": "business-rules/R20750-7.html",
           "hash": "5SKw4XEgtAoqJHwFRDzGyQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "business-rules/R20750-9.md",
+      "output": {
+        ".html": {
+          "relative_path": "business-rules/R20750-9.html",
+          "hash": "SiomCVl9xZljIP4fWWhqNg=="
         }
       },
       "is_incremental": false,
@@ -14596,7 +14611,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Logistics.Procurement.PurchaseInvoices.html",
-          "hash": "jiJifwQoGI5DKwyyFknidg=="
+          "hash": "+yOPlyIigas8jX5tuIdJ5Q=="
         }
       },
       "is_incremental": false,
