@@ -21,8 +21,13 @@ Fulfillment ledger for documents. Entity: Gen_Document_Fulfillments (Introduced 
 |[Is_Final](#is_final)|`bit` |Specifies whether this fulfillment finalizes the line, regardless of any remaining quantities.|
 |[Line_No](#line_no)|`int` |Line number. Used for human-readability of the fulfillment. NULL if the lines do not support line numbers or the line number is unknown.|
 |[Line_Type](#line_type)|`nvarchar(1)` |Detail (line) type, for example materials, services, etc. L=Line. Other values are defined by the document entity type.|
+|[Lot_Id](#lot_id)|`uniqueidentifier` |The lot, which was fulfilled. NULL when the fulfillment was not for a specific lot.|
+|[Product_Id](#product_id)|`uniqueidentifier` |The product, which is fulfilled.|
+|[Product_Variant_Id](#product_variant_id)|`uniqueidentifier` |The product variant, which was fulfilled. NULL when the fulfillment was not for a product variant.|
 |[Quantity_Base](#quantity_base)|`decimal(12, 3)` |Fulfilled quantity in the base measurement unit of the product.|
 |[Row_Version](#row_version)|`timestamp` ||
+|[Serial_Number_Id](#serial_number_id)|`uniqueidentifier` |The serial number, which was fulfilled. NULL when the fulfillment was not for a specific serial number.|
+|[Standard_Quantity](#standard_quantity)|`decimal(12, 3)` |The theoretical quantity according to the current measurement dimensions for the product. Used to measure the execution.|
 
 ## Columns
 
@@ -152,6 +157,7 @@ The name of the entity which fulfills the line. Used to differentiate between di
 |Picture|no|
 |Primary Key|yes (order: 1)|
 |Readonly|no|
+|Referenced Table|[Gen_Document_Fulfillments](Gen_Document_Fulfillments.md)|
 |RTF|no|
 |Sortable|no|
 |Summary Type|None|
@@ -387,6 +393,117 @@ Detail (line) type, for example materials, services, etc. L=Line. Other values a
 | - | - | - | - |
 |Equals|`NULL`|no|no|
 
+### Lot_Id
+
+
+The lot, which was fulfilled. NULL when the fulfillment was not for a specific lot.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|Referenced Table|[Inv_Lots](Inv_Lots.md)|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Lot_Id - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
+
+### Product_Id
+
+
+The product, which is fulfilled.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|Referenced Table|[Gen_Products](Gen_Products.md)|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Product_Id - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
+
+### Product_Variant_Id
+
+
+The product variant, which was fulfilled. NULL when the fulfillment was not for a product variant.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|Referenced Table|[Gen_Product_Variants](Gen_Product_Variants.md)|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Product_Variant_Id - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
+
 ### Quantity_Base
 
 
@@ -450,5 +567,72 @@ Fulfilled quantity in the base measurement unit of the product.
 |UI Width|Medium|
 |User Login|no|
 |Visible|no|
+
+### Serial_Number_Id
+
+
+The serial number, which was fulfilled. NULL when the fulfillment was not for a specific serial number.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|Referenced Table|[Inv_Serial_Numbers](Inv_Serial_Numbers.md)|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Serial_Number_Id - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
+
+### Standard_Quantity
+
+
+The theoretical quantity according to the current measurement dimensions for the product. Used to measure the execution.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|decimal(12, 3)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
 
 
