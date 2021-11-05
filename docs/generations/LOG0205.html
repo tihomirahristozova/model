@@ -212,12 +212,21 @@ The new Warehouse Requisition is saved then and only when there is at least one 
 <td style="text-align: center;">StoreOrderLine.Product.BaseMeasurementUnit</td>
 <td style="text-align: left;">StoreOrderLine.QuantityBase</td>
 <td style="text-align: left;">DocumentFulfillment.QuantityBase</td>
+<td style="text-align: left;">NO</td>
+</tr>
+<tr>
+<td style="text-align: left;">StoreOrderLineToWarehouseRequisitionLine</td>
+<td style="text-align: center;">MStandardQuantity</td>
+<td style="text-align: center;">StoreOrderLine.Product.BaseMeasurementUnit</td>
+<td style="text-align: left;">StoreOrderLine.StandardQuantity</td>
+<td style="text-align: left;">DocumentFulfillment.StandardQuantity</td>
 <td style="text-align: left;">YES</td>
 </tr>
 </tbody>
 </table>
-<p>The lines of the new document are created based on the data in the Document Fulfillments table.
-The table contains the information for the Fulfilled Part of quantities by Warehouse Requisitions that are already created.</p>
+<br>
+The lines of the new document are created based on the data in the Document Fulfillments table. 
+The table contains the information for the Fulfilled Part of quantities by Warehouse Requisitions that are already created.
 <p><strong>The new Warehouse Requisition Line is created as follows:</strong></p>
 <pre><code>WarehouseRequisitionLine.LineNo = StoreOrderLine.LineNo
 
@@ -227,7 +236,11 @@ WarehouseRequisitionLine.Lot = StoreOrderLine.Lot
 
 WarehouseRequisitionLine.SerialNumber = StoreOrderLine.SerialNumber
 
+WarehouseRequisitionLine.ProductVariant = StoreOrderLine.ProductVariant
+
 WarehouseRequisitionLine.QuantityBase = StoreOrderLine.**REMAINING(MQuantityBase)**
+
+WarehouseRequisitionLine.StandardQuantity = StoreOrderLine.**REMAINING(MStandardQuantity)**
 
 WarehouseRequisitionLine.QuantityUnit = StoreOrderLine.QuantityUnit
 
@@ -235,7 +248,7 @@ WarehouseRequisitionLine.Quantity = If there are no records in the Document Fulf
 
                                 , then WarehouseRequisitionLine.Quantity = StoreOrderLine.Quantity
 
-                                , else **CONVERT(WarehouseRequisitionLine.QuantityBase, WarehouseRequisitionLine.QuantityUnit)**
+                                , else **CONVERT(WarehouseRequisitionLine.StandardQuantity, WarehouseRequisitionLine.QuantityUnit)**
 
 WarehouseRequisitionLine.Notes = StoreOrderLine.Notes
 
@@ -243,14 +256,9 @@ WarehouseRequisitionLine.ParentDocument = StoreOrder
 
 WarehouseRequisitionLine.ParentLineNo = StoreOrderLine.LineNo
 </code></pre>
-<p><strong>If StoreOrderLine.Product.AllowVariableMeasurementRatios = True, throw an error:</strong></p>
-<pre><code>*Line number '{StoreOrderLine.Line}' in document '{StoreOrder.DocumentText}' contains a product '{StoreOrderLine.Product.PartNumber}' which uses Variable Measurement
-Ratios.*
-
-*Generation procedure '{GenerationProcedure.Code}' does not support Variable Measurement Ratios.*
-</code></pre>
-<p>After the line is created, the generation generates records in the Document Fulfillment table.
-These records reflect the quantities fulfilled by the current iteration of the generation procedure and are needed to determine the quantities for subsequent generation iterations.</p>
+<br>
+After the line is created, the generation generates records in the Document Fulfillment table. 
+These records reflect the quantities fulfilled by the current iteration of the generation procedure and are needed to determine the quantities for subsequent generation iterations.
 <p><strong>The new Document Fulfillment is created as follows:</strong></p>
 <pre><code>DocumentFulfillment.Document = StoreOrder
 
@@ -269,6 +277,16 @@ DocumentFulfillment.IsFinal = If (WarehouseRequisition.DocumentType.GenerateSing
 DocumentFulfillment.LineType = Line
 
 DocumentFulfillment.QuantityBase = WarehouseRequisitionLine.QuantityBase
+
+DocumentFulfillment.StandardQuantity = WarehouseRequisitionLine.StandardQuantity
+
+DocumentFulfillment.Product = WarehouseRequisitionLine.Product
+
+DocumentFulfillment.Lot = WarehouseRequisitionLine.Lot
+
+DocumentFulfillment.SerialNumber = WarehouseRequisitionLine.SerialNumber
+
+DocumentFulfillment.ProductVariant = WarehouseRequisitionLine.ProductVariant
 
 DocumentFulfillment.DestinationEntityName = Wms_Warehouse_Requisition_Lines
 </code></pre>

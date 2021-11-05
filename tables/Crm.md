@@ -11,6 +11,7 @@
 * [Crm_Customer_Type_Property_Values](Crm_Customer_Type_Property_Values.md)
 * [Crm_Customer_Types](Crm_Customer_Types.md)
 * [Crm_Customers](Crm_Customers.md)
+* [Crm_Deal_Lines](Crm_Deal_Lines.md)
 * [Crm_Dealers](Crm_Dealers.md)
 * [Crm_Deals](Crm_Deals.md)
 * [Crm_Default_Sales_Order_Document_Properties](Crm_Default_Sales_Order_Document_Properties.md)

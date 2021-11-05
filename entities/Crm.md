@@ -16,6 +16,7 @@ uid: Crm
 - [Customers](Crm.Customers.md)  
 - [CustomerTypes](Crm.CustomerTypes.md)  
 - [Dealers](Crm.Dealers.md)  
+- [DealLines](Crm.DealLines.md)  
 - [DiscountTypes](Crm.DiscountTypes.md)  
 - [Distributors](Crm.Distributors.md)  
 - [LineDiscounts](Crm.LineDiscounts.md)  

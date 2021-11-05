@@ -23,7 +23,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](General.DocumentPartyRoles.md#code) | string (32) | The unique code of the DocumentPartyRole. `Required` `Filter(eq;like)` `ORD` 
+| [Code](General.DocumentPartyRoles.md#code) | string (32) | The code of the role. `Required` `Filter(eq;like)` `ORD` 
 | [Id](General.DocumentPartyRoles.md#id) | guid |  
 | [Name](General.DocumentPartyRoles.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Party role name (multi-language). `Required` `Filter(eq;like)` 
 | [Notes](General.DocumentPartyRoles.md#notes) | string (max) __nullable__ | Notes for this DocumentPartyRole. 
@@ -33,7 +33,7 @@ Aggregate Tree
 
 ### Code
 
-The unique code of the DocumentPartyRole. `Required` `Filter(eq;like)` `ORD`
+The code of the role. `Required` `Filter(eq;like)` `ORD`
 
 _Type_: **string (32)**  
 _Indexed_: **True**  

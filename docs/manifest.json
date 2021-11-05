@@ -6339,7 +6339,7 @@
       "output": {
         ".html": {
           "relative_path": "business-rules/R30968-1.html",
-          "hash": "4vC6rvGMfzvrF+nIWjhfvw=="
+          "hash": "MdW1RKdZ9+ma1YVxE4DN/A=="
         }
       },
       "is_incremental": false,
@@ -6351,7 +6351,7 @@
       "output": {
         ".html": {
           "relative_path": "business-rules/R30968-2.html",
-          "hash": "/2Xv5p027kXsj1en7yVzaQ=="
+          "hash": "9EWXXP/nu7zvLMoMOvvIVw=="
         }
       },
       "is_incremental": false,
@@ -9693,7 +9693,7 @@
       "output": {
         ".html": {
           "relative_path": "business-rules/R32512.html",
-          "hash": "i7SNkpIiaprljjZzexIDww=="
+          "hash": "3+PLU+SqVmDazoLoAOSYkA=="
         }
       },
       "is_incremental": false,
@@ -11043,6 +11043,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "entities/Crm.DealLines.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Crm.DealLines.html",
+          "hash": "xvTf1RMFHWFdjE9l6oIV/g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "entities/Crm.Dealers.md",
       "output": {
         ".html": {
@@ -11467,7 +11479,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Crm.Presales.Deals.html",
-          "hash": "yomPzNfv8h5+quD11Lqa4g=="
+          "hash": "WKp/JWKbLs2a3ldySbIFSw=="
         }
       },
       "is_incremental": false,
@@ -11503,7 +11515,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Crm.Presales.OfferLines.html",
-          "hash": "/219ztdyiwyoI945tPBSDw=="
+          "hash": "U7X+b9pZt8oN/vNqPfbtsQ=="
         }
       },
       "is_incremental": false,
@@ -11791,7 +11803,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Crm.html",
-          "hash": "B5H9GdT+hlTzOGehjnHDBw=="
+          "hash": "KvuWchjSWNUUHrZm7Mi76Q=="
         }
       },
       "is_incremental": false,
@@ -12583,7 +12595,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Finance.Payments.OrderBalances.html",
-          "hash": "dwiDTmizfjQvn+D2T/Xgog=="
+          "hash": "iI3X8jZqmBUWYQvGzAAocQ=="
         }
       },
       "is_incremental": false,
@@ -13279,7 +13291,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/General.DocumentFulfillments.html",
-          "hash": "7e4FrDtXsJfrom+Hz5SSSw=="
+          "hash": "DqwwYFKXlC/TxFcJFLgqZQ=="
         }
       },
       "is_incremental": false,
@@ -13351,7 +13363,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/General.DocumentPartyRoles.html",
-          "hash": "sWTIqSh0FfF0gZ9Erso2pg=="
+          "hash": "7CDTff3dOTU5LGgP78qgzg=="
         }
       },
       "is_incremental": false,
@@ -14179,7 +14191,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Logistics.Inventory.DemandManagement.AvailableToPromiseByLots.html",
-          "hash": "43zZdS4LcMzszSYfdXTaQg=="
+          "hash": "mlkPhMFHGwF2FpHG72NpWw=="
         }
       },
       "is_incremental": false,
@@ -16075,7 +16087,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Systems.Core.AttributeChanges.html",
-          "hash": "Z6VShTKH/sdZRyqVRFJh4w=="
+          "hash": "NaJx9ucI5ltnZ0+BEEjcpg=="
         }
       },
       "is_incremental": false,
@@ -16087,7 +16099,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Systems.Core.AttributeChangesHistory.html",
-          "hash": "O3x9pFAaAFXXYpbT1wf5oQ=="
+          "hash": "RShGAWusb8tGAain9VmREw=="
         }
       },
       "is_incremental": false,
@@ -16687,7 +16699,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/toc.html",
-          "hash": "myrVUwF1WT4RzwL4CvFhCg=="
+          "hash": "mx9UpF96vVh61Rf+KqnVEw=="
         }
       },
       "is_incremental": false,
@@ -16951,7 +16963,7 @@
       "output": {
         ".html": {
           "relative_path": "generations/LOG0205.html",
-          "hash": "cOcy+sj71z55+h6Ll0LxPg=="
+          "hash": "kuQL3bSbqJ3XcdlmkvNLCQ=="
         }
       },
       "is_incremental": false,
@@ -18624,7 +18636,7 @@
       "output": {
         ".html": {
           "relative_path": "tables/Crm.html",
-          "hash": "KnLPf/TgM2hZJxRRoCEuxw=="
+          "hash": "1LJK5Ki6qZyLrEAx1x9mgA=="
         }
       },
       "is_incremental": false,
@@ -18757,6 +18769,18 @@
         ".html": {
           "relative_path": "tables/Crm_Customers.html",
           "hash": "XfEsdZKNel27FqfF6VZz/g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tables/Crm_Deal_Lines.md",
+      "output": {
+        ".html": {
+          "relative_path": "tables/Crm_Deal_Lines.html",
+          "hash": "Z6M+wzziOh6rUi0KACqh1w=="
         }
       },
       "is_incremental": false,
@@ -19032,7 +19056,7 @@
       "output": {
         ".html": {
           "relative_path": "tables/Crm_Offer_Lines.html",
-          "hash": "aZsrYV/gqY5D/vz/SjRAUQ=="
+          "hash": "dEdrSKHqhS1uLeLrGFNHZg=="
         }
       },
       "is_incremental": false,
@@ -20256,7 +20280,7 @@
       "output": {
         ".html": {
           "relative_path": "tables/Gen_Document_Fulfillments.html",
-          "hash": "OLdk9uoRZN/e6DbvhhIzJQ=="
+          "hash": "llkjgFGI/DLmFD1Va3R1Kw=="
         }
       },
       "is_incremental": false,
@@ -24852,7 +24876,7 @@
       "output": {
         ".html": {
           "relative_path": "tables/index.html",
-          "hash": "fc1gEifjnrWBtzQubuhl9g=="
+          "hash": "TWkUaM3wJMXJUnAQjHRgUA=="
         }
       },
       "is_incremental": false,
@@ -24864,7 +24888,7 @@
       "output": {
         ".html": {
           "relative_path": "tables/toc.html",
-          "hash": "asb5TF0pEGOe/F3+eD++Xg=="
+          "hash": "VsXueUDctSir+KTVyoFhOw=="
         }
       },
       "is_incremental": false,

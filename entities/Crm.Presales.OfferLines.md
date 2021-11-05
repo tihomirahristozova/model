@@ -34,7 +34,7 @@ Aggregate Root:
 | [LineCustomDiscountPercent](Crm.Presales.OfferLines.md#linecustomdiscountpercent) | decimal (7, 6) | Operator defined discount percentage, specified for this line. `Required` `Default(0)` 
 | [LineNo](Crm.Presales.OfferLines.md#lineno) | int32 | Line number, unique within the Offer. Usually is increasing number like 10, 20, 30, ... when initially entering the Offer (in order to allow insertions with adjustment documents). `Required` 
 | [LineStandardDiscount<br />Percent](Crm.Presales.OfferLines.md#linestandarddiscountpercent) | decimal (7, 6) | The discount percentage, applied through the standard discount policy. `Required` `Default(0)` 
-| [Notes](Crm.Presales.OfferLines.md#notes) | string (254) __nullable__ | Notes for this OfferLine. 
+| [Notes](Crm.Presales.OfferLines.md#notes) | string (max) __nullable__ | Notes for this OfferLine. 
 | [ProductDescription](Crm.Presales.OfferLines.md#productdescription) | [MultilanguageString](../data-types.md#multilanguagestring) | The description of the offered product. Initially copied from the name of the offered product. `Required` `Filter(like)` 
 | [Quantity](Crm.Presales.OfferLines.md#quantity) | [Quantity (12, 3)](../data-types.md#quantity) | Quantity offered. `Unit: QuantityUnit` `Required` `Default(1)` 
 | [QuantityBase](Crm.Presales.OfferLines.md#quantitybase) | [Quantity (12, 3)](../data-types.md#quantity) | The equivalent of Quantity in the base measurement unit of the Product. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` 
@@ -157,10 +157,10 @@ _Front-End Recalc Expressions:_
 
 Notes for this OfferLine.
 
-_Type_: **string (254) __nullable__**  
+_Type_: **string (max) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
-_Maximum Length_: **254**  
+_Maximum Length_: **2147483647**  
 
 ### ProductDescription
 

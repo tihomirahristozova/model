@@ -110,12 +110,12 @@ __</p>
 <tr>
 <td><a href="Finance.Payments.OrderBalances.html#duedate">DueDate</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>The due date of the payment. null means there is no due date. <code>Filter(eq;ge;le)</code> <code>Inherited from Cash_Payment_Orders_Table.Due_Date</code></td>
+<td>End date on which the payment is executable. null means that the payment is executable at all times. <code>Filter(eq;ge;le)</code> <code>Inherited from Cash_Payment_Orders_Table.Due_Date</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Payments.OrderBalances.html#duestartdate">DueStartDate</a></td>
 <td>date <strong>nullable</strong></td>
-<td>The date at which the payment becomes executable. null means the payment is executable at all times. <code>Filter(eq;ge;le)</code> <code>Inherited from Cash_Payment_Orders_Table.Due_Start_Date</code></td>
+<td>Initial date on which the payment is executable. null means that the payment is executable at all times. <code>Filter(eq;ge;le)</code> <code>Inherited from Cash_Payment_Orders_Table.Due_Start_Date</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Payments.OrderBalances.html#isinvoiced">IsInvoiced</a></td>
@@ -125,7 +125,7 @@ __</p>
 <tr>
 <td><a href="Finance.Payments.OrderBalances.html#orderamount">OrderAmount</a></td>
 <td><a href="../data-types.html#amount">Amount (18, 2)</a></td>
-<td>The total amount of the payment order. <code>Currency: Currency</code> <code>Required</code> <code>Default(0)</code> <code>Filter(eq;ge;le)</code> <code>Inherited from Cash_Payment_Orders_Table.Total_Amount</code></td>
+<td>Total amount that should be payed. <code>Currency: Currency</code> <code>Required</code> <code>Default(0)</code> <code>Filter(eq;ge;le)</code> <code>Inherited from Cash_Payment_Orders_Table.Total_Amount</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Payments.OrderBalances.html#paidamount">PaidAmount</a></td>
@@ -145,12 +145,12 @@ __</p>
 <tr>
 <td><a href="Finance.Payments.OrderBalances.html#refinvoicedocumentdate">RefInvoiceDocumentDate</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>The date of the related invoice. null means that the payment order isn't related to any invoice or the date is unknown. <code>Filter(eq;ge;le)</code> <code>Inherited from Cash_Payment_Orders_Table.Ref_Invoice_Document_Date</code></td>
+<td>The date of the related invoice. Not specified when the payment order isn't related to any invoice or the date is unknown. <code>Filter(eq;ge;le)</code> <code>Inherited from Cash_Payment_Orders_Table.Ref_Invoice_Document_Date</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Payments.OrderBalances.html#refinvoicedocumentno">RefInvoiceDocumentNo</a></td>
 <td>string (20) <strong>nullable</strong></td>
-<td>The number of the invoice which has created or is related to the payment order and is the basis for the payment. null means that the payment order isn't created or related to any invoice. <code>Filter(eq)</code> <code>Inherited from Cash_Payment_Orders_Table.Ref_Invoice_Document_No</code></td>
+<td>The number of the invoice which has created or is related to the payment order and is the basis for the payment. Not specified when the payment order isn't created or related to any invoice. <code>Filter(eq)</code> <code>Inherited from Cash_Payment_Orders_Table.Ref_Invoice_Document_No</code></td>
 </tr>
 </tbody>
 </table>
@@ -167,7 +167,7 @@ __</p>
 <tr>
 <td><a href="Finance.Payments.OrderBalances.html#currency">Currency</a></td>
 <td><a href="General.Currencies.html">Currencies</a></td>
-<td>The currency of amounts. <code>Required</code> <code>Filter(multi eq)</code> <code>Inherited from Cash_Payment_Orders_Table.Total_Amount_Currency_Id</code></td>
+<td>The currency of Total Amount. <code>Required</code> <code>Filter(multi eq)</code> <code>Inherited from Cash_Payment_Orders_Table.Total_Amount_Currency_Id</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Payments.OrderBalances.html#enterprisecompany">EnterpriseCompany</a></td>
@@ -177,7 +177,7 @@ __</p>
 <tr>
 <td><a href="Finance.Payments.OrderBalances.html#locationparty">LocationParty</a></td>
 <td><a href="General.Contacts.Parties.html">Parties</a> (nullable)</td>
-<td>Location or sub-party of the Party_Id in the order. <code>Filter(multi eq)</code> <code>Inherited from Cash_Payment_Orders_Table.Location_Party_Id</code></td>
+<td>Location or sub-party of the main party in the payment order. <code>Filter(multi eq)</code> <code>Inherited from Cash_Payment_Orders_Table.Location_Party_Id</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Payments.OrderBalances.html#party">Party</a></td>
@@ -187,12 +187,12 @@ __</p>
 <tr>
 <td><a href="Finance.Payments.OrderBalances.html#paymentorder">PaymentOrder</a></td>
 <td><a href="Finance.Payments.PaymentOrders.html">PaymentOrders</a></td>
-<td>The payment order. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Cash_Payment_Orders_Table.Payment_Order_Id</code></td>
+<td></td>
 </tr>
 <tr>
 <td><a href="Finance.Payments.OrderBalances.html#refdocument">RefDocument</a></td>
 <td><a href="General.Documents.html">Documents</a> (nullable)</td>
-<td>The document which has created the payment order and is the basis for the payment. If this column is filled then Ref_Document_Type_Id, Ref_Document_No and Ref_Document_Date must be equal to the type, number and date of the specified document. <code>Filter(multi eq)</code> <code>Inherited from Cash_Payment_Orders_Table.Ref_Document_Id</code></td>
+<td>The document which is the basis for the payment order. If this column is filled then 'Ref document type', 'Ref document no' and 'Ref document date' must be equal to the type, number and date of the specified document. <code>Filter(multi eq)</code> <code>Inherited from Cash_Payment_Orders_Table.Ref_Document_Id</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Payments.OrderBalances.html#refdocumenttype">RefDocumentType</a></td>
@@ -207,7 +207,7 @@ __</p>
 <tr>
 <td><a href="Finance.Payments.OrderBalances.html#refinvoicedocumenttype">RefInvoiceDocumentType</a></td>
 <td><a href="General.DocumentTypes.html">DocumentTypes</a> (nullable)</td>
-<td>The document type of the invoice which has created or is related to the payment order and is the basis for the payment. null means that the payment order isn't created or related to any invoice. <code>Filter(multi eq)</code> <code>Inherited from Cash_Payment_Orders_Table.Ref_Invoice_Document_&lt;br /&gt;Type_Id</code></td>
+<td>The document type of the invoice which has created or is related to the payment order and is the basis for the payment. Not specified when the payment order isn't created or related to any invoice. <code>Filter(multi eq)</code> <code>Inherited from Cash_Payment_Orders_Table.Ref_Invoice_Document_&lt;br /&gt;Type_Id</code></td>
 </tr>
 </tbody>
 </table>
@@ -240,13 +240,13 @@ Allowed values for the <code>Direction</code>(Finance.Payments.PaymentOrders.md#
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Expense</strong></p>
 <h3 id="duedate">DueDate</h3>
-<p>The due date of the payment. null means there is no due date. <code>Filter(eq;ge;le)</code> <code>Inherited from Cash_Payment_Orders_Table.Due_Date</code></p>
+<p>End date on which the payment is executable. null means that the payment is executable at all times. <code>Filter(eq;ge;le)</code> <code>Inherited from Cash_Payment_Orders_Table.Due_Date</code></p>
 <p><em>Type</em>: <strong>datetime <strong>nullable</strong></strong><br>
 <em>Inherited From</em>: <strong>Cash_Payment_Orders_Table.Due_Date</strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="duestartdate">DueStartDate</h3>
-<p>The date at which the payment becomes executable. null means the payment is executable at all times. <code>Filter(eq;ge;le)</code> <code>Inherited from Cash_Payment_Orders_Table.Due_Start_Date</code></p>
+<p>Initial date on which the payment is executable. null means that the payment is executable at all times. <code>Filter(eq;ge;le)</code> <code>Inherited from Cash_Payment_Orders_Table.Due_Start_Date</code></p>
 <p><em>Type</em>: <strong>date <strong>nullable</strong></strong><br>
 <em>Inherited From</em>: <strong>Cash_Payment_Orders_Table.Due_Start_Date</strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
@@ -257,7 +257,7 @@ Allowed values for the <code>Direction</code>(Finance.Payments.PaymentOrders.md#
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="orderamount">OrderAmount</h3>
-<p>The total amount of the payment order. <code>Currency: Currency</code> <code>Required</code> <code>Default(0)</code> <code>Filter(eq;ge;le)</code> <code>Inherited from Cash_Payment_Orders_Table.Total_Amount</code></p>
+<p>Total amount that should be payed. <code>Currency: Currency</code> <code>Required</code> <code>Default(0)</code> <code>Filter(eq;ge;le)</code> <code>Inherited from Cash_Payment_Orders_Table.Total_Amount</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount (18, 2)</a></strong><br>
 <em>Inherited From</em>: <strong>Cash_Payment_Orders_Table.Total_Amount</strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
@@ -290,7 +290,7 @@ Allowed values for the <code>Direction</code>(Finance.Payments.PaymentOrders.md#
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>obj.RefDocument.DocumentNo</code></p>
 <h3 id="refinvoicedocumentdate">RefInvoiceDocumentDate</h3>
-<p>The date of the related invoice. null means that the payment order isn't related to any invoice or the date is unknown. <code>Filter(eq;ge;le)</code> <code>Inherited from Cash_Payment_Orders_Table.Ref_Invoice_Document_Date</code></p>
+<p>The date of the related invoice. Not specified when the payment order isn't related to any invoice or the date is unknown. <code>Filter(eq;ge;le)</code> <code>Inherited from Cash_Payment_Orders_Table.Ref_Invoice_Document_Date</code></p>
 <p><em>Type</em>: <strong>datetime <strong>nullable</strong></strong><br>
 <em>Inherited From</em>: <strong>Cash_Payment_Orders_Table.Ref_Invoice_Document_Date</strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
@@ -300,7 +300,7 @@ Allowed values for the <code>Direction</code>(Finance.Payments.PaymentOrders.md#
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>obj.RefInvoiceDocument.DocumentDate</code></p>
 <h3 id="refinvoicedocumentno">RefInvoiceDocumentNo</h3>
-<p>The number of the invoice which has created or is related to the payment order and is the basis for the payment. null means that the payment order isn't created or related to any invoice. <code>Filter(eq)</code> <code>Inherited from Cash_Payment_Orders_Table.Ref_Invoice_Document_No</code></p>
+<p>The number of the invoice which has created or is related to the payment order and is the basis for the payment. Not specified when the payment order isn't created or related to any invoice. <code>Filter(eq)</code> <code>Inherited from Cash_Payment_Orders_Table.Ref_Invoice_Document_No</code></p>
 <p><em>Type</em>: <strong>string (20) <strong>nullable</strong></strong><br>
 <em>Inherited From</em>: <strong>Cash_Payment_Orders_Table.Ref_Invoice_Document_No</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
@@ -312,7 +312,7 @@ Allowed values for the <code>Direction</code>(Finance.Payments.PaymentOrders.md#
 <code>obj.RefInvoiceDocument.DocumentNo</code></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="currency">Currency</h3>
-<p>The currency of amounts. <code>Required</code> <code>Filter(multi eq)</code> <code>Inherited from Cash_Payment_Orders_Table.Total_Amount_Currency_Id</code></p>
+<p>The currency of Total Amount. <code>Required</code> <code>Filter(multi eq)</code> <code>Inherited from Cash_Payment_Orders_Table.Total_Amount_Currency_Id</code></p>
 <p><em>Type</em>: <strong><a href="General.Currencies.html">Currencies</a></strong><br>
 <em>Inherited From</em>: <strong>Cash_Payment_Orders_Table.Total_Amount_Currency_Id</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
@@ -322,7 +322,7 @@ Allowed values for the <code>Direction</code>(Finance.Payments.PaymentOrders.md#
 <em>Inherited From</em>: <strong>Gen_Documents_Table.Enterprise_Company_Id</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="locationparty">LocationParty</h3>
-<p>Location or sub-party of the Party_Id in the order. <code>Filter(multi eq)</code> <code>Inherited from Cash_Payment_Orders_Table.Location_Party_Id</code></p>
+<p>Location or sub-party of the main party in the payment order. <code>Filter(multi eq)</code> <code>Inherited from Cash_Payment_Orders_Table.Location_Party_Id</code></p>
 <p><em>Type</em>: <strong><a href="General.Contacts.Parties.html">Parties</a> (nullable)</strong><br>
 <em>Inherited From</em>: <strong>Cash_Payment_Orders_Table.Location_Party_Id</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
@@ -332,13 +332,12 @@ Allowed values for the <code>Direction</code>(Finance.Payments.PaymentOrders.md#
 <em>Inherited From</em>: <strong>Cash_Payment_Orders_Table.Party_Id</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="paymentorder">PaymentOrder</h3>
-<p>The payment order. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Cash_Payment_Orders_Table.Payment_Order_Id</code></p>
 <p><em>Type</em>: <strong><a href="Finance.Payments.PaymentOrders.html">PaymentOrders</a></strong><br>
 <em>Inherited From</em>: <strong>Cash_Payment_Orders_Table.Payment_Order_Id</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="refdocument">RefDocument</h3>
-<p>The document which has created the payment order and is the basis for the payment. If this column is filled then Ref_Document_Type_Id, Ref_Document_No and Ref_Document_Date must be equal to the type, number and date of the specified document. <code>Filter(multi eq)</code> <code>Inherited from Cash_Payment_Orders_Table.Ref_Document_Id</code></p>
+<p>The document which is the basis for the payment order. If this column is filled then 'Ref document type', 'Ref document no' and 'Ref document date' must be equal to the type, number and date of the specified document. <code>Filter(multi eq)</code> <code>Inherited from Cash_Payment_Orders_Table.Ref_Document_Id</code></p>
 <p><em>Type</em>: <strong><a href="General.Documents.html">Documents</a> (nullable)</strong><br>
 <em>Inherited From</em>: <strong>Cash_Payment_Orders_Table.Ref_Document_Id</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
@@ -357,7 +356,7 @@ Allowed values for the <code>Direction</code>(Finance.Payments.PaymentOrders.md#
 <em>Inherited From</em>: <strong>Cash_Payment_Orders_Table.Ref_Invoice_Document_Id</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="refinvoicedocumenttype">RefInvoiceDocumentType</h3>
-<p>The document type of the invoice which has created or is related to the payment order and is the basis for the payment. null means that the payment order isn't created or related to any invoice. <code>Filter(multi eq)</code> <code>Inherited from Cash_Payment_Orders_Table.Ref_Invoice_Document_Type_Id</code></p>
+<p>The document type of the invoice which has created or is related to the payment order and is the basis for the payment. Not specified when the payment order isn't created or related to any invoice. <code>Filter(multi eq)</code> <code>Inherited from Cash_Payment_Orders_Table.Ref_Invoice_Document_Type_Id</code></p>
 <p><em>Type</em>: <strong><a href="General.DocumentTypes.html">DocumentTypes</a> (nullable)</strong><br>
 <em>Inherited From</em>: <strong>Cash_Payment_Orders_Table.Ref_Invoice_Document_Type_Id</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>

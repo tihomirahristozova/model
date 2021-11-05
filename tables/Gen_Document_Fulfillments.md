@@ -157,7 +157,6 @@ The name of the entity which fulfills the line. Used to differentiate between di
 |Picture|no|
 |Primary Key|yes (order: 1)|
 |Readonly|no|
-|Referenced Table|[Gen_Document_Fulfillments](Gen_Document_Fulfillments.md)|
 |RTF|no|
 |Sortable|no|
 |Summary Type|None|
@@ -403,6 +402,7 @@ The lot, which was fulfilled. NULL when the fulfillment was not for a specific l
 |Auto Complete|no|
 |Data Filter|no|
 |Default Value|None|
+|Depends On|[Product_Id](#product_id)|
 |Enter Stop|yes|
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
@@ -477,6 +477,7 @@ The product variant, which was fulfilled. NULL when the fulfillment was not for 
 |Auto Complete|no|
 |Data Filter|no|
 |Default Value|None|
+|Depends On|[Product_Id](#product_id)|
 |Enter Stop|yes|
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
@@ -578,6 +579,7 @@ The serial number, which was fulfilled. NULL when the fulfillment was not for a 
 |Auto Complete|no|
 |Data Filter|no|
 |Default Value|None|
+|Depends On|[Product_Id](#product_id)|
 |Enter Stop|yes|
 |Ignore for Insert Order|no|
 |Is Entity Name|no|

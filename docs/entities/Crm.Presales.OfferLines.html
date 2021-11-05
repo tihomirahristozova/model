@@ -149,7 +149,7 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Crm.Presales.OfferLines.html#notes">Notes</a></td>
-<td>string (254) <strong>nullable</strong></td>
+<td>string (max) <strong>nullable</strong></td>
 <td>Notes for this OfferLine.</td>
 </tr>
 <tr>
@@ -309,10 +309,10 @@ Aggregate Root:<br>
 <code>IIF( ( obj.LineDiscount == null), 0, obj.LineDiscount.DiscountPercent)</code></p>
 <h3 id="notes">Notes</h3>
 <p>Notes for this OfferLine.</p>
-<p><em>Type</em>: <strong>string (254) <strong>nullable</strong></strong><br>
+<p><em>Type</em>: <strong>string (max) <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
-<em>Maximum Length</em>: <strong>254</strong></p>
+<em>Maximum Length</em>: <strong>2147483647</strong></p>
 <h3 id="productdescription">ProductDescription</h3>
 <p>The description of the offered product. Initially copied from the name of the offered product. <code>Required</code> <code>Filter(like)</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a></strong><br>

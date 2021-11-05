@@ -26,7 +26,7 @@ Detail records (lines) of Offers. Entity: Crm_Offer_Lines
 |[Line_End_Customer_Party_Id](#line_end_customer_party_id)|`uniqueidentifier` |The end customer is the customer of the dealer. It is stored for information purposes only. The end customer may not have customer definition, just party.|
 |[Line_No](#line_no)|`int` ||
 |[Line_Standard_Discount_Percent](#line_standard_discount_percent)|`decimal(7, 6)` |The discount percentage, applied through the standard discount policy.|
-|[Notes](#notes)|`nvarchar(254)` ||
+|[Notes](#notes)|`nvarchar(max)` ||
 |[Offer_Id](#offer_id)|`uniqueidentifier` ||
 |[Offer_Line_Id](#offer_line_id)|`uniqueidentifier` `PK`||
 |[Product_Code_Id](#product_code_id)|`uniqueidentifier` |Not NULL, when the product is selected using a coding system code.|
@@ -370,7 +370,7 @@ The discount percentage, applied through the standard discount policy.
 |Enter Stop|yes|
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
-|Max Length|254|
+|Max Length|2147483647|
 |Order|2147483647|
 |Ownership Reference|no|
 |Pasword|no|
@@ -381,7 +381,7 @@ The discount percentage, applied through the standard discount policy.
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(254) (Allows NULL)|
+|Type|nvarchar(max) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

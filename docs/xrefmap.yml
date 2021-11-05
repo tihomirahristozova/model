@@ -313,6 +313,9 @@ references:
 - uid: Crm.Dealers
   name: Crm.Dealers Entity
   href: entities/Crm.Dealers.html
+- uid: Crm.DealLines
+  name: Crm.DealLines Entity
+  href: entities/Crm.DealLines.html
 - uid: Crm.DiscountTypes
   name: Crm.DiscountTypes Entity
   href: entities/Crm.DiscountTypes.html

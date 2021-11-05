@@ -32,6 +32,7 @@ Aggregate Tree
 | [LineNo](General.DocumentFulfillments.md#lineno) | int32 __nullable__ | Line number. Used for human-readability of the fulfillment. null if the lines do not support line numbers or the line number is unknown. `Filter(multi eq;ge;le)` `Introduced in version 21.1.1.26` 
 | [LineType](General.DocumentFulfillments.md#linetype) | string (1) | Detail (line) type, for example materials, services, etc. L=Line. Other values are defined by the document entity type. `Required` `Default("L")` `Filter(multi eq)` `Introduced in version 21.1.1.26` 
 | [QuantityBase](General.DocumentFulfillments.md#quantitybase) | decimal (12, 3) | Fulfilled quantity in the base measurement unit of the product. `Required` `Filter(multi eq;ge;le)` `Introduced in version 21.1.1.33` 
+| [StandardQuantity](General.DocumentFulfillments.md#standardquantity) | decimal (12, 3) | The theoretical quantity according to the current measurement dimensions for the product. Used to measure the execution. `Required` `Introduced in version 22.1.4.52` 
 
 ## References
 
@@ -39,6 +40,10 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [CreationUser](General.DocumentFulfillments.md#creationuser) | [Users](Systems.Security.Users.md) | The user, who created the record. `Required` `Filter(multi eq)` |
 | [Document](General.DocumentFulfillments.md#document) | [Documents](General.Documents.md) | The Document, which is fulfilled. `Required` `Filter(multi eq)` `Introduced in version 21.1.1.26` |
+| [Lot](General.DocumentFulfillments.md#lot) | [Lots](Logistics.Inventory.Lots.md) (nullable) | The lot, which was fulfilled. null when the fulfillment was not for a specific lot. `Filter(multi eq)` `Introduced in version 22.1.4.52` |
+| [Product](General.DocumentFulfillments.md#product) | [Products](General.Products.Products.md) (nullable) | The product, which is fulfilled. `Filter(multi eq)` `Introduced in version 22.1.4.52` |
+| [ProductVariant](General.DocumentFulfillments.md#productvariant) | [ProductVariants](General.ProductVariants.md) (nullable) | The product variant, which was fulfilled. null when the fulfillment was not for a product variant. `Filter(multi eq)` `Introduced in version 22.1.4.52` |
+| [SerialNumber](General.DocumentFulfillments.md#serialnumber) | [SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable) | The serial number, which was fulfilled. null when the fulfillment was not for a specific serial number. `Filter(multi eq)` `Introduced in version 22.1.4.52` |
 
 
 ## Attribute Details
@@ -127,6 +132,14 @@ _Type_: **decimal (12, 3)**
 _Supported Filters_: **Equals, GreaterThanOrLessThan, EqualsIn**  
 _Supports Order By_: **False**  
 
+### StandardQuantity
+
+The theoretical quantity according to the current measurement dimensions for the product. Used to measure the execution. `Required` `Introduced in version 22.1.4.52`
+
+_Type_: **decimal (12, 3)**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+
 
 ## Reference Details
 
@@ -143,6 +156,35 @@ The Document, which is fulfilled. `Required` `Filter(multi eq)` `Introduced in v
 
 _Type_: **[Documents](General.Documents.md)**  
 _Indexed_: **True**  
+_Supported Filters_: **Equals, EqualsIn**  
+
+### Lot
+
+The lot, which was fulfilled. null when the fulfillment was not for a specific lot. `Filter(multi eq)` `Introduced in version 22.1.4.52`
+
+_Type_: **[Lots](Logistics.Inventory.Lots.md) (nullable)**  
+_Supported Filters_: **Equals, EqualsIn**  
+
+### Product
+
+The product, which is fulfilled. `Filter(multi eq)` `Introduced in version 22.1.4.52`
+
+_Type_: **[Products](General.Products.Products.md) (nullable)**  
+_Indexed_: **True**  
+_Supported Filters_: **Equals, EqualsIn**  
+
+### ProductVariant
+
+The product variant, which was fulfilled. null when the fulfillment was not for a product variant. `Filter(multi eq)` `Introduced in version 22.1.4.52`
+
+_Type_: **[ProductVariants](General.ProductVariants.md) (nullable)**  
+_Supported Filters_: **Equals, EqualsIn**  
+
+### SerialNumber
+
+The serial number, which was fulfilled. null when the fulfillment was not for a specific serial number. `Filter(multi eq)` `Introduced in version 22.1.4.52`
+
+_Type_: **[SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

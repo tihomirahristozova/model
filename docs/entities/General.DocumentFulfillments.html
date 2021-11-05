@@ -147,6 +147,11 @@ __</p>
 <td>decimal (12, 3)</td>
 <td>Fulfilled quantity in the base measurement unit of the product. <code>Required</code> <code>Filter(multi eq;ge;le)</code> <code>Introduced in version 21.1.1.33</code></td>
 </tr>
+<tr>
+<td><a href="General.DocumentFulfillments.html#standardquantity">StandardQuantity</a></td>
+<td>decimal (12, 3)</td>
+<td>The theoretical quantity according to the current measurement dimensions for the product. Used to measure the execution. <code>Required</code> <code>Introduced in version 22.1.4.52</code></td>
+</tr>
 </tbody>
 </table>
 <h2 id="references">References</h2>
@@ -168,6 +173,26 @@ __</p>
 <td><a href="General.DocumentFulfillments.html#document">Document</a></td>
 <td><a href="General.Documents.html">Documents</a></td>
 <td>The Document, which is fulfilled. <code>Required</code> <code>Filter(multi eq)</code> <code>Introduced in version 21.1.1.26</code></td>
+</tr>
+<tr>
+<td><a href="General.DocumentFulfillments.html#lot">Lot</a></td>
+<td><a href="Logistics.Inventory.Lots.html">Lots</a> (nullable)</td>
+<td>The lot, which was fulfilled. null when the fulfillment was not for a specific lot. <code>Filter(multi eq)</code> <code>Introduced in version 22.1.4.52</code></td>
+</tr>
+<tr>
+<td><a href="General.DocumentFulfillments.html#product">Product</a></td>
+<td><a href="General.Products.Products.html">Products</a> (nullable)</td>
+<td>The product, which is fulfilled. <code>Filter(multi eq)</code> <code>Introduced in version 22.1.4.52</code></td>
+</tr>
+<tr>
+<td><a href="General.DocumentFulfillments.html#productvariant">ProductVariant</a></td>
+<td><a href="General.ProductVariants.html">ProductVariants</a> (nullable)</td>
+<td>The product variant, which was fulfilled. null when the fulfillment was not for a product variant. <code>Filter(multi eq)</code> <code>Introduced in version 22.1.4.52</code></td>
+</tr>
+<tr>
+<td><a href="General.DocumentFulfillments.html#serialnumber">SerialNumber</a></td>
+<td><a href="Logistics.Inventory.SerialNumbers.html">SerialNumbers</a> (nullable)</td>
+<td>The serial number, which was fulfilled. null when the fulfillment was not for a specific serial number. <code>Filter(multi eq)</code> <code>Introduced in version 22.1.4.52</code></td>
 </tr>
 </tbody>
 </table>
@@ -242,6 +267,11 @@ Allowed values for the <code>FulfillmentType</code>(General.DocumentFulfillments
 <p><em>Type</em>: <strong>decimal (12, 3)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="standardquantity">StandardQuantity</h3>
+<p>The theoretical quantity according to the current measurement dimensions for the product. Used to measure the execution. <code>Required</code> <code>Introduced in version 22.1.4.52</code></p>
+<p><em>Type</em>: <strong>decimal (12, 3)</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="creationuser">CreationUser</h3>
 <p>The user, who created the record. <code>Required</code> <code>Filter(multi eq)</code></p>
@@ -251,6 +281,23 @@ Allowed values for the <code>FulfillmentType</code>(General.DocumentFulfillments
 <p>The Document, which is fulfilled. <code>Required</code> <code>Filter(multi eq)</code> <code>Introduced in version 21.1.1.26</code></p>
 <p><em>Type</em>: <strong><a href="General.Documents.html">Documents</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<h3 id="lot">Lot</h3>
+<p>The lot, which was fulfilled. null when the fulfillment was not for a specific lot. <code>Filter(multi eq)</code> <code>Introduced in version 22.1.4.52</code></p>
+<p><em>Type</em>: <strong><a href="Logistics.Inventory.Lots.html">Lots</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<h3 id="product">Product</h3>
+<p>The product, which is fulfilled. <code>Filter(multi eq)</code> <code>Introduced in version 22.1.4.52</code></p>
+<p><em>Type</em>: <strong><a href="General.Products.Products.html">Products</a> (nullable)</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<h3 id="productvariant">ProductVariant</h3>
+<p>The product variant, which was fulfilled. null when the fulfillment was not for a product variant. <code>Filter(multi eq)</code> <code>Introduced in version 22.1.4.52</code></p>
+<p><em>Type</em>: <strong><a href="General.ProductVariants.html">ProductVariants</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<h3 id="serialnumber">SerialNumber</h3>
+<p>The serial number, which was fulfilled. null when the fulfillment was not for a specific serial number. <code>Filter(multi eq)</code> <code>Introduced in version 22.1.4.52</code></p>
+<p><em>Type</em>: <strong><a href="Logistics.Inventory.SerialNumbers.html">SerialNumbers</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <ul>

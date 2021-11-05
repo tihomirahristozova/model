@@ -281,6 +281,8 @@
     href: Crm_Customer_Types.md
   - name: Crm_Customers
     href: Crm_Customers.md
+  - name: Crm_Deal_Lines
+    href: Crm_Deal_Lines.md
   - name: Crm_Dealers
     href: Crm_Dealers.md
   - name: Crm_Deals
