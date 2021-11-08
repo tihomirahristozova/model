@@ -241,6 +241,7 @@ The measurement unit of Quantity.
 |Picture|no|
 |Primary Key|no|
 |Readonly|no|
+|Referenced Table|[Gen_Measurement_Units](Gen_Measurement_Units.md)|
 |RTF|no|
 |Sortable|no|
 |Summary Type|None|

@@ -29,7 +29,6 @@ Aggregate Root:
 | [LineNo](Crm.DealLines.md#lineno) | int32 | Consecutive number of the line within the deal. `Required` 
 | [Notes](Crm.DealLines.md#notes) | string (max) __nullable__ | Notes for this DealLine. 
 | [Quantity](Crm.DealLines.md#quantity) | decimal (12, 3) __nullable__ | When not null, specifies the quantity, which the client can potentially buy (with measurement unit specified in Quantity Unit). 
-| [QuantityUnitId](Crm.DealLines.md#quantityunitid) | guid | The measurement unit of Quantity. `Required` `Filter(multi eq)` 
 
 ## References
 
@@ -37,6 +36,7 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [Deal](Crm.DealLines.md#deal) | [Deals](Crm.Presales.Deals.md) | Deal. `Required` `Filter(multi eq)` `Owner` |
 | [Product](Crm.DealLines.md#product) | [Products](General.Products.Products.md) | The product, to which the client has interest. `Required` `Filter(multi eq)` |
+| [QuantityUnit](Crm.DealLines.md#quantityunit) | [MeasurementUnits](General.MeasurementUnits.md) | The measurement unit of Quantity. `Required` `Filter(multi eq)` |
 
 
 ## Attribute Details
@@ -73,13 +73,6 @@ _Type_: **decimal (12, 3) __nullable__**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
-### QuantityUnitId
-
-The measurement unit of Quantity. `Required` `Filter(multi eq)`
-
-_Type_: **guid**  
-_Supported Filters_: **Equals, EqualsIn**  
-
 
 ## Reference Details
 
@@ -99,6 +92,15 @@ The product, to which the client has interest. `Required` `Filter(multi eq)`
 _Type_: **[Products](General.Products.Products.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
+### QuantityUnit
+
+The measurement unit of Quantity. `Required` `Filter(multi eq)`
+
+_Type_: **[MeasurementUnits](General.MeasurementUnits.md)**  
+_Supported Filters_: **Equals, EqualsIn**  
+
+_Front-End Recalc Expressions:_  
+`obj.Product.MeasurementUnit`
 
 
 ## Business Rules

@@ -170,6 +170,11 @@ Aggregate Root:<br>
 <td>The requested product. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
+<td><a href="Logistics.Wms.WarehouseRequisitionLines.html#productvariant">ProductVariant</a></td>
+<td><a href="General.ProductVariants.html">ProductVariants</a> (nullable)</td>
+<td>The requested product variant. <code>Filter(multi eq)</code> <code>Introduced in version 22.1.4.56</code></td>
+</tr>
+<tr>
 <td><a href="Logistics.Wms.WarehouseRequisitionLines.html#quantityunit">QuantityUnit</a></td>
 <td><a href="General.MeasurementUnits.html">MeasurementUnits</a></td>
 <td>The measurement unit of Quantity. <code>Required</code> <code>Filter(multi eq)</code></td>
@@ -244,6 +249,10 @@ Aggregate Root:<br>
 <h3 id="product">Product</h3>
 <p>The requested product. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.Products.Products.html">Products</a></strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<h3 id="productvariant">ProductVariant</h3>
+<p>The requested product variant. <code>Filter(multi eq)</code> <code>Introduced in version 22.1.4.56</code></p>
+<p><em>Type</em>: <strong><a href="General.ProductVariants.html">ProductVariants</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="quantityunit">QuantityUnit</h3>
 <p>The measurement unit of Quantity. <code>Required</code> <code>Filter(multi eq)</code></p>
