@@ -421,6 +421,9 @@ references:
 - uid: Crm.Presales
   name: Crm.Presales Namespace
   href: entities/Crm.Presales.html
+- uid: Crm.Presales.DealLines
+  name: Crm.Presales.DealLines Entity
+  href: entities/Crm.Presales.DealLines.html
 - uid: Crm.Presales.Deals
   name: Crm.Presales.Deals Entity
   href: entities/Crm.Presales.Deals.html

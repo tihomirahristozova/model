@@ -80,7 +80,7 @@
 <h1 id="table-crm_deal_lines">Table Crm_Deal_Lines</h1>
 
 <h2 id="entity">Entity</h2>
-<p>Entity: <a href="../entities/Crm.DealLines.html">Crm.DealLines</a></p>
+<p>Entity: <a href="../entities/Crm.Presales.DealLines.html">Crm.Presales.DealLines</a></p>
 <p>Detail records (lines) of the deals. Entity: Crm_Deal_Lines (Introduced in version 22.1.4.53)</p>
 <h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
 <ul>
@@ -115,7 +115,7 @@
 <tr>
 <td><a href="#notes">Notes</a></td>
 <td><code>nvarchar(max)</code></td>
-<td></td>
+<td>Notes</td>
 </tr>
 <tr>
 <td><a href="#product_id">Product_Id</a></td>
@@ -180,7 +180,7 @@
 </tr>
 <tr>
 <td>Order</td>
-<td>2147483647</td>
+<td>1</td>
 </tr>
 <tr>
 <td>Ownership Reference</td>
@@ -240,7 +240,7 @@
 </tr>
 <tr>
 <td>Visible</td>
-<td>yes</td>
+<td>no</td>
 </tr>
 </tbody>
 </table>
@@ -302,7 +302,7 @@
 </tr>
 <tr>
 <td>Order</td>
-<td>2147483647</td>
+<td>0</td>
 </tr>
 <tr>
 <td>Ownership Reference</td>
@@ -358,7 +358,7 @@
 </tr>
 <tr>
 <td>Visible</td>
-<td>yes</td>
+<td>no</td>
 </tr>
 </tbody>
 </table>
@@ -396,6 +396,10 @@
 <td>no</td>
 </tr>
 <tr>
+<td>Autoincrement</td>
+<td>10</td>
+</tr>
+<tr>
 <td>Data Filter</td>
 <td>no</td>
 </tr>
@@ -405,7 +409,7 @@
 </tr>
 <tr>
 <td>Enter Stop</td>
-<td>yes</td>
+<td>no</td>
 </tr>
 <tr>
 <td>Ignore for Insert Order</td>
@@ -421,7 +425,7 @@
 </tr>
 <tr>
 <td>Order</td>
-<td>2147483647</td>
+<td>2</td>
 </tr>
 <tr>
 <td>Ownership Reference</td>
@@ -469,7 +473,7 @@
 </tr>
 <tr>
 <td>UI Width</td>
-<td>Medium</td>
+<td>Short</td>
 </tr>
 <tr>
 <td>User Login</td>
@@ -481,7 +485,27 @@
 </tr>
 </tbody>
 </table>
+<h4 id="line_no---supported-filters">Line_No - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>no</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
 <h3 id="notes">Notes</h3>
+<p>Notes</p>
 <table>
 <thead>
 <tr>
@@ -490,6 +514,10 @@
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>Attributes</td>
+<td>IsLongString</td>
+</tr>
 <tr>
 <td>Auto Complete</td>
 <td>no</td>
@@ -520,7 +548,7 @@
 </tr>
 <tr>
 <td>Order</td>
-<td>2147483647</td>
+<td>6</td>
 </tr>
 <tr>
 <td>Ownership Reference</td>
@@ -620,7 +648,7 @@
 </tr>
 <tr>
 <td>Order</td>
-<td>2147483647</td>
+<td>3</td>
 </tr>
 <tr>
 <td>Ownership Reference</td>
@@ -743,7 +771,7 @@
 </tr>
 <tr>
 <td>Order</td>
-<td>2147483647</td>
+<td>4</td>
 </tr>
 <tr>
 <td>Ownership Reference</td>
@@ -826,6 +854,10 @@
 <td>None</td>
 </tr>
 <tr>
+<td>Depends On</td>
+<td><a href="#product_id">Product_Id</a></td>
+</tr>
+<tr>
 <td>Enter Stop</td>
 <td>yes</td>
 </tr>
@@ -843,7 +875,7 @@
 </tr>
 <tr>
 <td>Order</td>
-<td>2147483647</td>
+<td>5</td>
 </tr>
 <tr>
 <td>Ownership Reference</td>
@@ -965,7 +997,7 @@
 </tr>
 <tr>
 <td>Order</td>
-<td>2147483647</td>
+<td>7</td>
 </tr>
 <tr>
 <td>Ownership Reference</td>

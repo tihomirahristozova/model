@@ -218,8 +218,6 @@
     href: Crm.CustomerTypes.md
   - name: Dealers
     href: Crm.Dealers.md
-  - name: DealLines
-    href: Crm.DealLines.md
   - name: DiscountTypes
     href: Crm.DiscountTypes.md
   - name: Distribution
@@ -295,6 +293,8 @@
   - name: Presales
     href: Crm.Presales.md
     items:
+    - name: DealLines
+      href: Crm.Presales.DealLines.md
     - name: Deals
       href: Crm.Presales.Deals.md
     - name: Leads

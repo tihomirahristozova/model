@@ -9777,7 +9777,7 @@
       "output": {
         ".html": {
           "relative_path": "business-rules/R32603.html",
-          "hash": "hVxuhpNlOvrgn9i6R4yfdQ=="
+          "hash": "ZIgzBVkHVIAqK1of6uSnWQ=="
         }
       },
       "is_incremental": false,
@@ -11059,7 +11059,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Crm.DealLines.html",
-          "hash": "f0C962Cju511YLj/BWr7ZA=="
+          "hash": "8WRdXb+SSdBjpvNGSVohfg=="
         }
       },
       "is_incremental": false,
@@ -11487,11 +11487,23 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "entities/Crm.Presales.DealLines.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Crm.Presales.DealLines.html",
+          "hash": "M1vkRWiFH4n1XnceyIHQww=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "entities/Crm.Presales.Deals.md",
       "output": {
         ".html": {
           "relative_path": "entities/Crm.Presales.Deals.html",
-          "hash": "WKp/JWKbLs2a3ldySbIFSw=="
+          "hash": "RIol/Mn3gg0CEllZeEWrmw=="
         }
       },
       "is_incremental": false,
@@ -11563,7 +11575,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Crm.Presales.html",
-          "hash": "GvgKIVlNSeXQtf8bK31Mpg=="
+          "hash": "mkQYtfr+qDpgx8D4yLDLIQ=="
         }
       },
       "is_incremental": false,
@@ -11815,7 +11827,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Crm.html",
-          "hash": "KvuWchjSWNUUHrZm7Mi76Q=="
+          "hash": "B5H9GdT+hlTzOGehjnHDBw=="
         }
       },
       "is_incremental": false,
@@ -16711,7 +16723,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/toc.html",
-          "hash": "mx9UpF96vVh61Rf+KqnVEw=="
+          "hash": "Vk8F1PU9J9+CFwrWJdZEpQ=="
         }
       },
       "is_incremental": false,
@@ -18792,7 +18804,7 @@
       "output": {
         ".html": {
           "relative_path": "tables/Crm_Deal_Lines.html",
-          "hash": "3RdTM8V3nt2GpQxjXV2OgQ=="
+          "hash": "sN7rTU/b4iurAajKMULouQ=="
         }
       },
       "is_incremental": false,
