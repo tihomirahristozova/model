@@ -227,11 +227,11 @@ WarehouseOrderLine.SerialNumber = WarehouseRequisitionLine.SerialNumber
 
 WarehouseOrderLine.ProductVariant = WarehouseRequisitionLine.ProductVariant
 
-WarehouseOrderLine.QuantityUnit = Product.BaseMeasurementUnit
+WarehouseOrderLine.QuantityUnit = WarehouseRequisitionLine.QuantityUnit
 
 WarehouseOrderLine.Quantity =  If there are no records in the Document Fulfillment table for the current WarehouseRequisitionLine
                                , then WarehouseOrderLine.Quantity = WarehouseRequisitionLine.Quantity
-                               , else CONVERT(WarehouseRequisitionLine.StandardQuantity, WarehouseRequisitionLine.QuantityUnit)
+                               , else CONVERT(WarehouseOrderLine.StandardQuantity, WarehouseOrderLine.QuantityUnit)
 
 WarehouseOrderLine.QuantityBase = WarehouseRequisitionLine.REMAINING(MQuantityBase)
 
