@@ -9,7 +9,7 @@ Contains supplier conditions (contracts). Entity: Scm_Suppliers
 
 ## Default Visualization
 Default Display Text Format:  
-_{Number}_  
+_{Party.PartyName:T}_  
 Default Search Member:  
 __  
 
