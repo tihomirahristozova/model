@@ -1,7 +1,7 @@
----
-erp.entity: Logistics.Inventory.StoreOrders
-erp.type: generation
----
+// ---
+// erp.entity: Logistics.Inventory.StoreOrders
+// erp.type: generation
+// ---
 
 # LOGxxxxx Create Store Transaction for fulfilled ..
 
