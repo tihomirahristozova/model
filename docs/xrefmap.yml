@@ -905,8 +905,14 @@ references:
   name: General.DocumentPrints Entity
   href: entities/General.DocumentPrints.html
 - uid: General.Documents
-  name: General.Documents Entity
+  name: General.Documents Namespace
   href: entities/General.Documents.html
+- uid: General.Documents.DocumentParties
+  name: General.Documents.DocumentParties Entity
+  href: entities/General.Documents.DocumentParties.html
+- uid: General.Documents.DocumentPartyRoles
+  name: General.Documents.DocumentPartyRoles Entity
+  href: entities/General.Documents.DocumentPartyRoles.html
 - uid: General.DocumentStateChanges
   name: General.DocumentStateChanges Entity
   href: entities/General.DocumentStateChanges.html

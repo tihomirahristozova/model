@@ -3,7 +3,7 @@
 
 ## Entity
 
-Entity: [General.DocumentParties](~/entities/General.DocumentParties.md)
+Entity: [General.Documents.DocumentParties](~/entities/General.Documents.DocumentParties.md)
 
 Represents a party associated to a document. Entity: Gen_Document_Parties (Introduced in version 22.1.4.46)
 
@@ -38,7 +38,7 @@ The document in which the party plays a role.
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|1|
 |Ownership Reference|yes|
 |Pasword|no|
 |Picture|no|
@@ -53,7 +53,7 @@ The document in which the party plays a role.
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
-|Visible|yes|
+|Visible|no|
 
 #### Document_Id - Supported Filters
 
@@ -72,7 +72,7 @@ The document in which the party plays a role.
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|0|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -98,6 +98,7 @@ The document in which the party plays a role.
 
 | Property | Value |
 | - | - |
+|Attributes|IsLongString|
 |Auto Complete|no|
 |Data Filter|no|
 |Default Value|None|
@@ -105,7 +106,7 @@ The document in which the party plays a role.
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|2147483647|
-|Order|2147483647|
+|Order|4|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -135,7 +136,7 @@ The party, which plays a role in the document.
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|2|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -172,7 +173,7 @@ The role of the party in the document.
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|3|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -206,7 +207,7 @@ The role of the party in the document.
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|5|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|

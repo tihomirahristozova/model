@@ -615,16 +615,17 @@
     href: General.DocumentLinks.md
   - name: DocumentManualDistributedAmounts
     href: General.DocumentManualDistributedAmounts.md
-  - name: DocumentParties
-    href: General.DocumentParties.md
-  - name: DocumentPartyRoles
-    href: General.DocumentPartyRoles.md
   - name: DocumentPrintImages
     href: General.DocumentPrintImages.md
   - name: DocumentPrints
     href: General.DocumentPrints.md
   - name: Documents
     href: General.Documents.md
+    items:
+    - name: DocumentParties
+      href: General.Documents.DocumentParties.md
+    - name: DocumentPartyRoles
+      href: General.Documents.DocumentPartyRoles.md
   - name: DocumentStateChanges
     href: General.DocumentStateChanges.md
   - name: DocumentTypeAmounts
