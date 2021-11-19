@@ -10,7 +10,7 @@ Request for one product with a warehouse requisition. Entity: Wms_Warehouse_Requ
 ## Default Visualization
 Default Display Text Format:  
 _{LineNo}. {WarehouseRequisition.DocumentNo} {WarehouseRequisition.DocumentType.TypeName:T}_  
-Default Search Member:  
+Default Search Members:  
 _WarehouseRequisition.DocumentNo_  
 
 ## Aggregate

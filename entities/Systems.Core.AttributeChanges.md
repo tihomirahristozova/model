@@ -10,7 +10,7 @@ Attribute values of an object change. Entity: Sys_Attribute_Changes_View
 ## Default Visualization
 Default Display Text Format:  
 _{ObjectChangeId}: {AttributeName}_  
-Default Search Member:  
+Default Search Members:  
 __  
 
 ## Aggregate

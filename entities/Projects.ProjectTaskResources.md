@@ -10,8 +10,8 @@ Contains the resources, required by the project tasks. Entity: Prj_Project_Task_
 ## Default Visualization
 Default Display Text Format:  
 _{ProjectTask.TaskName}_  
-Default Search Member:  
-__  
+Default Search Members:  
+_ProjectTask.TaskName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

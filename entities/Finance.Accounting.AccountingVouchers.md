@@ -11,7 +11,7 @@ Contains the accounting vouchers (postings) in the general ledger. Entity: Acc_V
 ## Default Visualization
 Default Display Text Format:  
 _{DocumentType.TypeName:T} {DocumentNo}_  
-Default Search Member:  
+Default Search Members:  
 _DocumentNo_  
 
 ## Aggregate

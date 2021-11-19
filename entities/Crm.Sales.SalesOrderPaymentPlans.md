@@ -10,8 +10,8 @@ Payment plan of a sales order. Entity: Crm_Sales_Order_Payment_Plans
 ## Default Visualization
 Default Display Text Format:  
 _{SalesOrder.EntityName}_  
-Default Search Member:  
-__  
+Default Search Members:  
+_SalesOrder.EntityName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

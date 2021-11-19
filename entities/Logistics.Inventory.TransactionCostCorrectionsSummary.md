@@ -10,7 +10,7 @@ Summary of cost corrections, grouped by the line corrected. Entity: Inv_Transact
 ## Default Visualization
 Default Display Text Format:  
 _{BaseCostAdjustmentValue}: {CostCorrectionAmountValue}_  
-Default Search Member:  
+Default Search Members:  
 __  
 
 ## Aggregate

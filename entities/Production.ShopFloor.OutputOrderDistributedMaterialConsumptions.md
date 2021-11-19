@@ -10,8 +10,8 @@ Contains the quantity of materials distributed over the output order lines. Enti
 ## Default Visualization
 Default Display Text Format:  
 _{OutputOrderLine.OutputOrder.EntityName}_  
-Default Search Member:  
-__  
+Default Search Members:  
+_OutputOrderLine.OutputOrder.EntityName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

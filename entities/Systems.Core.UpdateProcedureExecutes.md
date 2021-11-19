@@ -10,7 +10,7 @@ Contains data about the execution of Upgrade Procedures. Contains status message
 ## Default Visualization
 Default Display Text Format:  
 _{Id}: {UpdateProcedure}_  
-Default Search Member:  
+Default Search Members:  
 __  
 
 ## Aggregate

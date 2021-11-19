@@ -10,7 +10,7 @@ Contains purchase invoice specific options for the different document types. Ent
 ## Default Visualization
 Default Display Text Format:  
 _{Id}: {DocumentTypeId}_  
-Default Search Member:  
+Default Search Members:  
 __  
 
 ## Aggregate

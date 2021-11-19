@@ -10,7 +10,7 @@ Detail records (lines) of Offers. Entity: Crm_Offer_Lines
 ## Default Visualization
 Default Display Text Format:  
 _{LineNo}. {Offer.DocumentNo} {Offer.DocumentType.TypeName:T}_  
-Default Search Member:  
+Default Search Members:  
 _Offer.DocumentNo_  
 
 ## Aggregate

@@ -10,7 +10,7 @@ Long (full) instructions for performing an operation. The operations point to th
 ## Default Visualization
 Default Display Text Format:  
 _{Id}: {Instructions}_  
-Default Search Member:  
+Default Search Members:  
 __  
 
 ## Aggregate

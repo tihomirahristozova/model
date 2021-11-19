@@ -11,7 +11,7 @@ Marketing activity, part of a marketing campaign. Entity: Crm_Activities
 ## Default Visualization
 Default Display Text Format:  
 _{DocumentType.TypeName:T} {DocumentNo}_  
-Default Search Member:  
+Default Search Members:  
 _DocumentNo_  
 
 ## Aggregate

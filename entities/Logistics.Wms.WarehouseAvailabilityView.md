@@ -10,7 +10,7 @@ The availability of goods in the warehouse locations of the warehouse. Entity: W
 ## Default Visualization
 Default Display Text Format:  
 _{WarehouseId}: {WarehouseLocationId}_  
-Default Search Member:  
+Default Search Members:  
 __  
 
 ## Aggregate

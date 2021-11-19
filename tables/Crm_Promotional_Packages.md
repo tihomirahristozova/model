@@ -12,6 +12,7 @@ Promotional packages are packages of products, which are sold together at a spec
 | Name | Type | Description |
 | - | - | --- |
 |[Active](#active)|`bit` |Package status: 1 = the offer is available for new documents; 0 = otherwise|
+|[Campaign_Id](#campaign_id)|`uniqueidentifier` |Тhe marketing campaign to which the current definition belongs.|
 |[Enterprise_Company_Id](#enterprise_company_id)|`uniqueidentifier` |When not NULL, indicates that the package is valid only for the specified enterprise company.|
 |[Enterprise_Company_Location_Id](#enterprise_company_location_id)|`uniqueidentifier` ||
 |[Promotional_Package_Code](#promotional_package_code)|`nvarchar(20)` |Unique code of the promotional package|
@@ -66,6 +67,43 @@ Package status: 1 = the offer is available for new documents; 0 = otherwise
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+
+### Campaign_Id
+
+
+Тhe marketing campaign to which the current definition belongs.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|Referenced Table|[Crm_Campaigns](Crm_Campaigns.md)|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Campaign_Id - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
 
 ### Enterprise_Company_Id
 

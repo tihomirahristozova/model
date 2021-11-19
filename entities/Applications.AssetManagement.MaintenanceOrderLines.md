@@ -10,7 +10,7 @@ Contains the types of maintenance and maintained assets in the maintenance order
 ## Default Visualization
 Default Display Text Format:  
 _{LineNo}. {MaintenanceOrder.DocumentNo} {MaintenanceOrder.DocumentType.TypeName:T}_  
-Default Search Member:  
+Default Search Members:  
 _MaintenanceOrder.DocumentNo_  
 
 ## Aggregate

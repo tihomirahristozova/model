@@ -10,8 +10,8 @@ Contains the cost types and their hierachy positions within a cost calculation. 
 ## Default Visualization
 Default Display Text Format:  
 _{CostTemplate.CostTemplateName}_  
-Default Search Member:  
-__  
+Default Search Members:  
+_CostTemplate.CostTemplateName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

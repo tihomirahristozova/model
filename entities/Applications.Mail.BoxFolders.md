@@ -10,8 +10,8 @@ Contains the folders inside the mailboxes. Entity: Mail_Box_Folders
 ## Default Visualization
 Default Display Text Format:  
 _{FolderName:T}_  
-Default Search Member:  
-__  
+Default Search Members:  
+_FolderName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

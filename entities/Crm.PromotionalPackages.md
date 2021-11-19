@@ -10,8 +10,8 @@ Promotional packages are packages of products, which are sold together at a spec
 ## Default Visualization
 Default Display Text Format:  
 _{Name}_  
-Default Search Member:  
-__  
+Default Search Members:  
+_Code; Name_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -38,6 +38,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [Campaign](Crm.PromotionalPackages.md#campaign) | [Campaigns](Crm.Marketing.Campaigns.md) (nullable) | Тhe marketing campaign to which the current definition belongs. `Filter(multi eq)` `Introduced in version 22.1.4.67` |
 | [EnterpriseCompany](Crm.PromotionalPackages.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | When not null, indicates that the package is valid only for the specified enterprise company. `Filter(multi eq)` |
 | [EnterpriseCompanyLocation](Crm.PromotionalPackages.md#enterprisecompanylocation) | [CompanyLocations](General.Contacts.CompanyLocations.md) (nullable) | The Enterprise Company Location to which this PromotionalPackage applies, or null if it is for all enterprise company locations. `Filter(multi eq)` |
 | [ValidForCustomer](Crm.PromotionalPackages.md#validforcustomer) | [Customers](Crm.Customers.md) (nullable) | When not null, the package is valid only for the specified customer. `Filter(multi eq)` |
@@ -133,6 +134,13 @@ _Supports Order By_: **False**
 
 
 ## Reference Details
+
+### Campaign
+
+Тhe marketing campaign to which the current definition belongs. `Filter(multi eq)` `Introduced in version 22.1.4.67`
+
+_Type_: **[Campaigns](Crm.Marketing.Campaigns.md) (nullable)**  
+_Supported Filters_: **Equals, EqualsIn**  
 
 ### EnterpriseCompany
 

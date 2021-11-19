@@ -10,8 +10,8 @@ Contains the company employee contracts. Entity: Cm_Company_Employees
 ## Default Visualization
 Default Display Text Format:  
 _{Person.PartyName:T}_  
-Default Search Member:  
-__  
+Default Search Members:  
+_ContractCode; Person.PartyName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

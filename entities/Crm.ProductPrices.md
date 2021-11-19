@@ -10,7 +10,7 @@ Specific prices of products. A price is applied after matching the specified cri
 ## Default Visualization
 Default Display Text Format:  
 _{Id}: {MaxQuantityValue}_  
-Default Search Member:  
+Default Search Members:  
 __  
 
 ## Aggregate
@@ -37,6 +37,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [Campaign](Crm.ProductPrices.md#campaign) | [Campaigns](Crm.Marketing.Campaigns.md) (nullable) | Тhe marketing campaign to which the current definition belongs. `Filter(multi eq)` `Introduced in version 22.1.4.67` |
 | [Currency](Crm.ProductPrices.md#currency) | [Currencies](General.Currencies.md) | The currency of the price. `Required` `Filter(multi eq)` |
 | [Customer](Crm.ProductPrices.md#customer) | [Customers](Crm.Customers.md) (nullable) | When not null, specifies that the customer of the sales document must be the specified customer. `Filter(multi eq)` |
 | [DistributionChannel](Crm.ProductPrices.md#distributionchannel) | [DistributionChannels](Crm.Marketing.DistributionChannels.md) (nullable) | Use the price only when selling through the specified channel. `Filter(multi eq)` |
@@ -140,6 +141,13 @@ _Supports Order By_: **False**
 
 
 ## Reference Details
+
+### Campaign
+
+Тhe marketing campaign to which the current definition belongs. `Filter(multi eq)` `Introduced in version 22.1.4.67`
+
+_Type_: **[Campaigns](Crm.Marketing.Campaigns.md) (nullable)**  
+_Supported Filters_: **Equals, EqualsIn**  
 
 ### Currency
 

@@ -10,7 +10,7 @@ Contains purchase prices of the products. Used for automatically loading unit pr
 ## Default Visualization
 Default Display Text Format:  
 _{Id}: {MaxQuantityValue}_  
-Default Search Member:  
+Default Search Members:  
 __  
 
 ## Aggregate

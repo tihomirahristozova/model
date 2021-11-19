@@ -10,7 +10,7 @@ Detail records of output orders. Entity: Prd_Output_Order_Lines
 ## Default Visualization
 Default Display Text Format:  
 _{LineOrd}. {OutputOrder.DocumentNo} {OutputOrder.DocumentType.TypeName:T}_  
-Default Search Member:  
+Default Search Members:  
 _OutputOrder.DocumentNo_  
 
 ## Aggregate

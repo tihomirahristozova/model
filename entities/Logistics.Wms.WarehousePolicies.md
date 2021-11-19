@@ -10,8 +10,8 @@ Warehouse Policies is a hierarchical system for applying policies to warehouse o
 ## Default Visualization
 Default Display Text Format:  
 _{Warehouse.Name:T}_  
-Default Search Member:  
-__  
+Default Search Members:  
+_Warehouse.Name_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -87,10 +87,10 @@ _Allowed Values (Logistics.Wms.WarehousePoliciesRepository.PolicyKind Enum Membe
 
 | Value | Description |
 | ---- | --- |
-| AllowProductChange | AllowProductChange value. Stored as 'APC'. <br /> _Database Value:_ 'APC' <br /> _Model Value:_ 0 <br /> _Domain API Value:_ 'AllowProductChange' |
-| AllowLotChange | AllowLotChange value. Stored as 'ATC'. <br /> _Database Value:_ 'ATC' <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'AllowLotChange' |
-| AllowLocationChange | AllowLocationChange value. Stored as 'ALC'. <br /> _Database Value:_ 'ALC' <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'AllowLocationChange' |
-| AllowUnitChange | AllowUnitChange value. Stored as 'AUC'. <br /> _Database Value:_ 'AUC' <br /> _Model Value:_ 3 <br /> _Domain API Value:_ 'AllowUnitChange' |
+| AllowProductChange | Allow executing with а different product than the ordered.. Stored as 'APC'. <br /> _Database Value:_ 'APC' <br /> _Model Value:_ 0 <br /> _Domain API Value:_ 'AllowProductChange' |
+| AllowLotChange | Allow executing with a different lot than the ordered.. Stored as 'ATC'. <br /> _Database Value:_ 'ATC' <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'AllowLotChange' |
+| AllowLocationChange | Allow executing from a different location than the ordered.. Stored as 'ALC'. <br /> _Database Value:_ 'ALC' <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'AllowLocationChange' |
+| AllowUnitChange | Allow executing of a quantity in a different measurement unit than the ordered.. Stored as 'AUC'. <br /> _Database Value:_ 'AUC' <br /> _Model Value:_ 3 <br /> _Domain API Value:_ 'AllowUnitChange' |
 | RequireSourceScan | Require scanning of the source location when moving/dispatching. Stored as 'RSS'. <br /> _Database Value:_ 'RSS' <br /> _Model Value:_ 4 <br /> _Domain API Value:_ 'RequireSourceScan' |
 | RequireDestinationScan | Require scanning of the destination location when moving/receiving. Stored as 'RDS'. <br /> _Database Value:_ 'RDS' <br /> _Model Value:_ 5 <br /> _Domain API Value:_ 'RequireDestinationScan' |
 | AllowLineSkip | Allow skipping of an order line when executing (allow quantity = 0). Stored as 'ALS'. <br /> _Database Value:_ 'ALS' <br /> _Model Value:_ 6 <br /> _Domain API Value:_ 'AllowLineSkip' |

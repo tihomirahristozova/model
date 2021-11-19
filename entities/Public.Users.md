@@ -10,7 +10,7 @@ Public users profile data. Entity: Public_Users (Introduced in version 22.1.4.22
 ## Default Visualization
 Default Display Text Format:  
 _{UserId}: {Email}_  
-Default Search Member:  
+Default Search Members:  
 __  
 
 ## Aggregate

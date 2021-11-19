@@ -10,8 +10,8 @@ Obsolete. Not used. Entity: Sec_User_Access_Keys
 ## Default Visualization
 Default Display Text Format:  
 _{User.Name:T}_  
-Default Search Member:  
-__  
+Default Search Members:  
+_User.Name_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

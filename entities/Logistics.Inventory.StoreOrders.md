@@ -11,7 +11,7 @@ Orders for store transactions. After an order is executed, store transaction is 
 ## Default Visualization
 Default Display Text Format:  
 _{DocumentType.TypeName:T} {DocumentNo}_  
-Default Search Member:  
+Default Search Members:  
 _DocumentNo_  
 
 ## Aggregate

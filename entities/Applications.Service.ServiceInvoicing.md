@@ -10,8 +10,8 @@ Contains invoicing ratios for the listed services. Entity: Srv_Service_Invoicing
 ## Default Visualization
 Default Display Text Format:  
 _{Service.Name}_  
-Default Search Member:  
-__  
+Default Search Members:  
+_Service.Name_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

@@ -10,7 +10,7 @@ Details of Transfer Orders. Each line contains order for the movement of one pro
 ## Default Visualization
 Default Display Text Format:  
 _{LineOrd}. {TransferOrder.DocumentNo} {TransferOrder.DocumentType.TypeName:T}_  
-Default Search Member:  
+Default Search Members:  
 _TransferOrder.DocumentNo_  
 
 ## Aggregate

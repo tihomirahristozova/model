@@ -8,7 +8,7 @@ uid: General.ProductGroupsLevelNames
 ## Default Visualization
 Default Display Text Format:  
 _{L1Name}: {L2Name}_  
-Default Search Member:  
+Default Search Members:  
 __  
 
 ## Aggregate

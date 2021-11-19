@@ -5,7 +5,7 @@
 
 Entity: [Logistics.Wms.WarehouseZones](~/entities/Logistics.Wms.WarehouseZones.md)
 
-One zone within a warehouse. Each zone can have different rack structure and different temperature and other properties. Entity: Wms_Warehouse_Zones (Introduced in version 20.1)
+One zone within a warehouse. Each zone can have different rack structure and different temperature and other properties. Entity: Wms_Warehouse_Zones (Introduced in version 22.1.4.67)
 
 ## Owner Tables Hierarchy
 

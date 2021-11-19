@@ -10,7 +10,7 @@ Detail lines of Requistions. Entity: Scm_Requisition_Lines
 ## Default Visualization
 Default Display Text Format:  
 _{LineNo}. {Requisition.DocumentNo} {Requisition.DocumentType.TypeName:T}_  
-Default Search Member:  
+Default Search Members:  
 _Requisition.DocumentNo_  
 
 ## Aggregate

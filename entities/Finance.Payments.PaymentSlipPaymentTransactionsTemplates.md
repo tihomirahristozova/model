@@ -10,7 +10,7 @@ Contains options for generation of payment transactions. Each option set is assi
 ## Default Visualization
 Default Display Text Format:  
 _{Id}: {RouteId}_  
-Default Search Member:  
+Default Search Members:  
 __  
 
 ## Aggregate

@@ -10,8 +10,8 @@ Contains permissions, which are honored only by client applications and are used
 ## Default Visualization
 Default Display Text Format:  
 _{ApplicationName}_  
-Default Search Member:  
-__  
+Default Search Members:  
+_ApplicationName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

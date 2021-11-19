@@ -10,7 +10,7 @@ User post in a social group. Entity: Cmm_Social_Posts (Introduced in version 20.
 ## Default Visualization
 Default Display Text Format:  
 _{Id}: {SocialGroupId}_  
-Default Search Member:  
+Default Search Members:  
 __  
 
 ## Aggregate

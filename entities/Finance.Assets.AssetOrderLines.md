@@ -10,8 +10,8 @@ Asset purchase or sales order line for one asset. Entity: Ast_Asset_Order_Lines
 ## Default Visualization
 Default Display Text Format:  
 _{AssetOrder.EntityName}_  
-Default Search Member:  
-__  
+Default Search Members:  
+_AssetOrder.EntityName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

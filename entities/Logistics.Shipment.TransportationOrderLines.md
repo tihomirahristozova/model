@@ -10,7 +10,7 @@ Different cargoes of a transportation order. Entity: Log_Transportation_Order_Li
 ## Default Visualization
 Default Display Text Format:  
 _{LineNo}. {TransportationOrder.DocumentNo} {TransportationOrder.DocumentType.TypeName:T}_  
-Default Search Member:  
+Default Search Members:  
 _TransportationOrder.DocumentNo_  
 
 ## Aggregate

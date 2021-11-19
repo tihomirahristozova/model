@@ -10,7 +10,7 @@ Represents the payment orders with their covered amounts. Entity: Cash_Payment_B
 ## Default Visualization
 Default Display Text Format:  
 _{OrderAmountValue}: {PaidAmountValue}_  
-Default Search Member:  
+Default Search Members:  
 __  
 
 ## Aggregate

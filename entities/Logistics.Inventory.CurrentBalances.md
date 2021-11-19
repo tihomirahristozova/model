@@ -10,7 +10,7 @@ The current inventory balances, grouped by storage key (Store, Product, Lot, etc
 ## Default Visualization
 Default Display Text Format:  
 _{BaseCostValue}: {EnterpriseCompanyId}_  
-Default Search Member:  
+Default Search Members:  
 __  
 
 ## Aggregate

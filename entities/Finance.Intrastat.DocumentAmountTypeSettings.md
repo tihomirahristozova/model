@@ -10,8 +10,8 @@ Specifies the additional amounts, which are added to the invoiced and statistica
 ## Default Visualization
 Default Display Text Format:  
 _{DocumentAmountType.AmountTypeName:T}_  
-Default Search Member:  
-__  
+Default Search Members:  
+_DocumentAmountType.AmountTypeName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

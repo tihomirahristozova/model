@@ -10,7 +10,7 @@ Stores information about vehicle locations. Entity: Fleet_Vehicle_Location_Histo
 ## Default Visualization
 Default Display Text Format:  
 _{Id}: {VehicleId}_  
-Default Search Member:  
+Default Search Members:  
 __  
 
 ## Aggregate

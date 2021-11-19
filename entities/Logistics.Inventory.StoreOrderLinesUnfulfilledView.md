@@ -10,7 +10,7 @@ Returns the remaining (unfulfilled) quantity and cost for each Store Order Line 
 ## Default Visualization
 Default Display Text Format:  
 _{StoreOrderLineId}: {DocumentDate}_  
-Default Search Member:  
+Default Search Members:  
 __  
 
 ## Aggregate

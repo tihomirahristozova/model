@@ -22,6 +22,7 @@ Bonus programs allow automatic adding of new line with bonus product or automati
 |[Bonus_Product_Quantity_Unit_Id](#bonus_product_quantity_unit_id)|`uniqueidentifier` |The measurement unit of the quantity rewarded of the bonus product. Should be not NULL if and only when the bonus product is not NULL|
 |[Bonus_Program_Id](#bonus_program_id)|`uniqueidentifier` `PK`||
 |[Bonus_Program_Name](#bonus_program_name)|`nvarchar(254)` `ML`|The name of the bonus program|
+|[Campaign_Id](#campaign_id)|`uniqueidentifier` |Тhe marketing campaign to which the current definition belongs.|
 |[Company_Location_Id](#company_location_id)|`uniqueidentifier` |When set, specifies that the sales document must be of the specified enterprise company location.|
 |[Condition_Customer_Filter_XML](#condition_customer_filter_xml)|`nvarchar(max)` |When not NULL, specifies that the bonus should be applied only to customers who meet the specified criteria. The criteria could include custom properties|
 |[Condition_Customer_Id](#condition_customer_id)|`uniqueidentifier` |When not NULL, specifies that the bonus should be applied only to the specified customer|
@@ -420,6 +421,43 @@ The name of the bonus program
 | - | - | - | - |
 |Equals|`NULL`|no|no|
 |Like|None|no|no|
+
+### Campaign_Id
+
+
+Тhe marketing campaign to which the current definition belongs.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|Referenced Table|[Crm_Campaigns](Crm_Campaigns.md)|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Campaign_Id - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
 
 ### Company_Location_Id
 

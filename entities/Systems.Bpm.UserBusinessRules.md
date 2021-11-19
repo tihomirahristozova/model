@@ -10,8 +10,8 @@ Represents user-defined business rule. Entity: Sys_User_Business_Rules
 ## Default Visualization
 Default Display Text Format:  
 _{RepositoryName}_  
-Default Search Member:  
-__  
+Default Search Members:  
+_Code; RepositoryName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

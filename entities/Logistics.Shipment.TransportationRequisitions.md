@@ -11,7 +11,7 @@ Client requisition for transportation. Entity: Log_Transportation_Requisitions
 ## Default Visualization
 Default Display Text Format:  
 _{DocumentType.TypeName:T} {DocumentNo}_  
-Default Search Member:  
+Default Search Members:  
 _DocumentNo_  
 
 ## Aggregate

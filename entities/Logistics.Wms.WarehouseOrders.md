@@ -11,7 +11,7 @@ Contains order for internal warehouse operation or plan for execution of warehou
 ## Default Visualization
 Default Display Text Format:  
 _{DocumentType.TypeName:T} {DocumentNo}_  
-Default Search Member:  
+Default Search Members:  
 _DocumentNo_  
 
 ## Aggregate

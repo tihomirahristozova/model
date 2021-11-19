@@ -11,7 +11,7 @@ Transportation ordered to specific carrier or vehicle. Entity: Log_Transportatio
 ## Default Visualization
 Default Display Text Format:  
 _{DocumentType.TypeName:T} {DocumentNo}_  
-Default Search Member:  
+Default Search Members:  
 _DocumentNo_  
 
 ## Aggregate

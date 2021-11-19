@@ -84,8 +84,8 @@
 <h2 id="default-visualization">Default Visualization</h2>
 <p>Default Display Text Format:<br>
 <em>{AllowedValuesEntityName}</em><br>
-Default Search Member:<br>
-__</p>
+Default Search Members:<br>
+<em>Code; AllowedValuesEntityName</em></p>
 <h2 id="aggregate">Aggregate</h2>
 <p>An <a href="https://docs.erp.net/tech/advanced/concepts/aggregates.html">aggregate</a> is a cluster of domain objects that can be treated as a single unit.</p>
 <p>Aggregate Tree</p>
@@ -114,7 +114,7 @@ __</p>
 </tr>
 <tr>
 <td><a href="General.CustomProperties.html#allowedvaluesfilterxml">AllowedValuesFilterXML</a></td>
-<td>string (max) <strong>nullable</strong></td>
+<td>dataaccessfilter <strong>nullable</strong></td>
 <td>When not null specifies the filter to apply when extracting allowed values from entity.</td>
 </tr>
 <tr>
@@ -227,10 +227,9 @@ __</p>
 <em>Maximum Length</em>: <strong>64</strong></p>
 <h3 id="allowedvaluesfilterxml">AllowedValuesFilterXML</h3>
 <p>When not null specifies the filter to apply when extracting allowed values from entity.</p>
-<p><em>Type</em>: <strong>string (max) <strong>nullable</strong></strong><br>
+<p><em>Type</em>: <strong>dataaccessfilter <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Maximum Length</em>: <strong>2147483647</strong></p>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="code">Code</h3>
 <p>Unique property code. <code>Required</code> <code>Filter(multi eq;like)</code> <code>ORD</code></p>
 <p><em>Type</em>: <strong>string (40)</strong><br>

@@ -10,8 +10,8 @@ Contains templates for creating new projects. Entity: Prj_Templates
 ## Default Visualization
 Default Display Text Format:  
 _{ProjectTemplateName}_  
-Default Search Member:  
-__  
+Default Search Members:  
+_ProjectTemplateName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

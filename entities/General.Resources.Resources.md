@@ -10,8 +10,8 @@ Enterprise resources, categorized by groups. Entity: Gen_Resources
 ## Default Visualization
 Default Display Text Format:  
 _{Name:T}_  
-Default Search Member:  
-__  
+Default Search Members:  
+_Name_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

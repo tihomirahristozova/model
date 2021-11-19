@@ -10,8 +10,8 @@ The operations that are performed to produce the product. Entity: Prd_Work_Order
 ## Default Visualization
 Default Display Text Format:  
 _{WorkOrderItem.WorkOrder.EntityName}_  
-Default Search Member:  
-__  
+Default Search Members:  
+_WorkOrderItem.WorkOrder.EntityName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

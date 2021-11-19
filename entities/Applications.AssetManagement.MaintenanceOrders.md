@@ -11,7 +11,7 @@ Orders for maintenance. It is performed by a single service center, but can cont
 ## Default Visualization
 Default Display Text Format:  
 _{DocumentType.TypeName:T} {DocumentNo}_  
-Default Search Member:  
+Default Search Members:  
 _DocumentNo_  
 
 ## Aggregate

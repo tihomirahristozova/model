@@ -5,13 +5,13 @@ uid: Logistics.Wms.WarehouseZones
 
 **Namespace:** [Logistics.Wms](Logistics.Wms.md)  
 
-One zone within a warehouse. Each zone can have different rack structure and different temperature and other properties. Entity: Wms_Warehouse_Zones (Introduced in version 20.1)
+One zone within a warehouse. Each zone can have different rack structure and different temperature and other properties. Entity: Wms_Warehouse_Zones (Introduced in version 22.1.4.67)
 
 ## Default Visualization
 Default Display Text Format:  
 _{Name:T}_  
-Default Search Member:  
-__  
+Default Search Members:  
+_Code; Name_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

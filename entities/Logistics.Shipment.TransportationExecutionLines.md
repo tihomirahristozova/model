@@ -10,7 +10,7 @@ Contains details of executions of transportation order lines. Entity: Log_Transp
 ## Default Visualization
 Default Display Text Format:  
 _{LineNo}. {TransportationExecution.DocumentNo} {TransportationExecution.DocumentType.TypeName:T}_  
-Default Search Member:  
+Default Search Members:  
 _TransportationExecution.DocumentNo_  
 
 ## Aggregate

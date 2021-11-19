@@ -10,7 +10,7 @@ Duty rates are specified by the taxation and customs authorities. They are the b
 ## Default Visualization
 Default Display Text Format:  
 _{Id}: {ExciseProductId}_  
-Default Search Member:  
+Default Search Members:  
 __  
 
 ## Aggregate

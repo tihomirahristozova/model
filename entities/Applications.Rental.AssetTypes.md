@@ -10,8 +10,8 @@ Categorizes the rental assets in specific type categories. Entity: Rent_Asset_Ty
 ## Default Visualization
 Default Display Text Format:  
 _{RentalAssetTypeName}_  
-Default Search Member:  
-__  
+Default Search Members:  
+_RentalAssetTypeName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

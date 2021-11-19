@@ -10,8 +10,8 @@ List of functions that a specific resource is able to perform. Entity: Prd_Resou
 ## Default Visualization
 Default Display Text Format:  
 _{Resource.Name}_  
-Default Search Member:  
-__  
+Default Search Members:  
+_Resource.Name_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

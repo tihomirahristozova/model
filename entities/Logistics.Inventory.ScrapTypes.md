@@ -10,7 +10,7 @@ Types of scrap. Used in store transactions to categorize scrap, when it occurs. 
 ## Default Visualization
 Default Display Text Format:  
 _{Id}: {Description}_  
-Default Search Member:  
+Default Search Members:  
 __  
 
 ## Aggregate

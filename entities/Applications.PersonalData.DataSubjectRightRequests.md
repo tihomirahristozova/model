@@ -10,7 +10,7 @@ Contains user requests for application of user rights. Entity: Pdm_Data_Subject_
 ## Default Visualization
 Default Display Text Format:  
 _{Id}: {EnterpriseCompanyId}_  
-Default Search Member:  
+Default Search Members:  
 __  
 
 ## Aggregate

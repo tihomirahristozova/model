@@ -10,8 +10,8 @@ Represents an action within a business rule. Entity: Sys_User_Business_Rule_Acti
 ## Default Visualization
 Default Display Text Format:  
 _{UserBusinessRule.RepositoryName}_  
-Default Search Member:  
-__  
+Default Search Members:  
+_UserBusinessRule.RepositoryName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

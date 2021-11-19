@@ -10,8 +10,8 @@ Contains capacity of workgroup resources available for production. Entity: Prd_C
 ## Default Visualization
 Default Display Text Format:  
 _{WorkgroupResource.Workgroup.Name}_  
-Default Search Member:  
-__  
+Default Search Members:  
+_WorkgroupResource.Workgroup.Name_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

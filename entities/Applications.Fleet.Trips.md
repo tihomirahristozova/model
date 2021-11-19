@@ -11,7 +11,7 @@ Represents actual trip made by the vehicles. Entity: Fleet_Trips
 ## Default Visualization
 Default Display Text Format:  
 _{DocumentType.TypeName:T} {DocumentNo}_  
-Default Search Member:  
+Default Search Members:  
 _DocumentNo_  
 
 ## Aggregate

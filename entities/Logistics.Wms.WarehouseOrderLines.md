@@ -10,7 +10,7 @@ A planned task (operation) in a warehouse order. Entity: Wms_Warehouse_Order_Lin
 ## Default Visualization
 Default Display Text Format:  
 _{LineNo}. {WarehouseOrder.DocumentNo} {WarehouseOrder.DocumentType.TypeName:T}_  
-Default Search Member:  
+Default Search Members:  
 _WarehouseOrder.DocumentNo_  
 
 ## Aggregate

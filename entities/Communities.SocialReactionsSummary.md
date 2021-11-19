@@ -10,7 +10,7 @@ Summary with the social reactions per comment and dataobject. Entity: Cmm_Social
 ## Default Visualization
 Default Display Text Format:  
 _{DataObjectId}: {SocialCommentId}_  
-Default Search Member:  
+Default Search Members:  
 __  
 
 ## Aggregate

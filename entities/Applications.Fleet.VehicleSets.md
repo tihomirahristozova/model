@@ -10,8 +10,8 @@ Represents sets of vehicles, which can travel together. Entity: Fleet_Vehicle_Se
 ## Default Visualization
 Default Display Text Format:  
 _{Name:T}_  
-Default Search Member:  
-__  
+Default Search Members:  
+_Name_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

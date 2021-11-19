@@ -10,7 +10,7 @@ Forecast items form demand in MRP calculations. Entity: Crm_Forecast_Items
 ## Default Visualization
 Default Display Text Format:  
 _{Id}: {QuantityValue}_  
-Default Search Member:  
+Default Search Members:  
 __  
 
 ## Aggregate

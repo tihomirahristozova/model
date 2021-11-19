@@ -10,7 +10,7 @@ A single notification of a user. Entity: Cmm_Notifications (Introduced in versio
 ## Default Visualization
 Default Display Text Format:  
 _{Id}: {UserId}_  
-Default Search Member:  
+Default Search Members:  
 __  
 
 ## Aggregate

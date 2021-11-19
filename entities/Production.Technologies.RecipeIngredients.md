@@ -10,8 +10,8 @@ Contains the materials of a recipe that make up the product. Entity: Prd_Recipe_
 ## Default Visualization
 Default Display Text Format:  
 _{Recipe.Name}_  
-Default Search Member:  
-__  
+Default Search Members:  
+_Recipe.Name_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

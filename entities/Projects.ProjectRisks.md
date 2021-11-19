@@ -10,8 +10,8 @@ Contains risks, associated to projects. Entity: Prj_Project_Risks
 ## Default Visualization
 Default Display Text Format:  
 _{RiskName}_  
-Default Search Member:  
-__  
+Default Search Members:  
+_RiskName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

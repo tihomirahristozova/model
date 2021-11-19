@@ -10,8 +10,8 @@ Contains scheduled operations usage of the resources. Entity: Prd_Load
 ## Default Visualization
 Default Display Text Format:  
 _{WorkOrderItemOperation.WorkOrderItem.WorkOrder.EntityName}_  
-Default Search Member:  
-__  
+Default Search Members:  
+_WorkOrderItemOperation.WorkOrderItem.WorkOrder.EntityName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

@@ -10,8 +10,8 @@ Contains the details and problem symptoms for each object, which requires servic
 ## Default Visualization
 Default Display Text Format:  
 _{ServiceOrder.EntityName}_  
-Default Search Member:  
-__  
+Default Search Members:  
+_ServiceOrder.EntityName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

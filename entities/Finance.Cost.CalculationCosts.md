@@ -10,8 +10,8 @@ Contains the calculated costs allocated to the different Cost Types. Entity: Cos
 ## Default Visualization
 Default Display Text Format:  
 _{Calculation.EntityName}_  
-Default Search Member:  
-__  
+Default Search Members:  
+_Calculation.EntityName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

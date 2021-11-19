@@ -84,8 +84,8 @@
 <h2 id="default-visualization">Default Visualization</h2>
 <p>Default Display Text Format:<br>
 <em>{Name}</em><br>
-Default Search Member:<br>
-__</p>
+Default Search Members:<br>
+<em>Code; Name</em></p>
 <h2 id="aggregate">Aggregate</h2>
 <p>An <a href="https://docs.erp.net/tech/advanced/concepts/aggregates.html">aggregate</a> is a cluster of domain objects that can be treated as a single unit.</p>
 <p>Aggregate Tree</p>
@@ -163,6 +163,11 @@ __</p>
 </tr>
 </thead>
 <tbody>
+<tr>
+<td><a href="Crm.PromotionalPackages.html#campaign">Campaign</a></td>
+<td><a href="Crm.Marketing.Campaigns.html">Campaigns</a> (nullable)</td>
+<td>Тhe marketing campaign to which the current definition belongs. <code>Filter(multi eq)</code> <code>Introduced in version 22.1.4.67</code></td>
+</tr>
 <tr>
 <td><a href="Crm.PromotionalPackages.html#enterprisecompany">EnterpriseCompany</a></td>
 <td><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a> (nullable)</td>
@@ -269,6 +274,10 @@ __</p>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
+<h3 id="campaign">Campaign</h3>
+<p>Тhe marketing campaign to which the current definition belongs. <code>Filter(multi eq)</code> <code>Introduced in version 22.1.4.67</code></p>
+<p><em>Type</em>: <strong><a href="Crm.Marketing.Campaigns.html">Campaigns</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="enterprisecompany">EnterpriseCompany</h3>
 <p>When not null, indicates that the package is valid only for the specified enterprise company. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a> (nullable)</strong><br>

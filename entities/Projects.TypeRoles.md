@@ -10,8 +10,8 @@ Contains the roles of the participants of each project type. Entity: Prj_Type_Ro
 ## Default Visualization
 Default Display Text Format:  
 _{RoleName}_  
-Default Search Member:  
-__  
+Default Search Members:  
+_RoleName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

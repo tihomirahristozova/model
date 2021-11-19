@@ -10,8 +10,8 @@ Types of logistic units, like EU-PALLET, 40x40 pallet, ISO container, etc. Entit
 ## Default Visualization
 Default Display Text Format:  
 _{Name:T}_  
-Default Search Member:  
-__  
+Default Search Members:  
+_Code; Name_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

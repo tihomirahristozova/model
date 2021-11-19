@@ -10,7 +10,7 @@ Contains alerts, specific to one vehicle. Alerts are created based on many sourc
 ## Default Visualization
 Default Display Text Format:  
 _{Id}: {VehicleId}_  
-Default Search Member:  
+Default Search Members:  
 __  
 
 ## Aggregate

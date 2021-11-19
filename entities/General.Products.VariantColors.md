@@ -10,8 +10,8 @@ Contains the different colors, which can be assigned to product variants. Entity
 ## Default Visualization
 Default Display Text Format:  
 _{Name:T}_  
-Default Search Member:  
-__  
+Default Search Members:  
+_Code; Name_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

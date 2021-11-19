@@ -10,8 +10,8 @@ Represents named hierarchy levels within a cost calculation. The hierarchy level
 ## Default Visualization
 Default Display Text Format:  
 _{LevelName}_  
-Default Search Member:  
-__  
+Default Search Members:  
+_LevelName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

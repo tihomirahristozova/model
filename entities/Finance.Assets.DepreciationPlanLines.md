@@ -10,7 +10,7 @@ Each record contains one depreciation plan for one valuation model of one asset.
 ## Default Visualization
 Default Display Text Format:  
 _{LineNo}. {DepreciationPlan.DocumentNo} {DepreciationPlan.DocumentType.TypeName:T}_  
-Default Search Member:  
+Default Search Members:  
 _DepreciationPlan.DocumentNo_  
 
 ## Aggregate

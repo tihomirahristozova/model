@@ -10,8 +10,8 @@ Contains exchange rate for a currency against the main currency of currency dire
 ## Default Visualization
 Default Display Text Format:  
 _{CurrencyDirectory.EntityName}_  
-Default Search Member:  
-__  
+Default Search Members:  
+_CurrencyDirectory.EntityName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

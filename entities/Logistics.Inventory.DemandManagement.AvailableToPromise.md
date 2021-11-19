@@ -10,7 +10,7 @@ Quantities available to promise for the different date periods. Also contains th
 ## Default Visualization
 Default Display Text Format:  
 _{ATPBaseValue}: {CurrentAvailabilityBaseValue}_  
-Default Search Member:  
+Default Search Members:  
 __  
 
 ## Aggregate

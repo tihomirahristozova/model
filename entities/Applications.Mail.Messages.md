@@ -10,8 +10,8 @@ Represents email messages. Entity: Mail_Messages
 ## Default Visualization
 Default Display Text Format:  
 _{MailBoxFolder.FolderName:T}_  
-Default Search Member:  
-__  
+Default Search Members:  
+_MailBoxFolder.FolderName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

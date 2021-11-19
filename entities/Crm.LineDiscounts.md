@@ -10,7 +10,7 @@ Discount policies for sales documents. Entity: Crm_Line_Discounts
 ## Default Visualization
 Default Display Text Format:  
 _{Id}: {MaxQuantityValue}_  
-Default Search Member:  
+Default Search Members:  
 __  
 
 ## Aggregate
@@ -36,6 +36,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [Campaign](Crm.LineDiscounts.md#campaign) | [Campaigns](Crm.Marketing.Campaigns.md) (nullable) | Тhe marketing campaign to which the current definition belongs. `Filter(multi eq)` `Introduced in version 22.1.4.67` |
 | [Customer](Crm.LineDiscounts.md#customer) | [Customers](Crm.Customers.md) (nullable) | Apply the discount only if this is the customer. `Filter(multi eq)` |
 | [CustomerType](Crm.LineDiscounts.md#customertype) | [CustomerTypes](Crm.CustomerTypes.md) (nullable) | Apply the discount only if the customer is of this customer type. `Filter(multi eq)` |
 | [DistributionChannel](Crm.LineDiscounts.md#distributionchannel) | [DistributionChannels](Crm.Marketing.DistributionChannels.md) (nullable) | Apply the discount only when the sales document is on the specified channel. `Filter(multi eq)` |
@@ -128,6 +129,13 @@ _Supports Order By_: **False**
 
 
 ## Reference Details
+
+### Campaign
+
+Тhe marketing campaign to which the current definition belongs. `Filter(multi eq)` `Introduced in version 22.1.4.67`
+
+_Type_: **[Campaigns](Crm.Marketing.Campaigns.md) (nullable)**  
+_Supported Filters_: **Equals, EqualsIn**  
 
 ### Customer
 

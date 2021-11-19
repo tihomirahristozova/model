@@ -10,7 +10,7 @@ One line in a client requisition for transportation. Different lines usually rep
 ## Default Visualization
 Default Display Text Format:  
 _{LineNo}. {TransportationRequisition.DocumentNo} {TransportationRequisition.DocumentType.TypeName:T}_  
-Default Search Member:  
+Default Search Members:  
 _TransportationRequisition.DocumentNo_  
 
 ## Aggregate

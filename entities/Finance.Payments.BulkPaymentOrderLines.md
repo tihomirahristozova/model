@@ -10,8 +10,8 @@ Bulk payment order document line. Each line usually creates one payment order. E
 ## Default Visualization
 Default Display Text Format:  
 _{BulkPaymentOrder.EntityName}_  
-Default Search Member:  
-__  
+Default Search Members:  
+_BulkPaymentOrder.EntityName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

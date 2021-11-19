@@ -10,8 +10,8 @@ Asset value transaction lines. Each line changes the values of one asset in one 
 ## Default Visualization
 Default Display Text Format:  
 _{AssetTransaction.EntityName}_  
-Default Search Member:  
-__  
+Default Search Members:  
+_AssetTransaction.EntityName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

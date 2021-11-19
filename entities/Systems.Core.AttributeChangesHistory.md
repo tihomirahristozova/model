@@ -10,7 +10,7 @@ Each entry represents an entity attribute change with previous and new value. En
 ## Default Visualization
 Default Display Text Format:  
 _{RepositoryName}: {EntityItemId}_  
-Default Search Member:  
+Default Search Members:  
 __  
 
 ## Aggregate

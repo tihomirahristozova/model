@@ -10,8 +10,8 @@ Contains convertion ratios between the supported measument categories for each p
 ## Default Visualization
 Default Display Text Format:  
 _{Product.Name:T}_  
-Default Search Member:  
-__  
+Default Search Members:  
+_Product.Name_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

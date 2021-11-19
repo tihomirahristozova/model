@@ -10,8 +10,8 @@ List of external applications. Used to run external applications. Entity: Sys_Ex
 ## Default Visualization
 Default Display Text Format:  
 _{EntityName}_  
-Default Search Member:  
-__  
+Default Search Members:  
+_EntityName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

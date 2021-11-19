@@ -11,7 +11,7 @@ Offers (quotes) for sales of products. Can contain variants and choice groups. T
 ## Default Visualization
 Default Display Text Format:  
 _{DocumentType.TypeName:T} {DocumentNo}_  
-Default Search Member:  
+Default Search Members:  
 _DocumentNo_  
 
 ## Aggregate

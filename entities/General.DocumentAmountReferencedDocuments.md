@@ -10,8 +10,8 @@ Contains the documents which are referenced by each document amount. Entity: Gen
 ## Default Visualization
 Default Display Text Format:  
 _{DocumentAmount.Document.EntityName}_  
-Default Search Member:  
-__  
+Default Search Members:  
+_DocumentAmount.Document.EntityName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

@@ -10,7 +10,7 @@ Specifies additional options for document routes, generating Rental Transactions
 ## Default Visualization
 Default Display Text Format:  
 _{Id}: {RouteId}_  
-Default Search Member:  
+Default Search Members:  
 __  
 
 ## Aggregate

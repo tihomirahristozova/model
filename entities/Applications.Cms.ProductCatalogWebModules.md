@@ -11,8 +11,8 @@ A web module, which presents a whole product catalog. Entity: Cms_Product_Catalo
 ## Default Visualization
 Default Display Text Format:  
 _{Name}_  
-Default Search Member:  
-__  
+Default Search Members:  
+_Name_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

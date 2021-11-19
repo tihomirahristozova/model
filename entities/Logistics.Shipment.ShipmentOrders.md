@@ -11,7 +11,7 @@ Represnts order for shipment of sales orders to customers. Entity: Log_Shipment_
 ## Default Visualization
 Default Display Text Format:  
 _{DocumentType.TypeName:T} {DocumentNo}_  
-Default Search Member:  
+Default Search Members:  
 _DocumentNo_  
 
 ## Aggregate

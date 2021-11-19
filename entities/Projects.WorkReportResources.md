@@ -10,8 +10,8 @@ Each record contains usage of resource, reported by the related Work Report. Ent
 ## Default Visualization
 Default Display Text Format:  
 _{WorkReport.EntityName}_  
-Default Search Member:  
-__  
+Default Search Members:  
+_WorkReport.EntityName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

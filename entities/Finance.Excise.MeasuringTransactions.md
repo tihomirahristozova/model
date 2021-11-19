@@ -10,8 +10,8 @@ Transaction of product input or output, measured with specialized measuring devi
 ## Default Visualization
 Default Display Text Format:  
 _{MeasuringDeviceCode}_  
-Default Search Member:  
-__  
+Default Search Members:  
+_MeasuringDeviceCode_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

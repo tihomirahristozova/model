@@ -10,8 +10,8 @@ Bonus programs allow automatic adding of new line with bonus product or automati
 ## Default Visualization
 Default Display Text Format:  
 _{Name:T}_  
-Default Search Member:  
-__  
+Default Search Members:  
+_Name_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -50,6 +50,7 @@ Aggregate Tree
 | [BonusDocumentAmountType](Crm.Marketing.BonusPrograms.md#bonusdocumentamounttype) | [DocumentAmountTypes](General.DocumentAmountTypes.md) (nullable) | When not null specifies that a document amount should be added to the order when the bonus conditions are met. null means that the bonus reward is not a document amount. `Filter(multi eq)` |
 | [BonusProduct](Crm.Marketing.BonusPrograms.md#bonusproduct) | [Products](General.Products.Products.md) (nullable) | The product that is rewarded if the bonus conditions are met. null means that the bonus reward is not product. `Filter(multi eq)` |
 | [BonusProductQuantityUnit](Crm.Marketing.BonusPrograms.md#bonusproductquantityunit) | [MeasurementUnits](General.MeasurementUnits.md) (nullable) | The measurement unit of the quantity rewarded of the bonus product. Should be not null if and only when the bonus product is not null. `Filter(multi eq)` |
+| [Campaign](Crm.Marketing.BonusPrograms.md#campaign) | [Campaigns](Crm.Marketing.Campaigns.md) (nullable) | Тhe marketing campaign to which the current definition belongs. `Filter(multi eq)` `Introduced in version 22.1.4.67` |
 | [CompanyLocation](Crm.Marketing.BonusPrograms.md#companylocation) | [CompanyLocations](General.Contacts.CompanyLocations.md) (nullable) | When set, specifies that the sales document must be of the specified enterprise company location. `Filter(multi eq)` |
 | [ConditionCustomer](Crm.Marketing.BonusPrograms.md#conditioncustomer) | [Customers](Crm.Customers.md) (nullable) | When not null, specifies that the bonus should be applied only to the specified customer. `Filter(multi eq)` |
 | [ConditionDistribution<br />Channel](Crm.Marketing.BonusPrograms.md#conditiondistributionchannel) | [DistributionChannels](Crm.Marketing.DistributionChannels.md) (nullable) | When not null, specifies that the bonus should be applied only when the specified channel is used. `Filter(multi eq)` |
@@ -258,6 +259,13 @@ _Supported Filters_: **Equals, EqualsIn**
 The measurement unit of the quantity rewarded of the bonus product. Should be not null if and only when the bonus product is not null. `Filter(multi eq)`
 
 _Type_: **[MeasurementUnits](General.MeasurementUnits.md) (nullable)**  
+_Supported Filters_: **Equals, EqualsIn**  
+
+### Campaign
+
+Тhe marketing campaign to which the current definition belongs. `Filter(multi eq)` `Introduced in version 22.1.4.67`
+
+_Type_: **[Campaigns](Crm.Marketing.Campaigns.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### CompanyLocation

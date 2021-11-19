@@ -10,8 +10,8 @@ Contains history of saved version of the managed objects. Entity: Sys_Object_Ver
 ## Default Visualization
 Default Display Text Format:  
 _{Object}_  
-Default Search Member:  
-__  
+Default Search Members:  
+_Object_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

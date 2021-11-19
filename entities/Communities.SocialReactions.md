@@ -10,7 +10,7 @@ Reaction of a user to any social comment to an object of the system. Entity: Cmm
 ## Default Visualization
 Default Display Text Format:  
 _{Id}: {DataObjectId}_  
-Default Search Member:  
+Default Search Members:  
 __  
 
 ## Aggregate
