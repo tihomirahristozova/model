@@ -370,6 +370,9 @@ references:
 - uid: Crm.Marketing.CompanySizeClasses
   name: Crm.Marketing.CompanySizeClasses Entity
   href: entities/Crm.Marketing.CompanySizeClasses.html
+- uid: Crm.Marketing.Competitors
+  name: Crm.Marketing.Competitors Entity
+  href: entities/Crm.Marketing.Competitors.html
 - uid: Crm.Marketing.DistributionChannels
   name: Crm.Marketing.DistributionChannels Entity
   href: entities/Crm.Marketing.DistributionChannels.html

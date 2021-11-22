@@ -11295,6 +11295,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "entities/Crm.Marketing.Competitors.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Crm.Marketing.Competitors.html",
+          "hash": "ew2ir59WoB6Xrs1b8UVnww=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "entities/Crm.Marketing.DistributionChannels.md",
       "output": {
         ".html": {
@@ -11395,7 +11407,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Crm.Marketing.html",
-          "hash": "Rem+IUYnE/vEfBcp2nrCRA=="
+          "hash": "IG6tSwhNbXBbvaRoqryjAQ=="
         }
       },
       "is_incremental": false,
@@ -16759,7 +16771,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/toc.html",
-          "hash": "2IY5Z6g7YDETIbpO3rRaJg=="
+          "hash": "16xCzCAyfhr5S8LBwNq0og=="
         }
       },
       "is_incremental": false,
@@ -18708,7 +18720,7 @@
       "output": {
         ".html": {
           "relative_path": "tables/Crm.html",
-          "hash": "1LJK5Ki6qZyLrEAx1x9mgA=="
+          "hash": "XEdhMSj33PDpg4tikjfF5A=="
         }
       },
       "is_incremental": false,
@@ -18769,6 +18781,18 @@
         ".html": {
           "relative_path": "tables/Crm_Company_Size_Classes.html",
           "hash": "jYWOIgRwH14pxpK8ORtlqA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tables/Crm_Competitors.md",
+      "output": {
+        ".html": {
+          "relative_path": "tables/Crm_Competitors.html",
+          "hash": "VyhpOhmlPWsmBFVOi/kgsQ=="
         }
       },
       "is_incremental": false,
@@ -24948,7 +24972,7 @@
       "output": {
         ".html": {
           "relative_path": "tables/index.html",
-          "hash": "TWkUaM3wJMXJUnAQjHRgUA=="
+          "hash": "TAjArKUsWI2IxyPpcCWW9Q=="
         }
       },
       "is_incremental": false,
@@ -24960,7 +24984,7 @@
       "output": {
         ".html": {
           "relative_path": "tables/toc.html",
-          "hash": "VsXueUDctSir+KTVyoFhOw=="
+          "hash": "P1pCcOQrc0OpUKtIu8o/qg=="
         }
       },
       "is_incremental": false,

@@ -8,6 +8,7 @@ uid: Crm.Marketing
 - [BonusPrograms](Crm.Marketing.BonusPrograms.md)  
 - [Campaigns](Crm.Marketing.Campaigns.md)  
 - [CompanySizeClasses](Crm.Marketing.CompanySizeClasses.md)  
+- [Competitors](Crm.Marketing.Competitors.md)  
 - [DistributionChannels](Crm.Marketing.DistributionChannels.md)  
 - [ForecastItems](Crm.Marketing.ForecastItems.md)  
 - [Industries](Crm.Marketing.Industries.md)  

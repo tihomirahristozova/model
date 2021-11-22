@@ -147,6 +147,7 @@
 * [Crm_Bonus_Programs](Crm_Bonus_Programs.md)
 * [Crm_Campaigns](Crm_Campaigns.md)
 * [Crm_Company_Size_Classes](Crm_Company_Size_Classes.md)
+* [Crm_Competitors](Crm_Competitors.md)
 * [Crm_Customer_Product_Property_Values](Crm_Customer_Product_Property_Values.md)
 * [Crm_Customer_Products](Crm_Customer_Products.md)
 * [Crm_Customer_Property_Values](Crm_Customer_Property_Values.md)
