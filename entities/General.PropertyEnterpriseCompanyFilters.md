@@ -9,9 +9,9 @@ Provides a way to apply different filtering of the property allowed values for t
 
 ## Default Visualization
 Default Display Text Format:  
-_{Property.AllowedValuesEntityName}_  
+_{Property.Name:T}_  
 Default Search Members:  
-_Property.AllowedValuesEntityName_  
+_Property.Name_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

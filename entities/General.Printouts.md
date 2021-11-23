@@ -9,9 +9,9 @@ Contains data about binding of printout layouts to specific user-defined documen
 
 ## Default Visualization
 Default Display Text Format:  
-_{ApplicationName}_  
+_{Name}_  
 Default Search Members:  
-_ApplicationName_  
+_Name_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

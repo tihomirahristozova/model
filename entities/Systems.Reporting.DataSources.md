@@ -9,9 +9,9 @@ Contains user-defined data sources, which retrieve rows from multiple queries. E
 
 ## Default Visualization
 Default Display Text Format:  
-_{BaseQueryName}_  
+_{Name}_  
 Default Search Members:  
-_BaseQueryName_  
+_Name_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

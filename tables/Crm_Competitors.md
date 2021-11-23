@@ -11,7 +11,7 @@ Competitors to our marketing solutions. Entity: Crm_Competitors (Introduced in v
 
 | Name | Type | Description |
 | - | - | --- |
-|[Competitor_Id](#competitor_id)|`uniqueidentifier` `PK`|Competitors to our marketing solutions.|
+|[Competitor_Id](#competitor_id)|`uniqueidentifier` `PK`|Competitor to our marketing solutions.|
 |[Enterprise_Company_Id](#enterprise_company_id)|`uniqueidentifier` |Our enterprise company, for which we are defining the competitor. NULL means that the competitor is defined for all the companies in the ERP instance.|
 |[Name](#name)|`nvarchar(254)` `ML`||
 |[Notes](#notes)|`nvarchar(max)` ||
@@ -23,7 +23,7 @@ Competitors to our marketing solutions. Entity: Crm_Competitors (Introduced in v
 ### Competitor_Id
 
 
-Competitors to our marketing solutions.
+Competitor to our marketing solutions.
 
 | Property | Value |
 | - | - |
@@ -201,7 +201,7 @@ When not null, specifies the party of the competitor.
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|5|
+|Order|2147483647|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|

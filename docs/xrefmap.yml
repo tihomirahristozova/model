@@ -373,6 +373,9 @@ references:
 - uid: Crm.Marketing.Competitors
   name: Crm.Marketing.Competitors Entity
   href: entities/Crm.Marketing.Competitors.html
+- uid: Crm.Marketing.CompetitorSolutions
+  name: Crm.Marketing.CompetitorSolutions Entity
+  href: entities/Crm.Marketing.CompetitorSolutions.html
 - uid: Crm.Marketing.DistributionChannels
   name: Crm.Marketing.DistributionChannels Entity
   href: entities/Crm.Marketing.DistributionChannels.html

@@ -9,9 +9,9 @@ User-defined properties, which can supplement the system properties of almost al
 
 ## Default Visualization
 Default Display Text Format:  
-_{AllowedValuesEntityName}_  
+_{Name:T}_  
 Default Search Members:  
-_Code; AllowedValuesEntityName_  
+_Code; Name_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
