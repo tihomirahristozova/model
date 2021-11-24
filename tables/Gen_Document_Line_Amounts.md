@@ -5,7 +5,7 @@
 
 Entity: [General.DocumentLineAmounts](~/entities/General.DocumentLineAmounts.md)
 
-Specifies user-defined distribution pattern of additonal amount for specific document. Entity: Gen_Document_Line_Amounts
+Specifies user-defined input percentages by lines for the document amounts. Entity: Gen_Document_Line_Amounts
 
 ## Owner Tables Hierarchy
 

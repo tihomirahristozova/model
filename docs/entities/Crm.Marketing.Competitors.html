@@ -90,7 +90,11 @@ Default Search Members:<br>
 <p>An <a href="https://docs.erp.net/tech/advanced/concepts/aggregates.html">aggregate</a> is a cluster of domain objects that can be treated as a single unit.</p>
 <p>Aggregate Tree</p>
 <ul>
-<li><a href="Crm.Marketing.Competitors.html">Crm.Marketing.Competitors</a></li>
+<li><a href="Crm.Marketing.Competitors.html">Crm.Marketing.Competitors</a>
+<ul>
+<li><a href="Crm.Marketing.CompetitorSolutions.html">Crm.Marketing.CompetitorSolutions</a></li>
+</ul>
+</li>
 </ul>
 <h2 id="attributes">Attributes</h2>
 <table>
@@ -138,6 +142,23 @@ Default Search Members:<br>
 <td><a href="Crm.Marketing.Competitors.html#party">Party</a></td>
 <td><a href="General.Contacts.Parties.html">Parties</a> (nullable)</td>
 <td>When not null, specifies the party of the competitor. <code>Filter(multi eq)</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="child-collections">Child Collections</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Solutions</td>
+<td><a href="Crm.Marketing.CompetitorSolutions.html">CompetitorSolutions</a></td>
+<td>List of <code>CompetitorSolution</code>(Crm.Marketing.CompetitorSolutions.md) child objects, based on the <code>Crm.Marketing.CompetitorSolution.Competitor</code>(Crm.Marketing.CompetitorSolutions.md#competitor) back reference</td>
 </tr>
 </tbody>
 </table>

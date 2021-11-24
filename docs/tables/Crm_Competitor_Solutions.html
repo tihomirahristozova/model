@@ -82,6 +82,10 @@
 <h2 id="entity">Entity</h2>
 <p>Entity: <a href="../entities/Crm.Marketing.CompetitorSolutions.html">Crm.Marketing.CompetitorSolutions</a></p>
 <p>The solutions offered by a competitor. Entity: Crm_Competitor_Solutions (Introduced in version 22.1.4.70)</p>
+<h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
+<ul>
+<li><a href="Crm_Competitors.html">Crm_Competitors</a></li>
+</ul>
 <h2 id="summary">Summary</h2>
 <table>
 <thead>
@@ -103,9 +107,9 @@
 <td>Competitor to our marketing solutions.</td>
 </tr>
 <tr>
-<td><a href="#competitor_solutions_id">Competitor_Solutions_Id</a></td>
+<td><a href="#competitor_solution_id">Competitor_Solution_Id</a></td>
 <td><code>uniqueidentifier</code> <code>PK</code></td>
-<td>The solution offered by a competitor.</td>
+<td>The solutions offered by a competitor.</td>
 </tr>
 <tr>
 <td><a href="#industry_id">Industry_Id</a></td>
@@ -302,7 +306,7 @@
 </tr>
 <tr>
 <td>Ownership Reference</td>
-<td>no</td>
+<td>yes</td>
 </tr>
 <tr>
 <td>Pasword</td>
@@ -319,6 +323,10 @@
 <tr>
 <td>Readonly</td>
 <td>no</td>
+</tr>
+<tr>
+<td>Referenced Table</td>
+<td><a href="Crm_Competitors.html">Crm_Competitors</a></td>
 </tr>
 <tr>
 <td>RTF</td>
@@ -377,8 +385,8 @@
 </tr>
 </tbody>
 </table>
-<h3 id="competitor_solutions_id">Competitor_Solutions_Id</h3>
-<p>The solution offered by a competitor.</p>
+<h3 id="competitor_solution_id">Competitor_Solution_Id</h3>
+<p>The solutions offered by a competitor.</p>
 <table>
 <thead>
 <tr>
@@ -477,7 +485,7 @@
 </tr>
 </tbody>
 </table>
-<h4 id="competitor_solutions_id---supported-filters">Competitor_Solutions_Id - Supported Filters</h4>
+<h4 id="competitor_solution_id---supported-filters">Competitor_Solution_Id - Supported Filters</h4>
 <table>
 <thead>
 <tr>
@@ -747,6 +755,10 @@
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>Attributes</td>
+<td>IsLongString</td>
+</tr>
 <tr>
 <td>Auto Complete</td>
 <td>no</td>

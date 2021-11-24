@@ -7,13 +7,17 @@ Entity: [Crm.Marketing.CompetitorSolutions](~/entities/Crm.Marketing.CompetitorS
 
 The solutions offered by a competitor. Entity: Crm_Competitor_Solutions (Introduced in version 22.1.4.70)
 
+## Owner Tables Hierarchy
+
+* [Crm_Competitors](Crm_Competitors.md)
+
 ## Summary
 
 | Name | Type | Description |
 | - | - | --- |
 |[Company_Size_Class_Id](#company_size_class_id)|`uniqueidentifier` |When not null, specifies the company size, for which the solution is targeted.|
 |[Competitor_Id](#competitor_id)|`uniqueidentifier` |Competitor to our marketing solutions.|
-|[Competitor_Solutions_Id](#competitor_solutions_id)|`uniqueidentifier` `PK`|The solution offered by a competitor.|
+|[Competitor_Solution_Id](#competitor_solution_id)|`uniqueidentifier` `PK`|The solutions offered by a competitor.|
 |[Industry_Id](#industry_id)|`uniqueidentifier` |When not null, specifies the industry, for which the solution is targeted.|
 |[Name](#name)|`nvarchar(254)` `ML`|Multi-language string|
 |[Notes](#notes)|`nvarchar(max)` ||
@@ -74,11 +78,12 @@ Competitor to our marketing solutions.
 |Is Entity Name|no|
 |Max Length|-1|
 |Order|1|
-|Ownership Reference|no|
+|Ownership Reference|yes|
 |Pasword|no|
 |Picture|no|
 |Primary Key|no|
 |Readonly|no|
+|Referenced Table|[Crm_Competitors](Crm_Competitors.md)|
 |RTF|no|
 |Sortable|no|
 |Summary Type|None|
@@ -95,10 +100,10 @@ Competitor to our marketing solutions.
 | - | - | - | - |
 |Equals|`NULL`|no|no|
 
-### Competitor_Solutions_Id
+### Competitor_Solution_Id
 
 
-The solution offered by a competitor.
+The solutions offered by a competitor.
 
 | Property | Value |
 | - | - |
@@ -125,7 +130,7 @@ The solution offered by a competitor.
 |User Login|no|
 |Visible|no|
 
-#### Competitor_Solutions_Id - Supported Filters
+#### Competitor_Solution_Id - Supported Filters
 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
@@ -208,6 +213,7 @@ Multi-language string
 
 | Property | Value |
 | - | - |
+|Attributes|IsLongString|
 |Auto Complete|no|
 |Data Filter|no|
 |Default Value|None|

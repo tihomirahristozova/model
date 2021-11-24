@@ -88,10 +88,10 @@ Default Search Members:<br>
 <em>Name</em></p>
 <h2 id="aggregate">Aggregate</h2>
 <p>An <a href="https://docs.erp.net/tech/advanced/concepts/aggregates.html">aggregate</a> is a cluster of domain objects that can be treated as a single unit.</p>
-<p>Aggregate Tree</p>
-<ul>
-<li><a href="Crm.Marketing.CompetitorSolutions.html">Crm.Marketing.CompetitorSolutions</a></li>
-</ul>
+<p>Aggregate Parent:<br>
+<a href="Crm.Marketing.Competitors.html">Crm.Marketing.Competitors</a><br>
+Aggregate Root:<br>
+<a href="Crm.Marketing.Competitors.html">Crm.Marketing.Competitors</a></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -102,11 +102,6 @@ Default Search Members:<br>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td><a href="Crm.Marketing.CompetitorSolutions.html#competitorid">CompetitorId</a></td>
-<td>guid</td>
-<td>Competitor to our marketing solutions. <code>Required</code> <code>Filter(multi eq)</code></td>
-</tr>
 <tr>
 <td><a href="Crm.Marketing.CompetitorSolutions.html#id">Id</a></td>
 <td>guid</td>
@@ -140,6 +135,11 @@ Default Search Members:<br>
 <td>When not null, specifies the company size, for which the solution is targeted. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
+<td><a href="Crm.Marketing.CompetitorSolutions.html#competitor">Competitor</a></td>
+<td><a href="Crm.Marketing.Competitors.html">Competitors</a></td>
+<td>Competitor to our marketing solutions. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
+</tr>
+<tr>
 <td><a href="Crm.Marketing.CompetitorSolutions.html#industry">Industry</a></td>
 <td><a href="Crm.Marketing.Industries.html">Industries</a> (nullable)</td>
 <td>When not null, specifies the industry, for which the solution is targeted. <code>Filter(multi eq)</code></td>
@@ -152,10 +152,6 @@ Default Search Members:<br>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
-<h3 id="competitorid">CompetitorId</h3>
-<p>Competitor to our marketing solutions. <code>Required</code> <code>Filter(multi eq)</code></p>
-<p><em>Type</em>: <strong>guid</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
@@ -177,6 +173,11 @@ Default Search Members:<br>
 <p>When not null, specifies the company size, for which the solution is targeted. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Crm.Marketing.CompanySizeClasses.html">CompanySizeClasses</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<h3 id="competitor">Competitor</h3>
+<p>Competitor to our marketing solutions. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
+<p><em>Type</em>: <strong><a href="Crm.Marketing.Competitors.html">Competitors</a></strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em><a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a></em>: <strong>True</strong></p>
 <h3 id="industry">Industry</h3>
 <p>When not null, specifies the industry, for which the solution is targeted. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Crm.Marketing.Industries.html">Industries</a> (nullable)</strong><br>

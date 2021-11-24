@@ -130,6 +130,7 @@ Our enterprise company, for which we are defining the competitor. NULL means tha
 
 | Property | Value |
 | - | - |
+|Attributes|IsLongString|
 |Auto Complete|no|
 |Data Filter|no|
 |Default Value|None|

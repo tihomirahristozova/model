@@ -18,6 +18,7 @@ An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a
 
 Aggregate Tree  
 * [Crm.Marketing.Competitors](Crm.Marketing.Competitors.md)  
+  * [Crm.Marketing.CompetitorSolutions](Crm.Marketing.CompetitorSolutions.md)  
 
 ## Attributes
 
@@ -33,6 +34,12 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [EnterpriseCompany](Crm.Marketing.Competitors.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | Our enterprise company, for which we are defining the competitor. null means that the competitor is defined for all the companies in the ERP instance. `Filter(multi eq)` |
 | [Party](Crm.Marketing.Competitors.md#party) | [Parties](General.Contacts.Parties.md) (nullable) | When not null, specifies the party of the competitor. `Filter(multi eq)` |
+
+## Child Collections
+
+| Name | Type | Description |
+| ---- | ---- | --- |
+| Solutions | [CompetitorSolutions](Crm.Marketing.CompetitorSolutions.md) | List of `CompetitorSolution`(Crm.Marketing.CompetitorSolutions.md) child objects, based on the `Crm.Marketing.CompetitorSolution.Competitor`(Crm.Marketing.CompetitorSolutions.md#competitor) back reference 
 
 
 ## Attribute Details
