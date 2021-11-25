@@ -338,6 +338,16 @@ Default Search Members:<br>
 <td>The sales person, responsible for the opportunity. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
+<td><a href="Crm.Presales.Deals.html#losttocompetitor">LostToCompetitor</a></td>
+<td><a href="Crm.Marketing.Competitors.html">Competitors</a> (nullable)</td>
+<td>When not null, specifies the competitor to which we lost the deal. <code>Filter(multi eq)</code> <code>Introduced in version 22.1.4.72</code></td>
+</tr>
+<tr>
+<td><a href="Crm.Presales.Deals.html#losttocompetitorsolution">LostToCompetitorSolution</a></td>
+<td><a href="Crm.Marketing.CompetitorSolutions.html">CompetitorSolutions</a> (nullable)</td>
+<td>When not null, specifies the competitor solution to which we lost the deal. <code>Filter(multi eq)</code> <code>Introduced in version 22.1.4.72</code></td>
+</tr>
+<tr>
 <td><a href="Crm.Presales.Deals.html#marketingsolution">MarketingSolution</a></td>
 <td><a href="Crm.Marketing.MarketingSolutions.html">MarketingSolutions</a> (nullable)</td>
 <td>The marketing solution, in which the potential client is interested. <code>Filter(multi eq)</code> <code>Introduced in version 22.1.4.42</code></td>
@@ -768,6 +778,14 @@ Enumeration of document system states<br>
 <h3 id="leadingsalesperson">LeadingSalesPerson</h3>
 <p>The sales person, responsible for the opportunity. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Crm.SalesPersons.html">SalesPersons</a></strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<h3 id="losttocompetitor">LostToCompetitor</h3>
+<p>When not null, specifies the competitor to which we lost the deal. <code>Filter(multi eq)</code> <code>Introduced in version 22.1.4.72</code></p>
+<p><em>Type</em>: <strong><a href="Crm.Marketing.Competitors.html">Competitors</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<h3 id="losttocompetitorsolution">LostToCompetitorSolution</h3>
+<p>When not null, specifies the competitor solution to which we lost the deal. <code>Filter(multi eq)</code> <code>Introduced in version 22.1.4.72</code></p>
+<p><em>Type</em>: <strong><a href="Crm.Marketing.CompetitorSolutions.html">CompetitorSolutions</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="marketingsolution">MarketingSolution</h3>
 <p>The marketing solution, in which the potential client is interested. <code>Filter(multi eq)</code> <code>Introduced in version 22.1.4.42</code></p>
