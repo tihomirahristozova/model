@@ -146,9 +146,9 @@ WarehouseRequisition.ManagedWarehouse = StoreOrder.Store.ManagedWarehouse
 
 WarehouseRequisition.RequisitionType = if( StoreOrder.MovementType = Receipt) 
 
-​                                  , then Transaction.RequisitionType = Inbound
+                                   , then Transaction.RequisitionType = Inbound
 
-​                                  , else Transaction.RequisitionType = Outbound
+                                   , else Transaction.RequisitionType = Outbound
 
 WarehouseRequisition.ExpectedDate = ISNULL(StoreOrder.PlannedReleaseDate, StoreOrder.DocumentDate)
 
@@ -225,8 +225,13 @@ The new Warehouse Requisition is saved then and only when there is at least one 
 </tbody>
 </table>
 <br>
-The lines of the new document are created based on the data in the Document Fulfillments table. 
-The table contains the information for the Fulfilled Part of quantities by Warehouse Requisitions that are already created.
+The lines of the new document are created based on the data of the Planned records in the Document Fulfillments table. 
+The table contains the information for the Fulfilled Part of quantities by the Warehouse Requisitions which have already been created.
+<blockquote>
+<p>[!Note:]
+Note that for the calculation of the Fulfilled Part are taken into account only the recods whoose FulfillmentType is Planned.</p>
+</blockquote>
+<br>
 <p><strong>The new Warehouse Requisition Line is created as follows:</strong></p>
 <pre><code>WarehouseRequisitionLine.LineNo = StoreOrderLine.LineNo
 
