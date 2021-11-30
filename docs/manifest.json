@@ -17192,11 +17192,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "reference/common-business-rules/master-detail-rules.md",
+      "source_relative_path": "reference/common-business-rules/master-detail.md",
       "output": {
         ".html": {
-          "relative_path": "reference/common-business-rules/master-detail-rules.html",
-          "hash": "1w74g+d2TaQrZnooHX9x5g=="
+          "relative_path": "reference/common-business-rules/master-detail.html",
+          "hash": "u7/2jFV3F2iuaJMqusZpkw=="
         }
       },
       "is_incremental": false,
@@ -17256,7 +17256,7 @@
       "output": {
         ".html": {
           "relative_path": "reference/toc.html",
-          "hash": "+MXsMN4h+PlWY2IRgFEkgg=="
+          "hash": "GmM7LoDpOlxueA+V3kWtXA=="
         }
       },
       "is_incremental": false,

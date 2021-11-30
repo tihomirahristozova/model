@@ -1360,6 +1360,9 @@ references:
 - uid: logistics-documents
   name: Logistics documents
   href: reference/common-business-rules/logistics-documents.html
+- uid: master-detail rules
+  name: Master/detail
+  href: reference/common-business-rules/master-detail.html
 - uid: Production
   name: Production Namespace
   href: entities/Production.html
