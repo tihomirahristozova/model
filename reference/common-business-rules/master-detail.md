@@ -1,4 +1,8 @@
-# Master - detail 
+---
+uid: master-detail rules
+---
+
+# Master/detail 
 
 When a document has identical fields in its header and lines, these fields are called master/detail attributes. They interact in a specific manner and share common principles and rules. 
 
