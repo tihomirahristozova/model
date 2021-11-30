@@ -162,10 +162,10 @@ WarehouseRequisition.ExpectedTime = null
 <pre><code>No Managed Warehouse is specified for store '{Store.StoreName}'.
 Please check if the store is correct and if the field 'Managed Warehouse' in its definition has a value.
 </code></pre>
-<blockquote>
-<p>[!Note:]
-The new Warehouse Requisition is saved then and only when there is at least one line in it.</p>
-</blockquote>
+<div class="NOTE">
+<h5>Note</h5>
+<p>The new Warehouse Requisition is saved then and only when there is at least one line in it.</p>
+</div>
 <h2 id="fulfillments">Fulfillments</h2>
 <table>
 <thead>
@@ -227,11 +227,11 @@ The new Warehouse Requisition is saved then and only when there is at least one 
 <br>
 The lines of the new document are created based on the data of the Planned records in the Document Fulfillments table. 
 The table contains the information for the Fulfilled Part of quantities by the Warehouse Requisitions which have already been created.
-<blockquote>
-<p>[!Note:]
-Note that for the calculation of the Fulfilled Part are taken into account only the recods whoose FulfillmentType is Planned.</p>
-</blockquote>
-<br>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Note that for the calculation of the Fulfilled Part are taken into account only the recods whoose FulfillmentType is Planned.</p>
+</div>
+<p><br><br></p>
 <p><strong>The new Warehouse Requisition Line is created as follows:</strong></p>
 <pre><code>WarehouseRequisitionLine.LineNo = StoreOrderLine.LineNo
 

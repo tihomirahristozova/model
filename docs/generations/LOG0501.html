@@ -214,11 +214,11 @@ WarehouseOrder.WarehouseWorker = NULL
 <br>
 The lines of the new document are created based on the data of the Planned records in the Document Fulfillments table. 
 The table contains the information for the Fulfilled Part of quantities by the Warehouse Oders which have already been created.
-<blockquote>
-<p>[!Note:]
-Note that for the calculation of the Fulfilled Part are taken into account only the recods whoose FulfillmentType is Planned.</p>
-</blockquote>
-<br>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Note that for the calculation of the Fulfilled Part are taken into account only the recods whoose FulfillmentType is Planned.</p>
+</div>
+<p><br><br></p>
 <p><strong>The new Warehouse Order Line is created as follows:</strong></p>
 <pre><code>WarehouseOrderLine.TaskType = If (WarehouseRequisition.RequisitionType = Inbound )
 
