@@ -7,7 +7,7 @@
 - name: Lots 
   href: ~/business-rules/R28170.md
 - name: Master/detail 
-  href: master-detail-rules.dm
+  href: master-detail-rules.md
 - name: Serial numbers 
   href: serial-numbers.md
 
