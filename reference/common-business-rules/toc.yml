@@ -6,7 +6,10 @@
   href: logistics-documents.md
 - name: Lots 
   href: ~/business-rules/R28170.md
+- name: Master/detail 
+  href: master-detail-rules.dm
 - name: Serial numbers 
   href: serial-numbers.md
+
 
 
