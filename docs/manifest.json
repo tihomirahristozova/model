@@ -17192,6 +17192,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "reference/common-business-rules/master-detail-rules.md",
+      "output": {
+        ".html": {
+          "relative_path": "reference/common-business-rules/master-detail-rules.html",
+          "hash": "pVcza7rvF4/hzB5dZ4SnUA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "reference/common-business-rules/serial-numbers.md",
       "output": {
         ".html": {
