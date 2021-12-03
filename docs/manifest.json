@@ -17152,6 +17152,18 @@
       "version": ""
     },
     {
+      "type": "Conceptual",
+      "source_relative_path": "reference/common-business-rules/code-validation-strict.md",
+      "output": {
+        ".html": {
+          "relative_path": "reference/common-business-rules/code-validation-strict.html",
+          "hash": "w/yjh1LRMaceAVH39aAPkA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "log_codes": [
         "InvalidFileLink"
       ],
@@ -17161,6 +17173,18 @@
         ".html": {
           "relative_path": "reference/common-business-rules/code-validation.html",
           "hash": "5rd5jYT2MwuF0mbJRGKtxA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "reference/common-business-rules/identifier-validation.md",
+      "output": {
+        ".html": {
+          "relative_path": "reference/common-business-rules/identifier-validation.html",
+          "hash": "M9CBLzMiW8KBVOJIxYsH/w=="
         }
       },
       "is_incremental": false,
@@ -17216,6 +17240,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "reference/common-business-rules/username-validation.md",
+      "output": {
+        ".html": {
+          "relative_path": "reference/common-business-rules/username-validation.html",
+          "hash": "dZz8L4Ry5ogn56Uub5SslQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "reference/discrepancy-system.md",
       "output": {
         ".html": {
@@ -17256,7 +17292,7 @@
       "output": {
         ".html": {
           "relative_path": "reference/toc.html",
-          "hash": "GmM7LoDpOlxueA+V3kWtXA=="
+          "hash": "JIAkVvbaqnaxI6i1oydE5Q=="
         }
       },
       "is_incremental": false,
