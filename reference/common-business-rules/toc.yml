@@ -2,6 +2,12 @@
   href: all-entities.md
 - name: Code validation
   href: code-validation.md
+- name: Code (strict)
+  href: code-validation-strict.md
+- name: Identifier
+  href: identifier-validation.md
+- name: Username
+  href: username-validation.md
 - name: Logistics documents
   href: logistics-documents.md
 - name: Lots 
