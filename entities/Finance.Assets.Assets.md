@@ -16,10 +16,8 @@ _Code; Name_
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
 
-Aggregate Parent:  
-[General.EnterpriseCompanies](General.EnterpriseCompanies.md)  
-Aggregate Root:  
-[General.EnterpriseCompanies](General.EnterpriseCompanies.md)  
+Aggregate Tree  
+* [Finance.Assets.Assets](Finance.Assets.Assets.md)  
 
 ## Attributes
 
@@ -40,7 +38,7 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [AssetCategory](Finance.Assets.Assets.md#assetcategory) | [AssetCategories](Finance.Assets.AssetCategories.md) | The category of this asset. The category may determine default values for the depreciation plans for the different valuation models for this asset. `Required` `Filter(multi eq)` |
 | [AssetGroup](Finance.Assets.Assets.md#assetgroup) | [AssetGroups](Finance.Assets.AssetGroups.md) (nullable) | The asset group to which this asset belongs. `Filter(multi eq)` |
-| [EnterpriseCompany](Finance.Assets.Assets.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The Enterprise Company to which this Asset applies. `Required` `Filter(multi eq)` `Owner` |
+| [EnterpriseCompany](Finance.Assets.Assets.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The Enterprise Company to which this Asset applies. `Required` `Filter(multi eq)` |
 | [PrimaryValuationModel](Finance.Assets.Assets.md#primaryvaluationmodel) | [ValuationModels](Finance.Assets.ValuationModels.md) | Obsolete. Not used. `Required` `Filter(multi eq)` |
 | [ValuationCurrency](Finance.Assets.Assets.md#valuationcurrency) | [Currencies](General.Currencies.md) | Currency in which changes of the asset values (purchase value, depreciation value and etc.) are stored. `Required` `Filter(multi eq)` |
 
@@ -134,11 +132,10 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### EnterpriseCompany
 
-The Enterprise Company to which this Asset applies. `Required` `Filter(multi eq)` `Owner`
+The Enterprise Company to which this Asset applies. `Required` `Filter(multi eq)`
 
 _Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
-_[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
 
 ### PrimaryValuationModel
 

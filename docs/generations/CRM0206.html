@@ -128,14 +128,14 @@
 </tbody>
 </table>
 <h2 id="business-logic">Business Logic</h2>
-<p>The generation is used for creating records in VAT Entry for Sales. These records contain VAT and VAT Base from current Invoice, divided by Deals Types wich are in document. These records are used for creating data for VAT Declaration for this document for the reporting period.</p>
+<p>The generation is used for creating records in VAT Entry for Sales. These records contain VAT Amount and VAT Base Amount from current Invoice, divided by Deals Types wich are in document. These records are used for creating data for VAT Declaration for this document for the reporting period.</p>
 <p>The InvoiceLine amounts are created for each DealType from distributed amount for current line for VATDocumentAmountType, grouped by LineDealType. It will be used these auxiliary variables:</p>
 <blockquote>
-<p><strong>VATDocumentAmountType = Invoice.EnterpriseCompany.VATDocumentAmountType</strong></p>
-<p><strong>VATDocumentAmountCurrency = IIF(Invoice.DocumentAmounts.InputAmountCurrency is not Null, Invoice.DocumentAmounts.InputAmountCurrency Where Invoice.DocumentAmounts.DocumentAmountType = VATDocumentAmountType, Invoice.DocumentCurrency)</strong></p>
-<p><strong>DealTypeAmount = SUM (Invoice.DocumentDistributedAmount/Amount) WHERE DocumentLineId = InvoiceLine DocumentAmountType=VATDocumentAmountType Group By LineDealType</strong></p>
-<p><strong>DealTypeBaseAmount = SUM (Invoice.DocumentDistributedAmount/BaseAmount) WHERE DocumentLineId = InvoiceLine DocumentAmountType=VATDocumentAmountType Group By LineDealType</strong></p>
-<p><strong>VATDealType = InvoiceLine.LineDealType Group By LineDealType</strong> - it is same which is used for grouping in DealTypeAmount and DealTypeBaseAmount.</p>
+<p>VATDocumentAmountType = Invoice.EnterpriseCompany.VATDocumentAmountType</p>
+<p>VATDocumentAmountCurrency = IIF(Invoice.DocumentAmounts.InputAmountCurrency is not Null, Invoice.DocumentAmounts.InputAmountCurrency Where Invoice.DocumentAmounts.DocumentAmountType = VATDocumentAmountType, Invoice.DocumentCurrency)</p>
+<p>DealTypeAmount = SUM (Invoice.DocumentDistributedAmount/Amount) WHERE DocumentLineId = InvoiceLine DocumentAmountType=VATDocumentAmountType Group By LineDealType</p>
+<p>DealTypeBaseAmount = SUM (Invoice.DocumentDistributedAmount/BaseAmount) WHERE DocumentLineId = InvoiceLine DocumentAmountType=VATDocumentAmountType Group By LineDealType</p>
+<p>VATDealType = InvoiceLine.LineDealType Group By LineDealType - it is same which is used for grouping in DealTypeAmount and DealTypeBaseAmount.</p>
 </blockquote>
 <p>The Document table attributes are filled in as described in <a href="../reference/standard-document-attributes.html">Standard Document Attributes</a>.</p>
 <h2 id="fulfillments">Fulfillments</h2>
@@ -192,19 +192,19 @@
 </tr>
 </tbody>
 </table>
-<p>Entry.EntryType = Sales
-Entry.DealType = VATDealType
-Entry.Party = Invoice.Customer.Party
-Entry.RegistrationVATNumber = Invoice.Customer.RegistrationVATNumber
-if Invoice.Customer.RegistrationNumber.HasValue then
-Entry.RegistrationNumber = Invoice.Customer.RegistrationNumber
-Entry.ReferencedDocumentType = Invoice.DocumentType
-Entry.ReferencedDocumentNo = Invoice.DocumentNo
-Entry.AmountBase = Remaining(AmountBase)
-Entry.VATAmountBase = Remaining(VATAmountBase)
-Entry.ApplyDate = Invoice.ApplyDate
-Entry.CashReportingMode = Invoice.VATCashReportingMode
-if Invoice.VATNotes.HasValue then
+<p>Entry.EntryType = Sales</p>
+<p>Entry.DealType = VATDealType</p>
+<p>Entry.Party = Invoice.Customer.Party</p>
+<p>Entry.RegistrationVATNumber = Invoice.Customer.RegistrationVATNumber</p>
+<p>if Invoice.Customer.RegistrationNumber.HasValue then
+Entry.RegistrationNumber = Invoice.Customer.RegistrationNumber</p>
+<p>Entry.ReferencedDocumentType = Invoice.DocumentType</p>
+<p>Entry.ReferencedDocumentNo = Invoice.DocumentNo</p>
+<p>Entry.AmountBase = Remaining(AmountBase)</p>
+<p>Entry.VATAmountBase = Remaining(VATAmountBase)</p>
+<p>Entry.ApplyDate = Invoice.ApplyDate</p>
+<p>Entry.CashReportingMode = Invoice.VATCashReportingMode</p>
+<p>if Invoice.VATNotes.HasValue then
 VATEntry.Notes = Invoice.VATNotes
 Else If  Entry.EnterpriseCompany is Bulgaria then VATEntry.Notes = &quot;Продажба на стоки/услуги.&quot;</p>
 </article>

@@ -88,10 +88,10 @@ Default Search Members:<br>
 <em>Code; Name</em></p>
 <h2 id="aggregate">Aggregate</h2>
 <p>An <a href="https://docs.erp.net/tech/advanced/concepts/aggregates.html">aggregate</a> is a cluster of domain objects that can be treated as a single unit.</p>
-<p>Aggregate Parent:<br>
-<a href="General.EnterpriseCompanies.html">General.EnterpriseCompanies</a><br>
-Aggregate Root:<br>
-<a href="General.EnterpriseCompanies.html">General.EnterpriseCompanies</a></p>
+<p>Aggregate Tree</p>
+<ul>
+<li><a href="Finance.Assets.Assets.html">Finance.Assets.Assets</a></li>
+</ul>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -167,7 +167,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Finance.Assets.Assets.html#enterprisecompany">EnterpriseCompany</a></td>
 <td><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a></td>
-<td>The Enterprise Company to which this Asset applies. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
+<td>The Enterprise Company to which this Asset applies. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Assets.Assets.html#primaryvaluationmodel">PrimaryValuationModel</a></td>
@@ -237,10 +237,9 @@ Aggregate Root:<br>
 <p><em>Type</em>: <strong><a href="Finance.Assets.AssetGroups.html">AssetGroups</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="enterprisecompany">EnterpriseCompany</h3>
-<p>The Enterprise Company to which this Asset applies. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
+<p>The Enterprise Company to which this Asset applies. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a></strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em><a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a></em>: <strong>True</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="primaryvaluationmodel">PrimaryValuationModel</h3>
 <p>Obsolete. Not used. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Finance.Assets.ValuationModels.html">ValuationModels</a></strong><br>
