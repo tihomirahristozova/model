@@ -11215,7 +11215,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Crm.Invoicing.Invoices.html",
-          "hash": "n5kHY7UVjD38S2WbunP8Ow=="
+          "hash": "KshQOhpWqvRS4Maqh/IWig=="
         }
       },
       "is_incremental": false,
@@ -16904,6 +16904,18 @@
         ".html": {
           "relative_path": "generations/CRM0202.html",
           "hash": "oKv3RrQeWmv2R/ccYEAnLg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "generations/CRM0206.md",
+      "output": {
+        ".html": {
+          "relative_path": "generations/CRM0206.html",
+          "hash": "NCMiel2a6atoIPgkMhQD2g=="
         }
       },
       "is_incremental": false,
