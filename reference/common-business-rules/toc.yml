@@ -1,6 +1,6 @@
 - name: All entities
   href: all-entities.md
-- name: Code validation
+- name: Code 
   href: code-validation.md
 - name: Code (strict)
   href: code-validation-strict.md
