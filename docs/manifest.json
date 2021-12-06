@@ -9801,7 +9801,7 @@
       "output": {
         ".html": {
           "relative_path": "business-rules/R32605.html",
-          "hash": "Qh0Ar/bdYx/UqCoA09fDvw=="
+          "hash": "eVRGaPK4mmo8jrdhCICPyQ=="
         }
       },
       "is_incremental": false,
@@ -14719,7 +14719,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Logistics.Procurement.PurchaseInvoices.html",
-          "hash": "g0R9byRO/o0xNW67tgA2aQ=="
+          "hash": "bp5Pqzq2QpNVxAGSK7tYoQ=="
         }
       },
       "is_incremental": false,
@@ -16915,7 +16915,7 @@
       "output": {
         ".html": {
           "relative_path": "generations/CRM0206.html",
-          "hash": "KOtGlw6t0vsdL3EkP6NcvQ=="
+          "hash": "hBoyZ2lD8rBktOF47DlQiw=="
         }
       },
       "is_incremental": false,
@@ -17000,6 +17000,30 @@
         ".html": {
           "relative_path": "generations/FIN0103.html",
           "hash": "QRRCdf0v3XafVEkqB2k20g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "generations/FIN0202.md",
+      "output": {
+        ".html": {
+          "relative_path": "generations/FIN0202.html",
+          "hash": "uZIi+qhqv919GqQQ6wO7eQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "generations/FIN0204.md",
+      "output": {
+        ".html": {
+          "relative_path": "generations/FIN0204.html",
+          "hash": "na2KXzfkTx3FlOKcW0m1tg=="
         }
       },
       "is_incremental": false,

@@ -195,9 +195,10 @@
 <p>Entry.EntryType = Sales</p>
 <p>Entry.DealType = VATDealType</p>
 <p>Entry.Party = Invoice.Customer.Party</p>
-<p>Entry.RegistrationVATNumber = Invoice.Customer.RegistrationVATNumber</p>
-<p>if Invoice.Customer.RegistrationNumber.HasValue then
+<p>If Invoice.Customer.Party.PartyType = Company then Entry.RegistrationVATNumber = Invoice.Customer.RegistrationVATNumber</p>
+<p>if (Invoice.Customer.RegistrationNumber.HasValue and Invoice.Customer.Party.PartyType = Company) then
 Entry.RegistrationNumber = Invoice.Customer.RegistrationNumber</p>
+<p>if Invoice.Customer.Party.PartyType = Person   then Entry.RegistrationNumber   = Invoice.Customer.Party.Person.NationalNumber</p>
 <p>Entry.ReferencedDocumentType = Invoice.DocumentType</p>
 <p>Entry.ReferencedDocumentNo = Invoice.DocumentNo</p>
 <p>Entry.AmountBase = Remaining(AmountBase)</p>
@@ -207,6 +208,7 @@ Entry.RegistrationNumber = Invoice.Customer.RegistrationNumber</p>
 <p>if Invoice.VATNotes.HasValue then
 VATEntry.Notes = Invoice.VATNotes
 Else If  Entry.EnterpriseCompany is Bulgaria then VATEntry.Notes = &quot;Продажба на стоки/услуги.&quot;</p>
+<p>RegistrationVATNumber, RegistrationNumber  And VATNotes can be null if there is no value for them.</p>
 </article>
           </div>
           
