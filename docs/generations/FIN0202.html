@@ -131,11 +131,11 @@
 <p>The generation is used for creating records in VAT Entry for Purchases These records contain VAT Amount and VAT Base Amount from current Purchase Invoice, divided by Deals Types wich are in document. These records are used for creating data for VAT Declaration for this document for the reporting period.</p>
 <p>The PurchaseInvoiceLine amounts are created for each DealType from distributed amount for current line for VATDocumentAmountType, grouped by LineDealType. It will be used these auxiliary variables:</p>
 <blockquote>
-<p>VATDocumentAmountType = Invoice.EnterpriseCompany.VATDocumentAmountType</p>
-<p>VATDocumentAmountCurrency = IIF(Invoice.DocumentAmounts.InputAmountCurrency is not Null, Invoice.DocumentAmounts.InputAmountCurrency Where Invoice.DocumentAmounts.DocumentAmountType = VATDocumentAmountType, Invoice.DocumentCurrency)</p>
-<p>DealTypeAmount = SUM (Invoice.DocumentDistributedAmount/Amount) WHERE DocumentLineId = InvoiceLine DocumentAmountType=VATDocumentAmountType Group By LineDealType</p>
-<p>DealTypeBaseAmount = SUM (Invoice.DocumentDistributedAmount/BaseAmount) WHERE DocumentLineId = InvoiceLine DocumentAmountType=VATDocumentAmountType Group By LineDealType</p>
-<p>VATDealType = InvoiceLine.LineDealType Group By LineDealType - it is same which is used for grouping in DealTypeAmount and DealTypeBaseAmount.</p>
+<p>VATDocumentAmountType = PurchaseInvoice.EnterpriseCompany.VATDocumentAmountType</p>
+<p>VATDocumentAmountCurrency = IIF(PurchaseInvoice.DocumentAmounts.InputAmountCurrency is not Null, PurchaseInvoice.DocumentAmounts.InputAmountCurrency Where PurchaseInvoice.DocumentAmounts.DocumentAmountType = VATDocumentAmountType, PurchaseInvoice.DocumentCurrency)</p>
+<p>DealTypeAmount = SUM (PurchaseInvoice.DocumentDistributedAmount/Amount) WHERE DocumentLineId = PurchaseInvoiceLine DocumentAmountType=VATDocumentAmountType Group By LineDealType</p>
+<p>DealTypeBaseAmount = SUM (PurchaseInvoice.DocumentDistributedAmount/BaseAmount) WHERE DocumentLineId = PurchaseInvoiceLine DocumentAmountType=VATDocumentAmountType Group By LineDealType</p>
+<p>VATDealType = PurchaseInvoiceLine.LineDealType Group By LineDealType - it is same which is used for grouping in DealTypeAmount and DealTypeBaseAmount.</p>
 </blockquote>
 <p>The Document table attributes are filled in as described in <a href="../reference/standard-document-attributes.html">Standard Document Attributes</a>.</p>
 <h2 id="fulfillments">Fulfillments</h2>
@@ -157,7 +157,7 @@
 </tr>
 <tr>
 <td style="text-align: left;">Parent / Child Relations</td>
-<td>Entry.ParentDocument = Invoice; Entry.DealType = DealType; Entry.RegistrationVATNumber = Invoice.Customer.RegistrationVATNumber, Entry.RegistrationNumber = Invoice.Customer.RegistrationNumber, VATEntry.ApplyDate = Invoice.ApplyDate</td>
+<td>Entry.ParentDocument = PurchaseInvoice; Entry.DealType = DealType; Entry.RegistrationVATNumber = PurchaseInvoice.Supplier.RegistrationVATNumber, Entry.RegistrationNumber = PurchaseInvoice.Supplier.RegistrationNumber, Entry.ApplyDate = PurchaseInvoice.ApplyDate</td>
 </tr>
 </tbody>
 </table>
@@ -175,7 +175,7 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;">InvoiceLineToVATEnrty</td>
+<td style="text-align: left;">PurchaseInvoiceLineToVATEnrty</td>
 <td style="text-align: center;">AmountBase</td>
 <td style="text-align: center;">VATDocumentAmountCurrency</td>
 <td style="text-align: left;">DealTypeAmount</td>
@@ -183,7 +183,7 @@
 <td style="text-align: left;">YES</td>
 </tr>
 <tr>
-<td style="text-align: left;">InvoiceLineToVATEnrty</td>
+<td style="text-align: left;">PurchaseInvoiceLineToVATEnrty</td>
 <td style="text-align: center;">VATAmountBase</td>
 <td style="text-align: center;">VATDocumentAmountCurrency</td>
 <td style="text-align: left;">DealTypeBaseAmount</td>
@@ -192,22 +192,27 @@
 </tr>
 </tbody>
 </table>
-<p>Entry.EntryType = Sales</p>
+<p>if PurchaseInvoice.ReferenceDate.HasValue then
+Entry.DocumentDate = PurchaseInvoice.ReferenceDate else Entry.DocumentDate = PurchaseInvoice.DocumentDate</p>
+<p>Entry.EntryType = Purchase</p>
 <p>Entry.DealType = VATDealType</p>
-<p>Entry.Party = Invoice.Customer.Party</p>
-<p>If Invoice.Customer.Party.PartyType = Company then Entry.RegistrationVATNumber = Invoice.Customer.RegistrationVATNumber</p>
-<p>if (Invoice.Customer.RegistrationNumber.HasValue and Invoice.Customer.Party.PartyType = Company) then
-Entry.RegistrationNumber = Invoice.Customer.RegistrationNumber</p>
-<p>if Invoice.Customer.Party.PartyType = Person   then Entry.RegistrationNumber   = Invoice.Customer.Party.Person.NationalNumber</p>
-<p>Entry.ReferencedDocumentType = Invoice.DocumentType</p>
-<p>Entry.ReferencedDocumentNo = Invoice.DocumentNo</p>
+<p>Entry.Party = PurchaseInvoice.Supplier.Party</p>
+<p>If Invoice.Supplier.Party.PartyType = Company then Entry.RegistrationVATNumber = PurchaseInvoice.Supplier.RegistrationVATNumber</p>
+<p>if (PurchaseInvoice.Supplier.RegistrationNumber.HasValue and PurchaseInvoice.Supplier.Party.PartyType = Company) then
+Entry.RegistrationNumber = PurchaseInvoice.Supplier.RegistrationNumber</p>
+<p>if PurchaseInvoice.Supplier.Party.PartyType = Person   then Entry.RegistrationNumber   = PurchaseInvoice.Supplier.Party.Person.NationalNumber</p>
+<p>Entry.ReferencedDocumentNo =
+if PurchaseInvoice.ReferenceDocumentNo.HasValue then
+PurchaseInvoice.ReferenceDocumentNo
+else PurchaseInvoice.DocumentNo</p>
+<p>Entry.ReferencedDocumentNo = PurchaseInvoice.DocumentNo</p>
 <p>Entry.AmountBase = Remaining(AmountBase)</p>
 <p>Entry.VATAmountBase = Remaining(VATAmountBase)</p>
-<p>Entry.ApplyDate = Invoice.ApplyDate</p>
-<p>Entry.CashReportingMode = Invoice.VATCashReportingMode</p>
+<p>Entry.ApplyDate = PurchaseInvoice.ApplyDate</p>
+<p>Entry.CashReportingMode = PurchaseInvoice.VATCashReportingMode</p>
 <p>if Invoice.VATNotes.HasValue then
-VATEntry.Notes = Invoice.VATNotes
-Else If  Entry.EnterpriseCompany is Bulgaria then VATEntry.Notes = &quot;Продажба на стоки/услуги.&quot;</p>
+VATEntry.Notes = PurchaseInvoice.VATNotes
+Else If  Entry.EnterpriseCompany is Bulgaria then VATEntry.Notes = &quot;Покупка на стоки/услуги.&quot;</p>
 <p>RegistrationVATNumber, RegistrationNumber  And VATNotes can be null if there is no value for them.</p>
 </article>
           </div>
