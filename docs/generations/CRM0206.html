@@ -118,6 +118,10 @@
 <td>Forbid</td>
 </tr>
 <tr>
+<td style="text-align: left;">Split Function</td>
+<td>InvoiceLine.LineDealType</td>
+</tr>
+<tr>
 <td style="text-align: left;">Introduced In Version</td>
 <td>2022</td>
 </tr>
@@ -128,15 +132,22 @@
 </tbody>
 </table>
 <h2 id="business-logic">Business Logic</h2>
-<p>The generation is used for creating records in VAT Entry for Sales. These records contain VAT Amount and VAT Base Amount from current Invoice, divided by Deals Types wich are in document. These records are used for creating data for VAT Declaration for this document for the reporting period.</p>
-<p>The InvoiceLine amounts are created for each DealType from distributed amount for current line for VATDocumentAmountType, grouped by LineDealType. It will be used these auxiliary variables:</p>
-<blockquote>
-<p>VATDocumentAmountType = Invoice.EnterpriseCompany.VATDocumentAmountType</p>
-<p>VATDocumentAmountCurrency = IIF(Invoice.DocumentAmounts.InputAmountCurrency is not Null, Invoice.DocumentAmounts.InputAmountCurrency Where Invoice.DocumentAmounts.DocumentAmountType = VATDocumentAmountType, Invoice.DocumentCurrency)</p>
-<p>DealTypeAmount = SUM (Invoice.DocumentDistributedAmount/Amount) WHERE DocumentLineId = InvoiceLine DocumentAmountType=VATDocumentAmountType Group By LineDealType</p>
-<p>DealTypeBaseAmount = SUM (Invoice.DocumentDistributedAmount/BaseAmount) WHERE DocumentLineId = InvoiceLine DocumentAmountType=VATDocumentAmountType Group By LineDealType</p>
-<p>VATDealType = InvoiceLine.LineDealType Group By LineDealType - it is same which is used for grouping in DealTypeAmount and DealTypeBaseAmount.</p>
-</blockquote>
+<p>The generation is used for creating sales VAT entries from Invoices. These records contain VAT Amount and VAT Base Amount from current Invoice and are used for collecting data  for the creating of the VAT Declaration for the reporting period.</p>
+<p>Different lines in the Invoice may have different Line Deal Types. For each of these Line Deal Type have to be created a separate VAT Entry. Therefore, at the beginning of the generation procedure, the lines of the invoice have to be divided into sets by their Deal Type.</p>
+<p>For each set of lines is calculated the sum of the distributed VAT amounts. The algorithm of this calculation is described below:
+<br><em>Тo make the algorithm more understandable, we will introduce several auxiliary variables. The values of these variables will be used in the descriptions of the Metrics and the creation of the new document.</em></p>
+<pre><code>VATDealType = the LineDealType of the current invoice lines set
+
+VATDocumentAmountType = Invoice.EnterpriseCompany.VATDocumentAmountType
+ 
+VATDocumentAmountCurrency = IIF(Invoice.DocumentAmounts.InputAmountCurrency is not Null, Invoice.DocumentAmounts.InputAmountCurrency Where Invoice.DocumentAmounts.DocumentAmountType = VATDocumentAmountType, Invoice.DocumentCurrency)
+
+DealTypeAmount = SUM (Invoice.DocumentDistributedAmount/Amount) WHERE DocumentLineId = InvoiceLine DocumentAmountType=VATDocumentAmountType Group By LineDealType
+
+DealTypeBaseAmount = SUM (Invoice.DocumentDistributedAmount/BaseAmount) WHERE DocumentLineId = InvoiceLine DocumentAmountType=VATDocumentAmountType Group By LineDealType
+
+VATDealType = InvoiceLine.LineDealType Group By LineDealType - it is same which is used for grouping in DealTypeAmount and DealTypeBaseAmount.
+</code></pre>
 <p>The Document table attributes are filled in as described in <a href="../reference/standard-document-attributes.html">Standard Document Attributes</a>.</p>
 <h2 id="fulfillments">Fulfillments</h2>
 <table>
@@ -192,23 +203,42 @@
 </tr>
 </tbody>
 </table>
-<p>Entry.EntryType = Sales</p>
-<p>Entry.DealType = VATDealType</p>
-<p>Entry.Party = Invoice.Customer.Party</p>
-<p>If Invoice.Customer.Party.PartyType = Company then Entry.RegistrationVATNumber = Invoice.Customer.RegistrationVATNumber</p>
-<p>if (Invoice.Customer.RegistrationNumber.HasValue and Invoice.Customer.Party.PartyType = Company) then
-Entry.RegistrationNumber = Invoice.Customer.RegistrationNumber</p>
-<p>if Invoice.Customer.Party.PartyType = Person   then Entry.RegistrationNumber   = Invoice.Customer.Party.Person.NationalNumber</p>
-<p>Entry.ReferencedDocumentType = Invoice.DocumentType</p>
-<p>Entry.ReferencedDocumentNo = Invoice.DocumentNo</p>
-<p>Entry.AmountBase = Remaining(AmountBase)</p>
-<p>Entry.VATAmountBase = Remaining(VATAmountBase)</p>
-<p>Entry.ApplyDate = Invoice.ApplyDate</p>
-<p>Entry.CashReportingMode = Invoice.VATCashReportingMode</p>
-<p>if Invoice.VATNotes.HasValue then
-VATEntry.Notes = Invoice.VATNotes
-Else If  Entry.EnterpriseCompany is Bulgaria then VATEntry.Notes = &quot;Продажба на стоки/услуги.&quot;</p>
-<p>RegistrationVATNumber, RegistrationNumber  And VATNotes can be null if there is no value for them.</p>
+<p><strong>The new VAT Entries are created as follows:</strong></p>
+<pre><code> 
+Entry.EntryType = Sales
+
+Entry.DealType = VATDealType
+
+Entry.Party = Invoice.Customer.Party
+
+Entry.RegistrationNumber = 
+       if Invoice.Customer.Party.PartyType = Company, then Entry.RegistrationVATNumber = Invoice.Customer.RegistrationVATNumber
+           
+       if (Invoice.Customer.RegistrationNumber.HasValue and Invoice.Customer.Party.PartyType = Company), then Entry.RegistrationNumber = Invoice.Customer.RegistrationNumber
+        
+       if Invoice.Customer.Party.PartyType = Person, then Entry.RegistrationNumber = Invoice.Customer.Party.Person.NationalNumber
+
+Entry.ReferencedDocumentType = Invoice.DocumentType
+
+Entry.ReferencedDocumentNo = Invoice.DocumentNo
+
+Entry.AmountBase = Remaining(AmountBase)
+
+Entry.VATAmountBase = Remaining(VATAmountBase)
+
+Entry.ApplyDate = Invoice.ApplyDate
+
+Entry.CashReportingMode = Invoice.VATCashReportingMode
+
+VATEntry.Notes =
+       if Invoice.VATNotes.HasValue, then VATEntry.Notes = Invoice.VATNotes
+       else if  Entry.EnterpriseCompany is Bulgaria, then VATEntry.Notes = &quot;Продажба на стоки/услуги.&quot;
+
+</code></pre>
+<div class="NOTE">
+<h5>Note</h5>
+<p>RegistrationVATNumber, RegistrationNumber And VATNotes <strong>can</strong> be null if there is no value for them.</p>
+</div>
 </article>
           </div>
           

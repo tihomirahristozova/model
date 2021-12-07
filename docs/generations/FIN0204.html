@@ -128,8 +128,8 @@
 </tbody>
 </table>
 <h2 id="business-logic">Business Logic</h2>
-<p>The generation is used for creating records in VAT Entry for Sales. These records contain VAT Amount and VAT Base Amount from current Invoice, divided by Deals Types wich are in document. These records are used for creating data for VAT Declaration for this document for the reporting period.</p>
-<p>The InvoiceLine amounts are created for each DealType from distributed amount for current line for VATDocumentAmountType, grouped by LineDealType. It will be used these auxiliary variables:</p>
+<p>The generation is used for creating records in VAT Entry for Sales. These records contain VAT Amount and VAT Base Amount from current PurchaseInvoice, divided by Deals Types wich are in document. These records are used for creating data for VAT Declaration for this document for the reporting period.</p>
+<p>The PurchaseInvoiceLine amounts are created for each DealType from distributed amount for current line for VATDocumentAmountType, grouped by LineDealType. It will be used these auxiliary variables:</p>
 <blockquote>
 <p>VATDocumentAmountType = PurchaseInvoices.EnterpriseCompany.VATDocumentAmountType</p>
 <p>VATDocumentAmountCurrency = IIF(PurchaseInvoicesDocumentAmounts.InputAmountCurrency is not Null, PurchaseInvoice.DocumentAmounts.InputAmountCurrency Where PurchaseInvoices.DocumentAmounts.DocumentAmountType = VATDocumentAmountType, PurchaseInvoices.DocumentCurrency)</p>
