@@ -9,9 +9,9 @@ Public users profile data. Entity: Public_Users (Introduced in version 22.1.4.22
 
 ## Default Visualization
 Default Display Text Format:  
-_{UserId}: {Email}_  
+_{Name}_  
 Default Search Members:  
-__  
+_Name_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
