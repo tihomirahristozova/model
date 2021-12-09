@@ -48,6 +48,13 @@ Unique email of the user. Can be NULL because there may be login providers that 
 |User Login|no|
 |Visible|yes|
 
+#### Email - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|no|no|
+|Like|None|no|no|
+
 ### Person_Id
 
 
@@ -146,5 +153,12 @@ The full name of the user
 |UI Width|Medium|
 |User Login|no|
 |Visible|yes|
+
+#### User_Name - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|no|no|
+|Like|None|no|no|
 
 

@@ -42,6 +42,7 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Code](General.DocumentTypes.md#code) | string (16) | Unique descriptive code of the document type. `Required` `Filter(eq;like)` `ORD` 
+| [CreateFulfillmentson<br />Completion](General.DocumentTypes.md#createfulfillmentsoncompletion) | boolean | When document state is changed to Completed, creates completed document fulfillments for the parent document. Used only for logistic documents. `Required` `Default(false)` `Introduced in version 22.1.4.88` 
 | [CreateManully](General.DocumentTypes.md#createmanully) | boolean | False if documents with this document type only can be generated; true - the user can create documents with this type. `Required` `Default(true)` `Filter(eq)` 
 | [Description](General.DocumentTypes.md#description) | string (max) __nullable__ | The description of this DocumentType. 
 | [DisallowOpposite<br />ValuesGeneration](General.DocumentTypes.md#disallowoppositevaluesgeneration) | boolean | Disallow the generation of decreasing scalar values (values with opposite directions than the original values determined by the parent document) through this document type. `Required` `Default(false)` 
@@ -90,6 +91,15 @@ _Indexed_: **True**
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
 _Maximum Length_: **16**  
+
+### CreateFulfillmentsonCompletion
+
+When document state is changed to Completed, creates completed document fulfillments for the parent document. Used only for logistic documents. `Required` `Default(false)` `Introduced in version 22.1.4.88`
+
+_Type_: **boolean**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+_Default Value_: **False**  
 
 ### CreateManully
 

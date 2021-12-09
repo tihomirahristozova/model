@@ -105,12 +105,12 @@ Default Search Members:<br>
 <tr>
 <td><a href="Public.Users.html#email">Email</a></td>
 <td>string (254)</td>
-<td>Unique email of the user. Can be null because there may be login providers that don't use emails. <code>Required</code></td>
+<td>Unique email of the user. Can be null because there may be login providers that don't use emails. <code>Required</code> <code>Filter(eq;like)</code></td>
 </tr>
 <tr>
 <td><a href="Public.Users.html#name">Name</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString</a></td>
-<td>The full name of the user. <code>Required</code></td>
+<td>The full name of the user. <code>Required</code> <code>Filter(eq;like)</code></td>
 </tr>
 <tr>
 <td><a href="Public.Users.html#userid">UserId</a></td>
@@ -138,15 +138,15 @@ Default Search Members:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="email">Email</h3>
-<p>Unique email of the user. Can be null because there may be login providers that don't use emails. <code>Required</code></p>
+<p>Unique email of the user. Can be null because there may be login providers that don't use emails. <code>Required</code> <code>Filter(eq;like)</code></p>
 <p><em>Type</em>: <strong>string (254)</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>254</strong></p>
 <h3 id="name">Name</h3>
-<p>The full name of the user. <code>Required</code></p>
+<p>The full name of the user. <code>Required</code> <code>Filter(eq;like)</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a></strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="userid">UserId</h3>
 <p><em>Type</em>: <strong>guid</strong><br>

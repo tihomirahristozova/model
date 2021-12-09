@@ -138,6 +138,11 @@ Default Search Members:<br>
 <td>Unique descriptive code of the document type. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></td>
 </tr>
 <tr>
+<td><a href="General.DocumentTypes.html#createfulfillmentsoncompletion">CreateFulfillmentson<br>Completion</a></td>
+<td>boolean</td>
+<td>When document state is changed to Completed, creates completed document fulfillments for the parent document. Used only for logistic documents. <code>Required</code> <code>Default(false)</code> <code>Introduced in version 22.1.4.88</code></td>
+</tr>
+<tr>
 <td><a href="General.DocumentTypes.html#createmanully">CreateManully</a></td>
 <td>boolean</td>
 <td>False if documents with this document type only can be generated; true - the user can create documents with this type. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></td>
@@ -296,6 +301,12 @@ Default Search Members:<br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>True</strong><br>
 <em>Maximum Length</em>: <strong>16</strong></p>
+<h3 id="createfulfillmentsoncompletion">CreateFulfillmentsonCompletion</h3>
+<p>When document state is changed to Completed, creates completed document fulfillments for the parent document. Used only for logistic documents. <code>Required</code> <code>Default(false)</code> <code>Introduced in version 22.1.4.88</code></p>
+<p><em>Type</em>: <strong>boolean</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>False</strong></p>
 <h3 id="createmanully">CreateManully</h3>
 <p>False if documents with this document type only can be generated; true - the user can create documents with this type. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>

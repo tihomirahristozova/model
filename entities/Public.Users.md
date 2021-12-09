@@ -23,8 +23,8 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Email](Public.Users.md#email) | string (254) | Unique email of the user. Can be null because there may be login providers that don't use emails. `Required` 
-| [Name](Public.Users.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | The full name of the user. `Required` 
+| [Email](Public.Users.md#email) | string (254) | Unique email of the user. Can be null because there may be login providers that don't use emails. `Required` `Filter(eq;like)` 
+| [Name](Public.Users.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | The full name of the user. `Required` `Filter(eq;like)` 
 | [UserId](Public.Users.md#userid) | guid |  
 
 ## References
@@ -38,19 +38,19 @@ Aggregate Tree
 
 ### Email
 
-Unique email of the user. Can be null because there may be login providers that don't use emails. `Required`
+Unique email of the user. Can be null because there may be login providers that don't use emails. `Required` `Filter(eq;like)`
 
 _Type_: **string (254)**  
-_Supported Filters_: **NotFilterable**  
+_Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
 
 ### Name
 
-The full name of the user. `Required`
+The full name of the user. `Required` `Filter(eq;like)`
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
-_Supported Filters_: **NotFilterable**  
+_Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 
 ### UserId
