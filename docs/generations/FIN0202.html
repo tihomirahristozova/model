@@ -118,6 +118,10 @@
 <td>Forbid</td>
 </tr>
 <tr>
+<td style="text-align: left;">Split Function</td>
+<td>InvoiceLine.LineDealType</td>
+</tr>
+<tr>
 <td style="text-align: left;">Introduced In Version</td>
 <td>2022</td>
 </tr>
@@ -128,15 +132,20 @@
 </tbody>
 </table>
 <h2 id="business-logic">Business Logic</h2>
-<p>The generation is used for creating records in VAT Entry for Purchases These records contain VAT Amount and VAT Base Amount from current Purchase Invoice, divided by Deals Types wich are in document. These records are used for creating data for VAT Declaration for this document for the reporting period.</p>
-<p>The PurchaseInvoiceLine amounts are created for each DealType from distributed amount for current line for VATDocumentAmountType, grouped by LineDealType. It will be used these auxiliary variables:</p>
-<blockquote>
-<p>VATDocumentAmountType = PurchaseInvoice.EnterpriseCompany.VATDocumentAmountType</p>
-<p>VATDocumentAmountCurrency = IIF(PurchaseInvoice.DocumentAmounts.InputAmountCurrency is not Null, PurchaseInvoice.DocumentAmounts.InputAmountCurrency Where PurchaseInvoice.DocumentAmounts.DocumentAmountType = VATDocumentAmountType, PurchaseInvoice.DocumentCurrency)</p>
-<p>DealTypeAmount = SUM (PurchaseInvoice.DocumentDistributedAmount/Amount) WHERE DocumentLineId = PurchaseInvoiceLine DocumentAmountType=VATDocumentAmountType Group By LineDealType</p>
-<p>DealTypeBaseAmount = SUM (PurchaseInvoice.DocumentDistributedAmount/BaseAmount) WHERE DocumentLineId = PurchaseInvoiceLine DocumentAmountType=VATDocumentAmountType Group By LineDealType</p>
-<p>VATDealType = PurchaseInvoiceLine.LineDealType Group By LineDealType - it is same which is used for grouping in DealTypeAmount and DealTypeBaseAmount.</p>
-</blockquote>
+<p>The generation is used for creating purchase VAT entries from Purchase Invoices. These records contain VAT Amount and VAT Base Amount from current Purchase Invoice and are used for collecting data  for the creating of the VAT Declaration for the reporting period.</p>
+<p>Different lines in the Purchase Invoice may have different Line Deal Types. For each of these Line Deal Type have to be created a separate VAT Entry. Therefore, at the beginning of the generation procedure, the lines of the invoice have to be divided into sets by their Deal Type.</p>
+<p>For each set of lines is calculated the sum of the distributed VAT amounts. The algorithm of this calculation is described below:
+<br><em>Тo make the algorithm more understandable, we will introduce several auxiliary variables. The values of these variables will be used in the descriptions of the Metrics and the creation of the new document.</em></p>
+<pre><code>VATDocumentAmountType = PurchaseInvoice.EnterpriseCompany.VATDocumentAmountType
+ 
+VATDocumentAmountCurrency = IIF(PurchaseInvoice.DocumentAmounts.InputAmountCurrency is not Null, PurchaseInvoice.DocumentAmounts.InputAmountCurrency Where PurchaseInvoice.DocumentAmounts.DocumentAmountType = VATDocumentAmountType, PurchaseInvoice.DocumentCurrency)
+
+DealTypeAmount = SUM (PurchaseInvoice.DocumentDistributedAmount/Amount) WHERE DocumentLineId = PurchaseInvoiceLine DocumentAmountType=VATDocumentAmountType Group By LineDealType
+
+DealTypeBaseAmount = SUM (PurchaseInvoice.DocumentDistributedAmount/BaseAmount) WHERE DocumentLineId = PurchaseInvoiceLine DocumentAmountType=VATDocumentAmountType Group By LineDealType
+
+VATDealType = PurchaseInvoiceLine.LineDealType Group By LineDealType - it is same which is used for grouping in DealTypeAmount and DealTypeBaseAmount.
+</code></pre>
 <p>The Document table attributes are filled in as described in <a href="../reference/standard-document-attributes.html">Standard Document Attributes</a>.</p>
 <h2 id="fulfillments">Fulfillments</h2>
 <table>
@@ -192,28 +201,47 @@
 </tr>
 </tbody>
 </table>
-<p>if PurchaseInvoice.ReferenceDate.HasValue then
-Entry.DocumentDate = PurchaseInvoice.ReferenceDate else Entry.DocumentDate = PurchaseInvoice.DocumentDate</p>
-<p>Entry.EntryType = Purchase</p>
-<p>Entry.DealType = VATDealType</p>
-<p>Entry.Party = PurchaseInvoice.Supplier.Party</p>
-<p>If Invoice.Supplier.Party.PartyType = Company then Entry.RegistrationVATNumber = PurchaseInvoice.Supplier.RegistrationVATNumber</p>
-<p>if (PurchaseInvoice.Supplier.RegistrationNumber.HasValue and PurchaseInvoice.Supplier.Party.PartyType = Company) then
-Entry.RegistrationNumber = PurchaseInvoice.Supplier.RegistrationNumber</p>
-<p>if PurchaseInvoice.Supplier.Party.PartyType = Person   then Entry.RegistrationNumber   = PurchaseInvoice.Supplier.Party.Person.NationalNumber</p>
-<p>Entry.ReferencedDocumentNo =
-if PurchaseInvoice.ReferenceDocumentNo.HasValue then
-PurchaseInvoice.ReferenceDocumentNo
-else PurchaseInvoice.DocumentNo</p>
-<p>Entry.ReferencedDocumentNo = PurchaseInvoice.DocumentNo</p>
-<p>Entry.AmountBase = Remaining(AmountBase)</p>
-<p>Entry.VATAmountBase = Remaining(VATAmountBase)</p>
-<p>Entry.ApplyDate = PurchaseInvoice.ApplyDate</p>
-<p>Entry.CashReportingMode = PurchaseInvoice.VATCashReportingMode</p>
-<p>if Invoice.VATNotes.HasValue then
-VATEntry.Notes = PurchaseInvoice.VATNotes
-Else If  Entry.EnterpriseCompany is Bulgaria then VATEntry.Notes = &quot;Покупка на стоки/услуги.&quot;</p>
-<p>RegistrationVATNumber, RegistrationNumber  And VATNotes can be null if there is no value for them.</p>
+<pre><code>
+If PurchaseInvoice.ReferenceDate.HasValue then
+    Entry.DocumentDate = PurchaseInvoice.ReferenceDate else Entry.DocumentDate = PurchaseInvoice.DocumentDate
+
+Entry.EntryType = Purchase
+
+Entry.DealType = VATDealType
+
+Entry.Party = PurchaseInvoice.Supplier.Party
+
+If Invoice.Supplier.Party.PartyType = Company then Entry.RegistrationVATNumber = PurchaseInvoice.Supplier.RegistrationVATNumber
+
+if (PurchaseInvoice.Supplier.RegistrationNumber.HasValue and PurchaseInvoice.Supplier.Party.PartyType = Company) then
+    Entry.RegistrationNumber = PurchaseInvoice.Supplier.RegistrationNumber
+
+if PurchaseInvoice.Supplier.Party.PartyType = Person   then Entry.RegistrationNumber   = PurchaseInvoice.Supplier.Party.Person.NationalNumber
+
+Entry.ReferencedDocumentNo = 
+    if PurchaseInvoice.ReferenceDocumentNo.HasValue then
+        PurchaseInvoice.ReferenceDocumentNo
+    else PurchaseInvoice.DocumentNo
+
+Entry.ReferencedDocumentNo = PurchaseInvoice.DocumentNo
+
+Entry.AmountBase = Remaining(AmountBase)
+
+Entry.VATAmountBase = Remaining(VATAmountBase)
+
+Entry.ApplyDate = PurchaseInvoice.ApplyDate
+
+Entry.CashReportingMode = PurchaseInvoice.VATCashReportingMode
+
+if Invoice.VATNotes.HasValue then
+    VATEntry.Notes = PurchaseInvoice.VATNotes
+    Else If  Entry.EnterpriseCompany is Bulgaria then VATEntry.Notes = &quot;Покупка на стоки/услуги.&quot;
+
+</code></pre>
+<div class="NOTE">
+<h5>Note</h5>
+<p>RegistrationVATNumber, RegistrationNumber And VATNotes <strong>can</strong> be null if there is no value for them.</p>
+</div>
 </article>
           </div>
           
