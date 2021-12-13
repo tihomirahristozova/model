@@ -136,7 +136,7 @@
 <p>Different lines in the Invoice may have different Line Deal Types. For each of these Line Deal Type have to be created a separate VAT Entry. Therefore, at the beginning of the generation procedure, the lines of the invoice have to be divided into sets by their Deal Type.</p>
 <p>For each set of lines is calculated the sum of the distributed VAT amounts. The algorithm of this calculation is described below:
 <br><em>Тo make the algorithm more understandable, we will introduce several auxiliary variables. The values of these variables will be used in the descriptions of the Metrics and the creation of the new document.</em></p>
-<pre><code>VATDealType = the LineDealType of the current invoice lines set
+<pre><code>VATDealType = the LineDealType of the current set of invoice lines
 
 VATDocumentAmountType = Invoice.EnterpriseCompany.VATDocumentAmountType
  

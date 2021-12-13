@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>FIN0204 Create VAT sales entries | ERP.net Domain Model </title>
+    <title>FIN0204 Create VAT sales ledger entries | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="FIN0204 Create VAT sales entries | ERP.net Domain Model ">
+    <meta name="title" content="FIN0204 Create VAT sales ledger entries | ERP.net Domain Model ">
     <meta name="generator" content="docfx 2.56.9.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
@@ -70,7 +70,7 @@
         <div class="article row grid">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="fin0204-create-vat-sales-entries">FIN0204 Create VAT sales entries</h1>
+<h1 id="fin0204-create-vat-sales-ledger-entries">FIN0204 Create VAT sales ledger entries</h1>
 
 <h2 id="basic-information">Basic Information</h2>
 <table>
@@ -119,7 +119,7 @@
 </tr>
 <tr>
 <td style="text-align: left;">Split Function</td>
-<td>InvoiceLine.LineDealType</td>
+<td>PurchaseInvoiceLine.SaleLineDealTypes</td>
 </tr>
 <tr>
 <td style="text-align: left;">Introduced In Version</td>
@@ -133,10 +133,11 @@
 </table>
 <h2 id="business-logic">Business Logic</h2>
 <p>The generation is used for creating sales VAT entries from Purchase Invoices. These records contain VAT Amount and VAT Base Amount from current Purchase Invoice and are used for collecting data  for the creating of the VAT Declaration for the reporting period.</p>
-<p>Different lines in the Purchase Invoice may have different Sale Line Deal Type. For each of these Sale Line Deal Type have to be created a separate VAT Entry. Therefore, at the beginning of the generation procedure, the lines of the invoice have to be divided into sets by their Sale Line Deal Type.</p>
+<p>Different lines in the Purchase Invoice may have different Sale Line Deal Types. For each of these Sale Line Deal Types have to be created a separate VAT Entry. Therefore, at the beginning of the generation procedure, the lines of the purchase invoice have to be divided into sets by their Sale Line Deal Type.</p>
 <p>For each set of lines is calculated the sum of the distributed VAT amounts. The algorithm of this calculation is described below:
 <br><em>Тo make the algorithm more understandable, we will introduce several auxiliary variables. The values of these variables will be used in the descriptions of the Metrics and the creation of the new document.</em></p>
-<pre><code>
+<pre><code>VATSaleDealType = the SaleLineDealType of the current set of purchase invoice lines
+
 VATDocumentAmountType = PurchaseInvoices.EnterpriseCompany.VATDocumentAmountType
  
 VATDocumentAmountCurrency = IIF(PurchaseInvoicesDocumentAmounts.InputAmountCurrency is not Null, PurchaseInvoice.DocumentAmounts.InputAmountCurrency Where PurchaseInvoices.DocumentAmounts.DocumentAmountType = VATDocumentAmountType, PurchaseInvoices.DocumentCurrency)

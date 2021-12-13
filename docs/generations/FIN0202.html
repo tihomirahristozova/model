@@ -119,7 +119,7 @@
 </tr>
 <tr>
 <td style="text-align: left;">Split Function</td>
-<td>InvoiceLine.LineDealType</td>
+<td>PurchaseInvoiceLine.LineDealType</td>
 </tr>
 <tr>
 <td style="text-align: left;">Introduced In Version</td>
@@ -133,10 +133,12 @@
 </table>
 <h2 id="business-logic">Business Logic</h2>
 <p>The generation is used for creating purchase VAT entries from Purchase Invoices. These records contain VAT Amount and VAT Base Amount from current Purchase Invoice and are used for collecting data  for the creating of the VAT Declaration for the reporting period.</p>
-<p>Different lines in the Purchase Invoice may have different Line Deal Types. For each of these Line Deal Type have to be created a separate VAT Entry. Therefore, at the beginning of the generation procedure, the lines of the invoice have to be divided into sets by their Deal Type.</p>
+<p>Different lines in the Purchase Invoice may have different Line Deal Types. For each of these Line Deal Types have to be created a separate VAT Entry. Therefore, at the beginning of the generation procedure, the lines of the purchase invoice have to be divided into sets by their Line Deal Type.</p>
 <p>For each set of lines is calculated the sum of the distributed VAT amounts. The algorithm of this calculation is described below:
 <br><em>Тo make the algorithm more understandable, we will introduce several auxiliary variables. The values of these variables will be used in the descriptions of the Metrics and the creation of the new document.</em></p>
-<pre><code>VATDocumentAmountType = PurchaseInvoice.EnterpriseCompany.VATDocumentAmountType
+<pre><code>VATDealType = the LineDealType of the current set of purchase invoice lines
+
+VATDocumentAmountType = PurchaseInvoice.EnterpriseCompany.VATDocumentAmountType
  
 VATDocumentAmountCurrency = IIF(PurchaseInvoice.DocumentAmounts.InputAmountCurrency is not Null, PurchaseInvoice.DocumentAmounts.InputAmountCurrency Where PurchaseInvoice.DocumentAmounts.DocumentAmountType = VATDocumentAmountType, PurchaseInvoice.DocumentCurrency)
 
