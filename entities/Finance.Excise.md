@@ -6,6 +6,7 @@ uid: Finance.Excise
 ## Entities
 - [ExciseAdministrativeDocumentLines](Finance.Excise.ExciseAdministrativeDocumentLines.md)  
 - [ExciseAdministrativeDocuments](Finance.Excise.ExciseAdministrativeDocuments.md)  
+- [ExciseDeclarations](Finance.Excise.ExciseDeclarations.md)  
 - [ExciseDutyRates](Finance.Excise.ExciseDutyRates.md)  
 - [ExciseOperationTypes](Finance.Excise.ExciseOperationTypes.md)  
 - [ExciseProductCategories](Finance.Excise.ExciseProductCategories.md)  

@@ -664,6 +664,9 @@ references:
 - uid: Finance.Excise.ExciseAdministrativeDocuments
   name: Finance.Excise.ExciseAdministrativeDocuments Entity
   href: entities/Finance.Excise.ExciseAdministrativeDocuments.html
+- uid: Finance.Excise.ExciseDeclarations
+  name: Finance.Excise.ExciseDeclarations Entity
+  href: entities/Finance.Excise.ExciseDeclarations.html
 - uid: Finance.Excise.ExciseDutyRates
   name: Finance.Excise.ExciseDutyRates Entity
   href: entities/Finance.Excise.ExciseDutyRates.html

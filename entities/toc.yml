@@ -460,6 +460,8 @@
       href: Finance.Excise.ExciseAdministrativeDocumentLines.md
     - name: ExciseAdministrativeDocuments
       href: Finance.Excise.ExciseAdministrativeDocuments.md
+    - name: ExciseDeclarations
+      href: Finance.Excise.ExciseDeclarations.md
     - name: ExciseDutyRates
       href: Finance.Excise.ExciseDutyRates.md
     - name: ExciseOperationTypes

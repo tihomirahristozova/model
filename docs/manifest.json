@@ -9821,6 +9821,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "business-rules/R32707.md",
+      "output": {
+        ".html": {
+          "relative_path": "business-rules/R32707.html",
+          "hash": "XcEZ3U7quYjoqpDK1ToKcg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "data-types.md",
       "output": {
         ".html": {
@@ -12471,6 +12483,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "entities/Finance.Excise.ExciseDeclarations.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Finance.Excise.ExciseDeclarations.html",
+          "hash": "x6NQMW4Ox2Z6rS3TxqXpvQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "entities/Finance.Excise.ExciseDutyRates.md",
       "output": {
         ".html": {
@@ -12559,7 +12583,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Finance.Excise.TaxWarehouses.html",
-          "hash": "Q+8dO3xLHzr2KOZIaNUyZg=="
+          "hash": "Tegc++PZ6t1Lx6sQzeeB2A=="
         }
       },
       "is_incremental": false,
@@ -12571,7 +12595,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Finance.Excise.html",
-          "hash": "yKIJGKsHZZz+gol+h9PUsg=="
+          "hash": "G4KgpANLqmplVwjb1FO4ew=="
         }
       },
       "is_incremental": false,
@@ -16795,7 +16819,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/toc.html",
-          "hash": "OAzMoKk4FCNwVfPYqF7KHg=="
+          "hash": "yyljT6pxkulHxR+LpDUR1g=="
         }
       },
       "is_incremental": false,
@@ -19872,7 +19896,7 @@
       "output": {
         ".html": {
           "relative_path": "tables/Exc.html",
-          "hash": "WXG5L2mUCJqkqhnrux83uw=="
+          "hash": "vYD6M91k3EgCLf++/jCvgg=="
         }
       },
       "is_incremental": false,
@@ -19897,6 +19921,18 @@
         ".html": {
           "relative_path": "tables/Exc_Excise_Administrative_Documents.html",
           "hash": "i1ThUPaoenHcjoGdPvCG/Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tables/Exc_Excise_Declarations.md",
+      "output": {
+        ".html": {
+          "relative_path": "tables/Exc_Excise_Declarations.html",
+          "hash": "elLwsgU9rNeyOFCdw/XsTg=="
         }
       },
       "is_incremental": false,
@@ -19980,7 +20016,7 @@
       "output": {
         ".html": {
           "relative_path": "tables/Exc_Tax_Warehouses.html",
-          "hash": "U7+xX0j2+iYJAQjh3LEesg=="
+          "hash": "IwiJb6Y7+yygkuodr3m3Tg=="
         }
       },
       "is_incremental": false,
@@ -25104,7 +25140,7 @@
       "output": {
         ".html": {
           "relative_path": "tables/index.html",
-          "hash": "0+LndMoD1m2t2KOxHNZUkQ=="
+          "hash": "PWS21tDJCp4Xr+VhS1ZiHA=="
         }
       },
       "is_incremental": false,
@@ -25116,7 +25152,7 @@
       "output": {
         ".html": {
           "relative_path": "tables/toc.html",
-          "hash": "RQqHC5Tw7K9GVjM9LaJsBQ=="
+          "hash": "6yUy3i5r2+cm4nleEpDaeg=="
         }
       },
       "is_incremental": false,
