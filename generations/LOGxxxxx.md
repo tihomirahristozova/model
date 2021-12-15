@@ -88,9 +88,9 @@ StoreTransactionLine.Lot = DocumentFulfillment.Lot
 
 StoreTransactionLine.SerialNumber = DocumentFulfillment.SerialNumber
 
-StoreTransactionLine.QuantityUnit = StoreOrderLine.QuantityUnit  ??????
+StoreTransactionLine.QuantityUnit = StoreOrderLine.QuantityUnit  
 
-StoreTransactionLine.Quantity = CONVERT(REMAINING(MStandardQuantity), StoreOrderLine.QuantityUnit) ????
+StoreTransactionLine.Quantity = CONVERT(REMAINING(MStandardQuantity), StoreTransactionLine.QuantityUnit) ????
 
 StoreTransactionLine.QuantityBase = REMAINING(MQuantityBase)
 
