@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>LOGxxxxx Create Store Transaction for fulfilled .. | ERP.net Domain Model </title>
+    <title>LOGxxxxx Create Store Transaction for the completed document fulfillments | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="LOGxxxxx Create Store Transaction for fulfilled .. | ERP.net Domain Model ">
+    <meta name="title" content="LOGxxxxx Create Store Transaction for the completed document fulfillments | ERP.net Domain Model ">
     <meta name="generator" content="docfx 2.56.9.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
@@ -75,7 +75,7 @@
 // erp.entity: Logistics.Inventory.StoreOrders
 // erp.type: generation
 // ---</p>
-<h1 id="logxxxxx-create-store-transaction-for-fulfilled-">LOGxxxxx Create Store Transaction for fulfilled ..</h1>
+<h1 id="logxxxxx-create-store-transaction-for-the-completed-document-fulfillments">LOGxxxxx Create Store Transaction for the completed document fulfillments</h1>
 <h2 id="basic-information">Basic Information</h2>
 <table>
 <thead>
@@ -99,7 +99,7 @@
 </tr>
 <tr>
 <td style="text-align: left;">Full Name</td>
-<td>Create Store transactions (with waiting for warehouse operations)</td>
+<td>Create Store Transaction for the completed document fulfillments</td>
 </tr>
 <tr>
 <td style="text-align: left;">Status</td>
@@ -122,8 +122,8 @@
 <td>Ignore</td>
 </tr>
 <tr>
-<td style="text-align: left;">Introduced In Version</td>
-<td>2018.2</td>
+<td style="text-align: left;">Version</td>
+<td>Introduced: 2022</td>
 </tr>
 <tr>
 <td style="text-align: left;">Date of Suspension</td>
@@ -155,22 +155,26 @@ Transaction.DocumentCurrency = StoreOrder.DocumentCurrency
 <table>
 <thead>
 <tr>
-<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Fulfilment Name</th>
 <th>StoreOrderLineToStoreTransactionLine</th>
 </tr>
 </thead>
 <tbody>
 <tr>
+<td style="text-align: left;">Fulfilment Tracking Type</td>
+<td>Fulfilment Table</td>
+</tr>
+<tr>
 <td style="text-align: left;">Parent Entity</td>
 <td>StoreOrderLine</td>
 </tr>
 <tr>
-<td style="text-align: left;">Child Entity</td>
-<td>StoreTransactionLine</td>
+<td style="text-align: left;">Fulfilment Table</td>
+<td>DocumentFulfillment</td>
 </tr>
 <tr>
-<td style="text-align: left;">Parent / Child Relationship</td>
-<td>StoreTransactionLine.ParentDocument = StoreOrder;StoreTransactionLine.ParentLineNo = StoreOrderLine.LineNo</td>
+<td style="text-align: left;">Parent Entity/ Fulfilment Table Relationship</td>
+<td>StoreOrderLineId = DocumentFulfillment.DocumentLineId</td>
 </tr>
 </tbody>
 </table>
@@ -178,73 +182,64 @@ Transaction.DocumentCurrency = StoreOrder.DocumentCurrency
 <table>
 <thead>
 <tr>
-<th style="text-align: left;">Fulfillment Name</th>
+<th style="text-align: left;">Fulfilment Name</th>
 <th style="text-align: center;">Metric Name</th>
 <th style="text-align: center;">Measurement Unit</th>
 <th style="text-align: left;">Parent Value</th>
-<th style="text-align: left;">Child Value</th>
+<th style="text-align: left;">Fulfilment Table Value</th>
 <th style="text-align: left;">New Record</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td style="text-align: left;">StoreOrderLineToStoreTransactionLine</td>
-<td style="text-align: center;">MStandardQuantityBase</td>
-<td style="text-align: center;">StoreOrderLine.Product.BaseMeasurementUnit</td>
-<td style="text-align: left;">StoreOrderLine.StandardQuantityBase</td>
-<td style="text-align: left;">StoreTransactionLine.StandardQuantityBase</td>
-<td style="text-align: left;">YES</td>
-</tr>
-<tr>
-<td style="text-align: left;">StoreOrderLineToStoreTransactionLine</td>
-<td style="text-align: center;">MQuantity</td>
-<td style="text-align: center;">StoreOrderLine.QuantityUnit</td>
-<td style="text-align: left;">StoreOrderLine.Quantity</td>
-<td style="text-align: left;">StoreTransactionLine.Quantity</td>
-<td style="text-align: left;">NO</td>
-</tr>
-<tr>
-<td style="text-align: left;">StoreOrderLineToStoreTransactionLine</td>
 <td style="text-align: center;">MQuantityBase</td>
 <td style="text-align: center;">StoreOrderLine.Product.BaseMeasurementUnit</td>
 <td style="text-align: left;">StoreOrderLine.QuantityBase</td>
-<td style="text-align: left;">StoreTransactionLine.QuantityBase</td>
+<td style="text-align: left;">DocumentFulfillment.QuantityBase</td>
 <td style="text-align: left;">NO</td>
 </tr>
 <tr>
 <td style="text-align: left;">StoreOrderLineToStoreTransactionLine</td>
-<td style="text-align: center;">MLineCost</td>
-<td style="text-align: center;">StoreOrder.DocumentCurrency</td>
-<td style="text-align: left;">StoreOrderLine.LineCost</td>
-<td style="text-align: left;">StoreTransactionLine.LineCost</td>
-<td style="text-align: left;">if (StoreOrder.MovementType== Receipt) {New Record = YES},else {New Record = NO}</td>
+<td style="text-align: center;">MStandardQuantity</td>
+<td style="text-align: center;">StoreOrderLine.Product.BaseMeasurementUnit</td>
+<td style="text-align: left;">StoreOrderLine.StandardQuantity</td>
+<td style="text-align: left;">DocumentFulfillment.StandardQuantity</td>
+<td style="text-align: left;">YES</td>
 </tr>
 </tbody>
 </table>
-<p>The lines of the new document are created based on the data for the Fulfilled Part of quantities by Store Transactions that are already created (for more information, see topic <a href="../reference/discrepancy-system.html">Discrepancy System</a>). The new StoreTransactionLine is created as follows:</p>
-<pre><code>StoreTransactionLine.LineNo = StoreOrderLine.LineNo
-
+<p><br><br>
+The lines of the new document are created based on the data of the Completed records in the Document Fulfillments table.
+The table contains the information for the Fulfilled Part of quantities by the Warehouse Oders which have already been created.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Note that for the calculation of the Fulfilled Part are taken into account only the recods whoose Fulfillment Type is Completed.</p>
+</div>
+<br>
+<p><strong>The new StoreTransactionLine is created as follows:</strong></p>
+<pre><code>
 StoreTransactionLine.ParentStoreOrderLine = StoreOrderLine
 
-StoreTransactionLine.StoreBin = IFF (StoreOrderLine.StoreBin != NULL, StoreOrderLine.StoreBin, IFF(ProductDefaultStoreBin(Product == StoreTransactionLine.Product &amp;&amp; Store = StoreOrder.Store).Count() == 1, ProductDefaultStoreBin.DefaultBin, StoreOrder.Store.DefaultStoreBin))
+StoreTransactionLine.StoreBin = null
 
 StoreTransactionLine.OriginalProduct = StoreOrderLine.Product
 
-StoreTransactionLine.Product = StoreOrderLine.Product
+StoreTransactionLine.Product = DocumentFulfillment.Product
 
-StoreTransactionLine.Lot = StoreOrderLine.Lot
+StoreTransactionLine.ProductVariant = DocumentFulfillment.ProductVariant
 
-StoreTransactionLine.SerialNumber = StoreOrderLine.SerialNumber
+StoreTransactionLine.Lot = DocumentFulfillment.Lot
 
-StoreTransactionLine.Quantity = StoreOrderLine.REMAINING(MQuantity)
+StoreTransactionLine.SerialNumber = DocumentFulfillment.SerialNumber
 
-StoreTransactionLine.QuantityUnit = StoreOrderLine.QuantityUnit
+StoreTransactionLine.QuantityUnit = StoreOrderLine.QuantityUnit  
 
-StoreTransactionLine.QuantityBase = StoreOrderLine.REMAINING(MQuantityBase)
+StoreTransactionLine.Quantity = CONVERT(REMAINING(MStandardQuantity), StoreTransactionLine.QuantityUnit) ????
 
-StoreTransactionLine.StandardQuantityBase = StoreOrderLine.REMAINING(MStandardQuantityBase)
+StoreTransactionLine.QuantityBase = REMAINING(MQuantityBase)
 
-StoreTransactionLine.Notes = StoreOrderLine.Notes
+StoreTransactionLine.StandardQuantityBase = REMAINING(MStandardQuantity)
 
 StoreTransactionLine.UnitCost = StoreOrderLine.UnitCost
 
@@ -254,11 +249,11 @@ StoreTransactionLine.GuaranteePeriodDays = StoreOrderLine.GuaranteePeriodDays
 
 StoreTransactionLine.ParentLineId = StoreOrderLine.ParentLineId
 
-StoreTransactionLine.ProductVariant = StoreOrderLine.ProductVariant
-
 StoreTransactionLine.ParentLineNo = StoreOrderLine.LineNo
 
-StoreTransactionLine.TransactionTimestamp = StoreOrderLine.TransactionTimestamp
+StoreTransactionLine.TransactionTimestamp = null
+
+StoreTransactionLine.Notes = StoreOrderLine.Notes
 </code></pre>
 </article>
           </div>
