@@ -3,22 +3,22 @@
 // erp.type: generation
 // ---
 
-# LOGxxxxx Create Store Transaction for fulfilled ..
+# LOGxxxxx Create Store Transaction for the completed document fulfillments
 
 ## Basic Information
 
 | Module                          | Logistics.Inventory                                               |
 | :------------------------------ | ----------------------------------------------------------------- |
-| Code                            | LOGxxxxx                                                               |
+| Code                            | LOGxxxxx                                                          |
 | Parent Document                 | StoreOrder                                                        |
 | Sub-document                    | StoreTransaction                                                  |
-| Full Name                       | Create Store transactions (with waiting for warehouse operations) |
+| Full Name                       | Create Store Transaction for the completed document fulfillments |
 | Status                          | [ACTIVE](xref:generation-procedures) |
 | Deterministic                   | [YES](xref:document-generation-and-transitional-documents) |
 | Supports Transitional Documents | [NO](xref:document-generation-and-transitional-documents) |
 | Replaces                        | -                                                                 |
 | Orphan Rows                     | Ignore                                                            |
-| Introduced In Version           | 2018.2                                                            |
+| Version                         | Introduced: 2022                                                  |
 | Date of Suspension              | -                                                                 |
 
 ## Business Logic
@@ -47,47 +47,54 @@ Transaction.DocumentCurrency = StoreOrder.DocumentCurrency
 
 ## Fulfillments
 
-| Name                        | StoreOrderLineToStoreTransactionLine                         |
-| :-------------------------- | ------------------------------------------------------------ |
-| Parent Entity               | StoreOrderLine                                               |
-| Child Entity                | StoreTransactionLine                                         |
-| Parent / Child Relationship | StoreTransactionLine.ParentDocument = StoreOrder;StoreTransactionLine.ParentLineNo = StoreOrderLine.LineNo |
+| Fulfilment Name                              | StoreOrderLineToStoreTransactionLine                 |
+| :------------------------------------------- | ------------------------------------------------------------ |
+| Fulfilment Tracking Type                     | Fulfilment Table                                             |
+| Parent Entity                                | StoreOrderLine                                     |
+| Fulfilment Table                             | DocumentFulfillment                                          |
+| Parent Entity/ Fulfilment Table Relationship | StoreOrderLineId = DocumentFulfillment.DocumentLineId |
 
 ## [Metrics](../reference/metrics.md)
 
-| Fulfillment Name                     |      Metric Name      |              Measurement Unit              | Parent Value                        | Child Value                               | New Record                                                   |
-| :----------------------------------- | :-------------------: | :----------------------------------------: | :---------------------------------- | :---------------------------------------- | :----------------------------------------------------------- |
-| StoreOrderLineToStoreTransactionLine | MStandardQuantityBase | StoreOrderLine.Product.BaseMeasurementUnit | StoreOrderLine.StandardQuantityBase | StoreTransactionLine.StandardQuantityBase | YES                                                          |
-| StoreOrderLineToStoreTransactionLine |       MQuantity       |        StoreOrderLine.QuantityUnit         | StoreOrderLine.Quantity             | StoreTransactionLine.Quantity             | NO                                                           |
-| StoreOrderLineToStoreTransactionLine |     MQuantityBase     | StoreOrderLine.Product.BaseMeasurementUnit | StoreOrderLine.QuantityBase         | StoreTransactionLine.QuantityBase         | NO                                                           |
-| StoreOrderLineToStoreTransactionLine |       MLineCost       |        StoreOrder.DocumentCurrency         | StoreOrderLine.LineCost             | StoreTransactionLine.LineCost             | if (StoreOrder.MovementType== Receipt) {New Record = YES},else {New Record = NO} |
+| Fulfilment Name                              |  Metric Name  |                   Measurement Unit                   | Parent Value                              | Fulfilment Table Value           | New Record |
+| :------------------------------------------- | :-----------: | :--------------------------------------------------: | :---------------------------------------- | :------------------------------- | :--------- |
+| StoreOrderLineToStoreTransactionLine | MQuantityBase | StoreOrderLine.Product.BaseMeasurementUnit |  StoreOrderLine.QuantityBase | DocumentFulfillment.QuantityBase | NO |
+| StoreOrderLineToStoreTransactionLine | MStandardQuantity | StoreOrderLine.Product.BaseMeasurementUnit |  StoreOrderLine.StandardQuantity | DocumentFulfillment.StandardQuantity | YES |
 
-The lines of the new document are created based on the data for the Fulfilled Part of quantities by Store Transactions that are already created (for more information, see topic [Discrepancy System](../reference/discrepancy-system.md)). The new StoreTransactionLine is created as follows:
+<br/><br/>
+The lines of the new document are created based on the data of the Completed records in the Document Fulfillments table. 
+The table contains the information for the Fulfilled Part of quantities by the Warehouse Oders which have already been created.
+
+> [!Note]
+> Note that for the calculation of the Fulfilled Part are taken into account only the recods whoose Fulfillment Type is Completed.
+
+<br/>
+
+**The new StoreTransactionLine is created as follows:**
 
 ```
-StoreTransactionLine.LineNo = StoreOrderLine.LineNo
 
 StoreTransactionLine.ParentStoreOrderLine = StoreOrderLine
 
-StoreTransactionLine.StoreBin = IFF (StoreOrderLine.StoreBin != NULL, StoreOrderLine.StoreBin, IFF(ProductDefaultStoreBin(Product == StoreTransactionLine.Product && Store = StoreOrder.Store).Count() == 1, ProductDefaultStoreBin.DefaultBin, StoreOrder.Store.DefaultStoreBin))
+StoreTransactionLine.StoreBin = null
 
 StoreTransactionLine.OriginalProduct = StoreOrderLine.Product
 
-StoreTransactionLine.Product = StoreOrderLine.Product
+StoreTransactionLine.Product = DocumentFulfillment.Product
 
-StoreTransactionLine.Lot = StoreOrderLine.Lot
+StoreTransactionLine.ProductVariant = DocumentFulfillment.ProductVariant
 
-StoreTransactionLine.SerialNumber = StoreOrderLine.SerialNumber
+StoreTransactionLine.Lot = DocumentFulfillment.Lot
 
-StoreTransactionLine.Quantity = StoreOrderLine.REMAINING(MQuantity)
+StoreTransactionLine.SerialNumber = DocumentFulfillment.SerialNumber
 
-StoreTransactionLine.QuantityUnit = StoreOrderLine.QuantityUnit
+StoreTransactionLine.QuantityUnit = StoreOrderLine.QuantityUnit  ??????
 
-StoreTransactionLine.QuantityBase = StoreOrderLine.REMAINING(MQuantityBase)
+StoreTransactionLine.Quantity = CONVERT(REMAINING(MStandardQuantity), StoreOrderLine.QuantityUnit) ????
 
-StoreTransactionLine.StandardQuantityBase = StoreOrderLine.REMAINING(MStandardQuantityBase)
+StoreTransactionLine.QuantityBase = REMAINING(MQuantityBase)
 
-StoreTransactionLine.Notes = StoreOrderLine.Notes
+StoreTransactionLine.StandardQuantityBase = REMAINING(MStandardQuantity)
 
 StoreTransactionLine.UnitCost = StoreOrderLine.UnitCost
 
@@ -97,9 +104,9 @@ StoreTransactionLine.GuaranteePeriodDays = StoreOrderLine.GuaranteePeriodDays
 
 StoreTransactionLine.ParentLineId = StoreOrderLine.ParentLineId
 
-StoreTransactionLine.ProductVariant = StoreOrderLine.ProductVariant
-
 StoreTransactionLine.ParentLineNo = StoreOrderLine.LineNo
 
-StoreTransactionLine.TransactionTimestamp = StoreOrderLine.TransactionTimestamp
+StoreTransactionLine.TransactionTimestamp = null
+
+StoreTransactionLine.Notes = StoreOrderLine.Notes
 ```
