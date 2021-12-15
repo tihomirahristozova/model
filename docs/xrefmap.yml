@@ -271,6 +271,12 @@ references:
 - uid: Applications.Telephony.CallDetails
   name: Applications.Telephony.CallDetails Entity
   href: entities/Applications.Telephony.CallDetails.html
+- uid: code-validation
+  name: Code validation
+  href: reference/common-business-rules/code-validation.html
+- uid: code-validation-strict
+  name: Code validation (strict)
+  href: reference/common-business-rules/code-validation-strict.html
 - uid: Communities
   name: Communities Namespace
   href: entities/Communities.html
