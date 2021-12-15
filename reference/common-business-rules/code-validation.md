@@ -1,3 +1,7 @@
+---
+uid: code-validation
+---
+
 # Code validation
 
 This validation is applied for data attributes containing code.
