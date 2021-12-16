@@ -24,6 +24,7 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](Applications.Rental.TransactionTemplates.md#id) | guid |  
+| [RowVersion](Applications.Rental.TransactionTemplates.md#rowversion) | byte[] |  
 | [TransactionType](Applications.Rental.TransactionTemplates.md#transactiontype) | [TransactionType](Applications.Rental.TransactionTemplates.md#transactiontype) | Transaction type for the rent transaction that is to be created. `Required` 
 
 ## References
@@ -41,6 +42,12 @@ _Type_: **guid**
 _Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 ### TransactionType
 

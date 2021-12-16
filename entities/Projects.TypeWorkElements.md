@@ -29,6 +29,7 @@ Aggregate Root:
 | [Id](Projects.TypeWorkElements.md#id) | guid |  
 | [Notes](Projects.TypeWorkElements.md#notes) | string (max) __nullable__ | Notes for this TypeWorkElement. 
 | [ParentFullPath](Projects.TypeWorkElements.md#parentfullpath) | string (25) __nullable__ | The full path of the parent work element in this project type. null when this is root element. `Filter(eq;like)` 
+| [RowVersion](Projects.TypeWorkElements.md#rowversion) | byte[] |  
 | [WorkElementCode](Projects.TypeWorkElements.md#workelementcode) | string (3) | The code of the work element, unique among the sibling elements within the parent work element. `Required` `Filter(eq)` 
 | [WorkElementName](Projects.TypeWorkElements.md#workelementname) | string (254) | The name of the work element, unique among the sibling elements within the parent work element. `Required` `Filter(eq)` 
 
@@ -36,7 +37,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ProjectType](Projects.TypeWorkElements.md#projecttype) | [ProjectTypes](Projects.ProjectTypes.md) | The `ProjectType`(Projects.TypeWorkElements.md#projecttype) to which this TypeWorkElement belongs. `Required` `Filter(multi eq)` `Owner` |
+| [ProjectType](Projects.TypeWorkElements.md#projecttype) | [ProjectTypes](Projects.ProjectTypes.md) | The <see cref="ProjectType"/> to which this TypeWorkElement belongs. `Required` `Filter(multi eq)` `Owner` |
 
 
 ## Attribute Details
@@ -75,6 +76,12 @@ _Supported Filters_: **Equals, Like**
 _Supports Order By_: **False**  
 _Maximum Length_: **25**  
 
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+
 ### WorkElementCode
 
 The code of the work element, unique among the sibling elements within the parent work element. `Required` `Filter(eq)`
@@ -98,7 +105,7 @@ _Maximum Length_: **254**
 
 ### ProjectType
 
-The `ProjectType`(Projects.TypeWorkElements.md#projecttype) to which this TypeWorkElement belongs. `Required` `Filter(multi eq)` `Owner`
+The <see cref="ProjectType"/> to which this TypeWorkElement belongs. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[ProjectTypes](Projects.ProjectTypes.md)**  
 _Indexed_: **True**  

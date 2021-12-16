@@ -29,15 +29,16 @@ Aggregate Root:
 | [Id](Finance.Assets.AssetOrderLines.md#id) | guid |  
 | [ParentLineNo](Finance.Assets.AssetOrderLines.md#parentlineno) | int32 __nullable__ | The number of the line within the parent document, which the current line executes. null when the current line does not execute line. `Introduced in version 18.2` 
 | [Quantity](Finance.Assets.AssetOrderLines.md#quantity) | int32 | Indicates the nature of the current operation: 1 - the operation is applied, 0 - no change, -1 - the operation is cancelled. `Required` `Default(0)` 
+| [RowVersion](Finance.Assets.AssetOrderLines.md#rowversion) | byte[] |  
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Asset](Finance.Assets.AssetOrderLines.md#asset) | [Assets](Finance.Assets.Assets.md) | The asset that is acquired or retired. `Required` `Filter(multi eq)` |
-| [AssetOrder](Finance.Assets.AssetOrderLines.md#assetorder) | [AssetOrders](Finance.Assets.AssetOrders.md) | The `AssetOrder`(Finance.Assets.AssetOrderLines.md#assetorder) to which this AssetOrderLine belongs. `Required` `Filter(multi eq)` `Owner` |
+| [AssetOrder](Finance.Assets.AssetOrderLines.md#assetorder) | [AssetOrders](Finance.Assets.AssetOrders.md) | The <see cref="AssetOrder"/> to which this AssetOrderLine belongs. `Required` `Filter(multi eq)` `Owner` |
 | [AssetValueCurrency](Finance.Assets.AssetOrderLines.md#assetvaluecurrency) | [Currencies](General.Currencies.md) | Currency of Asset Value. `Required` `Filter(multi eq)` |
-| [Document](Finance.Assets.AssetOrderLines.md#document) | [AssetOrders](Finance.Assets.AssetOrders.md) | The `AssetOrder`(Finance.Assets.AssetOrderLines.md#assetorder) to which this AssetOrderLine belongs. `Required` `Filter(multi eq)` |
+| [Document](Finance.Assets.AssetOrderLines.md#document) | [AssetOrders](Finance.Assets.AssetOrders.md) | The <see cref="AssetOrder"/> to which this AssetOrderLine belongs. `Required` `Filter(multi eq)` |
 | [ParentDocument](Finance.Assets.AssetOrderLines.md#parentdocument) | [Documents](General.Documents.md) (nullable) | The document, which the current line executes. null when the current line does not execute another line. `Filter(multi eq)` `Introduced in version 18.2` |
 
 
@@ -76,6 +77,12 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Default Value_: **0**  
 
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+
 
 ## Reference Details
 
@@ -88,7 +95,7 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### AssetOrder
 
-The `AssetOrder`(Finance.Assets.AssetOrderLines.md#assetorder) to which this AssetOrderLine belongs. `Required` `Filter(multi eq)` `Owner`
+The <see cref="AssetOrder"/> to which this AssetOrderLine belongs. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[AssetOrders](Finance.Assets.AssetOrders.md)**  
 _Indexed_: **True**  
@@ -104,7 +111,7 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### Document
 
-The `AssetOrder`(Finance.Assets.AssetOrderLines.md#assetorder) to which this AssetOrderLine belongs. `Required` `Filter(multi eq)`
+The <see cref="AssetOrder"/> to which this AssetOrderLine belongs. `Required` `Filter(multi eq)`
 
 _Type_: **[AssetOrders](Finance.Assets.AssetOrders.md)**  
 _Indexed_: **True**  

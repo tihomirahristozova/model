@@ -152,6 +152,11 @@ Aggregate Root:<br>
 <td>string (256) <strong>nullable</strong></td>
 <td>The actual value of the parameter.</td>
 </tr>
+<tr>
+<td><a href="Systems.Bpm.CalculatedAttributeExpressions.html#rowversion">RowVersion</a></td>
+<td>byte[]</td>
+<td></td>
+</tr>
 </tbody>
 </table>
 <h2 id="references">References</h2>
@@ -167,7 +172,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Systems.Bpm.CalculatedAttributeExpressions.html#calculatedattribute">CalculatedAttribute</a></td>
 <td><a href="Systems.Bpm.CalculatedAttributes.html">CalculatedAttributes</a></td>
-<td>The <code>CalculatedAttribute</code>(Systems.Bpm.CalculatedAttribute<br>Expressions.md#calculatedattribute) to which this CalculatedAttribute<br>Expression belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
+<td>The <see cref="Calculated<br />Attribute"></see> to which this CalculatedAttribute<br>Expression belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 </tbody>
 </table>
@@ -333,12 +338,12 @@ Generic enum type for ExpressionOperator properties<br>
 </tr>
 <tr>
 <td>LT</td>
-<td><em>Database Value:</em> 'LT' <br> <em>Model Value:</em> 25 <br> <em>Domain API Value:</em> 'LT'</td>
+<td>LT(Value1, Value2) =&gt; Value1 &lt; Value2.. Stored as 'LT'. <br> <em>Database Value:</em> 'LT' <br> <em>Model Value:</em> 25 <br> <em>Domain API Value:</em> 'LT'</td>
 <td></td>
 </tr>
 <tr>
 <td>LTE</td>
-<td><em>Database Value:</em> 'LTE' <br> <em>Model Value:</em> 26 <br> <em>Domain API Value:</em> 'LTE'</td>
+<td>LTE(Value1, Value2) =&gt; Value1 &lt;= Value2.. Stored as 'LTE'. <br> <em>Database Value:</em> 'LTE' <br> <em>Model Value:</em> 26 <br> <em>Domain API Value:</em> 'LTE'</td>
 <td></td>
 </tr>
 <tr>
@@ -600,9 +605,13 @@ Generic enum type for ExpressionParameterType properties<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>256</strong></p>
+<h3 id="rowversion">RowVersion</h3>
+<p><em>Type</em>: <strong>byte[]</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="calculatedattribute">CalculatedAttribute</h3>
-<p>The <code>CalculatedAttribute</code>(Systems.Bpm.CalculatedAttributeExpressions.md#calculatedattribute) to which this CalculatedAttributeExpression belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
+<p>The <see cref="CalculatedAttribute"></see> to which this CalculatedAttributeExpression belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="Systems.Bpm.CalculatedAttributes.html">CalculatedAttributes</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>

@@ -113,6 +113,11 @@ Aggregate Root:<br>
 <td>Notes for this SupplySchemaRoute.</td>
 </tr>
 <tr>
+<td><a href="Logistics.Inventory.SupplySchemaRoutes.html#rowversion">RowVersion</a></td>
+<td>byte[]</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="Logistics.Inventory.SupplySchemaRoutes.html#schemaxml">SchemaXML</a></td>
 <td>string (max) <strong>nullable</strong></td>
 <td>Obsolete. Not used. (Used by the schematic control).</td>
@@ -147,7 +152,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Logistics.Inventory.SupplySchemaRoutes.html#supplyschema">SupplySchema</a></td>
 <td><a href="Logistics.Inventory.SupplySchemata.html">SupplySchemata</a></td>
-<td>The <code>SupplySchema</code>(Logistics.Inventory.SupplySchemaRoutes.md#supplyschema) to which this SupplySchemaRoute belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
+<td>The <see cref="SupplySchema"></see> to which this SupplySchemaRoute belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 </tbody>
 </table>
@@ -163,6 +168,10 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>254</strong></p>
+<h3 id="rowversion">RowVersion</h3>
+<p><em>Type</em>: <strong>byte[]</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="schemaxml">SchemaXML</h3>
 <p>Obsolete. Not used. (Used by the schematic control).</p>
 <p><em>Type</em>: <strong>string (max) <strong>nullable</strong></strong><br>
@@ -185,7 +194,7 @@ Aggregate Root:<br>
 <p><em>Type</em>: <strong><a href="Logistics.Inventory.Stores.html">Stores</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="supplyschema">SupplySchema</h3>
-<p>The <code>SupplySchema</code>(Logistics.Inventory.SupplySchemaRoutes.md#supplyschema) to which this SupplySchemaRoute belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
+<p>The <see cref="SupplySchema"></see> to which this SupplySchemaRoute belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="Logistics.Inventory.SupplySchemata.html">SupplySchemata</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>

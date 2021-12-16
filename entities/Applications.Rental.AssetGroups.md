@@ -31,6 +31,7 @@ Aggregate Tree
 | [ParentFullPath](Applications.Rental.AssetGroups.md#parentfullpath) | string (25) __nullable__ | The full path of the parent node. `Filter(eq)` 
 | [RentalAssetGroupCode](Applications.Rental.AssetGroups.md#rentalassetgroupcode) | string (3) | Asset group code, unique within the parent node. `Required` `Filter(eq;like)` 
 | [RentalAssetGroupName](Applications.Rental.AssetGroups.md#rentalassetgroupname) | string (254) | Asset group name, unique within the parent node. `Required` `Filter(eq;like)` 
+| [RowVersion](Applications.Rental.AssetGroups.md#rowversion) | byte[] |  
 
 ## Child Collections
 
@@ -93,6 +94,12 @@ _Type_: **string (254)**
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 
 

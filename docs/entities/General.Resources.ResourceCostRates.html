@@ -128,6 +128,11 @@ Aggregate Root:<br>
 <td>One-time cost for each usage of the resource in the resources costing currency. <code>Currency: Resource.CostingCurrency</code> <code>Required</code> <code>Default(0)</code> <code>Filter(eq;like)</code></td>
 </tr>
 <tr>
+<td><a href="General.Resources.ResourceCostRates.html#rowversion">RowVersion</a></td>
+<td>byte[]</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="General.Resources.ResourceCostRates.html#standardrateperhour">StandardRatePerHour</a></td>
 <td><a href="../data-types.html#amount">Amount (12, 4)</a></td>
 <td>The standard cost per hour of the resource in the resources costing currency. The standard cost is applied for resource usage during the normal working hours. <code>Currency: Resource.CostingCurrency</code> <code>Required</code> <code>Filter(eq;like)</code></td>
@@ -184,6 +189,10 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
+<h3 id="rowversion">RowVersion</h3>
+<p><em>Type</em>: <strong>byte[]</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="standardrateperhour">StandardRatePerHour</h3>
 <p>The standard cost per hour of the resource in the resources costing currency. The standard cost is applied for resource usage during the normal working hours. <code>Currency: Resource.CostingCurrency</code> <code>Required</code> <code>Filter(eq;like)</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount (12, 4)</a></strong><br>

@@ -158,6 +158,11 @@ Aggregate Root:<br>
 <td>Notes for this TemplateLine.</td>
 </tr>
 <tr>
+<td><a href="Finance.Accounting.TemplateLines.html#rowversion">RowVersion</a></td>
+<td>byte[]</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="Finance.Accounting.TemplateLines.html#validfromdate">ValidFromDate</a></td>
 <td>datetime <strong>nullable</strong></td>
 <td>Start date from which the accounting template line is valid. <code>Filter(multi eq;ge;le)</code></td>
@@ -192,7 +197,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Finance.Accounting.TemplateLines.html#template">Template</a></td>
 <td><a href="Finance.Accounting.Templates.html">Templates</a></td>
-<td>The <code>Template</code>(Finance.Accounting.TemplateLines.md#template) to which this TemplateLine belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
+<td>The <see cref="Template"></see> to which this TemplateLine belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 </tbody>
 </table>
@@ -297,6 +302,10 @@ Allowed values for the <code>AmountCondition</code>(Finance.Accounting.TemplateL
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>254</strong></p>
+<h3 id="rowversion">RowVersion</h3>
+<p><em>Type</em>: <strong>byte[]</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="validfromdate">ValidFromDate</h3>
 <p>Start date from which the accounting template line is valid. <code>Filter(multi eq;ge;le)</code></p>
 <p><em>Type</em>: <strong>datetime <strong>nullable</strong></strong><br>
@@ -317,7 +326,7 @@ Allowed values for the <code>AmountCondition</code>(Finance.Accounting.TemplateL
 <p><em>Type</em>: <strong><a href="Finance.Accounting.Accounts.html">Accounts</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="template">Template</h3>
-<p>The <code>Template</code>(Finance.Accounting.TemplateLines.md#template) to which this TemplateLine belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
+<p>The <see cref="Template"></see> to which this TemplateLine belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="Finance.Accounting.Templates.html">Templates</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>

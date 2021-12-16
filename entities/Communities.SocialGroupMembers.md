@@ -27,6 +27,7 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [Id](Communities.SocialGroupMembers.md#id) | guid |  
 | [JoinTimeUtc](Communities.SocialGroupMembers.md#jointimeutc) | datetime | The exact server time (in UTC), when the user joined the group. `Required` `Default(NowUtc)` 
+| [RowVersion](Communities.SocialGroupMembers.md#rowversion) | byte[] |  
 
 ## References
 
@@ -53,6 +54,12 @@ _Type_: **datetime**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **CurrentDateTimeUtc**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 
 ## Reference Details

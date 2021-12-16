@@ -39,6 +39,7 @@ Aggregate Root:
 | [Quantity](Crm.Presales.OfferLines.md#quantity) | [Quantity (12, 3)](../data-types.md#quantity) | Quantity offered. `Unit: QuantityUnit` `Required` `Default(1)` 
 | [QuantityBase](Crm.Presales.OfferLines.md#quantitybase) | [Quantity (12, 3)](../data-types.md#quantity) | The equivalent of Quantity in the base measurement unit of the Product. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` 
 | [RequiredDeliveryDate](Crm.Presales.OfferLines.md#requireddeliverydate) | date __nullable__ | Date, when the delivery is required. Alternative to Delivery Term Days. When null, Delivery Term Days is used. 
+| [RowVersion](Crm.Presales.OfferLines.md#rowversion) | byte[] |  
 | [StandardQuantityBase](Crm.Presales.OfferLines.md#standardquantitybase) | [Quantity (12, 3)](../data-types.md#quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` `Introduced in version 18.2` 
 | [UnitPrice](Crm.Presales.OfferLines.md#unitprice) | [Amount (14, 5)](../data-types.md#amount) | The unit price of the offered product. It is specified in the measurement unit of Quantity. `Currency: Offer.DocumentCurrency` `Required` `Default(0)` 
 | [Variant](Crm.Presales.OfferLines.md#variant) | string (60) __nullable__ | Name or number of variant of the whole offer. When multiple lines have the same variant, they are selected for ordering together. 
@@ -47,10 +48,10 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Document](Crm.Presales.OfferLines.md#document) | [Offers](Crm.Presales.Offers.md) | The `Offer`(Crm.Presales.OfferLines.md#offer) to which this OfferLine belongs. `Required` `Filter(multi eq)` |
+| [Document](Crm.Presales.OfferLines.md#document) | [Offers](Crm.Presales.Offers.md) | The <see cref="Offer"/> to which this OfferLine belongs. `Required` `Filter(multi eq)` |
 | [LineDiscount](Crm.Presales.OfferLines.md#linediscount) | [LineDiscounts](Crm.LineDiscounts.md) (nullable) | When not null, contains the discount policy selected for this line. `Filter(multi eq)` |
 | [LineEndCustomerParty](Crm.Presales.OfferLines.md#lineendcustomerparty) | [Parties](General.Contacts.Parties.md) (nullable) | The end customer is the customer of the dealer. It is stored for information purposes only. The end customer may not have customer definition, just party. `Filter(multi eq)` `Introduced in version 21.1.2.96` |
-| [Offer](Crm.Presales.OfferLines.md#offer) | [Offers](Crm.Presales.Offers.md) | The `Offer`(Crm.Presales.OfferLines.md#offer) to which this OfferLine belongs. `Required` `Filter(multi eq)` `Owner` |
+| [Offer](Crm.Presales.OfferLines.md#offer) | [Offers](Crm.Presales.Offers.md) | The <see cref="Offer"/> to which this OfferLine belongs. `Required` `Filter(multi eq)` `Owner` |
 | [Product](Crm.Presales.OfferLines.md#product) | [Products](General.Products.Products.md) | The offered product. `Required` `Filter(multi eq)` |
 | [ProductCode](Crm.Presales.OfferLines.md#productcode) | [ProductCodes](General.Products.ProductCodes.md) (nullable) | Not null, when the product is selected using a coding system code. `Filter(multi eq)` |
 | [ProductPrice](Crm.Presales.OfferLines.md#productprice) | [ProductPrices](Crm.ProductPrices.md) (nullable) | Not null when the price has been selected from the list of valid standard prices. `Filter(multi eq)` |
@@ -211,6 +212,12 @@ _Back-End Default Expression:_
 _Front-End Recalc Expressions:_  
 `IIF( ( obj.DeliveryTermDays == 0), obj.RequiredDeliveryDate, null)`
 `obj.Offer.RequiredDeliveryDate`
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+
 ### StandardQuantityBase
 
 The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` `Introduced in version 18.2`
@@ -252,7 +259,7 @@ _Maximum Length_: **60**
 
 ### Document
 
-The `Offer`(Crm.Presales.OfferLines.md#offer) to which this OfferLine belongs. `Required` `Filter(multi eq)`
+The <see cref="Offer"/> to which this OfferLine belongs. `Required` `Filter(multi eq)`
 
 _Type_: **[Offers](Crm.Presales.Offers.md)**  
 _Indexed_: **True**  
@@ -281,7 +288,7 @@ _Front-End Recalc Expressions:_
 `obj.Offer.EndCustomerParty`
 ### Offer
 
-The `Offer`(Crm.Presales.OfferLines.md#offer) to which this OfferLine belongs. `Required` `Filter(multi eq)` `Owner`
+The <see cref="Offer"/> to which this OfferLine belongs. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[Offers](Crm.Presales.Offers.md)**  
 _Indexed_: **True**  

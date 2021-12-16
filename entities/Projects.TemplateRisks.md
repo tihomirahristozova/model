@@ -30,12 +30,13 @@ Aggregate Root:
 | [ImpactPercent](Projects.TemplateRisks.md#impactpercent) | decimal (3, 2) | The impact of the risk to the project, expressed as percentage of the total project value. `Required` `Default(0)` 
 | [ProbabilityPercent](Projects.TemplateRisks.md#probabilitypercent) | decimal (3, 2) | The probability of the risk occurring. `Required` `Default(0)` 
 | [RiskName](Projects.TemplateRisks.md#riskname) | string (254) | The name of the risk. `Required` 
+| [RowVersion](Projects.TemplateRisks.md#rowversion) | byte[] |  
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ProjectTemplate](Projects.TemplateRisks.md#projecttemplate) | [Templates](Projects.Templates.md) | The `Template`(Projects.Templates.md) to which this TemplateRisk belongs. `Required` `Filter(multi eq)` `Owner` |
+| [ProjectTemplate](Projects.TemplateRisks.md#projecttemplate) | [Templates](Projects.Templates.md) | The <see cref="Template"/> to which this TemplateRisk belongs. `Required` `Filter(multi eq)` `Owner` |
 
 
 ## Attribute Details
@@ -83,12 +84,18 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
 
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+
 
 ## Reference Details
 
 ### ProjectTemplate
 
-The `Template`(Projects.Templates.md) to which this TemplateRisk belongs. `Required` `Filter(multi eq)` `Owner`
+The <see cref="Template"/> to which this TemplateRisk belongs. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[Templates](Projects.Templates.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

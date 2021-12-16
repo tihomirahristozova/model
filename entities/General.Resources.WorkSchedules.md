@@ -28,6 +28,7 @@ Aggregate Tree
 | [Name](General.Resources.WorkSchedules.md#name) | string (64) | The name of this WorkSchedule. `Required` `Filter(like)` 
 | [NumberOfDays](General.Resources.WorkSchedules.md#numberofdays) | int16 __nullable__ | Number of days in a recurring period. Valid only when Recurrence_Type=D. 
 | [RecurrenceType](General.Resources.WorkSchedules.md#recurrencetype) | [RecurrenceType](General.Resources.WorkSchedules.md#recurrencetype) | D=recurring each X days; W=recurring each week; M=recurring each month. `Required` `Filter(multi eq)` 
+| [RowVersion](General.Resources.WorkSchedules.md#rowversion) | byte[] |  
 
 ## Child Collections
 
@@ -77,6 +78,12 @@ _Allowed Values (General.Resources.WorkSchedulesRepository.RecurrenceType Enum M
 | RecurringEachWeek | RecurringEachWeek value. Stored as 'W'. <br /> _Database Value:_ 'W' <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'RecurringEachWeek' |
 
 _Supported Filters_: **Equals, EqualsIn**  
+_Supports Order By_: **False**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
 

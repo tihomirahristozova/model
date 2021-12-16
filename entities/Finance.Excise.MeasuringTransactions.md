@@ -32,6 +32,7 @@ Aggregate Tree
 | [MeasuringDeviceCode](Finance.Excise.MeasuringTransactions.md#measuringdevicecode) | string (32) | The code of the measuring device, used to measure the transaction. `Required` `Filter(multi eq;like)` `ORD` 
 | [Notes](Finance.Excise.MeasuringTransactions.md#notes) | string (max) __nullable__ | Notes for this MeasuringTransaction. 
 | [Quantity](Finance.Excise.MeasuringTransactions.md#quantity) | [Quantity (12, 3)](../data-types.md#quantity) | The quantity of the product, measured with this transaction. `Unit: QuantityUnit` `Required` `Filter(eq;ge;le)` 
+| [RowVersion](Finance.Excise.MeasuringTransactions.md#rowversion) | byte[] |  
 | [StartTimeUtc](Finance.Excise.MeasuringTransactions.md#starttimeutc) | datetime | Starting time of the transaction (in UTC time). `Required` `Filter(eq;ge;le)` 
 | [TransactionNumber](Finance.Excise.MeasuringTransactions.md#transactionnumber) | string (32) | Transaction number, unique for the measuring device. `Required` `Filter(multi eq;like)` 
 
@@ -126,6 +127,12 @@ The quantity of the product, measured with this transaction. `Unit: QuantityUnit
 
 _Type_: **[Quantity (12, 3)](../data-types.md#quantity)**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
+_Supports Order By_: **False**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
 ### StartTimeUtc

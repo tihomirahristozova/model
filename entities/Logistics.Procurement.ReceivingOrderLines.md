@@ -37,13 +37,14 @@ Aggregate Root:
 | [ProductDescription](Logistics.Procurement.ReceivingOrderLines.md#productdescription) | [MultilanguageString](../data-types.md#multilanguagestring) | The name of the received product, initially copied from the name in the product definition. The field can be edited by the user. `Required` 
 | [Quantity](Logistics.Procurement.ReceivingOrderLines.md#quantity) | [Quantity (18, 3)](../data-types.md#quantity) | The received quantity. `Unit: QuantityUnit` `Required` `Default(1)` `Filter(ge;le)` 
 | [QuantityBase](Logistics.Procurement.ReceivingOrderLines.md#quantitybase) | [Quantity (18, 3)](../data-types.md#quantity) | The equivalence of Quantity, in the base measurement category of the product. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` 
+| [RowVersion](Logistics.Procurement.ReceivingOrderLines.md#rowversion) | byte[] |  
 | [StandardQuantityBase](Logistics.Procurement.ReceivingOrderLines.md#standardquantitybase) | [Quantity (18, 3)](../data-types.md#quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` `Introduced in version 18.2` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Document](Logistics.Procurement.ReceivingOrderLines.md#document) | [ReceivingOrders](Logistics.Procurement.ReceivingOrders.md) | The `ReceivingOrder`(Logistics.Procurement.ReceivingOrderLines.md#receivingorder) to which this ReceivingOrderLine belongs. `Required` `Filter(multi eq)` |
+| [Document](Logistics.Procurement.ReceivingOrderLines.md#document) | [ReceivingOrders](Logistics.Procurement.ReceivingOrders.md) | The <see cref="ReceivingOrder"/> to which this ReceivingOrderLine belongs. `Required` `Filter(multi eq)` |
 | [LineStore](Logistics.Procurement.ReceivingOrderLines.md#linestore) | [Stores](Logistics.Inventory.Stores.md) (nullable) | The store in which the goods are received. `Filter(multi eq)` |
 | [Lot](Logistics.Procurement.ReceivingOrderLines.md#lot) | [Lots](Logistics.Inventory.Lots.md) (nullable) | The lot of the received goods. `Filter(multi eq)` |
 | [Product](Logistics.Procurement.ReceivingOrderLines.md#product) | [Products](General.Products.Products.md) | The received product. `Required` `Filter(multi eq)` |
@@ -52,7 +53,7 @@ Aggregate Root:
 | [PurchaseOrderLine](Logistics.Procurement.ReceivingOrderLines.md#purchaseorderline) | [PurchaseOrderLines](Logistics.Procurement.PurchaseOrderLines.md) (nullable) | The purchase order line for which we are receiving quantity. `Filter(multi eq)` |
 | [PurchaseProductPrice](Logistics.Procurement.ReceivingOrderLines.md#purchaseproductprice) | [PurchaseProductPrices](Logistics.Procurement.PurchaseProductPrices.md) (nullable) | When not null, specifies that the purchase unit price is loaded automatically from the specified purchase price record. `Filter(multi eq)` |
 | [QuantityUnit](Logistics.Procurement.ReceivingOrderLines.md#quantityunit) | [MeasurementUnits](General.MeasurementUnits.md) | The measurement unit of Quantity. Initially copied from the Default Measurement Unit of the Product. `Required` `Filter(multi eq)` |
-| [ReceivingOrder](Logistics.Procurement.ReceivingOrderLines.md#receivingorder) | [ReceivingOrders](Logistics.Procurement.ReceivingOrders.md) | The `ReceivingOrder`(Logistics.Procurement.ReceivingOrderLines.md#receivingorder) to which this ReceivingOrderLine belongs. `Required` `Filter(multi eq)` `Owner` |
+| [ReceivingOrder](Logistics.Procurement.ReceivingOrderLines.md#receivingorder) | [ReceivingOrders](Logistics.Procurement.ReceivingOrders.md) | The <see cref="ReceivingOrder"/> to which this ReceivingOrderLine belongs. `Required` `Filter(multi eq)` `Owner` |
 | [SerialNumber](Logistics.Procurement.ReceivingOrderLines.md#serialnumber) | [SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable) | Which serial number to receive/issue. null means that serial number is unknown or not applicable. `Filter(multi eq)` |
 | [StoreBin](Logistics.Procurement.ReceivingOrderLines.md#storebin) | [StoreBins](Logistics.Inventory.StoreBins.md) (nullable) | The store bin in which to receive the goods. `Filter(multi eq)` |
 
@@ -185,6 +186,12 @@ _Back-End Default Expression:_
 
 _Front-End Recalc Expressions:_  
 `IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.QuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))`
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+
 ### StandardQuantityBase
 
 The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` `Introduced in version 18.2`
@@ -203,7 +210,7 @@ _Front-End Recalc Expressions:_
 
 ### Document
 
-The `ReceivingOrder`(Logistics.Procurement.ReceivingOrderLines.md#receivingorder) to which this ReceivingOrderLine belongs. `Required` `Filter(multi eq)`
+The <see cref="ReceivingOrder"/> to which this ReceivingOrderLine belongs. `Required` `Filter(multi eq)`
 
 _Type_: **[ReceivingOrders](Logistics.Procurement.ReceivingOrders.md)**  
 _Indexed_: **True**  
@@ -281,7 +288,7 @@ _Front-End Recalc Expressions:_
 `obj.ProductCode.CodingSystem.DefaultMeasurementUnit.IfNullThen( obj.Product.PurchaseMeasurementUnit).IfNullThen( obj.Product.MeasurementUnit).IfNullThen( obj.QuantityUnit)`
 ### ReceivingOrder
 
-The `ReceivingOrder`(Logistics.Procurement.ReceivingOrderLines.md#receivingorder) to which this ReceivingOrderLine belongs. `Required` `Filter(multi eq)` `Owner`
+The <see cref="ReceivingOrder"/> to which this ReceivingOrderLine belongs. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[ReceivingOrders](Logistics.Procurement.ReceivingOrders.md)**  
 _Indexed_: **True**  

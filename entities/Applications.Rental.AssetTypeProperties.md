@@ -28,13 +28,14 @@ Aggregate Root:
 | [DefaultValue](Applications.Rental.AssetTypeProperties.md#defaultvalue) | string (254) __nullable__ | The default value of the property. `Filter(like)` 
 | [DefaultValueId](Applications.Rental.AssetTypeProperties.md#defaultvalueid) | guid __nullable__ | The value id of the default value of the property. `Filter(multi eq)` 
 | [Id](Applications.Rental.AssetTypeProperties.md#id) | guid |  
+| [RowVersion](Applications.Rental.AssetTypeProperties.md#rowversion) | byte[] |  
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Property](Applications.Rental.AssetTypeProperties.md#property) | [CustomProperties](General.CustomProperties.md) | The user-defined property, which is required for assets of the specified type. `Required` `Filter(multi eq)` |
-| [RentalAssetType](Applications.Rental.AssetTypeProperties.md#rentalassettype) | [AssetTypes](Applications.Rental.AssetTypes.md) | The `AssetType`(Applications.Rental.AssetTypes.md) to which this AssetTypeProperty belongs. `Required` `Filter(multi eq)` `Owner` |
+| [RentalAssetType](Applications.Rental.AssetTypeProperties.md#rentalassettype) | [AssetTypes](Applications.Rental.AssetTypes.md) | The <see cref="AssetType"/> to which this AssetTypeProperty belongs. `Required` `Filter(multi eq)` `Owner` |
 
 
 ## Attribute Details
@@ -62,6 +63,12 @@ _Indexed_: **True**
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+
 
 ## Reference Details
 
@@ -74,7 +81,7 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### RentalAssetType
 
-The `AssetType`(Applications.Rental.AssetTypes.md) to which this AssetTypeProperty belongs. `Required` `Filter(multi eq)` `Owner`
+The <see cref="AssetType"/> to which this AssetTypeProperty belongs. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[AssetTypes](Applications.Rental.AssetTypes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

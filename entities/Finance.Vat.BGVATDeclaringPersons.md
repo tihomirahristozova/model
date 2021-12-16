@@ -32,6 +32,7 @@ Aggregate Root:
 | [DeclaringPersonPostcode](Finance.Vat.BGVATDeclaringPersons.md#declaringpersonpostcode) | string (4) | Postcode from the address for correspondation of the declaring person. `Required` 
 | [Id](Finance.Vat.BGVATDeclaringPersons.md#id) | guid |  
 | [IsDefault](Finance.Vat.BGVATDeclaringPersons.md#isdefault) | boolean | True if this is the default person, which issues VAT declarations for this Enterprise Company. `Required` `Default(true)` 
+| [RowVersion](Finance.Vat.BGVATDeclaringPersons.md#rowversion) | byte[] |  
 
 ## References
 
@@ -112,6 +113,12 @@ _Type_: **boolean**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **True**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 
 ## Reference Details

@@ -190,6 +190,11 @@ Default Search Members:<br>
 <td>Indicates whether the Phone Number has been verified. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>Introduced in version 18.2</code></td>
 </tr>
 <tr>
+<td><a href="Systems.Security.Users.html#rowversion">RowVersion</a></td>
+<td>byte[]</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="Systems.Security.Users.html#twofactorenabled">TwoFactorEnabled</a></td>
 <td>boolean</td>
 <td>Indicates whether two-factor authentication has been enabled. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>Introduced in version 18.2</code></td>
@@ -381,6 +386,10 @@ Allowed values for the <code>PasswordFormat</code>(Systems.Security.Users.md#pas
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
+<h3 id="rowversion">RowVersion</h3>
+<p><em>Type</em>: <strong>byte[]</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="twofactorenabled">TwoFactorEnabled</h3>
 <p>Indicates whether two-factor authentication has been enabled. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>Introduced in version 18.2</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>

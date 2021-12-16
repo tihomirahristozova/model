@@ -30,6 +30,7 @@ Aggregate Tree
 | [MaxQuantity](Crm.LineDiscounts.md#maxquantity) | [Quantity (18, 3)](../data-types.md#quantity) __nullable__ | Apply the discount only if the quantity sold is equal to or less than the specified here. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Filter(eq;ge;le)` 
 | [MinQuantity](Crm.LineDiscounts.md#minquantity) | [Quantity (18, 3)](../data-types.md#quantity) __nullable__ | Apply the discount only if the quantity sold is equal to or more than the specified here. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Filter(eq;ge;le)` 
 | [Priority](Crm.LineDiscounts.md#priority) | [Priority](Crm.LineDiscounts.md#priority) | The priority of this discount policy. When selecting a discount for a sales document line, only the highest priority policy, matching the criteria is applied. `Required` `Default(3)` 
+| [RowVersion](Crm.LineDiscounts.md#rowversion) | byte[] |  
 | [ThruDate](Crm.LineDiscounts.md#thrudate) | datetime __nullable__ | Ending date (inclusive) of validity of the discount. If null, the discount is valid forever. `Filter(eq;ge;le)` 
 
 ## References
@@ -118,6 +119,12 @@ _Allowed Values (General.Priority Enum Members)_
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **3**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 ### ThruDate
 

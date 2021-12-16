@@ -118,6 +118,11 @@ Default Search Members:<br>
 <td>The name of this PurchasePriceList. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></td>
 </tr>
 <tr>
+<td><a href="Logistics.Procurement.PurchasePriceLists.html#rowversion">RowVersion</a></td>
+<td>byte[]</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="Logistics.Procurement.PurchasePriceLists.html#thrudate">ThruDate</a></td>
 <td>datetime <strong>nullable</strong></td>
 <td>Ending validity of the price list. <code>Filter(eq;ge;le)</code></td>
@@ -142,6 +147,10 @@ Default Search Members:<br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>True</strong><br>
 <em>Maximum Length</em>: <strong>50</strong></p>
+<h3 id="rowversion">RowVersion</h3>
+<p><em>Type</em>: <strong>byte[]</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="thrudate">ThruDate</h3>
 <p>Ending validity of the price list. <code>Filter(eq;ge;le)</code></p>
 <p><em>Type</em>: <strong>datetime <strong>nullable</strong></strong><br>

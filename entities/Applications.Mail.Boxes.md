@@ -32,6 +32,7 @@ Aggregate Tree
 | [IsDefault](Applications.Mail.Boxes.md#isdefault) | boolean | True when this is the default mailbox for the user. `Required` `Default(true)` `Filter(eq)` 
 | [IsEncrypted](Applications.Mail.Boxes.md#isencrypted) | boolean | True when the mailbox messages are stored in encrypted format. `Required` `Default(false)` `Filter(eq)` 
 | [ResetOnNextSync](Applications.Mail.Boxes.md#resetonnextsync) | boolean | Reset is pending: true = next sync should delete and retrieve again all messages; false = no pending reset. `Required` `Default(false)` `Filter(eq)` `ReadOnly` 
+| [RowVersion](Applications.Mail.Boxes.md#rowversion) | byte[] |  
 | [SendServerAddress](Applications.Mail.Boxes.md#sendserveraddress) | string (254) __nullable__ | The address of the server to use for sending mail. The same credentials as the sync server are used. When null, the mail will be sent using the default server, which is setup at the application server. 
 | [SentItemsFolderName](Applications.Mail.Boxes.md#sentitemsfoldername) | string (254) __nullable__ | The name of the SentItems folder. It is left empty, EnterpriseOne won't save the sent mail in any folder (but it is still possible that the actual mail server would nevertheless save the mail in a sent items folder, independently from EnterpriseOne). 
 | [SignatureHtml](Applications.Mail.Boxes.md#signaturehtml) | string (max) __nullable__ | Html text of the default signature, when creating new emails from this mailbox. When is null, a default generic signature is attached. 
@@ -106,6 +107,12 @@ _Type_: **boolean**
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **False**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 ### SendServerAddress
 

@@ -178,6 +178,11 @@ __</p>
 <td>The suggested by the program value equals Calendar_Date; the release date of the purchase orders to be generated.</td>
 </tr>
 <tr>
+<td><a href="Logistics.Inventory.RequisitionPlan.html#rowversion">RowVersion</a></td>
+<td>byte[]</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="Logistics.Inventory.RequisitionPlan.html#scheduledreceipts">ScheduledReceipts</a></td>
 <td><a href="../data-types.html#quantity">Quantity (18, 3)</a></td>
 <td>The scheduled receipts of the product on the specified calendar date. This is calculated as the unexecuted quantity of released receipt store orders, whose expected execution date is equal to the calendar date. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>Default(0)</code></td>
@@ -305,6 +310,10 @@ __</p>
 <h3 id="releasedate">ReleaseDate</h3>
 <p>The suggested by the program value equals Calendar_Date; the release date of the purchase orders to be generated.</p>
 <p><em>Type</em>: <strong>datetime <strong>nullable</strong></strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="rowversion">RowVersion</h3>
+<p><em>Type</em>: <strong>byte[]</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="scheduledreceipts">ScheduledReceipts</h3>

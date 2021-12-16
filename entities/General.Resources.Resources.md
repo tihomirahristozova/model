@@ -28,13 +28,14 @@ Aggregate Root:
 | [Id](General.Resources.Resources.md#id) | guid |  
 | [Name](General.Resources.Resources.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Resource name. Unique within the resource group. `Required` `Filter(eq;like)` 
 | [Notes](General.Resources.Resources.md#notes) | string (max) __nullable__ | Notes for this Resource. 
+| [RowVersion](General.Resources.Resources.md#rowversion) | byte[] |  
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [CostingCurrency](General.Resources.Resources.md#costingcurrency) | [Currencies](General.Currencies.md) (nullable) | The currency in which resource costs are specified. Required only if resource costs will be specified. `Filter(multi eq)` |
-| [ResourceGroup](General.Resources.Resources.md#resourcegroup) | [ResourceGroups](General.Resources.ResourceGroups.md) | The `ResourceGroup`(General.Resources.Resources.md#resourcegroup) to which this Resource belongs. `Required` `Filter(multi eq)` `Owner` |
+| [ResourceGroup](General.Resources.Resources.md#resourcegroup) | [ResourceGroups](General.Resources.ResourceGroups.md) | The <see cref="ResourceGroup"/> to which this Resource belongs. `Required` `Filter(multi eq)` `Owner` |
 
 ## Child Collections
 
@@ -71,6 +72,12 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
 
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+
 
 ## Reference Details
 
@@ -83,7 +90,7 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### ResourceGroup
 
-The `ResourceGroup`(General.Resources.Resources.md#resourcegroup) to which this Resource belongs. `Required` `Filter(multi eq)` `Owner`
+The <see cref="ResourceGroup"/> to which this Resource belongs. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[ResourceGroups](General.Resources.ResourceGroups.md)**  
 _Indexed_: **True**  

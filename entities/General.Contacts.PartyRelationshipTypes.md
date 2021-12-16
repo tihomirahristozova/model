@@ -26,6 +26,7 @@ Aggregate Tree
 | [Id](General.Contacts.PartyRelationshipTypes.md#id) | guid |  
 | [Notes](General.Contacts.PartyRelationshipTypes.md#notes) | string (254) __nullable__ | Notes for this PartyRelationshipType. 
 | [RelationshipTypeName](General.Contacts.PartyRelationshipTypes.md#relationshiptypename) | string (50) | The name of the relationship type. `Required` `Filter(like)` 
+| [RowVersion](General.Contacts.PartyRelationshipTypes.md#rowversion) | byte[] |  
 
 
 ## Attribute Details
@@ -54,6 +55,12 @@ _Type_: **string (50)**
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **50**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 
 

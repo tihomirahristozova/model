@@ -127,6 +127,11 @@ Aggregate Root:<br>
 <td>string (254) <strong>nullable</strong></td>
 <td>Notes for this PaymentTransactionLine.</td>
 </tr>
+<tr>
+<td><a href="Finance.Payments.PaymentTransactionLines.html#rowversion">RowVersion</a></td>
+<td>byte[]</td>
+<td></td>
+</tr>
 </tbody>
 </table>
 <h2 id="references">References</h2>
@@ -142,7 +147,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Finance.Payments.PaymentTransactionLines.html#document">Document</a></td>
 <td><a href="Finance.Payments.PaymentTransactions.html">PaymentTransactions</a></td>
-<td>The <code>PaymentTransaction</code>(Finance.Payments.PaymentTransactionLines.md#paymenttransaction) to which this PaymentTransactionLine belongs. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>The &lt;see cref=&quot;PaymentTransaction&quot;/<br>&gt; to which this PaymentTransactionLine belongs. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Payments.PaymentTransactionLines.html#paymentorder">PaymentOrder</a></td>
@@ -152,7 +157,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Finance.Payments.PaymentTransactionLines.html#paymenttransaction">PaymentTransaction</a></td>
 <td><a href="Finance.Payments.PaymentTransactions.html">PaymentTransactions</a></td>
-<td>The <code>PaymentTransaction</code>(Finance.Payments.PaymentTransactionLines.md#paymenttransaction) to which this PaymentTransactionLine belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
+<td>The &lt;see cref=&quot;PaymentTransaction&quot;/<br>&gt; to which this PaymentTransactionLine belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 </tbody>
 </table>
@@ -190,9 +195,13 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>254</strong></p>
+<h3 id="rowversion">RowVersion</h3>
+<p><em>Type</em>: <strong>byte[]</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="document">Document</h3>
-<p>The <code>PaymentTransaction</code>(Finance.Payments.PaymentTransactionLines.md#paymenttransaction) to which this PaymentTransactionLine belongs. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>The <see cref="PaymentTransaction"></see> to which this PaymentTransactionLine belongs. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Finance.Payments.PaymentTransactions.html">PaymentTransactions</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
@@ -202,7 +211,7 @@ Aggregate Root:<br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="paymenttransaction">PaymentTransaction</h3>
-<p>The <code>PaymentTransaction</code>(Finance.Payments.PaymentTransactionLines.md#paymenttransaction) to which this PaymentTransactionLine belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
+<p>The <see cref="PaymentTransaction"></see> to which this PaymentTransactionLine belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="Finance.Payments.PaymentTransactions.html">PaymentTransactions</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>

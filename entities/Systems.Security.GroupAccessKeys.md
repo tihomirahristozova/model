@@ -39,6 +39,7 @@ Aggregate Root:
 | [Permission7](Systems.Security.GroupAccessKeys.md#permission7) | boolean | When true, the group is granted with entity-specific permission for the entity, protected by the access key. `Required` `Default(false)` 
 | [Permission8](Systems.Security.GroupAccessKeys.md#permission8) | boolean | When true, the group is granted with entity-specific permission for the entity, protected by the access key. `Required` `Default(false)` 
 | [Permission9](Systems.Security.GroupAccessKeys.md#permission9) | boolean | When true, the group is granted with entity-specific permission for the entity, protected by the access key. `Required` `Default(false)` 
+| [RowVersion](Systems.Security.GroupAccessKeys.md#rowversion) | byte[] |  
 
 ## References
 
@@ -171,6 +172,12 @@ _Type_: **boolean**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **False**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 
 ## Reference Details

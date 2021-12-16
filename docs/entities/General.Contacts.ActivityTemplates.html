@@ -123,6 +123,11 @@ __</p>
 <td>Time of the day for the reminder.</td>
 </tr>
 <tr>
+<td><a href="General.Contacts.ActivityTemplates.html#rowversion">RowVersion</a></td>
+<td>byte[]</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="General.Contacts.ActivityTemplates.html#sourcedatefield">SourceDateField</a></td>
 <td>string (64)</td>
 <td>A name of a field from the header or the document table of the source document in the specified route, that will be used along with Additional_Days to set the Start_Time of the generated activity. <code>Required</code></td>
@@ -181,6 +186,10 @@ __</p>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>IIF( ( obj.StartTime &gt; FromMinutes( 30)), ( obj.StartTime - FromMinutes( 30)), obj.StartTime)</code></p>
+<h3 id="rowversion">RowVersion</h3>
+<p><em>Type</em>: <strong>byte[]</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="sourcedatefield">SourceDateField</h3>
 <p>A name of a field from the header or the document table of the source document in the specified route, that will be used along with Additional_Days to set the Start_Time of the generated activity. <code>Required</code></p>
 <p><em>Type</em>: <strong>string (64)</strong><br>

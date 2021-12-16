@@ -128,6 +128,11 @@ Aggregate Root:<br>
 <td>The equivalence of Quantity in the base measurement category of the product. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
+<td><a href="Applications.Service.ServiceActivityMaterials.html#rowversion">RowVersion</a></td>
+<td>byte[]</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="Applications.Service.ServiceActivityMaterials.html#standardquantitybase">StandardQuantityBase</a></td>
 <td><a href="../data-types.html#quantity">Quantity (18, 3)</a></td>
 <td>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>ReadOnly</code> <code>Introduced in version 18.2</code></td>
@@ -147,7 +152,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Applications.Service.ServiceActivityMaterials.html#document">Document</a></td>
 <td><a href="Applications.Service.ServiceActivities.html">ServiceActivities</a></td>
-<td>The <code>ServiceActivity</code>(Applications.Service.ServiceActivityMaterials.md#serviceactivity) to which this ServiceActivityMaterial belongs. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>The <see cref="ServiceActivity"></see> to which this ServiceActivityMaterial belongs. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Service.ServiceActivityMaterials.html#linestore">LineStore</a></td>
@@ -167,7 +172,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Applications.Service.ServiceActivityMaterials.html#serviceactivity">ServiceActivity</a></td>
 <td><a href="Applications.Service.ServiceActivities.html">ServiceActivities</a></td>
-<td>The <code>ServiceActivity</code>(Applications.Service.ServiceActivityMaterials.md#serviceactivity) to which this ServiceActivityMaterial belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
+<td>The <see cref="ServiceActivity"></see> to which this ServiceActivityMaterial belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Service.ServiceActivityMaterials.html#serviceobject">ServiceObject</a></td>
@@ -228,6 +233,10 @@ Aggregate Root:<br>
 <code>IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.QuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))</code></p>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.QuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))</code></p>
+<h3 id="rowversion">RowVersion</h3>
+<p><em>Type</em>: <strong>byte[]</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="standardquantitybase">StandardQuantityBase</h3>
 <p>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>ReadOnly</code> <code>Introduced in version 18.2</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a></strong><br>
@@ -239,7 +248,7 @@ Aggregate Root:<br>
 <code>IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.StandardQuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))</code></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="document">Document</h3>
-<p>The <code>ServiceActivity</code>(Applications.Service.ServiceActivityMaterials.md#serviceactivity) to which this ServiceActivityMaterial belongs. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>The <see cref="ServiceActivity"></see> to which this ServiceActivityMaterial belongs. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Applications.Service.ServiceActivities.html">ServiceActivities</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
@@ -262,7 +271,7 @@ Aggregate Root:<br>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>obj.Product.MeasurementUnit</code></p>
 <h3 id="serviceactivity">ServiceActivity</h3>
-<p>The <code>ServiceActivity</code>(Applications.Service.ServiceActivityMaterials.md#serviceactivity) to which this ServiceActivityMaterial belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
+<p>The <see cref="ServiceActivity"></see> to which this ServiceActivityMaterial belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="Applications.Service.ServiceActivities.html">ServiceActivities</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>

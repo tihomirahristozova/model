@@ -30,6 +30,7 @@ Aggregate Tree
 | [DefaultValueField](Systems.Core.DataEntryDefaultValues.md#defaultvaluefield) | string (254) __nullable__ | The default value for Column_Name. Should be applied only if the other conditions are met. null specifies null default. 
 | [Id](Systems.Core.DataEntryDefaultValues.md#id) | guid |  
 | [PanelName](Systems.Core.DataEntryDefaultValues.md#panelname) | string (64) __nullable__ | When not null, specifies the panel for which the default value applies. `Filter(eq;like)` 
+| [RowVersion](Systems.Core.DataEntryDefaultValues.md#rowversion) | byte[] |  
 | [TableName](Systems.Core.DataEntryDefaultValues.md#tablename) | string (64) __nullable__ | The table, containing the column for which the default value is specified. `Filter(eq)` 
 
 ## References
@@ -104,6 +105,12 @@ _Type_: **string (64) __nullable__**
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 ### TableName
 

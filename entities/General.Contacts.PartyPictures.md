@@ -31,12 +31,13 @@ Aggregate Root:
 | [IsLogo](General.Contacts.PartyPictures.md#islogo) | boolean | If checked specifies that this picture is used to visualize the logo of this party in the system. `Required` `Default(false)` `Filter(eq)` 
 | [Picture](General.Contacts.PartyPictures.md#picture) | byte[] __nullable__ | The actual party picture data. Can be null if we insert only some comments. 
 | [PictureNo](General.Contacts.PartyPictures.md#pictureno) | int32 | Unique picture number within the party. Also used for sorting. `Required` `Filter(eq)` 
+| [RowVersion](General.Contacts.PartyPictures.md#rowversion) | byte[] |  
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Party](General.Contacts.PartyPictures.md#party) | [Parties](General.Contacts.Parties.md) | The `Party`(General.Contacts.PartyPictures.md#party) to which this PartyPicture belongs. `Required` `Filter(multi eq)` `Owner` |
+| [Party](General.Contacts.PartyPictures.md#party) | [Parties](General.Contacts.Parties.md) | The <see cref="Party"/> to which this PartyPicture belongs. `Required` `Filter(multi eq)` `Owner` |
 
 
 ## Attribute Details
@@ -98,12 +99,18 @@ _Back-End Default Expression:_
 
 _Front-End Recalc Expressions:_  
 `( obj.Party.Pictures.Select( c => c.PictureNo).DefaultIfEmpty( 0).Max( ) + 10)`
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+
 
 ## Reference Details
 
 ### Party
 
-The `Party`(General.Contacts.PartyPictures.md#party) to which this PartyPicture belongs. `Required` `Filter(multi eq)` `Owner`
+The <see cref="Party"/> to which this PartyPicture belongs. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[Parties](General.Contacts.Parties.md)**  
 _Indexed_: **True**  

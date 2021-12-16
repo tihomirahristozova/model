@@ -32,7 +32,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ObjectChange](Systems.Core.AttributeChanges.md#objectchange) | [ObjectChanges](Systems.Core.ObjectChanges.md) | The `ObjectChange`(Systems.Core.AttributeChanges.md#objectchange) to which this AttributeChange belongs. `Required` `Filter(multi eq)` `Inherited from Sys_Attribute_<br />Changes_Table.Object_Change_Id` `Owner` |
+| [ObjectChange](Systems.Core.AttributeChanges.md#objectchange) | [ObjectChanges](Systems.Core.ObjectChanges.md) | The <see cref="ObjectChange"/> to which this AttributeChange belongs. `Required` `Filter(multi eq)` `Inherited from Sys_Attribute_<br />Changes_Table.Object_Change_Id` `Owner` |
 
 
 ## Attribute Details
@@ -58,7 +58,7 @@ _Maximum Length_: **2147483647**
 
 ### ObjectChange
 
-The `ObjectChange`(Systems.Core.AttributeChanges.md#objectchange) to which this AttributeChange belongs. `Required` `Filter(multi eq)` `Inherited from Sys_Attribute_Changes_Table.Object_Change_Id` `Owner`
+The <see cref="ObjectChange"/> to which this AttributeChange belongs. `Required` `Filter(multi eq)` `Inherited from Sys_Attribute_Changes_Table.Object_Change_Id` `Owner`
 
 _Type_: **[ObjectChanges](Systems.Core.ObjectChanges.md)**  
 _Inherited From_: **Sys_Attribute_Changes_Table.Object_Change_Id**  

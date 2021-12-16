@@ -26,6 +26,7 @@ Aggregate Tree
 | [CreationTimeUtc](Communities.SocialReactions.md#creationtimeutc) | datetime | The exact server time (in UTC), when the reaction was created. `Required` `Default(NowUtc)` 
 | [Id](Communities.SocialReactions.md#id) | guid |  
 | [ReactionType](Communities.SocialReactions.md#reactiontype) | [ReactionType](Communities.SocialReactions.md#reactiontype) | The type of the reaction. LIK = Like; LOV = Love; HAH = Haha; WOW = Wow; SAD = Sad; ANG = Angry. `Required` `Filter(multi eq)` 
+| [RowVersion](Communities.SocialReactions.md#rowversion) | byte[] |  
 
 ## References
 
@@ -72,6 +73,12 @@ _Allowed Values (Communities.SocialReactionsRepository.ReactionType Enum Members
 | Angry | Angry value. Stored as 'ANG'. <br /> _Database Value:_ 'ANG' <br /> _Model Value:_ 5 <br /> _Domain API Value:_ 'Angry' |
 
 _Supported Filters_: **Equals, EqualsIn**  
+_Supports Order By_: **False**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
 

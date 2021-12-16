@@ -128,6 +128,11 @@ Default Search Members:<br>
 <td>Notes for this LogisticUnit. <code>Filter(like)</code></td>
 </tr>
 <tr>
+<td><a href="Logistics.LogisticUnits.html#rowversion">RowVersion</a></td>
+<td>byte[]</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="Logistics.LogisticUnits.html#serialcode">SerialCode</a></td>
 <td>string (32)</td>
 <td>Unique serial code of the logistic unit. If GS1 coding is used, this is the SSCC. <code>Required</code> <code>Filter(multi eq;like)</code> <code>ORD</code></td>
@@ -205,6 +210,10 @@ Default Search Members:<br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>2147483647</strong></p>
+<h3 id="rowversion">RowVersion</h3>
+<p><em>Type</em>: <strong>byte[]</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="serialcode">SerialCode</h3>
 <p>Unique serial code of the logistic unit. If GS1 coding is used, this is the SSCC. <code>Required</code> <code>Filter(multi eq;like)</code> <code>ORD</code></p>
 <p><em>Type</em>: <strong>string (32)</strong><br>

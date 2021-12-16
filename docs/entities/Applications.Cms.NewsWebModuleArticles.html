@@ -105,7 +105,7 @@ Default Search Members:<br>
 <tr>
 <td><a href="Applications.Cms.NewsWebModuleArticles.html#articletexthtml">ArticleTextHtml</a></td>
 <td>string (max) <strong>nullable</strong></td>
-<td>The actual article text, stored as Html. Only the <body> of the Html is stored. The language of the text is specified in Language Code.</body></td>
+<td>The actual article text, stored as Html. Only the &lt;BODY&gt; of the Html is stored. The language of the text is specified in Language Code.</td>
 </tr>
 <tr>
 <td><a href="Applications.Cms.NewsWebModuleArticles.html#id">Id</a></td>
@@ -126,6 +126,11 @@ Default Search Members:<br>
 <td><a href="Applications.Cms.NewsWebModuleArticles.html#publishdate">PublishDate</a></td>
 <td>datetime</td>
 <td>The date and time when the news article should appear to be published. <code>Required</code> <code>Default(Now)</code></td>
+</tr>
+<tr>
+<td><a href="Applications.Cms.NewsWebModuleArticles.html#rowversion">RowVersion</a></td>
+<td>byte[]</td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -153,7 +158,7 @@ Default Search Members:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="articletexthtml">ArticleTextHtml</h3>
-<p>The actual article text, stored as Html. Only the <body> of the Html is stored. The language of the text is specified in Language Code.<p>
+<p>The actual article text, stored as Html. Only the &lt;BODY&gt; of the Html is stored. The language of the text is specified in Language Code.</p>
 <p><em>Type</em>: <strong>string (max) <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
@@ -181,6 +186,10 @@ Default Search Members:<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>CurrentDateTime</strong></p>
+<h3 id="rowversion">RowVersion</h3>
+<p><em>Type</em>: <strong>byte[]</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="authorpublicuser">AuthorPublicUser</h3>
 <p>The author of the news article. <code>Required</code> <code>Filter(multi eq)</code></p>
@@ -199,7 +208,7 @@ Default Search Members:<br>
 <a href="https://demodb.my.erp.net/api/domain/odata/Applications_Cms_NewsWebModuleArticles?$top=10">https://demodb.my.erp.net/api/domain/odata/Applications_Cms_NewsWebModuleArticles?$top=10</a></p>
 <p>Domain API Query Builder:
 <a href="https://demodb.my.erp.net/api/domain/querybuilder#Applications_Cms_NewsWebModuleArticles?$top=10">https://demodb.my.erp.net/api/domain/querybuilder#Applications_Cms_NewsWebModuleArticles?$top=10</a></p>
-</body></article>
+</article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">

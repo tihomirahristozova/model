@@ -148,6 +148,11 @@ Default Search Members:<br>
 <td>The unique supplier number. <code>Filter(eq)</code> <code>ORD</code></td>
 </tr>
 <tr>
+<td><a href="Logistics.Procurement.Suppliers.html#rowversion">RowVersion</a></td>
+<td>byte[]</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="Logistics.Procurement.Suppliers.html#thrudate">ThruDate</a></td>
 <td>datetime <strong>nullable</strong></td>
 <td>The date (inclusive) on which this party ceased to be a supplier. <code>Filter(ge;le)</code></td>
@@ -264,6 +269,10 @@ Default Search Members:<br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>True</strong><br>
 <em>Maximum Length</em>: <strong>16</strong></p>
+<h3 id="rowversion">RowVersion</h3>
+<p><em>Type</em>: <strong>byte[]</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="thrudate">ThruDate</h3>
 <p>The date (inclusive) on which this party ceased to be a supplier. <code>Filter(ge;le)</code></p>
 <p><em>Type</em>: <strong>datetime <strong>nullable</strong></strong><br>

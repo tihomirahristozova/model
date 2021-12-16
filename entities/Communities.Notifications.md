@@ -27,6 +27,7 @@ Aggregate Tree
 | [Id](Communities.Notifications.md#id) | guid |  
 | [IsRead](Communities.Notifications.md#isread) | boolean | Specifies whether the user has read the notification. If the system changes the notification after first reading, the flag is reset to unread again. `Required` `Default(false)` `Filter(eq)` 
 | [NotificationClass](Communities.Notifications.md#notificationclass) | string (64) | The class of the notification from a predefined list of system classes. `Required` `Filter(multi eq)` 
+| [RowVersion](Communities.Notifications.md#rowversion) | byte[] __nullable__ |  
 | [Subject](Communities.Notifications.md#subject) | string (256) __nullable__ | The short subject of the notification (in the Default Culture of the user). `Filter(eq;like)` 
 
 ## References
@@ -72,6 +73,12 @@ _Type_: **string (64)**
 _Supported Filters_: **Equals, EqualsIn**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  
+
+### RowVersion
+
+_Type_: **byte[] __nullable__**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 ### Subject
 

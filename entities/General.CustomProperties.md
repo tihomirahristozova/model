@@ -37,6 +37,7 @@ Aggregate Tree
 | [Name](General.CustomProperties.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | The name of this CustomProperty. `Required` `Filter(like)` `ORD` 
 | [Notes](General.CustomProperties.md#notes) | string (max) __nullable__ | Notes for this CustomProperty. `Introduced in version 20.1` 
 | [PropertyType](General.CustomProperties.md#propertytype) | [PropertyType](General.CustomProperties.md#propertytype) | Type of property values. 'T' - text; 'P' - picture; 'N' - number; 'D' - date. `Required` `Default("T")` 
+| [RowVersion](General.CustomProperties.md#rowversion) | byte[] |  
 
 ## References
 
@@ -169,6 +170,12 @@ _Allowed Values (General.CustomPropertiesRepository.PropertyType Enum Members)_
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Text**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 
 ## Reference Details

@@ -26,13 +26,14 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](Systems.Security.UserGroups.md#id) | guid |  
+| [RowVersion](Systems.Security.UserGroups.md#rowversion) | byte[] |  
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Group](Systems.Security.UserGroups.md#group) | [Groups](Systems.Security.Groups.md) | The group, in which the user is included. `Required` `Filter(multi eq)` |
-| [User](Systems.Security.UserGroups.md#user) | [Users](Systems.Security.Users.md) | The `User`(Systems.Security.UserGroups.md#user) to which this UserGroup belongs. `Required` `Filter(multi eq)` `Owner` |
+| [User](Systems.Security.UserGroups.md#user) | [Users](Systems.Security.Users.md) | The <see cref="User"/> to which this UserGroup belongs. `Required` `Filter(multi eq)` `Owner` |
 
 
 ## Attribute Details
@@ -43,6 +44,12 @@ _Type_: **guid**
 _Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 
 ## Reference Details
@@ -56,7 +63,7 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### User
 
-The `User`(Systems.Security.UserGroups.md#user) to which this UserGroup belongs. `Required` `Filter(multi eq)` `Owner`
+The <see cref="User"/> to which this UserGroup belongs. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[Users](Systems.Security.Users.md)**  
 _Indexed_: **True**  

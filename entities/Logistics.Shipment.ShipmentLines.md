@@ -40,6 +40,7 @@ Aggregate Root:
 | [ParentLineNo](Logistics.Shipment.ShipmentLines.md#parentlineno) | int32 __nullable__ | The number of the line within the parent document, which the current line executes. null when the current line does not execute parent line. `Filter(multi eq)` 
 | [Quantity](Logistics.Shipment.ShipmentLines.md#quantity) | [Quantity (12, 3)](../data-types.md#quantity) | The quantity to be shipped. `Unit: QuantityUnit` `Required` 
 | [QuantityBase](Logistics.Shipment.ShipmentLines.md#quantitybase) | [Quantity (12, 3)](../data-types.md#quantity) | The equivalence of Quantity in the base measurement category of the product. `Unit: ParentSalesOrderLine.Product.BaseMeasurementCategory.BaseUnit` `Required` 
+| [RowVersion](Logistics.Shipment.ShipmentLines.md#rowversion) | byte[] |  
 | [StandardQuantityBase](Logistics.Shipment.ShipmentLines.md#standardquantitybase) | [Quantity (12, 3)](../data-types.md#quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. `Unit: ParentSalesOrderLine.Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` `Introduced in version 18.2` 
 | [Volumel](Logistics.Shipment.ShipmentLines.md#volumel) | decimal (12, 3) __nullable__ | The volume in litres of the whole batch. null means unknown. 
 | [Widthm](Logistics.Shipment.ShipmentLines.md#widthm) | decimal (12, 3) __nullable__ | The width of the package in meters. null means unknown. 
@@ -48,13 +49,13 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Document](Logistics.Shipment.ShipmentLines.md#document) | [Shipments](Logistics.Shipment.Shipments.md) | The `Shipment`(Logistics.Shipment.ShipmentLines.md#shipment) to which this ShipmentLine belongs. `Required` `Filter(multi eq)` |
+| [Document](Logistics.Shipment.ShipmentLines.md#document) | [Shipments](Logistics.Shipment.Shipments.md) | The <see cref="Shipment"/> to which this ShipmentLine belongs. `Required` `Filter(multi eq)` |
 | [Lot](Logistics.Shipment.ShipmentLines.md#lot) | [Lots](Logistics.Inventory.Lots.md) (nullable) | The store lot from which to take the goods. `Filter(multi eq)` |
 | [ParentDocument](Logistics.Shipment.ShipmentLines.md#parentdocument) | [Documents](General.Documents.md) (nullable) | The document, which the current line executes. null when the current line does not execute another line. `Filter(multi eq)` |
 | [ParentSalesOrderLine](Logistics.Shipment.ShipmentLines.md#parentsalesorderline) | [SalesOrderLines](Crm.Sales.SalesOrderLines.md) | Sales order line which is shipped. `Required` `Filter(multi eq)` |
 | [QuantityUnit](Logistics.Shipment.ShipmentLines.md#quantityunit) | [MeasurementUnits](General.MeasurementUnits.md) | The measurement unit of Quantity. `Required` `Filter(multi eq)` |
 | [SerialNumber](Logistics.Shipment.ShipmentLines.md#serialnumber) | [SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable) | The serial number of the shipped product. null means that serial number is unknown or not applicable. `Filter(multi eq)` |
-| [Shipment](Logistics.Shipment.ShipmentLines.md#shipment) | [Shipments](Logistics.Shipment.Shipments.md) | The `Shipment`(Logistics.Shipment.ShipmentLines.md#shipment) to which this ShipmentLine belongs. `Required` `Filter(multi eq)` `Owner` |
+| [Shipment](Logistics.Shipment.ShipmentLines.md#shipment) | [Shipments](Logistics.Shipment.Shipments.md) | The <see cref="Shipment"/> to which this ShipmentLine belongs. `Required` `Filter(multi eq)` `Owner` |
 | [ShipmentOrderLine](Logistics.Shipment.ShipmentLines.md#shipmentorderline) | [ShipmentOrderLines](Logistics.Shipment.ShipmentOrderLines.md) (nullable) | Shipment order line for which this quantity is shipped. `Filter(multi eq)` |
 | [StoreBin](Logistics.Shipment.ShipmentLines.md#storebin) | [StoreBins](Logistics.Inventory.StoreBins.md) (nullable) | The store bin from which to take the goods. `Filter(multi eq)` |
 | [TransactionLine](Logistics.Shipment.ShipmentLines.md#transactionline) | [StoreTransactionLines](Logistics.Inventory.StoreTransactionLines.md) (nullable) | The Transaction Line, based on which this shipment line was created. The transaction line contains the store issue operation of the shipped product. `Filter(multi eq)` |
@@ -202,6 +203,12 @@ _Back-End Default Expression:_
 
 _Front-End Recalc Expressions:_  
 `IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.QuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))`
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+
 ### StandardQuantityBase
 
 The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. `Unit: ParentSalesOrderLine.Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` `Introduced in version 18.2`
@@ -236,7 +243,7 @@ _Supports Order By_: **False**
 
 ### Document
 
-The `Shipment`(Logistics.Shipment.ShipmentLines.md#shipment) to which this ShipmentLine belongs. `Required` `Filter(multi eq)`
+The <see cref="Shipment"/> to which this ShipmentLine belongs. `Required` `Filter(multi eq)`
 
 _Type_: **[Shipments](Logistics.Shipment.Shipments.md)**  
 _Indexed_: **True**  
@@ -285,7 +292,7 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### Shipment
 
-The `Shipment`(Logistics.Shipment.ShipmentLines.md#shipment) to which this ShipmentLine belongs. `Required` `Filter(multi eq)` `Owner`
+The <see cref="Shipment"/> to which this ShipmentLine belongs. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[Shipments](Logistics.Shipment.Shipments.md)**  
 _Indexed_: **True**  

@@ -34,6 +34,7 @@ Aggregate Root:
 | [ProductDescription](Crm.Invoicing.InvoiceOrderLines.md#productdescription) | [MultilanguageString](../data-types.md#multilanguagestring) | The description of Product. Initially copied from the name of the Product or from the generating document. `Required` 
 | [Quantity](Crm.Invoicing.InvoiceOrderLines.md#quantity) | [Quantity (12, 3)](../data-types.md#quantity) | The quantity of the product to invoice. `Unit: QuantityUnit` `Required` `Default(1)` `Filter(ge;le)` 
 | [QuantityBase](Crm.Invoicing.InvoiceOrderLines.md#quantitybase) | [Quantity (12, 3)](../data-types.md#quantity) | The equivalent of Quantity in the base measurement unit of the Product. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` 
+| [RowVersion](Crm.Invoicing.InvoiceOrderLines.md#rowversion) | byte[] |  
 | [StandardQuantityBase](Crm.Invoicing.InvoiceOrderLines.md#standardquantitybase) | [Quantity (12, 3)](../data-types.md#quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` `Introduced in version 18.2` 
 | [UnitPrice](Crm.Invoicing.InvoiceOrderLines.md#unitprice) | [Amount (14, 5)](../data-types.md#amount) | Unit selling price in the unit of measure, specified in Quantity Unit. `Currency: InvoiceOrder.DocumentCurrency` `Required` `Default(0)` 
 
@@ -41,8 +42,8 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Document](Crm.Invoicing.InvoiceOrderLines.md#document) | [InvoiceOrders](Crm.Invoicing.InvoiceOrders.md) | The `InvoiceOrder`(Crm.Invoicing.InvoiceOrderLines.md#invoiceorder) to which this InvoiceOrderLine belongs. `Required` `Filter(multi eq)` |
-| [InvoiceOrder](Crm.Invoicing.InvoiceOrderLines.md#invoiceorder) | [InvoiceOrders](Crm.Invoicing.InvoiceOrders.md) | The `InvoiceOrder`(Crm.Invoicing.InvoiceOrderLines.md#invoiceorder) to which this InvoiceOrderLine belongs. `Required` `Filter(multi eq)` `Owner` |
+| [Document](Crm.Invoicing.InvoiceOrderLines.md#document) | [InvoiceOrders](Crm.Invoicing.InvoiceOrders.md) | The <see cref="InvoiceOrder"/> to which this InvoiceOrderLine belongs. `Required` `Filter(multi eq)` |
+| [InvoiceOrder](Crm.Invoicing.InvoiceOrderLines.md#invoiceorder) | [InvoiceOrders](Crm.Invoicing.InvoiceOrders.md) | The <see cref="InvoiceOrder"/> to which this InvoiceOrderLine belongs. `Required` `Filter(multi eq)` `Owner` |
 | [LineDealType](Crm.Invoicing.InvoiceOrderLines.md#linedealtype) | [DealTypes](Finance.Vat.DealTypes.md) (nullable) | Deal type to be passed to the invoice line. If deal type in the line is different from deal type in the header another VAT entry is created from the invoice. `Filter(multi eq)` |
 | [LineDiscount](Crm.Invoicing.InvoiceOrderLines.md#linediscount) | [LineDiscounts](Crm.LineDiscounts.md) (nullable) | The line discount type used to form the Line_Standard_<br />Discount_Percent. `Filter(multi eq)` |
 | [PaymentTransaction](Crm.Invoicing.InvoiceOrderLines.md#paymenttransaction) | [PaymentTransactions](Finance.Payments.PaymentTransactions.md) (nullable) | The payment transaction, which is to be invoiced by this line, when Business Reason = P. Used to reconcile the invoice with the payments in the case of advance payment. `Filter(multi eq)` |
@@ -156,6 +157,12 @@ _Back-End Default Expression:_
 
 _Front-End Recalc Expressions:_  
 `IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.QuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))`
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+
 ### StandardQuantityBase
 
 The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` `Introduced in version 18.2`
@@ -185,7 +192,7 @@ _Front-End Recalc Expressions:_
 
 ### Document
 
-The `InvoiceOrder`(Crm.Invoicing.InvoiceOrderLines.md#invoiceorder) to which this InvoiceOrderLine belongs. `Required` `Filter(multi eq)`
+The <see cref="InvoiceOrder"/> to which this InvoiceOrderLine belongs. `Required` `Filter(multi eq)`
 
 _Type_: **[InvoiceOrders](Crm.Invoicing.InvoiceOrders.md)**  
 _Indexed_: **True**  
@@ -193,7 +200,7 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### InvoiceOrder
 
-The `InvoiceOrder`(Crm.Invoicing.InvoiceOrderLines.md#invoiceorder) to which this InvoiceOrderLine belongs. `Required` `Filter(multi eq)` `Owner`
+The <see cref="InvoiceOrder"/> to which this InvoiceOrderLine belongs. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[InvoiceOrders](Crm.Invoicing.InvoiceOrders.md)**  
 _Indexed_: **True**  

@@ -44,6 +44,7 @@ Aggregate Tree
 | [DocumentDate](Logistics.Procurement.PurchaseControlDocuments.md#documentdate) | date | The date on which the document was issued. `Required` `Default(Today)` `Filter(eq;ge;le)` `ORD` (Inherited from [Documents](General.Documents.md)) 
 | [DocumentNo](Logistics.Procurement.PurchaseControlDocuments.md#documentno) | string (20) | Document number, unique within Document_Type_Id. `Required` `Filter(eq;like)` `ORD` (Inherited from [Documents](General.Documents.md)) 
 | [DocumentNotes](Logistics.Procurement.PurchaseControlDocuments.md#documentnotes) | string (max) __nullable__ | Notes for this Document. (Inherited from [Documents](General.Documents.md)) 
+| [DocumentRowVersion](Logistics.Procurement.PurchaseControlDocuments.md#documentrowversion) | byte[] |  
 | [DocumentVersion](Logistics.Procurement.PurchaseControlDocuments.md#documentversion) | int32 | Consecutive version number, starting with 1. Each update produces a new version of the document. `Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [EntityName](Logistics.Procurement.PurchaseControlDocuments.md#entityname) | string (64) | The entity name of the document header. `Required` `Filter(eq)` `ORD` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [Id](Logistics.Procurement.PurchaseControlDocuments.md#id) | guid |  
@@ -184,6 +185,12 @@ _Type_: **string (max) __nullable__**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
+
+### DocumentRowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 ### DocumentVersion
 

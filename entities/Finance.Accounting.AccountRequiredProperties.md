@@ -28,12 +28,13 @@ Aggregate Root:
 | [Id](Finance.Accounting.AccountRequiredProperties.md#id) | guid |  
 | [KeyOrder](Finance.Accounting.AccountRequiredProperties.md#keyorder) | int32 | The key order determines in which order the values and descriptions of the properties will form the item (grouping) key and description. `Required` 
 | [KeyProperty](Finance.Accounting.AccountRequiredProperties.md#keyproperty) | boolean | Key properties particiate in forming the grouping key, which is the smallest unit of calculation for account balance. Non-key properties simply serve for comment and clarification purposes. `Required` `Default(true)` `Filter(eq)` 
+| [RowVersion](Finance.Accounting.AccountRequiredProperties.md#rowversion) | byte[] |  
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Account](Finance.Accounting.AccountRequiredProperties.md#account) | [Accounts](Finance.Accounting.Accounts.md) | The `Account`(Finance.Accounting.AccountRequiredProperties.md#account) to which this AccountRequiredProperty belongs. `Required` `Filter(multi eq)` `Owner` |
+| [Account](Finance.Accounting.AccountRequiredProperties.md#account) | [Accounts](Finance.Accounting.Accounts.md) | The <see cref="Account"/> to which this AccountRequiredProperty belongs. `Required` `Filter(multi eq)` `Owner` |
 | [Property](Finance.Accounting.AccountRequiredProperties.md#property) | [CustomProperties](General.CustomProperties.md) | A property of type (Entity_Name = Account Voucher Line) for which the user can specify value when entering accounting vouchers. `Required` `Filter(multi eq)` |
 
 
@@ -68,12 +69,18 @@ _Supported Filters_: **Equals**
 _Supports Order By_: **False**  
 _Default Value_: **True**  
 
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+
 
 ## Reference Details
 
 ### Account
 
-The `Account`(Finance.Accounting.AccountRequiredProperties.md#account) to which this AccountRequiredProperty belongs. `Required` `Filter(multi eq)` `Owner`
+The <see cref="Account"/> to which this AccountRequiredProperty belongs. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[Accounts](Finance.Accounting.Accounts.md)**  
 _Indexed_: **True**  

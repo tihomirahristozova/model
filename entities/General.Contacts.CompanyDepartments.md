@@ -28,12 +28,13 @@ Aggregate Root:
 | [DepartmentName](General.Contacts.CompanyDepartments.md#departmentname) | string (254) | The name of the department. `Required` `Filter(like)` 
 | [Id](General.Contacts.CompanyDepartments.md#id) | guid |  
 | [Notes](General.Contacts.CompanyDepartments.md#notes) | string (max) __nullable__ | Notes for this CompanyDepartment. 
+| [RowVersion](General.Contacts.CompanyDepartments.md#rowversion) | byte[] |  
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Company](General.Contacts.CompanyDepartments.md#company) | [Companies](General.Contacts.Companies.md) | The `Company`(General.Contacts.CompanyDepartments.md#company) to which this CompanyDepartment belongs. `Required` `Filter(multi eq)` `Owner` |
+| [Company](General.Contacts.CompanyDepartments.md#company) | [Companies](General.Contacts.Companies.md) | The <see cref="Company"/> to which this CompanyDepartment belongs. `Required` `Filter(multi eq)` `Owner` |
 | [Parent](General.Contacts.CompanyDepartments.md#parent) | [CompanyDepartments](General.Contacts.CompanyDepartments.md) (nullable) | The parent department. null if this is root department in the company. `Filter(multi eq)` |
 
 
@@ -64,12 +65,18 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
 
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+
 
 ## Reference Details
 
 ### Company
 
-The `Company`(General.Contacts.CompanyDepartments.md#company) to which this CompanyDepartment belongs. `Required` `Filter(multi eq)` `Owner`
+The <see cref="Company"/> to which this CompanyDepartment belongs. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[Companies](General.Contacts.Companies.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

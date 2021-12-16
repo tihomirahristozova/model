@@ -128,6 +128,11 @@ Default Search Members:<br>
 <td>Parent region of the current territorial subdivision. <code>Filter(eq;like)</code></td>
 </tr>
 <tr>
+<td><a href="General.Geography.AdministrativeRegions.html#rowversion">RowVersion</a></td>
+<td>byte[]</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="General.Geography.AdministrativeRegions.html#validfrom">ValidFrom</a></td>
 <td>date <strong>nullable</strong></td>
 <td>Start date of validity of this administrative division. null when the starting date is unknown in the past. <code>Filter(ge;le)</code></td>
@@ -185,6 +190,10 @@ Default Search Members:<br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>254</strong></p>
+<h3 id="rowversion">RowVersion</h3>
+<p><em>Type</em>: <strong>byte[]</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="validfrom">ValidFrom</h3>
 <p>Start date of validity of this administrative division. null when the starting date is unknown in the past. <code>Filter(ge;le)</code></p>
 <p><em>Type</em>: <strong>date <strong>nullable</strong></strong><br>

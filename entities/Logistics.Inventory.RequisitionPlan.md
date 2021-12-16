@@ -38,6 +38,7 @@ Aggregate Tree
 | [ProjectedAvailableBalance](Logistics.Inventory.RequisitionPlan.md#projectedavailablebalance) | [Quantity (18, 3)](../data-types.md#quantity) | Expected balance of the product for the calendar date. This is a calculation, based on the current physical inventory and expected future transactions. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Default(0)` 
 | [Quantity](Logistics.Inventory.RequisitionPlan.md#quantity) | [Quantity (18, 3)](../data-types.md#quantity) | The Quantity of the purchase orders the program shall generate; the suggested value equals Planned_Order_Releases but can be changed by the user;. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Default(0)` 
 | [ReleaseDate](Logistics.Inventory.RequisitionPlan.md#releasedate) | datetime __nullable__ | The suggested by the program value equals Calendar_Date; the release date of the purchase orders to be generated. 
+| [RowVersion](Logistics.Inventory.RequisitionPlan.md#rowversion) | byte[] |  
 | [ScheduledReceipts](Logistics.Inventory.RequisitionPlan.md#scheduledreceipts) | [Quantity (18, 3)](../data-types.md#quantity) | The scheduled receipts of the product on the specified calendar date. This is calculated as the unexecuted quantity of released receipt store orders, whose expected execution date is equal to the calendar date. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Default(0)` 
 
 ## References
@@ -179,6 +180,12 @@ _Default Value_: **Constant**
 The suggested by the program value equals Calendar_Date; the release date of the purchase orders to be generated.
 
 _Type_: **datetime __nullable__**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+
+### RowVersion
+
+_Type_: **byte[]**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 

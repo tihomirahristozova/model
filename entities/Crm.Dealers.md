@@ -26,6 +26,7 @@ Aggregate Tree
 | [FromDate](Crm.Dealers.md#fromdate) | datetime __nullable__ | Start of the dealer relationship. `Default(Today)` `Filter(ge;le)` 
 | [Id](Crm.Dealers.md#id) | guid |  
 | [Notes](Crm.Dealers.md#notes) | string (254) __nullable__ | Notes for this Dealer. 
+| [RowVersion](Crm.Dealers.md#rowversion) | byte[] |  
 | [ThruDate](Crm.Dealers.md#thrudate) | datetime __nullable__ | Termination date of the dealership. null for active dealers. `Filter(ge;le)` 
 
 ## References
@@ -62,6 +63,12 @@ _Type_: **string (254) __nullable__**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 ### ThruDate
 

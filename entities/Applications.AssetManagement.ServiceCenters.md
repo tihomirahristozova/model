@@ -25,6 +25,7 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [Id](Applications.AssetManagement.ServiceCenters.md#id) | guid |  
 | [Notes](Applications.AssetManagement.ServiceCenters.md#notes) | string (max) __nullable__ | Notes for this ServiceCenter. 
+| [RowVersion](Applications.AssetManagement.ServiceCenters.md#rowversion) | byte[] |  
 
 ## References
 
@@ -51,6 +52,12 @@ _Type_: **string (max) __nullable__**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 
 ## Reference Details

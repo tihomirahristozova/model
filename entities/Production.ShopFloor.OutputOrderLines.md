@@ -33,6 +33,7 @@ Aggregate Root:
 | [ProducedQuantity](Production.ShopFloor.OutputOrderLines.md#producedquantity) | [Quantity (18, 3)](../data-types.md#quantity) | The processed quantity of the end product. `Unit: ProducedQuantityUnit` `Required` `Default(0)` `Filter(ge;le)` 
 | [ProducedQuantityBase](Production.ShopFloor.OutputOrderLines.md#producedquantitybase) | [Quantity (18, 3)](../data-types.md#quantity) | The equivalence of Produced Quantity in the base measurement unit of the product. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Default(0)` `ReadOnly` 
 | [ProducedStandard<br />QuantityBase](Production.ShopFloor.OutputOrderLines.md#producedstandardquantitybase) | [Quantity (18, 3)](../data-types.md#quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. null means to convert the value from Quantity using the measurement ratios. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` `Introduced in version 18.2` 
+| [RowVersion](Production.ShopFloor.OutputOrderLines.md#rowversion) | byte[] |  
 | [StartTime](Production.ShopFloor.OutputOrderLines.md#starttime) | datetime | Date and time when the operation has began. `Required` `Default(Now)` `Filter(ge;le)` 
 | [TransactionTimestamp](Production.ShopFloor.OutputOrderLines.md#transactiontimestamp) | datetime __nullable__ | Sets the timestamp of the receipt store operations for this output order line. Used in completing output orders. `ReadOnly` 
 
@@ -40,10 +41,10 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Document](Production.ShopFloor.OutputOrderLines.md#document) | [OutputOrders](Production.ShopFloor.OutputOrders.md) | The `OutputOrder`(Production.ShopFloor.OutputOrderLines.md#outputorder) to which this OutputOrderLine belongs. `Required` `Filter(multi eq)` |
+| [Document](Production.ShopFloor.OutputOrderLines.md#document) | [OutputOrders](Production.ShopFloor.OutputOrders.md) | The <see cref="OutputOrder"/> to which this OutputOrderLine belongs. `Required` `Filter(multi eq)` |
 | [LineWorkOrder](Production.ShopFloor.OutputOrderLines.md#lineworkorder) | [WorkOrders](Production.ShopFloor.WorkOrders.md) | The work order for which work is being accounted. `Required` `Filter(multi eq)` |
 | [Lot](Production.ShopFloor.OutputOrderLines.md#lot) | [Lots](Logistics.Inventory.Lots.md) (nullable) | The lot of the produced product. `Filter(multi eq)` |
-| [OutputOrder](Production.ShopFloor.OutputOrderLines.md#outputorder) | [OutputOrders](Production.ShopFloor.OutputOrders.md) | The `OutputOrder`(Production.ShopFloor.OutputOrderLines.md#outputorder) to which this OutputOrderLine belongs. `Required` `Filter(multi eq)` `Owner` |
+| [OutputOrder](Production.ShopFloor.OutputOrderLines.md#outputorder) | [OutputOrders](Production.ShopFloor.OutputOrders.md) | The <see cref="OutputOrder"/> to which this OutputOrderLine belongs. `Required` `Filter(multi eq)` `Owner` |
 | [ProducedQuantityUnit](Production.ShopFloor.OutputOrderLines.md#producedquantityunit) | [MeasurementUnits](General.MeasurementUnits.md) | The measurement unit of Produced Quantity. `Required` `Filter(multi eq)` |
 | [Product](Production.ShopFloor.OutputOrderLines.md#product) | [Products](General.Products.Products.md) | The actually produced product. `Required` `Filter(multi eq)` |
 | [ProductCode](Production.ShopFloor.OutputOrderLines.md#productcode) | [ProductCodes](General.Products.ProductCodes.md) (nullable) | Selects the product thru some of the product codes. `Filter(multi eq)` |
@@ -147,6 +148,12 @@ _Back-End Default Expression:_
 
 _Front-End Recalc Expressions:_  
 `IIF( ( ( ( obj.ProducedQuantity == null) OrElse ( obj.ProducedQuantityUnit == null)) OrElse ( obj.Product == null)), obj.ProducedStandardQuantityBase, obj.ProducedQuantity.ConvertTo( obj.Product.BaseUnit, obj.Product))`
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+
 ### StartTime
 
 Date and time when the operation has began. `Required` `Default(Now)` `Filter(ge;le)`
@@ -169,7 +176,7 @@ _Supports Order By_: **False**
 
 ### Document
 
-The `OutputOrder`(Production.ShopFloor.OutputOrderLines.md#outputorder) to which this OutputOrderLine belongs. `Required` `Filter(multi eq)`
+The <see cref="OutputOrder"/> to which this OutputOrderLine belongs. `Required` `Filter(multi eq)`
 
 _Type_: **[OutputOrders](Production.ShopFloor.OutputOrders.md)**  
 _Indexed_: **True**  
@@ -196,7 +203,7 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### OutputOrder
 
-The `OutputOrder`(Production.ShopFloor.OutputOrderLines.md#outputorder) to which this OutputOrderLine belongs. `Required` `Filter(multi eq)` `Owner`
+The <see cref="OutputOrder"/> to which this OutputOrderLine belongs. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[OutputOrders](Production.ShopFloor.OutputOrders.md)**  
 _Indexed_: **True**  

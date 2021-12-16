@@ -30,6 +30,7 @@ Aggregate Root:
 | [Id](Finance.Assets.DepreciationPlanLines.md#id) | guid |  
 | [LineNo](Finance.Assets.DepreciationPlanLines.md#lineno) | int32 | Consecutive number of the line within the depreciation plan. `Required` `Filter(eq)` 
 | [PlanDepreciationValue](Finance.Assets.DepreciationPlanLines.md#plandepreciationvalue) | [Amount (14, 2)](../data-types.md#amount) | The part of the total amount of the asset (in the currency of the asset), which is due for depreciation. `Currency: Asset.ValuationCurrency` `Required` `Default(0)` 
+| [RowVersion](Finance.Assets.DepreciationPlanLines.md#rowversion) | byte[] |  
 
 ## References
 
@@ -37,8 +38,8 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [Asset](Finance.Assets.DepreciationPlanLines.md#asset) | [Assets](Finance.Assets.Assets.md) | The asset that is planned for depreciation. `Required` `Filter(multi eq)` |
 | [DepreciationMethod](Finance.Assets.DepreciationPlanLines.md#depreciationmethod) | [DepreciationMethods](Finance.Assets.DepreciationMethods.md) | Depreciation method by which the asset will be depreciated. `Required` `Filter(multi eq)` |
-| [DepreciationPlan](Finance.Assets.DepreciationPlanLines.md#depreciationplan) | [DepreciationPlans](Finance.Assets.DepreciationPlans.md) | The `DepreciationPlan`(Finance.Assets.DepreciationPlanLines.md#depreciationplan) to which this DepreciationPlanLine belongs. `Required` `Filter(multi eq)` `Owner` |
-| [Document](Finance.Assets.DepreciationPlanLines.md#document) | [DepreciationPlans](Finance.Assets.DepreciationPlans.md) | The `DepreciationPlan`(Finance.Assets.DepreciationPlanLines.md#depreciationplan) to which this DepreciationPlanLine belongs. `Required` `Filter(multi eq)` |
+| [DepreciationPlan](Finance.Assets.DepreciationPlanLines.md#depreciationplan) | [DepreciationPlans](Finance.Assets.DepreciationPlans.md) | The <see cref="DepreciationPlan"/> to which this DepreciationPlanLine belongs. `Required` `Filter(multi eq)` `Owner` |
+| [Document](Finance.Assets.DepreciationPlanLines.md#document) | [DepreciationPlans](Finance.Assets.DepreciationPlans.md) | The <see cref="DepreciationPlan"/> to which this DepreciationPlanLine belongs. `Required` `Filter(multi eq)` |
 | [ValuationModel](Finance.Assets.DepreciationPlanLines.md#valuationmodel) | [ValuationModels](Finance.Assets.ValuationModels.md) | Valuation model in which the asset is accounted. `Required` `Filter(multi eq)` |
 
 ## Child Collections
@@ -95,6 +96,12 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
 
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+
 
 ## Reference Details
 
@@ -115,7 +122,7 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### DepreciationPlan
 
-The `DepreciationPlan`(Finance.Assets.DepreciationPlanLines.md#depreciationplan) to which this DepreciationPlanLine belongs. `Required` `Filter(multi eq)` `Owner`
+The <see cref="DepreciationPlan"/> to which this DepreciationPlanLine belongs. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[DepreciationPlans](Finance.Assets.DepreciationPlans.md)**  
 _Indexed_: **True**  
@@ -124,7 +131,7 @@ _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-reference
 
 ### Document
 
-The `DepreciationPlan`(Finance.Assets.DepreciationPlanLines.md#depreciationplan) to which this DepreciationPlanLine belongs. `Required` `Filter(multi eq)`
+The <see cref="DepreciationPlan"/> to which this DepreciationPlanLine belongs. `Required` `Filter(multi eq)`
 
 _Type_: **[DepreciationPlans](Finance.Assets.DepreciationPlans.md)**  
 _Indexed_: **True**  

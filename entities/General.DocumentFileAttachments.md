@@ -31,12 +31,13 @@ Aggregate Root:
 | [IsLinked](General.DocumentFileAttachments.md#islinked) | boolean | True when the document is linked (ony file name is kept). false when the document is embedded. `Required` `Default(false)` `Filter(eq)` 
 | [LinkedFilePath](General.DocumentFileAttachments.md#linkedfilepath) | string (254) __nullable__ | Path to the linked file. null when the file is embedded. 
 | [Notes](General.DocumentFileAttachments.md#notes) | string (max) __nullable__ | Notes for this DocumentFileAttachment. 
+| [RowVersion](General.DocumentFileAttachments.md#rowversion) | byte[] |  
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Document](General.DocumentFileAttachments.md#document) | [Documents](General.Documents.md) | The `Document`(General.DocumentFileAttachments.md#document) to which this DocumentFileAttachment belongs. `Required` `Filter(multi eq)` `Owner` |
+| [Document](General.DocumentFileAttachments.md#document) | [Documents](General.Documents.md) | The <see cref="Document"/> to which this DocumentFileAttachment belongs. `Required` `Filter(multi eq)` `Owner` |
 
 
 ## Attribute Details
@@ -92,12 +93,18 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
 
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+
 
 ## Reference Details
 
 ### Document
 
-The `Document`(General.DocumentFileAttachments.md#document) to which this DocumentFileAttachment belongs. `Required` `Filter(multi eq)` `Owner`
+The <see cref="Document"/> to which this DocumentFileAttachment belongs. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[Documents](General.Documents.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

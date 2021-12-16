@@ -29,6 +29,7 @@ Aggregate Tree
 | [Id](Crm.Marketing.CompanySizeClasses.md#id) | guid |  
 | [Name](Crm.Marketing.CompanySizeClasses.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Company size class name (multi-language). `Required` `Filter(eq;like)` 
 | [Notes](Crm.Marketing.CompanySizeClasses.md#notes) | string (max) __nullable__ | Notes for this CompanySizeClass. 
+| [RowVersion](Crm.Marketing.CompanySizeClasses.md#rowversion) | byte[] |  
 | [ToEmployees](Crm.Marketing.CompanySizeClasses.md#toemployees) | int32 __nullable__ | Maximum number of employees for this size class. null if this is not relevant to this size class. `Filter(eq)` 
 | [ToRevenue](Crm.Marketing.CompanySizeClasses.md#torevenue) | decimal (15, 0) __nullable__ | Maximal revenue for this size class. Currency is Revenue Currency. null if this is not relevant to this size class. `Filter(eq)` 
 
@@ -90,6 +91,12 @@ _Type_: **string (max) __nullable__**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 ### ToEmployees
 

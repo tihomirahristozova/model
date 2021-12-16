@@ -33,6 +33,7 @@ Aggregate Tree
 | [Notes](Projects.ProjectTasks.md#notes) | string (max) __nullable__ | Notes for this ProjectTask. 
 | [PlannedDurationHours](Projects.ProjectTasks.md#planneddurationhours) | decimal (8, 2) | Planned duration of the task in hours. The hours are allocated in the time interval between Start Date Time and Finish Date Time. `Required` `Default(0)` 
 | [ProjectTaskNo](Projects.ProjectTasks.md#projecttaskno) | int32 | Consecutive task number, unique within the project. `Required` 
+| [RowVersion](Projects.ProjectTasks.md#rowversion) | byte[] |  
 | [StartDateTime](Projects.ProjectTasks.md#startdatetime) | datetime | The date and time when the task is planned to start. `Required` `Default(Now)` `Filter(eq;ge;le)` 
 | [TaskName](Projects.ProjectTasks.md#taskname) | string (254) | The short name of the task. It is best practice to contain the target of the task. `Required` `Filter(multi eq;like)` 
 
@@ -109,6 +110,12 @@ _Default Value_: **0**
 Consecutive task number, unique within the project. `Required`
 
 _Type_: **int32**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+
+### RowVersion
+
+_Type_: **byte[]**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 

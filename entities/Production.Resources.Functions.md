@@ -28,12 +28,13 @@ Aggregate Root:
 | [Id](Production.Resources.Functions.md#id) | guid |  
 | [Name](Production.Resources.Functions.md#name) | string (64) | The name of this Function. `Required` `Filter(like)` 
 | [Notes](Production.Resources.Functions.md#notes) | string (254) __nullable__ | User comments on the function. 
+| [RowVersion](Production.Resources.Functions.md#rowversion) | byte[] |  
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [FunctionGroup](Production.Resources.Functions.md#functiongroup) | [FunctionGroups](Production.Resources.FunctionGroups.md) | The `FunctionGroup`(Production.Resources.Functions.md#functiongroup) to which this Function belongs. `Required` `Filter(multi eq)` `Owner` |
+| [FunctionGroup](Production.Resources.Functions.md#functiongroup) | [FunctionGroups](Production.Resources.FunctionGroups.md) | The <see cref="FunctionGroup"/> to which this Function belongs. `Required` `Filter(multi eq)` `Owner` |
 | [PrimaryUnit](Production.Resources.Functions.md#primaryunit) | [MeasurementUnits](General.MeasurementUnits.md) | Primary measurement unit for measuring workload of the function. Resources that can perform the function should be measureable in this unit. `Required` `Filter(multi eq)` |
 
 
@@ -64,12 +65,18 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
 
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+
 
 ## Reference Details
 
 ### FunctionGroup
 
-The `FunctionGroup`(Production.Resources.Functions.md#functiongroup) to which this Function belongs. `Required` `Filter(multi eq)` `Owner`
+The <see cref="FunctionGroup"/> to which this Function belongs. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[FunctionGroups](Production.Resources.FunctionGroups.md)**  
 _Indexed_: **True**  

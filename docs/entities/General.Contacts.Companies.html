@@ -190,6 +190,11 @@ Default Search Members:<br>
 <td>Notes for this Party. (Inherited from <a href="General.Contacts.Parties.html">Parties</a>)</td>
 </tr>
 <tr>
+<td><a href="General.Contacts.Companies.html#partyrowversion">PartyRowVersion</a></td>
+<td>byte[]</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="General.Contacts.Companies.html#partytype">PartyType</a></td>
 <td><a href="General.Contacts.Companies.html#partytype">PartyType</a></td>
 <td>Type of party. Currently supported are P=Person, C=Company, S=Store, L=Company Location, V=Division. <code>Required</code> <code>Default(&quot;P&quot;)</code> <code>Filter(multi eq)</code> (Inherited from <a href="General.Contacts.Parties.html">Parties</a>)</td>
@@ -233,6 +238,11 @@ Default Search Members:<br>
 <td><a href="General.Contacts.Companies.html#responsiblepersonname">ResponsiblePersonName</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString</a> <strong>nullable</strong></td>
 <td>Primary responsible person of the company. null means unknown. <code>Filter(like)</code></td>
+</tr>
+<tr>
+<td><a href="General.Contacts.Companies.html#rowversion">RowVersion</a></td>
+<td>byte[]</td>
+<td></td>
 </tr>
 <tr>
 <td><a href="General.Contacts.Companies.html#updatetime">UpdateTime</a></td>
@@ -429,6 +439,10 @@ Default Search Members:<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>254</strong></p>
+<h3 id="partyrowversion">PartyRowVersion</h3>
+<p><em>Type</em>: <strong>byte[]</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="partytype">PartyType</h3>
 <p>Type of party. Currently supported are P=Person, C=Company, S=Store, L=Company Location, V=Division. <code>Required</code> <code>Default(&quot;P&quot;)</code> <code>Filter(multi eq)</code> (Inherited from <a href="General.Contacts.Parties.html">Parties</a>)</p>
 <p><em>Type</em>: <strong><a href="General.Contacts.Companies.html#partytype">PartyType</a></strong><br>
@@ -512,6 +526,10 @@ Allowed values for the PartyType data attribute<br>
 <p>Primary responsible person of the company. null means unknown. <code>Filter(like)</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a> <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="rowversion">RowVersion</h3>
+<p><em>Type</em>: <strong>byte[]</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="updatetime">UpdateTime</h3>
 <p>Date and time when the Company was last updated. <code>Filter(ge;le)</code> <code>ReadOnly</code></p>

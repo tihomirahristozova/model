@@ -38,13 +38,14 @@ Aggregate Root:
 | [RefInvoiceApplyDate](Finance.Payments.BulkPaymentOrderLines.md#refinvoiceapplydate) | datetime __nullable__ | The apply date of the related invoice. Not specified when the payment order isn't related to any invoice or the apply date is unknown. 
 | [RefInvoiceDocumentDate](Finance.Payments.BulkPaymentOrderLines.md#refinvoicedocumentdate) | datetime __nullable__ | The date of the related invoice. null means that the payment order isn't related to any invoice or the date is unknown. 
 | [RefInvoiceDocumentNo](Finance.Payments.BulkPaymentOrderLines.md#refinvoicedocumentno) | string (20) __nullable__ | The number of the invoice which is related and is the basis for the payment. null means that the payment order isn't created or related to any invoice. 
+| [RowVersion](Finance.Payments.BulkPaymentOrderLines.md#rowversion) | byte[] |  
 | [TotalAmount](Finance.Payments.BulkPaymentOrderLines.md#totalamount) | [Amount (18, 2)](../data-types.md#amount) | Total amount that should be payed. `Currency: TotalAmountCurrency` `Required` `Default(0)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [BulkPaymentOrder](Finance.Payments.BulkPaymentOrderLines.md#bulkpaymentorder) | [BulkPaymentOrders](Finance.Payments.BulkPaymentOrders.md) | The `BulkPaymentOrder`(Finance.Payments.BulkPaymentOrderLines.md#bulkpaymentorder) to which this BulkPaymentOrderLine belongs. `Required` `Filter(multi eq)` `Owner` |
+| [BulkPaymentOrder](Finance.Payments.BulkPaymentOrderLines.md#bulkpaymentorder) | [BulkPaymentOrders](Finance.Payments.BulkPaymentOrders.md) | The <see cref="BulkPaymentOrder"/> to which this BulkPaymentOrderLine belongs. `Required` `Filter(multi eq)` `Owner` |
 | [InvoiceAmountCurrency](Finance.Payments.BulkPaymentOrderLines.md#invoiceamountcurrency) | [Currencies](General.Currencies.md) (nullable) | The currency of Invoice Amount. `Filter(multi eq)` |
 | [LocationParty](Finance.Payments.BulkPaymentOrderLines.md#locationparty) | [Parties](General.Contacts.Parties.md) (nullable) | Location or sub-party of the Party_Id. `Filter(multi eq)` |
 | [Party](Finance.Payments.BulkPaymentOrderLines.md#party) | [Parties](General.Contacts.Parties.md) | The party which is to pay or receive the amount. `Required` `Filter(multi eq)` |
@@ -181,6 +182,12 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Maximum Length_: **20**  
 
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+
 ### TotalAmount
 
 Total amount that should be payed. `Currency: TotalAmountCurrency` `Required` `Default(0)`
@@ -195,7 +202,7 @@ _Default Value_: **Constant**
 
 ### BulkPaymentOrder
 
-The `BulkPaymentOrder`(Finance.Payments.BulkPaymentOrderLines.md#bulkpaymentorder) to which this BulkPaymentOrderLine belongs. `Required` `Filter(multi eq)` `Owner`
+The <see cref="BulkPaymentOrder"/> to which this BulkPaymentOrderLine belongs. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[BulkPaymentOrders](Finance.Payments.BulkPaymentOrders.md)**  
 _Indexed_: **True**  

@@ -132,6 +132,11 @@ Aggregate Root:<br>
 <td>boolean</td>
 <td>Indicates wheather this amount is the remainder of the document. Amount = Total amount of the sales order - explicitly specified amounts in the plan (by Amount_Percent). <code>Required</code> <code>Default(false)</code></td>
 </tr>
+<tr>
+<td><a href="Crm.Sales.DefaultSalesOrderPaymentPlans.html#rowversion">RowVersion</a></td>
+<td>byte[]</td>
+<td></td>
+</tr>
 </tbody>
 </table>
 <h2 id="references">References</h2>
@@ -147,7 +152,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Crm.Sales.DefaultSalesOrderPaymentPlans.html#documenttype">DocumentType</a></td>
 <td><a href="General.DocumentTypes.html">DocumentTypes</a></td>
-<td>The <code>DocumentType</code>(General.DocumentTypes.md) to which this DefaultSalesOrder<br>PaymentPlan belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
+<td>The <see cref="General.DocumentType"></see> to which this DefaultSalesOrder<br>PaymentPlan belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.DefaultSalesOrderPaymentPlans.html#enterprisecompany">EnterpriseCompany</a></td>
@@ -248,9 +253,13 @@ Generic enum type for PaymentPlanDueDateSource properties<br>
 <em>Default Value</em>: <strong>False</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>IIF( ( obj.AmountPercent != null), False, obj.Remainder)</code></p>
+<h3 id="rowversion">RowVersion</h3>
+<p><em>Type</em>: <strong>byte[]</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="documenttype">DocumentType</h3>
-<p>The <code>DocumentType</code>(General.DocumentTypes.md) to which this DefaultSalesOrderPaymentPlan belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
+<p>The <see cref="General.DocumentType"></see> to which this DefaultSalesOrderPaymentPlan belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="General.DocumentTypes.html">DocumentTypes</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em><a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a></em>: <strong>True</strong></p>

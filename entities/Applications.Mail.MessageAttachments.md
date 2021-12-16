@@ -30,12 +30,13 @@ Aggregate Root:
 | [ContentDownloaded](Applications.Mail.MessageAttachments.md#contentdownloaded) | boolean | True when the content is included, false when this is only an empty container. Content should be included when sending mail. `Required` `Default(false)` `Filter(eq)` 
 | [Id](Applications.Mail.MessageAttachments.md#id) | guid |  
 | [Name](Applications.Mail.MessageAttachments.md#name) | string (128) __nullable__ | The name of this MessageAttachment. `Filter(eq;like)` 
+| [RowVersion](Applications.Mail.MessageAttachments.md#rowversion) | byte[] |  
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [MailMessage](Applications.Mail.MessageAttachments.md#mailmessage) | [Messages](Applications.Mail.Messages.md) | The `Message`(Applications.Mail.Messages.md) to which this MessageAttachment belongs. `Required` `Filter(multi eq)` `Owner` |
+| [MailMessage](Applications.Mail.MessageAttachments.md#mailmessage) | [Messages](Applications.Mail.Messages.md) | The <see cref="Message"/> to which this MessageAttachment belongs. `Required` `Filter(multi eq)` `Owner` |
 
 
 ## Attribute Details
@@ -82,12 +83,18 @@ _Supported Filters_: **Equals, Like**
 _Supports Order By_: **False**  
 _Maximum Length_: **128**  
 
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+
 
 ## Reference Details
 
 ### MailMessage
 
-The `Message`(Applications.Mail.Messages.md) to which this MessageAttachment belongs. `Required` `Filter(multi eq)` `Owner`
+The <see cref="Message"/> to which this MessageAttachment belongs. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[Messages](Applications.Mail.Messages.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

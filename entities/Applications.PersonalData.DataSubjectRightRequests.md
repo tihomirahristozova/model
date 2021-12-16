@@ -28,6 +28,7 @@ Aggregate Tree
 | [Id](Applications.PersonalData.DataSubjectRightRequests.md#id) | guid |  
 | [Notes](Applications.PersonalData.DataSubjectRightRequests.md#notes) | string (max) __nullable__ | This should usually contain detailed implementation notes. 
 | [RequestedRight](Applications.PersonalData.DataSubjectRightRequests.md#requestedright) | [RequestedRight](Applications.PersonalData.DataSubjectRightRequests.md#requestedright) | The requested right, according to GDPR and other personal data regulations.  REC=Rectify; ERA=Erasure; RES=Restrict; POR=Portability; OBJ=Object; OTH=Other. `Required` `Filter(eq)` 
+| [RowVersion](Applications.PersonalData.DataSubjectRightRequests.md#rowversion) | byte[] |  
 | [Status](Applications.PersonalData.DataSubjectRightRequests.md#status) | [Status](Applications.PersonalData.DataSubjectRightRequests.md#status) | The status of the request. 1=Requested; 2=Reviewing; 3=Executing; 4=Implemented; 5=Denied. `Required` 
 
 ## References
@@ -93,6 +94,12 @@ _Allowed Values (Applications.PersonalData.DataSubjectRightRequestsRepository.Re
 | Other | Other value. Stored as 'OTH'. <br /> _Database Value:_ 'OTH' <br /> _Model Value:_ 5 <br /> _Domain API Value:_ 'Other' |
 
 _Supported Filters_: **Equals**  
+_Supports Order By_: **False**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
 ### Status

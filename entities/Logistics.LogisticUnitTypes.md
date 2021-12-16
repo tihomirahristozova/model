@@ -27,6 +27,7 @@ Aggregate Tree
 | [Id](Logistics.LogisticUnitTypes.md#id) | guid |  
 | [Name](Logistics.LogisticUnitTypes.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Multi-language name of the logistic unit type. `Required` `Filter(eq;like)` 
 | [Notes](Logistics.LogisticUnitTypes.md#notes) | string (max) __nullable__ | Notes for this LogisticUnitType. `Filter(like)` 
+| [RowVersion](Logistics.LogisticUnitTypes.md#rowversion) | byte[] |  
 
 
 ## Attribute Details
@@ -63,6 +64,12 @@ _Type_: **string (max) __nullable__**
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 
 

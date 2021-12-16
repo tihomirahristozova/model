@@ -29,12 +29,13 @@ Aggregate Root:
 | [BaseAmount](General.DocumentDistributedAmounts.md#baseamount) | [Amount (14, 2)](../data-types.md#amount) __nullable__ | The calculated base amount for the line in document currency. The base amount is the base, over which the additional amounts are calculated. Null if the base amount is not stored (for amounts distributed in older versions of the system). . `Currency: GetDocumentCurrency()` `Introduced in version 22.1.4.44` 
 | [DocumentLineId](General.DocumentDistributedAmounts.md#documentlineid) | guid __nullable__ | The Id of the line over which the amount is distributed. `Filter(multi eq)` 
 | [Id](General.DocumentDistributedAmounts.md#id) | guid |  
+| [RowVersion](General.DocumentDistributedAmounts.md#rowversion) | byte[] |  
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Document](General.DocumentDistributedAmounts.md#document) | [Documents](General.Documents.md) | The `Document`(General.DocumentDistributedAmounts.md#document) to which this DocumentDistributedAmount belongs. `Required` `Filter(multi eq)` `Owner` |
+| [Document](General.DocumentDistributedAmounts.md#document) | [Documents](General.Documents.md) | The <see cref="Document"/> to which this DocumentDistributedAmount belongs. `Required` `Filter(multi eq)` `Owner` |
 | [DocumentAmountType](General.DocumentDistributedAmounts.md#documentamounttype) | [DocumentAmountTypes](General.DocumentAmountTypes.md) | The type of amount which is distributed. `Required` `Filter(multi eq)` |
 | [ReferencedDocument](General.DocumentDistributedAmounts.md#referenceddocument) | [Documents](General.Documents.md) (nullable) | In not null the Document_Line_Id is a line of the document with Referenced_Document_Id. `Filter(multi eq)` |
 
@@ -72,12 +73,18 @@ _Indexed_: **True**
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+
 
 ## Reference Details
 
 ### Document
 
-The `Document`(General.DocumentDistributedAmounts.md#document) to which this DocumentDistributedAmount belongs. `Required` `Filter(multi eq)` `Owner`
+The <see cref="Document"/> to which this DocumentDistributedAmount belongs. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[Documents](General.Documents.md)**  
 _Indexed_: **True**  

@@ -46,6 +46,7 @@ Aggregate Tree
 | [DocumentDate](Finance.Payments.PaymentOrders.md#documentdate) | date | The date on which the document was issued. `Required` `Default(Today)` `Filter(eq;ge;le)` `ORD` (Inherited from [Documents](General.Documents.md)) 
 | [DocumentNo](Finance.Payments.PaymentOrders.md#documentno) | string (20) | Document number, unique within Document_Type_Id. `Required` `Filter(eq;like)` `ORD` (Inherited from [Documents](General.Documents.md)) 
 | [DocumentNotes](Finance.Payments.PaymentOrders.md#documentnotes) | string (max) __nullable__ | Notes for this Document. (Inherited from [Documents](General.Documents.md)) 
+| [DocumentRowVersion](Finance.Payments.PaymentOrders.md#documentrowversion) | byte[] |  
 | [DocumentVersion](Finance.Payments.PaymentOrders.md#documentversion) | int32 | Consecutive version number, starting with 1. Each update produces a new version of the document. `Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [DueDate](Finance.Payments.PaymentOrders.md#duedate) | datetime __nullable__ | The due date of the payment. null means there is no due date. `Filter(eq;ge;le)` 
 | [DueStartDate](Finance.Payments.PaymentOrders.md#duestartdate) | date __nullable__ | The date at which the payment becomes executable. null means the payment is executable at all times. `Filter(eq;ge;le)` `ORD` 
@@ -67,6 +68,7 @@ Aggregate Tree
 | [RefInvoiceDocumentDate](Finance.Payments.PaymentOrders.md#refinvoicedocumentdate) | datetime __nullable__ | The date of the related invoice. null means that the payment order isn't related to any invoice or the date is unknown. `Filter(eq;ge;le)` 
 | [RefInvoiceDocumentNo](Finance.Payments.PaymentOrders.md#refinvoicedocumentno) | string (20) __nullable__ | The number of the invoice which has created or is related to the payment order and is the basis for the payment. null means that the payment order isn't created or related to any invoice. `Filter(eq)` 
 | [ReleaseTime](Finance.Payments.PaymentOrders.md#releasetime) | datetime __nullable__ | Date and time when the document was released (State set to Released). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
+| [RowVersion](Finance.Payments.PaymentOrders.md#rowversion) | byte[] |  
 | [State](Finance.Payments.PaymentOrders.md#state) | [DocumentState](Finance.Payments.PaymentOrders.md#state) | The current system state of the document. Allowed values: 0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed. `Required` `Default(0)` `Filter(multi eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [TotalAmount](Finance.Payments.PaymentOrders.md#totalamount) | [Amount (18, 2)](../data-types.md#amount) | Total amount that should be payed. `Currency: TotalAmountCurrency` `Required` `Default(0)` `Filter(eq;ge;le)` 
 | [Void](Finance.Payments.PaymentOrders.md#void) | boolean | True if the document is null and void. `Required` `Default(false)` `Filter(eq)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
@@ -247,6 +249,12 @@ _Type_: **string (max) __nullable__**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
+
+### DocumentRowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 ### DocumentVersion
 
@@ -459,6 +467,12 @@ Date and time when the document was released (State set to Released). `Filter(ge
 
 _Type_: **datetime __nullable__**  
 _Supported Filters_: **GreaterThanOrLessThan**  
+_Supports Order By_: **False**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
 ### State

@@ -27,13 +27,14 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [Id](Production.Resources.ResourceFunctions.md#id) | guid |  
 | [Notes](Production.Resources.ResourceFunctions.md#notes) | string (254) __nullable__ | User notes on the resource function. 
+| [RowVersion](Production.Resources.ResourceFunctions.md#rowversion) | byte[] |  
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Function](Production.Resources.ResourceFunctions.md#function) | [Functions](Production.Resources.Functions.md) | Function, which the resource can perform. `Required` `Filter(multi eq)` |
-| [Resource](Production.Resources.ResourceFunctions.md#resource) | [Resources](Production.Resources.Resources.md) | The `Resource`(Production.Resources.ResourceFunctions.md#resource) to which this ResourceFunction belongs. `Required` `Filter(multi eq)` `Owner` |
+| [Resource](Production.Resources.ResourceFunctions.md#resource) | [Resources](Production.Resources.Resources.md) | The <see cref="Resource"/> to which this ResourceFunction belongs. `Required` `Filter(multi eq)` `Owner` |
 
 
 ## Attribute Details
@@ -54,6 +55,12 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
 
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+
 
 ## Reference Details
 
@@ -66,7 +73,7 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### Resource
 
-The `Resource`(Production.Resources.ResourceFunctions.md#resource) to which this ResourceFunction belongs. `Required` `Filter(multi eq)` `Owner`
+The <see cref="Resource"/> to which this ResourceFunction belongs. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[Resources](Production.Resources.Resources.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

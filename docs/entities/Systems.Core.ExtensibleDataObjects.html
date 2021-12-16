@@ -142,6 +142,11 @@ __</p>
 <td>int32</td>
 <td>The latest saved version of the object. Starts from 1 and increments with 1 for each new version. <code>Required</code> <code>Default(1)</code></td>
 </tr>
+<tr>
+<td><a href="Systems.Core.ExtensibleDataObjects.html#rowversion">RowVersion</a></td>
+<td>byte[]</td>
+<td></td>
+</tr>
 </tbody>
 </table>
 <h2 id="references">References</h2>
@@ -228,6 +233,10 @@ __</p>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>1</strong></p>
+<h3 id="rowversion">RowVersion</h3>
+<p><em>Type</em>: <strong>byte[]</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="creationuser">CreationUser</h3>
 <p>The user, who created the object represented by this system object . null means that it is unknown. <code>Filter(multi eq)</code> <code>Introduced in version 19.1</code></p>

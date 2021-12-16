@@ -29,6 +29,7 @@ Aggregate Root:
 | [Id](Applications.Fleet.VehicleEquipment.md#id) | guid |  
 | [Notes](Applications.Fleet.VehicleEquipment.md#notes) | string (max) __nullable__ | Notes for the installed equipment. 
 | [Quantity](Applications.Fleet.VehicleEquipment.md#quantity) | int32 | Quantity of the equipment. `Required` `Default(1)` `Filter(ge;le)` 
+| [RowVersion](Applications.Fleet.VehicleEquipment.md#rowversion) | byte[] |  
 | [StartDate](Applications.Fleet.VehicleEquipment.md#startdate) | date | The installation date of the equipment. `Required` `Filter(ge;le)` 
 
 ## References
@@ -73,6 +74,12 @@ _Type_: **int32**
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **1**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 ### StartDate
 

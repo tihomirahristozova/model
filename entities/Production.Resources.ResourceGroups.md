@@ -29,6 +29,7 @@ Aggregate Tree
 | [Id](Production.Resources.ResourceGroups.md#id) | guid |  
 | [Name](Production.Resources.ResourceGroups.md#name) | string (64) | Name of resource group. `Required` `Filter(like)` 
 | [Parent](Production.Resources.ResourceGroups.md#parent) | string (254) | Dot-separated list of parent groups. It also contains leading and trailing dot. `Required` `Default("/")` `Filter(like)` `ORD` 
+| [RowVersion](Production.Resources.ResourceGroups.md#rowversion) | byte[] |  
 
 ## Child Collections
 
@@ -75,6 +76,12 @@ _Supported Filters_: **Like**
 _Supports Order By_: **True**  
 _Maximum Length_: **254**  
 _Default Value_: **/**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 
 

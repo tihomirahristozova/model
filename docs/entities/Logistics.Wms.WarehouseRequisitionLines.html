@@ -133,6 +133,11 @@ Aggregate Root:<br>
 <td>Quantity in the base measurement unit of the product. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>Filter(multi eq;ge;le)</code> <code>Introduced in version 21.1.1.33</code></td>
 </tr>
 <tr>
+<td><a href="Logistics.Wms.WarehouseRequisitionLines.html#rowversion">RowVersion</a></td>
+<td>byte[]</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="Logistics.Wms.WarehouseRequisitionLines.html#standardquantity">StandardQuantity</a></td>
 <td><a href="../data-types.html#quantity">Quantity (12, 3)</a></td>
 <td>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>Introduced in version 22.1.4.42</code></td>
@@ -152,7 +157,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Logistics.Wms.WarehouseRequisitionLines.html#document">Document</a></td>
 <td><a href="Logistics.Wms.WarehouseRequisitions.html">WarehouseRequisitions</a></td>
-<td>The <code>WarehouseRequisition</code>(Logistics.Wms.WarehouseRequisitionLines.md#warehouserequisition) to which this WarehouseRequisitionLine belongs. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>The <see cref="Warehouse<br />Requisition"></see> to which this WarehouseRequisitionLine belongs. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Wms.WarehouseRequisitionLines.html#lot">Lot</a></td>
@@ -187,7 +192,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Logistics.Wms.WarehouseRequisitionLines.html#warehouserequisition">WarehouseRequisition</a></td>
 <td><a href="Logistics.Wms.WarehouseRequisitions.html">WarehouseRequisitions</a></td>
-<td>The <code>WarehouseRequisition</code>(Logistics.Wms.WarehouseRequisitionLines.md#warehouserequisition) to which this WarehouseRequisitionLine belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
+<td>The <see cref="Warehouse<br />Requisition"></see> to which this WarehouseRequisitionLine belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 </tbody>
 </table>
@@ -227,6 +232,10 @@ Aggregate Root:<br>
 <p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity (12, 3)</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="rowversion">RowVersion</h3>
+<p><em>Type</em>: <strong>byte[]</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="standardquantity">StandardQuantity</h3>
 <p>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>Introduced in version 22.1.4.42</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity (12, 3)</a></strong><br>
@@ -234,7 +243,7 @@ Aggregate Root:<br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="document">Document</h3>
-<p>The <code>WarehouseRequisition</code>(Logistics.Wms.WarehouseRequisitionLines.md#warehouserequisition) to which this WarehouseRequisitionLine belongs. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>The <see cref="WarehouseRequisition"></see> to which this WarehouseRequisitionLine belongs. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Logistics.Wms.WarehouseRequisitions.html">WarehouseRequisitions</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
@@ -263,7 +272,7 @@ Aggregate Root:<br>
 <p><em>Type</em>: <strong><a href="Logistics.Inventory.SerialNumbers.html">SerialNumbers</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="warehouserequisition">WarehouseRequisition</h3>
-<p>The <code>WarehouseRequisition</code>(Logistics.Wms.WarehouseRequisitionLines.md#warehouserequisition) to which this WarehouseRequisitionLine belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
+<p>The <see cref="WarehouseRequisition"></see> to which this WarehouseRequisitionLine belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="Logistics.Wms.WarehouseRequisitions.html">WarehouseRequisitions</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>

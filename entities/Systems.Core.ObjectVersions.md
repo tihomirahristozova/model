@@ -27,6 +27,7 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [Id](Systems.Core.ObjectVersions.md#id) | guid |  
 | [ObjectContents](Systems.Core.ObjectVersions.md#objectcontents) | byte[] | The compressed contents of the object. `Required` 
+| [RowVersion](Systems.Core.ObjectVersions.md#rowversion) | byte[] |  
 | [ServerVersion](Systems.Core.ObjectVersions.md#serverversion) | string (15) __nullable__ | The version of the EnterpriseOne server, which created the version. The version should be in the form (9.9.9.9). null means the version is unknown. 
 | [Version](Systems.Core.ObjectVersions.md#version) | int32 | The version number of the version, stored in the current row, starting from 1. `Required` `Filter(multi eq;ge;le)` 
 | [VersionTime](Systems.Core.ObjectVersions.md#versiontime) | datetime | The timestamp when the version was saved. `Required` `Filter(ge;le)` 
@@ -52,6 +53,12 @@ _Default Value_: **NewGuid**
 ### ObjectContents
 
 The compressed contents of the object. `Required`
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+
+### RowVersion
 
 _Type_: **byte[]**  
 _Supported Filters_: **NotFilterable**  

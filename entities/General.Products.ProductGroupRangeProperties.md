@@ -29,13 +29,14 @@ Aggregate Root:
 | [Id](General.Products.ProductGroupRangeProperties.md#id) | guid |  
 | [PropertyValuesList](General.Products.ProductGroupRangeProperties.md#propertyvalueslist) | string (max) __nullable__ | Contains the enumeration of all values in the alternating value set. Used only when Rage Type = E (enumeratio). 
 | [RangeType](General.Products.ProductGroupRangeProperties.md#rangetype) | [RangeType](General.Products.ProductGroupRangeProperties.md#rangetype) | Specifies the method of the creation of the value set: R - by range from-to; E - by enumeration of all values;. `Required` `Default("R")` 
+| [RowVersion](General.Products.ProductGroupRangeProperties.md#rowversion) | byte[] |  
 | [ToPropertyValue](General.Products.ProductGroupRangeProperties.md#topropertyvalue) | string (254) __nullable__ | Ending value of the range of alternative values. Used only when Rage Type = R (range). 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ProductGroup](General.Products.ProductGroupRangeProperties.md#productgroup) | [ProductGroups](General.Products.ProductGroups.md) | The `ProductGroup`(General.Products.ProductGroupRange<br />Properties.md#productgroup) to which this ProductGroupRangeProperty belongs. `Required` `Filter(multi eq)` `Owner` |
+| [ProductGroup](General.Products.ProductGroupRangeProperties.md#productgroup) | [ProductGroups](General.Products.ProductGroups.md) | The <see cref="ProductGroup"/> to which this ProductGroupRangeProperty belongs. `Required` `Filter(multi eq)` `Owner` |
 | [Property](General.Products.ProductGroupRangeProperties.md#property) | [CustomProperties](General.CustomProperties.md) | The property whose values will be altered. `Required` `Filter(multi eq)` |
 
 
@@ -83,6 +84,12 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Default Value_: **Range**  
 
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+
 ### ToPropertyValue
 
 Ending value of the range of alternative values. Used only when Rage Type = R (range).
@@ -97,7 +104,7 @@ _Maximum Length_: **254**
 
 ### ProductGroup
 
-The `ProductGroup`(General.Products.ProductGroupRangeProperties.md#productgroup) to which this ProductGroupRangeProperty belongs. `Required` `Filter(multi eq)` `Owner`
+The <see cref="ProductGroup"/> to which this ProductGroupRangeProperty belongs. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[ProductGroups](General.Products.ProductGroups.md)**  
 _Indexed_: **True**  

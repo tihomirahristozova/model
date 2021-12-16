@@ -127,6 +127,11 @@ __</p>
 <td>boolean</td>
 <td>True if the user should receive SMS. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
 </tr>
+<tr>
+<td><a href="Communities.NotificationSettings.html#rowversion">RowVersion</a></td>
+<td>byte[]</td>
+<td></td>
+</tr>
 </tbody>
 </table>
 <h2 id="references">References</h2>
@@ -176,6 +181,10 @@ __</p>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
+<h3 id="rowversion">RowVersion</h3>
+<p><em>Type</em>: <strong>byte[]</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="user">User</h3>
 <p>The user for whom the notification setting is about. <code>Required</code> <code>Filter(multi eq)</code></p>

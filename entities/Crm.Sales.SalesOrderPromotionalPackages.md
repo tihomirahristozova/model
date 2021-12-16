@@ -28,13 +28,14 @@ Aggregate Root:
 | [Id](Crm.Sales.SalesOrderPromotionalPackages.md#id) | guid |  
 | [LineNumber](Crm.Sales.SalesOrderPromotionalPackages.md#linenumber) | int32 | Consecutive line number of the package, unique within the document. `Required` `Filter(eq)` 
 | [NumberOfPackages](Crm.Sales.SalesOrderPromotionalPackages.md#numberofpackages) | int32 | Number of packages sold. `Required` `Default(0)` 
+| [RowVersion](Crm.Sales.SalesOrderPromotionalPackages.md#rowversion) | byte[] |  
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [PromotionalPackage](Crm.Sales.SalesOrderPromotionalPackages.md#promotionalpackage) | [PromotionalPackages](Crm.PromotionalPackages.md) | The type of promotional package sold. `Required` `Filter(multi eq)` |
-| [SalesOrder](Crm.Sales.SalesOrderPromotionalPackages.md#salesorder) | [SalesOrders](Crm.Sales.SalesOrders.md) | The `SalesOrder`(Crm.Sales.SalesOrderPromotional<br />Packages.md#salesorder) to which this SalesOrderPromotional<br />Package belongs. `Required` `Filter(multi eq)` `Owner` |
+| [SalesOrder](Crm.Sales.SalesOrderPromotionalPackages.md#salesorder) | [SalesOrders](Crm.Sales.SalesOrders.md) | The <see cref="SalesOrder"/> to which this SalesOrderPromotional<br />Package belongs. `Required` `Filter(multi eq)` `Owner` |
 
 
 ## Attribute Details
@@ -68,6 +69,12 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Default Value_: **0**  
 
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+
 
 ## Reference Details
 
@@ -80,7 +87,7 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### SalesOrder
 
-The `SalesOrder`(Crm.Sales.SalesOrderPromotionalPackages.md#salesorder) to which this SalesOrderPromotionalPackage belongs. `Required` `Filter(multi eq)` `Owner`
+The <see cref="SalesOrder"/> to which this SalesOrderPromotionalPackage belongs. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[SalesOrders](Crm.Sales.SalesOrders.md)**  
 _Indexed_: **True**  

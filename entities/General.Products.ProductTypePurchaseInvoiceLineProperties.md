@@ -28,12 +28,13 @@ Aggregate Root:
 | [Id](General.Products.ProductTypePurchaseInvoiceLineProperties.md#id) | guid |  
 | [PropertyNo](General.Products.ProductTypePurchaseInvoiceLineProperties.md#propertyno) | int32 | The consecutive number (position) of the property within the current product type. `Required` 
 | [Required](General.Products.ProductTypePurchaseInvoiceLineProperties.md#required) | boolean | True when the property is required, when creating new purchase invoice lines. False when this only suggests the usage of the property. `Required` `Default(false)` 
+| [RowVersion](General.Products.ProductTypePurchaseInvoiceLineProperties.md#rowversion) | byte[] |  
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ProductType](General.Products.ProductTypePurchaseInvoiceLineProperties.md#producttype) | [ProductTypes](General.Products.ProductTypes.md) | The `ProductType`(General.Products.ProductTypePurchase<br />InvoiceLineProperties.md#producttype) to which this ProductTypePurchase<br />InvoiceLineProperty belongs. `Required` `Filter(multi eq)` `Owner` |
+| [ProductType](General.Products.ProductTypePurchaseInvoiceLineProperties.md#producttype) | [ProductTypes](General.Products.ProductTypes.md) | The <see cref="ProductType"/> to which this ProductTypePurchase<br />InvoiceLineProperty belongs. `Required` `Filter(multi eq)` `Owner` |
 | [Property](General.Products.ProductTypePurchaseInvoiceLineProperties.md#property) | [CustomProperties](General.CustomProperties.md) | The user-defined property. It should be with Entity Type = 'Purchase Invoice Line'. `Required` `Filter(multi eq)` |
 
 
@@ -68,12 +69,18 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Default Value_: **False**  
 
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+
 
 ## Reference Details
 
 ### ProductType
 
-The `ProductType`(General.Products.ProductTypePurchaseInvoiceLineProperties.md#producttype) to which this ProductTypePurchaseInvoiceLineProperty belongs. `Required` `Filter(multi eq)` `Owner`
+The <see cref="ProductType"/> to which this ProductTypePurchaseInvoiceLineProperty belongs. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[ProductTypes](General.Products.ProductTypes.md)**  
 _Indexed_: **True**  

@@ -39,6 +39,7 @@ Aggregate Tree
 | [IsActive](General.DocumentAmountTypes.md#isactive) | boolean | True when the amount type is active for new records; false - otherwise. `Required` `Default(true)` `Filter(eq)` 
 | [PercentInputAllowed](General.DocumentAmountTypes.md#percentinputallowed) | boolean | True when the user is allowed to input percent of total for distribution. `Required` `Default(true)` `Filter(eq)` 
 | [RoundScale](General.DocumentAmountTypes.md#roundscale) | int32 __nullable__ | The amounts should be rounded with the specified number of digits after the decimal point. null means to use the currency default. 
+| [RowVersion](General.DocumentAmountTypes.md#rowversion) | byte[] |  
 | [UnitAmountInputAllowed](General.DocumentAmountTypes.md#unitamountinputallowed) | boolean | Specifies whether the user is allowed to input fixed unit amount for the calculation of the amount. `Required` `Default(false)` `Filter(eq)` 
 
 ## References
@@ -198,6 +199,12 @@ _Default Value_: **True**
 The amounts should be rounded with the specified number of digits after the decimal point. null means to use the currency default.
 
 _Type_: **int32 __nullable__**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+
+### RowVersion
+
+_Type_: **byte[]**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 

@@ -26,6 +26,7 @@ Aggregate Tree
 | [Date](Crm.Marketing.ForecastItems.md#date) | datetime | The date for which the sales is forecasted. When forecasting for a period, this contains the first date of the period. `Required` `Filter(ge;le)` 
 | [Id](Crm.Marketing.ForecastItems.md#id) | guid |  
 | [Quantity](Crm.Marketing.ForecastItems.md#quantity) | [Quantity (18, 3)](../data-types.md#quantity) | The forecasted sales quantity in the base measurement category of the product. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Default(0)` `Filter(ge;le)` 
+| [RowVersion](Crm.Marketing.ForecastItems.md#rowversion) | byte[] |  
 
 ## References
 
@@ -64,6 +65,12 @@ _Type_: **[Quantity (18, 3)](../data-types.md#quantity)**
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 
 ## Reference Details

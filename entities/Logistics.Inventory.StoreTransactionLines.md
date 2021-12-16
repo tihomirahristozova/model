@@ -40,6 +40,7 @@ Aggregate Root:
 | [ParentLineNo](Logistics.Inventory.StoreTransactionLines.md#parentlineno) | int32 __nullable__ | The number of the line within the parent document, which the current line executes. null when the current line does not execute line. 
 | [Quantity](Logistics.Inventory.StoreTransactionLines.md#quantity) | [Quantity (18, 3)](../data-types.md#quantity) | The quantity received/issued in the measurement unit, specified in Quantity_Unit_Id. null means that the quantity is specified only in base measurement unit. `Unit: QuantityUnit` `Required` `Default(0)` 
 | [QuantityBase](Logistics.Inventory.StoreTransactionLines.md#quantitybase) | [Quantity (18, 3)](../data-types.md#quantity) | The quantity of the stock received/issued in base measurement unit. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Default(0)` `Filter(ge;le)` 
+| [RowVersion](Logistics.Inventory.StoreTransactionLines.md#rowversion) | byte[] |  
 | [StandardQuantityBase](Logistics.Inventory.StoreTransactionLines.md#standardquantitybase) | [Quantity (18, 3)](../data-types.md#quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` `Introduced in version 18.2` 
 | [TempOrderNo](Logistics.Inventory.StoreTransactionLines.md#temporderno) | string (50) __nullable__ | Obsolete. Not used. `Filter(eq)` 
 | [TransactionTimestamp](Logistics.Inventory.StoreTransactionLines.md#transactiontimestamp) | datetime __nullable__ | Exact time when the transaction changes the cost of the product. `Filter(ge;le)` `ORD` 
@@ -206,6 +207,12 @@ _Back-End Default Expression:_
 
 _Front-End Recalc Expressions:_  
 `IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.QuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))`
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+
 ### StandardQuantityBase
 
 The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` `Introduced in version 18.2`

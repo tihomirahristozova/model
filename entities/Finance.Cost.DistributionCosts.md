@@ -33,7 +33,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CostDistribution](Finance.Cost.DistributionCosts.md#costdistribution) | [Distributions](Finance.Cost.Distributions.md) | The `Distribution`(Finance.Cost.Distributions.md) to which this DistributionCost belongs. `Required` `Filter(multi eq)` `Owner` |
+| [CostDistribution](Finance.Cost.DistributionCosts.md#costdistribution) | [Distributions](Finance.Cost.Distributions.md) | The <see cref="Distribution"/> to which this DistributionCost belongs. `Required` `Filter(multi eq)` `Owner` |
 | [CostType](Finance.Cost.DistributionCosts.md#costtype) | [CostTypes](Finance.Cost.CostTypes.md) | The type of the cost, which will be distributed. `Required` `Filter(multi eq)` |
 
 
@@ -68,7 +68,7 @@ _Maximum Length_: **2147483647**
 
 ### CostDistribution
 
-The `Distribution`(Finance.Cost.Distributions.md) to which this DistributionCost belongs. `Required` `Filter(multi eq)` `Owner`
+The <see cref="Distribution"/> to which this DistributionCost belongs. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[Distributions](Finance.Cost.Distributions.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

@@ -147,6 +147,11 @@ Aggregate Root:<br>
 <td>string (254)</td>
 <td>The short name of the risk. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
+<tr>
+<td><a href="Projects.ProjectRisks.html#rowversion">RowVersion</a></td>
+<td>byte[]</td>
+<td></td>
+</tr>
 </tbody>
 </table>
 <h2 id="references">References</h2>
@@ -241,6 +246,10 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>254</strong></p>
+<h3 id="rowversion">RowVersion</h3>
+<p><em>Type</em>: <strong>byte[]</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="project">Project</h3>
 <p>The project for which this risk applies. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>

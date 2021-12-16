@@ -117,6 +117,11 @@ Default Search Members:<br>
 <td>string (254)</td>
 <td>Contact mechanism description. <code>Required</code> <code>Filter(eq;like)</code></td>
 </tr>
+<tr>
+<td><a href="General.Contacts.ContactMechanisms.html#rowversion">RowVersion</a></td>
+<td>byte[]</td>
+<td></td>
+</tr>
 </tbody>
 </table>
 <h2 id="references">References</h2>
@@ -207,6 +212,10 @@ Allowed values for the <code>ContactMechanismType</code>(General.Contacts.Contac
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>254</strong></p>
+<h3 id="rowversion">RowVersion</h3>
+<p><em>Type</em>: <strong>byte[]</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="administrativeregion">AdministrativeRegion</h3>
 <p>The administrative region, where the contact mechanism is situated. Null if this is unknown or N/A. <code>Filter(multi eq)</code> <code>Introduced in version 18.2</code></p>

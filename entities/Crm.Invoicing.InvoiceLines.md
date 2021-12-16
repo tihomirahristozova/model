@@ -40,6 +40,7 @@ Aggregate Root:
 | [ProductDescription](Crm.Invoicing.InvoiceLines.md#productdescription) | [MultilanguageString](../data-types.md#multilanguagestring) | The description of the invoiced product. Initially copied from the name of the invoiced Product or from the generating document. `Required` 
 | [Quantity](Crm.Invoicing.InvoiceLines.md#quantity) | [Quantity (12, 3)](../data-types.md#quantity) | The quantity of the invoiced product. `Unit: QuantityUnit` `Required` `Default(1)` `Filter(ge;le)` 
 | [QuantityBase](Crm.Invoicing.InvoiceLines.md#quantitybase) | [Quantity (12, 3)](../data-types.md#quantity) | The equivalent of Quantity in the base measurement unit of the Product. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` 
+| [RowVersion](Crm.Invoicing.InvoiceLines.md#rowversion) | byte[] |  
 | [SalesOrderAmount](Crm.Invoicing.InvoiceLines.md#salesorderamount) | decimal (14, 2) __nullable__ | Specifies what portion of the amount of the sales order is invoiced with this line. The amount is calculated with respect to the trade conditions (prices, discounts, etc.) from the sales order. Can be different from the total amount of the line when the trade conditions from the sales order have changed before invoicing. 
 | [StandardQuantityBase](Crm.Invoicing.InvoiceLines.md#standardquantitybase) | [Quantity (12, 3)](../data-types.md#quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` `Introduced in version 18.2` 
 | [UnitPrice](Crm.Invoicing.InvoiceLines.md#unitprice) | [Amount (14, 5)](../data-types.md#amount) | The unit selling price of Quantity. `Currency: Invoice.DocumentCurrency` `Required` `Default(0)` 
@@ -48,9 +49,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Document](Crm.Invoicing.InvoiceLines.md#document) | [Invoices](Crm.Invoicing.Invoices.md) | The `Invoice`(Crm.Invoicing.InvoiceLines.md#invoice) to which this InvoiceLine belongs. `Required` `Filter(multi eq)` |
+| [Document](Crm.Invoicing.InvoiceLines.md#document) | [Invoices](Crm.Invoicing.Invoices.md) | The <see cref="Invoice"/> to which this InvoiceLine belongs. `Required` `Filter(multi eq)` |
 | [IntrastatTransportCountry](Crm.Invoicing.InvoiceLines.md#intrastattransportcountry) | [Countries](General.Geography.Countries.md) (nullable) | Country of origin of the transport company; used for Intrastat reporting. `Filter(multi eq)` |
-| [Invoice](Crm.Invoicing.InvoiceLines.md#invoice) | [Invoices](Crm.Invoicing.Invoices.md) | The `Invoice`(Crm.Invoicing.InvoiceLines.md#invoice) to which this InvoiceLine belongs. `Required` `Filter(multi eq)` `Owner` |
+| [Invoice](Crm.Invoicing.InvoiceLines.md#invoice) | [Invoices](Crm.Invoicing.Invoices.md) | The <see cref="Invoice"/> to which this InvoiceLine belongs. `Required` `Filter(multi eq)` `Owner` |
 | [InvoiceOrderLine](Crm.Invoicing.InvoiceLines.md#invoiceorderline) | [InvoiceOrderLines](Crm.Invoicing.InvoiceOrderLines.md) (nullable) | Invoice order line which is invoiced by this line. `Filter(multi eq)` |
 | [LineDealType](Crm.Invoicing.InvoiceLines.md#linedealtype) | [DealTypes](Finance.Vat.DealTypes.md) (nullable) | Deal type for this line. If deal type in the line is different from deal type in the header another VAT entry is created. `Filter(multi eq)` |
 | [LineDiscount](Crm.Invoicing.InvoiceLines.md#linediscount) | [LineDiscounts](Crm.LineDiscounts.md) (nullable) | The line discount type used to form the Line_Standard_<br />Discount_Percent. `Filter(multi eq)` |
@@ -287,6 +288,12 @@ _Back-End Default Expression:_
 
 _Front-End Recalc Expressions:_  
 `IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.QuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))`
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+
 ### SalesOrderAmount
 
 Specifies what portion of the amount of the sales order is invoiced with this line. The amount is calculated with respect to the trade conditions (prices, discounts, etc.) from the sales order. Can be different from the total amount of the line when the trade conditions from the sales order have changed before invoicing.
@@ -322,7 +329,7 @@ _Default Value_: **Constant**
 
 ### Document
 
-The `Invoice`(Crm.Invoicing.InvoiceLines.md#invoice) to which this InvoiceLine belongs. `Required` `Filter(multi eq)`
+The <see cref="Invoice"/> to which this InvoiceLine belongs. `Required` `Filter(multi eq)`
 
 _Type_: **[Invoices](Crm.Invoicing.Invoices.md)**  
 _Indexed_: **True**  
@@ -342,7 +349,7 @@ _Front-End Recalc Expressions:_
 `obj.Invoice.IntrastatTransportCountry`
 ### Invoice
 
-The `Invoice`(Crm.Invoicing.InvoiceLines.md#invoice) to which this InvoiceLine belongs. `Required` `Filter(multi eq)` `Owner`
+The <see cref="Invoice"/> to which this InvoiceLine belongs. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[Invoices](Crm.Invoicing.Invoices.md)**  
 _Indexed_: **True**  

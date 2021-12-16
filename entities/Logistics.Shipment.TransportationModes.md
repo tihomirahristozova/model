@@ -26,6 +26,7 @@ Aggregate Tree
 | [Code](Logistics.Shipment.TransportationModes.md#code) | string (8) | Unique transportation mode code. `Required` `Filter(eq;like)` `ORD` 
 | [Id](Logistics.Shipment.TransportationModes.md#id) | guid |  
 | [Name](Logistics.Shipment.TransportationModes.md#name) | string (254) | Multilanguage name of the mode of transportation. `Required` `Filter(eq;like)` 
+| [RowVersion](Logistics.Shipment.TransportationModes.md#rowversion) | byte[] |  
 | [SystemIcon](Logistics.Shipment.TransportationModes.md#systemicon) | string (1) | Icon, depicting the mode of transport. A=Air, W=Water, T=Train/Rail, R=Road, O=Other. `Required` `Default("O")` 
 
 
@@ -56,6 +57,12 @@ _Type_: **string (254)**
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 ### SystemIcon
 

@@ -43,6 +43,7 @@ Aggregate Tree
 | [PictureLastUpdateTime](General.Products.ProductGroups.md#picturelastupdatetime) | datetime __nullable__ | Last update time of the Picture. `Filter(ge;le)` `ReadOnly` 
 | [ProductDescriptionMask](General.Products.ProductGroups.md#productdescriptionmask) | [MultilanguageString](../data-types.md#multilanguagestring) __nullable__ | When not null specifies mask for new product descriptions for this group and its sub-groups. The mask substitutes {0}..{n} with the appropriate custom attributes. 
 | [ProductNameMask](General.Products.ProductGroups.md#productnamemask) | [MultilanguageString](../data-types.md#multilanguagestring) __nullable__ | When not null specifies mask for new product names for this group and its sub-groups. The mask substitutes {0}..{n} with the appropriate custom attributes. 
+| [RowVersion](General.Products.ProductGroups.md#rowversion) | byte[] |  
 | [UseLots](General.Products.ProductGroups.md#uselots) | [UseLots](General.Products.ProductGroups.md#uselots) __nullable__ | Specifies whether for the products from this group and its sub-groups the use of lots in store documents is required or is unallowed or is allowed while not required. 
 
 ## References
@@ -204,6 +205,12 @@ _Supports Order By_: **False**
 When not null specifies mask for new product names for this group and its sub-groups. The mask substitutes {0}..{n} with the appropriate custom attributes.
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring) __nullable__**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+
+### RowVersion
+
+_Type_: **byte[]**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 

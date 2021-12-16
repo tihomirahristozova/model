@@ -30,6 +30,7 @@ Aggregate Tree
 | [LayoutFormat](Systems.UI.FormLayouts.md#layoutformat) | [LayoutFormat](Systems.UI.FormLayouts.md#layoutformat) | The format of the data in the Layout column. Values can be: 'U' - uncompressed; 'L' - LZO compressed; 'D' - Deflate compressed. `Required` `Default("U")` 
 | [LayoutName](Systems.UI.FormLayouts.md#layoutname) | string (64) | The name of a named layout. Standard layouts have empty string names. `Required` `Filter(eq;like)` 
 | [PanelName](Systems.UI.FormLayouts.md#panelname) | string (64) | The visual panel, for which the layout is applied. `Required` `Default("Form")` `Filter(eq)` 
+| [RowVersion](Systems.UI.FormLayouts.md#rowversion) | byte[] |  
 | [UserName](Systems.UI.FormLayouts.md#username) | string (64) __nullable__ | The user for which the layout is applied. null means that the layout is applied for all users. `Filter(eq;like)` 
 
 ## References
@@ -112,6 +113,12 @@ _Supported Filters_: **Equals**
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  
 _Default Value_: **Form**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 ### UserName
 

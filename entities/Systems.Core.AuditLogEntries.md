@@ -32,6 +32,7 @@ Aggregate Tree
 | [EventTimeUtc](Systems.Core.AuditLogEntries.md#eventtimeutc) | datetime | The exact date and time (in Utc) when the event occurred. `Required` `Default(Now)` `Filter(ge;le)` `ORD` 
 | [EventType](Systems.Core.AuditLogEntries.md#eventtype) | [EventType](Systems.Core.AuditLogEntries.md#eventtype) | Detailed action type. EID=Read one record by Id; ELD=Load many records; EUP=Update data; EDE=Delete record; EMT=Call method; ETH=Other entity event; AIN=Login; AOU=Log out; AUP=Sign Up; AFL=Login failed; APW=Change password; ATH=Other auth event; STH=Other server event. `Required` `Filter(multi eq)` 
 | [Id](Systems.Core.AuditLogEntries.md#id) | guid |  
+| [RowVersion](Systems.Core.AuditLogEntries.md#rowversion) | byte[] |  
 
 ## References
 
@@ -147,6 +148,12 @@ _Type_: **guid**
 _Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 
 ## Reference Details

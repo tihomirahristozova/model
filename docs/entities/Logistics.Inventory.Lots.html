@@ -143,6 +143,11 @@ Default Search Members:<br>
 <td>The date of the first receipt of products in this lot. <code>ReadOnly</code></td>
 </tr>
 <tr>
+<td><a href="Logistics.Inventory.Lots.html#rowversion">RowVersion</a></td>
+<td>byte[]</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="Logistics.Inventory.Lots.html#status">Status</a></td>
 <td><a href="Logistics.Inventory.Lots.html#status">Status</a></td>
 <td>Status of the warehouse lot. Minus statuses describe blocked conditions. -3 blocked for document (sales or service order) -2 blocked for party -1 blocked for inspection 0 free to use. <code>Required</code> <code>Default(0)</code> <code>Filter(multi eq)</code></td>
@@ -232,6 +237,10 @@ Default Search Members:<br>
 <h3 id="receiptdate">ReceiptDate</h3>
 <p>The date of the first receipt of products in this lot. <code>ReadOnly</code></p>
 <p><em>Type</em>: <strong>date <strong>nullable</strong></strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="rowversion">RowVersion</h3>
+<p><em>Type</em>: <strong>byte[]</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="status">Status</h3>

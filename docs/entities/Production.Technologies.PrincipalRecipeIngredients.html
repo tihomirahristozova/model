@@ -133,6 +133,11 @@ Aggregate Root:<br>
 <td>The position of the line in the recipe model. <code>Required</code></td>
 </tr>
 <tr>
+<td><a href="Production.Technologies.PrincipalRecipeIngredients.html#rowversion">RowVersion</a></td>
+<td>byte[]</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="Production.Technologies.PrincipalRecipeIngredients.html#scraprate">ScrapRate</a></td>
 <td>decimal (7, 6)</td>
 <td>The usual percentage (0..1) of scrap of the raw material; inflates the requirements of this material for this recipe. <code>Required</code> <code>Default(0)</code> <code>Filter(ge;le)</code></td>
@@ -145,7 +150,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Production.Technologies.PrincipalRecipeIngredients.html#usagequantityformula">UsageQuantityFormula</a></td>
 <td>string (max) <strong>nullable</strong></td>
-<td>Specifies formula for the usage quantity. The formula can reference properties in <code>&lt;Prop_Name&gt;</code> style, just like products name and description mask. The formula can contain *, /, + and - operators. The formula can also be simple number, directly specifying quantity.</td>
+<td>Specifies formula for the usage quantity. The formula can reference properties in <code>&amp;lt;Prop_Name&amp;gt;</code> style, just like products name and description mask. The formula can contain *, /, + and - operators. The formula can also be simple number, directly specifying quantity.</td>
 </tr>
 </tbody>
 </table>
@@ -197,7 +202,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Production.Technologies.PrincipalRecipeIngredients.html#principalrecipe">PrincipalRecipe</a></td>
 <td><a href="Production.Technologies.PrincipalRecipes.html">PrincipalRecipes</a></td>
-<td>The <code>PrincipalRecipe</code>(Production.Technologies.PrincipalRecipeIngredients.md#principalrecipe) to which this PrincipalRecipeIngredient belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
+<td>The <see cref="PrincipalRecipe"></see> to which this PrincipalRecipeIngredient belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 <tr>
 <td><a href="Production.Technologies.PrincipalRecipeIngredients.html#usageunit">UsageUnit</a></td>
@@ -246,6 +251,10 @@ Aggregate Root:<br>
 <code>( obj.PrincipalRecipe.Ingredients.Select( c =&gt; c.LineOrd).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>( obj.PrincipalRecipe.Ingredients.Select( c =&gt; c.LineOrd).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
+<h3 id="rowversion">RowVersion</h3>
+<p><em>Type</em>: <strong>byte[]</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="scraprate">ScrapRate</h3>
 <p>The usual percentage (0..1) of scrap of the raw material; inflates the requirements of this material for this recipe. <code>Required</code> <code>Default(0)</code> <code>Filter(ge;le)</code></p>
 <p><em>Type</em>: <strong>decimal (7, 6)</strong><br>
@@ -261,7 +270,7 @@ Aggregate Root:<br>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>IIF( ( obj.UsageQuantityFormula != null), null, obj.UsageQuantity)</code></p>
 <h3 id="usagequantityformula">UsageQuantityFormula</h3>
-<p>Specifies formula for the usage quantity. The formula can reference properties in <code>&lt;Prop_Name&gt;</code> style, just like products name and description mask. The formula can contain *, /, + and - operators. The formula can also be simple number, directly specifying quantity.</p>
+<p>Specifies formula for the usage quantity. The formula can reference properties in <code>&amp;lt;Prop_Name&amp;gt;</code> style, just like products name and description mask. The formula can contain *, /, + and - operators. The formula can also be simple number, directly specifying quantity.</p>
 <p><em>Type</em>: <strong>string (max) <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
@@ -298,7 +307,7 @@ Aggregate Root:<br>
 <p><em>Type</em>: <strong><a href="Production.Resources.Operations.html">Operations</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="principalrecipe">PrincipalRecipe</h3>
-<p>The <code>PrincipalRecipe</code>(Production.Technologies.PrincipalRecipeIngredients.md#principalrecipe) to which this PrincipalRecipeIngredient belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
+<p>The <see cref="PrincipalRecipe"></see> to which this PrincipalRecipeIngredient belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="Production.Technologies.PrincipalRecipes.html">PrincipalRecipes</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em><a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a></em>: <strong>True</strong></p>

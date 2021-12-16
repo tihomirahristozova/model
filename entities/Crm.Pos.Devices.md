@@ -27,10 +27,11 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [DeviceRegistrationNo](Crm.Pos.Devices.md#deviceregistrationno) | string (32) __nullable__ | The unique registration number of the device, assigned by the manufacturer. null means the number is unknown or N/A. `Filter(multi eq;like)` 
 | [DeviceType](Crm.Pos.Devices.md#devicetype) | [DeviceType](Crm.Pos.Devices.md#devicetype) | Type of the POS device. PAY=Payment Terminal; CSH=Cash Drawer; FIP=Fiscal Printer; OTH=Other. `Required` `Default("OTH")` `Filter(multi eq)` 
-| [ElectronicAddress](Crm.Pos.Devices.md#electronicaddress) | string (254) __nullable__ | The absolute address (Internet or other) which can be used for electronic communication with the device. The address should contain communication protocol/type, colon, space, then the actual address. Addresses, which are local to a specific computer, should also include the computer name. For example: "COM: PC_WORK1:COM1", "HTTP: https://<addr>", etc. `Filter(multi eq;like)` 
+| [ElectronicAddress](Crm.Pos.Devices.md#electronicaddress) | string (254) __nullable__ | The absolute address (Internet or other) which can be used for electronic communication with the device. The address should contain communication protocol/type, colon, space, then the actual address. Addresses, which are local to a specific computer, should also include the computer name. For example: "COM: PC_WORK1:COM1", "HTTP: https://&lt;addr&gt;", etc. `Filter(multi eq;like)` 
 | [Id](Crm.Pos.Devices.md#id) | guid |  
 | [IsActive](Crm.Pos.Devices.md#isactive) | boolean | Indicates whether the device is currently active and can be choosen from drop-downs in new records. `Required` `Default(true)` `Filter(multi eq)` 
 | [ProtocolName](Crm.Pos.Devices.md#protocolname) | [ProtocolName](Crm.Pos.Devices.md#protocolname) __nullable__ | The name of the protocol, which can be used to communicate with the device. null means that the protocol is unknown and programmatic communication with the device would not be performed. 
+| [RowVersion](Crm.Pos.Devices.md#rowversion) | byte[] |  
 | [SettingsJson](Crm.Pos.Devices.md#settingsjson) | string (max) __nullable__ | Settings and operator access codes for the POS device. The data is stored as Json, encrypted for the current application server instance. null means that there are no settings for this device. 
 
 ## References
@@ -72,7 +73,7 @@ _Default Value_: **Other**
 
 ### ElectronicAddress
 
-The absolute address (Internet or other) which can be used for electronic communication with the device. The address should contain communication protocol/type, colon, space, then the actual address. Addresses, which are local to a specific computer, should also include the computer name. For example: "COM: PC_WORK1:COM1", "HTTP: https://<addr>", etc. `Filter(multi eq;like)`
+The absolute address (Internet or other) which can be used for electronic communication with the device. The address should contain communication protocol/type, colon, space, then the actual address. Addresses, which are local to a specific computer, should also include the computer name. For example: "COM: PC_WORK1:COM1", "HTTP: https://&lt;addr&gt;", etc. `Filter(multi eq;like)`
 
 _Type_: **string (254) __nullable__**  
 _Supported Filters_: **Equals, Like, EqualsIn**  
@@ -107,6 +108,12 @@ _Allowed Values (Crm.Pos.DevicesRepository.ProtocolName Enum Members)_
 | ---- | --- |
 | ERPNETFP | ErpNet.FP. Stored as 'ERPNET_FP'. <br /> _Database Value:_ 'ERPNET_FP' <br /> _Model Value:_ 0 <br /> _Domain API Value:_ 'ERPNETFP' |
 
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+
+### RowVersion
+
+_Type_: **byte[]**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 

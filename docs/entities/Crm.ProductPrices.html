@@ -143,6 +143,11 @@ __</p>
 <td>Priority of the price comparative to other prices. Only the highest priority price is applied. <code>Required</code> <code>Default(2)</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
+<td><a href="Crm.ProductPrices.html#rowversion">RowVersion</a></td>
+<td>byte[]</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="Crm.ProductPrices.html#thrudate">ThruDate</a></td>
 <td>date <strong>nullable</strong></td>
 <td>Ending date (inclusive) of the validity of the price. <code>Filter(eq;ge;le)</code></td>
@@ -298,6 +303,10 @@ Generic enum type for Priority properties<br>
 <p><em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>2</strong></p>
+<h3 id="rowversion">RowVersion</h3>
+<p><em>Type</em>: <strong>byte[]</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="thrudate">ThruDate</h3>
 <p>Ending date (inclusive) of the validity of the price. <code>Filter(eq;ge;le)</code></p>
 <p><em>Type</em>: <strong>date <strong>nullable</strong></strong><br>

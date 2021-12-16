@@ -44,6 +44,7 @@ Aggregate Tree
 | [DocumentDate](Applications.Rental.Transactions.md#documentdate) | date | The date on which the document was issued. `Required` `Default(Today)` `Filter(eq;ge;le)` `ORD` (Inherited from [Documents](General.Documents.md)) 
 | [DocumentNo](Applications.Rental.Transactions.md#documentno) | string (20) | Document number, unique within Document_Type_Id. `Required` `Filter(eq;like)` `ORD` (Inherited from [Documents](General.Documents.md)) 
 | [DocumentNotes](Applications.Rental.Transactions.md#documentnotes) | string (max) __nullable__ | Notes for this Document. (Inherited from [Documents](General.Documents.md)) 
+| [DocumentRowVersion](Applications.Rental.Transactions.md#documentrowversion) | byte[] |  
 | [DocumentVersion](Applications.Rental.Transactions.md#documentversion) | int32 | Consecutive version number, starting with 1. Each update produces a new version of the document. `Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [EntityName](Applications.Rental.Transactions.md#entityname) | string (64) | The entity name of the document header. `Required` `Filter(eq)` `ORD` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [Id](Applications.Rental.Transactions.md#id) | guid |  
@@ -54,6 +55,7 @@ Aggregate Tree
 | [ReferenceDate](Applications.Rental.Transactions.md#referencedate) | datetime __nullable__ | The date to which this document refers, i.e. when the action really occurred. If null, Document_Date is taken. `Default(Today)` `Filter(ge;le)` (Inherited from [Documents](General.Documents.md)) 
 | [ReferenceDocumentNo](Applications.Rental.Transactions.md#referencedocumentno) | string (20) __nullable__ | The number of the document (issued by the other party), which was the reason for the creation of the current document. The numebr should be unique within the party documents. `Filter(eq;like)` (Inherited from [Documents](General.Documents.md)) 
 | [ReleaseTime](Applications.Rental.Transactions.md#releasetime) | datetime __nullable__ | Date and time when the document was released (State set to Released). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
+| [RowVersion](Applications.Rental.Transactions.md#rowversion) | byte[] |  
 | [State](Applications.Rental.Transactions.md#state) | [DocumentState](Applications.Rental.Transactions.md#state) | The current system state of the document. Allowed values: 0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed. `Required` `Default(0)` `Filter(multi eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [TransactionTimestamp](Applications.Rental.Transactions.md#transactiontimestamp) | datetime __nullable__ | Transaction Timestamp. `Filter(multi eq;ge;le)` 
 | [TransactionType](Applications.Rental.Transactions.md#transactiontype) | [TransactionType](Applications.Rental.Transactions.md#transactiontype) __nullable__ | Transaction Type. `Filter(eq;like)` 
@@ -186,6 +188,12 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
 
+### DocumentRowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+
 ### DocumentVersion
 
 Consecutive version number, starting with 1. Each update produces a new version of the document. `Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md))
@@ -279,6 +287,12 @@ Date and time when the document was released (State set to Released). `Filter(ge
 
 _Type_: **datetime __nullable__**  
 _Supported Filters_: **GreaterThanOrLessThan**  
+_Supports Order By_: **False**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
 ### State

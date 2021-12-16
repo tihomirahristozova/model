@@ -27,13 +27,14 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [Id](General.Products.ProductDocumentAmounts.md#id) | guid |  
 | [LinePercent](General.Products.ProductDocumentAmounts.md#linepercent) | decimal (14, 3) | The custom percent for the current product and amount type. `Required` `Default(0)` 
+| [RowVersion](General.Products.ProductDocumentAmounts.md#rowversion) | byte[] |  
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [DocumentAmountType](General.Products.ProductDocumentAmounts.md#documentamounttype) | [DocumentAmountTypes](General.DocumentAmountTypes.md) | The amount type for which the custom percent is defined. `Required` `Filter(multi eq)` |
-| [Product](General.Products.ProductDocumentAmounts.md#product) | [Products](General.Products.Products.md) | The `Product`(General.Products.ProductDocumentAmounts.md#product) to which this ProductDocumentAmount belongs. `Required` `Filter(multi eq)` `Owner` |
+| [Product](General.Products.ProductDocumentAmounts.md#product) | [Products](General.Products.Products.md) | The <see cref="Product"/> to which this ProductDocumentAmount belongs. `Required` `Filter(multi eq)` `Owner` |
 
 
 ## Attribute Details
@@ -54,6 +55,12 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Default Value_: **0**  
 
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+
 
 ## Reference Details
 
@@ -66,7 +73,7 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### Product
 
-The `Product`(General.Products.ProductDocumentAmounts.md#product) to which this ProductDocumentAmount belongs. `Required` `Filter(multi eq)` `Owner`
+The <see cref="Product"/> to which this ProductDocumentAmount belongs. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[Products](General.Products.Products.md)**  
 _Indexed_: **True**  

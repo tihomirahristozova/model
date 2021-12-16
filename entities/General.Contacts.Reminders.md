@@ -30,6 +30,7 @@ Aggregate Root:
 | [IsDismissed](General.Contacts.Reminders.md#isdismissed) | boolean | When true the reminder was dismissed by the user; the initial value is false. `Required` `Default(false)` `Filter(eq)` 
 | [Notes](General.Contacts.Reminders.md#notes) | string (max) __nullable__ | Notes that describe this specific reminder for the task. 
 | [ReminderTime](General.Contacts.Reminders.md#remindertime) | datetime | The time when the alarm should snooze to the user. `Required` `Filter(ge;le)` 
+| [RowVersion](General.Contacts.Reminders.md#rowversion) | byte[] |  
 
 ## References
 
@@ -80,6 +81,12 @@ The time when the alarm should snooze to the user. `Required` `Filter(ge;le)`
 
 _Type_: **datetime**  
 _Supported Filters_: **GreaterThanOrLessThan**  
+_Supports Order By_: **False**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
 

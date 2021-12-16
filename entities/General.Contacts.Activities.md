@@ -37,6 +37,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [ActivityRowVersion](General.Contacts.Activities.md#activityrowversion) | byte[] |  
 | [AdjustmentNumber](General.Contacts.Activities.md#adjustmentnumber) | int32 | Consecutive number of the correction that this document is applying to the adjusted document. `Required` `Default(0)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [AdjustmentTime](General.Contacts.Activities.md#adjustmenttime) | datetime __nullable__ | Date/time when the document last has been adjusted by corrective document. `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [AdjustmentUser](General.Contacts.Activities.md#adjustmentuser) | string (64) __nullable__ | The user who adjusted the document. `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
@@ -47,6 +48,7 @@ Aggregate Tree
 | [DocumentDate](General.Contacts.Activities.md#documentdate) | date | The date on which the document was issued. `Required` `Default(Today)` `Filter(eq;ge;le)` `ORD` (Inherited from [Documents](General.Documents.md)) 
 | [DocumentNo](General.Contacts.Activities.md#documentno) | string (20) | Document number, unique within Document_Type_Id. `Required` `Filter(eq;like)` `ORD` (Inherited from [Documents](General.Documents.md)) 
 | [DocumentNotes](General.Contacts.Activities.md#documentnotes) | string (max) __nullable__ | Notes for this Document. (Inherited from [Documents](General.Documents.md)) 
+| [DocumentRowVersion](General.Contacts.Activities.md#documentrowversion) | byte[] |  
 | [DocumentVersion](General.Contacts.Activities.md#documentversion) | int32 | Consecutive version number, starting with 1. Each update produces a new version of the document. `Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [EndTime](General.Contacts.Activities.md#endtime) | datetime __nullable__ | Currently planned ending time of the task. `Filter(ge;le)` 
 | [EntityName](General.Contacts.Activities.md#entityname) | string (64) | The entity name of the document header. `Required` `Filter(eq)` `ORD` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
@@ -119,6 +121,12 @@ Aggregate Tree
 
 
 ## Attribute Details
+
+### ActivityRowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 ### AdjustmentNumber
 
@@ -208,6 +216,12 @@ _Type_: **string (max) __nullable__**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
+
+### DocumentRowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 ### DocumentVersion
 

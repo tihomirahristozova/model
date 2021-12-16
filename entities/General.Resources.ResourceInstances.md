@@ -29,6 +29,7 @@ Aggregate Root:
 | [Id](General.Resources.ResourceInstances.md#id) | guid |  
 | [Name](General.Resources.ResourceInstances.md#name) | string (max) | Multilanguage resource instance name. `Required` `Filter(eq;like)` 
 | [Notes](General.Resources.ResourceInstances.md#notes) | string (max) __nullable__ | Notes for this ResourceInstance. 
+| [RowVersion](General.Resources.ResourceInstances.md#rowversion) | byte[] |  
 
 ## References
 
@@ -74,6 +75,12 @@ _Type_: **string (max) __nullable__**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 
 ## Reference Details

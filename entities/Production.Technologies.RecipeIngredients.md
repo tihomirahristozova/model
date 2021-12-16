@@ -31,6 +31,7 @@ Aggregate Root:
 | [LineOrd](Production.Technologies.RecipeIngredients.md#lineord) | int32 | The order of this line in the recipe. `Required` 
 | [Notes](Production.Technologies.RecipeIngredients.md#notes) | string (254) __nullable__ | Notes for this RecipeIngredient. 
 | [Price](Production.Technologies.RecipeIngredients.md#price) | [Amount (18, 4)](../data-types.md#amount) | Total price of the ingredient. `Currency: Recipe.Product.CostingCurrency` `Required` `Default(0)` `Filter(ge;le)` 
+| [RowVersion](Production.Technologies.RecipeIngredients.md#rowversion) | byte[] |  
 | [ScrapRate](Production.Technologies.RecipeIngredients.md#scraprate) | decimal (7, 6) | The usual percentage (0..1) of scrap of the raw material; inflates the requirements of this material for this recipe. `Required` `Default(0)` 
 | [UnitCost](Production.Technologies.RecipeIngredients.md#unitcost) | [Amount (18, 6)](../data-types.md#amount) | Cost of 1 of Usage_Unit_Id. `Currency: Recipe.Product.CostingCurrency` `Required` `Default(0)` `Filter(ge;le)` 
 | [UnitPrice](Production.Technologies.RecipeIngredients.md#unitprice) | [Amount (18, 6)](../data-types.md#amount) | Price for 1 of Usage_Unit_Id. `Currency: Recipe.Product.CostingCurrency` `Required` `Default(0)` `Filter(ge;le)` 
@@ -43,7 +44,7 @@ Aggregate Root:
 | [Material](Production.Technologies.RecipeIngredients.md#material) | [Products](General.Products.Products.md) | The Id of the consumed material (Gen_Products_Table). `Required` `Filter(multi eq)` |
 | [Operation](Production.Technologies.RecipeIngredients.md#operation) | [Operations](Production.Resources.Operations.md) (nullable) | Specifies for which operation this ingredient will be used. `Filter(multi eq)` |
 | [PrincipalRecipeIngredient](Production.Technologies.RecipeIngredients.md#principalrecipeingredient) | [PrincipalRecipeIngredients](Production.Technologies.PrincipalRecipeIngredients.md) (nullable) | The principal recipe ingredient which was used to create this recipe ingredient. null means that this ingredient is standalone, not created with principal recipe ingredient. `Filter(multi eq)` |
-| [Recipe](Production.Technologies.RecipeIngredients.md#recipe) | [Recipes](Production.Technologies.Recipes.md) | The `Recipe`(Production.Technologies.RecipeIngredients.md#recipe) to which this RecipeIngredient belongs. `Required` `Filter(multi eq)` `Owner` |
+| [Recipe](Production.Technologies.RecipeIngredients.md#recipe) | [Recipes](Production.Technologies.Recipes.md) | The <see cref="Recipe"/> to which this RecipeIngredient belongs. `Required` `Filter(multi eq)` `Owner` |
 | [Store](Production.Technologies.RecipeIngredients.md#store) | [Stores](Logistics.Inventory.Stores.md) (nullable) | The store from which to retrieve the material. `Filter(multi eq)` |
 | [UsageUnit](Production.Technologies.RecipeIngredients.md#usageunit) | [MeasurementUnits](General.MeasurementUnits.md) | The measurement unit of Usage_Quantity. The selected item must support the specified unit. `Required` `Filter(multi eq)` |
 
@@ -105,6 +106,12 @@ _Type_: **[Amount (18, 4)](../data-types.md#amount)**
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 ### ScrapRate
 
@@ -169,7 +176,7 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### Recipe
 
-The `Recipe`(Production.Technologies.RecipeIngredients.md#recipe) to which this RecipeIngredient belongs. `Required` `Filter(multi eq)` `Owner`
+The <see cref="Recipe"/> to which this RecipeIngredient belongs. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[Recipes](Production.Technologies.Recipes.md)**  
 _Indexed_: **True**  

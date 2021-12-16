@@ -28,6 +28,7 @@ Aggregate Root:
 | [AvailableResources](General.Resources.ResourceAvailability.md#availableresources) | decimal (12, 2) | The quantity of the resource, available for the specified period. For non-discrete resources, this number can contain fractions. When several availability periods for a resource overlap, the total availability is the sum of all. `Required` `Default(1)` 
 | [FromDate](General.Resources.ResourceAvailability.md#fromdate) | date | The date from which availability starts. `Required` 
 | [Id](General.Resources.ResourceAvailability.md#id) | guid |  
+| [RowVersion](General.Resources.ResourceAvailability.md#rowversion) | byte[] |  
 | [ToDate](General.Resources.ResourceAvailability.md#todate) | date __nullable__ | The date to which the availability continues. When null, the availability continues infinitely. 
 
 ## References
@@ -62,6 +63,12 @@ _Type_: **guid**
 _Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 ### ToDate
 

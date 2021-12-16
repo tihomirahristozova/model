@@ -27,6 +27,7 @@ Aggregate Tree
 | [IsActive](Systems.Core.WebSites.md#isactive) | boolean | Indicates whether the web site is active and will be instantiated upon next web server restart. `Required` `Default(true)` `Filter(eq)` 
 | [Notes](Systems.Core.WebSites.md#notes) | string (max) __nullable__ | Notes for this WebSite. 
 | [RelativeUrl](Systems.Core.WebSites.md#relativeurl) | string (254) __nullable__ | The relative Url of the site. This is the text after the first slash after the protocol and host name. The text should not include the protocol and host name. null means that the site will be hosted as the root site in the speicified web host. 
+| [RowVersion](Systems.Core.WebSites.md#rowversion) | byte[] |  
 | [WebSiteType](Systems.Core.WebSites.md#websitetype) | [WebSiteType](Systems.Core.WebSites.md#websitetype) | The type of web site - Api, Client Center, Id, etc. `Required` `Filter(multi eq)` 
 
 ## References
@@ -73,6 +74,12 @@ _Type_: **string (254) __nullable__**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 ### WebSiteType
 

@@ -28,6 +28,7 @@ Aggregate Root:
 | [CalendarDate](Production.Resources.Load.md#calendardate) | datetime | Date of the scheduled load. This is date only. Start_Time and End_Time specify time of day. `Required` `Filter(ge;le)` 
 | [Id](Production.Resources.Load.md#id) | guid |  
 | [Priority](Production.Resources.Load.md#priority) | [Priority](Production.Resources.Load.md#priority) | Priority of the allocation. 1=Lowest ... 5=Highest. `Required` `Default(3)` 
+| [RowVersion](Production.Resources.Load.md#rowversion) | byte[] |  
 | [TimeType](Production.Resources.Load.md#timetype) | [TimeType](Production.Resources.Load.md#timetype) | S=Setup; R=Run; W=Wait; M=Move. `Required` `Default("R")` 
 | [UsageEndTime](Production.Resources.Load.md#usageendtime) | datetime | The ending time of the planned usage. `Required` `Filter(ge;le)` 
 | [UsageQuantity](Production.Resources.Load.md#usagequantity) | [Quantity (9, 0)](../data-types.md#quantity) | Quantity of the resource, which will be used for production. `Unit: WorkgroupResource.Resource.PrimaryUnit` `Required` `Default(1)` `Filter(ge;le)` 
@@ -39,7 +40,7 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [WorkgroupResource](Production.Resources.Load.md#workgroupresource) | [WorkgroupResources](Production.Resources.WorkgroupResources.md) | The exact resource being utilised. `Required` `Filter(multi eq)` |
-| [WorkOrderItemOperation](Production.Resources.Load.md#workorderitemoperation) | [WorkOrderItemOperations](Production.ShopFloor.WorkOrderItemOperations.md) | The `WorkOrderItemOperation`(Production.ShopFloor.WorkOrderItemOperations.md) to which this Load belongs. `Required` `Filter(multi eq)` `Owner` |
+| [WorkOrderItemOperation](Production.Resources.Load.md#workorderitemoperation) | [WorkOrderItemOperations](Production.ShopFloor.WorkOrderItemOperations.md) | The <see cref="Production.ShopFloor.WorkOrderItemOperation"/> to which this Load belongs. `Required` `Filter(multi eq)` `Owner` |
 
 
 ## Attribute Details
@@ -78,6 +79,12 @@ _Allowed Values (Production.Resources.LoadRepository.Priority Enum Members)_
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **3**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 ### TimeType
 
@@ -144,7 +151,7 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### WorkOrderItemOperation
 
-The `WorkOrderItemOperation`(Production.ShopFloor.WorkOrderItemOperations.md) to which this Load belongs. `Required` `Filter(multi eq)` `Owner`
+The <see cref="Production.ShopFloor.WorkOrderItemOperation"/> to which this Load belongs. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[WorkOrderItemOperations](Production.ShopFloor.WorkOrderItemOperations.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

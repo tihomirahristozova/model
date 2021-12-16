@@ -28,6 +28,7 @@ Aggregate Tree
 | [Icon](Projects.TaskTypes.md#icon) | byte[] __nullable__ | Icon representing the task type. Preferrably 32x32 pixels. 
 | [Id](Projects.TaskTypes.md#id) | guid |  
 | [Name](Projects.TaskTypes.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | The multilanguage task type name. `Required` `Filter(multi eq;like)` 
+| [RowVersion](Projects.TaskTypes.md#rowversion) | byte[] |  
 
 ## References
 
@@ -76,6 +77,12 @@ The multilanguage task type name. `Required` `Filter(multi eq;like)`
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Supported Filters_: **Equals, Like, EqualsIn**  
+_Supports Order By_: **False**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
 

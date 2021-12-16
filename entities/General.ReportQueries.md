@@ -30,6 +30,7 @@ Aggregate Root:
 | [FilterXml](General.ReportQueries.md#filterxml) | dataaccessfilter __nullable__ | Filter for the loaded table. 
 | [Id](General.ReportQueries.md#id) | guid |  
 | [ReferencePath](General.ReportQueries.md#referencepath) | string (512) | A sequence of table names and foreign key columns that define how the data will be loaded by this query. For example - Gen_Documents/<br />Enterprise_Company_<br />Id/Company_Id - will load the definition of the company for the enterprise company of a document. `Required` 
+| [RowVersion](General.ReportQueries.md#rowversion) | byte[] |  
 | [ShowCustomProperties](General.ReportQueries.md#showcustomproperties) | boolean | True to include the custom properties. `Required` `Default(false)` 
 | [ShowTextColumns](General.ReportQueries.md#showtextcolumns) | boolean | True to include text descriptions for certain columns. `Required` `Default(false)` 
 | [TableName](General.ReportQueries.md#tablename) | string (64) __nullable__ | The name of the report query. A Reference_Path can participate more than one time in the report but with different Report_Query_Name. This can be used to specify different filter for the same query. Can be null. 
@@ -39,7 +40,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Report](General.ReportQueries.md#report) | [Reports](General.Reports.md) | The `Report`(General.ReportQueries.md#report) to which this ReportQuery belongs. `Required` `Filter(multi eq)` `Owner` |
+| [Report](General.ReportQueries.md#report) | [Reports](General.Reports.md) | The <see cref="Report"/> to which this ReportQuery belongs. `Required` `Filter(multi eq)` `Owner` |
 
 
 ## Attribute Details
@@ -86,6 +87,12 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Maximum Length_: **512**  
 
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+
 ### ShowCustomProperties
 
 True to include the custom properties. `Required` `Default(false)`
@@ -127,7 +134,7 @@ _Maximum Length_: **64**
 
 ### Report
 
-The `Report`(General.ReportQueries.md#report) to which this ReportQuery belongs. `Required` `Filter(multi eq)` `Owner`
+The <see cref="Report"/> to which this ReportQuery belongs. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[Reports](General.Reports.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

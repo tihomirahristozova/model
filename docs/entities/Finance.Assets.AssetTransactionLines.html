@@ -153,6 +153,11 @@ Aggregate Root:<br>
 <td>Change in the purchase value of the asset (in the currency of the enterprise company). <code>Currency: Asset.EnterpriseCompany.BaseCurrency</code> <code>Required</code> <code>Default(0)</code></td>
 </tr>
 <tr>
+<td><a href="Finance.Assets.AssetTransactionLines.html#rowversion">RowVersion</a></td>
+<td>byte[]</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="Finance.Assets.AssetTransactionLines.html#salvagevalue">SalvageValue</a></td>
 <td><a href="../data-types.html#amount">Amount (14, 2)</a></td>
 <td>Change in the salvage value of the asset (in the currency of the asset). <code>Currency: Asset.ValuationCurrency</code> <code>Required</code> <code>Default(0)</code></td>
@@ -182,7 +187,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Finance.Assets.AssetTransactionLines.html#assettransaction">AssetTransaction</a></td>
 <td><a href="Finance.Assets.AssetTransactions.html">AssetTransactions</a></td>
-<td>The <code>AssetTransaction</code>(Finance.Assets.AssetTransactionLines.md#assettransaction) to which this AssetTransactionLine belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
+<td>The <see cref="AssetTransaction"></see> to which this AssetTransactionLine belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Assets.AssetTransactionLines.html#valuationmodel">ValuationModel</a></td>
@@ -299,6 +304,10 @@ Allowed values for the <code>OperationType</code>(Finance.Assets.AssetTransactio
 <em>Default Value</em>: <strong>Constant</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>obj.PurchaseValue.ConvertTo( obj.Asset.EnterpriseCompany.BaseCurrency, obj.AssetTransaction.CurrencyDirectory)</code></p>
+<h3 id="rowversion">RowVersion</h3>
+<p><em>Type</em>: <strong>byte[]</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="salvagevalue">SalvageValue</h3>
 <p>Change in the salvage value of the asset (in the currency of the asset). <code>Currency: Asset.ValuationCurrency</code> <code>Required</code> <code>Default(0)</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount (14, 2)</a></strong><br>
@@ -322,7 +331,7 @@ Allowed values for the <code>OperationType</code>(Finance.Assets.AssetTransactio
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="assettransaction">AssetTransaction</h3>
-<p>The <code>AssetTransaction</code>(Finance.Assets.AssetTransactionLines.md#assettransaction) to which this AssetTransactionLine belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
+<p>The <see cref="AssetTransaction"></see> to which this AssetTransactionLine belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="Finance.Assets.AssetTransactions.html">AssetTransactions</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>

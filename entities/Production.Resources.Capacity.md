@@ -30,6 +30,7 @@ Aggregate Root:
 | [AvailableStartTime](Production.Resources.Capacity.md#availablestarttime) | datetime | Start of availability period during Calendar_Date. `Required` 
 | [CalendarDate](Production.Resources.Capacity.md#calendardate) | datetime | Date of the availability period. `Required` `Filter(ge;le)` 
 | [Id](Production.Resources.Capacity.md#id) | guid |  
+| [RowVersion](Production.Resources.Capacity.md#rowversion) | byte[] |  
 
 ## References
 
@@ -78,6 +79,12 @@ _Type_: **guid**
 _Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 
 ## Reference Details

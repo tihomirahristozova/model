@@ -29,14 +29,15 @@ Aggregate Root:
 | [CostCorrectionAmount](Logistics.Inventory.CostCorrectionLines.md#costcorrectionamount) | [Amount (14, 2)](../data-types.md#amount) | The amount of correction (plus or minus) for the Amount field of the transaction line. `Currency: TransactionLine.TransactionObj.DocumentCurrency` `Required` `Default(0)` 
 | [Id](Logistics.Inventory.CostCorrectionLines.md#id) | guid |  
 | [ProductCostAdjustment](Logistics.Inventory.CostCorrectionLines.md#productcostadjustment) | [Amount (14, 2)](../data-types.md#amount) | The amount of correction (plus or minus) for the Product Cost field of the transaction line. `Currency: TransactionLine.Product.CostingCurrency` `Required` `Default(0)` 
+| [RowVersion](Logistics.Inventory.CostCorrectionLines.md#rowversion) | byte[] |  
 | [StoreCostAdjustment](Logistics.Inventory.CostCorrectionLines.md#storecostadjustment) | [Amount (14, 2)](../data-types.md#amount) | The amount of correction (plus or minus) for the Store Cost field of the transaction line. `Currency: TransactionLine.TransactionObj.Store.Currency` `Required` `Default(0)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CostCorrection](Logistics.Inventory.CostCorrectionLines.md#costcorrection) | [CostCorrections](Logistics.Inventory.CostCorrections.md) | The `CostCorrection`(Logistics.Inventory.CostCorrectionLines.md#costcorrection) to which this CostCorrectionLine belongs. `Required` `Filter(multi eq)` `Owner` |
-| [Document](Logistics.Inventory.CostCorrectionLines.md#document) | [CostCorrections](Logistics.Inventory.CostCorrections.md) | The `CostCorrection`(Logistics.Inventory.CostCorrectionLines.md#costcorrection) to which this CostCorrectionLine belongs. `Required` `Filter(multi eq)` |
+| [CostCorrection](Logistics.Inventory.CostCorrectionLines.md#costcorrection) | [CostCorrections](Logistics.Inventory.CostCorrections.md) | The <see cref="CostCorrection"/> to which this CostCorrectionLine belongs. `Required` `Filter(multi eq)` `Owner` |
+| [Document](Logistics.Inventory.CostCorrectionLines.md#document) | [CostCorrections](Logistics.Inventory.CostCorrections.md) | The <see cref="CostCorrection"/> to which this CostCorrectionLine belongs. `Required` `Filter(multi eq)` |
 | [TransactionLine](Logistics.Inventory.CostCorrectionLines.md#transactionline) | [StoreTransactionLines](Logistics.Inventory.StoreTransactionLines.md) | The transaction line, which is corrected. `Required` `Filter(multi eq)` |
 
 
@@ -76,6 +77,12 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
 
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+
 ### StoreCostAdjustment
 
 The amount of correction (plus or minus) for the Store Cost field of the transaction line. `Currency: TransactionLine.TransactionObj.Store.Currency` `Required` `Default(0)`
@@ -90,7 +97,7 @@ _Default Value_: **Constant**
 
 ### CostCorrection
 
-The `CostCorrection`(Logistics.Inventory.CostCorrectionLines.md#costcorrection) to which this CostCorrectionLine belongs. `Required` `Filter(multi eq)` `Owner`
+The <see cref="CostCorrection"/> to which this CostCorrectionLine belongs. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[CostCorrections](Logistics.Inventory.CostCorrections.md)**  
 _Indexed_: **True**  
@@ -99,7 +106,7 @@ _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-reference
 
 ### Document
 
-The `CostCorrection`(Logistics.Inventory.CostCorrectionLines.md#costcorrection) to which this CostCorrectionLine belongs. `Required` `Filter(multi eq)`
+The <see cref="CostCorrection"/> to which this CostCorrectionLine belongs. `Required` `Filter(multi eq)`
 
 _Type_: **[CostCorrections](Logistics.Inventory.CostCorrections.md)**  
 _Indexed_: **True**  

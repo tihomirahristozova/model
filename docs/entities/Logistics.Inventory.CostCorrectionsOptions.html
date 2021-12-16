@@ -113,6 +113,11 @@ __</p>
 <td>When true, the stock transactions state are re-set when the cost correction is released. The idea is to notify these documents, so that they have chance to re-generate their sub-documents. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
+<td><a href="Logistics.Inventory.CostCorrectionsOptions.html#rowversion">RowVersion</a></td>
+<td>byte[]</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="Logistics.Inventory.CostCorrectionsOptions.html#scheduledocumentevents">ScheduleDocumentEvents</a></td>
 <td>boolean</td>
 <td>Indicates wheather the document events caused by the cost correction should be scheduled for later procession. <code>Required</code> <code>Default(false)</code></td>
@@ -148,6 +153,10 @@ __</p>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
+<h3 id="rowversion">RowVersion</h3>
+<p><em>Type</em>: <strong>byte[]</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="scheduledocumentevents">ScheduleDocumentEvents</h3>
 <p>Indicates wheather the document events caused by the cost correction should be scheduled for later procession. <code>Required</code> <code>Default(false)</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>

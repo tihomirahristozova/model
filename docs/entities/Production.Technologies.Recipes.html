@@ -163,6 +163,11 @@ Default Search Members:<br>
 <td>The date, when the recipe was released to production. <code>Required</code> <code>Default(Today)</code> <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
+<td><a href="Production.Technologies.Recipes.html#rowversion">RowVersion</a></td>
+<td>byte[]</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="Production.Technologies.Recipes.html#scraprate">ScrapRate</a></td>
 <td>decimal (7, 6)</td>
 <td>The percentage (0..1) of scrap usually occurring during the operation. Specifying this leads to inflated requirements of all raw materials for this recipe. <code>Required</code> <code>Default(0)</code></td>
@@ -297,6 +302,10 @@ Default Search Members:<br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>CurrentDate</strong></p>
+<h3 id="rowversion">RowVersion</h3>
+<p><em>Type</em>: <strong>byte[]</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="scraprate">ScrapRate</h3>
 <p>The percentage (0..1) of scrap usually occurring during the operation. Specifying this leads to inflated requirements of all raw materials for this recipe. <code>Required</code> <code>Default(0)</code></p>
 <p><em>Type</em>: <strong>decimal (7, 6)</strong><br>

@@ -31,12 +31,13 @@ Aggregate Root:
 | [Id](General.Products.ProductGroupRequiredProperties.md#id) | guid |  
 | [PropertyNo](General.Products.ProductGroupRequiredProperties.md#propertyno) | int32 | The consecutive number (position) of the property within the product group and its subgroups. The parent groups of each leaf group should contain only unique property numbers. `Required` `Default(0)` 
 | [Required](General.Products.ProductGroupRequiredProperties.md#required) | boolean | Specifies whether the property is required (or only suggested) to be set for new products. Suggested properties are used by product configuration and other product creation services. true=Required, false=Suggested. `Required` `Default(false)` 
+| [RowVersion](General.Products.ProductGroupRequiredProperties.md#rowversion) | byte[] |  
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ProductGroup](General.Products.ProductGroupRequiredProperties.md#productgroup) | [ProductGroups](General.Products.ProductGroups.md) | The `ProductGroup`(General.Products.ProductGroupRequired<br />Properties.md#productgroup) to which this ProductGroupRequired<br />Property belongs. `Required` `Filter(multi eq)` `Owner` |
+| [ProductGroup](General.Products.ProductGroupRequiredProperties.md#productgroup) | [ProductGroups](General.Products.ProductGroups.md) | The <see cref="ProductGroup"/> to which this ProductGroupRequired<br />Property belongs. `Required` `Filter(multi eq)` `Owner` |
 | [Property](General.Products.ProductGroupRequiredProperties.md#property) | [CustomProperties](General.CustomProperties.md) | The property, that is required when creating new products in the group. The property is automatically added to new products, created in the group. The property should be with Entity Type = 'Product'. `Required` `Filter(multi eq)` |
 
 
@@ -97,12 +98,18 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Default Value_: **False**  
 
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+
 
 ## Reference Details
 
 ### ProductGroup
 
-The `ProductGroup`(General.Products.ProductGroupRequiredProperties.md#productgroup) to which this ProductGroupRequiredProperty belongs. `Required` `Filter(multi eq)` `Owner`
+The <see cref="ProductGroup"/> to which this ProductGroupRequiredProperty belongs. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[ProductGroups](General.Products.ProductGroups.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

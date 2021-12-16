@@ -28,6 +28,7 @@ Aggregate Root:
 | [Id](Projects.WorkReportMaterials.md#id) | guid |  
 | [Quantity](Projects.WorkReportMaterials.md#quantity) | decimal (9, 3) | The consumed quantity of the material. `Required` `Default(0)` `Filter(eq;like)` 
 | [QuantityBase](Projects.WorkReportMaterials.md#quantitybase) | decimal (9, 3) | The equivalence of Quantity in the base measurement unit of the Material. `Required` `Default(0)` `Filter(eq;like)` `ReadOnly` 
+| [RowVersion](Projects.WorkReportMaterials.md#rowversion) | byte[] |  
 
 ## References
 
@@ -36,7 +37,7 @@ Aggregate Root:
 | [MaterialProduct](Projects.WorkReportMaterials.md#materialproduct) | [Products](General.Products.Products.md) | The consumed material. `Required` `Filter(multi eq)` |
 | [ProjectTask](Projects.WorkReportMaterials.md#projecttask) | [ProjectTasks](Projects.ProjectTasks.md) | The project task for which the materials are reported. `Required` `Filter(multi eq)` |
 | [QuantityUnit](Projects.WorkReportMaterials.md#quantityunit) | [MeasurementUnits](General.MeasurementUnits.md) | The measurement unit of Quantity. It is strongly suggested that the same unit is used for planning and usage reporting. `Required` `Filter(multi eq)` |
-| [WorkReport](Projects.WorkReportMaterials.md#workreport) | [WorkReports](Projects.WorkReports.md) | The `WorkReport`(Projects.WorkReportMaterials.md#workreport) to which this WorkReportMaterial belongs. `Required` `Filter(multi eq)` `Owner` |
+| [WorkReport](Projects.WorkReportMaterials.md#workreport) | [WorkReports](Projects.WorkReports.md) | The <see cref="WorkReport"/> to which this WorkReportMaterial belongs. `Required` `Filter(multi eq)` `Owner` |
 
 
 ## Attribute Details
@@ -68,6 +69,12 @@ _Default Value_: **0**
 
 _Front-End Recalc Expressions:_  
 `IIF( ( ( obj.QuantityUnit != null) AndAlso ( obj.MaterialProduct != null)), new Quantity( obj.Quantity, obj.QuantityUnit).ConvertTo( obj.MaterialProduct.BaseUnit, obj.MaterialProduct).Value, obj.QuantityBase)`
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+
 
 ## Reference Details
 
@@ -99,7 +106,7 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### WorkReport
 
-The `WorkReport`(Projects.WorkReportMaterials.md#workreport) to which this WorkReportMaterial belongs. `Required` `Filter(multi eq)` `Owner`
+The <see cref="WorkReport"/> to which this WorkReportMaterial belongs. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[WorkReports](Projects.WorkReports.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

@@ -113,6 +113,11 @@ Aggregate Root:<br>
 <td>The compressed contents of the object. <code>Required</code></td>
 </tr>
 <tr>
+<td><a href="Systems.Core.ObjectVersions.html#rowversion">RowVersion</a></td>
+<td>byte[]</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="Systems.Core.ObjectVersions.html#serverversion">ServerVersion</a></td>
 <td>string (15) <strong>nullable</strong></td>
 <td>The version of the EnterpriseOne server, which created the version. The version should be in the form (9.9.9.9). null means the version is unknown.</td>
@@ -164,6 +169,10 @@ Aggregate Root:<br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="objectcontents">ObjectContents</h3>
 <p>The compressed contents of the object. <code>Required</code></p>
+<p><em>Type</em>: <strong>byte[]</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="rowversion">RowVersion</h3>
 <p><em>Type</em>: <strong>byte[]</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>

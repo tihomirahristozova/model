@@ -43,8 +43,8 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Document](Logistics.Procurement.PurchaseControlDocumentLines.md#document) | [PurchaseControlDocuments](Logistics.Procurement.PurchaseControlDocuments.md) | The `PurchaseControlDocument`(Logistics.Procurement.PurchaseControl<br />DocumentLines.md#purchasecontroldocument) to which this PurchaseControl<br />DocumentLine belongs. `Required` `Filter(multi eq)` |
-| [PurchaseControlDocument](Logistics.Procurement.PurchaseControlDocumentLines.md#purchasecontroldocument) | [PurchaseControlDocuments](Logistics.Procurement.PurchaseControlDocuments.md) | The `PurchaseControlDocument`(Logistics.Procurement.PurchaseControl<br />DocumentLines.md#purchasecontroldocument) to which this PurchaseControl<br />DocumentLine belongs. `Required` `Filter(multi eq)` `Owner` |
+| [Document](Logistics.Procurement.PurchaseControlDocumentLines.md#document) | [PurchaseControlDocuments](Logistics.Procurement.PurchaseControlDocuments.md) | The <see cref="Purchase<br />ControlDocument"/> to which this PurchaseControl<br />DocumentLine belongs. `Required` `Filter(multi eq)` |
+| [PurchaseControlDocument](Logistics.Procurement.PurchaseControlDocumentLines.md#purchasecontroldocument) | [PurchaseControlDocuments](Logistics.Procurement.PurchaseControlDocuments.md) | The <see cref="Purchase<br />ControlDocument"/> to which this PurchaseControl<br />DocumentLine belongs. `Required` `Filter(multi eq)` `Owner` |
 | [PurchaseInvoice](Logistics.Procurement.PurchaseControlDocumentLines.md#purchaseinvoice) | [PurchaseInvoices](Logistics.Procurement.PurchaseInvoices.md) (nullable) | The purchase invoice which is to be or was executed. Null when the data is unknown. `Filter(multi eq)` |
 | [PurchaseInvoiceLine](Logistics.Procurement.PurchaseControlDocumentLines.md#purchaseinvoiceline) | [PurchaseInvoiceLines](Logistics.Procurement.PurchaseInvoiceLines.md) (nullable) | The purchase invoice line which is to be or was executed. Null when the data is unknown. `Filter(multi eq)` |
 | [PurchaseOperationType](Logistics.Procurement.PurchaseControlDocumentLines.md#purchaseoperationtype) | [PurchaseOperationTypes](Logistics.Procurement.PurchaseOperationTypes.md) (nullable) | The user-defined operation type, which is being recorded by the current line. Used for better grouping of the control entries. null when the operation type was not specified by the user. `Filter(multi eq)` |
@@ -167,7 +167,7 @@ _Supports Order By_: **False**
 
 ### Document
 
-The `PurchaseControlDocument`(Logistics.Procurement.PurchaseControlDocumentLines.md#purchasecontroldocument) to which this PurchaseControlDocumentLine belongs. `Required` `Filter(multi eq)`
+The <see cref="PurchaseControlDocument"/> to which this PurchaseControlDocumentLine belongs. `Required` `Filter(multi eq)`
 
 _Type_: **[PurchaseControlDocuments](Logistics.Procurement.PurchaseControlDocuments.md)**  
 _Indexed_: **True**  
@@ -175,7 +175,7 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### PurchaseControlDocument
 
-The `PurchaseControlDocument`(Logistics.Procurement.PurchaseControlDocumentLines.md#purchasecontroldocument) to which this PurchaseControlDocumentLine belongs. `Required` `Filter(multi eq)` `Owner`
+The <see cref="PurchaseControlDocument"/> to which this PurchaseControlDocumentLine belongs. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[PurchaseControlDocuments](Logistics.Procurement.PurchaseControlDocuments.md)**  
 _Indexed_: **True**  

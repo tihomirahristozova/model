@@ -25,6 +25,7 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [Id](Systems.Core.Jobs.md#id) | guid |  
 | [IsActive](Systems.Core.Jobs.md#isactive) | boolean | Specifies whether the job is active and ready for running. `Required` `Default(true)` `Filter(eq)` 
+| [JobRowVersion](Systems.Core.Jobs.md#jobrowversion) | byte[] |  
 | [JobType](Systems.Core.Jobs.md#jobtype) | [JobType](Systems.Core.Jobs.md#jobtype) | The system type of the job. DOC=Document Change State, POS=Run Postponed Events, DNT=Delete Old Notifications. `Required` `Filter(multi eq)` 
 | [Name](Systems.Core.Jobs.md#name) | string (254) | The name of the job. `Required` `Filter(eq;like)` `ORD` 
 | [Notes](Systems.Core.Jobs.md#notes) | string (max) __nullable__ | Notes for this Job. 
@@ -48,6 +49,12 @@ _Type_: **boolean**
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **True**  
+
+### JobRowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 ### JobType
 

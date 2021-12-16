@@ -28,6 +28,7 @@ Aggregate Tree
 | [Description](Crm.Marketing.TargetGroups.md#description) | string (254) __nullable__ | The description of this TargetGroup. 
 | [Id](Crm.Marketing.TargetGroups.md#id) | guid |  
 | [Name](Crm.Marketing.TargetGroups.md#name) | string (64) | The name of this TargetGroup. `Required` `Filter(like)` 
+| [RowVersion](Crm.Marketing.TargetGroups.md#rowversion) | byte[] |  
 
 ## Child Collections
 
@@ -72,6 +73,12 @@ _Type_: **string (64)**
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 
 

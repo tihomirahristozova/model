@@ -28,13 +28,14 @@ Aggregate Root:
 | [Amount](Finance.Payments.PaymentSlipLines.md#amount) | [Amount (10, 2)](../data-types.md#amount) | The part of the total amount in the payment slip amount, that is distributed to the specified payment order. `Currency: PaymentSlipAmount.PaymentSlip.DocumentCurrency` `Required` `Default(0)` 
 | [CoveredOrderAmount](Finance.Payments.PaymentSlipLines.md#coveredorderamount) | [Amount (10, 2)](../data-types.md#amount) | The part of the original payment order amount, that is covered by this payment slip line. `Currency: PaymentOrder.TotalAmountCurrency` `Required` `Default(0)` 
 | [Id](Finance.Payments.PaymentSlipLines.md#id) | guid |  
+| [RowVersion](Finance.Payments.PaymentSlipLines.md#rowversion) | byte[] |  
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [PaymentOrder](Finance.Payments.PaymentSlipLines.md#paymentorder) | [PaymentOrders](Finance.Payments.PaymentOrders.md) | The payment order, that is covered by this payment slip line. `Required` `Filter(multi eq)` |
-| [PaymentSlipAmount](Finance.Payments.PaymentSlipLines.md#paymentslipamount) | [PaymentSlipAmounts](Finance.Payments.PaymentSlipAmounts.md) | The `PaymentSlipAmount`(Finance.Payments.PaymentSlipLines.md#paymentslipamount) to which this PaymentSlipLine belongs. `Required` `Filter(multi eq)` `ReadOnly` `Owner` |
+| [PaymentSlipAmount](Finance.Payments.PaymentSlipLines.md#paymentslipamount) | [PaymentSlipAmounts](Finance.Payments.PaymentSlipAmounts.md) | The <see cref="PaymentSlipAmount"/> to which this PaymentSlipLine belongs. `Required` `Filter(multi eq)` `ReadOnly` `Owner` |
 
 
 ## Attribute Details
@@ -68,6 +69,12 @@ _Indexed_: **True**
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+
 
 ## Reference Details
 
@@ -81,7 +88,7 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### PaymentSlipAmount
 
-The `PaymentSlipAmount`(Finance.Payments.PaymentSlipLines.md#paymentslipamount) to which this PaymentSlipLine belongs. `Required` `Filter(multi eq)` `ReadOnly` `Owner`
+The <see cref="PaymentSlipAmount"/> to which this PaymentSlipLine belongs. `Required` `Filter(multi eq)` `ReadOnly` `Owner`
 
 _Type_: **[PaymentSlipAmounts](Finance.Payments.PaymentSlipAmounts.md)**  
 _Indexed_: **True**  

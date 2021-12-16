@@ -28,6 +28,7 @@ Aggregate Tree
 | [Latitude](General.Geography.GeoPoints.md#latitude) | decimal (10, 7) | Latitude is the vertical angle from equator to the pole of the point. Positive values denote points north of the equator. The value is in the range `-90, 90`. `Required` `Default(0)` `Filter(eq;ge;le)` 
 | [Longitude](General.Geography.GeoPoints.md#longitude) | decimal (10, 7) | Longitude is angle from the prime meridian (in England) in east-west direction. Positive values denote east and negative - west. The value is in the range `-180, 180`. `Required` `Default(0)` `Filter(eq;ge;le)` 
 | [Name](General.Geography.GeoPoints.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Geo point short name (Multilanguage). `Required` `Filter(eq;like)` 
+| [RowVersion](General.Geography.GeoPoints.md#rowversion) | byte[] |  
 
 ## References
 
@@ -78,6 +79,12 @@ Geo point short name (Multilanguage). `Required` `Filter(eq;like)`
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Supported Filters_: **Equals, Like**  
+_Supports Order By_: **False**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
 

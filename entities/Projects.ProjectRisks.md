@@ -34,6 +34,7 @@ Aggregate Root:
 | [Resolved](Projects.ProjectRisks.md#resolved) | boolean | True if the risk is resolved. `Required` `Default(false)` `Filter(eq)` 
 | [ResolveDate](Projects.ProjectRisks.md#resolvedate) | date __nullable__ | The date on which the risk is resolved. `Filter(eq)` 
 | [RiskName](Projects.ProjectRisks.md#riskname) | string (254) | The short name of the risk. `Required` `Filter(multi eq)` 
+| [RowVersion](Projects.ProjectRisks.md#rowversion) | byte[] |  
 
 ## References
 
@@ -128,6 +129,12 @@ _Type_: **string (254)**
 _Supported Filters_: **Equals, EqualsIn**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 
 ## Reference Details

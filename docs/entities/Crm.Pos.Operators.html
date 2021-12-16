@@ -118,6 +118,11 @@ Default Search Members:<br>
 <td>Operator code. Unique within the Pos Location. <code>Required</code> <code>Filter(multi eq;like)</code> <code>ORD</code></td>
 </tr>
 <tr>
+<td><a href="Crm.Pos.Operators.html#rowversion">RowVersion</a></td>
+<td>byte[]</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="Crm.Pos.Operators.html#startingdate">StartingDate</a></td>
 <td>date</td>
 <td>The first date, when the operator has started working for this POS location. <code>Required</code> <code>Filter(multi eq;ge;le)</code></td>
@@ -179,6 +184,10 @@ Default Search Members:<br>
 <em>Supported Filters</em>: <strong>Equals, Like, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>True</strong><br>
 <em>Maximum Length</em>: <strong>16</strong></p>
+<h3 id="rowversion">RowVersion</h3>
+<p><em>Type</em>: <strong>byte[]</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="startingdate">StartingDate</h3>
 <p>The first date, when the operator has started working for this POS location. <code>Required</code> <code>Filter(multi eq;ge;le)</code></p>
 <p><em>Type</em>: <strong>date</strong><br>

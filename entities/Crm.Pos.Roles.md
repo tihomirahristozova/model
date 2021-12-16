@@ -28,6 +28,7 @@ Aggregate Tree
 | [Id](Crm.Pos.Roles.md#id) | guid |  
 | [PosRoleCode](Crm.Pos.Roles.md#posrolecode) | string (16) | Unique role code. `Required` `Filter(multi eq;like)` `ORD` 
 | [PosRoleName](Crm.Pos.Roles.md#posrolename) | [MultilanguageString](../data-types.md#multilanguagestring) | Multi-language name of the POS role. `Required` `Filter(multi eq;like)` 
+| [RowVersion](Crm.Pos.Roles.md#rowversion) | byte[] |  
 
 
 ## Attribute Details
@@ -73,6 +74,12 @@ Multi-language name of the POS role. `Required` `Filter(multi eq;like)`
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Supported Filters_: **Equals, Like, EqualsIn**  
+_Supports Order By_: **False**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
 

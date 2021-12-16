@@ -26,7 +26,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ContentHtml](Applications.Cms.StaticWebModules.md#contenthtml) | string (max) __nullable__ | The actual html content of the pade. Only the <BODY> of the html is stored. 
+| [ContentHtml](Applications.Cms.StaticWebModules.md#contenthtml) | string (max) __nullable__ | The actual html content of the pade. Only the &lt;BODY&gt; of the html is stored. 
 | [Id](Applications.Cms.StaticWebModules.md#id) | guid |  
 | [IsPublished](Applications.Cms.StaticWebModules.md#ispublished) | boolean | Specifies whether the module is published and will be showed in the web site. `Required` `Default(false)` `Filter(eq)` (Inherited from [WebModules](Applications.Cms.WebModules.md)) 
 | [LanguageCode](Applications.Cms.StaticWebModules.md#languagecode) | string (7) | The language code of the content. `Required` `Default("EN")` 
@@ -34,6 +34,8 @@ Aggregate Root:
 | [ModulePicture](Applications.Cms.StaticWebModules.md#modulepicture) | byte[] __nullable__ | Default picture. Used for picture links, small module icons, etc. PNG format is suggested. (Inherited from [WebModules](Applications.Cms.WebModules.md)) 
 | [ModuleType](Applications.Cms.StaticWebModules.md#moduletype) | [ModuleType](Applications.Cms.StaticWebModules.md#moduletype) | Specifies the content handler. The content handler is responsible for generating the actual web page content. Module Types include Category, Static, News, Product, etc. `Required` `Filter(like)` (Inherited from [WebModules](Applications.Cms.WebModules.md)) 
 | [Name](Applications.Cms.StaticWebModules.md#name) | string (512) | Multilanguage Module name. This is used as a title when displaying the web Module. `Required` `Filter(like)` (Inherited from [WebModules](Applications.Cms.WebModules.md)) 
+| [RowVersion](Applications.Cms.StaticWebModules.md#rowversion) | byte[] |  
+| [WebModuleRowVersion](Applications.Cms.StaticWebModules.md#webmodulerowversion) | byte[] |  
 
 ## References
 
@@ -47,7 +49,7 @@ Aggregate Root:
 
 ### ContentHtml
 
-The actual html content of the pade. Only the <BODY> of the html is stored.
+The actual html content of the pade. Only the &lt;BODY&gt; of the html is stored.
 
 _Type_: **string (max) __nullable__**  
 _Supported Filters_: **NotFilterable**  
@@ -122,6 +124,18 @@ _Type_: **string (512)**
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **512**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+
+### WebModuleRowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 
 ## Reference Details

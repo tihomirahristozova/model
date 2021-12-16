@@ -25,6 +25,7 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [DocumentNotesFixedText](Logistics.Inventory.TransactionEntryTemplates.md#documentnotesfixedtext) | string (max) __nullable__ | Specifies the text for the document notes in the created entry in the VAT ledgers, in case the source is set to be fixed text. 
 | [Id](Logistics.Inventory.TransactionEntryTemplates.md#id) | guid |  
+| [RowVersion](Logistics.Inventory.TransactionEntryTemplates.md#rowversion) | byte[] |  
 
 ## References
 
@@ -51,6 +52,12 @@ _Type_: **guid**
 _Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 
 ## Reference Details

@@ -196,6 +196,11 @@ Default Search Members:<br>
 <td><a href="Crm.Marketing.BonusPrograms.html#priority">Priority</a></td>
 <td>Priority (1-5) of the bonus program comparative to the other bonus programs. 1 is the lowest priority. <code>Required</code> <code>Default(2)</code> <code>Filter(multi eq)</code></td>
 </tr>
+<tr>
+<td><a href="Crm.Marketing.BonusPrograms.html#rowversion">RowVersion</a></td>
+<td>byte[]</td>
+<td></td>
+</tr>
 </tbody>
 </table>
 <h2 id="references">References</h2>
@@ -444,6 +449,10 @@ Allowed values for the <code>Priority</code>(Crm.Marketing.BonusPrograms.md#prio
 <p><em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>2</strong></p>
+<h3 id="rowversion">RowVersion</h3>
+<p><em>Type</em>: <strong>byte[]</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="bonusdocumentamounttype">BonusDocumentAmountType</h3>
 <p>When not null specifies that a document amount should be added to the order when the bonus conditions are met. null means that the bonus reward is not a document amount. <code>Filter(multi eq)</code></p>

@@ -27,6 +27,7 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [Id](Projects.ProjectParticipants.md#id) | guid |  
 | [Notes](Projects.ProjectParticipants.md#notes) | string (254) __nullable__ | Notes for this ProjectParticipant. 
+| [RowVersion](Projects.ProjectParticipants.md#rowversion) | byte[] |  
 
 ## References
 
@@ -54,6 +55,12 @@ _Type_: **string (254) __nullable__**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 
 ## Reference Details

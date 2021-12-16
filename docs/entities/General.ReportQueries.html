@@ -128,6 +128,11 @@ Aggregate Root:<br>
 <td>A sequence of table names and foreign key columns that define how the data will be loaded by this query. For example - Gen_Documents/<br>Enterprise_Company_<br>Id/Company_Id - will load the definition of the company for the enterprise company of a document. <code>Required</code></td>
 </tr>
 <tr>
+<td><a href="General.ReportQueries.html#rowversion">RowVersion</a></td>
+<td>byte[]</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="General.ReportQueries.html#showcustomproperties">ShowCustomProperties</a></td>
 <td>boolean</td>
 <td>True to include the custom properties. <code>Required</code> <code>Default(false)</code></td>
@@ -162,7 +167,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.ReportQueries.html#report">Report</a></td>
 <td><a href="General.Reports.html">Reports</a></td>
-<td>The <code>Report</code>(General.ReportQueries.md#report) to which this ReportQuery belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
+<td>The <see cref="Report"></see> to which this ReportQuery belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 </tbody>
 </table>
@@ -195,6 +200,10 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>512</strong></p>
+<h3 id="rowversion">RowVersion</h3>
+<p><em>Type</em>: <strong>byte[]</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="showcustomproperties">ShowCustomProperties</h3>
 <p>True to include the custom properties. <code>Required</code> <code>Default(false)</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>
@@ -221,7 +230,7 @@ Aggregate Root:<br>
 <em>Maximum Length</em>: <strong>64</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="report">Report</h3>
-<p>The <code>Report</code>(General.ReportQueries.md#report) to which this ReportQuery belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
+<p>The <see cref="Report"></see> to which this ReportQuery belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="General.Reports.html">Reports</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em><a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a></em>: <strong>True</strong></p>

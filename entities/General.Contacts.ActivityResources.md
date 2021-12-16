@@ -28,12 +28,13 @@ Aggregate Root:
 | [Id](General.Contacts.ActivityResources.md#id) | guid |  
 | [Notes](General.Contacts.ActivityResources.md#notes) | string (255) __nullable__ | Notes for this ActivityResource. 
 | [ResourceUsagePercent](General.Contacts.ActivityResources.md#resourceusagepercent) | decimal (18, 4) | The planned resource usage for this activity in percents (100% = 1). Values of more than 100% are allowed when more than 1 resource is required. `Required` `Default(1)` 
+| [RowVersion](General.Contacts.ActivityResources.md#rowversion) | byte[] |  
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Activity](General.Contacts.ActivityResources.md#activity) | [Activities](General.Contacts.Activities.md) | The `Activity`(General.Contacts.ActivityResources.md#activity) to which this ActivityResource belongs. `Required` `Filter(multi eq)` `Owner` |
+| [Activity](General.Contacts.ActivityResources.md#activity) | [Activities](General.Contacts.Activities.md) | The <see cref="Activity"/> to which this ActivityResource belongs. `Required` `Filter(multi eq)` `Owner` |
 | [Resource](General.Contacts.ActivityResources.md#resource) | [Resources](General.Resources.Resources.md) | The resource, which is required by the activity. `Required` `Filter(multi eq)` |
 
 
@@ -64,12 +65,18 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Default Value_: **1**  
 
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+
 
 ## Reference Details
 
 ### Activity
 
-The `Activity`(General.Contacts.ActivityResources.md#activity) to which this ActivityResource belongs. `Required` `Filter(multi eq)` `Owner`
+The <see cref="Activity"/> to which this ActivityResource belongs. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[Activities](General.Contacts.Activities.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

@@ -29,6 +29,7 @@ Aggregate Tree
 | [Id](Logistics.LogisticUnits.md#id) | guid |  
 | [MeasuredWeight](Logistics.LogisticUnits.md#measuredweight) | decimal (12, 3) __nullable__ | Actual measured weight of the unit in KG. null means unknown. `Filter(eq;ge;le)` 
 | [Notes](Logistics.LogisticUnits.md#notes) | string (max) __nullable__ | Notes for this LogisticUnit. `Filter(like)` 
+| [RowVersion](Logistics.LogisticUnits.md#rowversion) | byte[] |  
 | [SerialCode](Logistics.LogisticUnits.md#serialcode) | string (32) | Unique serial code of the logistic unit. If GS1 coding is used, this is the SSCC. `Required` `Filter(multi eq;like)` `ORD` 
 
 ## References
@@ -80,6 +81,12 @@ _Type_: **string (max) __nullable__**
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 ### SerialCode
 

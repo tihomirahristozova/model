@@ -23,11 +23,12 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ArticleTextHtml](Applications.Cms.NewsWebModuleArticles.md#articletexthtml) | string (max) __nullable__ | The actual article text, stored as Html. Only the <BODY> of the Html is stored. The language of the text is specified in Language Code. 
+| [ArticleTextHtml](Applications.Cms.NewsWebModuleArticles.md#articletexthtml) | string (max) __nullable__ | The actual article text, stored as Html. Only the &lt;BODY&gt; of the Html is stored. The language of the text is specified in Language Code. 
 | [Id](Applications.Cms.NewsWebModuleArticles.md#id) | guid |  
 | [IsPublished](Applications.Cms.NewsWebModuleArticles.md#ispublished) | boolean | Specifies whether the article is published for display on web. `Required` `Default(false)` 
 | [LanguageCode](Applications.Cms.NewsWebModuleArticles.md#languagecode) | string (8) | The language code of the article text. `Required` 
 | [PublishDate](Applications.Cms.NewsWebModuleArticles.md#publishdate) | datetime | The date and time when the news article should appear to be published. `Required` `Default(Now)` 
+| [RowVersion](Applications.Cms.NewsWebModuleArticles.md#rowversion) | byte[] |  
 
 ## References
 
@@ -41,7 +42,7 @@ Aggregate Tree
 
 ### ArticleTextHtml
 
-The actual article text, stored as Html. Only the <BODY> of the Html is stored. The language of the text is specified in Language Code.
+The actual article text, stored as Html. Only the &lt;BODY&gt; of the Html is stored. The language of the text is specified in Language Code.
 
 _Type_: **string (max) __nullable__**  
 _Supported Filters_: **NotFilterable**  
@@ -81,6 +82,12 @@ _Type_: **datetime**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **CurrentDateTime**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 
 ## Reference Details

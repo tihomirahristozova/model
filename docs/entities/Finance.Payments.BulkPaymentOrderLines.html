@@ -168,6 +168,11 @@ Aggregate Root:<br>
 <td>The number of the invoice which is related and is the basis for the payment. null means that the payment order isn't created or related to any invoice.</td>
 </tr>
 <tr>
+<td><a href="Finance.Payments.BulkPaymentOrderLines.html#rowversion">RowVersion</a></td>
+<td>byte[]</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="Finance.Payments.BulkPaymentOrderLines.html#totalamount">TotalAmount</a></td>
 <td><a href="../data-types.html#amount">Amount (18, 2)</a></td>
 <td>Total amount that should be payed. <code>Currency: TotalAmountCurrency</code> <code>Required</code> <code>Default(0)</code></td>
@@ -187,7 +192,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Finance.Payments.BulkPaymentOrderLines.html#bulkpaymentorder">BulkPaymentOrder</a></td>
 <td><a href="Finance.Payments.BulkPaymentOrders.html">BulkPaymentOrders</a></td>
-<td>The <code>BulkPaymentOrder</code>(Finance.Payments.BulkPaymentOrderLines.md#bulkpaymentorder) to which this BulkPaymentOrderLine belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
+<td>The <see cref="BulkPaymentOrder"></see> to which this BulkPaymentOrderLine belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Payments.BulkPaymentOrderLines.html#invoiceamountcurrency">InvoiceAmountCurrency</a></td>
@@ -342,6 +347,10 @@ Allowed values for the <code>Direction</code>(Finance.Payments.BulkPaymentOrderL
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>20</strong></p>
+<h3 id="rowversion">RowVersion</h3>
+<p><em>Type</em>: <strong>byte[]</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="totalamount">TotalAmount</h3>
 <p>Total amount that should be payed. <code>Currency: TotalAmountCurrency</code> <code>Required</code> <code>Default(0)</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount (18, 2)</a></strong><br>
@@ -350,7 +359,7 @@ Allowed values for the <code>Direction</code>(Finance.Payments.BulkPaymentOrderL
 <em>Default Value</em>: <strong>Constant</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="bulkpaymentorder">BulkPaymentOrder</h3>
-<p>The <code>BulkPaymentOrder</code>(Finance.Payments.BulkPaymentOrderLines.md#bulkpaymentorder) to which this BulkPaymentOrderLine belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
+<p>The <see cref="BulkPaymentOrder"></see> to which this BulkPaymentOrderLine belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="Finance.Payments.BulkPaymentOrders.html">BulkPaymentOrders</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>

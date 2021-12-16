@@ -35,6 +35,7 @@ Aggregate Tree
 | [PersonWebProfile](Crm.Presales.Leads.md#personwebprofile) | string (64) __nullable__ | Web address (including protocol like https) of the personal profile in a social or professional network. The address itself, as it is full valid Internet address, contains also the network name. `Filter(like)` 
 | [PersonWorkPhone](Crm.Presales.Leads.md#personworkphone) | string (32) __nullable__ | The work phone of the sales lead person. `Filter(like)` 
 | [RoleInCompany](Crm.Presales.Leads.md#roleincompany) | string (32) __nullable__ | The role of the person in the company. `Filter(eq;like)` 
+| [RowVersion](Crm.Presales.Leads.md#rowversion) | byte[] __nullable__ |  
 | [SQLTimestampUtc](Crm.Presales.Leads.md#sqltimestamputc) | datetime __nullable__ | System assigned date and time (in UTC), when the lead was first promoted to Sales Qualified Lead. `Filter(ge;le)` `ReadOnly` 
 | [SystemStage](Crm.Presales.Leads.md#systemstage) | [SystemStage](Crm.Presales.Leads.md#systemstage) | The system stage of the lead - New, Qualifying, Marketing Qualified Lead, Sales Qualified Lead, Closed. (NEW, QUA, MQL, SQL, CLO). `Required` `Default("NEW")` `Filter(multi eq)` 
 
@@ -163,6 +164,12 @@ _Type_: **string (32) __nullable__**
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **32**  
+
+### RowVersion
+
+_Type_: **byte[] __nullable__**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 ### SQLTimestampUtc
 

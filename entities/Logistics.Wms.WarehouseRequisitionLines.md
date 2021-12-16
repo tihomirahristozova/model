@@ -31,20 +31,21 @@ Aggregate Root:
 | [ParentLineNo](Logistics.Wms.WarehouseRequisitionLines.md#parentlineno) | int32 __nullable__ | The number of the line within the parent document, which the current line executes. null when the current line does not execute line. 
 | [Quantity](Logistics.Wms.WarehouseRequisitionLines.md#quantity) | [Quantity (12, 3)](../data-types.md#quantity) | The requested quantity. `Unit: QuantityUnit` `Required` `Filter(eq;ge;le)` 
 | [QuantityBase](Logistics.Wms.WarehouseRequisitionLines.md#quantitybase) | [Quantity (12, 3)](../data-types.md#quantity) | Quantity in the base measurement unit of the product. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Filter(multi eq;ge;le)` `Introduced in version 21.1.1.33` 
+| [RowVersion](Logistics.Wms.WarehouseRequisitionLines.md#rowversion) | byte[] |  
 | [StandardQuantity](Logistics.Wms.WarehouseRequisitionLines.md#standardquantity) | [Quantity (12, 3)](../data-types.md#quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Introduced in version 22.1.4.42` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Document](Logistics.Wms.WarehouseRequisitionLines.md#document) | [WarehouseRequisitions](Logistics.Wms.WarehouseRequisitions.md) | The `WarehouseRequisition`(Logistics.Wms.WarehouseRequisitionLines.md#warehouserequisition) to which this WarehouseRequisitionLine belongs. `Required` `Filter(multi eq)` |
+| [Document](Logistics.Wms.WarehouseRequisitionLines.md#document) | [WarehouseRequisitions](Logistics.Wms.WarehouseRequisitions.md) | The <see cref="Warehouse<br />Requisition"/> to which this WarehouseRequisitionLine belongs. `Required` `Filter(multi eq)` |
 | [Lot](Logistics.Wms.WarehouseRequisitionLines.md#lot) | [Lots](Logistics.Inventory.Lots.md) (nullable) | The requested lot. null means that any lot can be used or the product does not use lots at all. `Filter(multi eq)` |
 | [ParentDocument](Logistics.Wms.WarehouseRequisitionLines.md#parentdocument) | [Documents](General.Documents.md) (nullable) | The document, which the current line executes. null when the current line does not execute another line. `Filter(multi eq)` |
 | [Product](Logistics.Wms.WarehouseRequisitionLines.md#product) | [Products](General.Products.Products.md) | The requested product. `Required` `Filter(multi eq)` |
 | [ProductVariant](Logistics.Wms.WarehouseRequisitionLines.md#productvariant) | [ProductVariants](General.ProductVariants.md) (nullable) | The requested product variant. `Filter(multi eq)` `Introduced in version 22.1.4.56` |
 | [QuantityUnit](Logistics.Wms.WarehouseRequisitionLines.md#quantityunit) | [MeasurementUnits](General.MeasurementUnits.md) | The measurement unit of Quantity. `Required` `Filter(multi eq)` |
 | [SerialNumber](Logistics.Wms.WarehouseRequisitionLines.md#serialnumber) | [SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable) | The requested serial number. null means that any serial number can be used or the product does not use serial numbers at all. `Filter(multi eq)` |
-| [WarehouseRequisition](Logistics.Wms.WarehouseRequisitionLines.md#warehouserequisition) | [WarehouseRequisitions](Logistics.Wms.WarehouseRequisitions.md) | The `WarehouseRequisition`(Logistics.Wms.WarehouseRequisitionLines.md#warehouserequisition) to which this WarehouseRequisitionLine belongs. `Required` `Filter(multi eq)` `Owner` |
+| [WarehouseRequisition](Logistics.Wms.WarehouseRequisitionLines.md#warehouserequisition) | [WarehouseRequisitions](Logistics.Wms.WarehouseRequisitions.md) | The <see cref="Warehouse<br />Requisition"/> to which this WarehouseRequisitionLine belongs. `Required` `Filter(multi eq)` `Owner` |
 
 
 ## Attribute Details
@@ -102,6 +103,12 @@ _Type_: **[Quantity (12, 3)](../data-types.md#quantity)**
 _Supported Filters_: **Equals, GreaterThanOrLessThan, EqualsIn**  
 _Supports Order By_: **False**  
 
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+
 ### StandardQuantity
 
 The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Introduced in version 22.1.4.42`
@@ -115,7 +122,7 @@ _Supports Order By_: **False**
 
 ### Document
 
-The `WarehouseRequisition`(Logistics.Wms.WarehouseRequisitionLines.md#warehouserequisition) to which this WarehouseRequisitionLine belongs. `Required` `Filter(multi eq)`
+The <see cref="WarehouseRequisition"/> to which this WarehouseRequisitionLine belongs. `Required` `Filter(multi eq)`
 
 _Type_: **[WarehouseRequisitions](Logistics.Wms.WarehouseRequisitions.md)**  
 _Indexed_: **True**  
@@ -165,7 +172,7 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### WarehouseRequisition
 
-The `WarehouseRequisition`(Logistics.Wms.WarehouseRequisitionLines.md#warehouserequisition) to which this WarehouseRequisitionLine belongs. `Required` `Filter(multi eq)` `Owner`
+The <see cref="WarehouseRequisition"/> to which this WarehouseRequisitionLine belongs. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[WarehouseRequisitions](Logistics.Wms.WarehouseRequisitions.md)**  
 _Indexed_: **True**  

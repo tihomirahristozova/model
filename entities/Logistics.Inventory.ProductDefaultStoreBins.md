@@ -26,13 +26,14 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](Logistics.Inventory.ProductDefaultStoreBins.md#id) | guid |  
+| [RowVersion](Logistics.Inventory.ProductDefaultStoreBins.md#rowversion) | byte[] |  
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [DefaultBin](Logistics.Inventory.ProductDefaultStoreBins.md#defaultbin) | [StoreBins](Logistics.Inventory.StoreBins.md) | The default bin, which should be used for this product. `Required` `Filter(multi eq)` |
-| [Product](Logistics.Inventory.ProductDefaultStoreBins.md#product) | [Products](General.Products.Products.md) | The `Product`(General.Products.Products.md) to which this ProductDefaultStoreBin belongs. `Required` `Filter(multi eq)` `Owner` |
+| [Product](Logistics.Inventory.ProductDefaultStoreBins.md#product) | [Products](General.Products.Products.md) | The <see cref="General.Products.Product"/> to which this ProductDefaultStoreBin belongs. `Required` `Filter(multi eq)` `Owner` |
 | [Store](Logistics.Inventory.ProductDefaultStoreBins.md#store) | [Stores](Logistics.Inventory.Stores.md) | The store, for which the default bin is specified. `Required` `Filter(multi eq)` |
 
 
@@ -44,6 +45,12 @@ _Type_: **guid**
 _Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 
 ## Reference Details
@@ -57,7 +64,7 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### Product
 
-The `Product`(General.Products.Products.md) to which this ProductDefaultStoreBin belongs. `Required` `Filter(multi eq)` `Owner`
+The <see cref="General.Products.Product"/> to which this ProductDefaultStoreBin belongs. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[Products](General.Products.Products.md)**  
 _Indexed_: **True**  

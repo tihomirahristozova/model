@@ -33,6 +33,7 @@ Aggregate Root:
 | [IsEncrypted](Applications.Mail.Messages.md#isencrypted) | boolean | True when the message is stored in encrypted format. `Required` `Default(false)` `Filter(eq)` 
 | [IsRead](Applications.Mail.Messages.md#isread) | boolean | True when the message was read by the user. `Required` `Default(false)` `Filter(eq)` 
 | [ReceivedDateTime](Applications.Mail.Messages.md#receiveddatetime) | datetime __nullable__ | Date and time when the message was received. `Filter(ge;le)` 
+| [RowVersion](Applications.Mail.Messages.md#rowversion) | byte[] |  
 | [SentDateTime](Applications.Mail.Messages.md#sentdatetime) | datetime __nullable__ | Date and time when the message was sent. `Filter(ge;le)` 
 | [ServerMessageID](Applications.Mail.Messages.md#servermessageid) | string (256) __nullable__ | Message ID as it appears on the mail server. `Filter(eq)` `ORD` 
 | [Subject](Applications.Mail.Messages.md#subject) | string (1024) __nullable__ | The message subject. `Filter(like)` 
@@ -42,7 +43,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [MailBoxFolder](Applications.Mail.Messages.md#mailboxfolder) | [BoxFolders](Applications.Mail.BoxFolders.md) | The `BoxFolder`(Applications.Mail.BoxFolders.md) to which this Message belongs. `Required` `Filter(multi eq)` `Owner` |
+| [MailBoxFolder](Applications.Mail.Messages.md#mailboxfolder) | [BoxFolders](Applications.Mail.BoxFolders.md) | The <see cref="BoxFolder"/> to which this Message belongs. `Required` `Filter(multi eq)` `Owner` |
 | [RelatedToParty](Applications.Mail.Messages.md#relatedtoparty) | [Parties](General.Contacts.Parties.md) (nullable) | The party id of the external participating (sender/receiver) party (customer, supplier, etc.) in this mail. null means that the email is still not related to any specific party. `Filter(multi eq)` |
 
 ## Child Collections
@@ -123,6 +124,12 @@ _Type_: **datetime __nullable__**
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+
 ### SentDateTime
 
 Date and time when the message was sent. `Filter(ge;le)`
@@ -164,7 +171,7 @@ _Maximum Length_: **2048**
 
 ### MailBoxFolder
 
-The `BoxFolder`(Applications.Mail.BoxFolders.md) to which this Message belongs. `Required` `Filter(multi eq)` `Owner`
+The <see cref="BoxFolder"/> to which this Message belongs. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[BoxFolders](Applications.Mail.BoxFolders.md)**  
 _Indexed_: **True**  

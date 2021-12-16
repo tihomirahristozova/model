@@ -123,6 +123,11 @@ Aggregate Root:<br>
 <td>The full path of the parent work element in this project type. null when this is root element. <code>Filter(eq;like)</code></td>
 </tr>
 <tr>
+<td><a href="Projects.TypeWorkElements.html#rowversion">RowVersion</a></td>
+<td>byte[]</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="Projects.TypeWorkElements.html#workelementcode">WorkElementCode</a></td>
 <td>string (3)</td>
 <td>The code of the work element, unique among the sibling elements within the parent work element. <code>Required</code> <code>Filter(eq)</code></td>
@@ -147,7 +152,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Projects.TypeWorkElements.html#projecttype">ProjectType</a></td>
 <td><a href="Projects.ProjectTypes.html">ProjectTypes</a></td>
-<td>The <code>ProjectType</code>(Projects.TypeWorkElements.md#projecttype) to which this TypeWorkElement belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
+<td>The <see cref="ProjectType"></see> to which this TypeWorkElement belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 </tbody>
 </table>
@@ -175,6 +180,10 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>25</strong></p>
+<h3 id="rowversion">RowVersion</h3>
+<p><em>Type</em>: <strong>byte[]</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="workelementcode">WorkElementCode</h3>
 <p>The code of the work element, unique among the sibling elements within the parent work element. <code>Required</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong>string (3)</strong><br>
@@ -189,7 +198,7 @@ Aggregate Root:<br>
 <em>Maximum Length</em>: <strong>254</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="projecttype">ProjectType</h3>
-<p>The <code>ProjectType</code>(Projects.TypeWorkElements.md#projecttype) to which this TypeWorkElement belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
+<p>The <see cref="ProjectType"></see> to which this TypeWorkElement belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="Projects.ProjectTypes.html">ProjectTypes</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>

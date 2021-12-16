@@ -28,6 +28,7 @@ Aggregate Tree
 | [Code](Finance.Accounting.FinancialStatements.md#code) | string (3) | Unique identifying code of the financial statement. `Required` `Filter(eq;like)` `ORD` 
 | [Id](Finance.Accounting.FinancialStatements.md#id) | guid |  
 | [Name](Finance.Accounting.FinancialStatements.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Name of the financial statement. `Required` `Filter(eq;like)` 
+| [RowVersion](Finance.Accounting.FinancialStatements.md#rowversion) | byte[] |  
 
 ## Child Collections
 
@@ -61,6 +62,12 @@ Name of the financial statement. `Required` `Filter(eq;like)`
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Supported Filters_: **Equals, Like**  
+_Supports Order By_: **False**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
 

@@ -28,13 +28,14 @@ Aggregate Root:
 | [DayNo](General.Resources.WorkScheduleWorkingTime.md#dayno) | int32 | Consequtive day in the work schedule recurrence, starting at 1. `Required` 
 | [EndTime](General.Resources.WorkScheduleWorkingTime.md#endtime) | time | End of working time period. `Required` 
 | [Id](General.Resources.WorkScheduleWorkingTime.md#id) | guid |  
+| [RowVersion](General.Resources.WorkScheduleWorkingTime.md#rowversion) | byte[] |  
 | [StartTime](General.Resources.WorkScheduleWorkingTime.md#starttime) | time | Start of working time period on the day, specified by Day_No. `Required` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [WorkSchedule](General.Resources.WorkScheduleWorkingTime.md#workschedule) | [WorkSchedules](General.Resources.WorkSchedules.md) | The `WorkSchedule`(General.Resources.WorkScheduleWorkingTime.md#workschedule) to which this WorkScheduleWorkingTime belongs. `Required` `Filter(multi eq)` `Owner` |
+| [WorkSchedule](General.Resources.WorkScheduleWorkingTime.md#workschedule) | [WorkSchedules](General.Resources.WorkSchedules.md) | The <see cref="WorkSchedule"/> to which this WorkScheduleWorkingTime belongs. `Required` `Filter(multi eq)` `Owner` |
 
 
 ## Attribute Details
@@ -62,6 +63,12 @@ _Indexed_: **True**
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+
 ### StartTime
 
 Start of working time period on the day, specified by Day_No. `Required`
@@ -75,7 +82,7 @@ _Supports Order By_: **False**
 
 ### WorkSchedule
 
-The `WorkSchedule`(General.Resources.WorkScheduleWorkingTime.md#workschedule) to which this WorkScheduleWorkingTime belongs. `Required` `Filter(multi eq)` `Owner`
+The <see cref="WorkSchedule"/> to which this WorkScheduleWorkingTime belongs. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[WorkSchedules](General.Resources.WorkSchedules.md)**  
 _Indexed_: **True**  

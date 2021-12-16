@@ -168,6 +168,11 @@ Aggregate Root:<br>
 <td>The equivalence of Quantity, in the base measurement category of the product. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>Default(0)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
+<td><a href="Logistics.Procurement.PurchaseOrderLines.html#rowversion">RowVersion</a></td>
+<td>byte[]</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="Logistics.Procurement.PurchaseOrderLines.html#standardquantitybase">StandardQuantityBase</a></td>
 <td><a href="../data-types.html#quantity">Quantity (18, 3)</a></td>
 <td>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>ReadOnly</code> <code>Introduced in version 18.2</code></td>
@@ -187,7 +192,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseOrderLines.html#document">Document</a></td>
 <td><a href="Logistics.Procurement.PurchaseOrders.html">PurchaseOrders</a></td>
-<td>The <code>PurchaseOrder</code>(Logistics.Procurement.PurchaseOrderLines.md#purchaseorder) to which this PurchaseOrderLine belongs. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>The <see cref="PurchaseOrder"></see> to which this PurchaseOrderLine belongs. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseOrderLines.html#lot">Lot</a></td>
@@ -217,7 +222,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseOrderLines.html#purchaseorder">PurchaseOrder</a></td>
 <td><a href="Logistics.Procurement.PurchaseOrders.html">PurchaseOrders</a></td>
-<td>The <code>PurchaseOrder</code>(Logistics.Procurement.PurchaseOrderLines.md#purchaseorder) to which this PurchaseOrderLine belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
+<td>The <see cref="PurchaseOrder"></see> to which this PurchaseOrderLine belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseOrderLines.html#purchaseproductprice">PurchaseProductPrice</a></td>
@@ -327,6 +332,10 @@ Aggregate Root:<br>
 <code>IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.QuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))</code></p>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.QuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))</code></p>
+<h3 id="rowversion">RowVersion</h3>
+<p><em>Type</em>: <strong>byte[]</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="standardquantitybase">StandardQuantityBase</h3>
 <p>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>ReadOnly</code> <code>Introduced in version 18.2</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a></strong><br>
@@ -338,7 +347,7 @@ Aggregate Root:<br>
 <code>IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.StandardQuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))</code></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="document">Document</h3>
-<p>The <code>PurchaseOrder</code>(Logistics.Procurement.PurchaseOrderLines.md#purchaseorder) to which this PurchaseOrderLine belongs. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>The <see cref="PurchaseOrder"></see> to which this PurchaseOrderLine belongs. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Logistics.Procurement.PurchaseOrders.html">PurchaseOrders</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
@@ -367,7 +376,7 @@ Aggregate Root:<br>
 <p><em>Type</em>: <strong><a href="General.ProductVariants.html">ProductVariants</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="purchaseorder">PurchaseOrder</h3>
-<p>The <code>PurchaseOrder</code>(Logistics.Procurement.PurchaseOrderLines.md#purchaseorder) to which this PurchaseOrderLine belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
+<p>The <see cref="PurchaseOrder"></see> to which this PurchaseOrderLine belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="Logistics.Procurement.PurchaseOrders.html">PurchaseOrders</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>

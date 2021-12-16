@@ -132,6 +132,11 @@ Default Search Members:<br>
 <td>string (30)</td>
 <td>Unique account group number. May contain characters, if required. <code>Required</code> <code>Filter(like)</code> <code>ORD</code></td>
 </tr>
+<tr>
+<td><a href="Finance.Accounting.AccountGroups.html#rowversion">RowVersion</a></td>
+<td>byte[]</td>
+<td></td>
+</tr>
 </tbody>
 </table>
 <h2 id="references">References</h2>
@@ -186,6 +191,10 @@ Default Search Members:<br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>True</strong><br>
 <em>Maximum Length</em>: <strong>30</strong></p>
+<h3 id="rowversion">RowVersion</h3>
+<p><em>Type</em>: <strong>byte[]</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="parent">Parent</h3>
 <p>Parent account group. null if this is root group. <code>Filter(multi eq)</code></p>

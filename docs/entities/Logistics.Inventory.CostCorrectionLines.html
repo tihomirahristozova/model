@@ -123,6 +123,11 @@ Aggregate Root:<br>
 <td>The amount of correction (plus or minus) for the Product Cost field of the transaction line. <code>Currency: TransactionLine.Product.CostingCurrency</code> <code>Required</code> <code>Default(0)</code></td>
 </tr>
 <tr>
+<td><a href="Logistics.Inventory.CostCorrectionLines.html#rowversion">RowVersion</a></td>
+<td>byte[]</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="Logistics.Inventory.CostCorrectionLines.html#storecostadjustment">StoreCostAdjustment</a></td>
 <td><a href="../data-types.html#amount">Amount (14, 2)</a></td>
 <td>The amount of correction (plus or minus) for the Store Cost field of the transaction line. <code>Currency: TransactionLine.TransactionObj.Store.Currency</code> <code>Required</code> <code>Default(0)</code></td>
@@ -142,12 +147,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Logistics.Inventory.CostCorrectionLines.html#costcorrection">CostCorrection</a></td>
 <td><a href="Logistics.Inventory.CostCorrections.html">CostCorrections</a></td>
-<td>The <code>CostCorrection</code>(Logistics.Inventory.CostCorrectionLines.md#costcorrection) to which this CostCorrectionLine belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
+<td>The <see cref="CostCorrection"></see> to which this CostCorrectionLine belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.CostCorrectionLines.html#document">Document</a></td>
 <td><a href="Logistics.Inventory.CostCorrections.html">CostCorrections</a></td>
-<td>The <code>CostCorrection</code>(Logistics.Inventory.CostCorrectionLines.md#costcorrection) to which this CostCorrectionLine belongs. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>The <see cref="CostCorrection"></see> to which this CostCorrectionLine belongs. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.CostCorrectionLines.html#transactionline">TransactionLine</a></td>
@@ -180,6 +185,10 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
+<h3 id="rowversion">RowVersion</h3>
+<p><em>Type</em>: <strong>byte[]</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="storecostadjustment">StoreCostAdjustment</h3>
 <p>The amount of correction (plus or minus) for the Store Cost field of the transaction line. <code>Currency: TransactionLine.TransactionObj.Store.Currency</code> <code>Required</code> <code>Default(0)</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount (14, 2)</a></strong><br>
@@ -188,13 +197,13 @@ Aggregate Root:<br>
 <em>Default Value</em>: <strong>Constant</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="costcorrection">CostCorrection</h3>
-<p>The <code>CostCorrection</code>(Logistics.Inventory.CostCorrectionLines.md#costcorrection) to which this CostCorrectionLine belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
+<p>The <see cref="CostCorrection"></see> to which this CostCorrectionLine belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="Logistics.Inventory.CostCorrections.html">CostCorrections</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em><a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a></em>: <strong>True</strong></p>
 <h3 id="document">Document</h3>
-<p>The <code>CostCorrection</code>(Logistics.Inventory.CostCorrectionLines.md#costcorrection) to which this CostCorrectionLine belongs. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>The <see cref="CostCorrection"></see> to which this CostCorrectionLine belongs. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Logistics.Inventory.CostCorrections.html">CostCorrections</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>

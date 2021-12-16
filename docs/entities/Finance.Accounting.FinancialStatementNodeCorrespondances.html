@@ -112,6 +112,11 @@ Aggregate Root:<br>
 <td>decimal (18, 0)</td>
 <td>Factor by which the correspondence balance will be multiplied. <code>Required</code> <code>Default(1)</code></td>
 </tr>
+<tr>
+<td><a href="Finance.Accounting.FinancialStatementNodeCorrespondances.html#rowversion">RowVersion</a></td>
+<td>byte[]</td>
+<td></td>
+</tr>
 </tbody>
 </table>
 <h2 id="references">References</h2>
@@ -137,7 +142,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Finance.Accounting.FinancialStatementNodeCorrespondances.html#financialstatementnode">FinancialStatementNode</a></td>
 <td><a href="Finance.Accounting.FinancialStatementNodes.html">FinancialStatementNodes</a></td>
-<td>The <code>FinancialStatementNode</code>(Finance.Accounting.FinancialStatement<br>NodeCorrespondances.md#financialstatementnode) to which this FinancialStatement<br>NodeCorrespondance belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
+<td>The <see cref="Financial<br />StatementNode"></see> to which this FinancialStatement<br>NodeCorrespondance belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 </tbody>
 </table>
@@ -153,6 +158,10 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>1</strong></p>
+<h3 id="rowversion">RowVersion</h3>
+<p><em>Type</em>: <strong>byte[]</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="accountgroup">AccountGroup</h3>
 <p>Main account group determining the correspondances for which the balances are summed. <code>Required</code> <code>Filter(multi eq)</code></p>
@@ -163,7 +172,7 @@ Aggregate Root:<br>
 <p><em>Type</em>: <strong><a href="Finance.Accounting.AccountGroups.html">AccountGroups</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="financialstatementnode">FinancialStatementNode</h3>
-<p>The <code>FinancialStatementNode</code>(Finance.Accounting.FinancialStatementNodeCorrespondances.md#financialstatementnode) to which this FinancialStatementNodeCorrespondance belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
+<p>The <see cref="FinancialStatementNode"></see> to which this FinancialStatementNodeCorrespondance belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="Finance.Accounting.FinancialStatementNodes.html">FinancialStatementNodes</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em><a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a></em>: <strong>True</strong></p>

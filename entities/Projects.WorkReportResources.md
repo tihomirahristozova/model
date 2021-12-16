@@ -28,6 +28,7 @@ Aggregate Root:
 | [ActualEndTime](Projects.WorkReportResources.md#actualendtime) | datetime __nullable__ | Optionally, specifies the actual date and time when the resource usage ended. `Filter(eq;like)` 
 | [ActualStartTime](Projects.WorkReportResources.md#actualstarttime) | datetime __nullable__ | Optionally, specifies the actual date and time when the resource usage began. `Filter(eq;like)` 
 | [Id](Projects.WorkReportResources.md#id) | guid |  
+| [RowVersion](Projects.WorkReportResources.md#rowversion) | byte[] |  
 | [TotalResourceUsageHours](Projects.WorkReportResources.md#totalresourceusagehours) | decimal (18, 2) | The total number of resource-hours, which are actually consumed. Equals to the duration of the task, multiplied by the average resource usage. `Required` `Default(0)` `Filter(eq;like)` 
 
 ## References
@@ -37,7 +38,7 @@ Aggregate Root:
 | [ProjectTask](Projects.WorkReportResources.md#projecttask) | [ProjectTasks](Projects.ProjectTasks.md) | The project task for which the work is reported. `Required` `Filter(multi eq)` |
 | [Resource](Projects.WorkReportResources.md#resource) | [Resources](General.Resources.Resources.md) | The resource, for which usage is reported. `Required` `Filter(multi eq)` |
 | [ResourceInstance](Projects.WorkReportResources.md#resourceinstance) | [ResourceInstances](General.Resources.ResourceInstances.md) (nullable) | The concrete resource instance used. null when no concrete resource was used or there is no data whether concrete resource was used. `Filter(multi eq;like)` |
-| [WorkReport](Projects.WorkReportResources.md#workreport) | [WorkReports](Projects.WorkReports.md) | The `WorkReport`(Projects.WorkReportResources.md#workreport) to which this WorkReportResource belongs. `Required` `Filter(multi eq)` `Owner` |
+| [WorkReport](Projects.WorkReportResources.md#workreport) | [WorkReports](Projects.WorkReports.md) | The <see cref="WorkReport"/> to which this WorkReportResource belongs. `Required` `Filter(multi eq)` `Owner` |
 
 
 ## Attribute Details
@@ -64,6 +65,12 @@ _Type_: **guid**
 _Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 ### TotalResourceUsageHours
 
@@ -107,7 +114,7 @@ _Front-End Recalc Expressions:_
 `IIF( ( ( obj.ResourceInstance != null) AndAlso ( obj.ResourceInstance.Resource != obj.Resource)), null, obj.ResourceInstance)`
 ### WorkReport
 
-The `WorkReport`(Projects.WorkReportResources.md#workreport) to which this WorkReportResource belongs. `Required` `Filter(multi eq)` `Owner`
+The <see cref="WorkReport"/> to which this WorkReportResource belongs. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[WorkReports](Projects.WorkReports.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

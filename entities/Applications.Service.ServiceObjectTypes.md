@@ -25,6 +25,7 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [Id](Applications.Service.ServiceObjectTypes.md#id) | guid |  
 | [Name](Applications.Service.ServiceObjectTypes.md#name) | string (254) | The name of this ServiceObjectType. `Required` `Filter(eq;like)` 
+| [RowVersion](Applications.Service.ServiceObjectTypes.md#rowversion) | byte[] |  
 
 
 ## Attribute Details
@@ -44,6 +45,12 @@ _Type_: **string (254)**
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 
 

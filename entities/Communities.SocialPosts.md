@@ -27,6 +27,7 @@ Aggregate Tree
 | [Id](Communities.SocialPosts.md#id) | guid |  
 | [LastInteractionTimeUtc](Communities.SocialPosts.md#lastinteractiontimeutc) | datetime | The server time (in UTC) of the last interaction with the post, including comments, replies, likes, etc. `Required` 
 | [PostText](Communities.SocialPosts.md#posttext) | string (max) | The post contents in clear text. `Required` 
+| [RowVersion](Communities.SocialPosts.md#rowversion) | byte[] |  
 
 ## References
 
@@ -69,6 +70,12 @@ _Type_: **string (max)**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 
 ## Reference Details

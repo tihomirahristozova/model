@@ -25,6 +25,7 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [CostAllocationModelName](Finance.Cost.AllocationModels.md#costallocationmodelname) | string (254) | Multilanguage allocation model name. `Required` 
 | [Id](Finance.Cost.AllocationModels.md#id) | guid |  
+| [RowVersion](Finance.Cost.AllocationModels.md#rowversion) | byte[] |  
 
 ## References
 
@@ -50,6 +51,12 @@ _Type_: **guid**
 _Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 
 ## Reference Details

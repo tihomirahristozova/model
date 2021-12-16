@@ -28,6 +28,7 @@ Aggregate Root:
 | [Id](Systems.Security.UserProviderLogins.md#id) | guid |  
 | [ProviderKey](Systems.Security.UserProviderLogins.md#providerkey) | string (450) | The key, which the provider provided for logging the user. `Required` `Filter(multi eq)` 
 | [ProviderName](Systems.Security.UserProviderLogins.md#providername) | [ProviderName](Systems.Security.UserProviderLogins.md#providername) | The system name of the authentication provider. It should be already registered for the domain. `Required` `Filter(eq)` `Introduced in version 20.1` 
+| [RowVersion](Systems.Security.UserProviderLogins.md#rowversion) | byte[] |  
 
 ## References
 
@@ -70,6 +71,12 @@ _Allowed Values (Systems.Security.DomainProvidersRepository.ProviderName Enum Me
 | FACEBOOK | FACEBOOK value. Stored as 'FACEBOOK'. <br /> _Database Value:_ 'FACEBOOK' <br /> _Model Value:_ 3 <br /> _Domain API Value:_ 'FACEBOOK' |
 
 _Supported Filters_: **Equals**  
+_Supports Order By_: **False**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
 

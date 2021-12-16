@@ -26,12 +26,13 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](Systems.Workflow.RoleUsers.md#id) | guid |  
+| [RowVersion](Systems.Workflow.RoleUsers.md#rowversion) | byte[] |  
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Role](Systems.Workflow.RoleUsers.md#role) | [Roles](Systems.Workflow.Roles.md) | The `Role`(Systems.Workflow.RoleUsers.md#role) to which this RoleUser belongs. `Required` `Filter(multi eq)` `Owner` |
+| [Role](Systems.Workflow.RoleUsers.md#role) | [Roles](Systems.Workflow.Roles.md) | The <see cref="Role"/> to which this RoleUser belongs. `Required` `Filter(multi eq)` `Owner` |
 | [User](Systems.Workflow.RoleUsers.md#user) | [Users](Systems.Security.Users.md) | The user, which plays the role. `Required` `Filter(multi eq)` |
 
 
@@ -44,12 +45,18 @@ _Indexed_: **True**
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+
 
 ## Reference Details
 
 ### Role
 
-The `Role`(Systems.Workflow.RoleUsers.md#role) to which this RoleUser belongs. `Required` `Filter(multi eq)` `Owner`
+The <see cref="Role"/> to which this RoleUser belongs. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[Roles](Systems.Workflow.Roles.md)**  
 _Indexed_: **True**  

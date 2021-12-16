@@ -27,6 +27,7 @@ Aggregate Tree
 | [FullPath](Crm.Distribution.SalesPersonGroups.md#fullpath) | string (4000) __nullable__ | Full path to this item in the form /root/child1/../leaf/. `Filter(eq;like)` `ReadOnly` 
 | [Id](Crm.Distribution.SalesPersonGroups.md#id) | guid |  
 | [Name](Crm.Distribution.SalesPersonGroups.md#name) | string (128) | The name of this SalesPersonGroup. `Required` `Filter(eq;like)` 
+| [RowVersion](Crm.Distribution.SalesPersonGroups.md#rowversion) | byte[] |  
 
 ## References
 
@@ -72,6 +73,12 @@ _Type_: **string (128)**
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **128**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 
 ## Reference Details

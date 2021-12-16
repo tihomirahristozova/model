@@ -28,6 +28,7 @@ Aggregate Tree
 | [Id](Production.Resources.FunctionGroups.md#id) | guid |  
 | [Name](Production.Resources.FunctionGroups.md#name) | string (64) | The name of this FunctionGroup. `Required` `Filter(like)` 
 | [Parent](Production.Resources.FunctionGroups.md#parent) | string (254) | The path of the parent item. `Required` `Default("/")` `Filter(eq;like)` `ORD` 
+| [RowVersion](Production.Resources.FunctionGroups.md#rowversion) | byte[] |  
 
 ## Child Collections
 
@@ -74,6 +75,12 @@ _Supported Filters_: **Equals, Like**
 _Supports Order By_: **True**  
 _Maximum Length_: **254**  
 _Default Value_: **/**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 
 

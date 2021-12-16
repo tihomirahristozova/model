@@ -25,6 +25,7 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [CashReportingVATCode](Finance.Vat.BGVATDocumentTypeVATCodes.md#cashreportingvatcode) | [CashReportingVATCode](Finance.Vat.BGVATDocumentTypeVATCodes.md#cashreportingvatcode) __nullable__ | VAT code, which will be used when Cash Reporting mode is used for the entry. Allowed values are the same as for VAT Code. 
 | [Id](Finance.Vat.BGVATDocumentTypeVATCodes.md#id) | guid |  
+| [RowVersion](Finance.Vat.BGVATDocumentTypeVATCodes.md#rowversion) | byte[] |  
 | [VATCode](Finance.Vat.BGVATDocumentTypeVATCodes.md#vatcode) | [VATCode](Finance.Vat.BGVATDocumentTypeVATCodes.md#vatcode) __nullable__ | VAT code to use when creating VAT export files for the specified Document Type. Allowed values is government-regulated list of values. 
 
 ## References
@@ -72,6 +73,12 @@ _Type_: **guid**
 _Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 ### VATCode
 

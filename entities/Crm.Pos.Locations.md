@@ -26,6 +26,7 @@ Aggregate Tree
 | [Id](Crm.Pos.Locations.md#id) | guid |  
 | [IsActive](Crm.Pos.Locations.md#isactive) | boolean __nullable__ | Indicates whether the POS location is currently active and can be chosen in drop-downs, etc. `Default(true)` `Filter(eq)` 
 | [PosLocationCode](Crm.Pos.Locations.md#poslocationcode) | string (16) | Unique (with the enterprise company) code of this POS location. `Required` `Filter(multi eq;like)` 
+| [RowVersion](Crm.Pos.Locations.md#rowversion) | byte[] |  
 
 ## References
 
@@ -61,6 +62,12 @@ _Type_: **string (16)**
 _Supported Filters_: **Equals, Like, EqualsIn**  
 _Supports Order By_: **False**  
 _Maximum Length_: **16**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 
 ## Reference Details

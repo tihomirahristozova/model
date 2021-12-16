@@ -33,7 +33,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CostDistribution](Finance.Cost.DistributionOutputs.md#costdistribution) | [Distributions](Finance.Cost.Distributions.md) | The `Distribution`(Finance.Cost.Distributions.md) to which this DistributionOutput belongs. `Required` `Filter(multi eq)` `Owner` |
+| [CostDistribution](Finance.Cost.DistributionOutputs.md#costdistribution) | [Distributions](Finance.Cost.Distributions.md) | The <see cref="Distribution"/> to which this DistributionOutput belongs. `Required` `Filter(multi eq)` `Owner` |
 | [StoreTransactionLine](Finance.Cost.DistributionOutputs.md#storetransactionline) | [StoreTransactionLines](Logistics.Inventory.StoreTransactionLines.md) | The store transaction line, for which costs will be distributed. `Required` `Filter(multi eq)` |
 
 
@@ -73,7 +73,7 @@ _Default Value_: **1**
 
 ### CostDistribution
 
-The `Distribution`(Finance.Cost.Distributions.md) to which this DistributionOutput belongs. `Required` `Filter(multi eq)` `Owner`
+The <see cref="Distribution"/> to which this DistributionOutput belongs. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[Distributions](Finance.Cost.Distributions.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

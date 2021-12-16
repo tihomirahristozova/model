@@ -48,6 +48,7 @@ Aggregate Tree
 | [DocumentDate](Production.ShopFloor.WorkOrders.md#documentdate) | date | The date on which the document was issued. `Required` `Default(Today)` `Filter(eq;ge;le)` `ORD` (Inherited from [Documents](General.Documents.md)) 
 | [DocumentNo](Production.ShopFloor.WorkOrders.md#documentno) | string (20) | Document number, unique within Document_Type_Id. `Required` `Filter(eq;like)` `ORD` (Inherited from [Documents](General.Documents.md)) 
 | [DocumentNotes](Production.ShopFloor.WorkOrders.md#documentnotes) | string (max) __nullable__ | Notes for this Document. (Inherited from [Documents](General.Documents.md)) 
+| [DocumentRowVersion](Production.ShopFloor.WorkOrders.md#documentrowversion) | byte[] |  
 | [DocumentVersion](Production.ShopFloor.WorkOrders.md#documentversion) | int32 | Consecutive version number, starting with 1. Each update produces a new version of the document. `Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [DueDate](Production.ShopFloor.WorkOrders.md#duedate) | datetime __nullable__ | The final due date, when the production should be ready. 
 | [DurationHour](Production.ShopFloor.WorkOrders.md#durationhour) | decimal (10, 0) | The duration of all operations in the protocol either planned (for planned orders) or actual (for completed orders). `Required` `Default(0)` 
@@ -63,6 +64,7 @@ Aggregate Tree
 | [ReferenceDocumentNo](Production.ShopFloor.WorkOrders.md#referencedocumentno) | string (20) __nullable__ | The number of the document (issued by the other party), which was the reason for the creation of the current document. The numebr should be unique within the party documents. `Filter(eq;like)` (Inherited from [Documents](General.Documents.md)) 
 | [ReleaseDate](Production.ShopFloor.WorkOrders.md#releasedate) | datetime __nullable__ | Scheduled release date. Specifies the date when the order is planned/released to production. null means that still there is no plan for releasing the order. 
 | [ReleaseTime](Production.ShopFloor.WorkOrders.md#releasetime) | datetime __nullable__ | Date and time when the document was released (State set to Released). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
+| [RowVersion](Production.ShopFloor.WorkOrders.md#rowversion) | byte[] |  
 | [State](Production.ShopFloor.WorkOrders.md#state) | [DocumentState](Production.ShopFloor.WorkOrders.md#state) | The current system state of the document. Allowed values: 0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed. `Required` `Default(0)` `Filter(multi eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [Void](Production.ShopFloor.WorkOrders.md#void) | boolean | True if the document is null and void. `Required` `Default(false)` `Filter(eq)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [VoidReason](Production.ShopFloor.WorkOrders.md#voidreason) | string (254) __nullable__ | Reason for voiding the document, entered by the user. `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
@@ -204,6 +206,12 @@ _Type_: **string (max) __nullable__**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
+
+### DocumentRowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 ### DocumentVersion
 
@@ -354,6 +362,12 @@ Date and time when the document was released (State set to Released). `Filter(ge
 
 _Type_: **datetime __nullable__**  
 _Supported Filters_: **GreaterThanOrLessThan**  
+_Supports Order By_: **False**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
 ### State

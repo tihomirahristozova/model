@@ -117,6 +117,11 @@ Aggregate Root:<br>
 <td>guid</td>
 <td></td>
 </tr>
+<tr>
+<td><a href="Applications.Rental.AssetTypeProperties.html#rowversion">RowVersion</a></td>
+<td>byte[]</td>
+<td></td>
+</tr>
 </tbody>
 </table>
 <h2 id="references">References</h2>
@@ -137,7 +142,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Applications.Rental.AssetTypeProperties.html#rentalassettype">RentalAssetType</a></td>
 <td><a href="Applications.Rental.AssetTypes.html">AssetTypes</a></td>
-<td>The <code>AssetType</code>(Applications.Rental.AssetTypes.md) to which this AssetTypeProperty belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
+<td>The <see cref="AssetType"></see> to which this AssetTypeProperty belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 </tbody>
 </table>
@@ -157,13 +162,17 @@ Aggregate Root:<br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
+<h3 id="rowversion">RowVersion</h3>
+<p><em>Type</em>: <strong>byte[]</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="property">Property</h3>
 <p>The user-defined property, which is required for assets of the specified type. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.CustomProperties.html">CustomProperties</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="rentalassettype">RentalAssetType</h3>
-<p>The <code>AssetType</code>(Applications.Rental.AssetTypes.md) to which this AssetTypeProperty belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
+<p>The <see cref="AssetType"></see> to which this AssetTypeProperty belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="Applications.Rental.AssetTypes.html">AssetTypes</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em><a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a></em>: <strong>True</strong></p>

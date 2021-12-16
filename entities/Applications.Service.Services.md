@@ -28,6 +28,7 @@ Aggregate Tree
 | [Id](Applications.Service.Services.md#id) | guid |  
 | [IsActive](Applications.Service.Services.md#isactive) | boolean | Indicates wheather this service is currently used. `Required` `Default(true)` `Filter(eq)` 
 | [Name](Applications.Service.Services.md#name) | string (254) | The name of the service. `Required` `Filter(eq;like)` 
+| [RowVersion](Applications.Service.Services.md#rowversion) | byte[] |  
 
 ## References
 
@@ -77,6 +78,12 @@ _Type_: **string (254)**
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 
 ## Reference Details

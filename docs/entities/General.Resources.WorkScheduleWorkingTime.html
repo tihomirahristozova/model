@@ -118,6 +118,11 @@ Aggregate Root:<br>
 <td></td>
 </tr>
 <tr>
+<td><a href="General.Resources.WorkScheduleWorkingTime.html#rowversion">RowVersion</a></td>
+<td>byte[]</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="General.Resources.WorkScheduleWorkingTime.html#starttime">StartTime</a></td>
 <td>time</td>
 <td>Start of working time period on the day, specified by Day_No. <code>Required</code></td>
@@ -137,7 +142,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.Resources.WorkScheduleWorkingTime.html#workschedule">WorkSchedule</a></td>
 <td><a href="General.Resources.WorkSchedules.html">WorkSchedules</a></td>
-<td>The <code>WorkSchedule</code>(General.Resources.WorkScheduleWorkingTime.md#workschedule) to which this WorkScheduleWorkingTime belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
+<td>The <see cref="WorkSchedule"></see> to which this WorkScheduleWorkingTime belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 </tbody>
 </table>
@@ -157,6 +162,10 @@ Aggregate Root:<br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
+<h3 id="rowversion">RowVersion</h3>
+<p><em>Type</em>: <strong>byte[]</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="starttime">StartTime</h3>
 <p>Start of working time period on the day, specified by Day_No. <code>Required</code></p>
 <p><em>Type</em>: <strong>time</strong><br>
@@ -164,7 +173,7 @@ Aggregate Root:<br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="workschedule">WorkSchedule</h3>
-<p>The <code>WorkSchedule</code>(General.Resources.WorkScheduleWorkingTime.md#workschedule) to which this WorkScheduleWorkingTime belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
+<p>The <see cref="WorkSchedule"></see> to which this WorkScheduleWorkingTime belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="General.Resources.WorkSchedules.html">WorkSchedules</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>

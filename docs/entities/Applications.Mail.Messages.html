@@ -143,6 +143,11 @@ Aggregate Root:<br>
 <td>Date and time when the message was received. <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
+<td><a href="Applications.Mail.Messages.html#rowversion">RowVersion</a></td>
+<td>byte[]</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="Applications.Mail.Messages.html#sentdatetime">SentDateTime</a></td>
 <td>datetime <strong>nullable</strong></td>
 <td>Date and time when the message was sent. <code>Filter(ge;le)</code></td>
@@ -177,7 +182,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Applications.Mail.Messages.html#mailboxfolder">MailBoxFolder</a></td>
 <td><a href="Applications.Mail.BoxFolders.html">BoxFolders</a></td>
-<td>The <code>BoxFolder</code>(Applications.Mail.BoxFolders.md) to which this Message belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
+<td>The <see cref="BoxFolder"></see> to which this Message belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Mail.Messages.html#relatedtoparty">RelatedToParty</a></td>
@@ -250,6 +255,10 @@ Aggregate Root:<br>
 <p><em>Type</em>: <strong>datetime <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="rowversion">RowVersion</h3>
+<p><em>Type</em>: <strong>byte[]</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="sentdatetime">SentDateTime</h3>
 <p>Date and time when the message was sent. <code>Filter(ge;le)</code></p>
 <p><em>Type</em>: <strong>datetime <strong>nullable</strong></strong><br>
@@ -276,7 +285,7 @@ Aggregate Root:<br>
 <em>Maximum Length</em>: <strong>2048</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="mailboxfolder">MailBoxFolder</h3>
-<p>The <code>BoxFolder</code>(Applications.Mail.BoxFolders.md) to which this Message belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
+<p>The <see cref="BoxFolder"></see> to which this Message belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="Applications.Mail.BoxFolders.html">BoxFolders</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>

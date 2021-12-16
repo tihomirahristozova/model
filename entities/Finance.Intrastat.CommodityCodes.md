@@ -28,6 +28,7 @@ Aggregate Tree
 | [ExciseAlcoholicStrength](Finance.Intrastat.CommodityCodes.md#excisealcoholicstrength) | decimal (5, 2) __nullable__ | Specifies the alcoholic strength for excise products (if applicable). `Introduced in version 21.1.3.44` 
 | [ExciseProductCode](Finance.Intrastat.CommodityCodes.md#exciseproductcode) | string (20) __nullable__ | The code of the product for excise purposes (if applicable). A.k.a. APCode. `Introduced in version 21.1.3.44` 
 | [Id](Finance.Intrastat.CommodityCodes.md#id) | guid |  
+| [RowVersion](Finance.Intrastat.CommodityCodes.md#rowversion) | byte[] |  
 | [SupplementaryUnit](Finance.Intrastat.CommodityCodes.md#supplementaryunit) | string (16) | If not null, the related product should have additional measurement unit with the same code as specified in this field. The additional unit will be used for the purposes of the Intrastat declarations. `Required` 
 | [ValidFrom](Finance.Intrastat.CommodityCodes.md#validfrom) | date __nullable__ | The starting date of validity of this code. `Filter(ge;le)` 
 | [ValidTo](Finance.Intrastat.CommodityCodes.md#validto) | date __nullable__ | The ending date of validity of this code. `Filter(ge;le)` 
@@ -76,6 +77,12 @@ _Type_: **guid**
 _Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 ### SupplementaryUnit
 

@@ -26,6 +26,7 @@ Aggregate Tree
 | [FromDocTypeId](General.LinkTypes.md#fromdoctypeid) | guid __nullable__ | From which type of documents the link originates. null means that it might originate from any document type. `Filter(multi eq)` 
 | [Id](General.LinkTypes.md#id) | guid |  
 | [Name](General.LinkTypes.md#name) | string (254) | Obsolete. Not used. `Required` 
+| [RowVersion](General.LinkTypes.md#rowversion) | byte[] |  
 | [ToDocTypeId](General.LinkTypes.md#todoctypeid) | guid __nullable__ | To what type of documents the link points. null means that it might point to any document type. `Filter(multi eq)` 
 
 
@@ -52,6 +53,12 @@ _Type_: **string (254)**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 ### ToDocTypeId
 

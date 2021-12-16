@@ -126,6 +126,11 @@ Default Search Members:<br>
 <td><a href="General.Resources.WorkSchedules.html#recurrencetype">RecurrenceType</a></td>
 <td>D=recurring each X days; W=recurring each week; M=recurring each month. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
+<tr>
+<td><a href="General.Resources.WorkSchedules.html#rowversion">RowVersion</a></td>
+<td>byte[]</td>
+<td></td>
+</tr>
 </tbody>
 </table>
 <h2 id="child-collections">Child Collections</h2>
@@ -190,6 +195,10 @@ Allowed values for the <code>RecurrenceType</code>(General.Resources.WorkSchedul
 </tbody>
 </table>
 <p><em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="rowversion">RowVersion</h3>
+<p><em>Type</em>: <strong>byte[]</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>None</p>

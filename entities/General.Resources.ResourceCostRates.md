@@ -30,6 +30,7 @@ Aggregate Root:
 | [Notes](General.Resources.ResourceCostRates.md#notes) | string (max) __nullable__ | Notes for this ResourceCostRate. 
 | [OvertimeRatePerHour](General.Resources.ResourceCostRates.md#overtimerateperhour) | [Amount (12, 4)](../data-types.md#amount) __nullable__ | The overtime cost of the resource per hour in the resources costing currency. The overtime rate specifies the cost of the resource, when it is used outside the normal working schedule. null means that there is no special overtime rate and the standard rate should be applied. `Currency: Resource.CostingCurrency` `Filter(eq;like)` 
 | [PerUseCost](General.Resources.ResourceCostRates.md#perusecost) | [Amount (12, 2)](../data-types.md#amount) | One-time cost for each usage of the resource in the resources costing currency. `Currency: Resource.CostingCurrency` `Required` `Default(0)` `Filter(eq;like)` 
+| [RowVersion](General.Resources.ResourceCostRates.md#rowversion) | byte[] |  
 | [StandardRatePerHour](General.Resources.ResourceCostRates.md#standardrateperhour) | [Amount (12, 4)](../data-types.md#amount) | The standard cost per hour of the resource in the resources costing currency. The standard cost is applied for resource usage during the normal working hours. `Currency: Resource.CostingCurrency` `Required` `Filter(eq;like)` 
 
 ## References
@@ -82,6 +83,12 @@ _Type_: **[Amount (12, 2)](../data-types.md#amount)**
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 ### StandardRatePerHour
 

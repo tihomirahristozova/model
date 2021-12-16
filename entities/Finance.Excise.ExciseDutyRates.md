@@ -26,6 +26,7 @@ Aggregate Tree
 | [ExciseDutyRateField](Finance.Excise.ExciseDutyRates.md#excisedutyratefield) | decimal (10, 6) | The rate which should be applied for the specified product and purpose. `Required` `Default(0)` `Filter(eq;ge;le)` 
 | [Id](Finance.Excise.ExciseDutyRates.md#id) | guid |  
 | [Notes](Finance.Excise.ExciseDutyRates.md#notes) | string (max) __nullable__ | Notes for this ExciseDutyRate. 
+| [RowVersion](Finance.Excise.ExciseDutyRates.md#rowversion) | byte[] |  
 
 ## References
 
@@ -62,6 +63,12 @@ _Type_: **string (max) __nullable__**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 
 ## Reference Details

@@ -178,6 +178,11 @@ Aggregate Root:<br>
 <td>The equivalent of Quantity in the base measurement unit of the Product. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code></td>
 </tr>
 <tr>
+<td><a href="Crm.Invoicing.InvoiceLines.html#rowversion">RowVersion</a></td>
+<td>byte[]</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="Crm.Invoicing.InvoiceLines.html#salesorderamount">SalesOrderAmount</a></td>
 <td>decimal (14, 2) <strong>nullable</strong></td>
 <td>Specifies what portion of the amount of the sales order is invoiced with this line. The amount is calculated with respect to the trade conditions (prices, discounts, etc.) from the sales order. Can be different from the total amount of the line when the trade conditions from the sales order have changed before invoicing.</td>
@@ -207,7 +212,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Crm.Invoicing.InvoiceLines.html#document">Document</a></td>
 <td><a href="Crm.Invoicing.Invoices.html">Invoices</a></td>
-<td>The <code>Invoice</code>(Crm.Invoicing.InvoiceLines.md#invoice) to which this InvoiceLine belongs. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>The <see cref="Invoice"></see> to which this InvoiceLine belongs. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Invoicing.InvoiceLines.html#intrastattransportcountry">IntrastatTransportCountry</a></td>
@@ -217,7 +222,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Crm.Invoicing.InvoiceLines.html#invoice">Invoice</a></td>
 <td><a href="Crm.Invoicing.Invoices.html">Invoices</a></td>
-<td>The <code>Invoice</code>(Crm.Invoicing.InvoiceLines.md#invoice) to which this InvoiceLine belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
+<td>The <see cref="Invoice"></see> to which this InvoiceLine belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Invoicing.InvoiceLines.html#invoiceorderline">InvoiceOrderLine</a></td>
@@ -596,6 +601,10 @@ Generic enum type for TransportMode properties<br>
 <code>IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.QuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))</code></p>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.QuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))</code></p>
+<h3 id="rowversion">RowVersion</h3>
+<p><em>Type</em>: <strong>byte[]</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="salesorderamount">SalesOrderAmount</h3>
 <p>Specifies what portion of the amount of the sales order is invoiced with this line. The amount is calculated with respect to the trade conditions (prices, discounts, etc.) from the sales order. Can be different from the total amount of the line when the trade conditions from the sales order have changed before invoicing.</p>
 <p><em>Type</em>: <strong>decimal (14, 2) <strong>nullable</strong></strong><br>
@@ -618,7 +627,7 @@ Generic enum type for TransportMode properties<br>
 <em>Default Value</em>: <strong>Constant</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="document">Document</h3>
-<p>The <code>Invoice</code>(Crm.Invoicing.InvoiceLines.md#invoice) to which this InvoiceLine belongs. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>The <see cref="Invoice"></see> to which this InvoiceLine belongs. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Crm.Invoicing.Invoices.html">Invoices</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
@@ -631,7 +640,7 @@ Generic enum type for TransportMode properties<br>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>obj.Invoice.IntrastatTransportCountry</code></p>
 <h3 id="invoice">Invoice</h3>
-<p>The <code>Invoice</code>(Crm.Invoicing.InvoiceLines.md#invoice) to which this InvoiceLine belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
+<p>The <see cref="Invoice"></see> to which this InvoiceLine belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="Crm.Invoicing.Invoices.html">Invoices</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>

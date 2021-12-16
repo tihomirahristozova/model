@@ -28,6 +28,7 @@ Aggregate Root:
 | [FromDate](Applications.AssetManagement.ManagedAssetLocations.md#fromdate) | date | The date on which the asset is assigned to the location. `Required` `Default(Now)` 
 | [Id](Applications.AssetManagement.ManagedAssetLocations.md#id) | guid |  
 | [Notes](Applications.AssetManagement.ManagedAssetLocations.md#notes) | string (max) __nullable__ | Might contain additional notes for the exact location of the asset within the enterprise company location. 
+| [RowVersion](Applications.AssetManagement.ManagedAssetLocations.md#rowversion) | byte[] |  
 
 ## References
 
@@ -64,6 +65,12 @@ _Type_: **string (max) __nullable__**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 
 ## Reference Details

@@ -122,6 +122,11 @@ Aggregate Root:<br>
 <td>int32</td>
 <td>Indicates the nature of the current operation: 1 - the operation is applied, 0 - no change, -1 - the operation is cancelled. <code>Required</code> <code>Default(0)</code></td>
 </tr>
+<tr>
+<td><a href="Finance.Assets.AssetOrderLines.html#rowversion">RowVersion</a></td>
+<td>byte[]</td>
+<td></td>
+</tr>
 </tbody>
 </table>
 <h2 id="references">References</h2>
@@ -142,7 +147,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Finance.Assets.AssetOrderLines.html#assetorder">AssetOrder</a></td>
 <td><a href="Finance.Assets.AssetOrders.html">AssetOrders</a></td>
-<td>The <code>AssetOrder</code>(Finance.Assets.AssetOrderLines.md#assetorder) to which this AssetOrderLine belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
+<td>The <see cref="AssetOrder"></see> to which this AssetOrderLine belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Assets.AssetOrderLines.html#assetvaluecurrency">AssetValueCurrency</a></td>
@@ -152,7 +157,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Finance.Assets.AssetOrderLines.html#document">Document</a></td>
 <td><a href="Finance.Assets.AssetOrders.html">AssetOrders</a></td>
-<td>The <code>AssetOrder</code>(Finance.Assets.AssetOrderLines.md#assetorder) to which this AssetOrderLine belongs. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>The <see cref="AssetOrder"></see> to which this AssetOrderLine belongs. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Assets.AssetOrderLines.html#parentdocument">ParentDocument</a></td>
@@ -184,13 +189,17 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>0</strong></p>
+<h3 id="rowversion">RowVersion</h3>
+<p><em>Type</em>: <strong>byte[]</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="asset">Asset</h3>
 <p>The asset that is acquired or retired. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Finance.Assets.Assets.html">Assets</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="assetorder">AssetOrder</h3>
-<p>The <code>AssetOrder</code>(Finance.Assets.AssetOrderLines.md#assetorder) to which this AssetOrderLine belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
+<p>The <see cref="AssetOrder"></see> to which this AssetOrderLine belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="Finance.Assets.AssetOrders.html">AssetOrders</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
@@ -200,7 +209,7 @@ Aggregate Root:<br>
 <p><em>Type</em>: <strong><a href="General.Currencies.html">Currencies</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="document">Document</h3>
-<p>The <code>AssetOrder</code>(Finance.Assets.AssetOrderLines.md#assetorder) to which this AssetOrderLine belongs. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>The <see cref="AssetOrder"></see> to which this AssetOrderLine belongs. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Finance.Assets.AssetOrders.html">AssetOrders</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>

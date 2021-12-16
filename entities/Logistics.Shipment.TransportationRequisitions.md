@@ -44,6 +44,7 @@ Aggregate Tree
 | [DocumentDate](Logistics.Shipment.TransportationRequisitions.md#documentdate) | date | The date on which the document was issued. `Required` `Default(Today)` `Filter(eq;ge;le)` `ORD` (Inherited from [Documents](General.Documents.md)) 
 | [DocumentNo](Logistics.Shipment.TransportationRequisitions.md#documentno) | string (20) | Document number, unique within Document_Type_Id. `Required` `Filter(eq;like)` `ORD` (Inherited from [Documents](General.Documents.md)) 
 | [DocumentNotes](Logistics.Shipment.TransportationRequisitions.md#documentnotes) | string (max) __nullable__ | Notes for this Document. (Inherited from [Documents](General.Documents.md)) 
+| [DocumentRowVersion](Logistics.Shipment.TransportationRequisitions.md#documentrowversion) | byte[] |  
 | [DocumentVersion](Logistics.Shipment.TransportationRequisitions.md#documentversion) | int32 | Consecutive version number, starting with 1. Each update produces a new version of the document. `Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [EntityName](Logistics.Shipment.TransportationRequisitions.md#entityname) | string (64) | The entity name of the document header. `Required` `Filter(eq)` `ORD` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [Id](Logistics.Shipment.TransportationRequisitions.md#id) | guid |  
@@ -57,6 +58,7 @@ Aggregate Tree
 | [RequestedArrivalTime](Logistics.Shipment.TransportationRequisitions.md#requestedarrivaltime) | time __nullable__ | Requested arrival time. null when no specific time is requested. `Filter(ge;le)` 
 | [RequestedDepartureDate](Logistics.Shipment.TransportationRequisitions.md#requesteddeparturedate) | date | Requested date of departure. null when no specific date is requested. `Required` `Filter(ge;le)` 
 | [RequestedDepartureTime](Logistics.Shipment.TransportationRequisitions.md#requesteddeparturetime) | time __nullable__ | Requested time of departure. null when no specific time is requested. `Filter(ge;le)` 
+| [RowVersion](Logistics.Shipment.TransportationRequisitions.md#rowversion) | byte[] |  
 | [State](Logistics.Shipment.TransportationRequisitions.md#state) | [DocumentState](Logistics.Shipment.TransportationRequisitions.md#state) | The current system state of the document. Allowed values: 0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed. `Required` `Default(0)` `Filter(multi eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [Void](Logistics.Shipment.TransportationRequisitions.md#void) | boolean | True if the document is null and void. `Required` `Default(false)` `Filter(eq)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [VoidReason](Logistics.Shipment.TransportationRequisitions.md#voidreason) | string (254) __nullable__ | Reason for voiding the document, entered by the user. `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
@@ -191,6 +193,12 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
 
+### DocumentRowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+
 ### DocumentVersion
 
 Consecutive version number, starting with 1. Each update produces a new version of the document. `Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md))
@@ -307,6 +315,12 @@ Requested time of departure. null when no specific time is requested. `Filter(ge
 
 _Type_: **time __nullable__**  
 _Supported Filters_: **GreaterThanOrLessThan**  
+_Supports Order By_: **False**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
 ### State

@@ -27,6 +27,7 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [ApplicationName](Systems.Core.ObjectChangesets.md#applicationname) | string (max) __nullable__ | The application which requested the change. null when it is unknown. `Filter(eq)` 
 | [Id](Systems.Core.ObjectChangesets.md#id) | guid |  
+| [RowVersion](Systems.Core.ObjectChangesets.md#rowversion) | byte[] |  
 | [ServerVersion](Systems.Core.ObjectChangesets.md#serverversion) | string (16) | The version of the application server at the time of the change. `Required` 
 | [TimeUtc](Systems.Core.ObjectChangesets.md#timeutc) | datetime | Date and time (in Utc) when the changeset was processed by the server. `Required` `Default(NowUtc)` `Filter(eq;ge;le)` `ORD` 
 
@@ -60,6 +61,12 @@ _Type_: **guid**
 _Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 ### ServerVersion
 

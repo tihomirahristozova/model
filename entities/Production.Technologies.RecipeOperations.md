@@ -31,6 +31,7 @@ Aggregate Root:
 | [MoveTimeMinutes](Production.Technologies.RecipeOperations.md#movetimeminutes) | int32 | Time to move the lot to the next operation in minutes. `Required` `Default(0)` 
 | [Notes](Production.Technologies.RecipeOperations.md#notes) | string (254) __nullable__ | Notes for this RecipeOperation. 
 | [OperationDescription](Production.Technologies.RecipeOperations.md#operationdescription) | string (max) __nullable__ | The description of the operation. 
+| [RowVersion](Production.Technologies.RecipeOperations.md#rowversion) | byte[] |  
 | [RunTimeMinutes](Production.Technologies.RecipeOperations.md#runtimeminutes) | int32 | Duration of the operation for standard lot of the product. `Required` `Default(0)` 
 | [ScrapRate](Production.Technologies.RecipeOperations.md#scraprate) | decimal (7, 6) | Standard rate of scrap during the operation. `Required` `Default(0)` 
 | [SetupTimeMinutes](Production.Technologies.RecipeOperations.md#setuptimeminutes) | int32 | Time needed to setup the equipment. `Required` `Default(0)` 
@@ -46,7 +47,7 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [Operation](Production.Technologies.RecipeOperations.md#operation) | [Operations](Production.Resources.Operations.md) (nullable) | Standard operation Id. If not null used to load the details. If null the details (times, scrap rates, etc.) must be entered manually. `Filter(multi eq)` |
 | [OperationInstruction](Production.Technologies.RecipeOperations.md#operationinstruction) | [OperationInstructions](Production.Resources.OperationInstructions.md) (nullable) | Link to additional data, containing instructions in external format. `Filter(multi eq)` |
-| [Recipe](Production.Technologies.RecipeOperations.md#recipe) | [Recipes](Production.Technologies.Recipes.md) | The `Recipe`(Production.Technologies.RecipeOperations.md#recipe) to which this RecipeOperation belongs. `Required` `Filter(multi eq)` `Owner` |
+| [Recipe](Production.Technologies.RecipeOperations.md#recipe) | [Recipes](Production.Technologies.Recipes.md) | The <see cref="Recipe"/> to which this RecipeOperation belongs. `Required` `Filter(multi eq)` `Owner` |
 | [UseQuantityUnit](Production.Technologies.RecipeOperations.md#usequantityunit) | [MeasurementUnits](General.MeasurementUnits.md) | The measurement unit of Use_Quantity. `Required` `Filter(multi eq)` |
 | [WorkgroupResource](Production.Technologies.RecipeOperations.md#workgroupresource) | [WorkgroupResources](Production.Resources.WorkgroupResources.md) | The exact workgroup resource that is engaged in the operation. null means that no resource is needed or it will be specfied at a later stage. `Required` `Filter(multi eq)` |
 
@@ -107,6 +108,12 @@ _Type_: **string (max) __nullable__**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 ### RunTimeMinutes
 
@@ -198,7 +205,7 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### Recipe
 
-The `Recipe`(Production.Technologies.RecipeOperations.md#recipe) to which this RecipeOperation belongs. `Required` `Filter(multi eq)` `Owner`
+The <see cref="Recipe"/> to which this RecipeOperation belongs. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[Recipes](Production.Technologies.Recipes.md)**  
 _Indexed_: **True**  

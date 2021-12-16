@@ -30,12 +30,13 @@ Aggregate Root:
 | [LineNo](Finance.Cost.CalculationResults.md#lineno) | int32 | Consecutive number of the line within the calculation. `Required` 
 | [ProjectId](Finance.Cost.CalculationResults.md#projectid) | guid __nullable__ | The Project to which the cost was allocated. When null, the cost was not allocated to any specific Project. `Filter(multi eq)` 
 | [Quantity](Finance.Cost.CalculationResults.md#quantity) | decimal (14, 3) | The quantity of the product. `Required` `Default(0)` 
+| [RowVersion](Finance.Cost.CalculationResults.md#rowversion) | byte[] |  
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Calculation](Finance.Cost.CalculationResults.md#calculation) | [Calculations](Finance.Cost.Calculations.md) | The `Calculation`(Finance.Cost.CalculationResults.md#calculation) to which this CalculationResult belongs. `Required` `Filter(multi eq)` `Owner` |
+| [Calculation](Finance.Cost.CalculationResults.md#calculation) | [Calculations](Finance.Cost.Calculations.md) | The <see cref="Calculation"/> to which this CalculationResult belongs. `Required` `Filter(multi eq)` `Owner` |
 | [Lot](Finance.Cost.CalculationResults.md#lot) | [Lots](Logistics.Inventory.Lots.md) (nullable) | The Lot to which the cost was allocated. When null, the cost was not allocated to any specific Lot. `Filter(multi eq)` |
 | [Product](Finance.Cost.CalculationResults.md#product) | [Products](General.Products.Products.md) | The Product to which the cost was allocated. When null, the cost was not allocated to any specific Product. `Required` `Filter(multi eq)` |
 | [ProfitCenter](Finance.Cost.CalculationResults.md#profitcenter) | [ProfitCenters](Finance.Accounting.ProfitCenters.md) (nullable) | The Profit Center to which the cost was allocated. When null, the cost was not allocated to any specific Profit Center. `Filter(multi eq)` |
@@ -90,12 +91,18 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Default Value_: **0**  
 
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+
 
 ## Reference Details
 
 ### Calculation
 
-The `Calculation`(Finance.Cost.CalculationResults.md#calculation) to which this CalculationResult belongs. `Required` `Filter(multi eq)` `Owner`
+The <see cref="Calculation"/> to which this CalculationResult belongs. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[Calculations](Finance.Cost.Calculations.md)**  
 _Indexed_: **True**  

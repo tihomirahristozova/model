@@ -32,6 +32,7 @@ Aggregate Root:
 | [LineNo](Finance.Payments.PaymentSlipAmounts.md#lineno) | int32 | The number of the line within the payment. `Required` 
 | [PartyName](Finance.Payments.PaymentSlipAmounts.md#partyname) | [MultilanguageString](../data-types.md#multilanguagestring) __nullable__ | The name of the party that is paying or receiving the money. The column can be left blank if there is no party involved (e.g. the amount is fee). 
 | [PaymentDate](Finance.Payments.PaymentSlipAmounts.md#paymentdate) | datetime | The date on which the payment is done. `Required` `Filter(ge;le)` 
+| [RowVersion](Finance.Payments.PaymentSlipAmounts.md#rowversion) | byte[] |  
 | [TotalAmount](Finance.Payments.PaymentSlipAmounts.md#totalamount) | [Amount (18, 2)](../data-types.md#amount) __nullable__ | The total amount payed. The distribution of the amount amongst the payment orders for this party is specified with payment slip lines. If null the total amount is calculated as sum of the amounts in the payment slip lines. `Currency: PaymentSlip.DocumentCurrency` 
 
 ## References
@@ -40,7 +41,7 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [Party](Finance.Payments.PaymentSlipAmounts.md#party) | [Parties](General.Contacts.Parties.md) (nullable) | The party that is paying or receiving the money. The column can be left blank if there is no party involved (e.g. the amount is fee) or the party isn't present in the database yet. `Filter(multi eq)` |
 | [PaymentReason](Finance.Payments.PaymentSlipAmounts.md#paymentreason) | [PaymentReasons](Finance.Payments.PaymentReasons.md) (nullable) | The reason for the payment, as defined in Payment Reasons. `Filter(multi eq)` |
-| [PaymentSlip](Finance.Payments.PaymentSlipAmounts.md#paymentslip) | [PaymentSlips](Finance.Payments.PaymentSlips.md) | The `PaymentSlip`(Finance.Payments.PaymentSlipAmounts.md#paymentslip) to which this PaymentSlipAmount belongs. `Required` `Filter(multi eq)` `Owner` |
+| [PaymentSlip](Finance.Payments.PaymentSlipAmounts.md#paymentslip) | [PaymentSlips](Finance.Payments.PaymentSlips.md) | The <see cref="PaymentSlip"/> to which this PaymentSlipAmount belongs. `Required` `Filter(multi eq)` `Owner` |
 
 ## Child Collections
 
@@ -125,6 +126,12 @@ _Supports Order By_: **False**
 
 _Front-End Recalc Expressions:_  
 `obj.PaymentSlip.DocumentDate`
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+
 ### TotalAmount
 
 The total amount payed. The distribution of the amount amongst the payment orders for this party is specified with payment slip lines. If null the total amount is calculated as sum of the amounts in the payment slip lines. `Currency: PaymentSlip.DocumentCurrency`
@@ -152,7 +159,7 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### PaymentSlip
 
-The `PaymentSlip`(Finance.Payments.PaymentSlipAmounts.md#paymentslip) to which this PaymentSlipAmount belongs. `Required` `Filter(multi eq)` `Owner`
+The <see cref="PaymentSlip"/> to which this PaymentSlipAmount belongs. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[PaymentSlips](Finance.Payments.PaymentSlips.md)**  
 _Indexed_: **True**  

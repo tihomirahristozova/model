@@ -128,6 +128,11 @@ Aggregate Root:<br>
 <td>Input unit amount for the calculation of the current amount. <code>Currency: GetInputAmountCurrency()</code> <code>Filter(eq;ge;le)</code></td>
 </tr>
 <tr>
+<td><a href="General.DocumentAmounts.html#rowversion">RowVersion</a></td>
+<td>byte[]</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="General.DocumentAmounts.html#totaldistributedamount">TotalDistributedAmount</a></td>
 <td><a href="../data-types.html#amount">Amount (14, 2)</a> <strong>nullable</strong></td>
 <td>The total amount (in documents currency) which was distributed to the documents lines. Null if the amount is not distributed yet. <code>Currency: LogisticsDocument.DocumentCurrency</code> <code>ReadOnly</code></td>
@@ -152,7 +157,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.DocumentAmounts.html#document">Document</a></td>
 <td><a href="General.Documents.html">Documents</a></td>
-<td>The <code>Document</code>(General.DocumentAmounts.md#document) to which this DocumentAmount belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
+<td>The <see cref="Document"></see> to which this DocumentAmount belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 <tr>
 <td><a href="General.DocumentAmounts.html#documentamounttype">DocumentAmountType</a></td>
@@ -222,6 +227,10 @@ Aggregate Root:<br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>IIF( obj.DocumentAmountType.UnitAmountInputAllowed, obj.InputUnitAmount, null)</code></p>
+<h3 id="rowversion">RowVersion</h3>
+<p><em>Type</em>: <strong>byte[]</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="totaldistributedamount">TotalDistributedAmount</h3>
 <p>The total amount (in documents currency) which was distributed to the documents lines. Null if the amount is not distributed yet. <code>Currency: LogisticsDocument.DocumentCurrency</code> <code>ReadOnly</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount (14, 2)</a> <strong>nullable</strong></strong><br>
@@ -235,7 +244,7 @@ Aggregate Root:<br>
 <em>Default Value</em>: <strong>True</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="document">Document</h3>
-<p>The <code>Document</code>(General.DocumentAmounts.md#document) to which this DocumentAmount belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
+<p>The <see cref="Document"></see> to which this DocumentAmount belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="General.Documents.html">Documents</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>

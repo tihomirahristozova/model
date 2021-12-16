@@ -37,6 +37,7 @@ Aggregate Root:
 | [PersistLot](Logistics.Inventory.StoreOrderLines.md#persistlot) | boolean | If checked specifies that the lot in the line cannot be changed in the sub-documents created by the current document. `Required` `Default(false)` `Filter(eq)` 
 | [Quantity](Logistics.Inventory.StoreOrderLines.md#quantity) | [Quantity (18, 3)](../data-types.md#quantity) | Quantity ordered for receipt/issue. `Unit: QuantityUnit` `Required` `Default(0)` 
 | [QuantityBase](Logistics.Inventory.StoreOrderLines.md#quantitybase) | [Quantity (18, 3)](../data-types.md#quantity) | Quantity in the base (default) measurement unit of the Item (calculated at the time of last update of the current store order line). Should be updated in parallel with each Quantity update. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Default(0)` `ReadOnly` 
+| [RowVersion](Logistics.Inventory.StoreOrderLines.md#rowversion) | byte[] |  
 | [StandardQuantityBase](Logistics.Inventory.StoreOrderLines.md#standardquantitybase) | [Quantity (18, 3)](../data-types.md#quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` `Introduced in version 18.2` 
 | [TransactionTimestamp](Logistics.Inventory.StoreOrderLines.md#transactiontimestamp) | datetime __nullable__ | Exact time when the transaction for this store order line changes the cost of the product. `ReadOnly` 
 | [UnitCost](Logistics.Inventory.StoreOrderLines.md#unitcost) | [Amount (14, 5)](../data-types.md#amount) __nullable__ | Cost for 1 unit of measure in the currency of the document. `Currency: StoreOrder.DocumentCurrency` 
@@ -45,7 +46,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Document](Logistics.Inventory.StoreOrderLines.md#document) | [StoreOrders](Logistics.Inventory.StoreOrders.md) | The `StoreOrder`(Logistics.Inventory.StoreOrderLines.md#storeorder) to which this StoreOrderLine belongs. `Required` `Filter(multi eq)` |
+| [Document](Logistics.Inventory.StoreOrderLines.md#document) | [StoreOrders](Logistics.Inventory.StoreOrders.md) | The <see cref="StoreOrder"/> to which this StoreOrderLine belongs. `Required` `Filter(multi eq)` |
 | [Lot](Logistics.Inventory.StoreOrderLines.md#lot) | [Lots](Logistics.Inventory.Lots.md) (nullable) | If non-null, contains the specific lot to use for the movement. `Filter(multi eq)` |
 | [ParentDocument](Logistics.Inventory.StoreOrderLines.md#parentdocument) | [Documents](General.Documents.md) (nullable) | The document, which the current line executes. null when the current line does not execute another line. `Filter(multi eq)` |
 | [Product](Logistics.Inventory.StoreOrderLines.md#product) | [Products](General.Products.Products.md) | The product which should be received/issued. `Required` `Filter(multi eq)` |
@@ -54,7 +55,7 @@ Aggregate Root:
 | [SalesOrderLine](Logistics.Inventory.StoreOrderLines.md#salesorderline) | [SalesOrderLines](Crm.Sales.SalesOrderLines.md) (nullable) | Sales order line which is managed by this store order line. When specified sales order line is used to make the margin analysis. `Filter(multi eq)` |
 | [SerialNumber](Logistics.Inventory.StoreOrderLines.md#serialnumber) | [SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable) | Which serial number to receive/issue. null means that serial number is unknown or not applicable. `Filter(multi eq)` |
 | [StoreBin](Logistics.Inventory.StoreOrderLines.md#storebin) | [StoreBins](Logistics.Inventory.StoreBins.md) (nullable) | From/to which store bin to issue/receive the products. null means that the store bin is unknown or not applicable. `Filter(multi eq)` |
-| [StoreOrder](Logistics.Inventory.StoreOrderLines.md#storeorder) | [StoreOrders](Logistics.Inventory.StoreOrders.md) | The `StoreOrder`(Logistics.Inventory.StoreOrderLines.md#storeorder) to which this StoreOrderLine belongs. `Required` `Filter(multi eq)` `Owner` |
+| [StoreOrder](Logistics.Inventory.StoreOrderLines.md#storeorder) | [StoreOrders](Logistics.Inventory.StoreOrders.md) | The <see cref="StoreOrder"/> to which this StoreOrderLine belongs. `Required` `Filter(multi eq)` `Owner` |
 
 
 ## Attribute Details
@@ -172,6 +173,12 @@ _Back-End Default Expression:_
 
 _Front-End Recalc Expressions:_  
 `IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.QuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))`
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+
 ### StandardQuantityBase
 
 The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` `Introduced in version 18.2`
@@ -206,7 +213,7 @@ _Supports Order By_: **False**
 
 ### Document
 
-The `StoreOrder`(Logistics.Inventory.StoreOrderLines.md#storeorder) to which this StoreOrderLine belongs. `Required` `Filter(multi eq)`
+The <see cref="StoreOrder"/> to which this StoreOrderLine belongs. `Required` `Filter(multi eq)`
 
 _Type_: **[StoreOrders](Logistics.Inventory.StoreOrders.md)**  
 _Indexed_: **True**  
@@ -274,7 +281,7 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### StoreOrder
 
-The `StoreOrder`(Logistics.Inventory.StoreOrderLines.md#storeorder) to which this StoreOrderLine belongs. `Required` `Filter(multi eq)` `Owner`
+The <see cref="StoreOrder"/> to which this StoreOrderLine belongs. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[StoreOrders](Logistics.Inventory.StoreOrders.md)**  
 _Indexed_: **True**  

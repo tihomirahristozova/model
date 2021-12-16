@@ -113,6 +113,11 @@ Aggregate Root:<br>
 <td></td>
 </tr>
 <tr>
+<td><a href="Crm.Invoicing.InvoicesOptions.html#rowversion">RowVersion</a></td>
+<td>byte[]</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="Crm.Invoicing.InvoicesOptions.html#signrestriction">SignRestriction</a></td>
 <td><a href="Crm.Invoicing.InvoicesOptions.html#signrestriction">SignRestriction</a></td>
 <td>Restricts the sign of the line amounts of the invoices. -1 =allow only negative, 0=allow all, 1=allow only positive amounts. <code>Required</code> <code>Default(0)</code></td>
@@ -163,6 +168,10 @@ Aggregate Root:<br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
+<h3 id="rowversion">RowVersion</h3>
+<p><em>Type</em>: <strong>byte[]</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="signrestriction">SignRestriction</h3>
 <p>Restricts the sign of the line amounts of the invoices. -1 =allow only negative, 0=allow all, 1=allow only positive amounts. <code>Required</code> <code>Default(0)</code></p>
 <p><em>Type</em>: <strong><a href="Crm.Invoicing.InvoicesOptions.html#signrestriction">SignRestriction</a></strong><br>

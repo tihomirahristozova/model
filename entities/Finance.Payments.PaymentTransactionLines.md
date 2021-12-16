@@ -30,14 +30,15 @@ Aggregate Root:
 | [CoveredOrderAmount](Finance.Payments.PaymentTransactionLines.md#coveredorderamount) | [Amount (10, 2)](../data-types.md#amount) | The part of the original payment order amount, that is covered by this transaction line. `Currency: PaymentOrder.TotalAmountCurrency` `Required` `Default(0)` 
 | [Id](Finance.Payments.PaymentTransactionLines.md#id) | guid |  
 | [Notes](Finance.Payments.PaymentTransactionLines.md#notes) | string (254) __nullable__ | Notes for this PaymentTransactionLine. 
+| [RowVersion](Finance.Payments.PaymentTransactionLines.md#rowversion) | byte[] |  
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Document](Finance.Payments.PaymentTransactionLines.md#document) | [PaymentTransactions](Finance.Payments.PaymentTransactions.md) | The `PaymentTransaction`(Finance.Payments.PaymentTransactionLines.md#paymenttransaction) to which this PaymentTransactionLine belongs. `Required` `Filter(multi eq)` |
+| [Document](Finance.Payments.PaymentTransactionLines.md#document) | [PaymentTransactions](Finance.Payments.PaymentTransactions.md) | The <see cref="PaymentTransaction"/<br />> to which this PaymentTransactionLine belongs. `Required` `Filter(multi eq)` |
 | [PaymentOrder](Finance.Payments.PaymentTransactionLines.md#paymentorder) | [PaymentOrders](Finance.Payments.PaymentOrders.md) | The payment order, that is covered by this transaction amount distribution (tr.line). `Required` `Filter(multi eq)` |
-| [PaymentTransaction](Finance.Payments.PaymentTransactionLines.md#paymenttransaction) | [PaymentTransactions](Finance.Payments.PaymentTransactions.md) | The `PaymentTransaction`(Finance.Payments.PaymentTransactionLines.md#paymenttransaction) to which this PaymentTransactionLine belongs. `Required` `Filter(multi eq)` `Owner` |
+| [PaymentTransaction](Finance.Payments.PaymentTransactionLines.md#paymenttransaction) | [PaymentTransactions](Finance.Payments.PaymentTransactions.md) | The <see cref="PaymentTransaction"/<br />> to which this PaymentTransactionLine belongs. `Required` `Filter(multi eq)` `Owner` |
 
 
 ## Attribute Details
@@ -89,12 +90,18 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
 
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+
 
 ## Reference Details
 
 ### Document
 
-The `PaymentTransaction`(Finance.Payments.PaymentTransactionLines.md#paymenttransaction) to which this PaymentTransactionLine belongs. `Required` `Filter(multi eq)`
+The <see cref="PaymentTransaction"/> to which this PaymentTransactionLine belongs. `Required` `Filter(multi eq)`
 
 _Type_: **[PaymentTransactions](Finance.Payments.PaymentTransactions.md)**  
 _Indexed_: **True**  
@@ -110,7 +117,7 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### PaymentTransaction
 
-The `PaymentTransaction`(Finance.Payments.PaymentTransactionLines.md#paymenttransaction) to which this PaymentTransactionLine belongs. `Required` `Filter(multi eq)` `Owner`
+The <see cref="PaymentTransaction"/> to which this PaymentTransactionLine belongs. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[PaymentTransactions](Finance.Payments.PaymentTransactions.md)**  
 _Indexed_: **True**  

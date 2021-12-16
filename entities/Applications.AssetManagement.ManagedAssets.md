@@ -32,6 +32,7 @@ Aggregate Tree
 | [Name](Applications.AssetManagement.ManagedAssets.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Name of the managed asset (multi-language). `Required` `Filter(eq;like)` 
 | [Notes](Applications.AssetManagement.ManagedAssets.md#notes) | string (max) __nullable__ | Notes for this ManagedAsset. 
 | [RegistrationNumber](Applications.AssetManagement.ManagedAssets.md#registrationnumber) | string (32) __nullable__ | Registration number of the asset with the national registration authorities. null means the registation number is unknown or N/A. `Filter(eq;like)` 
+| [RowVersion](Applications.AssetManagement.ManagedAssets.md#rowversion) | byte[] |  
 
 ## References
 
@@ -94,6 +95,12 @@ _Type_: **string (32) __nullable__**
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **32**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 
 ## Reference Details

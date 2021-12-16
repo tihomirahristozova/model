@@ -27,6 +27,7 @@ Aggregate Tree
 | [Code](Finance.Excise.ExciseProductCategories.md#code) | string (32) | For EU, the product category code is a single character - B,E,I,S,T or W. `Required` `Filter(multi eq;like)` 
 | [Id](Finance.Excise.ExciseProductCategories.md#id) | guid |  
 | [Name](Finance.Excise.ExciseProductCategories.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Multilanguage String. `Required` `Filter(like)` 
+| [RowVersion](Finance.Excise.ExciseProductCategories.md#rowversion) | byte[] |  
 
 
 ## Attribute Details
@@ -72,6 +73,12 @@ Multilanguage String. `Required` `Filter(like)`
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Supported Filters_: **Like**  
+_Supports Order By_: **False**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
 

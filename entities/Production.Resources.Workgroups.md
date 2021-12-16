@@ -31,6 +31,7 @@ Aggregate Tree
 | [Name](Production.Resources.Workgroups.md#name) | string (64) | Name of the workgroup. `Required` `Filter(like)` 
 | [Notes](Production.Resources.Workgroups.md#notes) | string (254) __nullable__ | User notes for the workgroup. 
 | [Parent](Production.Resources.Workgroups.md#parent) | string (255) | Path-like parent workgroup name. `Required` `Default("/")` `Filter(like)` `ORD` 
+| [RowVersion](Production.Resources.Workgroups.md#rowversion) | byte[] |  
 
 ## Child Collections
 
@@ -87,6 +88,12 @@ _Supported Filters_: **Like**
 _Supports Order By_: **True**  
 _Maximum Length_: **255**  
 _Default Value_: **/**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 
 

@@ -118,6 +118,11 @@ Aggregate Root:<br>
 <td>The quantity of the product in the package in the base measurement unit of the Product. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>Default(1)</code> <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
+<td><a href="Crm.PromotionalPackageLines.html#rowversion">RowVersion</a></td>
+<td>byte[]</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="Crm.PromotionalPackageLines.html#standarddiscountadjustorreplace">StandardDiscount<br>AdjustOrReplace</a></td>
 <td><a href="Crm.PromotionalPackageLines.html#standarddiscountadjustorreplace">StandardDiscount<br>AdjustOrReplace</a></td>
 <td>Specifies standard discount change action: A=ADD, M=Mark down - apply after standard discount; R=REPLACE the standard discount. <code>Required</code> <code>Default(&quot;R&quot;)</code></td>
@@ -157,7 +162,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Crm.PromotionalPackageLines.html#promotionalpackage">PromotionalPackage</a></td>
 <td><a href="Crm.PromotionalPackages.html">PromotionalPackages</a></td>
-<td>The <code>PromotionalPackage</code>(Crm.PromotionalPackageLines.md#promotionalpackage) to which this PromotionalPackageLine belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
+<td>The <see cref="Promotional<br />Package"></see> to which this PromotionalPackageLine belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 <tr>
 <td><a href="Crm.PromotionalPackageLines.html#unitpricecurrency">UnitPriceCurrency</a></td>
@@ -187,6 +192,10 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
+<h3 id="rowversion">RowVersion</h3>
+<p><em>Type</em>: <strong>byte[]</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="standarddiscountadjustorreplace">StandardDiscountAdjustOrReplace</h3>
 <p>Specifies standard discount change action: A=ADD, M=Mark down - apply after standard discount; R=REPLACE the standard discount. <code>Required</code> <code>Default(&quot;R&quot;)</code></p>
 <p><em>Type</em>: <strong><a href="Crm.PromotionalPackageLines.html#standarddiscountadjustorreplace">StandardDiscount<br>AdjustOrReplace</a></strong><br>
@@ -238,7 +247,7 @@ Allowed values for the <code>StandardDiscountAdjustOrReplace</code>(Crm.Promotio
 <p><em>Type</em>: <strong><a href="General.Products.Products.html">Products</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="promotionalpackage">PromotionalPackage</h3>
-<p>The <code>PromotionalPackage</code>(Crm.PromotionalPackageLines.md#promotionalpackage) to which this PromotionalPackageLine belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
+<p>The <see cref="PromotionalPackage"></see> to which this PromotionalPackageLine belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="Crm.PromotionalPackages.html">PromotionalPackages</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>

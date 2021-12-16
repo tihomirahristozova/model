@@ -113,6 +113,11 @@ Default Search Members:<br>
 <td>Specifies whether the job is active and ready for running. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
+<td><a href="Systems.Core.Jobs.html#jobrowversion">JobRowVersion</a></td>
+<td>byte[]</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="Systems.Core.Jobs.html#jobtype">JobType</a></td>
 <td><a href="Systems.Core.Jobs.html#jobtype">JobType</a></td>
 <td>The system type of the job. DOC=Document Change State, POS=Run Postponed Events, DNT=Delete Old Notifications. <code>Required</code> <code>Filter(multi eq)</code></td>
@@ -146,6 +151,10 @@ Default Search Members:<br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>True</strong></p>
+<h3 id="jobrowversion">JobRowVersion</h3>
+<p><em>Type</em>: <strong>byte[]</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="jobtype">JobType</h3>
 <p>The system type of the job. DOC=Document Change State, POS=Run Postponed Events, DNT=Delete Old Notifications. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Systems.Core.Jobs.html#jobtype">JobType</a></strong><br>

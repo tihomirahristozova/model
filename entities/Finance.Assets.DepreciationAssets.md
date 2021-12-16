@@ -26,13 +26,14 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](Finance.Assets.DepreciationAssets.md#id) | guid |  
+| [RowVersion](Finance.Assets.DepreciationAssets.md#rowversion) | byte[] |  
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Asset](Finance.Assets.DepreciationAssets.md#asset) | [Assets](Finance.Assets.Assets.md) | Specifies the asset, whose depreciation should be calculated with the current document. `Required` `Filter(multi eq)` |
-| [Depreciation](Finance.Assets.DepreciationAssets.md#depreciation) | [Depreciations](Finance.Assets.Depreciations.md) | The `Depreciation`(Finance.Assets.DepreciationAssets.md#depreciation) to which this DepreciationAsset belongs. `Required` `Filter(multi eq)` `Owner` |
+| [Depreciation](Finance.Assets.DepreciationAssets.md#depreciation) | [Depreciations](Finance.Assets.Depreciations.md) | The <see cref="Depreciation"/> to which this DepreciationAsset belongs. `Required` `Filter(multi eq)` `Owner` |
 
 
 ## Attribute Details
@@ -43,6 +44,12 @@ _Type_: **guid**
 _Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 
 ## Reference Details
@@ -56,7 +63,7 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### Depreciation
 
-The `Depreciation`(Finance.Assets.DepreciationAssets.md#depreciation) to which this DepreciationAsset belongs. `Required` `Filter(multi eq)` `Owner`
+The <see cref="Depreciation"/> to which this DepreciationAsset belongs. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[Depreciations](Finance.Assets.Depreciations.md)**  
 _Indexed_: **True**  

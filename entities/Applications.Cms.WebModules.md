@@ -31,6 +31,7 @@ Aggregate Root:
 | [ModulePicture](Applications.Cms.WebModules.md#modulepicture) | byte[] __nullable__ | Default picture. Used for picture links, small module icons, etc. PNG format is suggested. 
 | [ModuleType](Applications.Cms.WebModules.md#moduletype) | [ModuleType](Applications.Cms.WebModules.md#moduletype) | Specifies the content handler. The content handler is responsible for generating the actual web page content. Module Types include Category, Static, News, Product, etc. `Required` `Filter(like)` 
 | [Name](Applications.Cms.WebModules.md#name) | string (512) | Multilanguage Module name. This is used as a title when displaying the web Module. `Required` `Filter(like)` 
+| [WebModuleRowVersion](Applications.Cms.WebModules.md#webmodulerowversion) | byte[] |  
 
 ## References
 
@@ -100,6 +101,12 @@ _Type_: **string (512)**
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **512**  
+
+### WebModuleRowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 
 ## Reference Details

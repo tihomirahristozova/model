@@ -25,6 +25,7 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [Id](General.PropertiesCategories.md#id) | guid |  
 | [Name](General.PropertiesCategories.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | The name of this PropertiesCategory. `Required` `Filter(eq;like)` `ORD` 
+| [RowVersion](General.PropertiesCategories.md#rowversion) | byte[] |  
 
 
 ## Attribute Details
@@ -44,6 +45,12 @@ _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**
 _Indexed_: **True**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 
 

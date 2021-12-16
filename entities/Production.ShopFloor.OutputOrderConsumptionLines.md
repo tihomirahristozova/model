@@ -31,17 +31,18 @@ Aggregate Root:
 | [Id](Production.ShopFloor.OutputOrderConsumptionLines.md#id) | guid |  
 | [LineNo](Production.ShopFloor.OutputOrderConsumptionLines.md#lineno) | int32 | Line number, unique within the OutputOrder. Usually is increasing number like 10, 20, 30, ... when initially entering the OutputOrder (in order to allow insertions with adjustment documents). `Required` 
 | [Notes](Production.ShopFloor.OutputOrderConsumptionLines.md#notes) | string (max) __nullable__ | Notes for this OutputOrderConsumptionLine. 
+| [RowVersion](Production.ShopFloor.OutputOrderConsumptionLines.md#rowversion) | byte[] |  
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Document](Production.ShopFloor.OutputOrderConsumptionLines.md#document) | [OutputOrders](Production.ShopFloor.OutputOrders.md) | The `OutputOrder`(Production.ShopFloor.OutputOrderConsumption<br />Lines.md#outputorder) to which this OutputOrderConsumptionLine belongs. `Required` `Filter(multi eq)` |
+| [Document](Production.ShopFloor.OutputOrderConsumptionLines.md#document) | [OutputOrders](Production.ShopFloor.OutputOrders.md) | The <see cref="OutputOrder"/> to which this OutputOrderConsumptionLine belongs. `Required` `Filter(multi eq)` |
 | [LineWorkOrder](Production.ShopFloor.OutputOrderConsumptionLines.md#lineworkorder) | [WorkOrders](Production.ShopFloor.WorkOrders.md) | Work order for the line. Initially copied from the header (if there work order is not null). `Required` `Filter(multi eq)` |
 | [Material](Production.ShopFloor.OutputOrderConsumptionLines.md#material) | [Products](General.Products.Products.md) | The consumed material. `Required` `Filter(multi eq)` |
-| [OutputOrder](Production.ShopFloor.OutputOrderConsumptionLines.md#outputorder) | [OutputOrders](Production.ShopFloor.OutputOrders.md) | The `OutputOrder`(Production.ShopFloor.OutputOrderConsumption<br />Lines.md#outputorder) to which this OutputOrderConsumptionLine belongs. `Required` `Filter(multi eq)` `Owner` |
+| [OutputOrder](Production.ShopFloor.OutputOrderConsumptionLines.md#outputorder) | [OutputOrders](Production.ShopFloor.OutputOrders.md) | The <see cref="OutputOrder"/> to which this OutputOrderConsumptionLine belongs. `Required` `Filter(multi eq)` `Owner` |
 | [QuantityUnit](Production.ShopFloor.OutputOrderConsumptionLines.md#quantityunit) | [MeasurementUnits](General.MeasurementUnits.md) | The measurement unit for the consumed quantity for setup, run and scrap. `Required` `Filter(multi eq)` |
-| [ScrapType](Production.ShopFloor.OutputOrderConsumptionLines.md#scraptype) | [ScrapTypes](Logistics.Inventory.ScrapTypes.md) (nullable) | When Consumed_Quantity_<br />For_Scrap <> 0 denotes the reason for the scrap. `Filter(multi eq)` |
+| [ScrapType](Production.ShopFloor.OutputOrderConsumptionLines.md#scraptype) | [ScrapTypes](Logistics.Inventory.ScrapTypes.md) (nullable) | When Consumed_Quantity_<br />For_Scrap &lt;&gt; 0 denotes the reason for the scrap. `Filter(multi eq)` |
 | [WorkOrderItem](Production.ShopFloor.OutputOrderConsumptionLines.md#workorderitem) | [WorkOrderItems](Production.ShopFloor.WorkOrderItems.md) | The work order item, for which the consumption is recorded. `Required` `Filter(multi eq)` |
 | [WorkOrderItemOperation](Production.ShopFloor.OutputOrderConsumptionLines.md#workorderitemoperation) | [WorkOrderItemOperations](Production.ShopFloor.WorkOrderItemOperations.md) (nullable) | The operation in which the material was consumed. null = unknown. `Filter(multi eq)` |
 
@@ -104,12 +105,18 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
 
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+
 
 ## Reference Details
 
 ### Document
 
-The `OutputOrder`(Production.ShopFloor.OutputOrderConsumptionLines.md#outputorder) to which this OutputOrderConsumptionLine belongs. `Required` `Filter(multi eq)`
+The <see cref="OutputOrder"/> to which this OutputOrderConsumptionLine belongs. `Required` `Filter(multi eq)`
 
 _Type_: **[OutputOrders](Production.ShopFloor.OutputOrders.md)**  
 _Indexed_: **True**  
@@ -133,7 +140,7 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### OutputOrder
 
-The `OutputOrder`(Production.ShopFloor.OutputOrderConsumptionLines.md#outputorder) to which this OutputOrderConsumptionLine belongs. `Required` `Filter(multi eq)` `Owner`
+The <see cref="OutputOrder"/> to which this OutputOrderConsumptionLine belongs. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[OutputOrders](Production.ShopFloor.OutputOrders.md)**  
 _Indexed_: **True**  
@@ -151,7 +158,7 @@ _Front-End Recalc Expressions:_
 `obj.Material.MeasurementUnit`
 ### ScrapType
 
-When Consumed_Quantity_For_Scrap <> 0 denotes the reason for the scrap. `Filter(multi eq)`
+When Consumed_Quantity_For_Scrap &lt;&gt; 0 denotes the reason for the scrap. `Filter(multi eq)`
 
 _Type_: **[ScrapTypes](Logistics.Inventory.ScrapTypes.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  

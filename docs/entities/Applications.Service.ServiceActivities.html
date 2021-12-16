@@ -133,6 +133,11 @@ Default Search Members:<br>
 </thead>
 <tbody>
 <tr>
+<td><a href="Applications.Service.ServiceActivities.html#activityrowversion">ActivityRowVersion</a></td>
+<td>byte[]</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="Applications.Service.ServiceActivities.html#adjustmentnumber">AdjustmentNumber</a></td>
 <td>int32</td>
 <td>Consecutive number of the correction that this document is applying to the adjusted document. <code>Required</code> <code>Default(0)</code> <code>ReadOnly</code> (Inherited from <a href="General.Documents.html">Documents</a>)</td>
@@ -186,6 +191,11 @@ Default Search Members:<br>
 <td><a href="Applications.Service.ServiceActivities.html#documentnotes">DocumentNotes</a></td>
 <td>string (max) <strong>nullable</strong></td>
 <td>Notes for this Document. (Inherited from <a href="General.Documents.html">Documents</a>)</td>
+</tr>
+<tr>
+<td><a href="Applications.Service.ServiceActivities.html#documentrowversion">DocumentRowVersion</a></td>
+<td>byte[]</td>
+<td></td>
 </tr>
 <tr>
 <td><a href="Applications.Service.ServiceActivities.html#documentversion">DocumentVersion</a></td>
@@ -271,6 +281,11 @@ Default Search Members:<br>
 <td><a href="Applications.Service.ServiceActivities.html#remindertime">ReminderTime</a></td>
 <td>datetime <strong>nullable</strong></td>
 <td>When to snooze to the owner to remind him for the task. This default reminder is copied to and managed by the Reminders entity. (Inherited from <a href="General.Contacts.Activities.html">Activities</a>)</td>
+</tr>
+<tr>
+<td><a href="Applications.Service.ServiceActivities.html#rowversion">RowVersion</a></td>
+<td>byte[]</td>
+<td></td>
 </tr>
 <tr>
 <td><a href="Applications.Service.ServiceActivities.html#starttime">StartTime</a></td>
@@ -559,6 +574,10 @@ Default Search Members:<br>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
+<h3 id="activityrowversion">ActivityRowVersion</h3>
+<p><em>Type</em>: <strong>byte[]</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="adjustmentnumber">AdjustmentNumber</h3>
 <p>Consecutive number of the correction that this document is applying to the adjusted document. <code>Required</code> <code>Default(0)</code> <code>ReadOnly</code> (Inherited from <a href="General.Documents.html">Documents</a>)</p>
 <p><em>Type</em>: <strong>int32</strong><br>
@@ -624,6 +643,10 @@ Default Search Members:<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>2147483647</strong></p>
+<h3 id="documentrowversion">DocumentRowVersion</h3>
+<p><em>Type</em>: <strong>byte[]</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="documentversion">DocumentVersion</h3>
 <p>Consecutive version number, starting with 1. Each update produces a new version of the document. <code>Required</code> <code>Default(1)</code> <code>Filter(eq;ge;le)</code> <code>ReadOnly</code> (Inherited from <a href="General.Documents.html">Documents</a>)</p>
 <p><em>Type</em>: <strong>int32</strong><br>
@@ -773,6 +796,10 @@ Generic enum type for Priority properties<br>
 <h3 id="remindertime">ReminderTime</h3>
 <p>When to snooze to the owner to remind him for the task. This default reminder is copied to and managed by the Reminders entity. (Inherited from <a href="General.Contacts.Activities.html">Activities</a>)</p>
 <p><em>Type</em>: <strong>datetime <strong>nullable</strong></strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="rowversion">RowVersion</h3>
+<p><em>Type</em>: <strong>byte[]</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="starttime">StartTime</h3>

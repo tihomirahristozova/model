@@ -132,6 +132,11 @@ Aggregate Root:<br>
 <td>string (512)</td>
 <td>Multilanguage Module name. This is used as a title when displaying the web Module. <code>Required</code> <code>Filter(like)</code></td>
 </tr>
+<tr>
+<td><a href="Applications.Cms.WebModules.html#webmodulerowversion">WebModuleRowVersion</a></td>
+<td>byte[]</td>
+<td></td>
+</tr>
 </tbody>
 </table>
 <h2 id="references">References</h2>
@@ -214,6 +219,10 @@ Allowed values for the ModuleType data attribute<br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>512</strong></p>
+<h3 id="webmodulerowversion">WebModuleRowVersion</h3>
+<p><em>Type</em>: <strong>byte[]</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="parent">Parent</h3>
 <p>The parent web Module. It can only be a module with Module Type = Category. Null means that the web Module is root web Module. <code>Filter(multi eq)</code></p>

@@ -128,6 +128,11 @@ Default Search Members:<br>
 <td></td>
 </tr>
 <tr>
+<td><a href="Finance.Intrastat.CommodityCodes.html#rowversion">RowVersion</a></td>
+<td>byte[]</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="Finance.Intrastat.CommodityCodes.html#supplementaryunit">SupplementaryUnit</a></td>
 <td>string (16)</td>
 <td>If not null, the related product should have additional measurement unit with the same code as specified in this field. The additional unit will be used for the purposes of the Intrastat declarations. <code>Required</code></td>
@@ -173,6 +178,10 @@ Default Search Members:<br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
+<h3 id="rowversion">RowVersion</h3>
+<p><em>Type</em>: <strong>byte[]</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="supplementaryunit">SupplementaryUnit</h3>
 <p>If not null, the related product should have additional measurement unit with the same code as specified in this field. The additional unit will be used for the purposes of the Intrastat declarations. <code>Required</code></p>
 <p><em>Type</em>: <strong>string (16)</strong><br>

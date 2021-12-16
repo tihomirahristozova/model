@@ -25,6 +25,7 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [Id](Logistics.Inventory.CostCorrectionsOptions.md#id) | guid |  
 | [ResetTransactions<br />StateOnReleasing](Logistics.Inventory.CostCorrectionsOptions.md#resettransactionsstateonreleasing) | boolean | When true, the stock transactions state are re-set when the cost correction is released. The idea is to notify these documents, so that they have chance to re-generate their sub-documents. `Required` `Default(false)` `Filter(eq)` 
+| [RowVersion](Logistics.Inventory.CostCorrectionsOptions.md#rowversion) | byte[] |  
 | [ScheduleDocumentEvents](Logistics.Inventory.CostCorrectionsOptions.md#scheduledocumentevents) | boolean | Indicates wheather the document events caused by the cost correction should be scheduled for later procession. `Required` `Default(false)` 
 
 ## References
@@ -51,6 +52,12 @@ _Type_: **boolean**
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **False**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 ### ScheduleDocumentEvents
 

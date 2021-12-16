@@ -27,13 +27,14 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [Id](General.Contacts.ActivityParticipants.md#id) | guid |  
 | [Notes](General.Contacts.ActivityParticipants.md#notes) | string (255) __nullable__ | Notes for this ActivityParticipant. 
+| [RowVersion](General.Contacts.ActivityParticipants.md#rowversion) | byte[] |  
 | [WorkLoadPercent](General.Contacts.ActivityParticipants.md#workloadpercent) | decimal (3, 2) | The planned work load of the participant for this activity. `Required` `Default(1)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Activity](General.Contacts.ActivityParticipants.md#activity) | [Activities](General.Contacts.Activities.md) | The `Activity`(General.Contacts.ActivityParticipants.md#activity) to which this ActivityParticipant belongs. `Required` `Filter(multi eq)` `Owner` |
+| [Activity](General.Contacts.ActivityParticipants.md#activity) | [Activities](General.Contacts.Activities.md) | The <see cref="Activity"/> to which this ActivityParticipant belongs. `Required` `Filter(multi eq)` `Owner` |
 | [ParticipantPerson](General.Contacts.ActivityParticipants.md#participantperson) | [Persons](General.Contacts.Persons.md) | The person, participating in an activity. `Required` `Filter(multi eq)` |
 
 
@@ -55,6 +56,12 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Maximum Length_: **255**  
 
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+
 ### WorkLoadPercent
 
 The planned work load of the participant for this activity. `Required` `Default(1)`
@@ -69,7 +76,7 @@ _Default Value_: **1**
 
 ### Activity
 
-The `Activity`(General.Contacts.ActivityParticipants.md#activity) to which this ActivityParticipant belongs. `Required` `Filter(multi eq)` `Owner`
+The <see cref="Activity"/> to which this ActivityParticipant belongs. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[Activities](General.Contacts.Activities.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

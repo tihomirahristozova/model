@@ -26,12 +26,13 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](Crm.Marketing.BonusProgramProducts.md#id) | guid |  
+| [RowVersion](Crm.Marketing.BonusProgramProducts.md#rowversion) | byte[] |  
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [BonusProgram](Crm.Marketing.BonusProgramProducts.md#bonusprogram) | [BonusPrograms](Crm.Marketing.BonusPrograms.md) | The `BonusProgram`(Crm.Marketing.BonusProgramProducts.md#bonusprogram) to which this BonusProgramProduct belongs. `Required` `Filter(multi eq)` `Owner` |
+| [BonusProgram](Crm.Marketing.BonusProgramProducts.md#bonusprogram) | [BonusPrograms](Crm.Marketing.BonusPrograms.md) | The <see cref="BonusProgram"/> to which this BonusProgramProduct belongs. `Required` `Filter(multi eq)` `Owner` |
 | [Product](Crm.Marketing.BonusProgramProducts.md#product) | [Products](General.Products.Products.md) | The product which is required to exist in the final sales document in order for the bonus program to be applied. `Required` `Filter(multi eq)` |
 
 
@@ -44,12 +45,18 @@ _Indexed_: **True**
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+
 
 ## Reference Details
 
 ### BonusProgram
 
-The `BonusProgram`(Crm.Marketing.BonusProgramProducts.md#bonusprogram) to which this BonusProgramProduct belongs. `Required` `Filter(multi eq)` `Owner`
+The <see cref="BonusProgram"/> to which this BonusProgramProduct belongs. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[BonusPrograms](Crm.Marketing.BonusPrograms.md)**  
 _Indexed_: **True**  

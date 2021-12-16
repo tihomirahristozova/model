@@ -27,6 +27,7 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [Id](Applications.Rental.TransactionLines.md#id) | guid |  
 | [Notes](Applications.Rental.TransactionLines.md#notes) | string (max) __nullable__ | Notes. 
+| [RowVersion](Applications.Rental.TransactionLines.md#rowversion) | byte[] |  
 | [TransactionTimestamp](Applications.Rental.TransactionLines.md#transactiontimestamp) | datetime | Transaction Timestamp. `Required` `Filter(multi eq;ge;le)` 
 | [TransactionType](Applications.Rental.TransactionLines.md#transactiontype) | [TransactionType](Applications.Rental.TransactionLines.md#transactiontype) | Transaction Type. `Required` `Filter(eq;like)` 
 
@@ -37,7 +38,7 @@ Aggregate Root:
 | [LeaseContract](Applications.Rental.TransactionLines.md#leasecontract) | [LeaseContracts](Applications.Rental.LeaseContracts.md) | Lease Contract. `Required` `Filter(multi eq)` |
 | [LesseeCustomer](Applications.Rental.TransactionLines.md#lesseecustomer) | [Customers](Crm.Customers.md) | Lessee Customer. `Required` `Filter(multi eq)` |
 | [RentalAsset](Applications.Rental.TransactionLines.md#rentalasset) | [Assets](Applications.Rental.Assets.md) | Rental asset. `Required` `Filter(multi eq)` |
-| [RentTransaction](Applications.Rental.TransactionLines.md#renttransaction) | [Transactions](Applications.Rental.Transactions.md) | The `Transaction`(Applications.Rental.Transactions.md) to which this TransactionLine belongs. `Required` `Filter(multi eq)` `Owner` |
+| [RentTransaction](Applications.Rental.TransactionLines.md#renttransaction) | [Transactions](Applications.Rental.Transactions.md) | The <see cref="Transaction"/> to which this TransactionLine belongs. `Required` `Filter(multi eq)` `Owner` |
 
 
 ## Attribute Details
@@ -57,6 +58,12 @@ _Type_: **string (max) __nullable__**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 ### TransactionTimestamp
 
@@ -110,7 +117,7 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### RentTransaction
 
-The `Transaction`(Applications.Rental.Transactions.md) to which this TransactionLine belongs. `Required` `Filter(multi eq)` `Owner`
+The <see cref="Transaction"/> to which this TransactionLine belongs. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[Transactions](Applications.Rental.Transactions.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

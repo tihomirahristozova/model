@@ -28,6 +28,7 @@ Aggregate Tree
 | [DefaultMarginPercent](Crm.Pricing.PricingModels.md#defaultmarginpercent) | decimal (6, 5) | Default margin between standard cost and standard price. The margin is applied to the products when calculating standard price. `Required` `Default(0)` 
 | [Id](Crm.Pricing.PricingModels.md#id) | guid |  
 | [Name](Crm.Pricing.PricingModels.md#name) | string (254) | The name of the pricing model. `Required` `Filter(eq;like)` 
+| [RowVersion](Crm.Pricing.PricingModels.md#rowversion) | byte[] |  
 
 ## References
 
@@ -70,6 +71,12 @@ _Type_: **string (254)**
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 
 ## Reference Details

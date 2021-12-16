@@ -26,12 +26,13 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](Projects.ProjectWorkElements.md#id) | guid |  
+| [RowVersion](Projects.ProjectWorkElements.md#rowversion) | byte[] |  
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Project](Projects.ProjectWorkElements.md#project) | [Projects](Projects.Projects.md) | The `Project`(Projects.ProjectWorkElements.md#project) to which this ProjectWorkElement belongs. `Required` `Filter(multi eq)` `Owner` |
+| [Project](Projects.ProjectWorkElements.md#project) | [Projects](Projects.Projects.md) | The <see cref="Project"/> to which this ProjectWorkElement belongs. `Required` `Filter(multi eq)` `Owner` |
 | [ProjectTypeWorkElement](Projects.ProjectWorkElements.md#projecttypeworkelement) | [TypeWorkElements](Projects.TypeWorkElements.md) | The work element from the project type on which the current work element is based. `Required` `Filter(multi eq)` |
 
 
@@ -44,12 +45,18 @@ _Indexed_: **True**
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+
 
 ## Reference Details
 
 ### Project
 
-The `Project`(Projects.ProjectWorkElements.md#project) to which this ProjectWorkElement belongs. `Required` `Filter(multi eq)` `Owner`
+The <see cref="Project"/> to which this ProjectWorkElement belongs. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[Projects](Projects.Projects.md)**  
 _Indexed_: **True**  

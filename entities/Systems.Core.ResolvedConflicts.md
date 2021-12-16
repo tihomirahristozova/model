@@ -30,6 +30,7 @@ Aggregate Tree
 | [ResolveDescription](Systems.Core.ResolvedConflicts.md#resolvedescription) | [MultilanguageString](../data-types.md#multilanguagestring) | Description of the resolution of the conflict. `Required` `ReadOnly` 
 | [ResolvedTime](Systems.Core.ResolvedConflicts.md#resolvedtime) | datetime | Time when the resolution of the conflict was made. `Required` `Default(Now)` `ReadOnly` 
 | [RevisedByUser](Systems.Core.ResolvedConflicts.md#revisedbyuser) | boolean | True, when the conflict resolution was revised (reviewed) manually by user. `Required` `Default(false)` `Filter(eq)` `ReadOnly` 
+| [RowVersion](Systems.Core.ResolvedConflicts.md#rowversion) | byte[] |  
 | [TableName](Systems.Core.ResolvedConflicts.md#tablename) | [MultilanguageString](../data-types.md#multilanguagestring) | Name of the table in which the conflict has occurred. `Required` `Filter(like)` `ReadOnly` 
 | [URL](Systems.Core.ResolvedConflicts.md#url) | string (254) | URL of the item (the row) for which the conflict occurred. `Required` `ReadOnly` 
 
@@ -93,6 +94,12 @@ _Type_: **boolean**
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **False**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 ### TableName
 

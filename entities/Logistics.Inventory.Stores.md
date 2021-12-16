@@ -47,10 +47,12 @@ Aggregate Tree
 | [PartyCreationUser](Logistics.Inventory.Stores.md#partycreationuser) | string (64) __nullable__ | Login name of the user, who created the Party. `Filter(like)` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md)) 
 | [PartyName](Logistics.Inventory.Stores.md#partyname) | [MultilanguageString](../data-types.md#multilanguagestring) | The name of the party. `Required` `Filter(eq;like)` `ORD` (Inherited from [Parties](General.Contacts.Parties.md)) 
 | [PartyNotes](Logistics.Inventory.Stores.md#partynotes) | string (254) __nullable__ | Notes for this Party. (Inherited from [Parties](General.Contacts.Parties.md)) 
+| [PartyRowVersion](Logistics.Inventory.Stores.md#partyrowversion) | byte[] |  
 | [PartyType](Logistics.Inventory.Stores.md#partytype) | [PartyType](Logistics.Inventory.Stores.md#partytype) | Type of party. Currently supported are P=Person, C=Company, S=Store, L=Company Location, V=Division. `Required` `Default("P")` `Filter(multi eq)` (Inherited from [Parties](General.Contacts.Parties.md)) 
 | [PartyUniqueNumber](Logistics.Inventory.Stores.md#partyuniquenumber) | string (16) __nullable__ | Unique number of the party (National number for persons, Registration number for companies). `Filter(eq;like)` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md)) 
 | [PartyUpdateTime](Logistics.Inventory.Stores.md#partyupdatetime) | datetime __nullable__ | Date and time when the Party was last updated. `Filter(ge;le)` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md)) 
 | [PartyUpdateUser](Logistics.Inventory.Stores.md#partyupdateuser) | string (64) __nullable__ | Login name of the user, who last updated the Party. `Filter(like)` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md)) 
+| [RowVersion](Logistics.Inventory.Stores.md#rowversion) | byte[] |  
 | [SchemaXML](Logistics.Inventory.Stores.md#schemaxml) | string (max) __nullable__ | Obsolete. Not used. 
 | [Unmanaged](Logistics.Inventory.Stores.md#unmanaged) | boolean | If false the system will expect the user to process the store transactions. If true the system will auto-generate them. `Required` `Default(true)` 
 | [UpdateTime](Logistics.Inventory.Stores.md#updatetime) | datetime __nullable__ | Date and time when the Store was last updated. `Filter(ge;le)` `ReadOnly` 
@@ -214,6 +216,12 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
 
+### PartyRowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+
 ### PartyType
 
 Type of party. Currently supported are P=Person, C=Company, S=Store, L=Company Location, V=Division. `Required` `Default("P")` `Filter(multi eq)` (Inherited from [Parties](General.Contacts.Parties.md))
@@ -259,6 +267,12 @@ _Type_: **string (64) __nullable__**
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 ### SchemaXML
 

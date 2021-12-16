@@ -143,6 +143,11 @@ Default Search Members:<br>
 <td>Current project status. 0=New/Structuring, 10=Budgeting, 20=Panning, 30=Started, 40=Resolved(Completed), 45=Resolved(Cancelled), 50=Closed(Completed), 55=Closed(Cancelled). <code>Required</code> <code>Default(0)</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
+<td><a href="Projects.Projects.html#rowversion">RowVersion</a></td>
+<td>byte[]</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="Projects.Projects.html#startdate">StartDate</a></td>
 <td>date <strong>nullable</strong></td>
 <td>Expected date, when the execution of the tasks will start. null means that the start date is still unknown. <code>Filter(eq)</code></td>
@@ -293,6 +298,10 @@ Allowed values for the <code>ProjectStatus</code>(Projects.Projects.md#projectst
 <p><em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>0</strong></p>
+<h3 id="rowversion">RowVersion</h3>
+<p><em>Type</em>: <strong>byte[]</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="startdate">StartDate</h3>
 <p>Expected date, when the execution of the tasks will start. null means that the start date is still unknown. <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong>date <strong>nullable</strong></strong><br>

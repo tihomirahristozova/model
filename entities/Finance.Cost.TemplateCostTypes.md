@@ -27,12 +27,13 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [HierarchyLevel](Finance.Cost.TemplateCostTypes.md#hierarchylevel) | int32 | The level in the hierarchy on which this cost is incurred (0..9). `Required` `Filter(ge;le)` 
 | [Id](Finance.Cost.TemplateCostTypes.md#id) | guid |  
+| [RowVersion](Finance.Cost.TemplateCostTypes.md#rowversion) | byte[] |  
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CostTemplate](Finance.Cost.TemplateCostTypes.md#costtemplate) | [Templates](Finance.Cost.Templates.md) | The `Template`(Finance.Cost.Templates.md) to which this TemplateCostType belongs. `Required` `Filter(multi eq)` `Owner` |
+| [CostTemplate](Finance.Cost.TemplateCostTypes.md#costtemplate) | [Templates](Finance.Cost.Templates.md) | The <see cref="Template"/> to which this TemplateCostType belongs. `Required` `Filter(multi eq)` `Owner` |
 | [CostType](Finance.Cost.TemplateCostTypes.md#costtype) | [CostTypes](Finance.Cost.CostTypes.md) | The Cost Type for which the hierarchy is specified. `Required` `Filter(multi eq)` |
 
 
@@ -53,12 +54,18 @@ _Indexed_: **True**
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+
 
 ## Reference Details
 
 ### CostTemplate
 
-The `Template`(Finance.Cost.Templates.md) to which this TemplateCostType belongs. `Required` `Filter(multi eq)` `Owner`
+The <see cref="Template"/> to which this TemplateCostType belongs. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[Templates](Finance.Cost.Templates.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

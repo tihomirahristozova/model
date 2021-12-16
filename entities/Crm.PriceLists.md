@@ -27,6 +27,7 @@ Aggregate Tree
 | [FromDate](Crm.PriceLists.md#fromdate) | datetime __nullable__ | Starting validity of the price list. `Filter(eq;ge;le)` 
 | [Id](Crm.PriceLists.md#id) | guid |  
 | [Name](Crm.PriceLists.md#name) | string (50) | The name of this PriceList. `Required` `Filter(eq;like)` `ORD` 
+| [RowVersion](Crm.PriceLists.md#rowversion) | byte[] |  
 | [ThruDate](Crm.PriceLists.md#thrudate) | datetime __nullable__ | Ending validity of the price list. `Filter(eq;ge;le)` 
 
 ## References
@@ -71,6 +72,12 @@ _Indexed_: **True**
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
 _Maximum Length_: **50**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 ### ThruDate
 

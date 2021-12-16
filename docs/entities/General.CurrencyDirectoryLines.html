@@ -117,6 +117,11 @@ Aggregate Root:<br>
 <td>decimal (18, 6)</td>
 <td>The multiplier for conversion from From_Currency to Directory.To_Currency. <code>Required</code> <code>Default(1)</code></td>
 </tr>
+<tr>
+<td><a href="General.CurrencyDirectoryLines.html#rowversion">RowVersion</a></td>
+<td>byte[]</td>
+<td></td>
+</tr>
 </tbody>
 </table>
 <h2 id="references">References</h2>
@@ -132,7 +137,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.CurrencyDirectoryLines.html#currencydirectory">CurrencyDirectory</a></td>
 <td><a href="General.CurrencyDirectories.html">CurrencyDirectories</a></td>
-<td>The <code>CurrencyDirectory</code>(General.CurrencyDirectoryLines.md#currencydirectory) to which this CurrencyDirectoryLine belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
+<td>The <see cref="CurrencyDirectory"></see> to which this CurrencyDirectoryLine belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 <tr>
 <td><a href="General.CurrencyDirectoryLines.html#fromcurrency">FromCurrency</a></td>
@@ -159,9 +164,13 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>1</strong></p>
+<h3 id="rowversion">RowVersion</h3>
+<p><em>Type</em>: <strong>byte[]</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="currencydirectory">CurrencyDirectory</h3>
-<p>The <code>CurrencyDirectory</code>(General.CurrencyDirectoryLines.md#currencydirectory) to which this CurrencyDirectoryLine belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
+<p>The <see cref="CurrencyDirectory"></see> to which this CurrencyDirectoryLine belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="General.CurrencyDirectories.html">CurrencyDirectories</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>

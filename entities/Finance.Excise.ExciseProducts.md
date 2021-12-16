@@ -26,6 +26,7 @@ Aggregate Tree
 | [Code](Finance.Excise.ExciseProducts.md#code) | string (32) | The unique code of the ExciseProduct. `Required` `Filter(multi eq;like)` `ORD` 
 | [Id](Finance.Excise.ExciseProducts.md#id) | guid |  
 | [Name](Finance.Excise.ExciseProducts.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Multilanguage string. `Required` `Filter(like)` 
+| [RowVersion](Finance.Excise.ExciseProducts.md#rowversion) | byte[] |  
 
 ## References
 
@@ -59,6 +60,12 @@ Multilanguage string. `Required` `Filter(like)`
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Supported Filters_: **Like**  
+_Supports Order By_: **False**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
 

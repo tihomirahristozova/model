@@ -113,6 +113,11 @@ Aggregate Root:<br>
 <td>True when the work type is currently active and selectable in new documents. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
+<td><a href="Projects.TypeWorkTypes.html#rowversion">RowVersion</a></td>
+<td>byte[]</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="Projects.TypeWorkTypes.html#worktypename">WorkTypeName</a></td>
 <td>string (254)</td>
 <td>The name of the work type. <code>Required</code> <code>Filter(eq;like)</code></td>
@@ -137,7 +142,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Projects.TypeWorkTypes.html#projecttype">ProjectType</a></td>
 <td><a href="Projects.ProjectTypes.html">ProjectTypes</a></td>
-<td>The <code>ProjectType</code>(Projects.TypeWorkTypes.md#projecttype) to which this TypeWorkType belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
+<td>The <see cref="ProjectType"></see> to which this TypeWorkType belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 </tbody>
 </table>
@@ -153,6 +158,10 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>True</strong></p>
+<h3 id="rowversion">RowVersion</h3>
+<p><em>Type</em>: <strong>byte[]</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="worktypename">WorkTypeName</h3>
 <p>The name of the work type. <code>Required</code> <code>Filter(eq;like)</code></p>
 <p><em>Type</em>: <strong>string (254)</strong><br>
@@ -165,7 +174,7 @@ Aggregate Root:<br>
 <p><em>Type</em>: <strong><a href="General.Products.Products.html">Products</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="projecttype">ProjectType</h3>
-<p>The <code>ProjectType</code>(Projects.TypeWorkTypes.md#projecttype) to which this TypeWorkType belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
+<p>The <see cref="ProjectType"></see> to which this TypeWorkType belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="Projects.ProjectTypes.html">ProjectTypes</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em><a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a></em>: <strong>True</strong></p>

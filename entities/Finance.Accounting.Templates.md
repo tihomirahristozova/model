@@ -27,6 +27,7 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [Id](Finance.Accounting.Templates.md#id) | guid |  
 | [Name](Finance.Accounting.Templates.md#name) | string (254) | The name of this Template. `Required` `Filter(like)` 
+| [RowVersion](Finance.Accounting.Templates.md#rowversion) | byte[] |  
 | [VoucherDateSource](Finance.Accounting.Templates.md#voucherdatesource) | string (2000) __nullable__ | Determines the source for the document date of the generated voucher. If not specified the voucher date is set as usual. 
 | [VoucherDescriptionMask](Finance.Accounting.Templates.md#voucherdescriptionmask) | string (max) __nullable__ | Template voucher description. Can use field substitutes, surrounded with square brackets. 
 
@@ -60,6 +61,12 @@ _Type_: **string (254)**
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 ### VoucherDateSource
 

@@ -30,6 +30,7 @@ Aggregate Tree
 | [Name](Finance.Assets.Assets.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | The name of this Asset. `Required` `Filter(like)` 
 | [Notes](Finance.Assets.Assets.md#notes) | string (254) __nullable__ | Notes for this Asset. 
 | [PurchaseDate](Finance.Assets.Assets.md#purchasedate) | datetime | Original purchase date of the asset. `Required` 
+| [RowVersion](Finance.Assets.Assets.md#rowversion) | byte[] |  
 | [SerialNumber](Finance.Assets.Assets.md#serialnumber) | string (30) __nullable__ | Serial number of the asset. `Filter(eq)` 
 
 ## References
@@ -101,6 +102,12 @@ _Maximum Length_: **254**
 Original purchase date of the asset. `Required`
 
 _Type_: **datetime**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+
+### RowVersion
+
+_Type_: **byte[]**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 

@@ -44,6 +44,7 @@ Aggregate Tree
 | [DocumentDate](Logistics.Wms.WarehouseRequisitions.md#documentdate) | date | The date on which the document was issued. `Required` `Default(Today)` `Filter(eq;ge;le)` `ORD` (Inherited from [Documents](General.Documents.md)) 
 | [DocumentNo](Logistics.Wms.WarehouseRequisitions.md#documentno) | string (20) | Document number, unique within Document_Type_Id. `Required` `Filter(eq;like)` `ORD` (Inherited from [Documents](General.Documents.md)) 
 | [DocumentNotes](Logistics.Wms.WarehouseRequisitions.md#documentnotes) | string (max) __nullable__ | Notes for this Document. (Inherited from [Documents](General.Documents.md)) 
+| [DocumentRowVersion](Logistics.Wms.WarehouseRequisitions.md#documentrowversion) | byte[] |  
 | [DocumentVersion](Logistics.Wms.WarehouseRequisitions.md#documentversion) | int32 | Consecutive version number, starting with 1. Each update produces a new version of the document. `Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [EntityName](Logistics.Wms.WarehouseRequisitions.md#entityname) | string (64) | The entity name of the document header. `Required` `Filter(eq)` `ORD` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [ExpectedDate](Logistics.Wms.WarehouseRequisitions.md#expecteddate) | date | Date, when the requisition is expected to be fulfilled. `Required` `Default(Today)` `Filter(multi eq;ge;le)` 
@@ -56,6 +57,7 @@ Aggregate Tree
 | [ReferenceDocumentNo](Logistics.Wms.WarehouseRequisitions.md#referencedocumentno) | string (20) __nullable__ | The number of the document (issued by the other party), which was the reason for the creation of the current document. The numebr should be unique within the party documents. `Filter(eq;like)` (Inherited from [Documents](General.Documents.md)) 
 | [ReleaseTime](Logistics.Wms.WarehouseRequisitions.md#releasetime) | datetime __nullable__ | Date and time when the document was released (State set to Released). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [RequisitionType](Logistics.Wms.WarehouseRequisitions.md#requisitiontype) | [RequisitionType](Logistics.Wms.WarehouseRequisitions.md#requisitiontype) | The type of the requisition. I=Inbound; O=Outbound. `Required` `Filter(multi eq)` 
+| [RowVersion](Logistics.Wms.WarehouseRequisitions.md#rowversion) | byte[] |  
 | [State](Logistics.Wms.WarehouseRequisitions.md#state) | [DocumentState](Logistics.Wms.WarehouseRequisitions.md#state) | The current system state of the document. Allowed values: 0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed. `Required` `Default(0)` `Filter(multi eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [Void](Logistics.Wms.WarehouseRequisitions.md#void) | boolean | True if the document is null and void. `Required` `Default(false)` `Filter(eq)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [VoidReason](Logistics.Wms.WarehouseRequisitions.md#voidreason) | string (254) __nullable__ | Reason for voiding the document, entered by the user. `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
@@ -185,6 +187,12 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
 
+### DocumentRowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+
 ### DocumentVersion
 
 Consecutive version number, starting with 1. Each update produces a new version of the document. `Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md))
@@ -302,6 +310,12 @@ _Allowed Values (Logistics.Wms.WarehouseRequisitionsRepository.RequisitionType E
 | Outbound | Outbound value. Stored as 'O'. <br /> _Database Value:_ 'O' <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'Outbound' |
 
 _Supported Filters_: **Equals, EqualsIn**  
+_Supports Order By_: **False**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
 ### State

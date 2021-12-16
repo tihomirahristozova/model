@@ -35,12 +35,13 @@ Aggregate Root:
 | [Parameter2Value](Systems.Bpm.CalculatedAttributeExpressions.md#parameter2value) | string (256) __nullable__ | The actual value of the parameter. 
 | [Parameter3Type](Systems.Bpm.CalculatedAttributeExpressions.md#parameter3type) | [ExpressionParameterType](Systems.Bpm.CalculatedAttributeExpressions.md#parameter3type) __nullable__ | The type of the parameter specifies how to obtain the parameter value. 
 | [Parameter3Value](Systems.Bpm.CalculatedAttributeExpressions.md#parameter3value) | string (256) __nullable__ | The actual value of the parameter. 
+| [RowVersion](Systems.Bpm.CalculatedAttributeExpressions.md#rowversion) | byte[] |  
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CalculatedAttribute](Systems.Bpm.CalculatedAttributeExpressions.md#calculatedattribute) | [CalculatedAttributes](Systems.Bpm.CalculatedAttributes.md) | The `CalculatedAttribute`(Systems.Bpm.CalculatedAttribute<br />Expressions.md#calculatedattribute) to which this CalculatedAttribute<br />Expression belongs. `Required` `Filter(multi eq)` `Owner` |
+| [CalculatedAttribute](Systems.Bpm.CalculatedAttributeExpressions.md#calculatedattribute) | [CalculatedAttributes](Systems.Bpm.CalculatedAttributes.md) | The <see cref="Calculated<br />Attribute"/> to which this CalculatedAttribute<br />Expression belongs. `Required` `Filter(multi eq)` `Owner` |
 
 
 ## Attribute Details
@@ -109,8 +110,8 @@ _Allowed Values (Systems.Bpm.ExpressionOperator Enum Members)_
 | LIST | LIST(List, Attribute, Separator) => Returns list with the string values of the specified attribute of the list of objects. The values are separated by the specified separator. Stored as 'LIST'. <br /> _Database Value:_ 'LIST' <br /> _Model Value:_ 22 <br /> _Domain API Value:_ 'LIST' |
 | LEFT | LEFT(String, NumChars) => Gets the first characters of a string.. Stored as 'LEFT'. <br /> _Database Value:_ 'LEFT' <br /> _Model Value:_ 23 <br /> _Domain API Value:_ 'LEFT' |
 | LEN | LEN(String) => Returns the length of the string.. Stored as 'LEN'. <br /> _Database Value:_ 'LEN' <br /> _Model Value:_ 24 <br /> _Domain API Value:_ 'LEN' |
-| LT | _Database Value:_ 'LT' <br /> _Model Value:_ 25 <br /> _Domain API Value:_ 'LT' |
-| LTE | _Database Value:_ 'LTE' <br /> _Model Value:_ 26 <br /> _Domain API Value:_ 'LTE' |
+| LT | LT(Value1, Value2) => Value1 < Value2.. Stored as 'LT'. <br /> _Database Value:_ 'LT' <br /> _Model Value:_ 25 <br /> _Domain API Value:_ 'LT' |
+| LTE | LTE(Value1, Value2) => Value1 <= Value2.. Stored as 'LTE'. <br /> _Database Value:_ 'LTE' <br /> _Model Value:_ 26 <br /> _Domain API Value:_ 'LTE' |
 | MULTIPLY | MULTIPLY(Number1, Number2) => Numer1 * Number2.. Stored as 'MULTIPLY'. <br /> _Database Value:_ 'MULTIPLY' <br /> _Model Value:_ 27 <br /> _Domain API Value:_ 'MULTIPLY' |
 | NOT | NOT(Condition) => NOT Condition.. Stored as 'NOT'. <br /> _Database Value:_ 'NOT' <br /> _Model Value:_ 28 <br /> _Domain API Value:_ 'NOT' |
 | OR | OR(Condition1, Condition2) => Condition1 OR Condition2.. Stored as 'OR'. <br /> _Database Value:_ 'OR' <br /> _Model Value:_ 29 <br /> _Domain API Value:_ 'OR' |
@@ -226,12 +227,18 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Maximum Length_: **256**  
 
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+
 
 ## Reference Details
 
 ### CalculatedAttribute
 
-The `CalculatedAttribute`(Systems.Bpm.CalculatedAttributeExpressions.md#calculatedattribute) to which this CalculatedAttributeExpression belongs. `Required` `Filter(multi eq)` `Owner`
+The <see cref="CalculatedAttribute"/> to which this CalculatedAttributeExpression belongs. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[CalculatedAttributes](Systems.Bpm.CalculatedAttributes.md)**  
 _Indexed_: **True**  

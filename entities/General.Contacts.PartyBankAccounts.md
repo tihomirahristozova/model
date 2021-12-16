@@ -33,12 +33,13 @@ Aggregate Root:
 | [Id](General.Contacts.PartyBankAccounts.md#id) | guid |  
 | [IsDefault](General.Contacts.PartyBankAccounts.md#isdefault) | boolean | True if the this is the default account for the party. Only one default per party is allowed. `Required` `Default(false)` `Filter(eq)` 
 | [Notes](General.Contacts.PartyBankAccounts.md#notes) | string (254) __nullable__ | Notes for this PartyBankAccount. 
+| [RowVersion](General.Contacts.PartyBankAccounts.md#rowversion) | byte[] |  
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Party](General.Contacts.PartyBankAccounts.md#party) | [Parties](General.Contacts.Parties.md) | The `Party`(General.Contacts.PartyBankAccounts.md#party) to which this PartyBankAccount belongs. `Required` `Filter(multi eq)` `Owner` |
+| [Party](General.Contacts.PartyBankAccounts.md#party) | [Parties](General.Contacts.Parties.md) | The <see cref="Party"/> to which this PartyBankAccount belongs. `Required` `Filter(multi eq)` `Owner` |
 
 
 ## Attribute Details
@@ -110,12 +111,18 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
 
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+
 
 ## Reference Details
 
 ### Party
 
-The `Party`(General.Contacts.PartyBankAccounts.md#party) to which this PartyBankAccount belongs. `Required` `Filter(multi eq)` `Owner`
+The <see cref="Party"/> to which this PartyBankAccount belongs. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[Parties](General.Contacts.Parties.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

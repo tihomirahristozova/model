@@ -27,6 +27,7 @@ Aggregate Tree
 | [Id](Crm.Marketing.MarketingSolutions.md#id) | guid |  
 | [Name](Crm.Marketing.MarketingSolutions.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | The name of this MarketingSolution. `Required` `Filter(eq;like)` 
 | [Notes](Crm.Marketing.MarketingSolutions.md#notes) | string (max) __nullable__ | Notes for this MarketingSolution. 
+| [RowVersion](Crm.Marketing.MarketingSolutions.md#rowversion) | byte[] |  
 
 ## References
 
@@ -72,6 +73,12 @@ _Type_: **string (max) __nullable__**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 
 ## Reference Details

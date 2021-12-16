@@ -138,6 +138,11 @@ Default Search Members:<br>
 <td>T=Table (entity) Name; C=Column Name; H=Column Hint; R=Meta Resource; E=Error; M=Message; S=Other application specific String. <code>Required</code> <code>Default(&quot;S&quot;)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
+<td><a href="Systems.Core.Translations.html#rowversion">RowVersion</a></td>
+<td>byte[]</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="Systems.Core.Translations.html#translationfield">TranslationField</a></td>
 <td>string (max)</td>
 <td>The translated text. <code>Required</code></td>
@@ -235,6 +240,10 @@ Allowed values for the <code>ResourceType</code>(Systems.Core.Translations.md#re
 <p><em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>OtherApplicationSpecific</strong></p>
+<h3 id="rowversion">RowVersion</h3>
+<p><em>Type</em>: <strong>byte[]</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="translationfield">TranslationField</h3>
 <p>The translated text. <code>Required</code></p>
 <p><em>Type</em>: <strong>string (max)</strong><br>

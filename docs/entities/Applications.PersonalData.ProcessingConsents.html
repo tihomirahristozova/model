@@ -187,6 +187,11 @@ Default Search Members:<br>
 <td>datetime <strong>nullable</strong></td>
 <td>The date and time (in Utc), when the consent was retracted. Null if the consent is not retracted. <code>Filter(ge;le)</code></td>
 </tr>
+<tr>
+<td><a href="Applications.PersonalData.ProcessingConsents.html#rowversion">RowVersion</a></td>
+<td>byte[]</td>
+<td></td>
+</tr>
 </tbody>
 </table>
 <h2 id="references">References</h2>
@@ -349,6 +354,10 @@ Allowed values for the <code>ConsentType</code>(Applications.PersonalData.Proces
 <p>The date and time (in Utc), when the consent was retracted. Null if the consent is not retracted. <code>Filter(ge;le)</code></p>
 <p><em>Type</em>: <strong>datetime <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="rowversion">RowVersion</h3>
+<p><em>Type</em>: <strong>byte[]</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="person">Person</h3>

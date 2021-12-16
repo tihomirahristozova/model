@@ -143,6 +143,11 @@ Aggregate Root:<br>
 <td>The short description of the operation.</td>
 </tr>
 <tr>
+<td><a href="Production.ShopFloor.WorkOrderItemOperations.html#rowversion">RowVersion</a></td>
+<td>byte[]</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="Production.ShopFloor.WorkOrderItemOperations.html#runtimeminutes">RunTimeMinutes</a></td>
 <td>int32</td>
 <td>Time for production of one lot of the produced item in minutes. <code>Required</code> <code>Default(0)</code></td>
@@ -278,6 +283,10 @@ Aggregate Root:<br>
 <em>Maximum Length</em>: <strong>2147483647</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>obj.Operation.Name</code></p>
+<h3 id="rowversion">RowVersion</h3>
+<p><em>Type</em>: <strong>byte[]</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="runtimeminutes">RunTimeMinutes</h3>
 <p>Time for production of one lot of the produced item in minutes. <code>Required</code> <code>Default(0)</code></p>
 <p><em>Type</em>: <strong>int32</strong><br>

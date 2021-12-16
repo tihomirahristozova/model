@@ -34,6 +34,7 @@ Aggregate Root:
 | [Parameter2Value](Systems.Bpm.UserBusinessRuleActions.md#parameter2value) | string (256) __nullable__ | The actual value of the parameter. 
 | [Parameter3Type](Systems.Bpm.UserBusinessRuleActions.md#parameter3type) | [ActionParameterType](Systems.Bpm.UserBusinessRuleActions.md#parameter3type) __nullable__ | The type of the parameter specifies how to obtain the parameter value. 
 | [Parameter3Value](Systems.Bpm.UserBusinessRuleActions.md#parameter3value) | string (256) __nullable__ | The actual value of the parameter. 
+| [RowVersion](Systems.Bpm.UserBusinessRuleActions.md#rowversion) | byte[] |  
 
 ## References
 
@@ -166,6 +167,12 @@ _Type_: **string (256) __nullable__**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **256**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 
 ## Reference Details

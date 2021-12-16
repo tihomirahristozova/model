@@ -32,13 +32,14 @@ Aggregate Root:
 | [ParentAllowedValueId](General.CustomPropertyAllowedValues.md#parentallowedvalueid) | guid __nullable__ | The value of the parent property, for which this allowed value is valid. `Filter(multi eq)` 
 | [Picture](General.CustomPropertyAllowedValues.md#picture) | byte[] __nullable__ | When not null, specifies a picture representation of the allowed value. 
 | [PropertyAllowedValueField](General.CustomPropertyAllowedValues.md#propertyallowedvaluefield) | string (254) | The actual allowed value. `Required` `Filter(eq;like)` 
+| [RowVersion](General.CustomPropertyAllowedValues.md#rowversion) | byte[] |  
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [EnterpriseCompany](General.CustomPropertyAllowedValues.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | The Enterprise Company to which this CustomPropertyAllowedValue applies, or null if it is for all enterprise companies. `Filter(multi eq)` |
-| [Property](General.CustomPropertyAllowedValues.md#property) | [CustomProperties](General.CustomProperties.md) | The `CustomProperty`(General.CustomProperties.md) to which this CustomPropertyAllowedValue belongs. `Required` `Filter(multi eq)` `Owner` |
+| [Property](General.CustomPropertyAllowedValues.md#property) | [CustomProperties](General.CustomProperties.md) | The <see cref="CustomProperty"/> to which this CustomPropertyAllowedValue belongs. `Required` `Filter(multi eq)` `Owner` |
 
 
 ## Attribute Details
@@ -100,6 +101,12 @@ _Supported Filters_: **Equals, Like**
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
 
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+
 
 ## Reference Details
 
@@ -112,7 +119,7 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### Property
 
-The `CustomProperty`(General.CustomProperties.md) to which this CustomPropertyAllowedValue belongs. `Required` `Filter(multi eq)` `Owner`
+The <see cref="CustomProperty"/> to which this CustomPropertyAllowedValue belongs. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[CustomProperties](General.CustomProperties.md)**  
 _Indexed_: **True**  

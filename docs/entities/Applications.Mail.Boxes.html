@@ -145,6 +145,11 @@ Default Search Members:<br>
 <td>Reset is pending: true = next sync should delete and retrieve again all messages; false = no pending reset. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
+<td><a href="Applications.Mail.Boxes.html#rowversion">RowVersion</a></td>
+<td>byte[]</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="Applications.Mail.Boxes.html#sendserveraddress">SendServerAddress</a></td>
 <td>string (254) <strong>nullable</strong></td>
 <td>The address of the server to use for sending mail. The same credentials as the sync server are used. When null, the mail will be sent using the default server, which is setup at the application server.</td>
@@ -251,6 +256,10 @@ Default Search Members:<br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
+<h3 id="rowversion">RowVersion</h3>
+<p><em>Type</em>: <strong>byte[]</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="sendserveraddress">SendServerAddress</h3>
 <p>The address of the server to use for sending mail. The same credentials as the sync server are used. When null, the mail will be sent using the default server, which is setup at the application server.</p>
 <p><em>Type</em>: <strong>string (254) <strong>nullable</strong></strong><br>

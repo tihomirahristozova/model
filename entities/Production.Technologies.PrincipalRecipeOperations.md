@@ -33,6 +33,7 @@ Aggregate Root:
 | [MoveTimeMinutes](Production.Technologies.PrincipalRecipeOperations.md#movetimeminutes) | int32 | Time to move the lot to the next operation in minutes. `Required` `Default(0)` `Filter(ge;le)` 
 | [Notes](Production.Technologies.PrincipalRecipeOperations.md#notes) | string (254) __nullable__ | Notes for this PrincipalRecipeOperation. 
 | [OperationDescription](Production.Technologies.PrincipalRecipeOperations.md#operationdescription) | string (max) __nullable__ | The description of the operation. Initially copied from the generic operation definition. 
+| [RowVersion](Production.Technologies.PrincipalRecipeOperations.md#rowversion) | byte[] |  
 | [RunTimeMinutes](Production.Technologies.PrincipalRecipeOperations.md#runtimeminutes) | int32 | Duration of the operation for one piece in the standard measurement unit of the product. `Required` `Default(0)` `Filter(ge;le)` 
 | [ScrapRate](Production.Technologies.PrincipalRecipeOperations.md#scraprate) | decimal (7, 6) | Standard rate of scrap during the operation. `Required` `Default(0)` 
 | [SetupTimeMinutes](Production.Technologies.PrincipalRecipeOperations.md#setuptimeminutes) | int32 | Time needed to setup the equipment. `Required` `Default(0)` `Filter(ge;le)` 
@@ -47,7 +48,7 @@ Aggregate Root:
 | [ConditionalProperty](Production.Technologies.PrincipalRecipeOperations.md#conditionalproperty) | [CustomProperties](General.CustomProperties.md) (nullable) | When not null, specifies that, when creating recipe, the operation will be added only if this property is set for the main product. `Filter(multi eq)` |
 | [Operation](Production.Technologies.PrincipalRecipeOperations.md#operation) | [Operations](Production.Resources.Operations.md) (nullable) | The generic operation definition. The data is copied locally and can be modified for this specific record. `Filter(multi eq)` |
 | [OperationInstruction](Production.Technologies.PrincipalRecipeOperations.md#operationinstruction) | [OperationInstructions](Production.Resources.OperationInstructions.md) (nullable) | Link to additional data, containing instructions in external format. `Filter(multi eq)` |
-| [PrincipalRecipe](Production.Technologies.PrincipalRecipeOperations.md#principalrecipe) | [PrincipalRecipes](Production.Technologies.PrincipalRecipes.md) | The `PrincipalRecipe`(Production.Technologies.PrincipalRecipeOperations.md#principalrecipe) to which this PrincipalRecipeOperation belongs. `Required` `Filter(multi eq)` `Owner` |
+| [PrincipalRecipe](Production.Technologies.PrincipalRecipeOperations.md#principalrecipe) | [PrincipalRecipes](Production.Technologies.PrincipalRecipes.md) | The <see cref="PrincipalRecipe"/> to which this PrincipalRecipeOperation belongs. `Required` `Filter(multi eq)` `Owner` |
 | [UseQuantityUnit](Production.Technologies.PrincipalRecipeOperations.md#usequantityunit) | [MeasurementUnits](General.MeasurementUnits.md) | The measurement unit of Use_Quantity. `Required` `Filter(multi eq)` |
 | [WorkgroupResource](Production.Technologies.PrincipalRecipeOperations.md#workgroupresource) | [WorkgroupResources](Production.Resources.WorkgroupResources.md) | Required workgroup resource for the operation. null means that no resource is required or the resource will be specified later. `Required` `Filter(multi eq)` |
 
@@ -130,6 +131,12 @@ _Maximum Length_: **2147483647**
 
 _Front-End Recalc Expressions:_  
 `obj.Operation.Description`
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+
 ### RunTimeMinutes
 
 Duration of the operation for one piece in the standard measurement unit of the product. `Required` `Default(0)` `Filter(ge;le)`
@@ -218,7 +225,7 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### PrincipalRecipe
 
-The `PrincipalRecipe`(Production.Technologies.PrincipalRecipeOperations.md#principalrecipe) to which this PrincipalRecipeOperation belongs. `Required` `Filter(multi eq)` `Owner`
+The <see cref="PrincipalRecipe"/> to which this PrincipalRecipeOperation belongs. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[PrincipalRecipes](Production.Technologies.PrincipalRecipes.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

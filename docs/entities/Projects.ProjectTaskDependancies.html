@@ -112,6 +112,11 @@ Aggregate Root:<br>
 <td>guid</td>
 <td></td>
 </tr>
+<tr>
+<td><a href="Projects.ProjectTaskDependancies.html#rowversion">RowVersion</a></td>
+<td>byte[]</td>
+<td></td>
+</tr>
 </tbody>
 </table>
 <h2 id="references">References</h2>
@@ -180,6 +185,10 @@ Allowed values for the <code>DependancyType</code>(Projects.ProjectTaskDependanc
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
+<h3 id="rowversion">RowVersion</h3>
+<p><em>Type</em>: <strong>byte[]</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="dependsontask">DependsOnTask</h3>
 <p>The task on which Project_Task depends. <code>Required</code> <code>Filter(multi eq)</code></p>

@@ -140,6 +140,11 @@ Default Search Members:<br>
 <td>Consecutive task number, unique within the project. <code>Required</code></td>
 </tr>
 <tr>
+<td><a href="Projects.ProjectTasks.html#rowversion">RowVersion</a></td>
+<td>byte[]</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="Projects.ProjectTasks.html#startdatetime">StartDateTime</a></td>
 <td>datetime</td>
 <td>The date and time when the task is planned to start. <code>Required</code> <code>Default(Now)</code> <code>Filter(eq;ge;le)</code></td>
@@ -264,6 +269,10 @@ Default Search Members:<br>
 <h3 id="projecttaskno">ProjectTaskNo</h3>
 <p>Consecutive task number, unique within the project. <code>Required</code></p>
 <p><em>Type</em>: <strong>int32</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="rowversion">RowVersion</h3>
+<p><em>Type</em>: <strong>byte[]</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="startdatetime">StartDateTime</h3>

@@ -29,6 +29,7 @@ Aggregate Root:
 | [AmountPerUnit](Crm.Pricing.PricingModelCosts.md#amountperunit) | [Amount (9, 2)](../data-types.md#amount) __nullable__ | Used when the cost is calculated as amount per unit of the product. The unit is defined in Measurement_Unit_Id. null when the cost is calculated in a different way. `Currency: PricingModel.Currency` 
 | [Id](Crm.Pricing.PricingModelCosts.md#id) | guid |  
 | [LineNo](Crm.Pricing.PricingModelCosts.md#lineno) | int32 | The consequtive number of the cost within the pricing model. `Required` 
+| [RowVersion](Crm.Pricing.PricingModelCosts.md#rowversion) | byte[] |  
 
 ## References
 
@@ -77,6 +78,12 @@ _Back-End Default Expression:_
 
 _Front-End Recalc Expressions:_  
 `( obj.PricingModel.Costs.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)`
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+
 
 ## Reference Details
 

@@ -134,6 +134,11 @@ Default Search Members:<br>
 <td>string (32) <strong>nullable</strong></td>
 <td>Registration number of the asset with the national registration authorities. null means the registation number is unknown or N/A. <code>Filter(eq;like)</code></td>
 </tr>
+<tr>
+<td><a href="Applications.AssetManagement.ManagedAssets.html#rowversion">RowVersion</a></td>
+<td>byte[]</td>
+<td></td>
+</tr>
 </tbody>
 </table>
 <h2 id="references">References</h2>
@@ -224,6 +229,10 @@ Default Search Members:<br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>32</strong></p>
+<h3 id="rowversion">RowVersion</h3>
+<p><em>Type</em>: <strong>byte[]</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="enterprisecompany">EnterpriseCompany</h3>
 <p>The enterprise company to which the managed asset belongs. <code>Required</code> <code>Filter(multi eq)</code></p>

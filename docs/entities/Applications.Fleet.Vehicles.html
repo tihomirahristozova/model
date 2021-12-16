@@ -203,6 +203,11 @@ Default Search Members:<br>
 <td>The primary color of the vehicle. null means that the value is unknown or not applicable. <code>Filter(eq;like)</code></td>
 </tr>
 <tr>
+<td><a href="Applications.Fleet.Vehicles.html#rowversion">RowVersion</a></td>
+<td>byte[]</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="Applications.Fleet.Vehicles.html#seatingplacescount">SeatingPlacesCount</a></td>
 <td>int32 <strong>nullable</strong></td>
 <td>Number of seating places, excluding driver. <code>Filter(eq;ge;le)</code></td>
@@ -398,6 +403,10 @@ Default Search Members:<br>
 <p>The primary color of the vehicle. null means that the value is unknown or not applicable. <code>Filter(eq;like)</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a> <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="rowversion">RowVersion</h3>
+<p><em>Type</em>: <strong>byte[]</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="seatingplacescount">SeatingPlacesCount</h3>
 <p>Number of seating places, excluding driver. <code>Filter(eq;ge;le)</code></p>

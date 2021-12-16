@@ -27,6 +27,7 @@ Aggregate Tree
 | [IsActive](Crm.Pos.Sequences.md#isactive) | boolean | Indicates whether this sequence is active. `Required` `Default(true)` `Filter(multi eq)` 
 | [MaxNo](Crm.Pos.Sequences.md#maxno) | string (16) __nullable__ | Specifies the maximum number allowed in the sequence. null means that the sequence will grow unlimited. `Filter(multi eq;ge;le)` 
 | [NextNo](Crm.Pos.Sequences.md#nextno) | string (16) | The next consecutive number which will be assigned on the next request. `Required` `Filter(multi eq;ge;le)` 
+| [RowVersion](Crm.Pos.Sequences.md#rowversion) | byte[] |  
 
 ## References
 
@@ -70,6 +71,12 @@ _Type_: **string (16)**
 _Supported Filters_: **Equals, GreaterThanOrLessThan, EqualsIn**  
 _Supports Order By_: **False**  
 _Maximum Length_: **16**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 
 ## Reference Details

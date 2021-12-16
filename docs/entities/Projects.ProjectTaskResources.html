@@ -143,6 +143,11 @@ Aggregate Root:<br>
 <td>The planned resource usage for this activity in percents. Values of more than 100% are allowed when more than 1 resource is required. <code>Required</code> <code>Default(1)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
+<td><a href="Projects.ProjectTaskResources.html#rowversion">RowVersion</a></td>
+<td>byte[]</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="Projects.ProjectTaskResources.html#tasktotalcost">TaskTotalCost</a></td>
 <td>decimal (14, 2)</td>
 <td>Total cost for this task (in the currency of the project). <code>Required</code> <code>Default(0)</code> <code>Filter(eq)</code></td>
@@ -231,6 +236,10 @@ Aggregate Root:<br>
 <em>Default Value</em>: <strong>1</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>IIF( ( obj.ProjectTask.PlannedDurationHours == 0), 0, ( obj.ResourceUsageHours / obj.ProjectTask.PlannedDurationHours))</code></p>
+<h3 id="rowversion">RowVersion</h3>
+<p><em>Type</em>: <strong>byte[]</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="tasktotalcost">TaskTotalCost</h3>
 <p>Total cost for this task (in the currency of the project). <code>Required</code> <code>Default(0)</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong>decimal (14, 2)</strong><br>

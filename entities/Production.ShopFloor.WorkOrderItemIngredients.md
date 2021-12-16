@@ -30,6 +30,7 @@ Aggregate Root:
 | [Id](Production.ShopFloor.WorkOrderItemIngredients.md#id) | guid |  
 | [LineOrd](Production.ShopFloor.WorkOrderItemIngredients.md#lineord) | int32 | The order of the line within the item. `Required` `Filter(eq;like)` 
 | [Notes](Production.ShopFloor.WorkOrderItemIngredients.md#notes) | string (254) __nullable__ | Notes for this WorkOrderItemIngredient. 
+| [RowVersion](Production.ShopFloor.WorkOrderItemIngredients.md#rowversion) | byte[] |  
 | [UsedQuantity](Production.ShopFloor.WorkOrderItemIngredients.md#usedquantity) | [Quantity (18, 3)](../data-types.md#quantity) | The quantity of the material consumed in the operation. `Unit: UsedQuantityUnit` `Required` `Default(1)` 
 | [UsedQuantityBase](Production.ShopFloor.WorkOrderItemIngredients.md#usedquantitybase) | [Quantity (18, 3)](../data-types.md#quantity) | The equivalence of Used Quantity in the base measurement category of the material. `Unit: Material.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` 
 | [UsedStandardQuantityBase](Production.ShopFloor.WorkOrderItemIngredients.md#usedstandardquantitybase) | [Quantity (18, 3)](../data-types.md#quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions of the product. Used to measure the execution. null means to take the value from Used Quantity Base. `Unit: Material.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` `Introduced in version 18.2` 
@@ -39,7 +40,7 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [DistributeByMeasurement<br />Category](Production.ShopFloor.WorkOrderItemIngredients.md#distributebymeasurementcategory) | [MeasurementCategories](General.MeasurementCategories.md) (nullable) | Measurement category by which the materials from the line are distributed amongst all work order items in case Distribute_By = MC. Should be NOT null iif Distribute_By = MC. `Filter(multi eq)` |
-| [Document](Production.ShopFloor.WorkOrderItemIngredients.md#document) | [WorkOrders](Production.ShopFloor.WorkOrders.md) | The `WorkOrder`(Production.ShopFloor.WorkOrderItemIngredients.md#workorder) to which this WorkOrderItemIngredient belongs. `Required` `Filter(multi eq)` |
+| [Document](Production.ShopFloor.WorkOrderItemIngredients.md#document) | [WorkOrders](Production.ShopFloor.WorkOrders.md) | The <see cref="WorkOrder"/> to which this WorkOrderItemIngredient belongs. `Required` `Filter(multi eq)` |
 | [Lot](Production.ShopFloor.WorkOrderItemIngredients.md#lot) | [Lots](Logistics.Inventory.Lots.md) (nullable) | Lot from which to get the material. When null, any lot can be used. `Filter(multi eq)` |
 | [Material](Production.ShopFloor.WorkOrderItemIngredients.md#material) | [Products](General.Products.Products.md) | The Id of the consumed material (Gen_Products_Table). `Required` `Filter(multi eq)` |
 | [Operation](Production.ShopFloor.WorkOrderItemIngredients.md#operation) | [Operations](Production.Resources.Operations.md) (nullable) | Specifies for which operation this ingredient is used. `Filter(multi eq)` |
@@ -49,7 +50,7 @@ Aggregate Root:
 | [Store](Production.ShopFloor.WorkOrderItemIngredients.md#store) | [Stores](Logistics.Inventory.Stores.md) (nullable) | The store from which to retrieve the material. `Filter(multi eq)` |
 | [StoreBin](Production.ShopFloor.WorkOrderItemIngredients.md#storebin) | [StoreBins](Logistics.Inventory.StoreBins.md) (nullable) | The store bin from which to take the ingredients. `Filter(multi eq)` |
 | [UsedQuantityUnit](Production.ShopFloor.WorkOrderItemIngredients.md#usedquantityunit) | [MeasurementUnits](General.MeasurementUnits.md) | The measurement unit of the quantity of the material consumed in the operation. `Required` `Filter(multi eq)` |
-| [WorkOrder](Production.ShopFloor.WorkOrderItemIngredients.md#workorder) | [WorkOrders](Production.ShopFloor.WorkOrders.md) | The `WorkOrder`(Production.ShopFloor.WorkOrderItemIngredients.md#workorder) to which this WorkOrderItemIngredient belongs. `Required` `Filter(multi eq)` `Owner` |
+| [WorkOrder](Production.ShopFloor.WorkOrderItemIngredients.md#workorder) | [WorkOrders](Production.ShopFloor.WorkOrders.md) | The <see cref="WorkOrder"/> to which this WorkOrderItemIngredient belongs. `Required` `Filter(multi eq)` `Owner` |
 | [WorkOrderItem](Production.ShopFloor.WorkOrderItemIngredients.md#workorderitem) | [WorkOrderItems](Production.ShopFloor.WorkOrderItems.md) (nullable) | The work order item for which the materials in this line are used. If null means that the materials are distributed amongst all work order items in the document. `Filter(multi eq)` |
 
 
@@ -112,6 +113,12 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
 
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+
 ### UsedQuantity
 
 The quantity of the material consumed in the operation. `Unit: UsedQuantityUnit` `Required` `Default(1)`
@@ -161,7 +168,7 @@ _Front-End Recalc Expressions:_
 `IIF( ( ( obj.DistributeBy == null) OrElse ( Convert( obj.DistributeBy.Value, Int32) != 1)), null, obj.DistributeByMeasurementCategory)`
 ### Document
 
-The `WorkOrder`(Production.ShopFloor.WorkOrderItemIngredients.md#workorder) to which this WorkOrderItemIngredient belongs. `Required` `Filter(multi eq)`
+The <see cref="WorkOrder"/> to which this WorkOrderItemIngredient belongs. `Required` `Filter(multi eq)`
 
 _Type_: **[WorkOrders](Production.ShopFloor.WorkOrders.md)**  
 _Indexed_: **True**  
@@ -249,7 +256,7 @@ _Front-End Recalc Expressions:_
 `obj.ProductCode.CodingSystem.DefaultMeasurementUnit.IfNullThen( obj.Material.MeasurementUnit.IfNullThen( obj.UsedQuantityUnit))`
 ### WorkOrder
 
-The `WorkOrder`(Production.ShopFloor.WorkOrderItemIngredients.md#workorder) to which this WorkOrderItemIngredient belongs. `Required` `Filter(multi eq)` `Owner`
+The <see cref="WorkOrder"/> to which this WorkOrderItemIngredient belongs. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[WorkOrders](Production.ShopFloor.WorkOrders.md)**  
 _Indexed_: **True**  

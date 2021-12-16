@@ -27,6 +27,7 @@ Aggregate Tree
 | [Id](Finance.Vat.BoxTypes.md#id) | guid |  
 | [Name](Finance.Vat.BoxTypes.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | The name for this box type. (Miltilanguage string). `Required` `Filter(like)` 
 | [Notes](Finance.Vat.BoxTypes.md#notes) | string (max) __nullable__ | Notes for this BoxType. 
+| [RowVersion](Finance.Vat.BoxTypes.md#rowversion) | byte[] |  
 
 ## References
 
@@ -69,6 +70,12 @@ _Type_: **string (max) __nullable__**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 
 ## Reference Details

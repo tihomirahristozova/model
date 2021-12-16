@@ -113,6 +113,11 @@ Aggregate Root:<br>
 <td></td>
 </tr>
 <tr>
+<td><a href="Applications.Mail.BoxFolders.html#rowversion">RowVersion</a></td>
+<td>byte[]</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="Applications.Mail.BoxFolders.html#serverfolderid">ServerFolderID</a></td>
 <td>string (256) <strong>nullable</strong></td>
 <td>ID of the folder on the mail server in the format of the mail server. <code>Filter(eq)</code></td>
@@ -142,7 +147,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Applications.Mail.BoxFolders.html#mailbox">MailBox</a></td>
 <td><a href="Applications.Mail.Boxes.html">Boxes</a></td>
-<td>The <code>Box</code>(Applications.Mail.Boxes.md) to which this BoxFolder belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>ReadOnly</code> <code>Owner</code></td>
+<td>The <see cref="Box"></see> to which this BoxFolder belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>ReadOnly</code> <code>Owner</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Mail.BoxFolders.html#parentfolder">ParentFolder</a></td>
@@ -179,6 +184,10 @@ Aggregate Root:<br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
+<h3 id="rowversion">RowVersion</h3>
+<p><em>Type</em>: <strong>byte[]</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="serverfolderid">ServerFolderID</h3>
 <p>ID of the folder on the mail server in the format of the mail server. <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong>string (256) <strong>nullable</strong></strong><br>
@@ -234,7 +243,7 @@ Allowed values for the <code>SystemPurpose</code>(Applications.Mail.BoxFolders.m
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="mailbox">MailBox</h3>
-<p>The <code>Box</code>(Applications.Mail.Boxes.md) to which this BoxFolder belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>ReadOnly</code> <code>Owner</code></p>
+<p>The <see cref="Box"></see> to which this BoxFolder belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>ReadOnly</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="Applications.Mail.Boxes.html">Boxes</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>

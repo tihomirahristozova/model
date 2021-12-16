@@ -38,6 +38,7 @@ Aggregate Root:
 | [Permission7](Systems.Security.UserAccessKeys.md#permission7) | boolean | Obsolete. Not used. `Required` `Default(false)` 
 | [Permission8](Systems.Security.UserAccessKeys.md#permission8) | boolean | Obsolete. Not used. `Required` `Default(false)` 
 | [Permission9](Systems.Security.UserAccessKeys.md#permission9) | boolean | Obsolete. Not used. `Required` `Default(false)` 
+| [RowVersion](Systems.Security.UserAccessKeys.md#rowversion) | byte[] |  
 
 ## References
 
@@ -161,6 +162,12 @@ _Type_: **boolean**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **False**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 
 ## Reference Details

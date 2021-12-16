@@ -29,6 +29,7 @@ Aggregate Tree
 | [Id](Systems.Security.Groups.md#id) | guid |  
 | [Name](Systems.Security.Groups.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | The name of this Group. `Required` `Filter(like)` `ORD` 
 | [Notes](Systems.Security.Groups.md#notes) | string (254) __nullable__ | Notes for this Group. 
+| [RowVersion](Systems.Security.Groups.md#rowversion) | byte[] |  
 
 ## References
 
@@ -95,6 +96,12 @@ _Type_: **string (254) __nullable__**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 
 ## Reference Details

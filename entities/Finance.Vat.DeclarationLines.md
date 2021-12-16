@@ -29,14 +29,15 @@ Aggregate Root:
 | [Id](Finance.Vat.DeclarationLines.md#id) | guid |  
 | [LineNo](Finance.Vat.DeclarationLines.md#lineno) | int32 | Consecutive line number within the document. `Required` 
 | [Notes](Finance.Vat.DeclarationLines.md#notes) | string (max) __nullable__ | Notes for this DeclarationLine. 
+| [RowVersion](Finance.Vat.DeclarationLines.md#rowversion) | byte[] |  
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [BoxType](Finance.Vat.DeclarationLines.md#boxtype) | [BoxTypes](Finance.Vat.BoxTypes.md) | Type of box in VAT declaration. . `Required` `Filter(multi eq)` |
-| [Declaration](Finance.Vat.DeclarationLines.md#declaration) | [Declarations](Finance.Vat.Declarations.md) | The `Declaration`(Finance.Vat.DeclarationLines.md#declaration) to which this DeclarationLine belongs. `Required` `Filter(multi eq)` `Owner` |
-| [Document](Finance.Vat.DeclarationLines.md#document) | [Declarations](Finance.Vat.Declarations.md) | The `Declaration`(Finance.Vat.DeclarationLines.md#declaration) to which this DeclarationLine belongs. `Required` `Filter(multi eq)` |
+| [Declaration](Finance.Vat.DeclarationLines.md#declaration) | [Declarations](Finance.Vat.Declarations.md) | The <see cref="Declaration"/> to which this DeclarationLine belongs. `Required` `Filter(multi eq)` `Owner` |
+| [Document](Finance.Vat.DeclarationLines.md#document) | [Declarations](Finance.Vat.Declarations.md) | The <see cref="Declaration"/> to which this DeclarationLine belongs. `Required` `Filter(multi eq)` |
 
 
 ## Attribute Details
@@ -79,6 +80,12 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
 
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+
 
 ## Reference Details
 
@@ -91,7 +98,7 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### Declaration
 
-The `Declaration`(Finance.Vat.DeclarationLines.md#declaration) to which this DeclarationLine belongs. `Required` `Filter(multi eq)` `Owner`
+The <see cref="Declaration"/> to which this DeclarationLine belongs. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[Declarations](Finance.Vat.Declarations.md)**  
 _Indexed_: **True**  
@@ -100,7 +107,7 @@ _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-reference
 
 ### Document
 
-The `Declaration`(Finance.Vat.DeclarationLines.md#declaration) to which this DeclarationLine belongs. `Required` `Filter(multi eq)`
+The <see cref="Declaration"/> to which this DeclarationLine belongs. `Required` `Filter(multi eq)`
 
 _Type_: **[Declarations](Finance.Vat.Declarations.md)**  
 _Indexed_: **True**  

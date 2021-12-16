@@ -29,6 +29,7 @@ Aggregate Root:
 | [Id](Applications.Service.ServiceAgreementServices.md#id) | guid |  
 | [LineNo](Applications.Service.ServiceAgreementServices.md#lineno) | int32 | Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc. `Required` 
 | [Quantity](Applications.Service.ServiceAgreementServices.md#quantity) | [Quantity (18, 3)](../data-types.md#quantity) | Quantity of the agreed servcice or product. `Unit: QuantityUnit` `Required` 
+| [RowVersion](Applications.Service.ServiceAgreementServices.md#rowversion) | byte[] |  
 | [StartDate](Applications.Service.ServiceAgreementServices.md#startdate) | datetime __nullable__ | Start date from which the agreedment for the service or product is valid. For the agreement period, the service could be performed free of charge in service activities. 
 
 ## References
@@ -37,7 +38,7 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [QuantityUnit](Applications.Service.ServiceAgreementServices.md#quantityunit) | [MeasurementUnits](General.MeasurementUnits.md) | The measurement unit of Quantity. `Required` `Filter(multi eq)` |
 | [Service](Applications.Service.ServiceAgreementServices.md#service) | [Services](Applications.Service.Services.md) (nullable) | Paid or agreed in advance service that won't be invoiced after service activities (if Service_Id is filled then Service_Product_Id must be null). `Filter(multi eq)` |
-| [ServiceAgreement](Applications.Service.ServiceAgreementServices.md#serviceagreement) | [ServiceAgreements](Applications.Service.ServiceAgreements.md) | The `ServiceAgreement`(Applications.Service.ServiceAgreementServices.md#serviceagreement) to which this ServiceAgreementService belongs. `Required` `Filter(multi eq)` `Owner` |
+| [ServiceAgreement](Applications.Service.ServiceAgreementServices.md#serviceagreement) | [ServiceAgreements](Applications.Service.ServiceAgreements.md) | The <see cref="ServiceAgreement"/> to which this ServiceAgreementService belongs. `Required` `Filter(multi eq)` `Owner` |
 | [ServiceProduct](Applications.Service.ServiceAgreementServices.md#serviceproduct) | [Products](General.Products.Products.md) (nullable) | Paid or agreed in advance product that will be substracted from the invoiced products from service activities (if Service_Product_Id is filled then Service_Id must be null). `Filter(multi eq)` |
 
 
@@ -79,6 +80,12 @@ _Type_: **[Quantity (18, 3)](../data-types.md#quantity)**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+
 ### StartDate
 
 Start date from which the agreedment for the service or product is valid. For the agreement period, the service could be performed free of charge in service activities.
@@ -110,7 +117,7 @@ _Front-End Recalc Expressions:_
 `IIF( ( obj.ServiceProduct != null), null, obj.Service)`
 ### ServiceAgreement
 
-The `ServiceAgreement`(Applications.Service.ServiceAgreementServices.md#serviceagreement) to which this ServiceAgreementService belongs. `Required` `Filter(multi eq)` `Owner`
+The <see cref="ServiceAgreement"/> to which this ServiceAgreementService belongs. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[ServiceAgreements](Applications.Service.ServiceAgreements.md)**  
 _Indexed_: **True**  

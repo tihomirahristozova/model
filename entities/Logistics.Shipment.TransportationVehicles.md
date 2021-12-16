@@ -30,6 +30,7 @@ Aggregate Root:
 | [MaxCargoWeightKg](Logistics.Shipment.TransportationVehicles.md#maxcargoweightkg) | int32 __nullable__ | The maximum weight of the cargo (in kg), which can be transported. null when this is unknown and no limit should be enforced. 
 | [MaxPalletsCount](Logistics.Shipment.TransportationVehicles.md#maxpalletscount) | int32 __nullable__ | The maximum number of pallets, which can be transported by the vehicle. null when this is unknown and no limit should be enforced. 
 | [Notes](Logistics.Shipment.TransportationVehicles.md#notes) | string (max) __nullable__ | Notes for this TransportationVehicle. 
+| [RowVersion](Logistics.Shipment.TransportationVehicles.md#rowversion) | byte[] |  
 
 ## References
 
@@ -85,6 +86,12 @@ _Type_: **string (max) __nullable__**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 
 ## Reference Details

@@ -119,6 +119,11 @@ Default Search Members:<br>
 <td>Specifies whether the job is active and ready for running. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code> (Inherited from <a href="Systems.Core.Jobs.html">Jobs</a>)</td>
 </tr>
 <tr>
+<td><a href="General.DocumentJobs.html#jobrowversion">JobRowVersion</a></td>
+<td>byte[]</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="General.DocumentJobs.html#jobtype">JobType</a></td>
 <td><a href="General.DocumentJobs.html#jobtype">JobType</a></td>
 <td>The system type of the job. DOC=Document Change State, POS=Run Postponed Events, DNT=Delete Old Notifications. <code>Required</code> <code>Filter(multi eq)</code> (Inherited from <a href="Systems.Core.Jobs.html">Jobs</a>)</td>
@@ -137,6 +142,11 @@ Default Search Members:<br>
 <td><a href="General.DocumentJobs.html#notes">Notes</a></td>
 <td>string (max) <strong>nullable</strong></td>
 <td>Notes for this Job. (Inherited from <a href="Systems.Core.Jobs.html">Jobs</a>)</td>
+</tr>
+<tr>
+<td><a href="General.DocumentJobs.html#rowversion">RowVersion</a></td>
+<td>byte[]</td>
+<td></td>
 </tr>
 <tr>
 <td><a href="General.DocumentJobs.html#runonidle">RunOnIdle</a></td>
@@ -184,6 +194,10 @@ Default Search Members:<br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>True</strong></p>
+<h3 id="jobrowversion">JobRowVersion</h3>
+<p><em>Type</em>: <strong>byte[]</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="jobtype">JobType</h3>
 <p>The system type of the job. DOC=Document Change State, POS=Run Postponed Events, DNT=Delete Old Notifications. <code>Required</code> <code>Filter(multi eq)</code> (Inherited from <a href="Systems.Core.Jobs.html">Jobs</a>)</p>
 <p><em>Type</em>: <strong><a href="General.DocumentJobs.html#jobtype">JobType</a></strong><br>
@@ -275,6 +289,10 @@ Enumeration of document system states<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>2147483647</strong></p>
+<h3 id="rowversion">RowVersion</h3>
+<p><em>Type</em>: <strong>byte[]</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="runonidle">RunOnIdle</h3>
 <p>Specifies whether to automatically run the job when the server is idle. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code> (Inherited from <a href="Systems.Core.Jobs.html">Jobs</a>)</p>
 <p><em>Type</em>: <strong>boolean</strong><br>

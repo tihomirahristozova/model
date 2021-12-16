@@ -47,6 +47,7 @@ Aggregate Root:
 | [QuantityBase](Crm.Sales.SalesOrderLines.md#quantitybase) | [Quantity (12, 3)](../data-types.md#quantity) | The equivalent of Quantity in the base measurement category of the product. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` 
 | [RequestedQuantity](Crm.Sales.SalesOrderLines.md#requestedquantity) | [Quantity (12, 3)](../data-types.md#quantity) __nullable__ | Quantity requested by customer. `Unit: QuantityUnit` 
 | [RequiredDeliveryDate](Crm.Sales.SalesOrderLines.md#requireddeliverydate) | date __nullable__ | The required (contracted) delivery date for the line. `Filter(ge;le)` 
+| [RowVersion](Crm.Sales.SalesOrderLines.md#rowversion) | byte[] |  
 | [StandardQuantityBase](Crm.Sales.SalesOrderLines.md#standardquantitybase) | [Quantity (12, 3)](../data-types.md#quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` `Introduced in version 18.2` 
 | [StandardUnitPrice](Crm.Sales.SalesOrderLines.md#standardunitprice) | [Amount (14, 5)](../data-types.md#amount) __nullable__ | Standard unit price of the product during the creation of the sales order line. `Currency: SalesOrder.DocumentCurrency` `ReadOnly` 
 | [UnitPrice](Crm.Sales.SalesOrderLines.md#unitprice) | [Amount (14, 5)](../data-types.md#amount) | Unit price of the product in the currency of the sales order and in the unit of measure, as specified by QuantityUnitId. `Currency: SalesOrder.DocumentCurrency` `Required` `Default(0)` 
@@ -56,7 +57,7 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [BonusProgram](Crm.Sales.SalesOrderLines.md#bonusprogram) | [BonusPrograms](Crm.Marketing.BonusPrograms.md) (nullable) | The bonus program, based on which the line was automatically added. null when the line was not added for bonus program. `Filter(multi eq)` |
-| [Document](Crm.Sales.SalesOrderLines.md#document) | [SalesOrders](Crm.Sales.SalesOrders.md) | The `SalesOrder`(Crm.Sales.SalesOrderLines.md#salesorder) to which this SalesOrderLine belongs. `Required` `Filter(multi eq)` |
+| [Document](Crm.Sales.SalesOrderLines.md#document) | [SalesOrders](Crm.Sales.SalesOrders.md) | The <see cref="SalesOrder"/> to which this SalesOrderLine belongs. `Required` `Filter(multi eq)` |
 | [IntrastatTransportCountry](Crm.Sales.SalesOrderLines.md#intrastattransportcountry) | [Countries](General.Geography.Countries.md) (nullable) | Country of origin of the transport company; used for Intrastat reporting. `Filter(multi eq)` |
 | [LineDealType](Crm.Sales.SalesOrderLines.md#linedealtype) | [DealTypes](Finance.Vat.DealTypes.md) (nullable) | Deal type to be passed to the invoice line. If deal type in entered then the invoice creates VAT entry for this deal type. `Filter(multi eq)` |
 | [LineDiscount](Crm.Sales.SalesOrderLines.md#linediscount) | [LineDiscounts](Crm.LineDiscounts.md) (nullable) | The line discount type used to form the Line_Standard_<br />Discount_Percent. `Filter(multi eq)` |
@@ -72,7 +73,7 @@ Aggregate Root:
 | [QuantityUnit](Crm.Sales.SalesOrderLines.md#quantityunit) | [MeasurementUnits](General.MeasurementUnits.md) | The measurement unit of Quantity. `Required` `Filter(multi eq)` |
 | [ReturnForInvoiceLine](Crm.Sales.SalesOrderLines.md#returnforinvoiceline) | [InvoiceLines](Crm.Invoicing.InvoiceLines.md) (nullable) | When specified, indicates that the current line is a return for products, invoiced with the specified invoice line. `Filter(multi eq)` |
 | [ReturnForSalesOrderLine](Crm.Sales.SalesOrderLines.md#returnforsalesorderline) | [SalesOrderLines](Crm.Sales.SalesOrderLines.md) (nullable) | When specified indicates that the goods sold in Return_For_Sales_<br />Order_Line_Id are returned with the current line. `Filter(multi eq)` |
-| [SalesOrder](Crm.Sales.SalesOrderLines.md#salesorder) | [SalesOrders](Crm.Sales.SalesOrders.md) | The `SalesOrder`(Crm.Sales.SalesOrderLines.md#salesorder) to which this SalesOrderLine belongs. `Required` `Filter(multi eq)` `Owner` |
+| [SalesOrder](Crm.Sales.SalesOrderLines.md#salesorder) | [SalesOrders](Crm.Sales.SalesOrders.md) | The <see cref="SalesOrder"/> to which this SalesOrderLine belongs. `Required` `Filter(multi eq)` `Owner` |
 | [SerialNumber](Crm.Sales.SalesOrderLines.md#serialnumber) | [SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable) | Which serial number to receive/issue. null means that serial number is unknown or not applicable. `Filter(multi eq)` |
 | [StoreBin](Crm.Sales.SalesOrderLines.md#storebin) | [StoreBins](Logistics.Inventory.StoreBins.md) (nullable) | The bin from which the goods should be withdrawn. null means that the bin will be specified at a later stage (store order, etc.). `Filter(multi eq)` |
 
@@ -380,6 +381,12 @@ _Back-End Default Expression:_
 
 _Front-End Recalc Expressions:_  
 `obj.SalesOrder.RequiredDeliveryDate`
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+
 ### StandardQuantityBase
 
 The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` `Introduced in version 18.2`
@@ -434,7 +441,7 @@ _Front-End Recalc Expressions:_
 `IIF( ( obj.ReturnForSalesOrderLine != null), null, obj.BonusProgram)`
 ### Document
 
-The `SalesOrder`(Crm.Sales.SalesOrderLines.md#salesorder) to which this SalesOrderLine belongs. `Required` `Filter(multi eq)`
+The <see cref="SalesOrder"/> to which this SalesOrderLine belongs. `Required` `Filter(multi eq)`
 
 _Type_: **[SalesOrders](Crm.Sales.SalesOrders.md)**  
 _Indexed_: **True**  
@@ -587,7 +594,7 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### SalesOrder
 
-The `SalesOrder`(Crm.Sales.SalesOrderLines.md#salesorder) to which this SalesOrderLine belongs. `Required` `Filter(multi eq)` `Owner`
+The <see cref="SalesOrder"/> to which this SalesOrderLine belongs. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[SalesOrders](Crm.Sales.SalesOrders.md)**  
 _Indexed_: **True**  

@@ -118,6 +118,11 @@ Aggregate Root:<br>
 <td>Priority of the allocation. 1=Lowest ... 5=Highest. <code>Required</code> <code>Default(3)</code></td>
 </tr>
 <tr>
+<td><a href="Production.Resources.Load.html#rowversion">RowVersion</a></td>
+<td>byte[]</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="Production.Resources.Load.html#timetype">TimeType</a></td>
 <td><a href="Production.Resources.Load.html#timetype">TimeType</a></td>
 <td>S=Setup; R=Run; W=Wait; M=Move. <code>Required</code> <code>Default(&quot;R&quot;)</code></td>
@@ -162,7 +167,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Production.Resources.Load.html#workorderitemoperation">WorkOrderItemOperation</a></td>
 <td><a href="Production.ShopFloor.WorkOrderItemOperations.html">WorkOrderItemOperations</a></td>
-<td>The <code>WorkOrderItemOperation</code>(Production.ShopFloor.WorkOrderItemOperations.md) to which this Load belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
+<td>The <see cref="Production.ShopFloor.WorkOrderItemOperation"></see> to which this Load belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 </tbody>
 </table>
@@ -215,6 +220,10 @@ Allowed values for the <code>Priority</code>(Production.Resources.Load.md#priori
 <p><em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>3</strong></p>
+<h3 id="rowversion">RowVersion</h3>
+<p><em>Type</em>: <strong>byte[]</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="timetype">TimeType</h3>
 <p>S=Setup; R=Run; W=Wait; M=Move. <code>Required</code> <code>Default(&quot;R&quot;)</code></p>
 <p><em>Type</em>: <strong><a href="Production.Resources.Load.html#timetype">TimeType</a></strong><br>
@@ -277,7 +286,7 @@ Allowed values for the <code>TimeType</code>(Production.Resources.Load.md#timety
 <p><em>Type</em>: <strong><a href="Production.Resources.WorkgroupResources.html">WorkgroupResources</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="workorderitemoperation">WorkOrderItemOperation</h3>
-<p>The <code>WorkOrderItemOperation</code>(Production.ShopFloor.WorkOrderItemOperations.md) to which this Load belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
+<p>The <see cref="Production.ShopFloor.WorkOrderItemOperation"></see> to which this Load belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="Production.ShopFloor.WorkOrderItemOperations.html">WorkOrderItemOperations</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em><a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a></em>: <strong>True</strong></p>

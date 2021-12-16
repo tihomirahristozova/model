@@ -45,6 +45,7 @@ Aggregate Tree
 | [DocumentDate](Finance.Payments.PaymentTransactions.md#documentdate) | date | The date on which the document was issued. `Required` `Default(Today)` `Filter(eq;ge;le)` `ORD` (Inherited from [Documents](General.Documents.md)) 
 | [DocumentNo](Finance.Payments.PaymentTransactions.md#documentno) | string (20) | Document number, unique within Document_Type_Id. `Required` `Filter(eq;like)` `ORD` (Inherited from [Documents](General.Documents.md)) 
 | [DocumentNotes](Finance.Payments.PaymentTransactions.md#documentnotes) | string (max) __nullable__ | Notes for this Document. (Inherited from [Documents](General.Documents.md)) 
+| [DocumentRowVersion](Finance.Payments.PaymentTransactions.md#documentrowversion) | byte[] |  
 | [DocumentVersion](Finance.Payments.PaymentTransactions.md#documentversion) | int32 | Consecutive version number, starting with 1. Each update produces a new version of the document. `Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [EntityName](Finance.Payments.PaymentTransactions.md#entityname) | string (64) | The entity name of the document header. `Required` `Filter(eq)` `ORD` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [Id](Finance.Payments.PaymentTransactions.md#id) | guid |  
@@ -59,6 +60,7 @@ Aggregate Tree
 | [ReleaseTime](Finance.Payments.PaymentTransactions.md#releasetime) | datetime __nullable__ | Date and time when the document was released (State set to Released). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [RequiresAllocation](Finance.Payments.PaymentTransactions.md#requiresallocation) | boolean | True=The total amount should be allocated to payment orders; false=Payment orders are not required. `Required` `Default(true)` `Filter(eq)` 
 | [ReversalReason](Finance.Payments.PaymentTransactions.md#reversalreason) | [ReversalReason](Finance.Payments.PaymentTransactions.md#reversalreason) __nullable__ | The reason for the reversal of the payment. `Introduced in version 20.1` 
+| [RowVersion](Finance.Payments.PaymentTransactions.md#rowversion) | byte[] |  
 | [State](Finance.Payments.PaymentTransactions.md#state) | [DocumentState](Finance.Payments.PaymentTransactions.md#state) | The current system state of the document. Allowed values: 0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed. `Required` `Default(0)` `Filter(multi eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [TotalAmount](Finance.Payments.PaymentTransactions.md#totalamount) | [Amount (18, 2)](../data-types.md#amount) | The total amount payed. The distribution of the amount among source orders is specified with payment transacion lines. `Currency: TotalAmountCurrency` `Required` `Default(0)` 
 | [Void](Finance.Payments.PaymentTransactions.md#void) | boolean | True if the document is null and void. `Required` `Default(false)` `Filter(eq)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
@@ -216,6 +218,12 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
 
+### DocumentRowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+
 ### DocumentVersion
 
 Consecutive version number, starting with 1. Each update produces a new version of the document. `Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md))
@@ -352,6 +360,12 @@ _Allowed Values (Finance.Payments.PaymentTransactionsRepository.ReversalReason E
 | TaxBaseReduction | TaxBaseReduction value. Stored as 'TBR'. <br /> _Database Value:_ 'TBR' <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'TaxBaseReduction' |
 | Refund | Refund value. Stored as 'REF'. <br /> _Database Value:_ 'REF' <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'Refund' |
 
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+
+### RowVersion
+
+_Type_: **byte[]**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 

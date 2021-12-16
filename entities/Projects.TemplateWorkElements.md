@@ -26,12 +26,13 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](Projects.TemplateWorkElements.md#id) | guid |  
+| [RowVersion](Projects.TemplateWorkElements.md#rowversion) | byte[] |  
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ProjectTemplate](Projects.TemplateWorkElements.md#projecttemplate) | [Templates](Projects.Templates.md) | The `Template`(Projects.Templates.md) to which this TemplateWorkElement belongs. `Required` `Filter(multi eq)` `Owner` |
+| [ProjectTemplate](Projects.TemplateWorkElements.md#projecttemplate) | [Templates](Projects.Templates.md) | The <see cref="Template"/> to which this TemplateWorkElement belongs. `Required` `Filter(multi eq)` `Owner` |
 | [ProjectTypeWorkElement](Projects.TemplateWorkElements.md#projecttypeworkelement) | [TypeWorkElements](Projects.TypeWorkElements.md) | The work element from the project type, which shall be copied as work element in new projects, based on this template. `Required` `Filter(multi eq)` |
 
 
@@ -44,12 +45,18 @@ _Indexed_: **True**
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+
 
 ## Reference Details
 
 ### ProjectTemplate
 
-The `Template`(Projects.Templates.md) to which this TemplateWorkElement belongs. `Required` `Filter(multi eq)` `Owner`
+The <see cref="Template"/> to which this TemplateWorkElement belongs. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[Templates](Projects.Templates.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

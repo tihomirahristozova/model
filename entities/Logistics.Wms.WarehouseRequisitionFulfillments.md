@@ -28,6 +28,7 @@ Aggregate Tree
 | [Id](Logistics.Wms.WarehouseRequisitionFulfillments.md#id) | guid |  
 | [IsFinal](Logistics.Wms.WarehouseRequisitionFulfillments.md#isfinal) | boolean | Specifies whether this fulfillment finalizes the requisition line, regardless of any remaining quantities. `Required` 
 | [Quantity](Logistics.Wms.WarehouseRequisitionFulfillments.md#quantity) | decimal (12, 3) | Quantity fulfilled (in the measurement unit of the requisition line). `Required` 
+| [RowVersion](Logistics.Wms.WarehouseRequisitionFulfillments.md#rowversion) | byte[] |  
 
 ## References
 
@@ -77,6 +78,12 @@ _Supports Order By_: **False**
 Quantity fulfilled (in the measurement unit of the requisition line). `Required`
 
 _Type_: **decimal (12, 3)**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+
+### RowVersion
+
+_Type_: **byte[]**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 

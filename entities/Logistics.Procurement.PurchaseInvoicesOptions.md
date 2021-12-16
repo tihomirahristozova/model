@@ -24,6 +24,7 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](Logistics.Procurement.PurchaseInvoicesOptions.md#id) | guid |  
+| [RowVersion](Logistics.Procurement.PurchaseInvoicesOptions.md#rowversion) | byte[] |  
 | [SignRestriction](Logistics.Procurement.PurchaseInvoicesOptions.md#signrestriction) | [SignRestriction](Logistics.Procurement.PurchaseInvoicesOptions.md#signrestriction) | This option can restrict the sign of the Line Amounts for each detail line in purchase invoices of the specified document type. `Required` `Default(0)` 
 | [TotalAmountSignRestriction](Logistics.Procurement.PurchaseInvoicesOptions.md#totalamountsignrestriction) | [TotalAmountSignRestriction](Logistics.Procurement.PurchaseInvoicesOptions.md#totalamountsignrestriction) | This option can restrict the sign of the Total Amounts of the purchase invoices of the specified document type. The restriction is applied upon document Release. `Required` `Default(0)` 
 
@@ -42,6 +43,12 @@ _Type_: **guid**
 _Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 ### SignRestriction
 

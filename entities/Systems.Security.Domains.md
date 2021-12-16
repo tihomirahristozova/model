@@ -29,6 +29,7 @@ Aggregate Tree
 | [Id](Systems.Security.Domains.md#id) | guid |  
 | [IsDefault](Systems.Security.Domains.md#isdefault) | boolean | Specifies whether this is the default domain for the database. `Required` `Default(true)` `Filter(eq)` 
 | [Name](Systems.Security.Domains.md#name) | string (64) | The name of the domain (restricted for URL usage). `Required` `Filter(eq;like)` `ORD` 
+| [RowVersion](Systems.Security.Domains.md#rowversion) | byte[] |  
 
 ## Child Collections
 
@@ -81,6 +82,12 @@ _Indexed_: **True**
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
 _Maximum Length_: **64**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 
 

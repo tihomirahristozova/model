@@ -127,6 +127,11 @@ Aggregate Root:<br>
 <td>decimal (9, 3)</td>
 <td>The equivalence of Quantity in the base measurement unit of the Material. <code>Required</code> <code>Default(0)</code> <code>ReadOnly</code></td>
 </tr>
+<tr>
+<td><a href="Projects.ProjectTaskMaterials.html#rowversion">RowVersion</a></td>
+<td>byte[]</td>
+<td></td>
+</tr>
 </tbody>
 </table>
 <h2 id="references">References</h2>
@@ -193,6 +198,10 @@ Aggregate Root:<br>
 <em>Default Value</em>: <strong>0</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>IIF( ( ( obj.QuantityUnit != null) AndAlso ( obj.MaterialProduct != null)), obj.Quantity.ConvertTo( obj.MaterialProduct.BaseUnit, obj.MaterialProduct).Value, obj.QuantityBase)</code></p>
+<h3 id="rowversion">RowVersion</h3>
+<p><em>Type</em>: <strong>byte[]</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="materialproduct">MaterialProduct</h3>
 <p>The product Id of the required material. <code>Required</code> <code>Filter(multi eq)</code></p>

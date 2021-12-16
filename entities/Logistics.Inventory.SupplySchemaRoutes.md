@@ -27,6 +27,7 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [Id](Logistics.Inventory.SupplySchemaRoutes.md#id) | guid |  
 | [Notes](Logistics.Inventory.SupplySchemaRoutes.md#notes) | string (254) __nullable__ | Notes for this SupplySchemaRoute. 
+| [RowVersion](Logistics.Inventory.SupplySchemaRoutes.md#rowversion) | byte[] |  
 | [SchemaXML](Logistics.Inventory.SupplySchemaRoutes.md#schemaxml) | string (max) __nullable__ | Obsolete. Not used. (Used by the schematic control). 
 | [TransitTimeDays](Logistics.Inventory.SupplySchemaRoutes.md#transittimedays) | int32 | Obsolete. Not used. (Time needed for the delivery of the goods using this route). `Required` `Default(0)` 
 
@@ -36,7 +37,7 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [DestinationStore](Logistics.Inventory.SupplySchemaRoutes.md#destinationstore) | [Stores](Logistics.Inventory.Stores.md) | Obsolete. Not used. `Required` `Filter(multi eq)` |
 | [SourceStore](Logistics.Inventory.SupplySchemaRoutes.md#sourcestore) | [Stores](Logistics.Inventory.Stores.md) | Obsolete. Not used. `Required` `Filter(multi eq)` |
-| [SupplySchema](Logistics.Inventory.SupplySchemaRoutes.md#supplyschema) | [SupplySchemata](Logistics.Inventory.SupplySchemata.md) | The `SupplySchema`(Logistics.Inventory.SupplySchemaRoutes.md#supplyschema) to which this SupplySchemaRoute belongs. `Required` `Filter(multi eq)` `Owner` |
+| [SupplySchema](Logistics.Inventory.SupplySchemaRoutes.md#supplyschema) | [SupplySchemata](Logistics.Inventory.SupplySchemata.md) | The <see cref="SupplySchema"/> to which this SupplySchemaRoute belongs. `Required` `Filter(multi eq)` `Owner` |
 
 
 ## Attribute Details
@@ -56,6 +57,12 @@ _Type_: **string (254) __nullable__**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 ### SchemaXML
 
@@ -94,7 +101,7 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### SupplySchema
 
-The `SupplySchema`(Logistics.Inventory.SupplySchemaRoutes.md#supplyschema) to which this SupplySchemaRoute belongs. `Required` `Filter(multi eq)` `Owner`
+The <see cref="SupplySchema"/> to which this SupplySchemaRoute belongs. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[SupplySchemata](Logistics.Inventory.SupplySchemata.md)**  
 _Indexed_: **True**  

@@ -122,6 +122,11 @@ Aggregate Root:<br>
 <td>guid <strong>nullable</strong></td>
 <td>The Project, which absorbed the cost. <code>Filter(multi eq)</code></td>
 </tr>
+<tr>
+<td><a href="Finance.Cost.CalculationCosts.html#rowversion">RowVersion</a></td>
+<td>byte[]</td>
+<td></td>
+</tr>
 </tbody>
 </table>
 <h2 id="references">References</h2>
@@ -137,7 +142,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Finance.Cost.CalculationCosts.html#calculation">Calculation</a></td>
 <td><a href="Finance.Cost.Calculations.html">Calculations</a></td>
-<td>The <code>Calculation</code>(Finance.Cost.CalculationCosts.md#calculation) to which this CalculationCost belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
+<td>The <see cref="Calculation"></see> to which this CalculationCost belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Cost.CalculationCosts.html#costcenter">CostCenter</a></td>
@@ -196,9 +201,13 @@ Aggregate Root:<br>
 <p>The Project, which absorbed the cost. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong>guid <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<h3 id="rowversion">RowVersion</h3>
+<p><em>Type</em>: <strong>byte[]</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="calculation">Calculation</h3>
-<p>The <code>Calculation</code>(Finance.Cost.CalculationCosts.md#calculation) to which this CalculationCost belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
+<p>The <see cref="Calculation"></see> to which this CalculationCost belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="Finance.Cost.Calculations.html">Calculations</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>

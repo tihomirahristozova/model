@@ -27,10 +27,12 @@ Aggregate Tree
 | [FilterXml](General.DocumentJobs.md#filterxml) | dataaccessfilter | Specifies the documents, whose state will be changed. `Required` 
 | [Id](General.DocumentJobs.md#id) | guid |  
 | [IsActive](General.DocumentJobs.md#isactive) | boolean | Specifies whether the job is active and ready for running. `Required` `Default(true)` `Filter(eq)` (Inherited from [Jobs](Systems.Core.Jobs.md)) 
+| [JobRowVersion](General.DocumentJobs.md#jobrowversion) | byte[] |  
 | [JobType](General.DocumentJobs.md#jobtype) | [JobType](General.DocumentJobs.md#jobtype) | The system type of the job. DOC=Document Change State, POS=Run Postponed Events, DNT=Delete Old Notifications. `Required` `Filter(multi eq)` (Inherited from [Jobs](Systems.Core.Jobs.md)) 
 | [Name](General.DocumentJobs.md#name) | string (254) | The name of the job. `Required` `Filter(eq;like)` `ORD` (Inherited from [Jobs](Systems.Core.Jobs.md)) 
 | [NewState](General.DocumentJobs.md#newstate) | [DocumentState](General.DocumentJobs.md#newstate) | Specifies the state, which should be set to the documents, matching the filter. `Required` 
 | [Notes](General.DocumentJobs.md#notes) | string (max) __nullable__ | Notes for this Job. (Inherited from [Jobs](Systems.Core.Jobs.md)) 
+| [RowVersion](General.DocumentJobs.md#rowversion) | byte[] |  
 | [RunOnIdle](General.DocumentJobs.md#runonidle) | boolean | Specifies whether to automatically run the job when the server is idle. `Required` `Default(true)` `Filter(eq)` (Inherited from [Jobs](Systems.Core.Jobs.md)) 
 
 ## References
@@ -66,6 +68,12 @@ _Type_: **boolean**
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **True**  
+
+### JobRowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 ### JobType
 
@@ -124,6 +132,12 @@ _Type_: **string (max) __nullable__**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 ### RunOnIdle
 

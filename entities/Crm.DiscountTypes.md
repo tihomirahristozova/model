@@ -31,6 +31,7 @@ Aggregate Tree
 | [Name](Crm.DiscountTypes.md#name) | string (254) | The name of this DiscountType. `Required` `Filter(like)` 
 | [Notes](Crm.DiscountTypes.md#notes) | string (max) __nullable__ | Notes for this DiscountType. 
 | [Ord](Crm.DiscountTypes.md#ord) | int32 | Determines the order in which the discounts are applied. The discounts with smaller Ord are applied first. `Required` `Default(1)` `Filter(ge;le)` 
+| [RowVersion](Crm.DiscountTypes.md#rowversion) | byte[] |  
 
 
 ## Attribute Details
@@ -121,6 +122,12 @@ _Type_: **int32**
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **1**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 
 

@@ -30,6 +30,7 @@ Aggregate Root:
 | [LineNo](Applications.Service.ServiceAgreementMaterials.md#lineno) | int32 | Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc. `Required` 
 | [Quantity](Applications.Service.ServiceAgreementMaterials.md#quantity) | [Quantity (18, 3)](../data-types.md#quantity) | Quantity of the agreed material. `Unit: QuantityUnit` `Required` 
 | [QuantityBase](Applications.Service.ServiceAgreementMaterials.md#quantitybase) | [Quantity (18, 3)](../data-types.md#quantity) | The equivalence of Quantity in the base measurement category of the product. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` 
+| [RowVersion](Applications.Service.ServiceAgreementMaterials.md#rowversion) | byte[] |  
 | [StandardQuantityBase](Applications.Service.ServiceAgreementMaterials.md#standardquantitybase) | [Quantity (18, 3)](../data-types.md#quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` `Introduced in version 18.2` 
 | [StartDate](Applications.Service.ServiceAgreementMaterials.md#startdate) | datetime __nullable__ | Start date from which the agreedment for the material is valid. For the agreement period, the material could be used free of charge in service activities. 
 
@@ -37,10 +38,10 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Document](Applications.Service.ServiceAgreementMaterials.md#document) | [ServiceAgreements](Applications.Service.ServiceAgreements.md) | The `ServiceAgreement`(Applications.Service.ServiceAgreementMaterials.md#serviceagreement) to which this ServiceAgreementMaterial belongs. `Required` `Filter(multi eq)` |
+| [Document](Applications.Service.ServiceAgreementMaterials.md#document) | [ServiceAgreements](Applications.Service.ServiceAgreements.md) | The <see cref="ServiceAgreement"/> to which this ServiceAgreementMaterial belongs. `Required` `Filter(multi eq)` |
 | [Product](Applications.Service.ServiceAgreementMaterials.md#product) | [Products](General.Products.Products.md) | Paid or agreed in advance material that won't be invoiced after service activities. `Required` `Filter(multi eq)` |
 | [QuantityUnit](Applications.Service.ServiceAgreementMaterials.md#quantityunit) | [MeasurementUnits](General.MeasurementUnits.md) | The measurement unit of Quantity. `Required` `Filter(multi eq)` |
-| [ServiceAgreement](Applications.Service.ServiceAgreementMaterials.md#serviceagreement) | [ServiceAgreements](Applications.Service.ServiceAgreements.md) | The `ServiceAgreement`(Applications.Service.ServiceAgreementMaterials.md#serviceagreement) to which this ServiceAgreementMaterial belongs. `Required` `Filter(multi eq)` `Owner` |
+| [ServiceAgreement](Applications.Service.ServiceAgreementMaterials.md#serviceagreement) | [ServiceAgreements](Applications.Service.ServiceAgreements.md) | The <see cref="ServiceAgreement"/> to which this ServiceAgreementMaterial belongs. `Required` `Filter(multi eq)` `Owner` |
 
 
 ## Attribute Details
@@ -94,6 +95,12 @@ _Back-End Default Expression:_
 
 _Front-End Recalc Expressions:_  
 `IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.QuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))`
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+
 ### StandardQuantityBase
 
 The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` `Introduced in version 18.2`
@@ -120,7 +127,7 @@ _Supports Order By_: **False**
 
 ### Document
 
-The `ServiceAgreement`(Applications.Service.ServiceAgreementMaterials.md#serviceagreement) to which this ServiceAgreementMaterial belongs. `Required` `Filter(multi eq)`
+The <see cref="ServiceAgreement"/> to which this ServiceAgreementMaterial belongs. `Required` `Filter(multi eq)`
 
 _Type_: **[ServiceAgreements](Applications.Service.ServiceAgreements.md)**  
 _Indexed_: **True**  
@@ -144,7 +151,7 @@ _Front-End Recalc Expressions:_
 `obj.Product.MeasurementUnit.IfNullThen( obj.QuantityUnit)`
 ### ServiceAgreement
 
-The `ServiceAgreement`(Applications.Service.ServiceAgreementMaterials.md#serviceagreement) to which this ServiceAgreementMaterial belongs. `Required` `Filter(multi eq)` `Owner`
+The <see cref="ServiceAgreement"/> to which this ServiceAgreementMaterial belongs. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[ServiceAgreements](Applications.Service.ServiceAgreements.md)**  
 _Indexed_: **True**  

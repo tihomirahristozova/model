@@ -35,13 +35,14 @@ Aggregate Root:
 | [ParentLineNo](Finance.Excise.ExciseAdministrativeDocumentLines.md#parentlineno) | int32 __nullable__ | The number of the line within the parent document, which the current line executes. Null when the current line does not execute line. `Filter(multi eq)` `Introduced in version 22.1.4.9` 
 | [Quantity](Finance.Excise.ExciseAdministrativeDocumentLines.md#quantity) | [Quantity (12, 3)](../data-types.md#quantity) | The quantity being sold, in the measurement unit, specified in Quantity Unit. `Unit: QuantityUnit` `Required` `Default(1)` 
 | [QuantityBase](Finance.Excise.ExciseAdministrativeDocumentLines.md#quantitybase) | [Quantity (12, 3)](../data-types.md#quantity) | The quantity in base measurement category for the product. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` 
+| [RowVersion](Finance.Excise.ExciseAdministrativeDocumentLines.md#rowversion) | byte[] |  
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Document](Finance.Excise.ExciseAdministrativeDocumentLines.md#document) | [ExciseAdministrativeDocuments](Finance.Excise.ExciseAdministrativeDocuments.md) | The `ExciseAdministrative<br />Document`(Finance.Excise.ExciseAdministrative<br />DocumentLines.md#exciseadministrativedocument) to which this ExciseAdministrative<br />DocumentLine belongs. `Required` `Filter(multi eq)` |
-| [ExciseAdministrative<br />Document](Finance.Excise.ExciseAdministrativeDocumentLines.md#exciseadministrativedocument) | [ExciseAdministrativeDocuments](Finance.Excise.ExciseAdministrativeDocuments.md) | The `ExciseAdministrative<br />Document`(Finance.Excise.ExciseAdministrative<br />DocumentLines.md#exciseadministrativedocument) to which this ExciseAdministrative<br />DocumentLine belongs. `Required` `Filter(multi eq)` `Owner` |
+| [Document](Finance.Excise.ExciseAdministrativeDocumentLines.md#document) | [ExciseAdministrativeDocuments](Finance.Excise.ExciseAdministrativeDocuments.md) | The <see cref="ExciseAdministrative<br />Document"/> to which this ExciseAdministrative<br />DocumentLine belongs. `Required` `Filter(multi eq)` |
+| [ExciseAdministrative<br />Document](Finance.Excise.ExciseAdministrativeDocumentLines.md#exciseadministrativedocument) | [ExciseAdministrativeDocuments](Finance.Excise.ExciseAdministrativeDocuments.md) | The <see cref="ExciseAdministrative<br />Document"/> to which this ExciseAdministrative<br />DocumentLine belongs. `Required` `Filter(multi eq)` `Owner` |
 | [ExciseDutyRate](Finance.Excise.ExciseAdministrativeDocumentLines.md#excisedutyrate) | [ExciseDutyRates](Finance.Excise.ExciseDutyRates.md) (nullable) | The Duty rate specified by the taxation and customs authorities. `Filter(multi eq)` `Introduced in version 21.1.3.97` |
 | [ExciseProduct](Finance.Excise.ExciseAdministrativeDocumentLines.md#exciseproduct) | [ExciseProducts](Finance.Excise.ExciseProducts.md) (nullable) | The Excise product code defined by the taxation and customs authorities. `Filter(multi eq)` `Introduced in version 21.1.3.97` |
 | [ExcisePurposeCode](Finance.Excise.ExciseAdministrativeDocumentLines.md#excisepurposecode) | [ExcisePurposeCodes](Finance.Excise.ExcisePurposeCodes.md) (nullable) | The Purpose codes specify the different purposes recognized by the authorities for determining the excise rate. `Filter(multi eq)` `Introduced in version 21.1.3.97` |
@@ -147,19 +148,25 @@ _Supports Order By_: **False**
 
 _Front-End Recalc Expressions:_  
 `IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.QuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))`
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+
 
 ## Reference Details
 
 ### Document
 
-The `ExciseAdministrativeDocument`(Finance.Excise.ExciseAdministrativeDocumentLines.md#exciseadministrativedocument) to which this ExciseAdministrativeDocumentLine belongs. `Required` `Filter(multi eq)`
+The <see cref="ExciseAdministrativeDocument"/> to which this ExciseAdministrativeDocumentLine belongs. `Required` `Filter(multi eq)`
 
 _Type_: **[ExciseAdministrativeDocuments](Finance.Excise.ExciseAdministrativeDocuments.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ExciseAdministrativeDocument
 
-The `ExciseAdministrativeDocument`(Finance.Excise.ExciseAdministrativeDocumentLines.md#exciseadministrativedocument) to which this ExciseAdministrativeDocumentLine belongs. `Required` `Filter(multi eq)` `Owner`
+The <see cref="ExciseAdministrativeDocument"/> to which this ExciseAdministrativeDocumentLine belongs. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[ExciseAdministrativeDocuments](Finance.Excise.ExciseAdministrativeDocuments.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

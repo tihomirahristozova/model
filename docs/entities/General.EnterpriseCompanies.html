@@ -159,6 +159,11 @@ Default Search Members:<br>
 <td>A period of months for which the printed images of the documents will be kept. <code>Required</code> <code>Default(60)</code> <code>Filter(multi eq;ge;le)</code> <code>Introduced in version 20.1</code></td>
 </tr>
 <tr>
+<td><a href="General.EnterpriseCompanies.html#rowversion">RowVersion</a></td>
+<td>byte[]</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="General.EnterpriseCompanies.html#uibasecolor">UIBaseColor</a></td>
 <td>int32 <strong>nullable</strong></td>
 <td>When not null, specifies the background color to use for visualization of the UI when the current enterprise company is selected. The color is in RGBA color format. <code>Introduced in version 18.2</code></td>
@@ -338,6 +343,10 @@ Allowed values for the <code>DefaultLanguage</code>(General.EnterpriseCompanies.
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>60</strong></p>
+<h3 id="rowversion">RowVersion</h3>
+<p><em>Type</em>: <strong>byte[]</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="uibasecolor">UIBaseColor</h3>
 <p>When not null, specifies the background color to use for visualization of the UI when the current enterprise company is selected. The color is in RGBA color format. <code>Introduced in version 18.2</code></p>
 <p><em>Type</em>: <strong>int32 <strong>nullable</strong></strong><br>

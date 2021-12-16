@@ -29,6 +29,7 @@ Aggregate Root:
 | [Id](General.DocumentTypeAmounts.md#id) | guid |  
 | [RequiredFromDate](General.DocumentTypeAmounts.md#requiredfromdate) | date __nullable__ | When not null, specifies a date, after which the amount becomes required for the current document type. The date is compared against the document date. `Filter(ge;le)` 
 | [RequiredThruDate](General.DocumentTypeAmounts.md#requiredthrudate) | date __nullable__ | When not null, specifies a date, up to which the amount is required for the current document type. The date is compared against the document date. `Filter(ge;le)` 
+| [RowVersion](General.DocumentTypeAmounts.md#rowversion) | byte[] |  
 | [UserCanChangeInput](General.DocumentTypeAmounts.md#usercanchangeinput) | boolean | True if the user, entering the document is allowed to change the default input percent. `Required` `Default(true)` 
 
 ## References
@@ -70,6 +71,12 @@ When not null, specifies a date, up to which the amount is required for the curr
 
 _Type_: **date __nullable__**  
 _Supported Filters_: **GreaterThanOrLessThan**  
+_Supports Order By_: **False**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
 ### UserCanChangeInput

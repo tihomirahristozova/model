@@ -118,6 +118,11 @@ Aggregate Root:<br>
 <td>The value of the tracked parameter change between planned maintenances. The tracked parameter is determined based on the Maintenance Type. null means, that the maintenances are not planned, based on parameter change. <code>Filter(multi eq;ge;le)</code></td>
 </tr>
 <tr>
+<td><a href="Applications.AssetManagement.ManagedAssetMaintenanceSchedules.html#rowversion">RowVersion</a></td>
+<td>byte[]</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="Applications.AssetManagement.ManagedAssetMaintenanceSchedules.html#scheduledays">ScheduleDays</a></td>
 <td>int32 <strong>nullable</strong></td>
 <td>Number of days between planned maintenances. null means that the schedule is not planned based on days.</td>
@@ -167,6 +172,10 @@ Aggregate Root:<br>
 <p>The value of the tracked parameter change between planned maintenances. The tracked parameter is determined based on the Maintenance Type. null means, that the maintenances are not planned, based on parameter change. <code>Filter(multi eq;ge;le)</code></p>
 <p><em>Type</em>: <strong>int32 <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="rowversion">RowVersion</h3>
+<p><em>Type</em>: <strong>byte[]</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="scheduledays">ScheduleDays</h3>
 <p>Number of days between planned maintenances. null means that the schedule is not planned based on days.</p>

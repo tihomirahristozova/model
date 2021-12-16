@@ -27,6 +27,7 @@ Aggregate Tree
 | [Id](General.Documents.DocumentPartyRoles.md#id) | guid |  
 | [Name](General.Documents.DocumentPartyRoles.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Party role name (multi-language). `Required` `Filter(eq;like)` 
 | [Notes](General.Documents.DocumentPartyRoles.md#notes) | string (max) __nullable__ | Notes for this DocumentPartyRole. 
+| [RowVersion](General.Documents.DocumentPartyRoles.md#rowversion) | byte[] |  
 
 
 ## Attribute Details
@@ -64,6 +65,12 @@ _Type_: **string (max) __nullable__**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 
 

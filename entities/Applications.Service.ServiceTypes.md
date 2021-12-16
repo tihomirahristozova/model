@@ -28,6 +28,7 @@ Aggregate Tree
 | [IsActive](Applications.Service.ServiceTypes.md#isactive) | boolean | True when the service type is currently active and selectable in new documents. `Required` `Default(true)` `Filter(eq)` 
 | [IsDefault](Applications.Service.ServiceTypes.md#isdefault) | boolean | True when this is the default service type for the service object type. false otherwise. `Required` `Default(false)` `Filter(eq)` 
 | [Name](Applications.Service.ServiceTypes.md#name) | string (254) | The name of this ServiceType. `Required` `Filter(like)` 
+| [RowVersion](Applications.Service.ServiceTypes.md#rowversion) | byte[] |  
 
 ## References
 
@@ -81,6 +82,12 @@ _Type_: **string (254)**
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 
 ## Reference Details

@@ -30,12 +30,13 @@ Aggregate Root:
 | [Id](Finance.Accounting.FinancialStatementNodes.md#id) | guid |  
 | [Name](Finance.Accounting.FinancialStatementNodes.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Name of the financial statement node. `Required` `Filter(like)` 
 | [ParentFullPath](Finance.Accounting.FinancialStatementNodes.md#parentfullpath) | string (25) __nullable__ | Parent financial statement node specified through its full identification path. `Filter(like)` 
+| [RowVersion](Finance.Accounting.FinancialStatementNodes.md#rowversion) | byte[] |  
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [FinancialStatement](Finance.Accounting.FinancialStatementNodes.md#financialstatement) | [FinancialStatements](Finance.Accounting.FinancialStatements.md) | The `FinancialStatement`(Finance.Accounting.FinancialStatementNodes.md#financialstatement) to which this FinancialStatementNode belongs. `Required` `Filter(multi eq)` `Owner` |
+| [FinancialStatement](Finance.Accounting.FinancialStatementNodes.md#financialstatement) | [FinancialStatements](Finance.Accounting.FinancialStatements.md) | The <see cref="Financial<br />Statement"/> to which this FinancialStatementNode belongs. `Required` `Filter(multi eq)` `Owner` |
 
 ## Child Collections
 
@@ -88,12 +89,18 @@ _Supported Filters_: **Like**
 _Supports Order By_: **False**  
 _Maximum Length_: **25**  
 
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+
 
 ## Reference Details
 
 ### FinancialStatement
 
-The `FinancialStatement`(Finance.Accounting.FinancialStatementNodes.md#financialstatement) to which this FinancialStatementNode belongs. `Required` `Filter(multi eq)` `Owner`
+The <see cref="FinancialStatement"/> to which this FinancialStatementNode belongs. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[FinancialStatements](Finance.Accounting.FinancialStatements.md)**  
 _Indexed_: **True**  

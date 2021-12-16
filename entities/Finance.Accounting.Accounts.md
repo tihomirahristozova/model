@@ -31,6 +31,7 @@ Aggregate Tree
 | [Id](Finance.Accounting.Accounts.md#id) | guid |  
 | [Name](Finance.Accounting.Accounts.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | The account name. `Required` `Filter(like)` 
 | [Number](Finance.Accounting.Accounts.md#number) | string (30) | The number of the account, unique within the account group. `Required` `Filter(like)` 
+| [RowVersion](Finance.Accounting.Accounts.md#rowversion) | byte[] |  
 
 ## References
 
@@ -119,6 +120,12 @@ _Type_: **string (30)**
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **30**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 
 ## Reference Details

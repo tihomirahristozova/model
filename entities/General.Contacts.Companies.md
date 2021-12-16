@@ -47,6 +47,7 @@ Aggregate Tree
 | [PartyCreationUser](General.Contacts.Companies.md#partycreationuser) | string (64) __nullable__ | Login name of the user, who created the Party. `Filter(like)` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md)) 
 | [PartyName](General.Contacts.Companies.md#partyname) | [MultilanguageString](../data-types.md#multilanguagestring) | The name of the party. `Required` `Filter(eq;like)` `ORD` (Inherited from [Parties](General.Contacts.Parties.md)) 
 | [PartyNotes](General.Contacts.Companies.md#partynotes) | string (254) __nullable__ | Notes for this Party. (Inherited from [Parties](General.Contacts.Parties.md)) 
+| [PartyRowVersion](General.Contacts.Companies.md#partyrowversion) | byte[] |  
 | [PartyType](General.Contacts.Companies.md#partytype) | [PartyType](General.Contacts.Companies.md#partytype) | Type of party. Currently supported are P=Person, C=Company, S=Store, L=Company Location, V=Division. `Required` `Default("P")` `Filter(multi eq)` (Inherited from [Parties](General.Contacts.Parties.md)) 
 | [PartyUniqueNumber](General.Contacts.Companies.md#partyuniquenumber) | string (16) __nullable__ | Unique number of the party (National number for persons, Registration number for companies). `Filter(eq;like)` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md)) 
 | [PartyUpdateTime](General.Contacts.Companies.md#partyupdatetime) | datetime __nullable__ | Date and time when the Party was last updated. `Filter(ge;le)` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md)) 
@@ -56,6 +57,7 @@ Aggregate Tree
 | [RegistrationType](General.Contacts.Companies.md#registrationtype) | [MultilanguageString](../data-types.md#multilanguagestring) __nullable__ | Legal registration type - like LTD., PLC, etc. null means unknown. `Filter(eq)` 
 | [RegistrationVATNumber](General.Contacts.Companies.md#registrationvatnumber) | string (16) __nullable__ | VAT registration number where applicable. null means that VAT number is not applicable or unknown. `Filter(eq)` `ORD` 
 | [ResponsiblePersonName](General.Contacts.Companies.md#responsiblepersonname) | [MultilanguageString](../data-types.md#multilanguagestring) __nullable__ | Primary responsible person of the company. null means unknown. `Filter(like)` 
+| [RowVersion](General.Contacts.Companies.md#rowversion) | byte[] |  
 | [UpdateTime](General.Contacts.Companies.md#updatetime) | datetime __nullable__ | Date and time when the Company was last updated. `Filter(ge;le)` `ReadOnly` 
 | [UpdateUser](General.Contacts.Companies.md#updateuser) | string (64) __nullable__ | Login name of the user, who last updated the Company. `Filter(like)` `ReadOnly` 
 
@@ -218,6 +220,12 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
 
+### PartyRowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+
 ### PartyType
 
 Type of party. Currently supported are P=Person, C=Company, S=Store, L=Company Location, V=Division. `Required` `Default("P")` `Filter(multi eq)` (Inherited from [Parties](General.Contacts.Parties.md))
@@ -306,6 +314,12 @@ Primary responsible person of the company. null means unknown. `Filter(like)`
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring) __nullable__**  
 _Supported Filters_: **Like**  
+_Supports Order By_: **False**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
 ### UpdateTime

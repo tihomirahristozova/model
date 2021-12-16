@@ -106,7 +106,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Applications.Cms.StaticWebModules.html#contenthtml">ContentHtml</a></td>
 <td>string (max) <strong>nullable</strong></td>
-<td>The actual html content of the pade. Only the <body> of the html is stored.</body></td>
+<td>The actual html content of the pade. Only the &lt;BODY&gt; of the html is stored.</td>
 </tr>
 <tr>
 <td><a href="Applications.Cms.StaticWebModules.html#id">Id</a></td>
@@ -143,6 +143,16 @@ Aggregate Root:<br>
 <td>string (512)</td>
 <td>Multilanguage Module name. This is used as a title when displaying the web Module. <code>Required</code> <code>Filter(like)</code> (Inherited from <a href="Applications.Cms.WebModules.html">WebModules</a>)</td>
 </tr>
+<tr>
+<td><a href="Applications.Cms.StaticWebModules.html#rowversion">RowVersion</a></td>
+<td>byte[]</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="Applications.Cms.StaticWebModules.html#webmodulerowversion">WebModuleRowVersion</a></td>
+<td>byte[]</td>
+<td></td>
+</tr>
 </tbody>
 </table>
 <h2 id="references">References</h2>
@@ -169,7 +179,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="contenthtml">ContentHtml</h3>
-<p>The actual html content of the pade. Only the <body> of the html is stored.<p>
+<p>The actual html content of the pade. Only the &lt;BODY&gt; of the html is stored.</p>
 <p><em>Type</em>: <strong>string (max) <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
@@ -238,6 +248,14 @@ Allowed values for the ModuleType data attribute<br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>512</strong></p>
+<h3 id="rowversion">RowVersion</h3>
+<p><em>Type</em>: <strong>byte[]</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="webmodulerowversion">WebModuleRowVersion</h3>
+<p><em>Type</em>: <strong>byte[]</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="parent">Parent</h3>
 <p>The parent web Module. It can only be a module with Module Type = Category. Null means that the web Module is root web Module. <code>Filter(multi eq)</code> (Inherited from <a href="Applications.Cms.WebModules.html">WebModules</a>)</p>
@@ -257,7 +275,7 @@ Allowed values for the ModuleType data attribute<br>
 <a href="https://demodb.my.erp.net/api/domain/odata/Applications_Cms_StaticWebModules?$top=10">https://demodb.my.erp.net/api/domain/odata/Applications_Cms_StaticWebModules?$top=10</a></p>
 <p>Domain API Query Builder:
 <a href="https://demodb.my.erp.net/api/domain/querybuilder#Applications_Cms_StaticWebModules?$top=10">https://demodb.my.erp.net/api/domain/querybuilder#Applications_Cms_StaticWebModules?$top=10</a></p>
-</body></article>
+</article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">

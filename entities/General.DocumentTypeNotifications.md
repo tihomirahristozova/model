@@ -28,6 +28,7 @@ Aggregate Root:
 | [DocumentEvent](General.DocumentTypeNotifications.md#documentevent) | string (254) | The event which will trigger the notification. `Required` `Default("StateChanging")` `Filter(eq)` 
 | [FilterXML](General.DocumentTypeNotifications.md#filterxml) | string (max) __nullable__ | Filtering condition for the document. Only documents which match the filter will trigger the event. 
 | [Id](General.DocumentTypeNotifications.md#id) | guid |  
+| [RowVersion](General.DocumentTypeNotifications.md#rowversion) | byte[] |  
 | [StateBitMask](General.DocumentTypeNotifications.md#statebitmask) | int32 | The document states that will trigger the event. `Required` `Default(0)` 
 | [StatusChangeDirection](General.DocumentTypeNotifications.md#statuschangedirection) | [StatusChangeDirection](General.DocumentTypeNotifications.md#statuschangedirection) | Direction of status change. Positive when the new status is greater than the previous. Applicable values: Positive '+', Negative '-', No change '0', Any change '*'. `Required` `Default("*")` 
 | [ToEmailAddressList](General.DocumentTypeNotifications.md#toemailaddresslist) | string (2048) | List of email addressess to be notified. `Required` 
@@ -67,6 +68,12 @@ _Type_: **guid**
 _Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 ### StateBitMask
 

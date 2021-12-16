@@ -28,6 +28,7 @@ Aggregate Root:
 | [ConsumedCost](Production.ShopFloor.OutputOrderDistributedMaterialConsumptions.md#consumedcost) | [Amount (14, 2)](../data-types.md#amount) | Cost of the actually issued Consumed_Quantity. `Currency: ConsumptionOrderLine.GetIssueCurrency()` `Required` `Default(0)` `ReadOnly` 
 | [ConsumedQuantity](Production.ShopFloor.OutputOrderDistributedMaterialConsumptions.md#consumedquantity) | [Quantity (18, 3)](../data-types.md#quantity) | Part of the quantity in the consumption order line which was used for the product in the output order line. `Unit: ConsumptionOrderLine.ConsumedQuantityUnit` `Required` `Default(0)` `ReadOnly` 
 | [Id](Production.ShopFloor.OutputOrderDistributedMaterialConsumptions.md#id) | guid |  
+| [RowVersion](Production.ShopFloor.OutputOrderDistributedMaterialConsumptions.md#rowversion) | byte[] |  
 
 ## References
 
@@ -63,6 +64,12 @@ _Type_: **guid**
 _Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 
 ## Reference Details

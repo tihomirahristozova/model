@@ -27,6 +27,7 @@ Aggregate Tree
 | [Id](General.Products.CodingSystems.md#id) | guid |  
 | [IsUnique](General.Products.CodingSystems.md#isunique) | boolean | True when the coding system can contain only unique product codes. false - duplicate product codes are allowed. `Required` `Default(true)` `Filter(eq)` 
 | [Name](General.Products.CodingSystems.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | The name of this CodingSystem. `Required` `Filter(eq;like)` 
+| [RowVersion](General.Products.CodingSystems.md#rowversion) | byte[] |  
 
 ## References
 
@@ -68,6 +69,12 @@ The name of this CodingSystem. `Required` `Filter(eq;like)`
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Supported Filters_: **Equals, Like**  
+_Supports Order By_: **False**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
 

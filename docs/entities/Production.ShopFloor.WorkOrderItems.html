@@ -163,6 +163,11 @@ Aggregate Root:<br>
 <td>The date, when the item is released to production. null means that still there is no plan when the item will be released to production.</td>
 </tr>
 <tr>
+<td><a href="Production.ShopFloor.WorkOrderItems.html#rowversion">RowVersion</a></td>
+<td>byte[]</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="Production.ShopFloor.WorkOrderItems.html#scheduledenddatetime">ScheduledEndDateTime</a></td>
 <td>datetime <strong>nullable</strong></td>
 <td>Date and time when the production of this item is scheduled to end.</td>
@@ -378,6 +383,10 @@ Allowed values for the <code>Priority</code>(Production.ShopFloor.WorkOrderItems
 <code>obj.WorkOrder.ReleaseDate</code></p>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>obj.WorkOrder.ReleaseDate</code></p>
+<h3 id="rowversion">RowVersion</h3>
+<p><em>Type</em>: <strong>byte[]</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="scheduledenddatetime">ScheduledEndDateTime</h3>
 <p>Date and time when the production of this item is scheduled to end.</p>
 <p><em>Type</em>: <strong>datetime <strong>nullable</strong></strong><br>

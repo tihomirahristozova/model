@@ -123,6 +123,11 @@ Aggregate Root:<br>
 <td>When not null, specifies minimal total amount of the sales order, which is required for order releasing. <code>Currency: MinimumAmountCurrency</code></td>
 </tr>
 <tr>
+<td><a href="Crm.Sales.SalesOrdersOptions.html#rowversion">RowVersion</a></td>
+<td>byte[]</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="Crm.Sales.SalesOrdersOptions.html#shipmentallowance">ShipmentAllowance</a></td>
 <td><a href="Crm.Sales.SalesOrdersOptions.html#shipmentallowance">ShipmentAllowance</a></td>
 <td>Terms on which the shipment of the products in the sales order is allowed. <code>Required</code> <code>Default(&quot;A&quot;)</code></td>
@@ -210,6 +215,10 @@ Allowed values for the <code>AllowedDirections</code>(Crm.Sales.SalesOrdersOptio
 <h3 id="minimumamount">MinimumAmount</h3>
 <p>When not null, specifies minimal total amount of the sales order, which is required for order releasing. <code>Currency: MinimumAmountCurrency</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount (14, 2)</a> <strong>nullable</strong></strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="rowversion">RowVersion</h3>
+<p><em>Type</em>: <strong>byte[]</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="shipmentallowance">ShipmentAllowance</h3>

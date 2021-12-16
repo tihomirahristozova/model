@@ -28,12 +28,13 @@ Aggregate Root:
 | [Id](General.CurrencyDirectoryLines.md#id) | guid |  
 | [RateDivisor](General.CurrencyDirectoryLines.md#ratedivisor) | decimal (18, 6) | The divisor for conversion from From_Currency to Directory.To_Currency. `Required` `Default(1)` 
 | [RateMultiplier](General.CurrencyDirectoryLines.md#ratemultiplier) | decimal (18, 6) | The multiplier for conversion from From_Currency to Directory.To_Currency. `Required` `Default(1)` 
+| [RowVersion](General.CurrencyDirectoryLines.md#rowversion) | byte[] |  
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CurrencyDirectory](General.CurrencyDirectoryLines.md#currencydirectory) | [CurrencyDirectories](General.CurrencyDirectories.md) | The `CurrencyDirectory`(General.CurrencyDirectoryLines.md#currencydirectory) to which this CurrencyDirectoryLine belongs. `Required` `Filter(multi eq)` `Owner` |
+| [CurrencyDirectory](General.CurrencyDirectoryLines.md#currencydirectory) | [CurrencyDirectories](General.CurrencyDirectories.md) | The <see cref="CurrencyDirectory"/> to which this CurrencyDirectoryLine belongs. `Required` `Filter(multi eq)` `Owner` |
 | [FromCurrency](General.CurrencyDirectoryLines.md#fromcurrency) | [Currencies](General.Currencies.md) | The currency for which the exchange rate is recorded. `Required` `Filter(multi eq)` |
 
 
@@ -64,12 +65,18 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Default Value_: **1**  
 
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+
 
 ## Reference Details
 
 ### CurrencyDirectory
 
-The `CurrencyDirectory`(General.CurrencyDirectoryLines.md#currencydirectory) to which this CurrencyDirectoryLine belongs. `Required` `Filter(multi eq)` `Owner`
+The <see cref="CurrencyDirectory"/> to which this CurrencyDirectoryLine belongs. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[CurrencyDirectories](General.CurrencyDirectories.md)**  
 _Indexed_: **True**  

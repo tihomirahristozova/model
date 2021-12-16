@@ -43,6 +43,7 @@ Aggregate Tree
 | [PhoneNumber](Systems.External.PublicUsers.md#phonenumber) | string (16) __nullable__ | The primary phone number of the user. `Filter(like)` 
 | [PostalCode](Systems.External.PublicUsers.md#postalcode) | string (16) __nullable__ | The postal code of the default address of the user. `Filter(like)` 
 | [ProfilePicture](Systems.External.PublicUsers.md#profilepicture) | byte[] __nullable__ | Profile picture of the user. 
+| [RowVersion](Systems.External.PublicUsers.md#rowversion) | byte[] |  
 | [State](Systems.External.PublicUsers.md#state) | string (64) __nullable__ | The state of residence of the user within the country. Can be specified with latin or local characters. `Filter(like)` 
 
 ## References
@@ -227,6 +228,12 @@ _Maximum Length_: **16**
 Profile picture of the user.
 
 _Type_: **byte[] __nullable__**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+
+### RowVersion
+
+_Type_: **byte[]**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 

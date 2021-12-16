@@ -112,6 +112,11 @@ Aggregate Root:<br>
 <td>datetime</td>
 <td>The exact server time (in UTC), when the user joined the group. <code>Required</code> <code>Default(NowUtc)</code></td>
 </tr>
+<tr>
+<td><a href="Communities.SocialGroupMembers.html#rowversion">RowVersion</a></td>
+<td>byte[]</td>
+<td></td>
+</tr>
 </tbody>
 </table>
 <h2 id="references">References</h2>
@@ -148,6 +153,10 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>CurrentDateTimeUtc</strong></p>
+<h3 id="rowversion">RowVersion</h3>
+<p><em>Type</em>: <strong>byte[]</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="socialgroup">SocialGroup</h3>
 <p>The group in which the user participates. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>

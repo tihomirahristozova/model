@@ -28,6 +28,7 @@ Aggregate Root:
 | [Id](Crm.PromotionalPackageLines.md#id) | guid |  
 | [LineNumber](Crm.PromotionalPackageLines.md#linenumber) | int32 | Consecutive line number. `Required` 
 | [Quantity](Crm.PromotionalPackageLines.md#quantity) | [Quantity (9, 3)](../data-types.md#quantity) | The quantity of the product in the package in the base measurement unit of the Product. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Default(1)` `Filter(ge;le)` 
+| [RowVersion](Crm.PromotionalPackageLines.md#rowversion) | byte[] |  
 | [StandardDiscount<br />AdjustOrReplace](Crm.PromotionalPackageLines.md#standarddiscountadjustorreplace) | [StandardDiscount<br />AdjustOrReplace](Crm.PromotionalPackageLines.md#standarddiscountadjustorreplace) | Specifies standard discount change action: A=ADD, M=Mark down - apply after standard discount; R=REPLACE the standard discount. `Required` `Default("R")` 
 | [StandardDiscount<br />PercentAdjust](Crm.PromotionalPackageLines.md#standarddiscountpercentadjust) | decimal (7, 6) | The value of change (in percents) for the standard discount. `Required` `Default(0)` 
 | [UnitPrice](Crm.PromotionalPackageLines.md#unitprice) | [Amount (13, 5)](../data-types.md#amount) __nullable__ | When not null specifies directly unit price for the product. When null, the package specifies only discount. `Currency: UnitPriceCurrency` 
@@ -38,7 +39,7 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [Lot](Crm.PromotionalPackageLines.md#lot) | [Lots](Logistics.Inventory.Lots.md) (nullable) | The Product lot number in the promotional package. `Filter(multi eq)` `Introduced in version 19.1` |
 | [Product](Crm.PromotionalPackageLines.md#product) | [Products](General.Products.Products.md) | The product, which is included in the promotional package. `Required` `Filter(multi eq)` |
-| [PromotionalPackage](Crm.PromotionalPackageLines.md#promotionalpackage) | [PromotionalPackages](Crm.PromotionalPackages.md) | The `PromotionalPackage`(Crm.PromotionalPackageLines.md#promotionalpackage) to which this PromotionalPackageLine belongs. `Required` `Filter(multi eq)` `Owner` |
+| [PromotionalPackage](Crm.PromotionalPackageLines.md#promotionalpackage) | [PromotionalPackages](Crm.PromotionalPackages.md) | The <see cref="Promotional<br />Package"/> to which this PromotionalPackageLine belongs. `Required` `Filter(multi eq)` `Owner` |
 | [UnitPriceCurrency](Crm.PromotionalPackageLines.md#unitpricecurrency) | [Currencies](General.Currencies.md) (nullable) | Currency of the unit price. null if the package specifies only discount. `Filter(multi eq)` |
 
 
@@ -72,6 +73,12 @@ _Type_: **[Quantity (9, 3)](../data-types.md#quantity)**
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 ### StandardDiscountAdjustOrReplace
 
@@ -127,7 +134,7 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### PromotionalPackage
 
-The `PromotionalPackage`(Crm.PromotionalPackageLines.md#promotionalpackage) to which this PromotionalPackageLine belongs. `Required` `Filter(multi eq)` `Owner`
+The <see cref="PromotionalPackage"/> to which this PromotionalPackageLine belongs. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[PromotionalPackages](Crm.PromotionalPackages.md)**  
 _Indexed_: **True**  

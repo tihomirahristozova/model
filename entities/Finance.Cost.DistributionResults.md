@@ -34,7 +34,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CostDistribution](Finance.Cost.DistributionResults.md#costdistribution) | [Distributions](Finance.Cost.Distributions.md) | The `Distribution`(Finance.Cost.Distributions.md) to which this DistributionResult belongs. `Required` `Filter(multi eq)` `Owner` |
+| [CostDistribution](Finance.Cost.DistributionResults.md#costdistribution) | [Distributions](Finance.Cost.Distributions.md) | The <see cref="Distribution"/> to which this DistributionResult belongs. `Required` `Filter(multi eq)` `Owner` |
 | [CostType](Finance.Cost.DistributionResults.md#costtype) | [CostTypes](Finance.Cost.CostTypes.md) | The cost type for which the current distribution is calculated. `Required` `Filter(multi eq)` |
 
 
@@ -81,7 +81,7 @@ _Supports Order By_: **False**
 
 ### CostDistribution
 
-The `Distribution`(Finance.Cost.Distributions.md) to which this DistributionResult belongs. `Required` `Filter(multi eq)` `Owner`
+The <see cref="Distribution"/> to which this DistributionResult belongs. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[Distributions](Finance.Cost.Distributions.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

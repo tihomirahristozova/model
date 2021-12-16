@@ -28,6 +28,7 @@ Aggregate Root:
 | [FromDate](Crm.CustomerProducts.md#fromdate) | date __nullable__ | The initial date of the listing. null when the initial date is unknown. `Filter(eq;ge;le)` 
 | [Id](Crm.CustomerProducts.md#id) | guid |  
 | [Notes](Crm.CustomerProducts.md#notes) | string (254) __nullable__ | Notes for the listing. 
+| [RowVersion](Crm.CustomerProducts.md#rowversion) | byte[] |  
 | [ToDate](Crm.CustomerProducts.md#todate) | date __nullable__ | The final date of the listing. null when the final date is unknown. `Filter(eq;ge;le)` 
 
 ## References
@@ -65,6 +66,12 @@ _Type_: **string (254) __nullable__**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 ### ToDate
 

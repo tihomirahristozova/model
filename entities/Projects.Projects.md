@@ -33,6 +33,7 @@ Aggregate Tree
 | [Name](Projects.Projects.md#name) | string (254) | The name of this Project. `Required` `Filter(eq;like)` 
 | [Notes](Projects.Projects.md#notes) | string (max) __nullable__ | Notes for this Project. 
 | [ProjectStatus](Projects.Projects.md#projectstatus) | [ProjectStatus](Projects.Projects.md#projectstatus) | Current project status. 0=New/Structuring, 10=Budgeting, 20=Panning, 30=Started, 40=Resolved(Completed), 45=Resolved(Cancelled), 50=Closed(Completed), 55=Closed(Cancelled). `Required` `Default(0)` `Filter(multi eq)` 
+| [RowVersion](Projects.Projects.md#rowversion) | byte[] |  
 | [StartDate](Projects.Projects.md#startdate) | date __nullable__ | Expected date, when the execution of the tasks will start. null means that the start date is still unknown. `Filter(eq)` 
 
 ## References
@@ -121,6 +122,12 @@ _Allowed Values (Projects.ProjectsRepository.ProjectStatus Enum Members)_
 _Supported Filters_: **Equals, EqualsIn**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 ### StartDate
 

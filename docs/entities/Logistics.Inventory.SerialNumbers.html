@@ -108,6 +108,11 @@ __</p>
 <td></td>
 </tr>
 <tr>
+<td><a href="Logistics.Inventory.SerialNumbers.html#rowversion">RowVersion</a></td>
+<td>byte[]</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="Logistics.Inventory.SerialNumbers.html#serialnumberfield">SerialNumberField</a></td>
 <td>string (40)</td>
 <td>The serial number text. <code>Required</code> <code>Filter(multi eq;like)</code></td>
@@ -137,6 +142,10 @@ __</p>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
+<h3 id="rowversion">RowVersion</h3>
+<p><em>Type</em>: <strong>byte[]</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="serialnumberfield">SerialNumberField</h3>
 <p>The serial number text. <code>Required</code> <code>Filter(multi eq;like)</code></p>
 <p><em>Type</em>: <strong>string (40)</strong><br>

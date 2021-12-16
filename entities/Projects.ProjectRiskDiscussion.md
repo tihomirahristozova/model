@@ -29,13 +29,14 @@ Aggregate Root:
 | [Id](Projects.ProjectRiskDiscussion.md#id) | guid |  
 | [LastEditTime](Projects.ProjectRiskDiscussion.md#lastedittime) | datetime __nullable__ | Contains the last edit time of the message. null if the message was never edited. `Filter(eq)` `ReadOnly` 
 | [Message](Projects.ProjectRiskDiscussion.md#message) | string (max) | The contents of the message. `Required` 
+| [RowVersion](Projects.ProjectRiskDiscussion.md#rowversion) | byte[] |  
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [ContributedByUser](Projects.ProjectRiskDiscussion.md#contributedbyuser) | [Users](Systems.Security.Users.md) | The user, who contributed (wrote) the message. `Required` `Filter(multi eq)` `ReadOnly` |
-| [ProjectRisk](Projects.ProjectRiskDiscussion.md#projectrisk) | [ProjectRisks](Projects.ProjectRisks.md) | The `ProjectRisk`(Projects.ProjectRiskDiscussion.md#projectrisk) to which this ProjectRiskDiscussion belongs. `Required` `Filter(multi eq)` `Owner` |
+| [ProjectRisk](Projects.ProjectRiskDiscussion.md#projectrisk) | [ProjectRisks](Projects.ProjectRisks.md) | The <see cref="ProjectRisk"/> to which this ProjectRiskDiscussion belongs. `Required` `Filter(multi eq)` `Owner` |
 
 
 ## Attribute Details
@@ -73,6 +74,12 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
 
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+
 
 ## Reference Details
 
@@ -85,7 +92,7 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### ProjectRisk
 
-The `ProjectRisk`(Projects.ProjectRiskDiscussion.md#projectrisk) to which this ProjectRiskDiscussion belongs. `Required` `Filter(multi eq)` `Owner`
+The <see cref="ProjectRisk"/> to which this ProjectRiskDiscussion belongs. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[ProjectRisks](Projects.ProjectRisks.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

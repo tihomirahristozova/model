@@ -30,6 +30,7 @@ Aggregate Root:
 | [ExecutionCompletePercent](General.Contacts.ActivityTimeIntervals.md#executioncompletepercent) | decimal (3, 2) | Percent of task completed. `Required` `Default(0)` `Filter(ge;le)` 
 | [Id](General.Contacts.ActivityTimeIntervals.md#id) | guid |  
 | [Notes](General.Contacts.ActivityTimeIntervals.md#notes) | string (254) __nullable__ | Notes for the time interval. 
+| [RowVersion](General.Contacts.ActivityTimeIntervals.md#rowversion) | byte[] |  
 | [StartTime](General.Contacts.ActivityTimeIntervals.md#starttime) | time | The starting time of the time interval within 'Date'. `Required` `Filter(ge;le)` 
 | [State](General.Contacts.ActivityTimeIntervals.md#state) | [DocumentState](General.Contacts.ActivityTimeIntervals.md#state) __nullable__ | The state of the primary activity in the moment the time interval was created. null when the state is unknown. 
 
@@ -86,6 +87,12 @@ _Type_: **string (254) __nullable__**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 ### StartTime
 

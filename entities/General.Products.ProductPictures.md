@@ -32,12 +32,13 @@ Aggregate Root:
 | [Picture](General.Products.ProductPictures.md#picture) | byte[] __nullable__ | The actual product picture. Can be null if we insert only some comments. 
 | [PictureNo](General.Products.ProductPictures.md#pictureno) | int32 | Unique picture number within the product. Also used for sorting. `Required` `Filter(eq;like)` 
 | [PictureSizeClass](General.Products.ProductPictures.md#picturesizeclass) | [PictureSizeClass](General.Products.ProductPictures.md#picturesizeclass) __nullable__ | Specifies the relative picture size and usage. S=Small picture (thumbnail), L=Large picture (full size), null=unspecified. 
+| [RowVersion](General.Products.ProductPictures.md#rowversion) | byte[] |  
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Product](General.Products.ProductPictures.md#product) | [Products](General.Products.Products.md) | The `Product`(General.Products.ProductPictures.md#product) to which this ProductPicture belongs. `Required` `Filter(multi eq)` `Owner` |
+| [Product](General.Products.ProductPictures.md#product) | [Products](General.Products.Products.md) | The <see cref="Product"/> to which this ProductPicture belongs. `Required` `Filter(multi eq)` `Owner` |
 
 
 ## Attribute Details
@@ -114,12 +115,18 @@ _Allowed Values (General.Products.ProductPicturesRepository.PictureSizeClass Enu
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+
 
 ## Reference Details
 
 ### Product
 
-The `Product`(General.Products.ProductPictures.md#product) to which this ProductPicture belongs. `Required` `Filter(multi eq)` `Owner`
+The <see cref="Product"/> to which this ProductPicture belongs. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[Products](General.Products.Products.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

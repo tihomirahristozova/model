@@ -28,6 +28,7 @@ Aggregate Tree
 | [Name](Crm.PriceTypes.md#name) | string (254) | Full name of the price type. `Required` `Filter(eq;like)` 
 | [Notes](Crm.PriceTypes.md#notes) | string (max) __nullable__ | Notes for this PriceType. 
 | [OrdinalPos](Crm.PriceTypes.md#ordinalpos) | int32 | Priority position of the price type, with respect to the other price types. `Required` `ORD` 
+| [RowVersion](Crm.PriceTypes.md#rowversion) | byte[] |  
 
 
 ## Attribute Details
@@ -75,6 +76,12 @@ _Type_: **int32**
 _Indexed_: **True**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **True**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 
 

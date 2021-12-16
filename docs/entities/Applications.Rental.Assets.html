@@ -128,6 +128,11 @@ Aggregate Root:<br>
 <td>The name of the rental asset. <code>Required</code> <code>Filter(like)</code></td>
 </tr>
 <tr>
+<td><a href="Applications.Rental.Assets.html#rowversion">RowVersion</a></td>
+<td>byte[]</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="Applications.Rental.Assets.html#standardguaranteeamount">StandardGuaranteeAmount</a></td>
 <td><a href="../data-types.html#amount">Amount (14, 2)</a> <strong>nullable</strong></td>
 <td>Standard default amount of the guarantee that is set for this asset when leased. <code>Currency: StandardGuarantee&lt;br /&gt;AmountCurrency</code> <code>Filter(multi eq)</code></td>
@@ -244,6 +249,10 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>254</strong></p>
+<h3 id="rowversion">RowVersion</h3>
+<p><em>Type</em>: <strong>byte[]</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="standardguaranteeamount">StandardGuaranteeAmount</h3>
 <p>Standard default amount of the guarantee that is set for this asset when leased. <code>Currency: StandardGuaranteeAmountCurrency</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount (14, 2)</a> <strong>nullable</strong></strong><br>

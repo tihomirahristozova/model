@@ -29,6 +29,7 @@ Aggregate Root:
 | [PeriodDate](Crm.Distribution.SalesPersonTargetLines.md#perioddate) | datetime | Calculated date representation of the target period (used for grouping, filtering and other auxiliary purposes). `Required` `ReadOnly` 
 | [PeriodMonth](Crm.Distribution.SalesPersonTargetLines.md#periodmonth) | byte | Month of the period in which the target must be fulfilled (the period is determined by specifying a month and an year). `Required` `Filter(ge;le)` 
 | [PeriodYear](Crm.Distribution.SalesPersonTargetLines.md#periodyear) | int16 | Year of the period in which the target must be fulfilled (the period is determined by specifying a month and an year). `Required` `Filter(ge;le)` 
+| [RowVersion](Crm.Distribution.SalesPersonTargetLines.md#rowversion) | byte[] |  
 | [TargetAmount](Crm.Distribution.SalesPersonTargetLines.md#targetamount) | [Amount (18, 2)](../data-types.md#amount) __nullable__ | Target amount to be fulfilled by the specified sales person. Deprecated - use Target_Value. `Currency: TargetAmountCurrency` 
 | [TargetType](Crm.Distribution.SalesPersonTargetLines.md#targettype) | [TargetType](Crm.Distribution.SalesPersonTargetLines.md#targettype) | Type of target. Defines the meaning of Target_Value. SALES-sales amount, BONUS-count of bonus progs, PACK-count of promo packs. `Required` `Default("SALES")` `Filter(multi eq)` 
 | [TargetValue](Crm.Distribution.SalesPersonTargetLines.md#targetvalue) | decimal (9, 2) | Value of target. Meaning depends on target type. `Required` `Default(0)` 
@@ -42,7 +43,7 @@ Aggregate Root:
 | [ProductGroup](Crm.Distribution.SalesPersonTargetLines.md#productgroup) | [ProductGroups](General.Products.ProductGroups.md) (nullable) | Product group for which the target is defined. `Filter(multi eq)` |
 | [PromotionalPackage](Crm.Distribution.SalesPersonTargetLines.md#promotionalpackage) | [PromotionalPackages](Crm.PromotionalPackages.md) (nullable) | Promotional Package Id when the target type is PROMO, null otherwise. `Filter(multi eq)` |
 | [SalesPerson](Crm.Distribution.SalesPersonTargetLines.md#salesperson) | [SalesPersons](Crm.SalesPersons.md) | Sales person to whom the target is assigned. `Required` `Filter(multi eq)` |
-| [SalesPersonTarget](Crm.Distribution.SalesPersonTargetLines.md#salespersontarget) | [SalesPersonTargets](Crm.Distribution.SalesPersonTargets.md) | The `SalesPersonTarget`(Crm.Distribution.SalesPersonTargetLines.md#salespersontarget) to which this SalesPersonTargetLine belongs. `Required` `Filter(multi eq)` `Owner` |
+| [SalesPersonTarget](Crm.Distribution.SalesPersonTargetLines.md#salespersontarget) | [SalesPersonTargets](Crm.Distribution.SalesPersonTargets.md) | The <see cref="SalesPersonTarget"/> to which this SalesPersonTargetLine belongs. `Required` `Filter(multi eq)` `Owner` |
 | [TargetAmountCurrency](Crm.Distribution.SalesPersonTargetLines.md#targetamountcurrency) | [Currencies](General.Currencies.md) (nullable) | Deprecated - use currency in document header. `Filter(multi eq)` |
 
 
@@ -77,6 +78,12 @@ Year of the period in which the target must be fulfilled (the period is determin
 
 _Type_: **int16**  
 _Supported Filters_: **GreaterThanOrLessThan**  
+_Supports Order By_: **False**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
 ### TargetAmount
@@ -167,7 +174,7 @@ _Front-End Recalc Expressions:_
 `obj.SalesPersonTarget.SalesPerson`
 ### SalesPersonTarget
 
-The `SalesPersonTarget`(Crm.Distribution.SalesPersonTargetLines.md#salespersontarget) to which this SalesPersonTargetLine belongs. `Required` `Filter(multi eq)` `Owner`
+The <see cref="SalesPersonTarget"/> to which this SalesPersonTargetLine belongs. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[SalesPersonTargets](Crm.Distribution.SalesPersonTargets.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

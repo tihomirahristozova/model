@@ -198,6 +198,11 @@ Default Search Members:<br>
 <td>The period in months, for which the data is kept. Null when the period is unknown or N/A. <code>Filter(eq)</code></td>
 </tr>
 <tr>
+<td><a href="Applications.PersonalData.PersonalDataProcesses.html#rowversion">RowVersion</a></td>
+<td>byte[]</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="Applications.PersonalData.PersonalDataProcesses.html#thirdcountrytransferssafeguards">ThirdCountryTransfers<br>Safeguards</a></td>
 <td>string (254) <strong>nullable</strong></td>
 <td>Description of safeguards, taken to protect personal data in case of third country transfers. <code>Filter(eq;like)</code></td>
@@ -445,6 +450,10 @@ Allowed values for the <code>ProcessingRole</code>(Applications.PersonalData.Per
 <p>The period in months, for which the data is kept. Null when the period is unknown or N/A. <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong>int32 <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="rowversion">RowVersion</h3>
+<p><em>Type</em>: <strong>byte[]</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="thirdcountrytransferssafeguards">ThirdCountryTransfersSafeguards</h3>
 <p>Description of safeguards, taken to protect personal data in case of third country transfers. <code>Filter(eq;like)</code></p>

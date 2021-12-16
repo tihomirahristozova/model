@@ -34,6 +34,7 @@ Aggregate Tree
 | [Name](Systems.Bpm.UserBusinessRules.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | The name of this UserBusinessRule. `Required` `Filter(like)` 
 | [Notes](Systems.Bpm.UserBusinessRules.md#notes) | string (max) __nullable__ | Notes for this UserBusinessRule. 
 | [RepositoryName](Systems.Bpm.UserBusinessRules.md#repositoryname) | string (128) | The name of the repository, for which this business rule is defined. `Required` `Filter(eq;like)` 
+| [RowVersion](Systems.Bpm.UserBusinessRules.md#rowversion) | byte[] |  
 | [ScriptLanguage](Systems.Bpm.UserBusinessRules.md#scriptlanguage) | [ScriptLanguage](Systems.Bpm.UserBusinessRules.md#scriptlanguage) | The programming language used to define the rule actions. `Required` `Default("Integrated")` 
 | [ScriptText](Systems.Bpm.UserBusinessRules.md#scripttext) | string (max) __nullable__ | The program code used to define the rule actions. 
 | [UserStartable](Systems.Bpm.UserBusinessRules.md#userstartable) | boolean __nullable__ | Specifies, that the rule can be manually started by the user. `Default(false)` `Filter(eq)` 
@@ -126,6 +127,12 @@ _Type_: **string (128)**
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **128**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 ### ScriptLanguage
 

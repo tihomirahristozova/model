@@ -30,17 +30,18 @@ Aggregate Root:
 | [LineNo](Applications.Service.ServiceActivityMaterials.md#lineno) | int32 | Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc. `Required` 
 | [Quantity](Applications.Service.ServiceActivityMaterials.md#quantity) | [Quantity (18, 3)](../data-types.md#quantity) | Quantity of the product, that was used. `Unit: QuantityUnit` `Required` 
 | [QuantityBase](Applications.Service.ServiceActivityMaterials.md#quantitybase) | [Quantity (18, 3)](../data-types.md#quantity) | The equivalence of Quantity in the base measurement category of the product. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` 
+| [RowVersion](Applications.Service.ServiceActivityMaterials.md#rowversion) | byte[] |  
 | [StandardQuantityBase](Applications.Service.ServiceActivityMaterials.md#standardquantitybase) | [Quantity (18, 3)](../data-types.md#quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` `Introduced in version 18.2` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Document](Applications.Service.ServiceActivityMaterials.md#document) | [ServiceActivities](Applications.Service.ServiceActivities.md) | The `ServiceActivity`(Applications.Service.ServiceActivityMaterials.md#serviceactivity) to which this ServiceActivityMaterial belongs. `Required` `Filter(multi eq)` |
+| [Document](Applications.Service.ServiceActivityMaterials.md#document) | [ServiceActivities](Applications.Service.ServiceActivities.md) | The <see cref="ServiceActivity"/> to which this ServiceActivityMaterial belongs. `Required` `Filter(multi eq)` |
 | [LineStore](Applications.Service.ServiceActivityMaterials.md#linestore) | [Stores](Logistics.Inventory.Stores.md) (nullable) | The store from which the product was taken. null = use the store from the header. `Filter(multi eq)` |
 | [Product](Applications.Service.ServiceActivityMaterials.md#product) | [Products](General.Products.Products.md) | The product, which was used as material. `Required` `Filter(multi eq)` |
 | [QuantityUnit](Applications.Service.ServiceActivityMaterials.md#quantityunit) | [MeasurementUnits](General.MeasurementUnits.md) | The measurement unit of Quantity. Initially is set to the default unit for the product. `Required` `Filter(multi eq)` |
-| [ServiceActivity](Applications.Service.ServiceActivityMaterials.md#serviceactivity) | [ServiceActivities](Applications.Service.ServiceActivities.md) | The `ServiceActivity`(Applications.Service.ServiceActivityMaterials.md#serviceactivity) to which this ServiceActivityMaterial belongs. `Required` `Filter(multi eq)` `Owner` |
+| [ServiceActivity](Applications.Service.ServiceActivityMaterials.md#serviceactivity) | [ServiceActivities](Applications.Service.ServiceActivities.md) | The <see cref="ServiceActivity"/> to which this ServiceActivityMaterial belongs. `Required` `Filter(multi eq)` `Owner` |
 | [ServiceObject](Applications.Service.ServiceActivityMaterials.md#serviceobject) | [ServiceObjects](Applications.Service.ServiceObjects.md) (nullable) | The service object for which the material is used. null means unkown object or N/A. `Filter(multi eq)` |
 
 ## Child Collections
@@ -102,6 +103,12 @@ _Back-End Default Expression:_
 
 _Front-End Recalc Expressions:_  
 `IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.QuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))`
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+
 ### StandardQuantityBase
 
 The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` `Introduced in version 18.2`
@@ -120,7 +127,7 @@ _Front-End Recalc Expressions:_
 
 ### Document
 
-The `ServiceActivity`(Applications.Service.ServiceActivityMaterials.md#serviceactivity) to which this ServiceActivityMaterial belongs. `Required` `Filter(multi eq)`
+The <see cref="ServiceActivity"/> to which this ServiceActivityMaterial belongs. `Required` `Filter(multi eq)`
 
 _Type_: **[ServiceActivities](Applications.Service.ServiceActivities.md)**  
 _Indexed_: **True**  
@@ -156,7 +163,7 @@ _Front-End Recalc Expressions:_
 `obj.Product.MeasurementUnit`
 ### ServiceActivity
 
-The `ServiceActivity`(Applications.Service.ServiceActivityMaterials.md#serviceactivity) to which this ServiceActivityMaterial belongs. `Required` `Filter(multi eq)` `Owner`
+The <see cref="ServiceActivity"/> to which this ServiceActivityMaterial belongs. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[ServiceActivities](Applications.Service.ServiceActivities.md)**  
 _Indexed_: **True**  

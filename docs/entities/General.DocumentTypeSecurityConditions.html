@@ -122,6 +122,11 @@ __</p>
 <td><a href="General.DocumentTypeSecurityConditions.html#priority">Priority</a></td>
 <td>Priority of the rule against other rules, which are also applicable. Only the highest priority rule is selected. <code>Required</code> <code>Default(3)</code> <code>Filter(ge;le)</code></td>
 </tr>
+<tr>
+<td><a href="General.DocumentTypeSecurityConditions.html#rowversion">RowVersion</a></td>
+<td>byte[]</td>
+<td></td>
+</tr>
 </tbody>
 </table>
 <h2 id="references">References</h2>
@@ -201,6 +206,10 @@ Generic enum type for Priority properties<br>
 <p><em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>3</strong></p>
+<h3 id="rowversion">RowVersion</h3>
+<p><em>Type</em>: <strong>byte[]</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="documentaccesskey">DocumentAccessKey</h3>
 <p>The access key, which will be used to secure new documents, when this rule is selected. <code>Required</code> <code>Filter(multi eq)</code></p>

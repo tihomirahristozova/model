@@ -29,6 +29,7 @@ Aggregate Root:
 | [LineNo](Crm.Presales.DealLines.md#lineno) | int32 | Consecutive number of the line within the deal. `Required` `Filter(eq)` 
 | [Notes](Crm.Presales.DealLines.md#notes) | string (max) __nullable__ | Notes. 
 | [Quantity](Crm.Presales.DealLines.md#quantity) | [Quantity (12, 3)](../data-types.md#quantity) __nullable__ | When not null, specifies the quantity, which the client can potentially buy (with measurement unit specified in Quantity Unit). `Unit: QuantityUnit` 
+| [RowVersion](Crm.Presales.DealLines.md#rowversion) | byte[] |  
 
 ## References
 
@@ -75,6 +76,12 @@ _Maximum Length_: **2147483647**
 When not null, specifies the quantity, which the client can potentially buy (with measurement unit specified in Quantity Unit). `Unit: QuantityUnit`
 
 _Type_: **[Quantity (12, 3)](../data-types.md#quantity) __nullable__**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+
+### RowVersion
+
+_Type_: **byte[]**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 

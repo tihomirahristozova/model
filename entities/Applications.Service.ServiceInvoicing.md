@@ -28,6 +28,7 @@ Aggregate Root:
 | [Id](Applications.Service.ServiceInvoicing.md#id) | guid |  
 | [QuantityOfProduct](Applications.Service.ServiceInvoicing.md#quantityofproduct) | [Quantity (18, 3)](../data-types.md#quantity) | The quantity to invoice. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Default(1)` `Filter(ge;le)` 
 | [QuantityOfService](Applications.Service.ServiceInvoicing.md#quantityofservice) | [Quantity (18, 3)](../data-types.md#quantity) | The quantity of service for which the invoicing is specified. `Unit: Service.MeasurementUnit` `Required` `Default(1)` `Filter(ge;le)` 
+| [RowVersion](Applications.Service.ServiceInvoicing.md#rowversion) | byte[] |  
 
 ## References
 
@@ -63,6 +64,12 @@ _Type_: **[Quantity (18, 3)](../data-types.md#quantity)**
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 
 ## Reference Details

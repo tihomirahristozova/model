@@ -28,6 +28,7 @@ Aggregate Tree
 | [Id](Projects.Templates.md#id) | guid |  
 | [Notes](Projects.Templates.md#notes) | string (max) __nullable__ | Notes for this Template. 
 | [ProjectTemplateName](Projects.Templates.md#projecttemplatename) | string (254) | The name of the project template. `Required` 
+| [RowVersion](Projects.Templates.md#rowversion) | byte[] |  
 
 ## Child Collections
 
@@ -63,6 +64,12 @@ _Type_: **string (254)**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 
 

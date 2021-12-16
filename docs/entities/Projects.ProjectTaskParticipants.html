@@ -118,6 +118,11 @@ Aggregate Root:<br>
 <td>Specifies whether the participant should be notified on task status changes. <code>Required</code> <code>Default(true)</code></td>
 </tr>
 <tr>
+<td><a href="Projects.ProjectTaskParticipants.html#rowversion">RowVersion</a></td>
+<td>byte[]</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="Projects.ProjectTaskParticipants.html#workloadpercent">WorkLoadPercent</a></td>
 <td>decimal (3, 2)</td>
 <td>The planned work load (in percents) of the participant for this task. <code>Required</code> <code>Default(1)</code> <code>Filter(eq)</code></td>
@@ -164,6 +169,10 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>True</strong></p>
+<h3 id="rowversion">RowVersion</h3>
+<p><em>Type</em>: <strong>byte[]</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="workloadpercent">WorkLoadPercent</h3>
 <p>The planned work load (in percents) of the participant for this task. <code>Required</code> <code>Default(1)</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong>decimal (3, 2)</strong><br>

@@ -25,6 +25,7 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [Id](Crm.CustomerTypes.md#id) | guid |  
 | [Name](Crm.CustomerTypes.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | The name of this CustomerType. `Required` `Filter(eq;like)` 
+| [RowVersion](Crm.CustomerTypes.md#rowversion) | byte[] |  
 
 ## References
 
@@ -48,6 +49,12 @@ The name of this CustomerType. `Required` `Filter(eq;like)`
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Supported Filters_: **Equals, Like**  
+_Supports Order By_: **False**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
 

@@ -27,6 +27,7 @@ Aggregate Tree
 | [Id](Logistics.Shipment.CargoTypes.md#id) | guid |  
 | [Name](Logistics.Shipment.CargoTypes.md#name) | string (256) | The name of this CargoType. `Required` `Filter(eq;like)` 
 | [Notes](Logistics.Shipment.CargoTypes.md#notes) | string (max) __nullable__ | Notes for this CargoType. 
+| [RowVersion](Logistics.Shipment.CargoTypes.md#rowversion) | byte[] |  
 
 
 ## Attribute Details
@@ -65,6 +66,12 @@ _Type_: **string (max) __nullable__**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 
 

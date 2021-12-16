@@ -143,6 +143,11 @@ __</p>
 <td>Priority of the price comparative to other prices. <code>Required</code> <code>Default(2)</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
+<td><a href="Logistics.Procurement.PurchaseProductPrices.html#rowversion">RowVersion</a></td>
+<td>byte[]</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="Logistics.Procurement.PurchaseProductPrices.html#thrudate">ThruDate</a></td>
 <td>datetime <strong>nullable</strong></td>
 <td>Ending date (inclusive) of the validity of the price. <code>Filter(eq;ge;le)</code></td>
@@ -268,6 +273,10 @@ Allowed values for the <code>Priority</code>(Logistics.Procurement.PurchaseProdu
 <p><em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>2</strong></p>
+<h3 id="rowversion">RowVersion</h3>
+<p><em>Type</em>: <strong>byte[]</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="thrudate">ThruDate</h3>
 <p>Ending date (inclusive) of the validity of the price. <code>Filter(eq;ge;le)</code></p>
 <p><em>Type</em>: <strong>datetime <strong>nullable</strong></strong><br>

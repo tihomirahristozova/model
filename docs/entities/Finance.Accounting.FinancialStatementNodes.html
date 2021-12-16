@@ -127,6 +127,11 @@ Aggregate Root:<br>
 <td>string (25) <strong>nullable</strong></td>
 <td>Parent financial statement node specified through its full identification path. <code>Filter(like)</code></td>
 </tr>
+<tr>
+<td><a href="Finance.Accounting.FinancialStatementNodes.html#rowversion">RowVersion</a></td>
+<td>byte[]</td>
+<td></td>
+</tr>
 </tbody>
 </table>
 <h2 id="references">References</h2>
@@ -142,7 +147,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Finance.Accounting.FinancialStatementNodes.html#financialstatement">FinancialStatement</a></td>
 <td><a href="Finance.Accounting.FinancialStatements.html">FinancialStatements</a></td>
-<td>The <code>FinancialStatement</code>(Finance.Accounting.FinancialStatementNodes.md#financialstatement) to which this FinancialStatementNode belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
+<td>The <see cref="Financial<br />Statement"></see> to which this FinancialStatementNode belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 </tbody>
 </table>
@@ -192,9 +197,13 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>25</strong></p>
+<h3 id="rowversion">RowVersion</h3>
+<p><em>Type</em>: <strong>byte[]</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="financialstatement">FinancialStatement</h3>
-<p>The <code>FinancialStatement</code>(Finance.Accounting.FinancialStatementNodes.md#financialstatement) to which this FinancialStatementNode belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
+<p>The <see cref="FinancialStatement"></see> to which this FinancialStatementNode belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="Finance.Accounting.FinancialStatements.html">FinancialStatements</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>

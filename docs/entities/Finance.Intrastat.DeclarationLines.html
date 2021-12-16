@@ -138,6 +138,11 @@ Aggregate Root:<br>
 <td>Quantity of the goods in the supplementary unit. null when no supplementary unit is specified.</td>
 </tr>
 <tr>
+<td><a href="Finance.Intrastat.DeclarationLines.html#rowversion">RowVersion</a></td>
+<td>byte[]</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="Finance.Intrastat.DeclarationLines.html#statisticalvalueamountbase">StatisticalValueAmountBase</a></td>
 <td><a href="../data-types.html#amount">Amount (10, 0)</a> <strong>nullable</strong></td>
 <td>Statistical value of the goods in the base currency. <code>Currency: IntrastatDeclaration.EnterpriseCompany.BaseCurrency</code></td>
@@ -323,6 +328,10 @@ Allowed values for the <code>LineAction</code>(Finance.Intrastat.DeclarationLine
 <h3 id="quantitysupplementaryunit">QuantitySupplementaryUnit</h3>
 <p>Quantity of the goods in the supplementary unit. null when no supplementary unit is specified.</p>
 <p><em>Type</em>: <strong>decimal (10, 0) <strong>nullable</strong></strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="rowversion">RowVersion</h3>
+<p><em>Type</em>: <strong>byte[]</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="statisticalvalueamountbase">StatisticalValueAmountBase</h3>

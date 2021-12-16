@@ -28,6 +28,7 @@ Aggregate Tree
 | [Code](Crm.PromotionalPackages.md#code) | string (20) | Unique code of the promotional package. `Required` `Filter(eq;like)` `ORD` 
 | [Id](Crm.PromotionalPackages.md#id) | guid |  
 | [Name](Crm.PromotionalPackages.md#name) | string (254) | The name of this PromotionalPackage. `Required` `Filter(eq;like)` `ORD` 
+| [RowVersion](Crm.PromotionalPackages.md#rowversion) | byte[] |  
 | [ValidForCustomerFilterXML](Crm.PromotionalPackages.md#validforcustomerfilterxml) | dataaccessfilter __nullable__ | When not null, the package is valid only for the customers, that match the filter. 
 | [ValidForDistribution<br />ChannelFilterX<br />ML](Crm.PromotionalPackages.md#validfordistributionchannelfilterxml) | dataaccessfilter __nullable__ | When not null, the package is valid only if the specified distribution channel of the sales order fits in the filter criteria. 
 | [ValidForShipTo<br />CustomerFilter<br />XML](Crm.PromotionalPackages.md#validforshiptocustomerfilterxml) | dataaccessfilter __nullable__ | When not null, specifies validity condition for the Ship To Customer of the sales document. 
@@ -91,6 +92,12 @@ _Indexed_: **True**
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
 _Maximum Length_: **254**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 ### ValidForCustomerFilterXML
 

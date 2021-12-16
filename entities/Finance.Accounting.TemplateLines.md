@@ -36,6 +36,7 @@ Aggregate Root:
 | [LineNo](Finance.Accounting.TemplateLines.md#lineno) | int32 | Consecutive number of the line within the template. Determines the order of execution of the template lines. `Required` 
 | [Multiplier](Finance.Accounting.TemplateLines.md#multiplier) | decimal (18, 6) | Factor by which the amount from the source will be multiplied. `Required` `Default(1)` 
 | [Notes](Finance.Accounting.TemplateLines.md#notes) | string (254) __nullable__ | Notes for this TemplateLine. 
+| [RowVersion](Finance.Accounting.TemplateLines.md#rowversion) | byte[] |  
 | [ValidFromDate](Finance.Accounting.TemplateLines.md#validfromdate) | datetime __nullable__ | Start date from which the accounting template line is valid. `Filter(multi eq;ge;le)` 
 | [ValidToDate](Finance.Accounting.TemplateLines.md#validtodate) | datetime __nullable__ | End date to which the accounting template line is valid. `Filter(multi eq;ge;le)` 
 
@@ -45,7 +46,7 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [CreditAccount](Finance.Accounting.TemplateLines.md#creditaccount) | [Accounts](Finance.Accounting.Accounts.md) | The account which should be credited. `Required` `Filter(multi eq)` |
 | [DebitAccount](Finance.Accounting.TemplateLines.md#debitaccount) | [Accounts](Finance.Accounting.Accounts.md) | The account which should be debited. `Required` `Filter(multi eq)` |
-| [Template](Finance.Accounting.TemplateLines.md#template) | [Templates](Finance.Accounting.Templates.md) | The `Template`(Finance.Accounting.TemplateLines.md#template) to which this TemplateLine belongs. `Required` `Filter(multi eq)` `Owner` |
+| [Template](Finance.Accounting.TemplateLines.md#template) | [Templates](Finance.Accounting.Templates.md) | The <see cref="Template"/> to which this TemplateLine belongs. `Required` `Filter(multi eq)` `Owner` |
 
 ## Child Collections
 
@@ -160,6 +161,12 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
 
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+
 ### ValidFromDate
 
 Start date from which the accounting template line is valid. `Filter(multi eq;ge;le)`
@@ -195,7 +202,7 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### Template
 
-The `Template`(Finance.Accounting.TemplateLines.md#template) to which this TemplateLine belongs. `Required` `Filter(multi eq)` `Owner`
+The <see cref="Template"/> to which this TemplateLine belongs. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[Templates](Finance.Accounting.Templates.md)**  
 _Indexed_: **True**  

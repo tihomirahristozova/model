@@ -166,6 +166,11 @@ Default Search Members:<br>
 <td>Notes for this Document. (Inherited from <a href="General.Documents.html">Documents</a>)</td>
 </tr>
 <tr>
+<td><a href="Logistics.Shipment.ShipmentOrders.html#documentrowversion">DocumentRowVersion</a></td>
+<td>byte[]</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="Logistics.Shipment.ShipmentOrders.html#documentversion">DocumentVersion</a></td>
 <td>int32</td>
 <td>Consecutive version number, starting with 1. Each update produces a new version of the document. <code>Required</code> <code>Default(1)</code> <code>Filter(eq;ge;le)</code> <code>ReadOnly</code> (Inherited from <a href="General.Documents.html">Documents</a>)</td>
@@ -219,6 +224,11 @@ Default Search Members:<br>
 <td><a href="Logistics.Shipment.ShipmentOrders.html#requireddeliverydate">RequiredDeliveryDate</a></td>
 <td>datetime</td>
 <td>Required delivery date. Depending on the shipment route travel time, the shipment should be released accordingly earlier. <code>Required</code> <code>Filter(ge;le)</code></td>
+</tr>
+<tr>
+<td><a href="Logistics.Shipment.ShipmentOrders.html#rowversion">RowVersion</a></td>
+<td>byte[]</td>
+<td></td>
 </tr>
 <tr>
 <td><a href="Logistics.Shipment.ShipmentOrders.html#state">State</a></td>
@@ -491,6 +501,10 @@ Default Search Members:<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>2147483647</strong></p>
+<h3 id="documentrowversion">DocumentRowVersion</h3>
+<p><em>Type</em>: <strong>byte[]</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="documentversion">DocumentVersion</h3>
 <p>Consecutive version number, starting with 1. Each update produces a new version of the document. <code>Required</code> <code>Default(1)</code> <code>Filter(eq;ge;le)</code> <code>ReadOnly</code> (Inherited from <a href="General.Documents.html">Documents</a>)</p>
 <p><em>Type</em>: <strong>int32</strong><br>
@@ -573,6 +587,10 @@ Relationship between parent and child documents<br>
 <p>Required delivery date. Depending on the shipment route travel time, the shipment should be released accordingly earlier. <code>Required</code> <code>Filter(ge;le)</code></p>
 <p><em>Type</em>: <strong>datetime</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="rowversion">RowVersion</h3>
+<p><em>Type</em>: <strong>byte[]</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="state">State</h3>
 <p>The current system state of the document. Allowed values: 0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed. <code>Required</code> <code>Default(0)</code> <code>Filter(multi eq;ge;le)</code> <code>ReadOnly</code> (Inherited from <a href="General.Documents.html">Documents</a>)</p>

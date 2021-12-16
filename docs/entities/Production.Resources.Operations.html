@@ -128,6 +128,11 @@ Aggregate Root:<br>
 <td>The name of this Operation. <code>Required</code> <code>Filter(like)</code></td>
 </tr>
 <tr>
+<td><a href="Production.Resources.Operations.html#rowversion">RowVersion</a></td>
+<td>byte[]</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="Production.Resources.Operations.html#runtimeminutes">RunTimeMinutes</a></td>
 <td>int32</td>
 <td>The time required to process one product lot. The run time is calculated for each produced lot. <code>Required</code> <code>Default(0)</code></td>
@@ -177,7 +182,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Production.Resources.Operations.html#operationgroup">OperationGroup</a></td>
 <td><a href="Production.Resources.OperationGroups.html">OperationGroups</a></td>
-<td>The <code>OperationGroup</code>(Production.Resources.Operations.md#operationgroup) to which this Operation belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
+<td>The <see cref="OperationGroup"></see> to which this Operation belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 <tr>
 <td><a href="Production.Resources.Operations.html#operationinstructions">OperationInstructions</a></td>
@@ -220,6 +225,10 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>50</strong></p>
+<h3 id="rowversion">RowVersion</h3>
+<p><em>Type</em>: <strong>byte[]</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="runtimeminutes">RunTimeMinutes</h3>
 <p>The time required to process one product lot. The run time is calculated for each produced lot. <code>Required</code> <code>Default(0)</code></p>
 <p><em>Type</em>: <strong>int32</strong><br>
@@ -263,7 +272,7 @@ Aggregate Root:<br>
 <em>Default Value</em>: <strong>0</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="operationgroup">OperationGroup</h3>
-<p>The <code>OperationGroup</code>(Production.Resources.Operations.md#operationgroup) to which this Operation belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
+<p>The <see cref="OperationGroup"></see> to which this Operation belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="Production.Resources.OperationGroups.html">OperationGroups</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>

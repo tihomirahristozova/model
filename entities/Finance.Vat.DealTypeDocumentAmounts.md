@@ -28,6 +28,7 @@ Aggregate Root:
 | [Id](Finance.Vat.DealTypeDocumentAmounts.md#id) | guid |  
 | [LinePercent](Finance.Vat.DealTypeDocumentAmounts.md#linepercent) | decimal (14, 3) | Percent by which additional amount is calculated. `Required` `Default(0)` 
 | [Notes](Finance.Vat.DealTypeDocumentAmounts.md#notes) | string (max) __nullable__ | Notes for this DealTypeDocumentAmount. 
+| [RowVersion](Finance.Vat.DealTypeDocumentAmounts.md#rowversion) | byte[] |  
 
 ## References
 
@@ -63,6 +64,12 @@ _Type_: **string (max) __nullable__**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 
 ## Reference Details

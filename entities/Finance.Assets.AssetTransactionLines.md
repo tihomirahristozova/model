@@ -35,6 +35,7 @@ Aggregate Root:
 | [PositiveReserveValueBase](Finance.Assets.AssetTransactionLines.md#positivereservevaluebase) | [Amount (14, 2)](../data-types.md#amount) | Change in the value of the positive reserve after asset valuations (in the currency of the enterprise company). `Currency: Asset.EnterpriseCompany.BaseCurrency` `Required` `Default(0)` 
 | [PurchaseValue](Finance.Assets.AssetTransactionLines.md#purchasevalue) | [Amount (14, 2)](../data-types.md#amount) | Change in the purchase value of the asset (in the currency of the asset). `Currency: Asset.ValuationCurrency` `Required` `Default(0)` 
 | [PurchaseValueBase](Finance.Assets.AssetTransactionLines.md#purchasevaluebase) | [Amount (14, 2)](../data-types.md#amount) | Change in the purchase value of the asset (in the currency of the enterprise company). `Currency: Asset.EnterpriseCompany.BaseCurrency` `Required` `Default(0)` 
+| [RowVersion](Finance.Assets.AssetTransactionLines.md#rowversion) | byte[] |  
 | [SalvageValue](Finance.Assets.AssetTransactionLines.md#salvagevalue) | [Amount (14, 2)](../data-types.md#amount) | Change in the salvage value of the asset (in the currency of the asset). `Currency: Asset.ValuationCurrency` `Required` `Default(0)` 
 | [SalvageValueBase](Finance.Assets.AssetTransactionLines.md#salvagevaluebase) | [Amount (14, 2)](../data-types.md#amount) | Change in the salvage value of the asset (in the currency of the enterprise company). `Currency: Asset.EnterpriseCompany.BaseCurrency` `Required` `Default(0)` 
 
@@ -43,7 +44,7 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Asset](Finance.Assets.AssetTransactionLines.md#asset) | [Assets](Finance.Assets.Assets.md) | Asset for which changes in values have occurred. `Required` `Filter(multi eq)` |
-| [AssetTransaction](Finance.Assets.AssetTransactionLines.md#assettransaction) | [AssetTransactions](Finance.Assets.AssetTransactions.md) | The `AssetTransaction`(Finance.Assets.AssetTransactionLines.md#assettransaction) to which this AssetTransactionLine belongs. `Required` `Filter(multi eq)` `Owner` |
+| [AssetTransaction](Finance.Assets.AssetTransactionLines.md#assettransaction) | [AssetTransactions](Finance.Assets.AssetTransactions.md) | The <see cref="AssetTransaction"/> to which this AssetTransactionLine belongs. `Required` `Filter(multi eq)` `Owner` |
 | [ValuationModel](Finance.Assets.AssetTransactionLines.md#valuationmodel) | [ValuationModels](Finance.Assets.ValuationModels.md) | Valuation model in which the changes of the asset values have occurred (Taxation model or Accounting model or other). `Required` `Filter(multi eq)` |
 
 
@@ -164,6 +165,12 @@ _Default Value_: **Constant**
 
 _Front-End Recalc Expressions:_  
 `obj.PurchaseValue.ConvertTo( obj.Asset.EnterpriseCompany.BaseCurrency, obj.AssetTransaction.CurrencyDirectory)`
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+
 ### SalvageValue
 
 Change in the salvage value of the asset (in the currency of the asset). `Currency: Asset.ValuationCurrency` `Required` `Default(0)`
@@ -199,7 +206,7 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### AssetTransaction
 
-The `AssetTransaction`(Finance.Assets.AssetTransactionLines.md#assettransaction) to which this AssetTransactionLine belongs. `Required` `Filter(multi eq)` `Owner`
+The <see cref="AssetTransaction"/> to which this AssetTransactionLine belongs. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[AssetTransactions](Finance.Assets.AssetTransactions.md)**  
 _Indexed_: **True**  

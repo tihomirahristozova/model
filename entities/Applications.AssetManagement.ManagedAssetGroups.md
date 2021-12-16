@@ -27,6 +27,7 @@ Aggregate Tree
 | [Id](Applications.AssetManagement.ManagedAssetGroups.md#id) | guid |  
 | [Name](Applications.AssetManagement.ManagedAssetGroups.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Name of the asset group (multi-language). `Required` `Filter(eq;like)` 
 | [Notes](Applications.AssetManagement.ManagedAssetGroups.md#notes) | string (max) __nullable__ | Notes for this ManagedAssetGroup. 
+| [RowVersion](Applications.AssetManagement.ManagedAssetGroups.md#rowversion) | byte[] |  
 
 ## References
 
@@ -70,6 +71,12 @@ _Type_: **string (max) __nullable__**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 
 ## Reference Details

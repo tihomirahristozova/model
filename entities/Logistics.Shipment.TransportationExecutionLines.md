@@ -40,10 +40,10 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Document](Logistics.Shipment.TransportationExecutionLines.md#document) | [TransportationExecutions](Logistics.Shipment.TransportationExecutions.md) | The `TransportationExecution`(Logistics.Shipment.Transportation<br />ExecutionLines.md#transportationexecution) to which this Transportation<br />ExecutionLine belongs. `Required` `Filter(multi eq)` |
+| [Document](Logistics.Shipment.TransportationExecutionLines.md#document) | [TransportationExecutions](Logistics.Shipment.TransportationExecutions.md) | The <see cref="Transportation<br />Execution"/> to which this Transportation<br />ExecutionLine belongs. `Required` `Filter(multi eq)` |
 | [ExecutionOfTransportation<br />OrderLine](Logistics.Shipment.TransportationExecutionLines.md#executionoftransportationorderline) | [TransportationOrderLines](Logistics.Shipment.TransportationOrderLines.md) | The transportation order line, which is executed. `Required` `Filter(multi eq)` |
 | [GeoPoint](Logistics.Shipment.TransportationExecutionLines.md#geopoint) | [GeoPoints](General.Geography.GeoPoints.md) | The geographic point, where the operation is executed. `Required` `Filter(multi eq)` |
-| [TransportationExecution](Logistics.Shipment.TransportationExecutionLines.md#transportationexecution) | [TransportationExecutions](Logistics.Shipment.TransportationExecutions.md) | The `TransportationExecution`(Logistics.Shipment.Transportation<br />ExecutionLines.md#transportationexecution) to which this Transportation<br />ExecutionLine belongs. `Required` `Filter(multi eq)` `Owner` |
+| [TransportationExecution](Logistics.Shipment.TransportationExecutionLines.md#transportationexecution) | [TransportationExecutions](Logistics.Shipment.TransportationExecutions.md) | The <see cref="Transportation<br />Execution"/> to which this Transportation<br />ExecutionLine belongs. `Required` `Filter(multi eq)` `Owner` |
 
 
 ## Attribute Details
@@ -158,7 +158,7 @@ _Supports Order By_: **False**
 
 ### Document
 
-The `TransportationExecution`(Logistics.Shipment.TransportationExecutionLines.md#transportationexecution) to which this TransportationExecutionLine belongs. `Required` `Filter(multi eq)`
+The <see cref="TransportationExecution"/> to which this TransportationExecutionLine belongs. `Required` `Filter(multi eq)`
 
 _Type_: **[TransportationExecutions](Logistics.Shipment.TransportationExecutions.md)**  
 _Indexed_: **True**  
@@ -185,7 +185,7 @@ _Front-End Recalc Expressions:_
 `obj.TransportationExecution.GeoPoint`
 ### TransportationExecution
 
-The `TransportationExecution`(Logistics.Shipment.TransportationExecutionLines.md#transportationexecution) to which this TransportationExecutionLine belongs. `Required` `Filter(multi eq)` `Owner`
+The <see cref="TransportationExecution"/> to which this TransportationExecutionLine belongs. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[TransportationExecutions](Logistics.Shipment.TransportationExecutions.md)**  
 _Indexed_: **True**  

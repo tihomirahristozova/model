@@ -117,6 +117,11 @@ Aggregate Root:<br>
 <td>guid</td>
 <td></td>
 </tr>
+<tr>
+<td><a href="General.DocumentComments.html#rowversion">RowVersion</a></td>
+<td>byte[]</td>
+<td></td>
+</tr>
 </tbody>
 </table>
 <h2 id="references">References</h2>
@@ -164,6 +169,10 @@ Aggregate Root:<br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
+<h3 id="rowversion">RowVersion</h3>
+<p><em>Type</em>: <strong>byte[]</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="assigntouser">AssignToUser</h3>
 <p>When not null means that the comment is also an assignment of the document to another user. Upon saving the comment, the system assigns the document to the specified user. <code>Filter(multi eq)</code></p>

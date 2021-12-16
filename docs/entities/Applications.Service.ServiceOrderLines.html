@@ -113,6 +113,11 @@ Aggregate Root:<br>
 <td>Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc. <code>Required</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
+<td><a href="Applications.Service.ServiceOrderLines.html#rowversion">RowVersion</a></td>
+<td>byte[]</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="Applications.Service.ServiceOrderLines.html#symptomdescription">SymptomDescription</a></td>
 <td>string (254) <strong>nullable</strong></td>
 <td>Description or synopsis of the symptoms of the failed object. <code>Filter(like)</code></td>
@@ -137,7 +142,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Applications.Service.ServiceOrderLines.html#serviceorder">ServiceOrder</a></td>
 <td><a href="Applications.Service.ServiceOrders.html">ServiceOrders</a></td>
-<td>The <code>ServiceOrder</code>(Applications.Service.ServiceOrderLines.md#serviceorder) to which this ServiceOrderLine belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
+<td>The <see cref="ServiceOrder"></see> to which this ServiceOrderLine belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 </tbody>
 </table>
@@ -156,6 +161,10 @@ Aggregate Root:<br>
 <code>( obj.ServiceOrder.Lines.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>( obj.ServiceOrder.Lines.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
+<h3 id="rowversion">RowVersion</h3>
+<p><em>Type</em>: <strong>byte[]</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="symptomdescription">SymptomDescription</h3>
 <p>Description or synopsis of the symptoms of the failed object. <code>Filter(like)</code></p>
 <p><em>Type</em>: <strong>string (254) <strong>nullable</strong></strong><br>
@@ -168,7 +177,7 @@ Aggregate Root:<br>
 <p><em>Type</em>: <strong><a href="Applications.Service.ServiceObjects.html">ServiceObjects</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="serviceorder">ServiceOrder</h3>
-<p>The <code>ServiceOrder</code>(Applications.Service.ServiceOrderLines.md#serviceorder) to which this ServiceOrderLine belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
+<p>The <see cref="ServiceOrder"></see> to which this ServiceOrderLine belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="Applications.Service.ServiceOrders.html">ServiceOrders</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>

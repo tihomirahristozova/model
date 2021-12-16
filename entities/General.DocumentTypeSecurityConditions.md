@@ -27,6 +27,7 @@ Aggregate Tree
 | [Description](General.DocumentTypeSecurityConditions.md#description) | string (254) | The description of this DocumentTypeSecurity<br />Condition. `Required` `Filter(eq;like)` 
 | [Id](General.DocumentTypeSecurityConditions.md#id) | guid |  
 | [Priority](General.DocumentTypeSecurityConditions.md#priority) | [Priority](General.DocumentTypeSecurityConditions.md#priority) | Priority of the rule against other rules, which are also applicable. Only the highest priority rule is selected. `Required` `Default(3)` `Filter(ge;le)` 
+| [RowVersion](General.DocumentTypeSecurityConditions.md#rowversion) | byte[] |  
 
 ## References
 
@@ -81,6 +82,12 @@ _Allowed Values (General.Priority Enum Members)_
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **3**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 
 ## Reference Details

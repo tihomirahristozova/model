@@ -117,6 +117,11 @@ __</p>
 <td><a href="../data-types.html#quantity">Quantity (18, 3)</a></td>
 <td>The forecasted sales quantity in the base measurement category of the product. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>Default(0)</code> <code>Filter(ge;le)</code></td>
 </tr>
+<tr>
+<td><a href="Crm.Marketing.ForecastItems.html#rowversion">RowVersion</a></td>
+<td>byte[]</td>
+<td></td>
+</tr>
 </tbody>
 </table>
 <h2 id="references">References</h2>
@@ -178,6 +183,10 @@ __</p>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
+<h3 id="rowversion">RowVersion</h3>
+<p><em>Type</em>: <strong>byte[]</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="country">Country</h3>
 <p>The country for which the forecast is made. When null, the forecast is country neutral. <code>Filter(multi eq)</code></p>

@@ -128,6 +128,11 @@ Aggregate Root:<br>
 <td>True when the status allows going to the next system status, false otherwise. For example for system status Firm Planned, only user status Approved might allow going to Released. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
+<td><a href="General.DocumentTypeUserStatuses.html#rowversion">RowVersion</a></td>
+<td>byte[]</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="General.DocumentTypeUserStatuses.html#state">State</a></td>
 <td><a href="General.DocumentTypeUserStatuses.html#state">DocumentState</a></td>
 <td>The system state to which this user status is bound. <code>Required</code> <code>Filter(eq)</code></td>
@@ -189,6 +194,10 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>True</strong></p>
+<h3 id="rowversion">RowVersion</h3>
+<p><em>Type</em>: <strong>byte[]</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="state">State</h3>
 <p>The system state to which this user status is bound. <code>Required</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.DocumentTypeUserStatuses.html#state">DocumentState</a></strong><br>

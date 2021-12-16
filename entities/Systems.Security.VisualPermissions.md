@@ -29,6 +29,7 @@ Aggregate Tree
 | [Id](Systems.Security.VisualPermissions.md#id) | guid |  
 | [OperationName](Systems.Security.VisualPermissions.md#operationname) | string (64) __nullable__ | Optionally, the operation on the element which will be secured. `Filter(eq)` 
 | [PanelName](Systems.Security.VisualPermissions.md#panelname) | string (128) __nullable__ | Optionally, the panel from the form which will be secured. `Filter(eq)` 
+| [RowVersion](Systems.Security.VisualPermissions.md#rowversion) | byte[] |  
 
 ## References
 
@@ -90,6 +91,12 @@ _Type_: **string (128) __nullable__**
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Maximum Length_: **128**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 
 ## Reference Details

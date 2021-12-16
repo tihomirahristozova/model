@@ -133,6 +133,11 @@ Aggregate Root:<br>
 <td>The number of the line within the parent document, which the current line executes. null when the current line does not execute parent line. <code>Filter(eq)</code></td>
 </tr>
 <tr>
+<td><a href="Logistics.Shipment.TransportationOrderLines.html#rowversion">RowVersion</a></td>
+<td>byte[]</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="Logistics.Shipment.TransportationOrderLines.html#volumecbm">VolumeCbm</a></td>
 <td>int32 <strong>nullable</strong></td>
 <td>The volume of the cargo, in CBM (cubic meters). null when it is unknown.</td>
@@ -162,7 +167,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Logistics.Shipment.TransportationOrderLines.html#document">Document</a></td>
 <td><a href="Logistics.Shipment.TransportationOrders.html">TransportationOrders</a></td>
-<td>The <code>TransportationOrder</code>(Logistics.Shipment.TransportationOrderLines.md#transportationorder) to which this TransportationOrderLine belongs. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>The <see cref="Transportation<br />Order"></see> to which this TransportationOrderLine belongs. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Shipment.TransportationOrderLines.html#parentdocument">ParentDocument</a></td>
@@ -172,7 +177,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Logistics.Shipment.TransportationOrderLines.html#transportationorder">TransportationOrder</a></td>
 <td><a href="Logistics.Shipment.TransportationOrders.html">TransportationOrders</a></td>
-<td>The <code>TransportationOrder</code>(Logistics.Shipment.TransportationOrderLines.md#transportationorder) to which this TransportationOrderLine belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
+<td>The <see cref="Transportation<br />Order"></see> to which this TransportationOrderLine belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 </tbody>
 </table>
@@ -213,6 +218,10 @@ Aggregate Root:<br>
 <p><em>Type</em>: <strong>int32 <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="rowversion">RowVersion</h3>
+<p><em>Type</em>: <strong>byte[]</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="volumecbm">VolumeCbm</h3>
 <p>The volume of the cargo, in CBM (cubic meters). null when it is unknown.</p>
 <p><em>Type</em>: <strong>int32 <strong>nullable</strong></strong><br>
@@ -229,7 +238,7 @@ Aggregate Root:<br>
 <p><em>Type</em>: <strong><a href="Logistics.Shipment.CargoTypes.html">CargoTypes</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="document">Document</h3>
-<p>The <code>TransportationOrder</code>(Logistics.Shipment.TransportationOrderLines.md#transportationorder) to which this TransportationOrderLine belongs. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>The <see cref="TransportationOrder"></see> to which this TransportationOrderLine belongs. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Logistics.Shipment.TransportationOrders.html">TransportationOrders</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
@@ -238,7 +247,7 @@ Aggregate Root:<br>
 <p><em>Type</em>: <strong><a href="General.Documents.html">Documents</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="transportationorder">TransportationOrder</h3>
-<p>The <code>TransportationOrder</code>(Logistics.Shipment.TransportationOrderLines.md#transportationorder) to which this TransportationOrderLine belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
+<p>The <see cref="TransportationOrder"></see> to which this TransportationOrderLine belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="Logistics.Shipment.TransportationOrders.html">TransportationOrders</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>

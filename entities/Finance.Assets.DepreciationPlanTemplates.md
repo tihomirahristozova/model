@@ -27,6 +27,7 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [AssetLife](Finance.Assets.DepreciationPlanTemplates.md#assetlife) | int32 __nullable__ | Asset life in months by default for the depreciation plans created by this template. null means that the asset is booked for this valuation model but is not depreciated in it (i.e. no depreciation plan is created). 
 | [Id](Finance.Assets.DepreciationPlanTemplates.md#id) | guid |  
+| [RowVersion](Finance.Assets.DepreciationPlanTemplates.md#rowversion) | byte[] |  
 
 ## References
 
@@ -53,6 +54,12 @@ _Type_: **guid**
 _Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 
 ## Reference Details

@@ -32,13 +32,14 @@ Aggregate Root:
 | [PropertyNo](Finance.Accounting.TemplateLineProperties.md#propertyno) | int32 | The ordinal position of the property value in the item key of the account. `Required` `Filter(eq)` 
 | [PropertyValueSource](Finance.Accounting.TemplateLineProperties.md#propertyvaluesource) | string (2000) | Source for the property value according to the chosen source type. `Required` 
 | [PropertyValueSourceType](Finance.Accounting.TemplateLineProperties.md#propertyvaluesourcetype) | string (64) | Type of source for the property value. For example: System properties, User properties for document, Constant, ... `Required` 
+| [RowVersion](Finance.Accounting.TemplateLineProperties.md#rowversion) | byte[] |  
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Property](Finance.Accounting.TemplateLineProperties.md#property) | [CustomProperties](General.CustomProperties.md) | The property which value will be included in the item key of the account. `Required` `Filter(multi eq)` |
-| [TemplateLine](Finance.Accounting.TemplateLineProperties.md#templateline) | [TemplateLines](Finance.Accounting.TemplateLines.md) | The `TemplateLine`(Finance.Accounting.TemplateLineProperties.md#templateline) to which this TemplateLineProperty belongs. `Required` `Filter(multi eq)` `Owner` |
+| [TemplateLine](Finance.Accounting.TemplateLineProperties.md#templateline) | [TemplateLines](Finance.Accounting.TemplateLines.md) | The <see cref="TemplateLine"/> to which this TemplateLineProperty belongs. `Required` `Filter(multi eq)` `Owner` |
 
 
 ## Attribute Details
@@ -100,6 +101,12 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  
 
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+
 
 ## Reference Details
 
@@ -112,7 +119,7 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### TemplateLine
 
-The `TemplateLine`(Finance.Accounting.TemplateLineProperties.md#templateline) to which this TemplateLineProperty belongs. `Required` `Filter(multi eq)` `Owner`
+The <see cref="TemplateLine"/> to which this TemplateLineProperty belongs. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[TemplateLines](Finance.Accounting.TemplateLines.md)**  
 _Indexed_: **True**  

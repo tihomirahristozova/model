@@ -138,6 +138,11 @@ Aggregate Root:<br>
 <td>Name of the measurement unit. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></td>
 </tr>
 <tr>
+<td><a href="General.MeasurementUnits.html#rowversion">RowVersion</a></td>
+<td>byte[]</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="General.MeasurementUnits.html#systemunit">SystemUnit</a></td>
 <td><a href="General.MeasurementUnits.html#systemunit">SystemUnit</a> <strong>nullable</strong></td>
 <td>Not null only when this is one of the system measurement units. N=NetKG; G=GrossKG; V=VolumeL; H=HeightM; W=WidthM, L=LengthM, P=Piece, T=TimeH. <code>Filter(eq;like)</code></td>
@@ -203,6 +208,10 @@ Aggregate Root:<br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>True</strong></p>
+<h3 id="rowversion">RowVersion</h3>
+<p><em>Type</em>: <strong>byte[]</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="systemunit">SystemUnit</h3>
 <p>Not null only when this is one of the system measurement units. N=NetKG; G=GrossKG; V=VolumeL; H=HeightM; W=WidthM, L=LengthM, P=Piece, T=TimeH. <code>Filter(eq;like)</code></p>
 <p><em>Type</em>: <strong><a href="General.MeasurementUnits.html#systemunit">SystemUnit</a> <strong>nullable</strong></strong><br>

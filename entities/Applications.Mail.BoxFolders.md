@@ -27,6 +27,7 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [FolderName](Applications.Mail.BoxFolders.md#foldername) | [MultilanguageString](../data-types.md#multilanguagestring) | Multi-language folder name. `Required` `Filter(eq;like)` 
 | [Id](Applications.Mail.BoxFolders.md#id) | guid |  
+| [RowVersion](Applications.Mail.BoxFolders.md#rowversion) | byte[] |  
 | [ServerFolderID](Applications.Mail.BoxFolders.md#serverfolderid) | string (256) __nullable__ | ID of the folder on the mail server in the format of the mail server. `Filter(eq)` 
 | [SyncState](Applications.Mail.BoxFolders.md#syncstate) | string (max) __nullable__ | The synchronization state for the folder. The format of the contents is dependant on the server type. For IMAP, this is last message Id, for Exchange - this is SyncState. 
 | [SystemPurpose](Applications.Mail.BoxFolders.md#systempurpose) | [SystemPurpose](Applications.Mail.BoxFolders.md#systempurpose) __nullable__ | When not null means that the folder has special system designation. Designations are: M=Mailbox(root folder), I=Inbox, D=Drafts, O=Outbox, S=Sent, T=Trash. `Filter(eq)` `ReadOnly` 
@@ -35,7 +36,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [MailBox](Applications.Mail.BoxFolders.md#mailbox) | [Boxes](Applications.Mail.Boxes.md) | The `Box`(Applications.Mail.Boxes.md) to which this BoxFolder belongs. `Required` `Filter(multi eq)` `ReadOnly` `Owner` |
+| [MailBox](Applications.Mail.BoxFolders.md#mailbox) | [Boxes](Applications.Mail.Boxes.md) | The <see cref="Box"/> to which this BoxFolder belongs. `Required` `Filter(multi eq)` `ReadOnly` `Owner` |
 | [ParentFolder](Applications.Mail.BoxFolders.md#parentfolder) | [BoxFolders](Applications.Mail.BoxFolders.md) (nullable) | The parent folder in the folder hierarchy. Null when the folder is a root folder. `Filter(multi eq)` |
 
 ## Child Collections
@@ -61,6 +62,12 @@ _Type_: **guid**
 _Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 ### ServerFolderID
 
@@ -105,7 +112,7 @@ _Supports Order By_: **False**
 
 ### MailBox
 
-The `Box`(Applications.Mail.Boxes.md) to which this BoxFolder belongs. `Required` `Filter(multi eq)` `ReadOnly` `Owner`
+The <see cref="Box"/> to which this BoxFolder belongs. `Required` `Filter(multi eq)` `ReadOnly` `Owner`
 
 _Type_: **[Boxes](Applications.Mail.Boxes.md)**  
 _Indexed_: **True**  

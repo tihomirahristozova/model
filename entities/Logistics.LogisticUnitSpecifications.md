@@ -29,6 +29,7 @@ Aggregate Root:
 | [Id](Logistics.LogisticUnitSpecifications.md#id) | guid |  
 | [Name](Logistics.LogisticUnitSpecifications.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) __nullable__ | Multi-language name of the specification. For some processing purposes, the name might be contained within the client implementation and not saved to the database (null). `Filter(eq;like)` 
 | [Notes](Logistics.LogisticUnitSpecifications.md#notes) | string (max) __nullable__ | Notes for this LogisticUnitSpecification. 
+| [RowVersion](Logistics.LogisticUnitSpecifications.md#rowversion) | byte[] |  
 | [Value](Logistics.LogisticUnitSpecifications.md#value) | string (254) __nullable__ | Text value of the specification. If this is GS1 specification, it can contain only numbers and letters and cannot contain spaces. `Filter(eq;like)` 
 
 ## References
@@ -72,6 +73,12 @@ _Type_: **string (max) __nullable__**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 ### Value
 

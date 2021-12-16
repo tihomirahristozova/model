@@ -26,6 +26,7 @@ Aggregate Tree
 | [Description](Logistics.Inventory.ScrapTypes.md#description) | string (254) __nullable__ | The description of this ScrapType. `Filter(like)` 
 | [Id](Logistics.Inventory.ScrapTypes.md#id) | guid |  
 | [IsPlanned](Logistics.Inventory.ScrapTypes.md#isplanned) | boolean | True=Planned (expected) scrap. Scrap of this type will be used to refine planned scrap for future operations. 2=Unexpected scrap. `Required` `Default(true)` `Filter(eq)` 
+| [RowVersion](Logistics.Inventory.ScrapTypes.md#rowversion) | byte[] |  
 
 
 ## Attribute Details
@@ -54,6 +55,12 @@ _Type_: **boolean**
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **True**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 
 

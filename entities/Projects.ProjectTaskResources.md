@@ -33,6 +33,7 @@ Aggregate Root:
 | [PerUseCost](Projects.ProjectTaskResources.md#perusecost) | [Amount (14, 2)](../data-types.md#amount) __nullable__ | One time cost for each resource usage, specified in the projects currency. `Currency: ProjectTask.Project.BudgetingCurrency` 
 | [ResourceUsageHours](Projects.ProjectTaskResources.md#resourceusagehours) | decimal (10, 2) | The total number of resource-hours, which are planned for this task. Equals to the length of the task, multiplied by the resource usage. `Required` `Default(0)` `Filter(eq)` 
 | [ResourceUsagePercent](Projects.ProjectTaskResources.md#resourceusagepercent) | decimal (18, 4) | The planned resource usage for this activity in percents. Values of more than 100% are allowed when more than 1 resource is required. `Required` `Default(1)` `Filter(eq)` 
+| [RowVersion](Projects.ProjectTaskResources.md#rowversion) | byte[] |  
 | [TaskTotalCost](Projects.ProjectTaskResources.md#tasktotalcost) | decimal (14, 2) | Total cost for this task (in the currency of the project). `Required` `Default(0)` `Filter(eq)` 
 
 ## References
@@ -123,6 +124,12 @@ _Default Value_: **1**
 
 _Front-End Recalc Expressions:_  
 `IIF( ( obj.ProjectTask.PlannedDurationHours == 0), 0, ( obj.ResourceUsageHours / obj.ProjectTask.PlannedDurationHours))`
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+
 ### TaskTotalCost
 
 Total cost for this task (in the currency of the project). `Required` `Default(0)` `Filter(eq)`

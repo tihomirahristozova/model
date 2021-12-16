@@ -28,13 +28,14 @@ Aggregate Root:
 | [EfficiencyFactorPercent](Production.Resources.WorkgroupShifts.md#efficiencyfactorpercent) | decimal (3, 2) | Efficiency factor of the routing steps for this shift, expressed as percentage. `Required` `Default(1)` 
 | [EstablishmentDate](Production.Resources.WorkgroupShifts.md#establishmentdate) | datetime | When the workgroup shift was established. Used as minimum date when generating calendar. `Required` `Default(Today)` `Filter(ge;le)` 
 | [Id](Production.Resources.WorkgroupShifts.md#id) | guid |  
+| [RowVersion](Production.Resources.WorkgroupShifts.md#rowversion) | byte[] |  
 | [ShiftName](Production.Resources.WorkgroupShifts.md#shiftname) | string (254) | The name of the workgroup shift. `Required` `Filter(like)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Workgroup](Production.Resources.WorkgroupShifts.md#workgroup) | [Workgroups](Production.Resources.Workgroups.md) | The `Workgroup`(Production.Resources.WorkgroupShifts.md#workgroup) to which this WorkgroupShift belongs. `Required` `Filter(multi eq)` `Owner` |
+| [Workgroup](Production.Resources.WorkgroupShifts.md#workgroup) | [Workgroups](Production.Resources.Workgroups.md) | The <see cref="Workgroup"/> to which this WorkgroupShift belongs. `Required` `Filter(multi eq)` `Owner` |
 | [WorkSchedule](Production.Resources.WorkgroupShifts.md#workschedule) | [WorkSchedules](General.Resources.WorkSchedules.md) | The work schedule used to calculate the working time for the shift. `Required` `Filter(multi eq)` |
 
 
@@ -65,6 +66,12 @@ _Indexed_: **True**
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+
 ### ShiftName
 
 The name of the workgroup shift. `Required` `Filter(like)`
@@ -79,7 +86,7 @@ _Maximum Length_: **254**
 
 ### Workgroup
 
-The `Workgroup`(Production.Resources.WorkgroupShifts.md#workgroup) to which this WorkgroupShift belongs. `Required` `Filter(multi eq)` `Owner`
+The <see cref="Workgroup"/> to which this WorkgroupShift belongs. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[Workgroups](Production.Resources.Workgroups.md)**  
 _Supported Filters_: **Equals, EqualsIn**  

@@ -26,6 +26,7 @@ Aggregate Tree
 | [FromDate](Logistics.Procurement.PurchasePriceLists.md#fromdate) | datetime __nullable__ | Starting validity of the price list. `Filter(eq;ge;le)` 
 | [Id](Logistics.Procurement.PurchasePriceLists.md#id) | guid |  
 | [Name](Logistics.Procurement.PurchasePriceLists.md#name) | string (50) | The name of this PurchasePriceList. `Required` `Filter(eq;like)` `ORD` 
+| [RowVersion](Logistics.Procurement.PurchasePriceLists.md#rowversion) | byte[] |  
 | [ThruDate](Logistics.Procurement.PurchasePriceLists.md#thrudate) | datetime __nullable__ | Ending validity of the price list. `Filter(eq;ge;le)` 
 
 
@@ -55,6 +56,12 @@ _Indexed_: **True**
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
 _Maximum Length_: **50**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 ### ThruDate
 

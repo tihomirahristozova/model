@@ -117,6 +117,11 @@ Aggregate Root:<br>
 <td><a href="../data-types.html#quantity">Quantity (18, 3)</a></td>
 <td>The quantity of service for which the invoicing is specified. <code>Unit: Service.MeasurementUnit</code> <code>Required</code> <code>Default(1)</code> <code>Filter(ge;le)</code></td>
 </tr>
+<tr>
+<td><a href="Applications.Service.ServiceInvoicing.html#rowversion">RowVersion</a></td>
+<td>byte[]</td>
+<td></td>
+</tr>
 </tbody>
 </table>
 <h2 id="references">References</h2>
@@ -159,6 +164,10 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
+<h3 id="rowversion">RowVersion</h3>
+<p><em>Type</em>: <strong>byte[]</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="product">Product</h3>
 <p>The product that should be invoiced. <code>Required</code> <code>Filter(multi eq)</code></p>

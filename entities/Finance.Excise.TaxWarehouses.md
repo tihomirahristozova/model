@@ -26,6 +26,7 @@ Aggregate Tree
 | [CustomsOffice](Finance.Excise.TaxWarehouses.md#customsoffice) | string (32) __nullable__ | The customs office to which the warehouse is headed. `Filter(like)` `Introduced in version 22.1.4.93` 
 | [Id](Finance.Excise.TaxWarehouses.md#id) | guid |  
 | [Name](Finance.Excise.TaxWarehouses.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Tax Warehouse Name (Multilanguage). `Required` `Filter(like)` `Introduced in version 21.1.3.93` 
+| [RowVersion](Finance.Excise.TaxWarehouses.md#rowversion) | byte[] |  
 | [TaxWarehouseExciseNumber](Finance.Excise.TaxWarehouses.md#taxwarehouseexcisenumber) | string (32) | The excise identification number of the tax warehouse, issued by the competent authorities. `Required` `Default("-")` `Introduced in version 21.1.3.87` 
 | [TraderExciseNumber](Finance.Excise.TaxWarehouses.md#traderexcisenumber) | string (32) | The excise identification number of the owner of the Tax Warehouse. `Required` `Default("-")` `Introduced in version 21.1.3.87` 
 
@@ -60,6 +61,12 @@ Tax Warehouse Name (Multilanguage). `Required` `Filter(like)` `Introduced in ver
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Supported Filters_: **Like**  
+_Supports Order By_: **False**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
 ### TaxWarehouseExciseNumber

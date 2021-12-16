@@ -27,6 +27,7 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [Id](Applications.Service.ServiceOrderLines.md#id) | guid |  
 | [LineNo](Applications.Service.ServiceOrderLines.md#lineno) | int32 | Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc. `Required` `Filter(eq)` 
+| [RowVersion](Applications.Service.ServiceOrderLines.md#rowversion) | byte[] |  
 | [SymptomDescription](Applications.Service.ServiceOrderLines.md#symptomdescription) | string (254) __nullable__ | Description or synopsis of the symptoms of the failed object. `Filter(like)` 
 
 ## References
@@ -34,7 +35,7 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [ServiceObject](Applications.Service.ServiceOrderLines.md#serviceobject) | [ServiceObjects](Applications.Service.ServiceObjects.md) | The service object, which is experiencing the symptoms and needs repair. `Required` `Filter(multi eq)` |
-| [ServiceOrder](Applications.Service.ServiceOrderLines.md#serviceorder) | [ServiceOrders](Applications.Service.ServiceOrders.md) | The `ServiceOrder`(Applications.Service.ServiceOrderLines.md#serviceorder) to which this ServiceOrderLine belongs. `Required` `Filter(multi eq)` `Owner` |
+| [ServiceOrder](Applications.Service.ServiceOrderLines.md#serviceorder) | [ServiceOrders](Applications.Service.ServiceOrders.md) | The <see cref="ServiceOrder"/> to which this ServiceOrderLine belongs. `Required` `Filter(multi eq)` `Owner` |
 
 
 ## Attribute Details
@@ -59,6 +60,12 @@ _Back-End Default Expression:_
 
 _Front-End Recalc Expressions:_  
 `( obj.ServiceOrder.Lines.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)`
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+
 ### SymptomDescription
 
 Description or synopsis of the symptoms of the failed object. `Filter(like)`
@@ -80,7 +87,7 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### ServiceOrder
 
-The `ServiceOrder`(Applications.Service.ServiceOrderLines.md#serviceorder) to which this ServiceOrderLine belongs. `Required` `Filter(multi eq)` `Owner`
+The <see cref="ServiceOrder"/> to which this ServiceOrderLine belongs. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[ServiceOrders](Applications.Service.ServiceOrders.md)**  
 _Indexed_: **True**  

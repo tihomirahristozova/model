@@ -42,6 +42,7 @@ Aggregate Tree
 | [Id](Crm.Marketing.BonusPrograms.md#id) | guid |  
 | [Name](Crm.Marketing.BonusPrograms.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | The name of the bonus program. `Required` `Filter(eq;like)` 
 | [Priority](Crm.Marketing.BonusPrograms.md#priority) | [Priority](Crm.Marketing.BonusPrograms.md#priority) | Priority (1-5) of the bonus program comparative to the other bonus programs. 1 is the lowest priority. `Required` `Default(2)` `Filter(multi eq)` 
+| [RowVersion](Crm.Marketing.BonusPrograms.md#rowversion) | byte[] |  
 
 ## References
 
@@ -236,6 +237,12 @@ _Allowed Values (Crm.Marketing.BonusProgramsRepository.Priority Enum Members)_
 _Supported Filters_: **Equals, EqualsIn**  
 _Supports Order By_: **False**  
 _Default Value_: **2**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 
 ## Reference Details

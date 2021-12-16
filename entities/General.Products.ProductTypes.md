@@ -35,6 +35,7 @@ Aggregate Tree
 | [IsStocked](General.Products.ProductTypes.md#isstocked) | boolean | True=The products of this type are stocked in a warehouse; false=otherwise (services). `Required` `Default(true)` `Filter(eq)` 
 | [LotAutoCreation](General.Products.ProductTypes.md#lotautocreation) | boolean | If checked specifies that lots are automatically created by the receiving orders with which the products are received. `Required` `Default(false)` 
 | [Name](General.Products.ProductTypes.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | The name of this ProductType. `Required` `Filter(eq;like)` `ORD` 
+| [RowVersion](General.Products.ProductTypes.md#rowversion) | byte[] |  
 
 ## Child Collections
 
@@ -133,6 +134,12 @@ _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**
 _Indexed_: **True**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 
 

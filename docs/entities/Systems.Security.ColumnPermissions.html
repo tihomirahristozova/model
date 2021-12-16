@@ -113,6 +113,11 @@ Default Search Members:<br>
 <td></td>
 </tr>
 <tr>
+<td><a href="Systems.Security.ColumnPermissions.html#rowversion">RowVersion</a></td>
+<td>byte[]</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="Systems.Security.ColumnPermissions.html#tablename">TableName</a></td>
 <td>string (128)</td>
 <td>The table in which is the secured column. <code>Required</code> <code>Filter(eq)</code> <code>ORD</code></td>
@@ -148,6 +153,10 @@ Default Search Members:<br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
+<h3 id="rowversion">RowVersion</h3>
+<p><em>Type</em>: <strong>byte[]</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="tablename">TableName</h3>
 <p>The table in which is the secured column. <code>Required</code> <code>Filter(eq)</code> <code>ORD</code></p>
 <p><em>Type</em>: <strong>string (128)</strong><br>

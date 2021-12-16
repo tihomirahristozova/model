@@ -228,6 +228,11 @@ Default Search Members:<br>
 <td>M=Make; B=Buy; T=Transfer.  Identifies whether the product is produced or externally bought. <code>Required</code> <code>Default(&quot;B&quot;)</code></td>
 </tr>
 <tr>
+<td><a href="General.Products.ProductSupply.html#rowversion">RowVersion</a></td>
+<td>byte[]</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="General.Products.ProductSupply.html#standardcostperlot">StandardCostPerLot</a></td>
 <td><a href="../data-types.html#amount">Amount (18, 4)</a></td>
 <td>Standard cost for one lot of the product. <code>Currency: Product.CostingCurrency</code> <code>Required</code> <code>Default(0)</code></td>
@@ -277,7 +282,7 @@ Default Search Members:<br>
 <tr>
 <td><a href="General.Products.ProductSupply.html#product">Product</a></td>
 <td><a href="General.Products.Products.html">Products</a> (nullable)</td>
-<td>The <code>Product</code>(General.Products.ProductSupply.md#product) to which this ProductSupply belongs. <code>Filter(multi eq)</code></td>
+<td>The <see cref="Product"></see> to which this ProductSupply belongs. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="General.Products.ProductSupply.html#productgroup">ProductGroup</a></td>
@@ -551,6 +556,10 @@ Allowed values for the <code>ProcurementType</code>(General.Products.ProductSupp
 <p><em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Buy</strong></p>
+<h3 id="rowversion">RowVersion</h3>
+<p><em>Type</em>: <strong>byte[]</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="standardcostperlot">StandardCostPerLot</h3>
 <p>Standard cost for one lot of the product. <code>Currency: Product.CostingCurrency</code> <code>Required</code> <code>Default(0)</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount (18, 4)</a></strong><br>
@@ -583,7 +592,7 @@ Allowed values for the <code>ProcurementType</code>(General.Products.ProductSupp
 <p><em>Type</em>: <strong><a href="Logistics.Procurement.Suppliers.html">Suppliers</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="product">Product</h3>
-<p>The <code>Product</code>(General.Products.ProductSupply.md#product) to which this ProductSupply belongs. <code>Filter(multi eq)</code></p>
+<p>The <see cref="Product"></see> to which this ProductSupply belongs. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.Products.Products.html">Products</a> (nullable)</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>

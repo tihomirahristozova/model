@@ -36,6 +36,7 @@ Aggregate Root:
 | [LineNo](Finance.Accounting.AccountingVoucherLines.md#lineno) | int32 | Consecutive number of the line within the voucher. `Required` 
 | [RateDivisor](Finance.Accounting.AccountingVoucherLines.md#ratedivisor) | decimal (18, 6) | The divisor for conversion from Debit/Credit to base currency. `Required` `Default(1)` 
 | [RateMultiplier](Finance.Accounting.AccountingVoucherLines.md#ratemultiplier) | decimal (18, 6) | The multiplier for conversion from Debit/Credit to base currency. `Required` `Default(1)` 
+| [RowVersion](Finance.Accounting.AccountingVoucherLines.md#rowversion) | byte[] |  
 
 ## References
 
@@ -151,6 +152,12 @@ _Type_: **decimal (18, 6)**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **1**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 
 ## Reference Details

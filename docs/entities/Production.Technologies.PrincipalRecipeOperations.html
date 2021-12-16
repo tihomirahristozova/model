@@ -143,6 +143,11 @@ Aggregate Root:<br>
 <td>The description of the operation. Initially copied from the generic operation definition.</td>
 </tr>
 <tr>
+<td><a href="Production.Technologies.PrincipalRecipeOperations.html#rowversion">RowVersion</a></td>
+<td>byte[]</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="Production.Technologies.PrincipalRecipeOperations.html#runtimeminutes">RunTimeMinutes</a></td>
 <td>int32</td>
 <td>Duration of the operation for one piece in the standard measurement unit of the product. <code>Required</code> <code>Default(0)</code> <code>Filter(ge;le)</code></td>
@@ -202,7 +207,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Production.Technologies.PrincipalRecipeOperations.html#principalrecipe">PrincipalRecipe</a></td>
 <td><a href="Production.Technologies.PrincipalRecipes.html">PrincipalRecipes</a></td>
-<td>The <code>PrincipalRecipe</code>(Production.Technologies.PrincipalRecipeOperations.md#principalrecipe) to which this PrincipalRecipeOperation belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
+<td>The <see cref="PrincipalRecipe"></see> to which this PrincipalRecipeOperation belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 <tr>
 <td><a href="Production.Technologies.PrincipalRecipeOperations.html#usequantityunit">UseQuantityUnit</a></td>
@@ -269,6 +274,10 @@ Aggregate Root:<br>
 <em>Maximum Length</em>: <strong>2147483647</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>obj.Operation.Description</code></p>
+<h3 id="rowversion">RowVersion</h3>
+<p><em>Type</em>: <strong>byte[]</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="runtimeminutes">RunTimeMinutes</h3>
 <p>Duration of the operation for one piece in the standard measurement unit of the product. <code>Required</code> <code>Default(0)</code> <code>Filter(ge;le)</code></p>
 <p><em>Type</em>: <strong>int32</strong><br>
@@ -327,7 +336,7 @@ Aggregate Root:<br>
 <p><em>Type</em>: <strong><a href="Production.Resources.OperationInstructions.html">OperationInstructions</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="principalrecipe">PrincipalRecipe</h3>
-<p>The <code>PrincipalRecipe</code>(Production.Technologies.PrincipalRecipeOperations.md#principalrecipe) to which this PrincipalRecipeOperation belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
+<p>The <see cref="PrincipalRecipe"></see> to which this PrincipalRecipeOperation belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="Production.Technologies.PrincipalRecipes.html">PrincipalRecipes</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em><a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a></em>: <strong>True</strong></p>

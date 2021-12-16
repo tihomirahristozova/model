@@ -29,12 +29,13 @@ Aggregate Root:
 | [Id](Finance.Cost.CalculationCosts.md#id) | guid |  
 | [LineNo](Finance.Cost.CalculationCosts.md#lineno) | int32 | Consecutive number of the line within the calculation. `Required` 
 | [ProjectId](Finance.Cost.CalculationCosts.md#projectid) | guid __nullable__ | The Project, which absorbed the cost. `Filter(multi eq)` 
+| [RowVersion](Finance.Cost.CalculationCosts.md#rowversion) | byte[] |  
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Calculation](Finance.Cost.CalculationCosts.md#calculation) | [Calculations](Finance.Cost.Calculations.md) | The `Calculation`(Finance.Cost.CalculationCosts.md#calculation) to which this CalculationCost belongs. `Required` `Filter(multi eq)` `Owner` |
+| [Calculation](Finance.Cost.CalculationCosts.md#calculation) | [Calculations](Finance.Cost.Calculations.md) | The <see cref="Calculation"/> to which this CalculationCost belongs. `Required` `Filter(multi eq)` `Owner` |
 | [CostCenter](Finance.Cost.CalculationCosts.md#costcenter) | [CostCenters](Finance.Accounting.CostCenters.md) (nullable) | The Cost Center, which absorbed the cost. `Filter(multi eq)` |
 | [CostType](Finance.Cost.CalculationCosts.md#costtype) | [CostTypes](Finance.Cost.CostTypes.md) | The Cost Type, which absorbed the cost. `Required` `Filter(multi eq)` |
 | [Lot](Finance.Cost.CalculationCosts.md#lot) | [Lots](Logistics.Inventory.Lots.md) (nullable) | The Lot, which absorbed the cost. `Filter(multi eq)` |
@@ -81,12 +82,18 @@ The Project, which absorbed the cost. `Filter(multi eq)`
 _Type_: **guid __nullable__**  
 _Supported Filters_: **Equals, EqualsIn**  
 
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+
 
 ## Reference Details
 
 ### Calculation
 
-The `Calculation`(Finance.Cost.CalculationCosts.md#calculation) to which this CalculationCost belongs. `Required` `Filter(multi eq)` `Owner`
+The <see cref="Calculation"/> to which this CalculationCost belongs. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[Calculations](Finance.Cost.Calculations.md)**  
 _Indexed_: **True**  

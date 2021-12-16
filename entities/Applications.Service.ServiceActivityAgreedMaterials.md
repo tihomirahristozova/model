@@ -27,12 +27,13 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [AgreedQuantity](Applications.Service.ServiceActivityAgreedMaterials.md#agreedquantity) | [Quantity (18, 3)](../data-types.md#quantity) | Quantity from the service agreement material line that is accounted for this service activity material line. `Unit: ServiceAgreementMaterial.QuantityUnit` `Required` `Default(0)` `ReadOnly` 
 | [Id](Applications.Service.ServiceActivityAgreedMaterials.md#id) | guid |  
+| [RowVersion](Applications.Service.ServiceActivityAgreedMaterials.md#rowversion) | byte[] |  
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ServiceActivityMaterial](Applications.Service.ServiceActivityAgreedMaterials.md#serviceactivitymaterial) | [ServiceActivityMaterials](Applications.Service.ServiceActivityMaterials.md) | The `ServiceActivityMaterial`(Applications.Service.ServiceActivity<br />AgreedMaterials.md#serviceactivitymaterial) to which this ServiceActivity<br />AgreedMaterial belongs. `Required` `Filter(multi eq)` `ReadOnly` `Owner` |
+| [ServiceActivityMaterial](Applications.Service.ServiceActivityAgreedMaterials.md#serviceactivitymaterial) | [ServiceActivityMaterials](Applications.Service.ServiceActivityMaterials.md) | The <see cref="ServiceActivity<br />Material"/> to which this ServiceActivity<br />AgreedMaterial belongs. `Required` `Filter(multi eq)` `ReadOnly` `Owner` |
 | [ServiceAgreementMaterial](Applications.Service.ServiceActivityAgreedMaterials.md#serviceagreementmaterial) | [ServiceAgreementMaterials](Applications.Service.ServiceAgreementMaterials.md) | Service agreement material line that records the paid or agreed in advance material. `Required` `Filter(multi eq)` `ReadOnly` |
 
 
@@ -54,12 +55,18 @@ _Indexed_: **True**
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+
 
 ## Reference Details
 
 ### ServiceActivityMaterial
 
-The `ServiceActivityMaterial`(Applications.Service.ServiceActivityAgreedMaterials.md#serviceactivitymaterial) to which this ServiceActivityAgreedMaterial belongs. `Required` `Filter(multi eq)` `ReadOnly` `Owner`
+The <see cref="ServiceActivityMaterial"/> to which this ServiceActivityAgreedMaterial belongs. `Required` `Filter(multi eq)` `ReadOnly` `Owner`
 
 _Type_: **[ServiceActivityMaterials](Applications.Service.ServiceActivityMaterials.md)**  
 _Indexed_: **True**  

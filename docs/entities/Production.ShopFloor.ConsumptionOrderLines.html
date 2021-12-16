@@ -138,6 +138,11 @@ Aggregate Root:<br>
 <td>Notes for this ConsumptionOrderLine.</td>
 </tr>
 <tr>
+<td><a href="Production.ShopFloor.ConsumptionOrderLines.html#rowversion">RowVersion</a></td>
+<td>byte[]</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="Production.ShopFloor.ConsumptionOrderLines.html#scheduleddatetime">ScheduledDateTime</a></td>
 <td>datetime <strong>nullable</strong></td>
 <td>The scheduled date, when the material is needed. <code>Filter(ge;le)</code></td>
@@ -162,12 +167,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Production.ShopFloor.ConsumptionOrderLines.html#consumptionorder">ConsumptionOrder</a></td>
 <td><a href="Production.ShopFloor.ConsumptionOrders.html">ConsumptionOrders</a></td>
-<td>The <code>ConsumptionOrder</code>(Production.ShopFloor.ConsumptionOrderLines.md#consumptionorder) to which this ConsumptionOrderLine belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
+<td>The <see cref="ConsumptionOrder"></see> to which this ConsumptionOrderLine belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.ConsumptionOrderLines.html#document">Document</a></td>
 <td><a href="Production.ShopFloor.ConsumptionOrders.html">ConsumptionOrders</a></td>
-<td>The <code>ConsumptionOrder</code>(Production.ShopFloor.ConsumptionOrderLines.md#consumptionorder) to which this ConsumptionOrderLine belongs. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>The <see cref="ConsumptionOrder"></see> to which this ConsumptionOrderLine belongs. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.ConsumptionOrderLines.html#lot">Lot</a></td>
@@ -274,6 +279,10 @@ Allowed values for the <code>ConsumptionType</code>(Production.ShopFloor.Consump
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>2147483647</strong></p>
+<h3 id="rowversion">RowVersion</h3>
+<p><em>Type</em>: <strong>byte[]</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="scheduleddatetime">ScheduledDateTime</h3>
 <p>The scheduled date, when the material is needed. <code>Filter(ge;le)</code></p>
 <p><em>Type</em>: <strong>datetime <strong>nullable</strong></strong><br>
@@ -287,13 +296,13 @@ Allowed values for the <code>ConsumptionType</code>(Production.ShopFloor.Consump
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>obj.Product.MeasurementUnit</code></p>
 <h3 id="consumptionorder">ConsumptionOrder</h3>
-<p>The <code>ConsumptionOrder</code>(Production.ShopFloor.ConsumptionOrderLines.md#consumptionorder) to which this ConsumptionOrderLine belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
+<p>The <see cref="ConsumptionOrder"></see> to which this ConsumptionOrderLine belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="Production.ShopFloor.ConsumptionOrders.html">ConsumptionOrders</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em><a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a></em>: <strong>True</strong></p>
 <h3 id="document">Document</h3>
-<p>The <code>ConsumptionOrder</code>(Production.ShopFloor.ConsumptionOrderLines.md#consumptionorder) to which this ConsumptionOrderLine belongs. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>The <see cref="ConsumptionOrder"></see> to which this ConsumptionOrderLine belongs. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Production.ShopFloor.ConsumptionOrders.html">ConsumptionOrders</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>

@@ -30,6 +30,7 @@ Aggregate Root:
 | [Notes](Applications.Rental.Assets.md#notes) | string (max) __nullable__ | Notes for this Asset. 
 | [RentalAssetCode](Applications.Rental.Assets.md#rentalassetcode) | string (20) | Unique rental asset code. `Required` `Filter(eq;like)` `ORD` 
 | [RentalAssetName](Applications.Rental.Assets.md#rentalassetname) | string (254) | The name of the rental asset. `Required` `Filter(like)` 
+| [RowVersion](Applications.Rental.Assets.md#rowversion) | byte[] |  
 | [StandardGuaranteeAmount](Applications.Rental.Assets.md#standardguaranteeamount) | [Amount (14, 2)](../data-types.md#amount) __nullable__ | Standard default amount of the guarantee that is set for this asset when leased. `Currency: StandardGuarantee<br />AmountCurrency` `Filter(multi eq)` 
 | [TimePeriodType](Applications.Rental.Assets.md#timeperiodtype) | [TimePeriodType](Applications.Rental.Assets.md#timeperiodtype) __nullable__ | Specifies the unit by which the periods of renting of this asset are measured. Possible values are: 'by days' or 'by months'. `Filter(multi eq)` 
 
@@ -99,6 +100,12 @@ _Type_: **string (254)**
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
+
+### RowVersion
+
+_Type_: **byte[]**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 ### StandardGuaranteeAmount
 
