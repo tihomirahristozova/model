@@ -103,6 +103,11 @@ _Type_: **[Quantity (12, 3)](../data-types.md#quantity)**
 _Supported Filters_: **Equals, GreaterThanOrLessThan, EqualsIn**  
 _Supports Order By_: **False**  
 
+_Back-End Default Expression:_  
+`IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.QuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))`
+
+_Front-End Recalc Expressions:_  
+`IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.QuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))`
 ### RowVersion
 
 _Type_: **byte[]**  
@@ -117,6 +122,11 @@ _Type_: **[Quantity (12, 3)](../data-types.md#quantity)**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
+_Back-End Default Expression:_  
+`IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.StandardQuantity, IIF( obj.Product.AllowVariableMeasurementRatios, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product), obj.QuantityBase))`
+
+_Front-End Recalc Expressions:_  
+`IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.StandardQuantity, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))`
 
 ## Reference Details
 
