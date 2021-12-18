@@ -73,8 +73,8 @@
 <h1 id="r30768-6-paymentslip---convert-amounts">R30768-6 PaymentSlip - Convert Amounts</h1>
 
 <table>
-<col style="width:50%">
-<col style="width:50%">
+<col style="width:34.09%">
+<col style="width:65.91%">
 <tbody>
 <tr>
 <td><strong>Code</strong></td>
@@ -110,13 +110,17 @@
 </tr>
 <tr>
 <td><strong>Applicable Legislations</strong></td>
-<td>[ALL // no condition needed
-](https://confluence
-.erp.net/display/techdoc/Country+Specific+Functionality)</td>
+<td>[ALL // no condition needed</td>
+</tr>
+<tr>
+<td colspan="2">
+<pre><code>                                                       | ](xref:applicable-legislations) |
+</code></pre>
+</td>
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td>IF (Document.CurrencyDirectory != null AND oldCurrency
+<td rowspan="2"><h2 id="if-documentcurrencydirectory--null-and-oldcurrency-newcurrencyforeach-paymentslipamountpaymentslipamounttotalamount-paymentslipamounttotalamountconverttonewcurrencycurrencydirectoryforeach-paymentslipline-paymentsliplineamount-paymentsliplineamountconverttonewcurrencycurrencydirectorythrows-if-there-is-no-conversion-ratio">IF (Document.CurrencyDirectory != null AND oldCurrency
 != newCurrency)
 <br><br>
 foreach PaymentSlipAmount
@@ -129,14 +133,15 @@ PaymentSlipLine.Amount.ConvertTo(newCurrency,
 CurrencyDirectory);
 }
 <br><br>
-throws if there is no conversion ratio</td>
+throws if there is no conversion ratio</h2>
+<p>When Document Currency in the Payment Slip is changed,
+Amount in the Payment Slip's lines and Total Amount in
+the Payment Slip's Amounts should be converted to the
+new Currency.</p>
+</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
-<td>When Document Currency in the Payment Slip is changed,
-Amount in the Payment Slip's lines and Total Amount in
-the Payment Slip's Amounts should be converted to the
-new Currency.</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>
