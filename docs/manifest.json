@@ -4566,7 +4566,7 @@
       "output": {
         ".html": {
           "relative_path": "business-rules/R30343-2.html",
-          "hash": "Ye3gJXJlhPhP3Fe382bgsw=="
+          "hash": "9hgw2wbWI4qdnT7GRJh9WA=="
         }
       },
       "is_incremental": false,
@@ -9830,6 +9830,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "business-rules/R32732.md",
+      "output": {
+        ".html": {
+          "relative_path": "business-rules/R32732.html",
+          "hash": "C9vijWT2cFup+fElI1Lppg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "data-types.md",
       "output": {
         ".html": {
@@ -12772,7 +12784,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Finance.Payments.PaymentSlips.html",
-          "hash": "mK/TOrCKE6kIUtJ9UGij3A=="
+          "hash": "nUUMZMrAjwemN23B9CNYIA=="
         }
       },
       "is_incremental": false,
