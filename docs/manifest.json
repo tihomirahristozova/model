@@ -3196,12 +3196,15 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "UidNotFound"
+      ],
       "type": "Conceptual",
       "source_relative_path": "business-rules/R28868.md",
       "output": {
         ".html": {
           "relative_path": "business-rules/R28868.html",
-          "hash": "ofUN18J7rCmqvMQLnzBJ8w=="
+          "hash": "CfE8pNvmHUb/BsE1CviyOQ=="
         }
       },
       "is_incremental": false,
