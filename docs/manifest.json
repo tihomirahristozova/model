@@ -1057,15 +1057,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "business-rules/R27099.md",
       "output": {
         ".html": {
           "relative_path": "business-rules/R27099.html",
-          "hash": "86RP18FHwMqRzlQMmUeaEA=="
+          "hash": "9TvfedazSA/mI7k993UI/g=="
         }
       },
       "is_incremental": false,
@@ -3040,15 +3037,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "business-rules/R28706.md",
       "output": {
         ".html": {
           "relative_path": "business-rules/R28706.html",
-          "hash": "CaasM7HipiUEmImsw6cCpg=="
+          "hash": "k6r1Bqm4F78z9SujNFpDOA=="
         }
       },
       "is_incremental": false,
