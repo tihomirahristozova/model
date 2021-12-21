@@ -110,9 +110,9 @@
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>For each PaymentSlipLine validate that:</p>
-<p>If (PaymentSlipLine.Amount == 0), then (PaymentSlipLine.CoveredOrderAmount == 0)</p>
-</td>
+<td>For each PaymentSlipLine validate that:
+<br><br>
+If (PaymentSlipLine.Amount == 0), then (PaymentSlipLine.CoveredOrderAmount == 0)</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
@@ -126,11 +126,11 @@ then the 'CoveredOrderAmount' field must be equal to 0 as well.</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>
-<td><p>In Payment Slip Line, covering payment order
+<td>In Payment Slip Line, covering payment order
 '{PaymentSlipLine.PaymentOrder.DocumentText}', the Amount is set as 0
-but the Covered Amount is different from 0.</p>
-<p>Please, check the amounts and make sure that Currency Directory is set.</p>
-</td>
+but the Covered Amount is different from 0.
+<br><br>
+Please, check the amounts and make sure that Currency Directory is set.</td>
 </tr>
 <tr>
 <td><strong>Version</strong></td>
