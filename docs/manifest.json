@@ -17210,6 +17210,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "reference/common-business-rules/all-documents.md",
+      "output": {
+        ".html": {
+          "relative_path": "reference/common-business-rules/all-documents.html",
+          "hash": "ORurHNRxDLffkUqq4cvGcw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "reference/common-business-rules/all-entities.md",
       "output": {
         ".html": {
@@ -17286,7 +17298,7 @@
       "output": {
         ".html": {
           "relative_path": "reference/common-business-rules/logistics-documents.html",
-          "hash": "If6zJUlaFFj4cggRTJqUyQ=="
+          "hash": "85CDBrRZDHT7twZUK0uegA=="
         }
       },
       "is_incremental": false,
@@ -17370,7 +17382,7 @@
       "output": {
         ".html": {
           "relative_path": "reference/toc.html",
-          "hash": "XQxVA1w2xCo0ocqOA4QTOQ=="
+          "hash": "eOWMzR06wprT1vcjmjbk5w=="
         }
       },
       "is_incremental": false,
