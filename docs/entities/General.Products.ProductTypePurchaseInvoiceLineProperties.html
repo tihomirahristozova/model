@@ -108,6 +108,11 @@ Aggregate Root:<br>
 <td></td>
 </tr>
 <tr>
+<td><a href="General.Products.ProductTypePurchaseInvoiceLineProperties.html#objectversion">ObjectVersion</a></td>
+<td>int32</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="General.Products.ProductTypePurchaseInvoiceLineProperties.html#propertyno">PropertyNo</a></td>
 <td>int32</td>
 <td>The consecutive number (position) of the property within the current product type. <code>Required</code></td>
@@ -116,11 +121,6 @@ Aggregate Root:<br>
 <td><a href="General.Products.ProductTypePurchaseInvoiceLineProperties.html#required">Required</a></td>
 <td>boolean</td>
 <td>True when the property is required, when creating new purchase invoice lines. False when this only suggests the usage of the property. <code>Required</code> <code>Default(false)</code></td>
-</tr>
-<tr>
-<td><a href="General.Products.ProductTypePurchaseInvoiceLineProperties.html#rowversion">RowVersion</a></td>
-<td>byte[]</td>
-<td></td>
 </tr>
 </tbody>
 </table>
@@ -152,6 +152,10 @@ Aggregate Root:<br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
+<h3 id="objectversion">ObjectVersion</h3>
+<p><em>Type</em>: <strong>int32</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****</p>
 <h3 id="propertyno">PropertyNo</h3>
 <p>The consecutive number (position) of the property within the current product type. <code>Required</code></p>
 <p><em>Type</em>: <strong>int32</strong><br>
@@ -167,10 +171,6 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
-<h3 id="rowversion">RowVersion</h3>
-<p><em>Type</em>: <strong>byte[]</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="producttype">ProductType</h3>
 <p>The <see cref="ProductType"></see> to which this ProductTypePurchaseInvoiceLineProperty belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>

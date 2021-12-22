@@ -26,7 +26,7 @@ Aggregate Tree
 | [Id](General.Folders.md#id) | guid |  
 | [Name](General.Folders.md#name) | string (128) | Name of the folder. Unique within its parent folder. `Required` `Filter(multi eq;like)` 
 | [Notes](General.Folders.md#notes) | string (max) __nullable__ | Notes for this Folder. 
-| [RowVersion](General.Folders.md#rowversion) | byte[] |  
+| [ObjectVersion](General.Folders.md#objectversion) | int32 |  
 
 ## References
 
@@ -63,11 +63,11 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
 
-### RowVersion
+### ObjectVersion
 
-_Type_: **byte[]**  
+_Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Supports Order By_: ****  
 
 
 ## Reference Details

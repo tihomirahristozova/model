@@ -15,6 +15,7 @@ A vehicle, which is used for transportation. One actual vehicle might be defined
 
 | Name | Type | Description |
 | - | - | --- |
+|[__Object_Version](#__object_version)|`int` ||
 |[Cargo_Type_Id](#cargo_type_id)|`uniqueidentifier` |The cargo type supported by this transportation vehicle.|
 |[Carrier_Id](#carrier_id)|`uniqueidentifier` |The carrier, operating the vehicle. NULL for our own vehicles.|
 |[Code](#code)|`nvarchar(16)` |The unique code (or call sign) of this transportation vehicle.|
@@ -28,6 +29,33 @@ A vehicle, which is used for transportation. One actual vehicle might be defined
 |[Vehicle_Id](#vehicle_id)|`uniqueidentifier` |The definition of the base vehicle.|
 
 ## Columns
+
+### __Object_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 ### Cargo_Type_Id
 

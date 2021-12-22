@@ -28,7 +28,7 @@ Aggregate Root:
 | [ActualEndTime](Projects.WorkReportResources.md#actualendtime) | datetime __nullable__ | Optionally, specifies the actual date and time when the resource usage ended. `Filter(eq;like)` 
 | [ActualStartTime](Projects.WorkReportResources.md#actualstarttime) | datetime __nullable__ | Optionally, specifies the actual date and time when the resource usage began. `Filter(eq;like)` 
 | [Id](Projects.WorkReportResources.md#id) | guid |  
-| [RowVersion](Projects.WorkReportResources.md#rowversion) | byte[] |  
+| [ObjectVersion](Projects.WorkReportResources.md#objectversion) | int32 |  
 | [TotalResourceUsageHours](Projects.WorkReportResources.md#totalresourceusagehours) | decimal (18, 2) | The total number of resource-hours, which are actually consumed. Equals to the duration of the task, multiplied by the average resource usage. `Required` `Default(0)` `Filter(eq;like)` 
 
 ## References
@@ -66,11 +66,11 @@ _Indexed_: **True**
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
-### RowVersion
+### ObjectVersion
 
-_Type_: **byte[]**  
+_Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Supports Order By_: ****  
 
 ### TotalResourceUsageHours
 

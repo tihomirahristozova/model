@@ -83,7 +83,7 @@
 <p>Forecast items form demand in MRP calculations. Entity: Crm_Forecast_Items</p>
 <h2 id="default-visualization">Default Visualization</h2>
 <p>Default Display Text Format:<br>
-<em>{Id}: {QuantityValue}</em><br>
+<em>{Id}: {ObjectVersion}</em><br>
 Default Search Members:<br>
 __</p>
 <h2 id="aggregate">Aggregate</h2>
@@ -113,14 +113,14 @@ __</p>
 <td></td>
 </tr>
 <tr>
+<td><a href="Crm.Marketing.ForecastItems.html#objectversion">ObjectVersion</a></td>
+<td>int32</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="Crm.Marketing.ForecastItems.html#quantity">Quantity</a></td>
 <td><a href="../data-types.html#quantity">Quantity (18, 3)</a></td>
 <td>The forecasted sales quantity in the base measurement category of the product. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>Default(0)</code> <code>Filter(ge;le)</code></td>
-</tr>
-<tr>
-<td><a href="Crm.Marketing.ForecastItems.html#rowversion">RowVersion</a></td>
-<td>byte[]</td>
-<td></td>
 </tr>
 </tbody>
 </table>
@@ -177,16 +177,16 @@ __</p>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
+<h3 id="objectversion">ObjectVersion</h3>
+<p><em>Type</em>: <strong>int32</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****</p>
 <h3 id="quantity">Quantity</h3>
 <p>The forecasted sales quantity in the base measurement category of the product. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>Default(0)</code> <code>Filter(ge;le)</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a></strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
-<h3 id="rowversion">RowVersion</h3>
-<p><em>Type</em>: <strong>byte[]</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="country">Country</h3>
 <p>The country for which the forecast is made. When null, the forecast is country neutral. <code>Filter(multi eq)</code></p>

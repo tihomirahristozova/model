@@ -15,6 +15,7 @@ Orders for store transactions. After an order is executed, store transaction is 
 
 | Name | Type | Description |
 | - | - | --- |
+|[__Object_Version](#__object_version)|`int` ||
 |[Document_Currency_Id](#document_currency_id)|`uniqueidentifier` |The currency in which the document amounts are expessed.|
 |[Document_Id](#document_id)|`uniqueidentifier` |The Id of the store order document entry|
 |[Driver_Name](#driver_name)|`nvarchar(64)` |The name of the driver, who will deliver the stocks.|
@@ -35,6 +36,33 @@ Orders for store transactions. After an order is executed, store transaction is 
 |[Vehicle_Reg_Number](#vehicle_reg_number)|`nvarchar(32)` |Obsolete. Not used.|
 
 ## Columns
+
+### __Object_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 ### Document_Currency_Id
 

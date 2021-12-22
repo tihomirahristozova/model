@@ -9,7 +9,7 @@ Forecast items form demand in MRP calculations. Entity: Crm_Forecast_Items
 
 ## Default Visualization
 Default Display Text Format:  
-_{Id}: {QuantityValue}_  
+_{Id}: {ObjectVersion}_  
 Default Search Members:  
 __  
 
@@ -25,8 +25,8 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [Date](Crm.Marketing.ForecastItems.md#date) | datetime | The date for which the sales is forecasted. When forecasting for a period, this contains the first date of the period. `Required` `Filter(ge;le)` 
 | [Id](Crm.Marketing.ForecastItems.md#id) | guid |  
+| [ObjectVersion](Crm.Marketing.ForecastItems.md#objectversion) | int32 |  
 | [Quantity](Crm.Marketing.ForecastItems.md#quantity) | [Quantity (18, 3)](../data-types.md#quantity) | The forecasted sales quantity in the base measurement category of the product. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Default(0)` `Filter(ge;le)` 
-| [RowVersion](Crm.Marketing.ForecastItems.md#rowversion) | byte[] |  
 
 ## References
 
@@ -57,6 +57,12 @@ _Indexed_: **True**
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
+### ObjectVersion
+
+_Type_: **int32**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+
 ### Quantity
 
 The forecasted sales quantity in the base measurement category of the product. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Default(0)` `Filter(ge;le)`
@@ -65,12 +71,6 @@ _Type_: **[Quantity (18, 3)](../data-types.md#quantity)**
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
-
-### RowVersion
-
-_Type_: **byte[]**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
 
 
 ## Reference Details

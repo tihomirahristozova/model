@@ -11,6 +11,7 @@ Represents a role, which can be assigned to POS operators (like Cashier, Manager
 
 | Name | Type | Description |
 | - | - | --- |
+|[__Object_Version](#__object_version)|`int` ||
 |[Can_Process_Minus_Sales](#can_process_minus_sales)|`bit` |Indicates whether the role is allowed to process minus (qty and/or value) sales.|
 |[Can_Void_Sales](#can_void_sales)|`bit` |Indicates whether this role can void sales orders.|
 |[Pos_Role_Code](#pos_role_code)|`nvarchar(16)` |Unique role code.|
@@ -19,6 +20,33 @@ Represents a role, which can be assigned to POS operators (like Cashier, Manager
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
+
+### __Object_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 ### Can_Process_Minus_Sales
 

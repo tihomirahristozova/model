@@ -16,6 +16,7 @@ Contains the resources availability for the different periods. Each period is a 
 
 | Name | Type | Description |
 | - | - | --- |
+|[__Object_Version](#__object_version)|`int` ||
 |[Available_Resources](#available_resources)|`decimal(12, 2)` |The quantity of the resource, available for the specified period. For non-discrete resources, this number can contain fractions. When several availability periods for a resource overlap, the total availability is the sum of all.|
 |[From_Date](#from_date)|`date` |The date from which availability starts.|
 |[Resource_Availability_Id](#resource_availability_id)|`uniqueidentifier` `PK`||
@@ -24,6 +25,33 @@ Contains the resources availability for the different periods. Each period is a 
 |[To_Date](#to_date)|`date` |The date to which the availability continues. When NULL, the availability continues infinitely.|
 
 ## Columns
+
+### __Object_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 ### Available_Resources
 

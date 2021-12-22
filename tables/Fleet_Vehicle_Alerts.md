@@ -11,6 +11,7 @@ Contains alerts, specific to one vehicle. Alerts are created based on many sourc
 
 | Name | Type | Description |
 | - | - | --- |
+|[__Object_Version](#__object_version)|`int` ||
 |[Alert_Type](#alert_type)|`nvarchar(3)` |The type of the alert. The type is specfic to the Source.|
 |[Description](#description)|`nvarchar(254)` |Description of the alert (Multilanguage).|
 |[Is_Hidden](#is_hidden)|`bit` |Specifies, whether the alert is hidden (e.g. managed by the responsible person).|
@@ -20,6 +21,33 @@ Contains alerts, specific to one vehicle. Alerts are created based on many sourc
 |[Vehicle_Id](#vehicle_id)|`uniqueidentifier` |The vehicle, for which is the alert.|
 
 ## Columns
+
+### __Object_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 ### Alert_Type
 

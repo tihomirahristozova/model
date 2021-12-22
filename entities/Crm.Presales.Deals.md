@@ -45,12 +45,12 @@ Aggregate Tree
 | [DocumentDate](Crm.Presales.Deals.md#documentdate) | date | The date on which the document was issued. `Required` `Default(Today)` `Filter(eq;ge;le)` `ORD` (Inherited from [Documents](General.Documents.md)) 
 | [DocumentNo](Crm.Presales.Deals.md#documentno) | string (20) | Document number, unique within Document_Type_Id. `Required` `Filter(eq;like)` `ORD` (Inherited from [Documents](General.Documents.md)) 
 | [DocumentNotes](Crm.Presales.Deals.md#documentnotes) | string (max) __nullable__ | Notes for this Document. (Inherited from [Documents](General.Documents.md)) 
-| [DocumentRowVersion](Crm.Presales.Deals.md#documentrowversion) | byte[] |  
 | [DocumentVersion](Crm.Presales.Deals.md#documentversion) | int32 | Consecutive version number, starting with 1. Each update produces a new version of the document. `Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [EntityName](Crm.Presales.Deals.md#entityname) | string (64) | The entity name of the document header. `Required` `Filter(eq)` `ORD` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [ExpectedRevenue](Crm.Presales.Deals.md#expectedrevenue) | [Amount (18, 2)](../data-types.md#amount) | Expected total revenue. For automatically renewed contracts it's the amount until the first renewal. `Currency: ExpectedRevenueCurrency` `Required` `Default(0)` `Filter(ge;le)` 
 | [Id](Crm.Presales.Deals.md#id) | guid |  
 | [IsSingleExecution](Crm.Presales.Deals.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document. `Required` `Default(false)` `Filter(eq)` `ReadOnly` 
+| [ObjectVersion](Crm.Presales.Deals.md#objectversion) | int32 |  
 | [ParentDocument<br />RelationshipType](Crm.Presales.Deals.md#parentdocumentrelationshiptype) | [ParentDocument<br />RelationshipType](Crm.Presales.Deals.md#parentdocumentrelationshiptype) __nullable__ | Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [PlanningOnly](Crm.Presales.Deals.md#planningonly) | boolean | Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned). `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [ReadOnly](Crm.Presales.Deals.md#readonly) | boolean | True - the document is read only; false - the document is not read only. `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
@@ -59,7 +59,6 @@ Aggregate Tree
 | [ReleaseTime](Crm.Presales.Deals.md#releasetime) | datetime __nullable__ | Date and time when the document was released (State set to Released). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [RevenueEndDate](Crm.Presales.Deals.md#revenueenddate) | datetime | Expected date on which the last revenue from this deal will occur. `Required` `Default(Today)` `Filter(ge;le)` 
 | [RevenueStartDate](Crm.Presales.Deals.md#revenuestartdate) | datetime | Expected date on which revenue from this deal will start. `Required` `Default(Today)` `Filter(ge;le)` 
-| [RowVersion](Crm.Presales.Deals.md#rowversion) | byte[] |  
 | [State](Crm.Presales.Deals.md#state) | [DocumentState](Crm.Presales.Deals.md#state) | The current system state of the document. Allowed values: 0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed. `Required` `Default(0)` `Filter(multi eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [SuccessProbability](Crm.Presales.Deals.md#successprobability) | decimal (3, 2) | Probability of success of that opportunity in percents (for example, 15 percent is stored as 0.15). `Required` `Default(0)` 
 | [Void](Crm.Presales.Deals.md#void) | boolean | True if the document is null and void. `Required` `Default(false)` `Filter(eq)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
@@ -214,12 +213,6 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
 
-### DocumentRowVersion
-
-_Type_: **byte[]**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-
 ### DocumentVersion
 
 Consecutive version number, starting with 1. Each update produces a new version of the document. `Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md))
@@ -263,6 +256,12 @@ _Type_: **boolean**
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **False**  
+
+### ObjectVersion
+
+_Type_: **int32**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### ParentDocumentRelationshipType
 
@@ -343,12 +342,6 @@ _Type_: **datetime**
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **CurrentDate**  
-
-### RowVersion
-
-_Type_: **byte[]**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
 
 ### State
 

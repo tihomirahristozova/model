@@ -128,6 +128,11 @@ Aggregate Root:<br>
 <td>Change in the value of the negative reserve after asset valuations (in the currency of the enterprise company). <code>Currency: Asset.EnterpriseCompany.BaseCurrency</code> <code>Required</code> <code>Default(0)</code></td>
 </tr>
 <tr>
+<td><a href="Finance.Assets.AssetTransactionLines.html#objectversion">ObjectVersion</a></td>
+<td>int32</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="Finance.Assets.AssetTransactionLines.html#operationtype">OperationType</a></td>
 <td><a href="Finance.Assets.AssetTransactionLines.html#operationtype">OperationType</a></td>
 <td>Type of the current asset operation: PUR = Purchase, SLS = Sale, DEP = Depreciation, ADJ = Adjustment, REV = Reevaluation. <code>Required</code> <code>Default(&quot;ADJ&quot;)</code> <code>Filter(multi eq)</code></td>
@@ -151,11 +156,6 @@ Aggregate Root:<br>
 <td><a href="Finance.Assets.AssetTransactionLines.html#purchasevaluebase">PurchaseValueBase</a></td>
 <td><a href="../data-types.html#amount">Amount (14, 2)</a></td>
 <td>Change in the purchase value of the asset (in the currency of the enterprise company). <code>Currency: Asset.EnterpriseCompany.BaseCurrency</code> <code>Required</code> <code>Default(0)</code></td>
-</tr>
-<tr>
-<td><a href="Finance.Assets.AssetTransactionLines.html#rowversion">RowVersion</a></td>
-<td>byte[]</td>
-<td></td>
 </tr>
 <tr>
 <td><a href="Finance.Assets.AssetTransactionLines.html#salvagevalue">SalvageValue</a></td>
@@ -234,6 +234,10 @@ Aggregate Root:<br>
 <em>Default Value</em>: <strong>Constant</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>obj.NegativeReserveValue.ConvertTo( obj.Asset.EnterpriseCompany.BaseCurrency, obj.AssetTransaction.CurrencyDirectory)</code></p>
+<h3 id="objectversion">ObjectVersion</h3>
+<p><em>Type</em>: <strong>int32</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****</p>
 <h3 id="operationtype">OperationType</h3>
 <p>Type of the current asset operation: PUR = Purchase, SLS = Sale, DEP = Depreciation, ADJ = Adjustment, REV = Reevaluation. <code>Required</code> <code>Default(&quot;ADJ&quot;)</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Finance.Assets.AssetTransactionLines.html#operationtype">OperationType</a></strong><br>
@@ -304,10 +308,6 @@ Allowed values for the <code>OperationType</code>(Finance.Assets.AssetTransactio
 <em>Default Value</em>: <strong>Constant</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>obj.PurchaseValue.ConvertTo( obj.Asset.EnterpriseCompany.BaseCurrency, obj.AssetTransaction.CurrencyDirectory)</code></p>
-<h3 id="rowversion">RowVersion</h3>
-<p><em>Type</em>: <strong>byte[]</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="salvagevalue">SalvageValue</h3>
 <p>Change in the salvage value of the asset (in the currency of the asset). <code>Currency: Asset.ValuationCurrency</code> <code>Required</code> <code>Default(0)</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount (14, 2)</a></strong><br>

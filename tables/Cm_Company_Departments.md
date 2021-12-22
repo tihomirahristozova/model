@@ -16,6 +16,7 @@ Hierarchical structure of the company departments. The departments and divisions
 
 | Name | Type | Description |
 | - | - | --- |
+|[__Object_Version](#__object_version)|`int` ||
 |[Company_Department_Id](#company_department_id)|`uniqueidentifier` `PK`||
 |[Company_Id](#company_id)|`uniqueidentifier` ||
 |[Department_Name](#department_name)|`nvarchar(254)` |The name of the department.|
@@ -24,6 +25,33 @@ Hierarchical structure of the company departments. The departments and divisions
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
+
+### __Object_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 ### Company_Department_Id
 

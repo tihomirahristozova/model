@@ -28,7 +28,7 @@ Aggregate Tree
 | [CostTemplateCode](Finance.Cost.Templates.md#costtemplatecode) | string (16) | Unique code of the cost template. `Required` `Filter(eq)` 
 | [CostTemplateName](Finance.Cost.Templates.md#costtemplatename) | string (254) | Name of the cost template. `Required` `Filter(like)` 
 | [Id](Finance.Cost.Templates.md#id) | guid |  
-| [RowVersion](Finance.Cost.Templates.md#rowversion) | byte[] |  
+| [ObjectVersion](Finance.Cost.Templates.md#objectversion) | int32 |  
 
 ## References
 
@@ -71,11 +71,11 @@ _Indexed_: **True**
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
-### RowVersion
+### ObjectVersion
 
-_Type_: **byte[]**  
+_Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Supports Order By_: ****  
 
 
 ## Reference Details

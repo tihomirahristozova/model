@@ -16,6 +16,7 @@ The storage locations within a store. If there are no differentiated storage loc
 
 | Name | Type | Description |
 | - | - | --- |
+|[__Object_Version](#__object_version)|`int` ||
 |[Active](#active)|`bit` |Indicates whether the current store bin is active.|
 |[Blocked_For_Party_Id](#blocked_for_party_id)|`uniqueidentifier` |If not NULL, the goods can only be used by the specified party|
 |[Id](#id)|`uniqueidentifier` `PK`|Unique store bin id|
@@ -25,6 +26,33 @@ The storage locations within a store. If there are no differentiated storage loc
 |[Store_Id](#store_id)|`uniqueidentifier` |The id of the containing store|
 
 ## Columns
+
+### __Object_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 ### Active
 

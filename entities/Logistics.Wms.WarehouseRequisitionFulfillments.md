@@ -9,7 +9,7 @@ Fulfillment ledger for warehouse requisitions. Entity: Wms_Warehouse_Requisition
 
 ## Default Visualization
 Default Display Text Format:  
-_{Id}: {WarehouseRequisitionId}_  
+_{Id}: {ObjectVersion}_  
 Default Search Members:  
 __  
 
@@ -27,8 +27,8 @@ Aggregate Tree
 | [FulfillmentType](Logistics.Wms.WarehouseRequisitionFulfillments.md#fulfillmenttype) | string (1) | Type of fulfillment: P=Plan created; C=Requisition completed. `Required` 
 | [Id](Logistics.Wms.WarehouseRequisitionFulfillments.md#id) | guid |  
 | [IsFinal](Logistics.Wms.WarehouseRequisitionFulfillments.md#isfinal) | boolean | Specifies whether this fulfillment finalizes the requisition line, regardless of any remaining quantities. `Required` 
+| [ObjectVersion](Logistics.Wms.WarehouseRequisitionFulfillments.md#objectversion) | int32 |  
 | [Quantity](Logistics.Wms.WarehouseRequisitionFulfillments.md#quantity) | decimal (12, 3) | Quantity fulfilled (in the measurement unit of the requisition line). `Required` 
-| [RowVersion](Logistics.Wms.WarehouseRequisitionFulfillments.md#rowversion) | byte[] |  
 
 ## References
 
@@ -73,17 +73,17 @@ _Type_: **boolean**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
+### ObjectVersion
+
+_Type_: **int32**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+
 ### Quantity
 
 Quantity fulfilled (in the measurement unit of the requisition line). `Required`
 
 _Type_: **decimal (12, 3)**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-
-### RowVersion
-
-_Type_: **byte[]**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 

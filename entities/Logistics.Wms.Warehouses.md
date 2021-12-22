@@ -30,7 +30,7 @@ Aggregate Tree
 | [Id](Logistics.Wms.Warehouses.md#id) | guid |  
 | [Name](Logistics.Wms.Warehouses.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Name of the warehouse (multilanguage). `Required` `Filter(eq;like)` 
 | [Notes](Logistics.Wms.Warehouses.md#notes) | string (max) __nullable__ | Notes for this Warehouse. 
-| [RowVersion](Logistics.Wms.Warehouses.md#rowversion) | byte[] |  
+| [ObjectVersion](Logistics.Wms.Warehouses.md#objectversion) | int32 |  
 
 ## Child Collections
 
@@ -68,11 +68,11 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
 
-### RowVersion
+### ObjectVersion
 
-_Type_: **byte[]**  
+_Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Supports Order By_: ****  
 
 
 

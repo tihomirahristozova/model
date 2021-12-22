@@ -27,7 +27,7 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [AgreedQuantity](Applications.Service.ServiceActivityAgreedMaterials.md#agreedquantity) | [Quantity (18, 3)](../data-types.md#quantity) | Quantity from the service agreement material line that is accounted for this service activity material line. `Unit: ServiceAgreementMaterial.QuantityUnit` `Required` `Default(0)` `ReadOnly` 
 | [Id](Applications.Service.ServiceActivityAgreedMaterials.md#id) | guid |  
-| [RowVersion](Applications.Service.ServiceActivityAgreedMaterials.md#rowversion) | byte[] |  
+| [ObjectVersion](Applications.Service.ServiceActivityAgreedMaterials.md#objectversion) | int32 |  
 
 ## References
 
@@ -55,11 +55,11 @@ _Indexed_: **True**
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
-### RowVersion
+### ObjectVersion
 
-_Type_: **byte[]**  
+_Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Supports Order By_: ****  
 
 
 ## Reference Details

@@ -27,9 +27,9 @@ Aggregate Tree
 | [ElementName](Systems.Security.VisualPermissions.md#elementname) | string (4000) __nullable__ | Optionally, the element from the panel which will be secured. `Filter(eq)` 
 | [FormName](Systems.Security.VisualPermissions.md#formname) | string (128) __nullable__ | Optionally, the form which will be secured. `Filter(eq)` 
 | [Id](Systems.Security.VisualPermissions.md#id) | guid |  
+| [ObjectVersion](Systems.Security.VisualPermissions.md#objectversion) | int32 |  
 | [OperationName](Systems.Security.VisualPermissions.md#operationname) | string (64) __nullable__ | Optionally, the operation on the element which will be secured. `Filter(eq)` 
 | [PanelName](Systems.Security.VisualPermissions.md#panelname) | string (128) __nullable__ | Optionally, the panel from the form which will be secured. `Filter(eq)` 
-| [RowVersion](Systems.Security.VisualPermissions.md#rowversion) | byte[] |  
 
 ## References
 
@@ -74,6 +74,12 @@ _Indexed_: **True**
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
+### ObjectVersion
+
+_Type_: **int32**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+
 ### OperationName
 
 Optionally, the operation on the element which will be secured. `Filter(eq)`
@@ -91,12 +97,6 @@ _Type_: **string (128) __nullable__**
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Maximum Length_: **128**  
-
-### RowVersion
-
-_Type_: **byte[]**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
 
 
 ## Reference Details

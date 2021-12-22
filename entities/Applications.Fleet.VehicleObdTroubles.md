@@ -27,6 +27,7 @@ Aggregate Tree
 | [DiagnosticTroubleCode](Applications.Fleet.VehicleObdTroubles.md#diagnostictroublecode) | string (5) | Standartized OBD-II diagnostic trouble code. `Required` 
 | [Id](Applications.Fleet.VehicleObdTroubles.md#id) | guid |  
 | [ManufacturerTroubleCode](Applications.Fleet.VehicleObdTroubles.md#manufacturertroublecode) | string (16) __nullable__ | Non-standard manufacturer-specific trouble code. null when it is not available. 
+| [ObjectVersion](Applications.Fleet.VehicleObdTroubles.md#objectversion) | int32 |  
 | [OccurenceDateTime](Applications.Fleet.VehicleObdTroubles.md#occurencedatetime) | datetime | Date and time (UTC) when the trouble was detected. `Required` 
 
 ## References
@@ -71,6 +72,12 @@ _Type_: **string (16) __nullable__**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **16**  
+
+### ObjectVersion
+
+_Type_: **int32**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### OccurenceDateTime
 

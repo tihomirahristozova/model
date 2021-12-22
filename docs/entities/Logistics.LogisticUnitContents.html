@@ -138,14 +138,14 @@ Aggregate Root:<br>
 <td>Notes for this LogisticUnitContent.</td>
 </tr>
 <tr>
+<td><a href="Logistics.LogisticUnitContents.html#objectversion">ObjectVersion</a></td>
+<td>int32</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="Logistics.LogisticUnitContents.html#quantity">Quantity</a></td>
 <td>decimal (12, 3)</td>
 <td>Quantity of the product in the logistic unit. Expressed in the specified measurement unit. <code>Required</code> <code>Filter(multi eq;ge;le)</code></td>
-</tr>
-<tr>
-<td><a href="Logistics.LogisticUnitContents.html#rowversion">RowVersion</a></td>
-<td>byte[]</td>
-<td></td>
 </tr>
 <tr>
 <td><a href="Logistics.LogisticUnitContents.html#standardquantity">StandardQuantity</a></td>
@@ -223,14 +223,14 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>2147483647</strong></p>
+<h3 id="objectversion">ObjectVersion</h3>
+<p><em>Type</em>: <strong>int32</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****</p>
 <h3 id="quantity">Quantity</h3>
 <p>Quantity of the product in the logistic unit. Expressed in the specified measurement unit. <code>Required</code> <code>Filter(multi eq;ge;le)</code></p>
 <p><em>Type</em>: <strong>decimal (12, 3)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
-<h3 id="rowversion">RowVersion</h3>
-<p><em>Type</em>: <strong>byte[]</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="standardquantity">StandardQuantity</h3>
 <p>The quantity, expessed in the standard measurement unit of the product. <code>Required</code> <code>Filter(eq;ge;le)</code></p>

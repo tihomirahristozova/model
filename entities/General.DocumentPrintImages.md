@@ -26,9 +26,9 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](General.DocumentPrintImages.md#id) | guid |  
+| [ObjectVersion](General.DocumentPrintImages.md#objectversion) | int32 |  
 | [PrintImage](General.DocumentPrintImages.md#printimage) | byte[] | The data of the printout, stored in the format, specified in Print Image Format. `Required` 
 | [PrintImageFormat](General.DocumentPrintImages.md#printimageformat) | string (3) | The format, which is used to represent the print image. Currently, only 'CDS' = Compressed Data Set is supported. `Required` `Default("CDS")` 
-| [RowVersion](General.DocumentPrintImages.md#rowversion) | byte[] |  
 
 ## References
 
@@ -45,6 +45,12 @@ _Type_: **guid**
 _Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
+
+### ObjectVersion
+
+_Type_: **int32**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### PrintImage
 
@@ -63,12 +69,6 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Maximum Length_: **3**  
 _Default Value_: **CDS**  
-
-### RowVersion
-
-_Type_: **byte[]**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
 
 
 ## Reference Details

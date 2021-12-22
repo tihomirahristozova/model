@@ -9,7 +9,7 @@ Contains purchase prices of the products. Used for automatically loading unit pr
 
 ## Default Visualization
 Default Display Text Format:  
-_{Id}: {MaxQuantityValue}_  
+_{Id}: {ObjectVersion}_  
 Default Search Members:  
 __  
 
@@ -28,10 +28,10 @@ Aggregate Tree
 | [MaxQuantity](Logistics.Procurement.PurchaseProductPrices.md#maxquantity) | [Quantity (18, 3)](../data-types.md#quantity) __nullable__ | Maximum quantity for which this price is valid in the Price_Quantity_<br />Measurement_Unit. `Unit: PriceQuantityMeasurement<br />Unit` `Filter(eq)` 
 | [MinQuantity](Logistics.Procurement.PurchaseProductPrices.md#minquantity) | [Quantity (18, 3)](../data-types.md#quantity) __nullable__ | Minimal quantity required to use this price (in the Price_Quantity_Measurement_Unit). `Unit: PriceQuantityMeasurement<br />Unit` `Filter(eq)` 
 | [Notes](Logistics.Procurement.PurchaseProductPrices.md#notes) | string (254) __nullable__ | Notes for this PurchaseProductPrice. 
+| [ObjectVersion](Logistics.Procurement.PurchaseProductPrices.md#objectversion) | int32 |  
 | [Price](Logistics.Procurement.PurchaseProductPrices.md#price) | [Amount (13, 5)](../data-types.md#amount) | Price in the specified currency and for the specified quantity. `Currency: Currency` `Required` `Default(0)` 
 | [PriceQuantity](Logistics.Procurement.PurchaseProductPrices.md#pricequantity) | [Quantity (10, 3)](../data-types.md#quantity) | The quantity of the product for which the price is specified. `Unit: PriceQuantityMeasurement<br />Unit` `Required` `Default(1)` 
 | [Priority](Logistics.Procurement.PurchaseProductPrices.md#priority) | [Priority](Logistics.Procurement.PurchaseProductPrices.md#priority) | Priority of the price comparative to other prices. `Required` `Default(2)` `Filter(multi eq)` 
-| [RowVersion](Logistics.Procurement.PurchaseProductPrices.md#rowversion) | byte[] |  
 | [ThruDate](Logistics.Procurement.PurchaseProductPrices.md#thrudate) | datetime __nullable__ | Ending date (inclusive) of the validity of the price. `Filter(eq;ge;le)` 
 
 ## References
@@ -88,6 +88,12 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
 
+### ObjectVersion
+
+_Type_: **int32**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+
 ### Price
 
 Price in the specified currency and for the specified quantity. `Currency: Currency` `Required` `Default(0)`
@@ -125,12 +131,6 @@ _Allowed Values (Logistics.Procurement.PurchaseProductPricesRepository.Priority 
 _Supported Filters_: **Equals, EqualsIn**  
 _Supports Order By_: **False**  
 _Default Value_: **2**  
-
-### RowVersion
-
-_Type_: **byte[]**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
 
 ### ThruDate
 

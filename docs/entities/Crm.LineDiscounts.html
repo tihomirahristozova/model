@@ -83,7 +83,7 @@
 <p>Discount policies for sales documents. Entity: Crm_Line_Discounts</p>
 <h2 id="default-visualization">Default Visualization</h2>
 <p>Default Display Text Format:<br>
-<em>{Id}: {MaxQuantityValue}</em><br>
+<em>{Id}: {ObjectVersion}</em><br>
 Default Search Members:<br>
 __</p>
 <h2 id="aggregate">Aggregate</h2>
@@ -133,14 +133,14 @@ __</p>
 <td>Apply the discount only if the quantity sold is equal to or more than the specified here. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Filter(eq;ge;le)</code></td>
 </tr>
 <tr>
+<td><a href="Crm.LineDiscounts.html#objectversion">ObjectVersion</a></td>
+<td>int32</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="Crm.LineDiscounts.html#priority">Priority</a></td>
 <td><a href="Crm.LineDiscounts.html#priority">Priority</a></td>
 <td>The priority of this discount policy. When selecting a discount for a sales document line, only the highest priority policy, matching the criteria is applied. <code>Required</code> <code>Default(3)</code></td>
-</tr>
-<tr>
-<td><a href="Crm.LineDiscounts.html#rowversion">RowVersion</a></td>
-<td>byte[]</td>
-<td></td>
 </tr>
 <tr>
 <td><a href="Crm.LineDiscounts.html#thrudate">ThruDate</a></td>
@@ -244,6 +244,10 @@ __</p>
 <p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a> <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="objectversion">ObjectVersion</h3>
+<p><em>Type</em>: <strong>int32</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****</p>
 <h3 id="priority">Priority</h3>
 <p>The priority of this discount policy. When selecting a discount for a sales document line, only the highest priority policy, matching the criteria is applied. <code>Required</code> <code>Default(3)</code></p>
 <p><em>Type</em>: <strong><a href="Crm.LineDiscounts.html#priority">Priority</a></strong><br>
@@ -282,10 +286,6 @@ Generic enum type for Priority properties<br>
 <p><em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>3</strong></p>
-<h3 id="rowversion">RowVersion</h3>
-<p><em>Type</em>: <strong>byte[]</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="thrudate">ThruDate</h3>
 <p>Ending date (inclusive) of validity of the discount. If null, the discount is valid forever. <code>Filter(eq;ge;le)</code></p>
 <p><em>Type</em>: <strong>datetime <strong>nullable</strong></strong><br>

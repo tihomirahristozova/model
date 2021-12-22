@@ -16,6 +16,7 @@ Contains the operations within a principal recipe. Entity: Prd_Principal_Recipe_
 
 | Name | Type | Description |
 | - | - | --- |
+|[__Object_Version](#__object_version)|`int` ||
 |[Conditional_Property_Description](#conditional_property_description)|`nvarchar(254)` `ML`|The desired description of the Conditional Property. |
 |[Conditional_Property_Id](#conditional_property_id)|`uniqueidentifier` |When not NULL, specifies that, when creating recipe, the operation will be added only if this property is set for the main product|
 |[Conditional_Property_Value](#conditional_property_value)|`nvarchar(254)` |The desired value of the Conditional Property. |
@@ -39,6 +40,33 @@ Contains the operations within a principal recipe. Entity: Prd_Principal_Recipe_
 |[Workgroup_Resource_Id](#workgroup_resource_id)|`uniqueidentifier` |Required workgroup resource for the operation. NULL means that no resource is required or the resource will be specified later|
 
 ## Columns
+
+### __Object_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 ### Conditional_Property_Description
 

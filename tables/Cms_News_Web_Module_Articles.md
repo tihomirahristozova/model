@@ -11,6 +11,7 @@ Represents an article in a news web module. Entity: Cms_News_Web_Module_Articles
 
 | Name | Type | Description |
 | - | - | --- |
+|[__Object_Version](#__object_version)|`int` ||
 |[Article_Text_Html](#article_text_html)|`nvarchar(max)` |The actual article text, stored as Html. Only the <BODY> of the Html is stored. The language of the text is specified in Language Code.|
 |[Author_Public_User_Id](#author_public_user_id)|`uniqueidentifier` |The author of the news article.|
 |[Is_Published](#is_published)|`bit` |Specifies whether the article is published for display on web.|
@@ -21,6 +22,33 @@ Represents an article in a news web module. Entity: Cms_News_Web_Module_Articles
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
+
+### __Object_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 ### Article_Text_Html
 

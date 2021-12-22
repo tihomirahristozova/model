@@ -11,6 +11,7 @@ Customer contracts list. For each combination of Enterprise Company and external
 
 | Name | Type | Description |
 | - | - | --- |
+|[__Object_Version](#__object_version)|`int` ||
 |[Active](#active)|`bit` |1 if the customer is active, 0 - not to list in combo boxes for choosing in new documents|
 |[Allow_Use_As_Primary_Customer](#allow_use_as_primary_customer)|`bit` |Specifies whether to allow the customer to be used as primary customer in a sales deal.|
 |[Allow_Use_As_Ship_To_Customer](#allow_use_as_ship_to_customer)|`bit` |True to allow the customer to be used as ship to customer in a sales deal.|
@@ -42,6 +43,33 @@ Customer contracts list. For each combination of Enterprise Company and external
 |[Update_User](#update_user)|`nvarchar(64)` Readonly||
 
 ## Columns
+
+### __Object_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 ### Active
 

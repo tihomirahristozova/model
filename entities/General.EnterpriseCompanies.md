@@ -37,8 +37,8 @@ Aggregate Tree
 | [EditPeriodStartDate](General.EnterpriseCompanies.md#editperiodstartdate) | datetime __nullable__ | Start date of the priod when the documents can be edited. 
 | [Id](General.EnterpriseCompanies.md#id) | guid |  
 | [IsActive](General.EnterpriseCompanies.md#isactive) | boolean | Indicates whether the current Enterprise company  is active. `Required` `Default(true)` `Filter(multi eq)` `Introduced in version 20.1` 
+| [ObjectVersion](General.EnterpriseCompanies.md#objectversion) | int32 |  
 | [PrintImagesRetentionMonths](General.EnterpriseCompanies.md#printimagesretentionmonths) | int32 | A period of months for which the printed images of the documents will be kept. `Required` `Default(60)` `Filter(multi eq;ge;le)` `Introduced in version 20.1` 
-| [RowVersion](General.EnterpriseCompanies.md#rowversion) | byte[] |  
 | [UIBaseColor](General.EnterpriseCompanies.md#uibasecolor) | int32 __nullable__ | When not null, specifies the background color to use for visualization of the UI when the current enterprise company is selected. The color is in RGBA color format. `Introduced in version 18.2` 
 
 ## References
@@ -141,6 +141,12 @@ _Supported Filters_: **Equals, EqualsIn**
 _Supports Order By_: **False**  
 _Default Value_: **True**  
 
+### ObjectVersion
+
+_Type_: **int32**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+
 ### PrintImagesRetentionMonths
 
 A period of months for which the printed images of the documents will be kept. `Required` `Default(60)` `Filter(multi eq;ge;le)` `Introduced in version 20.1`
@@ -149,12 +155,6 @@ _Type_: **int32**
 _Supported Filters_: **Equals, GreaterThanOrLessThan, EqualsIn**  
 _Supports Order By_: **False**  
 _Default Value_: **60**  
-
-### RowVersion
-
-_Type_: **byte[]**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
 
 ### UIBaseColor
 

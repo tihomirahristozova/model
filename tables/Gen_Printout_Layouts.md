@@ -11,6 +11,7 @@ Contains design layouts for document printouts. Entity: Gen_Printout_Layouts
 
 | Name | Type | Description |
 | - | - | --- |
+|[__Object_Version](#__object_version)|`int` ||
 |[Binary_Layout](#binary_layout)|`varbinary` |The printout layout, when the format requires binary storage. Alternative to Layout|
 |[Data_Source_Id](#data_source_id)|`uniqueidentifier` |The data source for the printout|
 |[Document_Entity_Name](#document_entity_name)|`nvarchar(64)` |The entity name of the document type e.g. Crm_Sales_Orders, Inv_Store_Orders etc.|
@@ -22,6 +23,33 @@ Contains design layouts for document printouts. Entity: Gen_Printout_Layouts
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
+
+### __Object_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 ### Binary_Layout
 

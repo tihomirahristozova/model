@@ -11,6 +11,7 @@ Product Category is defined by the taxation and customs authorities. Also specif
 
 | Name | Type | Description |
 | - | - | --- |
+|[__Object_Version](#__object_version)|`int` ||
 |[Calculation_Algorithm](#calculation_algorithm)|`nvarchar(3)` Allowed: `NOP`, `QTY`, `QAS`, `QAP`|The calculation algorithm for Tax Base. NOP=No operation - manually set Tax Base; QTY=Qty; QAS=Qty * Alcoholic strength; QAP=Qty * Alcoholic strength / 100.|
 |[Code](#code)|`nvarchar(32)` |For EU, the product category code is a single character - B,E,I,S,T or W.|
 |[Excise_Product_Category_Id](#excise_product_category_id)|`uniqueidentifier` `PK`||
@@ -18,6 +19,33 @@ Product Category is defined by the taxation and customs authorities. Also specif
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
+
+### __Object_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 ### Calculation_Algorithm
 

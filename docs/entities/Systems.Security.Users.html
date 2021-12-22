@@ -170,6 +170,11 @@ Default Search Members:<br>
 <td>Notes for this User.</td>
 </tr>
 <tr>
+<td><a href="Systems.Security.Users.html#objectversion">ObjectVersion</a></td>
+<td>int32</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="Systems.Security.Users.html#password">Password</a></td>
 <td>string (64) <strong>nullable</strong></td>
 <td>The password hash of the user, stored in the format, specified in Password Format.</td>
@@ -188,11 +193,6 @@ Default Search Members:<br>
 <td><a href="Systems.Security.Users.html#phonenumberconfirmed">PhoneNumberConfirmed</a></td>
 <td>boolean</td>
 <td>Indicates whether the Phone Number has been verified. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>Introduced in version 18.2</code></td>
-</tr>
-<tr>
-<td><a href="Systems.Security.Users.html#rowversion">RowVersion</a></td>
-<td>byte[]</td>
-<td></td>
 </tr>
 <tr>
 <td><a href="Systems.Security.Users.html#twofactorenabled">TwoFactorEnabled</a></td>
@@ -342,6 +342,10 @@ Default Search Members:<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>254</strong></p>
+<h3 id="objectversion">ObjectVersion</h3>
+<p><em>Type</em>: <strong>int32</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****</p>
 <h3 id="password">Password</h3>
 <p>The password hash of the user, stored in the format, specified in Password Format.</p>
 <p><em>Type</em>: <strong>string (64) <strong>nullable</strong></strong><br>
@@ -386,10 +390,6 @@ Allowed values for the <code>PasswordFormat</code>(Systems.Security.Users.md#pas
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
-<h3 id="rowversion">RowVersion</h3>
-<p><em>Type</em>: <strong>byte[]</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="twofactorenabled">TwoFactorEnabled</h3>
 <p>Indicates whether two-factor authentication has been enabled. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>Introduced in version 18.2</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>

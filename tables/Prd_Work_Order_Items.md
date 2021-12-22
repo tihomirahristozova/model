@@ -16,6 +16,7 @@ The different items that are produced with a work order. Entity: Prd_Work_Order_
 
 | Name | Type | Description |
 | - | - | --- |
+|[__Object_Version](#__object_version)|`int` ||
 |[Completion_Date](#completion_date)|`datetime` |The date, when the item should be completed. NULL means that there is no constraint for completion date|
 |[Id](#id)|`uniqueidentifier` `PK`||
 |[Line_Ord](#line_ord)|`int` |The order of the line within the work order.|
@@ -43,6 +44,33 @@ The different items that are produced with a work order. Entity: Prd_Work_Order_
 |[Work_Order_Id](#work_order_id)|`uniqueidentifier` |The Id of the work order, containing the item|
 
 ## Columns
+
+### __Object_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 ### Completion_Date
 

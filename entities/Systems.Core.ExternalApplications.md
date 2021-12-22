@@ -31,9 +31,9 @@ Aggregate Tree
 | [IsActive](Systems.Core.ExternalApplications.md#isactive) | boolean __nullable__ | Specifies whether the external application is currently used. `Default(true)` `Filter(eq)` 
 | [Name](Systems.Core.ExternalApplications.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | The name of the external application. `Required` `Filter(eq;like)` 
 | [Notes](Systems.Core.ExternalApplications.md#notes) | string (max) __nullable__ | Notes for this ExternalApplication. 
+| [ObjectVersion](Systems.Core.ExternalApplications.md#objectversion) | int32 |  
 | [Platform](Systems.Core.ExternalApplications.md#platform) | [Platform](Systems.Core.ExternalApplications.md#platform) | The execution platform of the application. `Required` `Filter(eq)` 
 | [RefreshAfterFinish](Systems.Core.ExternalApplications.md#refreshafterfinish) | boolean | Whether to refresh the data, displayed to the user, after the execution finishes. Not all platforms and/or applications support finish notification. `Required` `Default(true)` `Filter(eq)` 
-| [RowVersion](Systems.Core.ExternalApplications.md#rowversion) | byte[] |  
 | [SaveBeforeStart](Systems.Core.ExternalApplications.md#savebeforestart) | boolean | Whether to save the form data to the server before starting the application. `Required` `Default(true)` `Filter(eq)` 
 
 ## References
@@ -124,6 +124,12 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
 
+### ObjectVersion
+
+_Type_: **int32**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+
 ### Platform
 
 The execution platform of the application. `Required` `Filter(eq)`
@@ -151,12 +157,6 @@ _Type_: **boolean**
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **True**  
-
-### RowVersion
-
-_Type_: **byte[]**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
 
 ### SaveBeforeStart
 

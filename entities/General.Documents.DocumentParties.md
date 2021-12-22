@@ -27,7 +27,7 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [Id](General.Documents.DocumentParties.md#id) | guid |  
 | [Notes](General.Documents.DocumentParties.md#notes) | string (max) __nullable__ | Notes for this DocumentParty. 
-| [RowVersion](General.Documents.DocumentParties.md#rowversion) | byte[] |  
+| [ObjectVersion](General.Documents.DocumentParties.md#objectversion) | int32 |  
 
 ## References
 
@@ -56,11 +56,11 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
 
-### RowVersion
+### ObjectVersion
 
-_Type_: **byte[]**  
+_Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Supports Order By_: ****  
 
 
 ## Reference Details

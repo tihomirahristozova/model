@@ -128,6 +128,11 @@ Default Search Members:<br>
 <td>The code of the language or language-culture pair. Standard Windows codes are used. English=&quot;en&quot;; US English = &quot;en-us&quot;. <code>Required</code> <code>Default(&quot;en&quot;)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
+<td><a href="Systems.Core.Translations.html#objectversion">ObjectVersion</a></td>
+<td>int32</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="Systems.Core.Translations.html#resourceid">ResourceId</a></td>
 <td>string (800)</td>
 <td>The unique identifier of the translated resource. Should use ASCII/English chars only. Shorter strings are suggested. Depending on Text_Type: T:TableName; C:ColumnName; H:TableName.ColumnName; E,M,S: Application specific code. <code>Required</code> <code>Filter(eq;like)</code></td>
@@ -136,11 +141,6 @@ Default Search Members:<br>
 <td><a href="Systems.Core.Translations.html#resourcetype">ResourceType</a></td>
 <td><a href="Systems.Core.Translations.html#resourcetype">ResourceType</a></td>
 <td>T=Table (entity) Name; C=Column Name; H=Column Hint; R=Meta Resource; E=Error; M=Message; S=Other application specific String. <code>Required</code> <code>Default(&quot;S&quot;)</code> <code>Filter(eq)</code></td>
-</tr>
-<tr>
-<td><a href="Systems.Core.Translations.html#rowversion">RowVersion</a></td>
-<td>byte[]</td>
-<td></td>
 </tr>
 <tr>
 <td><a href="Systems.Core.Translations.html#translationfield">TranslationField</a></td>
@@ -188,6 +188,10 @@ Default Search Members:<br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>8</strong><br>
 <em>Default Value</em>: <strong>en</strong></p>
+<h3 id="objectversion">ObjectVersion</h3>
+<p><em>Type</em>: <strong>int32</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****</p>
 <h3 id="resourceid">ResourceId</h3>
 <p>The unique identifier of the translated resource. Should use ASCII/English chars only. Shorter strings are suggested. Depending on Text_Type: T:TableName; C:ColumnName; H:TableName.ColumnName; E,M,S: Application specific code. <code>Required</code> <code>Filter(eq;like)</code></p>
 <p><em>Type</em>: <strong>string (800)</strong><br>
@@ -240,10 +244,6 @@ Allowed values for the <code>ResourceType</code>(Systems.Core.Translations.md#re
 <p><em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>OtherApplicationSpecific</strong></p>
-<h3 id="rowversion">RowVersion</h3>
-<p><em>Type</em>: <strong>byte[]</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="translationfield">TranslationField</h3>
 <p>The translated text. <code>Required</code></p>
 <p><em>Type</em>: <strong>string (max)</strong><br>

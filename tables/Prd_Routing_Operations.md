@@ -9,6 +9,7 @@
 
 | Name | Type | Description |
 | - | - | --- |
+|[__Object_Version](#__object_version)|`int` ||
 |[Duration_Hour](#duration_hour)|`decimal(10, 0)` |The approximate duration of the operation (for quantity of 1) in seconds. This is pure operation time and excludes setup time.|
 |[Id](#id)|`uniqueidentifier` `PK`||
 |[Line_Ord](#line_ord)|`int` |Order of the line within the routing|
@@ -19,6 +20,33 @@
 |[Workgroup_Resource_Id](#workgroup_resource_id)|`uniqueidentifier` |The allocated resource for the operation. If NULL - no resource is needed|
 
 ## Columns
+
+### __Object_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 ### Duration_Hour
 

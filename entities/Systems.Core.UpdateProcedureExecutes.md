@@ -9,7 +9,7 @@ Contains data about the execution of Upgrade Procedures. Contains status message
 
 ## Default Visualization
 Default Display Text Format:  
-_{Id}: {UpdateProcedure}_  
+_{Id}: {ObjectVersion}_  
 Default Search Members:  
 __  
 
@@ -25,8 +25,8 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [ExecuteTime](Systems.Core.UpdateProcedureExecutes.md#executetime) | datetime | The time, when the update procedure was executed. `Required` `Default(Now)` 
 | [Id](Systems.Core.UpdateProcedureExecutes.md#id) | guid |  
+| [ObjectVersion](Systems.Core.UpdateProcedureExecutes.md#objectversion) | int32 |  
 | [ResultMessage](Systems.Core.UpdateProcedureExecutes.md#resultmessage) | string (1024) __nullable__ | Error or success message. 
-| [RowVersion](Systems.Core.UpdateProcedureExecutes.md#rowversion) | byte[] |  
 | [Successful](Systems.Core.UpdateProcedureExecutes.md#successful) | boolean | True when the execution was successfull. `Required` `Default(true)` 
 | [UpdateProcedure](Systems.Core.UpdateProcedureExecutes.md#updateprocedure) | string (128) | The system name of the executed update procedure. `Required` 
 
@@ -49,6 +49,12 @@ _Indexed_: **True**
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
+### ObjectVersion
+
+_Type_: **int32**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+
 ### ResultMessage
 
 Error or success message.
@@ -57,12 +63,6 @@ _Type_: **string (1024) __nullable__**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **1024**  
-
-### RowVersion
-
-_Type_: **byte[]**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
 
 ### Successful
 

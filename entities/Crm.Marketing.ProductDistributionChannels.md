@@ -30,7 +30,7 @@ Aggregate Root:
 | [IsActive](Crm.Marketing.ProductDistributionChannels.md#isactive) | boolean | Is this product listing active? true=Yes, false=No. `Required` `Default(true)` `Filter(eq)` 
 | [MinimalSalesPricePerLot](Crm.Marketing.ProductDistributionChannels.md#minimalsalespriceperlot) | [Amount (18, 4)](../data-types.md#amount) __nullable__ | Minimal allowed price for sales of this product through this channel. The price is for one standard lot and in the costing currency of the product. The minimum is enforced upon planning and/or releasing a document. null means that there is no minimal sales price enforcement. `Currency: Product.CostingCurrency` 
 | [MinimalSalesQuantityBase](Crm.Marketing.ProductDistributionChannels.md#minimalsalesquantitybase) | decimal (18, 3) __nullable__ | Minimal base quantity of the current product that has to be specified in any sale for this distribution channel. 
-| [RowVersion](Crm.Marketing.ProductDistributionChannels.md#rowversion) | byte[] |  
+| [ObjectVersion](Crm.Marketing.ProductDistributionChannels.md#objectversion) | int32 |  
 | [ToDate](Crm.Marketing.ProductDistributionChannels.md#todate) | date __nullable__ | When the product was de-listed. null=unknown or the product was not de-listed. The data is for informational purposes only and does not affect the listing status of the product (Is_Active does). `Filter(ge;le)` 
 
 ## References
@@ -84,11 +84,11 @@ _Type_: **decimal (18, 3) __nullable__**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
-### RowVersion
+### ObjectVersion
 
-_Type_: **byte[]**  
+_Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Supports Order By_: ****  
 
 ### ToDate
 

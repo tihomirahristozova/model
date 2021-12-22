@@ -28,9 +28,9 @@ Aggregate Root:
 | [BudgetedMaterialAmount](Projects.ProjectTaskMaterials.md#budgetedmaterialamount) | [Amount (12, 2)](../data-types.md#amount) __nullable__ | Budgeted amount for the material in the currency of the project. null means there is still no budgeted amount. `Currency: ProjectTask.Project.BudgetingCurrency` 
 | [Id](Projects.ProjectTaskMaterials.md#id) | guid |  
 | [LineNumber](Projects.ProjectTaskMaterials.md#linenumber) | int32 | Line number within the task, increased in steps of 10. Used for sorting purposes. `Required` `Default(0)` 
+| [ObjectVersion](Projects.ProjectTaskMaterials.md#objectversion) | int32 |  
 | [Quantity](Projects.ProjectTaskMaterials.md#quantity) | [Quantity (9, 3)](../data-types.md#quantity) | The required quantity of the material. `Unit: QuantityUnit` `Required` `Default(1)` 
 | [QuantityBase](Projects.ProjectTaskMaterials.md#quantitybase) | decimal (9, 3) | The equivalence of Quantity in the base measurement unit of the Material. `Required` `Default(0)` `ReadOnly` 
-| [RowVersion](Projects.ProjectTaskMaterials.md#rowversion) | byte[] |  
 
 ## References
 
@@ -74,6 +74,12 @@ _Back-End Default Expression:_
 
 _Front-End Recalc Expressions:_  
 `( obj.ProjectTask.Materials.Select( c => c.LineNumber).DefaultIfEmpty( 0).Max( ) + 10)`
+### ObjectVersion
+
+_Type_: **int32**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+
 ### Quantity
 
 The required quantity of the material. `Unit: QuantityUnit` `Required` `Default(1)`
@@ -94,12 +100,6 @@ _Default Value_: **0**
 
 _Front-End Recalc Expressions:_  
 `IIF( ( ( obj.QuantityUnit != null) AndAlso ( obj.MaterialProduct != null)), obj.Quantity.ConvertTo( obj.MaterialProduct.BaseUnit, obj.MaterialProduct).Value, obj.QuantityBase)`
-### RowVersion
-
-_Type_: **byte[]**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-
 
 ## Reference Details
 

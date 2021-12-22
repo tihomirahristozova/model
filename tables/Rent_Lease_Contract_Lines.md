@@ -16,6 +16,7 @@ The detail lines of rental contracts. Each line contains rental conditions for o
 
 | Name | Type | Description |
 | - | - | --- |
+|[__Object_Version](#__object_version)|`int` ||
 |[End_Date](#end_date)|`date` |Ending date of lease of this asset|
 |[Guarantee_Amount](#guarantee_amount)|`decimal(14, 2)` ||
 |[Lease_Contract_Id](#lease_contract_id)|`uniqueidentifier` ||
@@ -27,6 +28,33 @@ The detail lines of rental contracts. Each line contains rental conditions for o
 |[Start_Date](#start_date)|`date` |Starting date of lease for this asset|
 
 ## Columns
+
+### __Object_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 ### End_Date
 

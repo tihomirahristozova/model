@@ -28,7 +28,7 @@ Aggregate Root:
 | [DayNo](General.Resources.WorkScheduleWorkingTime.md#dayno) | int32 | Consequtive day in the work schedule recurrence, starting at 1. `Required` 
 | [EndTime](General.Resources.WorkScheduleWorkingTime.md#endtime) | time | End of working time period. `Required` 
 | [Id](General.Resources.WorkScheduleWorkingTime.md#id) | guid |  
-| [RowVersion](General.Resources.WorkScheduleWorkingTime.md#rowversion) | byte[] |  
+| [ObjectVersion](General.Resources.WorkScheduleWorkingTime.md#objectversion) | int32 |  
 | [StartTime](General.Resources.WorkScheduleWorkingTime.md#starttime) | time | Start of working time period on the day, specified by Day_No. `Required` 
 
 ## References
@@ -63,11 +63,11 @@ _Indexed_: **True**
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
-### RowVersion
+### ObjectVersion
 
-_Type_: **byte[]**  
+_Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Supports Order By_: ****  
 
 ### StartTime
 

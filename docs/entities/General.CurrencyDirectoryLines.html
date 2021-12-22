@@ -108,6 +108,11 @@ Aggregate Root:<br>
 <td></td>
 </tr>
 <tr>
+<td><a href="General.CurrencyDirectoryLines.html#objectversion">ObjectVersion</a></td>
+<td>int32</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="General.CurrencyDirectoryLines.html#ratedivisor">RateDivisor</a></td>
 <td>decimal (18, 6)</td>
 <td>The divisor for conversion from From_Currency to Directory.To_Currency. <code>Required</code> <code>Default(1)</code></td>
@@ -116,11 +121,6 @@ Aggregate Root:<br>
 <td><a href="General.CurrencyDirectoryLines.html#ratemultiplier">RateMultiplier</a></td>
 <td>decimal (18, 6)</td>
 <td>The multiplier for conversion from From_Currency to Directory.To_Currency. <code>Required</code> <code>Default(1)</code></td>
-</tr>
-<tr>
-<td><a href="General.CurrencyDirectoryLines.html#rowversion">RowVersion</a></td>
-<td>byte[]</td>
-<td></td>
 </tr>
 </tbody>
 </table>
@@ -152,6 +152,10 @@ Aggregate Root:<br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
+<h3 id="objectversion">ObjectVersion</h3>
+<p><em>Type</em>: <strong>int32</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****</p>
 <h3 id="ratedivisor">RateDivisor</h3>
 <p>The divisor for conversion from From_Currency to Directory.To_Currency. <code>Required</code> <code>Default(1)</code></p>
 <p><em>Type</em>: <strong>decimal (18, 6)</strong><br>
@@ -164,10 +168,6 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>1</strong></p>
-<h3 id="rowversion">RowVersion</h3>
-<p><em>Type</em>: <strong>byte[]</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="currencydirectory">CurrencyDirectory</h3>
 <p>The <see cref="CurrencyDirectory"></see> to which this CurrencyDirectoryLine belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>

@@ -29,8 +29,8 @@ Aggregate Root:
 | [IsDefault](General.Contacts.Reminders.md#isdefault) | boolean | True when this is the defult reminder for a task. The default reminder is controlled through the task, while non-default reminders are manipulated through separate form. `Required` `Default(false)` `Filter(eq)` 
 | [IsDismissed](General.Contacts.Reminders.md#isdismissed) | boolean | When true the reminder was dismissed by the user; the initial value is false. `Required` `Default(false)` `Filter(eq)` 
 | [Notes](General.Contacts.Reminders.md#notes) | string (max) __nullable__ | Notes that describe this specific reminder for the task. 
+| [ObjectVersion](General.Contacts.Reminders.md#objectversion) | int32 |  
 | [ReminderTime](General.Contacts.Reminders.md#remindertime) | datetime | The time when the alarm should snooze to the user. `Required` `Filter(ge;le)` 
-| [RowVersion](General.Contacts.Reminders.md#rowversion) | byte[] |  
 
 ## References
 
@@ -75,18 +75,18 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
 
+### ObjectVersion
+
+_Type_: **int32**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+
 ### ReminderTime
 
 The time when the alarm should snooze to the user. `Required` `Filter(ge;le)`
 
 _Type_: **datetime**  
 _Supported Filters_: **GreaterThanOrLessThan**  
-_Supports Order By_: **False**  
-
-### RowVersion
-
-_Type_: **byte[]**  
-_Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
 

@@ -143,14 +143,14 @@ Default Search Members:<br>
 <td>Detail (line) type, for example materials, services, etc. L=Line. Other values are defined by the document entity type. <code>Required</code> <code>Default(&quot;L&quot;)</code> <code>Filter(multi eq)</code> <code>Introduced in version 21.1.1.26</code></td>
 </tr>
 <tr>
+<td><a href="General.DocumentFulfillments.html#objectversion">ObjectVersion</a></td>
+<td>int32</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="General.DocumentFulfillments.html#quantitybase">QuantityBase</a></td>
 <td>decimal (12, 3)</td>
 <td>Fulfilled quantity in the base measurement unit of the product. <code>Required</code> <code>Filter(multi eq;ge;le)</code> <code>Introduced in version 21.1.1.33</code></td>
-</tr>
-<tr>
-<td><a href="General.DocumentFulfillments.html#rowversion">RowVersion</a></td>
-<td>byte[]</td>
-<td></td>
 </tr>
 <tr>
 <td><a href="General.DocumentFulfillments.html#standardquantity">StandardQuantity</a></td>
@@ -267,14 +267,14 @@ Allowed values for the <code>FulfillmentType</code>(General.DocumentFulfillments
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>1</strong><br>
 <em>Default Value</em>: <strong>L</strong></p>
+<h3 id="objectversion">ObjectVersion</h3>
+<p><em>Type</em>: <strong>int32</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****</p>
 <h3 id="quantitybase">QuantityBase</h3>
 <p>Fulfilled quantity in the base measurement unit of the product. <code>Required</code> <code>Filter(multi eq;ge;le)</code> <code>Introduced in version 21.1.1.33</code></p>
 <p><em>Type</em>: <strong>decimal (12, 3)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
-<h3 id="rowversion">RowVersion</h3>
-<p><em>Type</em>: <strong>byte[]</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="standardquantity">StandardQuantity</h3>
 <p>The theoretical quantity according to the current measurement dimensions for the product. Used to measure the execution. <code>Required</code> <code>Introduced in version 22.1.4.52</code></p>

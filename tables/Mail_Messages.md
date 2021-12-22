@@ -16,6 +16,7 @@ Represents email messages. Entity: Mail_Messages
 
 | Name | Type | Description |
 | - | - | --- |
+|[__Object_Version](#__object_version)|`int` ||
 |[Body](#body)|`nvarchar(max)` |The body of the message|
 |[Cc_Email_Address_List](#cc_email_address_list)|`nvarchar(2048)` |Semicolon-separated list of Cc email addresses|
 |[Creation_Date_Time](#creation_date_time)|`datetime` |Date and time when the message was created|
@@ -33,6 +34,33 @@ Represents email messages. Entity: Mail_Messages
 |[To_Email_Address_List](#to_email_address_list)|`nvarchar(2048)` |Semicolon-separated list of receiving email addresses|
 
 ## Columns
+
+### __Object_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 ### Body
 

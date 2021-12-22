@@ -27,8 +27,8 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [Id](Applications.Rental.AssetTypes.md#id) | guid |  
 | [Notes](Applications.Rental.AssetTypes.md#notes) | string (max) __nullable__ | Notes for this AssetType. `Filter(like)` 
+| [ObjectVersion](Applications.Rental.AssetTypes.md#objectversion) | int32 |  
 | [RentalAssetTypeName](Applications.Rental.AssetTypes.md#rentalassettypename) | string (254) | The name of the rental asset type. `Required` `Filter(like)` 
-| [RowVersion](Applications.Rental.AssetTypes.md#rowversion) | byte[] |  
 
 ## Child Collections
 
@@ -56,6 +56,12 @@ _Supported Filters_: **Like**
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
 
+### ObjectVersion
+
+_Type_: **int32**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+
 ### RentalAssetTypeName
 
 The name of the rental asset type. `Required` `Filter(like)`
@@ -64,12 +70,6 @@ _Type_: **string (254)**
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
-
-### RowVersion
-
-_Type_: **byte[]**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
 
 
 

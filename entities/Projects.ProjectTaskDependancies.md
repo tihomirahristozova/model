@@ -27,7 +27,7 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [DependancyType](Projects.ProjectTaskDependancies.md#dependancytype) | [DependancyType](Projects.ProjectTaskDependancies.md#dependancytype) | FS=Finish-to-Start;SS=Start-to-Start;FF=Finish-to-Finish;SF=Start-to-Finish;SY=Sync (all types in the same time). `Required` `Default("FS")` 
 | [Id](Projects.ProjectTaskDependancies.md#id) | guid |  
-| [RowVersion](Projects.ProjectTaskDependancies.md#rowversion) | byte[] |  
+| [ObjectVersion](Projects.ProjectTaskDependancies.md#objectversion) | int32 |  
 
 ## References
 
@@ -66,11 +66,11 @@ _Indexed_: **True**
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
-### RowVersion
+### ObjectVersion
 
-_Type_: **byte[]**  
+_Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Supports Order By_: ****  
 
 
 ## Reference Details

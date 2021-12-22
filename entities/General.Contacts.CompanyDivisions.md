@@ -36,17 +36,16 @@ Aggregate Tree
 | [Id](General.Contacts.CompanyDivisions.md#id) | guid |  
 | [IsActive](General.Contacts.CompanyDivisions.md#isactive) | boolean | Specifies whether the current party is active in the system or not. `Required` `Default(true)` `Filter(eq)` (Inherited from [Parties](General.Contacts.Parties.md)) 
 | [Name](General.Contacts.CompanyDivisions.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Multi-language company divsion name. `Required` `Filter(eq;like)` 
+| [ObjectVersion](General.Contacts.CompanyDivisions.md#objectversion) | int32 |  
 | [PartyCode](General.Contacts.CompanyDivisions.md#partycode) | string (16) | The unique code of the party. `Required` `Filter(eq;like)` `ORD` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md)) 
 | [PartyCreationTime](General.Contacts.CompanyDivisions.md#partycreationtime) | datetime __nullable__ | Date and time when the Party was created. `Filter(ge;le)` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md)) 
 | [PartyCreationUser](General.Contacts.CompanyDivisions.md#partycreationuser) | string (64) __nullable__ | Login name of the user, who created the Party. `Filter(like)` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md)) 
 | [PartyName](General.Contacts.CompanyDivisions.md#partyname) | [MultilanguageString](../data-types.md#multilanguagestring) | The name of the party. `Required` `Filter(eq;like)` `ORD` (Inherited from [Parties](General.Contacts.Parties.md)) 
 | [PartyNotes](General.Contacts.CompanyDivisions.md#partynotes) | string (254) __nullable__ | Notes for this Party. (Inherited from [Parties](General.Contacts.Parties.md)) 
-| [PartyRowVersion](General.Contacts.CompanyDivisions.md#partyrowversion) | byte[] |  
 | [PartyType](General.Contacts.CompanyDivisions.md#partytype) | [PartyType](General.Contacts.CompanyDivisions.md#partytype) | Type of party. Currently supported are P=Person, C=Company, S=Store, L=Company Location, V=Division. `Required` `Default("P")` `Filter(multi eq)` (Inherited from [Parties](General.Contacts.Parties.md)) 
 | [PartyUniqueNumber](General.Contacts.CompanyDivisions.md#partyuniquenumber) | string (16) __nullable__ | Unique number of the party (National number for persons, Registration number for companies). `Filter(eq;like)` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md)) 
 | [PartyUpdateTime](General.Contacts.CompanyDivisions.md#partyupdatetime) | datetime __nullable__ | Date and time when the Party was last updated. `Filter(ge;le)` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md)) 
 | [PartyUpdateUser](General.Contacts.CompanyDivisions.md#partyupdateuser) | string (64) __nullable__ | Login name of the user, who last updated the Party. `Filter(like)` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md)) 
-| [RowVersion](General.Contacts.CompanyDivisions.md#rowversion) | byte[] |  
 
 ## References
 
@@ -116,6 +115,12 @@ _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 
+### ObjectVersion
+
+_Type_: **int32**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+
 ### PartyCode
 
 The unique code of the party. `Required` `Filter(eq;like)` `ORD` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md))
@@ -160,12 +165,6 @@ _Type_: **string (254) __nullable__**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
-
-### PartyRowVersion
-
-_Type_: **byte[]**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
 
 ### PartyType
 
@@ -212,12 +211,6 @@ _Type_: **string (64) __nullable__**
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  
-
-### RowVersion
-
-_Type_: **byte[]**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
 
 
 ## Reference Details

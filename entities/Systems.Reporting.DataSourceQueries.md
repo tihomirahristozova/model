@@ -30,8 +30,8 @@ Aggregate Root:
 | [FilterXml](Systems.Reporting.DataSourceQueries.md#filterxml) | dataaccessfilter __nullable__ | Filter for the loaded table. 
 | [FirstRow](Systems.Reporting.DataSourceQueries.md#firstrow) | boolean | Specifies, that only the first row of the current query will be retrieved. Used and applied only when the data source type is not multitable. `Required` `Default(false)` 
 | [Id](Systems.Reporting.DataSourceQueries.md#id) | guid |  
+| [ObjectVersion](Systems.Reporting.DataSourceQueries.md#objectversion) | int32 |  
 | [ReferencePath](Systems.Reporting.DataSourceQueries.md#referencepath) | string (max) | A sequence of table names and foreign key columns that define how the data will be loaded by this query. For example - Gen_Documents/<br />Enterprise_Company_<br />Id/Company_Id - will load the definition of the company for the enterprise company of a document. `Required` 
-| [RowVersion](Systems.Reporting.DataSourceQueries.md#rowversion) | byte[] |  
 | [TableName](Systems.Reporting.DataSourceQueries.md#tablename) | string (64) __nullable__ | The name of the report query. A Reference_Path can participate more than one time in the report but with different Report_Query_Name. This can be used to specify different filter for the same query. Can be null. 
 | [UniqueName](Systems.Reporting.DataSourceQueries.md#uniquename) | string (64) __nullable__ | The name of the data table in the printout datasource. If null the Reference_Path is used. 
 
@@ -95,6 +95,12 @@ _Indexed_: **True**
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
+### ObjectVersion
+
+_Type_: **int32**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+
 ### ReferencePath
 
 A sequence of table names and foreign key columns that define how the data will be loaded by this query. For example - Gen_Documents/Enterprise_Company_Id/Company_Id - will load the definition of the company for the enterprise company of a document. `Required`
@@ -103,12 +109,6 @@ _Type_: **string (max)**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
-
-### RowVersion
-
-_Type_: **byte[]**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
 
 ### TableName
 

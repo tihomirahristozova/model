@@ -9,7 +9,7 @@ Hierarchical repository of configuration options. Entity: Gen_Config
 
 ## Default Visualization
 Default Display Text Format:  
-_{Id}: {KeyPath}_  
+_{Id}: {ObjectVersion}_  
 Default Search Members:  
 __  
 
@@ -28,7 +28,7 @@ Aggregate Tree
 | [IsActive](General.Config.md#isactive) | boolean | Indicates whether this config entry is active. Inactive config entries are not taken into account. `Required` `Default(true)` `Filter(eq)` `Introduced in version 19.1` 
 | [KeyPath](General.Config.md#keypath) | string (128) | Full path of the configuration option. `Required` `Filter(eq)` `ORD` 
 | [KeyValue](General.Config.md#keyvalue) | string (max) __nullable__ | The value of the configuration option. 
-| [RowVersion](General.Config.md#rowversion) | byte[] |  
+| [ObjectVersion](General.Config.md#objectversion) | int32 |  
 | [UserLogin](General.Config.md#userlogin) | string (64) __nullable__ | If not null, the configuration option is specific to the user. `Filter(eq)` 
 | [UserMachine](General.Config.md#usermachine) | string (64) __nullable__ | If not null, the configuration option is specific to the machine. `Filter(eq)` 
 
@@ -79,11 +79,11 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
 
-### RowVersion
+### ObjectVersion
 
-_Type_: **byte[]**  
+_Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Supports Order By_: ****  
 
 ### UserLogin
 

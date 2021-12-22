@@ -28,7 +28,7 @@ Aggregate Root:
 | [Id](Logistics.Wms.WarehouseLocations.md#id) | guid |  
 | [LocationAddress](Logistics.Wms.WarehouseLocations.md#locationaddress) | string (32) | The address of the location. Should be unique within the warehouse. `Required` `Filter(eq;like)` 
 | [Notes](Logistics.Wms.WarehouseLocations.md#notes) | string (max) __nullable__ | Notes for this WarehouseLocation. 
-| [RowVersion](Logistics.Wms.WarehouseLocations.md#rowversion) | byte[] |  
+| [ObjectVersion](Logistics.Wms.WarehouseLocations.md#objectversion) | int32 |  
 
 ## References
 
@@ -65,11 +65,11 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
 
-### RowVersion
+### ObjectVersion
 
-_Type_: **byte[]**  
+_Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Supports Order By_: ****  
 
 
 ## Reference Details

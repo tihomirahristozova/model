@@ -10,6 +10,7 @@
 
 | Name | Type | Description |
 | - | - | --- |
+|[__Object_Version](#__object_version)|`int` ||
 |[Function_Id](#function_id)|`uniqueidentifier` |If specified, might be used as search criteria for setup of the resource usage of a workorder. Either this or Resource_Id must be specified|
 |[Id](#id)|`uniqueidentifier` `PK`||
 |[Line_Ord](#line_ord)|`int` ||
@@ -21,6 +22,33 @@
 |[Workgroup_Resource_Id](#workgroup_resource_id)|`uniqueidentifier` |The exact workgroup resource that is engaged in the operation|
 
 ## Columns
+
+### __Object_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 ### Function_Id
 

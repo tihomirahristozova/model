@@ -118,6 +118,11 @@ Default Search Members:<br>
 <td></td>
 </tr>
 <tr>
+<td><a href="Crm.Pos.Roles.html#objectversion">ObjectVersion</a></td>
+<td>int32</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="Crm.Pos.Roles.html#posrolecode">PosRoleCode</a></td>
 <td>string (16)</td>
 <td>Unique role code. <code>Required</code> <code>Filter(multi eq;like)</code> <code>ORD</code></td>
@@ -126,11 +131,6 @@ Default Search Members:<br>
 <td><a href="Crm.Pos.Roles.html#posrolename">PosRoleName</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString</a></td>
 <td>Multi-language name of the POS role. <code>Required</code> <code>Filter(multi eq;like)</code></td>
-</tr>
-<tr>
-<td><a href="Crm.Pos.Roles.html#rowversion">RowVersion</a></td>
-<td>byte[]</td>
-<td></td>
 </tr>
 </tbody>
 </table>
@@ -152,6 +152,10 @@ Default Search Members:<br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
+<h3 id="objectversion">ObjectVersion</h3>
+<p><em>Type</em>: <strong>int32</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****</p>
 <h3 id="posrolecode">PosRoleCode</h3>
 <p>Unique role code. <code>Required</code> <code>Filter(multi eq;like)</code> <code>ORD</code></p>
 <p><em>Type</em>: <strong>string (16)</strong><br>
@@ -163,10 +167,6 @@ Default Search Members:<br>
 <p>Multi-language name of the POS role. <code>Required</code> <code>Filter(multi eq;like)</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
-<h3 id="rowversion">RowVersion</h3>
-<p><em>Type</em>: <strong>byte[]</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>None</p>

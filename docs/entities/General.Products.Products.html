@@ -213,6 +213,11 @@ Default Search Members:<br>
 <td>Name of the item. <code>Required</code> <code>Filter(eq;like)</code></td>
 </tr>
 <tr>
+<td><a href="General.Products.Products.html#objectversion">ObjectVersion</a></td>
+<td>int32</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="General.Products.Products.html#partnumber">PartNumber</a></td>
 <td>string (32)</td>
 <td>Unique part number of the product. <code>Required</code> <code>Filter(multi eq;like)</code> <code>ORD</code></td>
@@ -231,11 +236,6 @@ Default Search Members:<br>
 <td><a href="General.Products.Products.html#planningtimefencedays">PlanningTimeFenceDays</a></td>
 <td>int32 <strong>nullable</strong></td>
 <td>Period in the future inside of which changes to the MPS are carefully evaluated to prevent costly schedule disruption. Demand for the period between DTF and PTF is calculated as the bigger of customer orders and sales forecast. Abbr. - PTF. (null = Default of 90 days).</td>
-</tr>
-<tr>
-<td><a href="General.Products.Products.html#rowversion">RowVersion</a></td>
-<td>byte[]</td>
-<td></td>
 </tr>
 <tr>
 <td><a href="General.Products.Products.html#scraprate">ScrapRate</a></td>
@@ -645,6 +645,10 @@ Allowed values for the <code>LotsIssue</code>(General.Products.Products.md#lotsi
 <p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="objectversion">ObjectVersion</h3>
+<p><em>Type</em>: <strong>int32</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****</p>
 <h3 id="partnumber">PartNumber</h3>
 <p>Unique part number of the product. <code>Required</code> <code>Filter(multi eq;like)</code> <code>ORD</code></p>
 <p><em>Type</em>: <strong>string (32)</strong><br>
@@ -665,10 +669,6 @@ Allowed values for the <code>LotsIssue</code>(General.Products.Products.md#lotsi
 <h3 id="planningtimefencedays">PlanningTimeFenceDays</h3>
 <p>Period in the future inside of which changes to the MPS are carefully evaluated to prevent costly schedule disruption. Demand for the period between DTF and PTF is calculated as the bigger of customer orders and sales forecast. Abbr. - PTF. (null = Default of 90 days).</p>
 <p><em>Type</em>: <strong>int32 <strong>nullable</strong></strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
-<h3 id="rowversion">RowVersion</h3>
-<p><em>Type</em>: <strong>byte[]</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="scraprate">ScrapRate</h3>

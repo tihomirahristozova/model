@@ -15,6 +15,7 @@ Contains data about binding of printout layouts to specific user-defined documen
 
 | Name | Type | Description |
 | - | - | --- |
+|[__Object_Version](#__object_version)|`int` ||
 |[Allow_Printing_On_State](#allow_printing_on_state)|`smallint` Allowed: `0`, `10`, `20`, `30`, `40`, `50`|The user can print documents only with state equal or greater than Allow_Printing_On_State|
 |[Application_Name](#application_name)|`nvarchar(64)` |The application which stored and uses the printout|
 |[Backward_Compatibility](#backward_compatibility)|`bit` |Obsolete. Not used.|
@@ -35,6 +36,33 @@ Contains data about binding of printout layouts to specific user-defined documen
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
+
+### __Object_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 ### Allow_Printing_On_State
 

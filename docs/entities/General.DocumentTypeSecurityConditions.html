@@ -83,7 +83,7 @@
 <p>Provides rules to conditionally secure new documents. Entity: Gen_Document_Type_Security_Conditions</p>
 <h2 id="default-visualization">Default Visualization</h2>
 <p>Default Display Text Format:<br>
-<em>{Id}: {DocumentTypeId}</em><br>
+<em>{Id}: {ObjectVersion}</em><br>
 Default Search Members:<br>
 __</p>
 <h2 id="aggregate">Aggregate</h2>
@@ -118,14 +118,14 @@ __</p>
 <td></td>
 </tr>
 <tr>
+<td><a href="General.DocumentTypeSecurityConditions.html#objectversion">ObjectVersion</a></td>
+<td>int32</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="General.DocumentTypeSecurityConditions.html#priority">Priority</a></td>
 <td><a href="General.DocumentTypeSecurityConditions.html#priority">Priority</a></td>
 <td>Priority of the rule against other rules, which are also applicable. Only the highest priority rule is selected. <code>Required</code> <code>Default(3)</code> <code>Filter(ge;le)</code></td>
-</tr>
-<tr>
-<td><a href="General.DocumentTypeSecurityConditions.html#rowversion">RowVersion</a></td>
-<td>byte[]</td>
-<td></td>
 </tr>
 </tbody>
 </table>
@@ -168,6 +168,10 @@ __</p>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
+<h3 id="objectversion">ObjectVersion</h3>
+<p><em>Type</em>: <strong>int32</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****</p>
 <h3 id="priority">Priority</h3>
 <p>Priority of the rule against other rules, which are also applicable. Only the highest priority rule is selected. <code>Required</code> <code>Default(3)</code> <code>Filter(ge;le)</code></p>
 <p><em>Type</em>: <strong><a href="General.DocumentTypeSecurityConditions.html#priority">Priority</a></strong><br>
@@ -206,10 +210,6 @@ Generic enum type for Priority properties<br>
 <p><em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>3</strong></p>
-<h3 id="rowversion">RowVersion</h3>
-<p><em>Type</em>: <strong>byte[]</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="documentaccesskey">DocumentAccessKey</h3>
 <p>The access key, which will be used to secure new documents, when this rule is selected. <code>Required</code> <code>Filter(multi eq)</code></p>

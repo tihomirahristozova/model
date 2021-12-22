@@ -28,6 +28,7 @@ Aggregate Root:
 | [DistributedAmountBase](Finance.Cost.DistributionResults.md#distributedamountbase) | [Amount (14, 5)](../data-types.md#amount) | The amount (in base currency) of the distributed cost. The amount is calculated for the combination of output and cost type. `Currency: CostDistribution.EnterpriseCompany.BaseCurrency` `Required` 
 | [Id](Finance.Cost.DistributionResults.md#id) | guid |  
 | [LineNo](Finance.Cost.DistributionResults.md#lineno) | int32 | Consecutive line number (within the cost distribution document) of the result. `Required` 
+| [ObjectVersion](Finance.Cost.DistributionResults.md#objectversion) | int32 |  
 | [OutputLineNo](Finance.Cost.DistributionResults.md#outputlineno) | int32 | The line number (within the document) of the output over which the cost is distributed. `Required` 
 
 ## References
@@ -68,6 +69,12 @@ _Back-End Default Expression:_
 
 _Front-End Recalc Expressions:_  
 `( obj.CostDistribution.Results.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)`
+### ObjectVersion
+
+_Type_: **int32**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+
 ### OutputLineNo
 
 The line number (within the document) of the output over which the cost is distributed. `Required`

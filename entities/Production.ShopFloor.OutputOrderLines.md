@@ -30,10 +30,10 @@ Aggregate Root:
 | [Id](Production.ShopFloor.OutputOrderLines.md#id) | guid |  
 | [LineOrd](Production.ShopFloor.OutputOrderLines.md#lineord) | int32 | Line number within the order. `Required` 
 | [Notes](Production.ShopFloor.OutputOrderLines.md#notes) | string (max) __nullable__ | Notes for this OutputOrderLine. 
+| [ObjectVersion](Production.ShopFloor.OutputOrderLines.md#objectversion) | int32 |  
 | [ProducedQuantity](Production.ShopFloor.OutputOrderLines.md#producedquantity) | [Quantity (18, 3)](../data-types.md#quantity) | The processed quantity of the end product. `Unit: ProducedQuantityUnit` `Required` `Default(0)` `Filter(ge;le)` 
 | [ProducedQuantityBase](Production.ShopFloor.OutputOrderLines.md#producedquantitybase) | [Quantity (18, 3)](../data-types.md#quantity) | The equivalence of Produced Quantity in the base measurement unit of the product. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Default(0)` `ReadOnly` 
 | [ProducedStandard<br />QuantityBase](Production.ShopFloor.OutputOrderLines.md#producedstandardquantitybase) | [Quantity (18, 3)](../data-types.md#quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. null means to convert the value from Quantity using the measurement ratios. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` `Introduced in version 18.2` 
-| [RowVersion](Production.ShopFloor.OutputOrderLines.md#rowversion) | byte[] |  
 | [StartTime](Production.ShopFloor.OutputOrderLines.md#starttime) | datetime | Date and time when the operation has began. `Required` `Default(Now)` `Filter(ge;le)` 
 | [TransactionTimestamp](Production.ShopFloor.OutputOrderLines.md#transactiontimestamp) | datetime __nullable__ | Sets the timestamp of the receipt store operations for this output order line. Used in completing output orders. `ReadOnly` 
 
@@ -112,6 +112,12 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
 
+### ObjectVersion
+
+_Type_: **int32**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+
 ### ProducedQuantity
 
 The processed quantity of the end product. `Unit: ProducedQuantityUnit` `Required` `Default(0)` `Filter(ge;le)`
@@ -148,12 +154,6 @@ _Back-End Default Expression:_
 
 _Front-End Recalc Expressions:_  
 `IIF( ( ( ( obj.ProducedQuantity == null) OrElse ( obj.ProducedQuantityUnit == null)) OrElse ( obj.Product == null)), obj.ProducedStandardQuantityBase, obj.ProducedQuantity.ConvertTo( obj.Product.BaseUnit, obj.Product))`
-### RowVersion
-
-_Type_: **byte[]**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-
 ### StartTime
 
 Date and time when the operation has began. `Required` `Default(Now)` `Filter(ge;le)`

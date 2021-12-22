@@ -11,6 +11,7 @@ External dealers. Entity: Crm_Dealers
 
 | Name | Type | Description |
 | - | - | --- |
+|[__Object_Version](#__object_version)|`int` ||
 |[Dealer_Id](#dealer_id)|`uniqueidentifier` `PK`||
 |[Enterprise_Company_Id](#enterprise_company_id)|`uniqueidentifier` |The enterprise company for which this dealer is recorded|
 |[From_Date](#from_date)|`datetime` |Start of the dealer relationship|
@@ -20,6 +21,33 @@ External dealers. Entity: Crm_Dealers
 |[Thru_Date](#thru_date)|`datetime` |Termination date of the dealership. NULL for active dealers|
 
 ## Columns
+
+### __Object_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 ### Dealer_Id
 

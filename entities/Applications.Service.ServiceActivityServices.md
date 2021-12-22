@@ -29,8 +29,8 @@ Aggregate Root:
 | [Id](Applications.Service.ServiceActivityServices.md#id) | guid |  
 | [LineNo](Applications.Service.ServiceActivityServices.md#lineno) | int32 | Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc. `Required` 
 | [Notes](Applications.Service.ServiceActivityServices.md#notes) | string (254) __nullable__ | Short notes for the service. 
+| [ObjectVersion](Applications.Service.ServiceActivityServices.md#objectversion) | int32 |  
 | [Quantity](Applications.Service.ServiceActivityServices.md#quantity) | [Quantity (9, 2)](../data-types.md#quantity) | The quantity of the service in the measurement unit of the service. `Unit: Service.MeasurementUnit` `Required` `Default(1)` 
-| [RowVersion](Applications.Service.ServiceActivityServices.md#rowversion) | byte[] |  
 | [ServiceName](Applications.Service.ServiceActivityServices.md#servicename) | string (254) | Description of the conducted service. The description may vary (contain additional information) from the standart name of the service. `Required` `Filter(like)` 
 
 ## References
@@ -90,6 +90,12 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
 
+### ObjectVersion
+
+_Type_: **int32**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+
 ### Quantity
 
 The quantity of the service in the measurement unit of the service. `Unit: Service.MeasurementUnit` `Required` `Default(1)`
@@ -98,12 +104,6 @@ _Type_: **[Quantity (9, 2)](../data-types.md#quantity)**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
-
-### RowVersion
-
-_Type_: **byte[]**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
 
 ### ServiceName
 

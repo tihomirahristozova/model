@@ -27,8 +27,8 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [Id](General.Contacts.ActivityResources.md#id) | guid |  
 | [Notes](General.Contacts.ActivityResources.md#notes) | string (255) __nullable__ | Notes for this ActivityResource. 
+| [ObjectVersion](General.Contacts.ActivityResources.md#objectversion) | int32 |  
 | [ResourceUsagePercent](General.Contacts.ActivityResources.md#resourceusagepercent) | decimal (18, 4) | The planned resource usage for this activity in percents (100% = 1). Values of more than 100% are allowed when more than 1 resource is required. `Required` `Default(1)` 
-| [RowVersion](General.Contacts.ActivityResources.md#rowversion) | byte[] |  
 
 ## References
 
@@ -56,6 +56,12 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Maximum Length_: **255**  
 
+### ObjectVersion
+
+_Type_: **int32**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+
 ### ResourceUsagePercent
 
 The planned resource usage for this activity in percents (100% = 1). Values of more than 100% are allowed when more than 1 resource is required. `Required` `Default(1)`
@@ -64,12 +70,6 @@ _Type_: **decimal (18, 4)**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **1**  
-
-### RowVersion
-
-_Type_: **byte[]**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
 
 
 ## Reference Details

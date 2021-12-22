@@ -128,6 +128,11 @@ Aggregate Root:<br>
 <td>Notes for this WorkOrderItem.</td>
 </tr>
 <tr>
+<td><a href="Production.ShopFloor.WorkOrderItems.html#objectversion">ObjectVersion</a></td>
+<td>int32</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="Production.ShopFloor.WorkOrderItems.html#parentlineid">ParentLineId</a></td>
 <td>guid <strong>nullable</strong></td>
 <td>If not null contains the Id of the line of the parent document, that created the current row. <code>Filter(multi eq)</code></td>
@@ -161,11 +166,6 @@ Aggregate Root:<br>
 <td><a href="Production.ShopFloor.WorkOrderItems.html#releasedate">ReleaseDate</a></td>
 <td>datetime <strong>nullable</strong></td>
 <td>The date, when the item is released to production. null means that still there is no plan when the item will be released to production.</td>
-</tr>
-<tr>
-<td><a href="Production.ShopFloor.WorkOrderItems.html#rowversion">RowVersion</a></td>
-<td>byte[]</td>
-<td></td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrderItems.html#scheduledenddatetime">ScheduledEndDateTime</a></td>
@@ -301,6 +301,10 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>2147483647</strong></p>
+<h3 id="objectversion">ObjectVersion</h3>
+<p><em>Type</em>: <strong>int32</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****</p>
 <h3 id="parentlineid">ParentLineId</h3>
 <p>If not null contains the Id of the line of the parent document, that created the current row. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong>guid <strong>nullable</strong></strong><br>
@@ -383,10 +387,6 @@ Allowed values for the <code>Priority</code>(Production.ShopFloor.WorkOrderItems
 <code>obj.WorkOrder.ReleaseDate</code></p>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>obj.WorkOrder.ReleaseDate</code></p>
-<h3 id="rowversion">RowVersion</h3>
-<p><em>Type</em>: <strong>byte[]</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="scheduledenddatetime">ScheduledEndDateTime</h3>
 <p>Date and time when the production of this item is scheduled to end.</p>
 <p><em>Type</em>: <strong>datetime <strong>nullable</strong></strong><br>

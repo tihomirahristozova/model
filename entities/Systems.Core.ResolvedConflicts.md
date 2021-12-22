@@ -25,12 +25,12 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [ConflictDescription](Systems.Core.ResolvedConflicts.md#conflictdescription) | [MultilanguageString](../data-types.md#multilanguagestring) | Description of the conflict. `Required` `ReadOnly` 
 | [Id](Systems.Core.ResolvedConflicts.md#id) | guid |  
+| [ObjectVersion](Systems.Core.ResolvedConflicts.md#objectversion) | int32 |  
 | [ResolveConfirmedByUser](Systems.Core.ResolvedConflicts.md#resolveconfirmedbyuser) | boolean | True, when the conflict resolution was manually confirmed by user. `Required` `Default(false)` `Filter(eq)` 
 | [ResolveConfirmedTime](Systems.Core.ResolvedConflicts.md#resolveconfirmedtime) | datetime __nullable__ | Time when the conflict resolution was confirmed by the user. `ReadOnly` 
 | [ResolveDescription](Systems.Core.ResolvedConflicts.md#resolvedescription) | [MultilanguageString](../data-types.md#multilanguagestring) | Description of the resolution of the conflict. `Required` `ReadOnly` 
 | [ResolvedTime](Systems.Core.ResolvedConflicts.md#resolvedtime) | datetime | Time when the resolution of the conflict was made. `Required` `Default(Now)` `ReadOnly` 
 | [RevisedByUser](Systems.Core.ResolvedConflicts.md#revisedbyuser) | boolean | True, when the conflict resolution was revised (reviewed) manually by user. `Required` `Default(false)` `Filter(eq)` `ReadOnly` 
-| [RowVersion](Systems.Core.ResolvedConflicts.md#rowversion) | byte[] |  
 | [TableName](Systems.Core.ResolvedConflicts.md#tablename) | [MultilanguageString](../data-types.md#multilanguagestring) | Name of the table in which the conflict has occurred. `Required` `Filter(like)` `ReadOnly` 
 | [URL](Systems.Core.ResolvedConflicts.md#url) | string (254) | URL of the item (the row) for which the conflict occurred. `Required` `ReadOnly` 
 
@@ -51,6 +51,12 @@ _Type_: **guid**
 _Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
+
+### ObjectVersion
+
+_Type_: **int32**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### ResolveConfirmedByUser
 
@@ -94,12 +100,6 @@ _Type_: **boolean**
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **False**  
-
-### RowVersion
-
-_Type_: **byte[]**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
 
 ### TableName
 

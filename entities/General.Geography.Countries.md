@@ -27,7 +27,7 @@ Aggregate Tree
 | [Id](General.Geography.Countries.md#id) | guid |  
 | [IntrastatCode](General.Geography.Countries.md#intrastatcode) | string (2) __nullable__ | This code is used when creating the Intrastat Declaration. If the field is empty, then the value from the 'Code' field is used. `Introduced in version 20.1` 
 | [Name](General.Geography.Countries.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Name of the country. `Required` `Filter(like)` 
-| [RowVersion](General.Geography.Countries.md#rowversion) | byte[] |  
+| [ObjectVersion](General.Geography.Countries.md#objectversion) | int32 |  
 
 
 ## Attribute Details
@@ -66,11 +66,11 @@ _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 
-### RowVersion
+### ObjectVersion
 
-_Type_: **byte[]**  
+_Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Supports Order By_: ****  
 
 
 

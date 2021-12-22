@@ -15,6 +15,7 @@ Invoices issued by the enterprise companies. Entity: Crm_Invoices
 
 | Name | Type | Description |
 | - | - | --- |
+|[__Object_Version](#__object_version)|`int` ||
 |[Apply_Date](#apply_date)|`date` |When not NULL specifies that the VAT entry for this invoice should be applied for a different period than that specified by the document date.|
 |[Automatic_Order_Linking](#automatic_order_linking)|`bit` |Specifies whether to automatically set Lines.Invoice_Order_Line_Id by searching invoice orders upon first release|
 |[Credit_Note_Description](#credit_note_description)|`nvarchar(254)` |Descriptions/reason for the credit note.|
@@ -43,6 +44,33 @@ Invoices issued by the enterprise companies. Entity: Crm_Invoices
 |[VAT_Notes](#vat_notes)|`nvarchar(254)` |Description of the operation that will be entered in the VAT ledgers.|
 
 ## Columns
+
+### __Object_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 ### Apply_Date
 

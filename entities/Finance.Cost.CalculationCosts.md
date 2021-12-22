@@ -28,8 +28,8 @@ Aggregate Root:
 | [Amount](Finance.Cost.CalculationCosts.md#amount) | decimal (14, 2) | The allocated amount of costs in the currency of the calculation. `Required` `Default(0)` 
 | [Id](Finance.Cost.CalculationCosts.md#id) | guid |  
 | [LineNo](Finance.Cost.CalculationCosts.md#lineno) | int32 | Consecutive number of the line within the calculation. `Required` 
+| [ObjectVersion](Finance.Cost.CalculationCosts.md#objectversion) | int32 |  
 | [ProjectId](Finance.Cost.CalculationCosts.md#projectid) | guid __nullable__ | The Project, which absorbed the cost. `Filter(multi eq)` 
-| [RowVersion](Finance.Cost.CalculationCosts.md#rowversion) | byte[] |  
 
 ## References
 
@@ -75,18 +75,18 @@ _Back-End Default Expression:_
 
 _Front-End Recalc Expressions:_  
 `( obj.Calculation.Costs.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)`
+### ObjectVersion
+
+_Type_: **int32**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+
 ### ProjectId
 
 The Project, which absorbed the cost. `Filter(multi eq)`
 
 _Type_: **guid __nullable__**  
 _Supported Filters_: **Equals, EqualsIn**  
-
-### RowVersion
-
-_Type_: **byte[]**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
 
 
 ## Reference Details

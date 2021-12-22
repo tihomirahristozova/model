@@ -83,7 +83,7 @@
 <p>Defines the relationships between the parties. The data is preserved over time. Entity: Cm_Party_Relationships</p>
 <h2 id="default-visualization">Default Visualization</h2>
 <p>Default Display Text Format:<br>
-<em>{Id}: {FromPartyId}</em><br>
+<em>{Id}: {ObjectVersion}</em><br>
 Default Search Members:<br>
 __</p>
 <h2 id="aggregate">Aggregate</h2>
@@ -118,8 +118,8 @@ __</p>
 <td>Notes for this PartyRelationship.</td>
 </tr>
 <tr>
-<td><a href="General.Contacts.PartyRelationships.html#rowversion">RowVersion</a></td>
-<td>byte[]</td>
+<td><a href="General.Contacts.PartyRelationships.html#objectversion">ObjectVersion</a></td>
+<td>int32</td>
 <td></td>
 </tr>
 <tr>
@@ -173,10 +173,10 @@ __</p>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>254</strong></p>
-<h3 id="rowversion">RowVersion</h3>
-<p><em>Type</em>: <strong>byte[]</strong><br>
+<h3 id="objectversion">ObjectVersion</h3>
+<p><em>Type</em>: <strong>int32</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: ****</p>
 <h3 id="todate">ToDate</h3>
 <p>The ending date of the relationship. null means the relationship is still active. <code>Filter(ge;le)</code></p>
 <p><em>Type</em>: <strong>datetime <strong>nullable</strong></strong><br>

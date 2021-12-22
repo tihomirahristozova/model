@@ -83,7 +83,7 @@
 <p>Specific prices of products. A price is applied after matching the specified criteria. Entity: Crm_Product_Prices</p>
 <h2 id="default-visualization">Default Visualization</h2>
 <p>Default Display Text Format:<br>
-<em>{Id}: {MaxQuantityValue}</em><br>
+<em>{Id}: {ObjectVersion}</em><br>
 Default Search Members:<br>
 __</p>
 <h2 id="aggregate">Aggregate</h2>
@@ -128,6 +128,11 @@ __</p>
 <td>Notes for this ProductPrice.</td>
 </tr>
 <tr>
+<td><a href="Crm.ProductPrices.html#objectversion">ObjectVersion</a></td>
+<td>int32</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="Crm.ProductPrices.html#price">Price</a></td>
 <td><a href="../data-types.html#amount">Amount (13, 5)</a></td>
 <td>Price in the specified currency and for the specified quantity. <code>Currency: Currency</code> <code>Required</code> <code>Default(0)</code> <code>Filter(eq;ge;le)</code></td>
@@ -141,11 +146,6 @@ __</p>
 <td><a href="Crm.ProductPrices.html#priority">Priority</a></td>
 <td><a href="Crm.ProductPrices.html#priority">Priority</a></td>
 <td>Priority of the price comparative to other prices. Only the highest priority price is applied. <code>Required</code> <code>Default(2)</code> <code>Filter(multi eq)</code></td>
-</tr>
-<tr>
-<td><a href="Crm.ProductPrices.html#rowversion">RowVersion</a></td>
-<td>byte[]</td>
-<td></td>
 </tr>
 <tr>
 <td><a href="Crm.ProductPrices.html#thrudate">ThruDate</a></td>
@@ -253,6 +253,10 @@ __</p>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>254</strong></p>
+<h3 id="objectversion">ObjectVersion</h3>
+<p><em>Type</em>: <strong>int32</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****</p>
 <h3 id="price">Price</h3>
 <p>Price in the specified currency and for the specified quantity. <code>Currency: Currency</code> <code>Required</code> <code>Default(0)</code> <code>Filter(eq;ge;le)</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount (13, 5)</a></strong><br>
@@ -303,10 +307,6 @@ Generic enum type for Priority properties<br>
 <p><em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>2</strong></p>
-<h3 id="rowversion">RowVersion</h3>
-<p><em>Type</em>: <strong>byte[]</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="thrudate">ThruDate</h3>
 <p>Ending date (inclusive) of the validity of the price. <code>Filter(eq;ge;le)</code></p>
 <p><em>Type</em>: <strong>date <strong>nullable</strong></strong><br>

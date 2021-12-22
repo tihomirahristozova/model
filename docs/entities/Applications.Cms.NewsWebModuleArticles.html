@@ -123,14 +123,14 @@ Default Search Members:<br>
 <td>The language code of the article text. <code>Required</code></td>
 </tr>
 <tr>
+<td><a href="Applications.Cms.NewsWebModuleArticles.html#objectversion">ObjectVersion</a></td>
+<td>int32</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="Applications.Cms.NewsWebModuleArticles.html#publishdate">PublishDate</a></td>
 <td>datetime</td>
 <td>The date and time when the news article should appear to be published. <code>Required</code> <code>Default(Now)</code></td>
-</tr>
-<tr>
-<td><a href="Applications.Cms.NewsWebModuleArticles.html#rowversion">RowVersion</a></td>
-<td>byte[]</td>
-<td></td>
 </tr>
 </tbody>
 </table>
@@ -180,16 +180,16 @@ Default Search Members:<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>8</strong></p>
+<h3 id="objectversion">ObjectVersion</h3>
+<p><em>Type</em>: <strong>int32</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****</p>
 <h3 id="publishdate">PublishDate</h3>
 <p>The date and time when the news article should appear to be published. <code>Required</code> <code>Default(Now)</code></p>
 <p><em>Type</em>: <strong>datetime</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>CurrentDateTime</strong></p>
-<h3 id="rowversion">RowVersion</h3>
-<p><em>Type</em>: <strong>byte[]</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="authorpublicuser">AuthorPublicUser</h3>
 <p>The author of the news article. <code>Required</code> <code>Filter(multi eq)</code></p>

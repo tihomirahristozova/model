@@ -9,7 +9,7 @@ User notification settings for the different notification classes. Entity: Cmm_N
 
 ## Default Visualization
 Default Display Text Format:  
-_{Id}: {UserId}_  
+_{Id}: {ObjectVersion}_  
 Default Search Members:  
 __  
 
@@ -25,10 +25,10 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [Id](Communities.NotificationSettings.md#id) | guid |  
 | [NotificationClass](Communities.NotificationSettings.md#notificationclass) | string (64) __nullable__ | The class of the notification, for which the user is specifying settings. When null, the setting is applied to all notification classes. `Filter(multi eq)` 
+| [ObjectVersion](Communities.NotificationSettings.md#objectversion) | int32 |  
 | [ReceiveMail](Communities.NotificationSettings.md#receivemail) | boolean | True if the user should receive mail. `Required` `Default(false)` `Filter(eq)` 
 | [ReceiveNotification](Communities.NotificationSettings.md#receivenotification) | boolean | True if the user should receive internal notification. `Required` `Default(true)` `Filter(eq)` 
 | [ReceiveSms](Communities.NotificationSettings.md#receivesms) | boolean | True if the user should receive SMS. `Required` `Default(false)` `Filter(eq)` 
-| [RowVersion](Communities.NotificationSettings.md#rowversion) | byte[] |  
 
 ## References
 
@@ -54,6 +54,12 @@ _Type_: **string (64) __nullable__**
 _Supported Filters_: **Equals, EqualsIn**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  
+
+### ObjectVersion
+
+_Type_: **int32**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### ReceiveMail
 
@@ -81,12 +87,6 @@ _Type_: **boolean**
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **False**  
-
-### RowVersion
-
-_Type_: **byte[]**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
 
 
 ## Reference Details

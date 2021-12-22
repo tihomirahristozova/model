@@ -133,14 +133,14 @@ Default Search Members:<br>
 <td>The name of this DepreciationMethod. <code>Required</code> <code>Filter(like)</code></td>
 </tr>
 <tr>
+<td><a href="Finance.Assets.DepreciationMethods.html#objectversion">ObjectVersion</a></td>
+<td>int32</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="Finance.Assets.DepreciationMethods.html#perioddeterminationmethod">PeriodDeterminationMethod</a></td>
 <td><a href="Finance.Assets.DepreciationMethods.html#perioddeterminationmethod">PeriodDeterminationMethod</a></td>
 <td>Determines when the depreciation starts and when it ends. NM=Next_Month, CM=Current_Month, BD=By_Days. <code>Required</code></td>
-</tr>
-<tr>
-<td><a href="Finance.Assets.DepreciationMethods.html#rowversion">RowVersion</a></td>
-<td>byte[]</td>
-<td></td>
 </tr>
 <tr>
 <td><a href="Finance.Assets.DepreciationMethods.html#startfromnextmonth">StartFromNextMonth</a></td>
@@ -213,6 +213,10 @@ Allowed values for the <code>DepreciationFunction</code>(Finance.Assets.Deprecia
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>254</strong></p>
+<h3 id="objectversion">ObjectVersion</h3>
+<p><em>Type</em>: <strong>int32</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****</p>
 <h3 id="perioddeterminationmethod">PeriodDeterminationMethod</h3>
 <p>Determines when the depreciation starts and when it ends. NM=Next_Month, CM=Current_Month, BD=By_Days. <code>Required</code></p>
 <p><em>Type</em>: <strong><a href="Finance.Assets.DepreciationMethods.html#perioddeterminationmethod">PeriodDeterminationMethod</a></strong><br>
@@ -241,10 +245,6 @@ Allowed values for the <code>PeriodDeterminationMethod</code>(Finance.Assets.Dep
 </tbody>
 </table>
 <p><em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
-<h3 id="rowversion">RowVersion</h3>
-<p><em>Type</em>: <strong>byte[]</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="startfromnextmonth">StartFromNextMonth</h3>
 <p>When true, denotes that the depreciation starts from the month, following the month of deployment. When false, the depreciation starts from the same month. <code>Required</code> <code>Default(true)</code> <code>ReadOnly</code></p>

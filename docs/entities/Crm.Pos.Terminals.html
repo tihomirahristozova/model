@@ -117,6 +117,11 @@ Default Search Members:<br>
 <td>Represents whether the POS terminal is active and can be chosen from drop-downs for new records. <code>Required</code> <code>Default(true)</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
+<td><a href="Crm.Pos.Terminals.html#objectversion">ObjectVersion</a></td>
+<td>int32</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="Crm.Pos.Terminals.html#posterminalcode">PosTerminalCode</a></td>
 <td>string (16)</td>
 <td>Unique (within the location) code of the POS terminal. <code>Required</code> <code>Filter(eq;like)</code></td>
@@ -125,11 +130,6 @@ Default Search Members:<br>
 <td><a href="Crm.Pos.Terminals.html#posterminalname">PosTerminalName</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString</a></td>
 <td>The multi-language name of the terminal, like &quot;Cash 1&quot;, &quot;Self-checkout 5&quot;, etc. <code>Required</code> <code>Filter(multi eq;like)</code></td>
-</tr>
-<tr>
-<td><a href="Crm.Pos.Terminals.html#rowversion">RowVersion</a></td>
-<td>byte[]</td>
-<td></td>
 </tr>
 </tbody>
 </table>
@@ -184,6 +184,10 @@ Default Search Members:<br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>True</strong></p>
+<h3 id="objectversion">ObjectVersion</h3>
+<p><em>Type</em>: <strong>int32</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****</p>
 <h3 id="posterminalcode">PosTerminalCode</h3>
 <p>Unique (within the location) code of the POS terminal. <code>Required</code> <code>Filter(eq;like)</code></p>
 <p><em>Type</em>: <strong>string (16)</strong><br>
@@ -194,10 +198,6 @@ Default Search Members:<br>
 <p>The multi-language name of the terminal, like &quot;Cash 1&quot;, &quot;Self-checkout 5&quot;, etc. <code>Required</code> <code>Filter(multi eq;like)</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
-<h3 id="rowversion">RowVersion</h3>
-<p><em>Type</em>: <strong>byte[]</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="defaultfiscalprinterposdevice">DefaultFiscalPrinterPosDevice</h3>

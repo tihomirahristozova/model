@@ -15,12 +15,40 @@ Member parties of a marketing target group. Entity: Crm_Target_Group_Members
 
 | Name | Type | Description |
 | - | - | --- |
+|[__Object_Version](#__object_version)|`int` ||
 |[Party_Id](#party_id)|`uniqueidentifier` |The member party.|
 |[Row_Version](#row_version)|`timestamp` ||
 |[Target_Group_Id](#target_group_id)|`uniqueidentifier` |The target group, which includes the member party.|
 |[Target_Group_Member_Id](#target_group_member_id)|`uniqueidentifier` `PK`||
 
 ## Columns
+
+### __Object_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 ### Party_Id
 

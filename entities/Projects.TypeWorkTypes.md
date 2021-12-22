@@ -27,7 +27,7 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [Id](Projects.TypeWorkTypes.md#id) | guid |  
 | [IsActive](Projects.TypeWorkTypes.md#isactive) | boolean | True when the work type is currently active and selectable in new documents. `Required` `Default(true)` `Filter(eq)` 
-| [RowVersion](Projects.TypeWorkTypes.md#rowversion) | byte[] |  
+| [ObjectVersion](Projects.TypeWorkTypes.md#objectversion) | int32 |  
 | [WorkTypeName](Projects.TypeWorkTypes.md#worktypename) | string (254) | The name of the work type. `Required` `Filter(eq;like)` 
 
 ## References
@@ -56,11 +56,11 @@ _Supported Filters_: **Equals**
 _Supports Order By_: **False**  
 _Default Value_: **True**  
 
-### RowVersion
+### ObjectVersion
 
-_Type_: **byte[]**  
+_Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Supports Order By_: ****  
 
 ### WorkTypeName
 

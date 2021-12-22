@@ -9,7 +9,7 @@ Contains the web sites, which are hosted for the database. Entity: Sys_Web_Sites
 
 ## Default Visualization
 Default Display Text Format:  
-_{Id}: {EnterpriseCompanyId}_  
+_{Id}: {ObjectVersion}_  
 Default Search Members:  
 __  
 
@@ -26,8 +26,8 @@ Aggregate Tree
 | [Id](Systems.Core.WebSites.md#id) | guid |  
 | [IsActive](Systems.Core.WebSites.md#isactive) | boolean | Indicates whether the web site is active and will be instantiated upon next web server restart. `Required` `Default(true)` `Filter(eq)` 
 | [Notes](Systems.Core.WebSites.md#notes) | string (max) __nullable__ | Notes for this WebSite. 
+| [ObjectVersion](Systems.Core.WebSites.md#objectversion) | int32 |  
 | [RelativeUrl](Systems.Core.WebSites.md#relativeurl) | string (254) __nullable__ | The relative Url of the site. This is the text after the first slash after the protocol and host name. The text should not include the protocol and host name. null means that the site will be hosted as the root site in the speicified web host. 
-| [RowVersion](Systems.Core.WebSites.md#rowversion) | byte[] |  
 | [WebSiteType](Systems.Core.WebSites.md#websitetype) | [WebSiteType](Systems.Core.WebSites.md#websitetype) | The type of web site - Api, Client Center, Id, etc. `Required` `Filter(multi eq)` 
 
 ## References
@@ -66,6 +66,12 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
 
+### ObjectVersion
+
+_Type_: **int32**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+
 ### RelativeUrl
 
 The relative Url of the site. This is the text after the first slash after the protocol and host name. The text should not include the protocol and host name. null means that the site will be hosted as the root site in the speicified web host.
@@ -74,12 +80,6 @@ _Type_: **string (254) __nullable__**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
-
-### RowVersion
-
-_Type_: **byte[]**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
 
 ### WebSiteType
 

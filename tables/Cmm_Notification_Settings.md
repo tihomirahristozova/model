@@ -11,6 +11,7 @@ User notification settings for the different notification classes. Entity: Cmm_N
 
 | Name | Type | Description |
 | - | - | --- |
+|[__Object_Version](#__object_version)|`int` ||
 |[Notification_Class](#notification_class)|`nvarchar(64)` |The class of the notification, for which the user is specifying settings. When NULL, the setting is applied to all notification classes.|
 |[Notification_Setting_Id](#notification_setting_id)|`uniqueidentifier` `PK`||
 |[Receive_Mail](#receive_mail)|`bit` |True if the user should receive mail.|
@@ -20,6 +21,33 @@ User notification settings for the different notification classes. Entity: Cmm_N
 |[User_Id](#user_id)|`uniqueidentifier` |The user for whom the notification setting is about.|
 
 ## Columns
+
+### __Object_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 ### Notification_Class
 

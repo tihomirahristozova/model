@@ -11,6 +11,7 @@ Pricing models are assigned to product groups and are used to automate creation 
 
 | Name | Type | Description |
 | - | - | --- |
+|[__Object_Version](#__object_version)|`int` ||
 |[Currency_Id](#currency_id)|`uniqueidentifier` |The currency in which the prices will be calculated|
 |[Default_Margin_Percent](#default_margin_percent)|`decimal(6, 5)` |Default margin between standard cost and standard price. The margin is applied to the products when calculating standard price|
 |[Pricing_Model_Id](#pricing_model_id)|`uniqueidentifier` `PK`|Pricing Model|
@@ -19,6 +20,33 @@ Pricing models are assigned to product groups and are used to automate creation 
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
+
+### __Object_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 ### Currency_Id
 

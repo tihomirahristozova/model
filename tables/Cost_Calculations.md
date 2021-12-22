@@ -15,6 +15,7 @@ Represents one cost calculation and allocation. Entity: Cost_Calculations
 
 | Name | Type | Description |
 | - | - | --- |
+|[__Object_Version](#__object_version)|`int` ||
 |[Calculation_Id](#calculation_id)|`uniqueidentifier` `PK`||
 |[Cost_Template_Id](#cost_template_id)|`uniqueidentifier` |The cost template used to drive the cost calculation and allocation.|
 |[Document_Id](#document_id)|`uniqueidentifier` ||
@@ -25,6 +26,33 @@ Represents one cost calculation and allocation. Entity: Cost_Calculations
 |[Thru_Date](#thru_date)|`datetime` |Ending date (inclusive) for which to extract source data from other modules for this calculation|
 
 ## Columns
+
+### __Object_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 ### Calculation_Id
 

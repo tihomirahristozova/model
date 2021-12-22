@@ -113,6 +113,11 @@ Default Search Members:<br>
 <td></td>
 </tr>
 <tr>
+<td><a href="Systems.Core.ResolvedConflicts.html#objectversion">ObjectVersion</a></td>
+<td>int32</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="Systems.Core.ResolvedConflicts.html#resolveconfirmedbyuser">ResolveConfirmedByUser</a></td>
 <td>boolean</td>
 <td>True, when the conflict resolution was manually confirmed by user. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
@@ -138,11 +143,6 @@ Default Search Members:<br>
 <td>True, when the conflict resolution was revised (reviewed) manually by user. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
-<td><a href="Systems.Core.ResolvedConflicts.html#rowversion">RowVersion</a></td>
-<td>byte[]</td>
-<td></td>
-</tr>
-<tr>
 <td><a href="Systems.Core.ResolvedConflicts.html#tablename">TableName</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString</a></td>
 <td>Name of the table in which the conflict has occurred. <code>Required</code> <code>Filter(like)</code> <code>ReadOnly</code></td>
@@ -165,6 +165,10 @@ Default Search Members:<br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
+<h3 id="objectversion">ObjectVersion</h3>
+<p><em>Type</em>: <strong>int32</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****</p>
 <h3 id="resolveconfirmedbyuser">ResolveConfirmedByUser</h3>
 <p>True, when the conflict resolution was manually confirmed by user. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>
@@ -193,10 +197,6 @@ Default Search Members:<br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
-<h3 id="rowversion">RowVersion</h3>
-<p><em>Type</em>: <strong>byte[]</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="tablename">TableName</h3>
 <p>Name of the table in which the conflict has occurred. <code>Required</code> <code>Filter(like)</code> <code>ReadOnly</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a></strong><br>

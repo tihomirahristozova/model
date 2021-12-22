@@ -36,11 +36,11 @@ Aggregate Tree
 | [IsActive](Applications.PersonalData.ProcessingConsents.md#isactive) | boolean | Whether the consent is active or retracted. Once retracted, the consent record cannot be modified again and a new consent should be given. `Required` `Default(true)` `Filter(eq)` 
 | [IsChild](Applications.PersonalData.ProcessingConsents.md#ischild) | boolean | Specifies whether the data subject is child, according to the local regulations. General regulations treat all persons below the age of 16 as child. `Required` `Default(false)` `Filter(eq)` 
 | [Notes](Applications.PersonalData.ProcessingConsents.md#notes) | string (max) __nullable__ | Notes for this ProcessingConsent. 
+| [ObjectVersion](Applications.PersonalData.ProcessingConsents.md#objectversion) | int32 |  
 | [ParentEmail](Applications.PersonalData.ProcessingConsents.md#parentemail) | string (50) __nullable__ | When a parental rights holder gives a consent for a child, contains the email of the parent. `Filter(like)` 
 | [ParentName](Applications.PersonalData.ProcessingConsents.md#parentname) | string (50) __nullable__ | When a parental rights holder gives a consent for a child, contains the name of the parent. `Filter(eq;like)` 
 | [ParentPhone](Applications.PersonalData.ProcessingConsents.md#parentphone) | string (50) __nullable__ | When a parental rights holder gives a consent for a child, contains the phone number of the parent. `Filter(like)` 
 | [RetractedOnUtc](Applications.PersonalData.ProcessingConsents.md#retractedonutc) | datetime __nullable__ | The date and time (in Utc), when the consent was retracted. Null if the consent is not retracted. `Filter(ge;le)` 
-| [RowVersion](Applications.PersonalData.ProcessingConsents.md#rowversion) | byte[] |  
 
 ## References
 
@@ -177,6 +177,12 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
 
+### ObjectVersion
+
+_Type_: **int32**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+
 ### ParentEmail
 
 When a parental rights holder gives a consent for a child, contains the email of the parent. `Filter(like)`
@@ -210,12 +216,6 @@ The date and time (in Utc), when the consent was retracted. Null if the consent 
 
 _Type_: **datetime __nullable__**  
 _Supported Filters_: **GreaterThanOrLessThan**  
-_Supports Order By_: **False**  
-
-### RowVersion
-
-_Type_: **byte[]**  
-_Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
 

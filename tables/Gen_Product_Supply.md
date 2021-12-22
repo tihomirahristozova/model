@@ -11,6 +11,7 @@ Contains supply rules, which are used by the procurement planning system. Entity
 
 | Name | Type | Description |
 | - | - | --- |
+|[__Object_Version](#__object_version)|`int` ||
 |[Buyer_Name](#buyer_name)|`nvarchar(64)` |The code or name of the person, who is in charge for purchasing the product from external suppliers. It is used to group different products on purchase demand report. NULL when Procurement_Type is not buy|
 |[Default_Store_Bin_Id](#default_store_bin_id)|`uniqueidentifier` |Default store bin for new deliveries using this supply scheme|
 |[Enterprise_Company_Id](#enterprise_company_id)|`uniqueidentifier` ||
@@ -49,6 +50,33 @@ Contains supply rules, which are used by the procurement planning system. Entity
 |[Supply_Schema_Id](#supply_schema_id)|`uniqueidentifier` |The supply schema to use for the distribution of the product among warehouses|
 
 ## Columns
+
+### __Object_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 ### Buyer_Name
 

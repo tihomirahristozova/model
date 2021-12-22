@@ -27,7 +27,7 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [CreatesVATEntries](Crm.Invoicing.InvoicesOptions.md#createsvatentries) | boolean | Specifies whether the invoices of the current type create entries in the VAT ledges. If is used, for instance, to determine if null VAT entry should be automatically created when the invoice is voided. `Required` `Default(true)` 
 | [Id](Crm.Invoicing.InvoicesOptions.md#id) | guid |  
-| [RowVersion](Crm.Invoicing.InvoicesOptions.md#rowversion) | byte[] |  
+| [ObjectVersion](Crm.Invoicing.InvoicesOptions.md#objectversion) | int32 |  
 | [SignRestriction](Crm.Invoicing.InvoicesOptions.md#signrestriction) | [SignRestriction](Crm.Invoicing.InvoicesOptions.md#signrestriction) | Restricts the sign of the line amounts of the invoices. -1 =allow only negative, 0=allow all, 1=allow only positive amounts. `Required` `Default(0)` 
 | [TotalAmountSignRestriction](Crm.Invoicing.InvoicesOptions.md#totalamountsignrestriction) | [SignRestriction](Crm.Invoicing.InvoicesOptions.md#totalamountsignrestriction) | Restricts the sign of the total amount (amount to pay) of the invoices. -1 =allow only negative, 0=allow all, 1=allow only positive amounts. `Required` `Default(0)` 
 
@@ -58,11 +58,11 @@ _Indexed_: **True**
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
-### RowVersion
+### ObjectVersion
 
-_Type_: **byte[]**  
+_Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Supports Order By_: ****  
 
 ### SignRestriction
 

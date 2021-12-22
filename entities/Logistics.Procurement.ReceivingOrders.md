@@ -44,13 +44,13 @@ Aggregate Tree
 | [DocumentDate](Logistics.Procurement.ReceivingOrders.md#documentdate) | date | The date on which the document was issued. `Required` `Default(Today)` `Filter(eq;ge;le)` `ORD` (Inherited from [Documents](General.Documents.md)) 
 | [DocumentNo](Logistics.Procurement.ReceivingOrders.md#documentno) | string (20) | Document number, unique within Document_Type_Id. `Required` `Filter(eq;like)` `ORD` (Inherited from [Documents](General.Documents.md)) 
 | [DocumentNotes](Logistics.Procurement.ReceivingOrders.md#documentnotes) | string (max) __nullable__ | Notes for this Document. (Inherited from [Documents](General.Documents.md)) 
-| [DocumentRowVersion](Logistics.Procurement.ReceivingOrders.md#documentrowversion) | byte[] |  
 | [DocumentVersion](Logistics.Procurement.ReceivingOrders.md#documentversion) | int32 | Consecutive version number, starting with 1. Each update produces a new version of the document. `Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [EntityName](Logistics.Procurement.ReceivingOrders.md#entityname) | string (64) | The entity name of the document header. `Required` `Filter(eq)` `ORD` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [Id](Logistics.Procurement.ReceivingOrders.md#id) | guid |  
 | [InvoiceDocumentNo](Logistics.Procurement.ReceivingOrders.md#invoicedocumentno) | string (20) __nullable__ | Contains the purchase invoice number when it is known in advance, null otherwise. `Filter(eq)` 
 | [IsSingleExecution](Logistics.Procurement.ReceivingOrders.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document. `Required` `Default(false)` `Filter(eq)` `ReadOnly` 
 | [Notes](Logistics.Procurement.ReceivingOrders.md#notes) | string (254) __nullable__ | Notes for this ReceivingOrder. 
+| [ObjectVersion](Logistics.Procurement.ReceivingOrders.md#objectversion) | int32 |  
 | [ParentDocument<br />RelationshipType](Logistics.Procurement.ReceivingOrders.md#parentdocumentrelationshiptype) | [ParentDocument<br />RelationshipType](Logistics.Procurement.ReceivingOrders.md#parentdocumentrelationshiptype) __nullable__ | Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [PaymentDueDate](Logistics.Procurement.ReceivingOrders.md#paymentduedate) | datetime __nullable__ | Due date for the payment. When null, the payment due date is the documents date. `Filter(ge;le)` 
 | [PlannedDeliveryDate](Logistics.Procurement.ReceivingOrders.md#planneddeliverydate) | datetime __nullable__ | When not null, specifies the planned delivery date for all lines. `Filter(ge;le)` 
@@ -61,7 +61,6 @@ Aggregate Tree
 | [ReferenceDate](Logistics.Procurement.ReceivingOrders.md#referencedate) | datetime __nullable__ | The date to which this document refers, i.e. when the action really occurred. If null, Document_Date is taken. `Default(Today)` `Filter(ge;le)` (Inherited from [Documents](General.Documents.md)) 
 | [ReferenceDocumentNo](Logistics.Procurement.ReceivingOrders.md#referencedocumentno) | string (20) __nullable__ | The number of the document (issued by the other party), which was the reason for the creation of the current document. The numebr should be unique within the party documents. `Filter(eq;like)` (Inherited from [Documents](General.Documents.md)) 
 | [ReleaseTime](Logistics.Procurement.ReceivingOrders.md#releasetime) | datetime __nullable__ | Date and time when the document was released (State set to Released). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
-| [RowVersion](Logistics.Procurement.ReceivingOrders.md#rowversion) | byte[] |  
 | [State](Logistics.Procurement.ReceivingOrders.md#state) | [DocumentState](Logistics.Procurement.ReceivingOrders.md#state) | The current system state of the document. Allowed values: 0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed. `Required` `Default(0)` `Filter(multi eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [Void](Logistics.Procurement.ReceivingOrders.md#void) | boolean | True if the document is null and void. `Required` `Default(false)` `Filter(eq)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [VoidReason](Logistics.Procurement.ReceivingOrders.md#voidreason) | string (254) __nullable__ | Reason for voiding the document, entered by the user. `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
@@ -197,12 +196,6 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
 
-### DocumentRowVersion
-
-_Type_: **byte[]**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-
 ### DocumentVersion
 
 Consecutive version number, starting with 1. Each update produces a new version of the document. `Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md))
@@ -255,6 +248,12 @@ _Type_: **string (254) __nullable__**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
+
+### ObjectVersion
+
+_Type_: **int32**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### ParentDocumentRelationshipType
 
@@ -357,12 +356,6 @@ Date and time when the document was released (State set to Released). `Filter(ge
 
 _Type_: **datetime __nullable__**  
 _Supported Filters_: **GreaterThanOrLessThan**  
-_Supports Order By_: **False**  
-
-### RowVersion
-
-_Type_: **byte[]**  
-_Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
 ### State

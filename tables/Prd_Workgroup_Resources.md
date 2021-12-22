@@ -15,6 +15,7 @@ Describes the availability of resources in the active workgroups. Entity: Prd_Wo
 
 | Name | Type | Description |
 | - | - | --- |
+|[__Object_Version](#__object_version)|`int` ||
 |[Available_Quantity](#available_quantity)|`decimal(18, 3)` |Quantity available of the resource in this workgroup. The measurement unit is specified in Prd_Resources|
 |[Id](#id)|`uniqueidentifier` `PK`||
 |[Notes](#notes)|`nvarchar(254)` |User notes for the workgroup resource|
@@ -23,6 +24,33 @@ Describes the availability of resources in the active workgroups. Entity: Prd_Wo
 |[Workgroup_Id](#workgroup_id)|`uniqueidentifier` |Id of the workgroup, containing the resource|
 
 ## Columns
+
+### __Object_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 ### Available_Quantity
 

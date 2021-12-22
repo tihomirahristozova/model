@@ -27,8 +27,8 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [Id](Applications.Fleet.CrewMembers.md#id) | guid |  
 | [Notes](Applications.Fleet.CrewMembers.md#notes) | string (254) __nullable__ | Notes for this CrewMember. 
+| [ObjectVersion](Applications.Fleet.CrewMembers.md#objectversion) | int32 |  
 | [OrdinalPos](Applications.Fleet.CrewMembers.md#ordinalpos) | int32 __nullable__ | Ordinal position. Ordinal_Pos=0 has special meaning - this is the crew leader. 
-| [RowVersion](Applications.Fleet.CrewMembers.md#rowversion) | byte[] |  
 
 ## References
 
@@ -56,17 +56,17 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
 
+### ObjectVersion
+
+_Type_: **int32**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+
 ### OrdinalPos
 
 Ordinal position. Ordinal_Pos=0 has special meaning - this is the crew leader.
 
 _Type_: **int32 __nullable__**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-
-### RowVersion
-
-_Type_: **byte[]**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 

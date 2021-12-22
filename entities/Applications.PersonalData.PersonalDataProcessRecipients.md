@@ -27,7 +27,7 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [Id](Applications.PersonalData.PersonalDataProcessRecipients.md#id) | guid |  
 | [Notes](Applications.PersonalData.PersonalDataProcessRecipients.md#notes) | string (max) __nullable__ | Notes for this PersonalDataProcess<br />Recipient. 
-| [RowVersion](Applications.PersonalData.PersonalDataProcessRecipients.md#rowversion) | byte[] |  
+| [ObjectVersion](Applications.PersonalData.PersonalDataProcessRecipients.md#objectversion) | int32 |  
 
 ## References
 
@@ -55,11 +55,11 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
 
-### RowVersion
+### ObjectVersion
 
-_Type_: **byte[]**  
+_Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Supports Order By_: ****  
 
 
 ## Reference Details

@@ -9,7 +9,7 @@ Long (full) instructions for performing an operation. The operations point to th
 
 ## Default Visualization
 Default Display Text Format:  
-_{Id}: {Instructions}_  
+_{Id}: {ObjectVersion}_  
 Default Search Members:  
 __  
 
@@ -26,7 +26,7 @@ Aggregate Tree
 | [Description](Production.Resources.OperationInstructions.md#description) | string (254) __nullable__ | Short description or notes for the instructions. `Filter(like)` 
 | [Id](Production.Resources.OperationInstructions.md#id) | guid |  
 | [Instructions](Production.Resources.OperationInstructions.md#instructions) | byte[] __nullable__ | The operation instructions in OLE format. 
-| [RowVersion](Production.Resources.OperationInstructions.md#rowversion) | byte[] |  
+| [ObjectVersion](Production.Resources.OperationInstructions.md#objectversion) | int32 |  
 
 
 ## Attribute Details
@@ -54,11 +54,11 @@ _Type_: **byte[] __nullable__**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
-### RowVersion
+### ObjectVersion
 
-_Type_: **byte[]**  
+_Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Supports Order By_: ****  
 
 
 

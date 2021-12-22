@@ -11,6 +11,7 @@ User-defined properties, which can supplement the system properties of almost al
 
 | Name | Type | Description |
 | - | - | --- |
+|[__Object_Version](#__object_version)|`int` ||
 |[Allowed_Values_Entity_Name](#allowed_values_entity_name)|`nvarchar(64)` |When not NULL, specifies that the allowed values are retrieved from the specified entity|
 |[Allowed_Values_Filter_XML](#allowed_values_filter_xml)|`nvarchar(max)` |When not NULL specifies the filter to apply when extracting allowed values from entity|
 |[Allowed_Values_Parent_Property_Id](#allowed_values_parent_property_id)|`uniqueidentifier` |Specifies the user defined property, which is used for filtering the allowed values by value of the parent property|
@@ -29,6 +30,33 @@ User-defined properties, which can supplement the system properties of almost al
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
+
+### __Object_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 ### Allowed_Values_Entity_Name
 

@@ -26,9 +26,9 @@ Aggregate Tree
 | [CanProcessMinusSales](Crm.Pos.Roles.md#canprocessminussales) | boolean | Indicates whether the role is allowed to process minus (qty and/or value) sales. `Required` `Default(false)` `Filter(multi eq)` 
 | [CanVoidSales](Crm.Pos.Roles.md#canvoidsales) | boolean | Indicates whether this role can void sales orders. `Required` `Default(false)` `Filter(multi eq)` 
 | [Id](Crm.Pos.Roles.md#id) | guid |  
+| [ObjectVersion](Crm.Pos.Roles.md#objectversion) | int32 |  
 | [PosRoleCode](Crm.Pos.Roles.md#posrolecode) | string (16) | Unique role code. `Required` `Filter(multi eq;like)` `ORD` 
 | [PosRoleName](Crm.Pos.Roles.md#posrolename) | [MultilanguageString](../data-types.md#multilanguagestring) | Multi-language name of the POS role. `Required` `Filter(multi eq;like)` 
-| [RowVersion](Crm.Pos.Roles.md#rowversion) | byte[] |  
 
 
 ## Attribute Details
@@ -58,6 +58,12 @@ _Indexed_: **True**
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
+### ObjectVersion
+
+_Type_: **int32**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+
 ### PosRoleCode
 
 Unique role code. `Required` `Filter(multi eq;like)` `ORD`
@@ -74,12 +80,6 @@ Multi-language name of the POS role. `Required` `Filter(multi eq;like)`
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Supported Filters_: **Equals, Like, EqualsIn**  
-_Supports Order By_: **False**  
-
-### RowVersion
-
-_Type_: **byte[]**  
-_Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
 

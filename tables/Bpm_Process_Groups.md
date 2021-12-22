@@ -5,6 +5,7 @@
 
 | Name | Type | Description |
 | - | - | --- |
+|[__Object_Version](#__object_version)|`int` ||
 |[Notes](#notes)|`nvarchar(max)` ||
 |[Parent_Process_Group_Id](#parent_process_group_id)|`uniqueidentifier` |Parent process group in the hierarchy. NULL means this is a root group.|
 |[Process_Group_Code](#process_group_code)|`nvarchar(5)` |Group code, unique within the parent group.|
@@ -13,6 +14,33 @@
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
+
+### __Object_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 ### Notes
 

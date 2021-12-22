@@ -36,6 +36,7 @@ Aggregate Tree
 | [IsActive](Systems.External.PublicUsers.md#isactive) | boolean | Specifies whether the user account is active and access should be allowed. `Required` `Default(true)` `Filter(eq)` 
 | [LastName](Systems.External.PublicUsers.md#lastname) | string (64) | Last name of the user. `Required` `Filter(like)` 
 | [Notes](Systems.External.PublicUsers.md#notes) | string (max) __nullable__ | Notes for this PublicUser. 
+| [ObjectVersion](Systems.External.PublicUsers.md#objectversion) | int32 |  
 | [PasswordAlgorithm](Systems.External.PublicUsers.md#passwordalgorithm) | string (16) | Uniquely specifies the password storage algorithm among some system recognized algorithms. Usually specifies the hashing and the stretching functions. For example, 'PBKDF2-SHA1'. `Required` `Filter(like)` 
 | [PasswordHash](Systems.External.PublicUsers.md#passwordhash) | string (128) | Actual password storage. The format of the contents is determined by Password Algorithm. `Required` `Filter(like)` 
 | [PasswordRecoveryCode](Systems.External.PublicUsers.md#passwordrecoverycode) | guid __nullable__ | Automatically generated unique code for the last password recovery attempt. `Filter(multi eq)` `ReadOnly` 
@@ -43,7 +44,6 @@ Aggregate Tree
 | [PhoneNumber](Systems.External.PublicUsers.md#phonenumber) | string (16) __nullable__ | The primary phone number of the user. `Filter(like)` 
 | [PostalCode](Systems.External.PublicUsers.md#postalcode) | string (16) __nullable__ | The postal code of the default address of the user. `Filter(like)` 
 | [ProfilePicture](Systems.External.PublicUsers.md#profilepicture) | byte[] __nullable__ | Profile picture of the user. 
-| [RowVersion](Systems.External.PublicUsers.md#rowversion) | byte[] |  
 | [State](Systems.External.PublicUsers.md#state) | string (64) __nullable__ | The state of residence of the user within the country. Can be specified with latin or local characters. `Filter(like)` 
 
 ## References
@@ -172,6 +172,12 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
 
+### ObjectVersion
+
+_Type_: **int32**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+
 ### PasswordAlgorithm
 
 Uniquely specifies the password storage algorithm among some system recognized algorithms. Usually specifies the hashing and the stretching functions. For example, 'PBKDF2-SHA1'. `Required` `Filter(like)`
@@ -228,12 +234,6 @@ _Maximum Length_: **16**
 Profile picture of the user.
 
 _Type_: **byte[] __nullable__**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-
-### RowVersion
-
-_Type_: **byte[]**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 

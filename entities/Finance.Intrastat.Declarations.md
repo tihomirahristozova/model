@@ -46,12 +46,12 @@ Aggregate Tree
 | [DocumentDate](Finance.Intrastat.Declarations.md#documentdate) | date | The date on which the document was issued. `Required` `Default(Today)` `Filter(eq;ge;le)` `ORD` (Inherited from [Documents](General.Documents.md)) 
 | [DocumentNo](Finance.Intrastat.Declarations.md#documentno) | string (20) | Document number, unique within Document_Type_Id. `Required` `Filter(eq;like)` `ORD` (Inherited from [Documents](General.Documents.md)) 
 | [DocumentNotes](Finance.Intrastat.Declarations.md#documentnotes) | string (max) __nullable__ | Notes for this Document. (Inherited from [Documents](General.Documents.md)) 
-| [DocumentRowVersion](Finance.Intrastat.Declarations.md#documentrowversion) | byte[] |  
 | [DocumentVersion](Finance.Intrastat.Declarations.md#documentversion) | int32 | Consecutive version number, starting with 1. Each update produces a new version of the document. `Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [EntityName](Finance.Intrastat.Declarations.md#entityname) | string (64) | The entity name of the document header. `Required` `Filter(eq)` `ORD` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [GoodsFlowDirection](Finance.Intrastat.Declarations.md#goodsflowdirection) | [GoodsFlowDirection](Finance.Intrastat.Declarations.md#goodsflowdirection) | The flow direction of the goods. A=Arrival, D=Dispatch. `Required` `Filter(eq)` 
 | [Id](Finance.Intrastat.Declarations.md#id) | guid |  
 | [IsSingleExecution](Finance.Intrastat.Declarations.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document. `Required` `Default(false)` `Filter(eq)` `ReadOnly` 
+| [ObjectVersion](Finance.Intrastat.Declarations.md#objectversion) | int32 |  
 | [ParentDocument<br />RelationshipType](Finance.Intrastat.Declarations.md#parentdocumentrelationshiptype) | [ParentDocument<br />RelationshipType](Finance.Intrastat.Declarations.md#parentdocumentrelationshiptype) __nullable__ | Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [PlanningOnly](Finance.Intrastat.Declarations.md#planningonly) | boolean | Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned). `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [PostalCode](Finance.Intrastat.Declarations.md#postalcode) | string (64) | This field contains the postal code part of the submitter’s address. `Required` 
@@ -61,7 +61,6 @@ Aggregate Tree
 | [ReferenceMonth](Finance.Intrastat.Declarations.md#referencemonth) | [ReferenceMonth](Finance.Intrastat.Declarations.md#referencemonth) | Month, for which the declaration is prepared. `Required` `Filter(eq)` 
 | [ReferenceYear](Finance.Intrastat.Declarations.md#referenceyear) | int16 | Year, for which the declaration is prepared. `Required` `Filter(eq)` 
 | [ReleaseTime](Finance.Intrastat.Declarations.md#releasetime) | datetime __nullable__ | Date and time when the document was released (State set to Released). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
-| [RowVersion](Finance.Intrastat.Declarations.md#rowversion) | byte[] |  
 | [State](Finance.Intrastat.Declarations.md#state) | [DocumentState](Finance.Intrastat.Declarations.md#state) | The current system state of the document. Allowed values: 0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed. `Required` `Default(0)` `Filter(multi eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [Void](Finance.Intrastat.Declarations.md#void) | boolean | True if the document is null and void. `Required` `Default(false)` `Filter(eq)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [VoidReason](Finance.Intrastat.Declarations.md#voidreason) | string (254) __nullable__ | Reason for voiding the document, entered by the user. `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
@@ -218,12 +217,6 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
 
-### DocumentRowVersion
-
-_Type_: **byte[]**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-
 ### DocumentVersion
 
 Consecutive version number, starting with 1. Each update produces a new version of the document. `Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md))
@@ -274,6 +267,12 @@ _Type_: **boolean**
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **False**  
+
+### ObjectVersion
+
+_Type_: **int32**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### ParentDocumentRelationshipType
 
@@ -376,12 +375,6 @@ Date and time when the document was released (State set to Released). `Filter(ge
 
 _Type_: **datetime __nullable__**  
 _Supported Filters_: **GreaterThanOrLessThan**  
-_Supports Order By_: **False**  
-
-### RowVersion
-
-_Type_: **byte[]**  
-_Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
 ### State

@@ -15,6 +15,7 @@ Contains the locations to which the assets are assigned at various moments in ti
 
 | Name | Type | Description |
 | - | - | --- |
+|[__Object_Version](#__object_version)|`int` ||
 |[Enterprise_Company_Location_Id](#enterprise_company_location_id)|`uniqueidentifier` |The enterprise company location, where the asset is assigned.|
 |[From_Date](#from_date)|`date` |The date on which the asset is assigned to the location.|
 |[Managed_Asset_Id](#managed_asset_id)|`uniqueidentifier` |The asset, whose location is recorded.|
@@ -24,6 +25,33 @@ Contains the locations to which the assets are assigned at various moments in ti
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
+
+### __Object_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 ### Enterprise_Company_Location_Id
 

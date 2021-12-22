@@ -36,17 +36,16 @@ Aggregate Tree
 | [Id](General.Contacts.CompanyLocations.md#id) | guid |  
 | [IsActive](General.Contacts.CompanyLocations.md#isactive) | boolean | Specifies whether the current party is active in the system or not. `Required` `Default(true)` `Filter(eq)` (Inherited from [Parties](General.Contacts.Parties.md)) 
 | [LocationName](General.Contacts.CompanyLocations.md#locationname) | [MultilanguageString](../data-types.md#multilanguagestring) | The name of the company location. `Required` `Filter(eq;like)` 
+| [ObjectVersion](General.Contacts.CompanyLocations.md#objectversion) | int32 |  
 | [PartyCode](General.Contacts.CompanyLocations.md#partycode) | string (16) | The unique code of the party. `Required` `Filter(eq;like)` `ORD` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md)) 
 | [PartyCreationTime](General.Contacts.CompanyLocations.md#partycreationtime) | datetime __nullable__ | Date and time when the Party was created. `Filter(ge;le)` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md)) 
 | [PartyCreationUser](General.Contacts.CompanyLocations.md#partycreationuser) | string (64) __nullable__ | Login name of the user, who created the Party. `Filter(like)` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md)) 
 | [PartyName](General.Contacts.CompanyLocations.md#partyname) | [MultilanguageString](../data-types.md#multilanguagestring) | The name of the party. `Required` `Filter(eq;like)` `ORD` (Inherited from [Parties](General.Contacts.Parties.md)) 
 | [PartyNotes](General.Contacts.CompanyLocations.md#partynotes) | string (254) __nullable__ | Notes for this Party. (Inherited from [Parties](General.Contacts.Parties.md)) 
-| [PartyRowVersion](General.Contacts.CompanyLocations.md#partyrowversion) | byte[] |  
 | [PartyType](General.Contacts.CompanyLocations.md#partytype) | [PartyType](General.Contacts.CompanyLocations.md#partytype) | Type of party. Currently supported are P=Person, C=Company, S=Store, L=Company Location, V=Division. `Required` `Default("P")` `Filter(multi eq)` (Inherited from [Parties](General.Contacts.Parties.md)) 
 | [PartyUniqueNumber](General.Contacts.CompanyLocations.md#partyuniquenumber) | string (16) __nullable__ | Unique number of the party (National number for persons, Registration number for companies). `Filter(eq;like)` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md)) 
 | [PartyUpdateTime](General.Contacts.CompanyLocations.md#partyupdatetime) | datetime __nullable__ | Date and time when the Party was last updated. `Filter(ge;le)` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md)) 
 | [PartyUpdateUser](General.Contacts.CompanyLocations.md#partyupdateuser) | string (64) __nullable__ | Login name of the user, who last updated the Party. `Filter(like)` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md)) 
-| [RowVersion](General.Contacts.CompanyLocations.md#rowversion) | byte[] |  
 | [WorkingTime](General.Contacts.CompanyLocations.md#workingtime) | string (254) __nullable__ | Textual representation of the working time of the location. 
 
 ## References
@@ -125,6 +124,12 @@ _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 
+### ObjectVersion
+
+_Type_: **int32**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+
 ### PartyCode
 
 The unique code of the party. `Required` `Filter(eq;like)` `ORD` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md))
@@ -169,12 +174,6 @@ _Type_: **string (254) __nullable__**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
-
-### PartyRowVersion
-
-_Type_: **byte[]**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
 
 ### PartyType
 
@@ -221,12 +220,6 @@ _Type_: **string (64) __nullable__**
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  
-
-### RowVersion
-
-_Type_: **byte[]**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
 
 ### WorkingTime
 

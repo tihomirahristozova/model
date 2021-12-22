@@ -15,6 +15,7 @@ Contains a specific instance of an additional amount for a specific document. En
 
 | Name | Type | Description |
 | - | - | --- |
+|[__Object_Version](#__object_version)|`int` ||
 |[Base_Amount](#base_amount)|`decimal(14, 2)` Readonly|The calculated base amount (in documents currency) from the last document amount recalculation. The base amount is the base, over which the additional amounts are calculated. Null if the amount is not distributed yet.|
 |[Document_Amount_Id](#document_amount_id)|`uniqueidentifier` `PK`||
 |[Document_Amount_Type_Id](#document_amount_type_id)|`uniqueidentifier` |The type of the amount.|
@@ -29,6 +30,33 @@ Contains a specific instance of an additional amount for a specific document. En
 |[User_Can_Change_Input](#user_can_change_input)|`bit` |1 if the user, entering the document is allowed to change the default input percent|
 
 ## Columns
+
+### __Object_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 ### Base_Amount
 

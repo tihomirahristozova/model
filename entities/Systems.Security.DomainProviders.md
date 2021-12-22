@@ -31,8 +31,8 @@ Aggregate Root:
 | [Id](Systems.Security.DomainProviders.md#id) | guid |  
 | [IsActive](Systems.Security.DomainProviders.md#isactive) | boolean | Specifies whether the provider is currently active for the domain. `Required` `Default(true)` `Filter(eq)` 
 | [Notes](Systems.Security.DomainProviders.md#notes) | string (max) __nullable__ | Notes for this DomainProvider. 
+| [ObjectVersion](Systems.Security.DomainProviders.md#objectversion) | int32 |  
 | [ProviderName](Systems.Security.DomainProviders.md#providername) | [ProviderName](Systems.Security.DomainProviders.md#providername) | The system name of the user authentication provider. For example GOOGLE, FACEBOOK, MICROSOFT, AZUREAD, ERPNET, etc. `Required` `Filter(eq)` 
-| [RowVersion](Systems.Security.DomainProviders.md#rowversion) | byte[] |  
 | [TenantID](Systems.Security.DomainProviders.md#tenantid) | string (254) __nullable__ | When the authentication provider is multi-tenant, this specifies the tenant ID. For example, Google, Facebook and Microsoft are singe-tenant, while AzureAD is multi-tenant. 
 
 ## References
@@ -95,6 +95,12 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
 
+### ObjectVersion
+
+_Type_: **int32**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+
 ### ProviderName
 
 The system name of the user authentication provider. For example GOOGLE, FACEBOOK, MICROSOFT, AZUREAD, ERPNET, etc. `Required` `Filter(eq)`
@@ -111,12 +117,6 @@ _Allowed Values (Systems.Security.DomainProvidersRepository.ProviderName Enum Me
 | FACEBOOK | FACEBOOK value. Stored as 'FACEBOOK'. <br /> _Database Value:_ 'FACEBOOK' <br /> _Model Value:_ 3 <br /> _Domain API Value:_ 'FACEBOOK' |
 
 _Supported Filters_: **Equals**  
-_Supports Order By_: **False**  
-
-### RowVersion
-
-_Type_: **byte[]**  
-_Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
 ### TenantID

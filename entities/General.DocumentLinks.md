@@ -9,7 +9,7 @@ Obsolete. Not used. Entity: Gen_Document_Links
 
 ## Default Visualization
 Default Display Text Format:  
-_{Id}: {RowVersion}_  
+_{Id}: {ObjectVersion}_  
 Default Search Members:  
 __  
 
@@ -24,7 +24,7 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](General.DocumentLinks.md#id) | guid |  
-| [RowVersion](General.DocumentLinks.md#rowversion) | byte[] |  
+| [ObjectVersion](General.DocumentLinks.md#objectversion) | int32 |  
 
 
 ## Attribute Details
@@ -35,11 +35,11 @@ _Type_: **guid**
 _Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
-### RowVersion
+### ObjectVersion
 
-_Type_: **byte[]**  
+_Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Supports Order By_: ****  
 
 
 

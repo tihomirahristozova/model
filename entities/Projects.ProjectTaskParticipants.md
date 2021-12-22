@@ -28,7 +28,7 @@ Aggregate Root:
 | [Id](Projects.ProjectTaskParticipants.md#id) | guid |  
 | [Notes](Projects.ProjectTaskParticipants.md#notes) | string (254) __nullable__ | Notes for this ProjectTaskParticipant. 
 | [NotifyOnStatusChange](Projects.ProjectTaskParticipants.md#notifyonstatuschange) | boolean | Specifies whether the participant should be notified on task status changes. `Required` `Default(true)` 
-| [RowVersion](Projects.ProjectTaskParticipants.md#rowversion) | byte[] |  
+| [ObjectVersion](Projects.ProjectTaskParticipants.md#objectversion) | int32 |  
 | [WorkLoadPercent](Projects.ProjectTaskParticipants.md#workloadpercent) | decimal (3, 2) | The planned work load (in percents) of the participant for this task. `Required` `Default(1)` `Filter(eq)` 
 
 ## References
@@ -66,11 +66,11 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Default Value_: **True**  
 
-### RowVersion
+### ObjectVersion
 
-_Type_: **byte[]**  
+_Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Supports Order By_: ****  
 
 ### WorkLoadPercent
 

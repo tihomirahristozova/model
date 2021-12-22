@@ -37,7 +37,7 @@ Aggregate Tree
 | [IsEnabled](Systems.Security.TrustedApplications.md#isenabled) | boolean | Specifies whether the application is enabled for login. `Required` `Default(true)` `Filter(eq)` 
 | [Name](Systems.Security.TrustedApplications.md#name) | string (254) | The multi-language name of the application. `Required` `Filter(eq;like)` 
 | [Notes](Systems.Security.TrustedApplications.md#notes) | string (max) __nullable__ | Notes for this TrustedApplication. 
-| [RowVersion](Systems.Security.TrustedApplications.md#rowversion) | byte[] |  
+| [ObjectVersion](Systems.Security.TrustedApplications.md#objectversion) | int32 |  
 | [Scope](Systems.Security.TrustedApplications.md#scope) | string (max) __nullable__ | The scope (according to RFC 6749) for which the application was trusted. The scope is an unordered list of space-delimited case-sensitive strings. Each string denotes a permission (see docs for possible values). `Introduced in version 20.1` 
 | [SystemUserAllowed](Systems.Security.TrustedApplications.md#systemuserallowed) | boolean | Allows this application to logon as a service. `Required` `Default(false)` `Filter(eq)` 
 | [SystemUserLoginUrl](Systems.Security.TrustedApplications.md#systemuserloginurl) | string (254) __nullable__ | The URL, which will be used by the login process, when the application logs in as a service. 
@@ -180,11 +180,11 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
 
-### RowVersion
+### ObjectVersion
 
-_Type_: **byte[]**  
+_Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Supports Order By_: ****  
 
 ### Scope
 

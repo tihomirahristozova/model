@@ -168,6 +168,11 @@ Default Search Members:<br>
 <td>True when the amount type is active for new records; false - otherwise. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
+<td><a href="General.DocumentAmountTypes.html#objectversion">ObjectVersion</a></td>
+<td>int32</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="General.DocumentAmountTypes.html#percentinputallowed">PercentInputAllowed</a></td>
 <td>boolean</td>
 <td>True when the user is allowed to input percent of total for distribution. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></td>
@@ -176,11 +181,6 @@ Default Search Members:<br>
 <td><a href="General.DocumentAmountTypes.html#roundscale">RoundScale</a></td>
 <td>int32 <strong>nullable</strong></td>
 <td>The amounts should be rounded with the specified number of digits after the decimal point. null means to use the currency default.</td>
-</tr>
-<tr>
-<td><a href="General.DocumentAmountTypes.html#rowversion">RowVersion</a></td>
-<td>byte[]</td>
-<td></td>
 </tr>
 <tr>
 <td><a href="General.DocumentAmountTypes.html#unitamountinputallowed">UnitAmountInputAllowed</a></td>
@@ -354,6 +354,10 @@ Allowed values for the <code>DistributeBy</code>(General.DocumentAmountTypes.md#
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>True</strong></p>
+<h3 id="objectversion">ObjectVersion</h3>
+<p><em>Type</em>: <strong>int32</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****</p>
 <h3 id="percentinputallowed">PercentInputAllowed</h3>
 <p>True when the user is allowed to input percent of total for distribution. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>
@@ -363,10 +367,6 @@ Allowed values for the <code>DistributeBy</code>(General.DocumentAmountTypes.md#
 <h3 id="roundscale">RoundScale</h3>
 <p>The amounts should be rounded with the specified number of digits after the decimal point. null means to use the currency default.</p>
 <p><em>Type</em>: <strong>int32 <strong>nullable</strong></strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
-<h3 id="rowversion">RowVersion</h3>
-<p><em>Type</em>: <strong>byte[]</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="unitamountinputallowed">UnitAmountInputAllowed</h3>

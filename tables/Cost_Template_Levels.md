@@ -15,6 +15,7 @@ Represents named hierarchy levels within a cost calculation. The hierarchy level
 
 | Name | Type | Description |
 | - | - | --- |
+|[__Object_Version](#__object_version)|`int` ||
 |[Cost_Template_Id](#cost_template_id)|`uniqueidentifier` ||
 |[Cost_Template_Level_Id](#cost_template_level_id)|`uniqueidentifier` `PK`||
 |[Hierarchy_Level](#hierarchy_level)|`int` |The level within the hierarchy 0=Root, 1=one level below root, etc. (0..9)|
@@ -22,6 +23,33 @@ Represents named hierarchy levels within a cost calculation. The hierarchy level
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
+
+### __Object_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 ### Cost_Template_Id
 

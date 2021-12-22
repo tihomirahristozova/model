@@ -123,6 +123,11 @@ Aggregate Root:<br>
 <td></td>
 </tr>
 <tr>
+<td><a href="General.Products.ProductGroupRequiredProperties.html#objectversion">ObjectVersion</a></td>
+<td>int32</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="General.Products.ProductGroupRequiredProperties.html#propertyno">PropertyNo</a></td>
 <td>int32</td>
 <td>The consecutive number (position) of the property within the product group and its subgroups. The parent groups of each leaf group should contain only unique property numbers. <code>Required</code> <code>Default(0)</code></td>
@@ -131,11 +136,6 @@ Aggregate Root:<br>
 <td><a href="General.Products.ProductGroupRequiredProperties.html#required">Required</a></td>
 <td>boolean</td>
 <td>Specifies whether the property is required (or only suggested) to be set for new products. Suggested properties are used by product configuration and other product creation services. true=Required, false=Suggested. <code>Required</code> <code>Default(false)</code></td>
-</tr>
-<tr>
-<td><a href="General.Products.ProductGroupRequiredProperties.html#rowversion">RowVersion</a></td>
-<td>byte[]</td>
-<td></td>
 </tr>
 </tbody>
 </table>
@@ -183,6 +183,10 @@ Aggregate Root:<br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
+<h3 id="objectversion">ObjectVersion</h3>
+<p><em>Type</em>: <strong>int32</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****</p>
 <h3 id="propertyno">PropertyNo</h3>
 <p>The consecutive number (position) of the property within the product group and its subgroups. The parent groups of each leaf group should contain only unique property numbers. <code>Required</code> <code>Default(0)</code></p>
 <p><em>Type</em>: <strong>int32</strong><br>
@@ -199,10 +203,6 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
-<h3 id="rowversion">RowVersion</h3>
-<p><em>Type</em>: <strong>byte[]</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="productgroup">ProductGroup</h3>
 <p>The <see cref="ProductGroup"></see> to which this ProductGroupRequiredProperty belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>

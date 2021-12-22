@@ -32,8 +32,7 @@ Aggregate Root:
 | [ModulePicture](Applications.Cms.NewsWebModules.md#modulepicture) | byte[] __nullable__ | Default picture. Used for picture links, small module icons, etc. PNG format is suggested. (Inherited from [WebModules](Applications.Cms.WebModules.md)) 
 | [ModuleType](Applications.Cms.NewsWebModules.md#moduletype) | [ModuleType](Applications.Cms.NewsWebModules.md#moduletype) | Specifies the content handler. The content handler is responsible for generating the actual web page content. Module Types include Category, Static, News, Product, etc. `Required` `Filter(like)` (Inherited from [WebModules](Applications.Cms.WebModules.md)) 
 | [Name](Applications.Cms.NewsWebModules.md#name) | string (512) | Multilanguage Module name. This is used as a title when displaying the web Module. `Required` `Filter(like)` (Inherited from [WebModules](Applications.Cms.WebModules.md)) 
-| [RowVersion](Applications.Cms.NewsWebModules.md#rowversion) | byte[] |  
-| [WebModuleRowVersion](Applications.Cms.NewsWebModules.md#webmodulerowversion) | byte[] |  
+| [ObjectVersion](Applications.Cms.NewsWebModules.md#objectversion) | int32 |  
 
 ## References
 
@@ -104,17 +103,11 @@ _Supported Filters_: **Like**
 _Supports Order By_: **False**  
 _Maximum Length_: **512**  
 
-### RowVersion
+### ObjectVersion
 
-_Type_: **byte[]**  
+_Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-
-### WebModuleRowVersion
-
-_Type_: **byte[]**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Supports Order By_: ****  
 
 
 ## Reference Details

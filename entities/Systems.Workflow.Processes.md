@@ -29,7 +29,7 @@ Aggregate Tree
 | [IsLandscape](Systems.Workflow.Processes.md#islandscape) | boolean | Specifies whether the process diagram is intended to be viewed in landscape mode. `Required` `Default(true)` 
 | [Name](Systems.Workflow.Processes.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | The name of this Process. `Required` `Filter(eq;like)` 
 | [Notes](Systems.Workflow.Processes.md#notes) | string (2000) __nullable__ | Notes for this Process. 
-| [RowVersion](Systems.Workflow.Processes.md#rowversion) | byte[] |  
+| [ObjectVersion](Systems.Workflow.Processes.md#objectversion) | int32 |  
 | [SchemaFormat](Systems.Workflow.Processes.md#schemaformat) | string (1) | Application specific format of the Schema Layout. `Required` `Default("D")` 
 | [SchemaLayout](Systems.Workflow.Processes.md#schemalayout) | string (max) | Contains the actual presentation layout of the business process. The layout is stored in the format, specified by Schema Format. `Required` 
 | [StartEvent](Systems.Workflow.Processes.md#startevent) | string (3) __nullable__ | USR=User created; EML=Email receive (still not supported). null means that there is no starting event for this process. 
@@ -91,11 +91,11 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Maximum Length_: **2000**  
 
-### RowVersion
+### ObjectVersion
 
-_Type_: **byte[]**  
+_Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Supports Order By_: ****  
 
 ### SchemaFormat
 

@@ -28,6 +28,7 @@ Aggregate Root:
 | [CanDelete](Systems.Security.UserAccessKeys.md#candelete) | boolean | Obsolete. Not used. `Required` 
 | [CanUpdate](Systems.Security.UserAccessKeys.md#canupdate) | boolean | Obsolete. Not used. `Required` 
 | [Id](Systems.Security.UserAccessKeys.md#id) | guid |  
+| [ObjectVersion](Systems.Security.UserAccessKeys.md#objectversion) | int32 |  
 | [Permission1](Systems.Security.UserAccessKeys.md#permission1) | boolean | Obsolete. Not used. `Required` `Default(false)` 
 | [Permission10](Systems.Security.UserAccessKeys.md#permission10) | boolean | Obsolete. Not used. `Required` `Default(false)` 
 | [Permission2](Systems.Security.UserAccessKeys.md#permission2) | boolean | Obsolete. Not used. `Required` `Default(false)` 
@@ -38,7 +39,6 @@ Aggregate Root:
 | [Permission7](Systems.Security.UserAccessKeys.md#permission7) | boolean | Obsolete. Not used. `Required` `Default(false)` 
 | [Permission8](Systems.Security.UserAccessKeys.md#permission8) | boolean | Obsolete. Not used. `Required` `Default(false)` 
 | [Permission9](Systems.Security.UserAccessKeys.md#permission9) | boolean | Obsolete. Not used. `Required` `Default(false)` 
-| [RowVersion](Systems.Security.UserAccessKeys.md#rowversion) | byte[] |  
 
 ## References
 
@@ -72,6 +72,12 @@ _Type_: **guid**
 _Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
+
+### ObjectVersion
+
+_Type_: **int32**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Permission1
 
@@ -162,12 +168,6 @@ _Type_: **boolean**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **False**  
-
-### RowVersion
-
-_Type_: **byte[]**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
 
 
 ## Reference Details

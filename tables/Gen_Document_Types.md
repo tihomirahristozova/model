@@ -11,6 +11,7 @@ List of user-defined document types. Each type has associated system entity (obj
 
 | Name | Type | Description |
 | - | - | --- |
+|[__Object_Version](#__object_version)|`int` ||
 |[Access_Key_Id](#access_key_id)|`uniqueidentifier` ||
 |[Code](#code)|`nvarchar(16)` |Unique descriptive code of the document type|
 |[Create_Fulfillments_on_Completion](#create_fulfillments_on_completion)|`bit` |When document state is changed to Completed, creates completed document fulfillments for the parent document. Used only for logistic documents.|
@@ -28,6 +29,33 @@ List of user-defined document types. Each type has associated system entity (obj
 |[Type_Name](#type_name)|`nvarchar(254)` `ML`|Description of the document type|
 
 ## Columns
+
+### __Object_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 ### Access_Key_Id
 

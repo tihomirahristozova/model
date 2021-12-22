@@ -11,6 +11,7 @@ Contains the approved Intrastat commodity codes for each period. Entity: Its_Com
 
 | Name | Type | Description |
 | - | - | --- |
+|[__Object_Version](#__object_version)|`int` ||
 |[Commodity_Code](#commodity_code)|`nvarchar(8)` |Product code from the Intrastat Combined nomenclature|
 |[Description](#description)|`nvarchar(4000)` `ML`|Description of the product code from the Intrastat Combined nomenclature|
 |[Excise_Alcoholic_Strength](#excise_alcoholic_strength)|`decimal(5, 2)` |Specifies the alcoholic strength for excise products (if applicable).|
@@ -22,6 +23,33 @@ Contains the approved Intrastat commodity codes for each period. Entity: Its_Com
 |[Valid_To](#valid_to)|`date` |The ending date of validity of this code.|
 
 ## Columns
+
+### __Object_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 ### Commodity_Code
 

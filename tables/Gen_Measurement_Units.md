@@ -15,6 +15,7 @@ Contains all measurement units, grouped in categories. Each category has one bas
 
 | Name | Type | Description |
 | - | - | --- |
+|[__Object_Version](#__object_version)|`int` ||
 |[Description](#description)|`nvarchar(max)` `ML`|Full multi-language description of the measurement unit.|
 |[Divisor](#divisor)|`decimal(9, 3)` |Divisor of the relative value of the measurement unit against other units (divisor when converting to base)|
 |[Id](#id)|`uniqueidentifier` `PK`|Unique measurement unit Id|
@@ -27,6 +28,33 @@ Contains all measurement units, grouped in categories. Each category has one bas
 |[System_Unit](#system_unit)|`nvarchar(1)` Allowed: `G`, `H`, `L`, `N`, `P`, `V`, `W`, `T`|Not NULL only when this is one of the system measurement units. N=NetKG; G=GrossKG; V=VolumeL; H=HeightM; W=WidthM, L=LengthM, P=Piece, T=TimeH|
 
 ## Columns
+
+### __Object_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 ### Description
 

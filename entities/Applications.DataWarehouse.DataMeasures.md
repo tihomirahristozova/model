@@ -29,6 +29,7 @@ Aggregate Tree
 | [Id](Applications.DataWarehouse.DataMeasures.md#id) | guid |  
 | [Name](Applications.DataWarehouse.DataMeasures.md#name) | string (254) | The name of the measure (multilanguage). `Required` `Filter(eq;like)` 
 | [Notes](Applications.DataWarehouse.DataMeasures.md#notes) | string (max) __nullable__ | Notes for this DataMeasure. 
+| [ObjectVersion](Applications.DataWarehouse.DataMeasures.md#objectversion) | int32 |  
 | [Period](Applications.DataWarehouse.DataMeasures.md#period) | [Period](Applications.DataWarehouse.DataMeasures.md#period) | The period for which the data is collected. D=Day, M=Month, Q=Quarter, Y=Year. `Required` `Default("Q")` `Filter(eq)` 
 
 ## References
@@ -92,6 +93,12 @@ _Type_: **string (max) __nullable__**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
+
+### ObjectVersion
+
+_Type_: **int32**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Period
 

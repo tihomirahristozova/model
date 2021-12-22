@@ -28,9 +28,9 @@ Aggregate Root:
 | [ContentsDescription](Logistics.Shipment.TransportationRequisitionLines.md#contentsdescription) | string (128) | Textual description of the cargo contents. `Required` 
 | [Id](Logistics.Shipment.TransportationRequisitionLines.md#id) | guid |  
 | [LineNo](Logistics.Shipment.TransportationRequisitionLines.md#lineno) | int32 | Line number, unique within the TransportationRequisition. Usually is increasing number like 10, 20, 30, ... when initially entering the TransportationRequisition (in order to allow insertions with adjustment documents). `Required` `Filter(eq)` 
+| [ObjectVersion](Logistics.Shipment.TransportationRequisitionLines.md#objectversion) | int32 |  
 | [PalletsCount](Logistics.Shipment.TransportationRequisitionLines.md#palletscount) | int32 __nullable__ | Number of palettes comprising the cargo. null when it is unknown. 
 | [ParentLineNo](Logistics.Shipment.TransportationRequisitionLines.md#parentlineno) | int32 __nullable__ | The number of the line within the parent document, which the current line executes. null when the current line does not execute another line. `Filter(eq)` 
-| [RowVersion](Logistics.Shipment.TransportationRequisitionLines.md#rowversion) | byte[] |  
 | [VolumeCbm](Logistics.Shipment.TransportationRequisitionLines.md#volumecbm) | int32 __nullable__ | The volume of the cargo, in CBM (cubic meters). null when it is unknown. 
 | [WeightKg](Logistics.Shipment.TransportationRequisitionLines.md#weightkg) | int32 __nullable__ | The weight of the cargo, in KG (kilogramms). null when it is unknown. 
 
@@ -75,6 +75,12 @@ _Back-End Default Expression:_
 
 _Front-End Recalc Expressions:_  
 `( obj.TransportationRequisition.Lines.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)`
+### ObjectVersion
+
+_Type_: **int32**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+
 ### PalletsCount
 
 Number of palettes comprising the cargo. null when it is unknown.
@@ -89,12 +95,6 @@ The number of the line within the parent document, which the current line execut
 
 _Type_: **int32 __nullable__**  
 _Supported Filters_: **Equals**  
-_Supports Order By_: **False**  
-
-### RowVersion
-
-_Type_: **byte[]**  
-_Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
 ### VolumeCbm

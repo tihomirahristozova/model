@@ -130,6 +130,11 @@ Default Search Members:<br>
 <td>Notes for this ProjectTask.</td>
 </tr>
 <tr>
+<td><a href="Projects.ProjectTasks.html#objectversion">ObjectVersion</a></td>
+<td>int32</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="Projects.ProjectTasks.html#planneddurationhours">PlannedDurationHours</a></td>
 <td>decimal (8, 2)</td>
 <td>Planned duration of the task in hours. The hours are allocated in the time interval between Start Date Time and Finish Date Time. <code>Required</code> <code>Default(0)</code></td>
@@ -138,11 +143,6 @@ Default Search Members:<br>
 <td><a href="Projects.ProjectTasks.html#projecttaskno">ProjectTaskNo</a></td>
 <td>int32</td>
 <td>Consecutive task number, unique within the project. <code>Required</code></td>
-</tr>
-<tr>
-<td><a href="Projects.ProjectTasks.html#rowversion">RowVersion</a></td>
-<td>byte[]</td>
-<td></td>
 </tr>
 <tr>
 <td><a href="Projects.ProjectTasks.html#startdatetime">StartDateTime</a></td>
@@ -260,6 +260,10 @@ Default Search Members:<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>2147483647</strong></p>
+<h3 id="objectversion">ObjectVersion</h3>
+<p><em>Type</em>: <strong>int32</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****</p>
 <h3 id="planneddurationhours">PlannedDurationHours</h3>
 <p>Planned duration of the task in hours. The hours are allocated in the time interval between Start Date Time and Finish Date Time. <code>Required</code> <code>Default(0)</code></p>
 <p><em>Type</em>: <strong>decimal (8, 2)</strong><br>
@@ -269,10 +273,6 @@ Default Search Members:<br>
 <h3 id="projecttaskno">ProjectTaskNo</h3>
 <p>Consecutive task number, unique within the project. <code>Required</code></p>
 <p><em>Type</em>: <strong>int32</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
-<h3 id="rowversion">RowVersion</h3>
-<p><em>Type</em>: <strong>byte[]</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="startdatetime">StartDateTime</h3>

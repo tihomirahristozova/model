@@ -15,6 +15,7 @@ Represents one fund transfer from one payment account to another. Entity: Cash_T
 
 | Name | Type | Description |
 | - | - | --- |
+|[__Object_Version](#__object_version)|`int` ||
 |[Destination_Amount](#destination_amount)|`decimal(18, 2)` |The amount in the currency of the destination account|
 |[Destination_Payment_Account_Id](#destination_payment_account_id)|`uniqueidentifier` |The account to which to transfer the amount|
 |[Document_Id](#document_id)|`uniqueidentifier` ||
@@ -26,6 +27,33 @@ Represents one fund transfer from one payment account to another. Entity: Cash_T
 |[Transfer_Id](#transfer_id)|`uniqueidentifier` `PK`||
 
 ## Columns
+
+### __Object_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 ### Destination_Amount
 

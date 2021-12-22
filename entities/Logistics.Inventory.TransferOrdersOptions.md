@@ -9,7 +9,7 @@ Options per document type for the transfer orders. Entity: Inv_Transfer_Orders_O
 
 ## Default Visualization
 Default Display Text Format:  
-_{Id}: {DocumentTypeId}_  
+_{Id}: {ObjectVersion}_  
 Default Search Members:  
 __  
 
@@ -25,7 +25,7 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [AvailableQuantityOnly](Logistics.Inventory.TransferOrdersOptions.md#availablequantityonly) | boolean | Specifies, that transfer orders of this document type will be allowed to be released only when the requested quantity is less than the available (ATP) quantity. `Required` `Default(false)` `Filter(eq)` 
 | [Id](Logistics.Inventory.TransferOrdersOptions.md#id) | guid |  
-| [RowVersion](Logistics.Inventory.TransferOrdersOptions.md#rowversion) | byte[] |  
+| [ObjectVersion](Logistics.Inventory.TransferOrdersOptions.md#objectversion) | int32 |  
 
 ## References
 
@@ -52,11 +52,11 @@ _Indexed_: **True**
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
-### RowVersion
+### ObjectVersion
 
-_Type_: **byte[]**  
+_Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Supports Order By_: ****  
 
 
 ## Reference Details

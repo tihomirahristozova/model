@@ -9,7 +9,7 @@ User post in a social group. Entity: Cmm_Social_Posts (Introduced in version 20.
 
 ## Default Visualization
 Default Display Text Format:  
-_{Id}: {SocialGroupId}_  
+_{Id}: {ObjectVersion}_  
 Default Search Members:  
 __  
 
@@ -26,8 +26,8 @@ Aggregate Tree
 | [CreationTimeUtc](Communities.SocialPosts.md#creationtimeutc) | datetime | The exact server time (in UTC), when the post was created. `Required` 
 | [Id](Communities.SocialPosts.md#id) | guid |  
 | [LastInteractionTimeUtc](Communities.SocialPosts.md#lastinteractiontimeutc) | datetime | The server time (in UTC) of the last interaction with the post, including comments, replies, likes, etc. `Required` 
+| [ObjectVersion](Communities.SocialPosts.md#objectversion) | int32 |  
 | [PostText](Communities.SocialPosts.md#posttext) | string (max) | The post contents in clear text. `Required` 
-| [RowVersion](Communities.SocialPosts.md#rowversion) | byte[] |  
 
 ## References
 
@@ -62,6 +62,12 @@ _Type_: **datetime**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
+### ObjectVersion
+
+_Type_: **int32**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+
 ### PostText
 
 The post contents in clear text. `Required`
@@ -70,12 +76,6 @@ _Type_: **string (max)**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
-
-### RowVersion
-
-_Type_: **byte[]**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
 
 
 ## Reference Details

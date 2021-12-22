@@ -118,14 +118,14 @@ Aggregate Root:<br>
 <td></td>
 </tr>
 <tr>
+<td><a href="Systems.Core.ObjectChanges.html#objectversion">ObjectVersion</a></td>
+<td>int32</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="Systems.Core.ObjectChanges.html#repositoryname">RepositoryName</a></td>
 <td>string (64)</td>
 <td>The repository of the actual changed object, described by this change. This is different than the aggregate root, which is pointed by Root Object. <code>Required</code> <code>Filter(multi eq;like)</code></td>
-</tr>
-<tr>
-<td><a href="Systems.Core.ObjectChanges.html#rowversion">RowVersion</a></td>
-<td>byte[] <strong>nullable</strong></td>
-<td></td>
 </tr>
 </tbody>
 </table>
@@ -191,16 +191,16 @@ Allowed values for the <code>ChangeType</code>(Systems.Core.ObjectChanges.md#cha
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
+<h3 id="objectversion">ObjectVersion</h3>
+<p><em>Type</em>: <strong>int32</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****</p>
 <h3 id="repositoryname">RepositoryName</h3>
 <p>The repository of the actual changed object, described by this change. This is different than the aggregate root, which is pointed by Root Object. <code>Required</code> <code>Filter(multi eq;like)</code></p>
 <p><em>Type</em>: <strong>string (64)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>64</strong></p>
-<h3 id="rowversion">RowVersion</h3>
-<p><em>Type</em>: <strong>byte[] <strong>nullable</strong></strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="objectchangeset">ObjectChangeset</h3>
 <p>The changeset containing this change. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>

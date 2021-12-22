@@ -28,7 +28,7 @@ Aggregate Root:
 | [Id](Crm.Marketing.CompetitorSolutions.md#id) | guid |  
 | [Name](Crm.Marketing.CompetitorSolutions.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Multi-language string. `Required` `Filter(like)` 
 | [Notes](Crm.Marketing.CompetitorSolutions.md#notes) | string (max) __nullable__ | Notes for this CompetitorSolution. 
-| [RowVersion](Crm.Marketing.CompetitorSolutions.md#rowversion) | byte[] |  
+| [ObjectVersion](Crm.Marketing.CompetitorSolutions.md#objectversion) | int32 |  
 
 ## References
 
@@ -66,11 +66,11 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
 
-### RowVersion
+### ObjectVersion
 
-_Type_: **byte[]**  
+_Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Supports Order By_: ****  
 
 
 ## Reference Details

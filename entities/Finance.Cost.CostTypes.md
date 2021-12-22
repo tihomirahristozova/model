@@ -26,7 +26,7 @@ Aggregate Tree
 | [Code](Finance.Cost.CostTypes.md#code) | string (10) | Unique cost type code. Used for charting. `Required` `Filter(eq)` `ORD` 
 | [Id](Finance.Cost.CostTypes.md#id) | guid |  
 | [Name](Finance.Cost.CostTypes.md#name) | string (254) | Multilanguage cost type name. `Required` `Filter(like)` 
-| [RowVersion](Finance.Cost.CostTypes.md#rowversion) | byte[] |  
+| [ObjectVersion](Finance.Cost.CostTypes.md#objectversion) | int32 |  
 
 
 ## Attribute Details
@@ -57,11 +57,11 @@ _Supported Filters_: **Like**
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
 
-### RowVersion
+### ObjectVersion
 
-_Type_: **byte[]**  
+_Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Supports Order By_: ****  
 
 
 

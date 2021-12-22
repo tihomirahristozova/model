@@ -29,7 +29,7 @@ Aggregate Tree
 | [Id](Finance.Accounting.AccountGroups.md#id) | guid |  
 | [Name](Finance.Accounting.AccountGroups.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Account group name, required. Must be unique within the parent group. `Required` `Filter(like)` 
 | [Number](Finance.Accounting.AccountGroups.md#number) | string (30) | Unique account group number. May contain characters, if required. `Required` `Filter(like)` `ORD` 
-| [RowVersion](Finance.Accounting.AccountGroups.md#rowversion) | byte[] |  
+| [ObjectVersion](Finance.Accounting.AccountGroups.md#objectversion) | int32 |  
 
 ## References
 
@@ -91,11 +91,11 @@ _Supported Filters_: **Like**
 _Supports Order By_: **True**  
 _Maximum Length_: **30**  
 
-### RowVersion
+### ObjectVersion
 
-_Type_: **byte[]**  
+_Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Supports Order By_: ****  
 
 
 ## Reference Details

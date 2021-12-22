@@ -11,6 +11,7 @@ Contains user-specified default values for columns in data entry forms. Entity: 
 
 | Name | Type | Description |
 | - | - | --- |
+|[__Object_Version](#__object_version)|`int` ||
 |[Column_Name](#column_name)|`nvarchar(64)` |The column for which the default is specified|
 |[Condition_Document_Type_Id](#condition_document_type_id)|`uniqueidentifier` |If not NULL specifies that the default should be applied only if Document_Type_Id equals this value|
 |[Condition_Enterprise_Company_Id](#condition_enterprise_company_id)|`uniqueidentifier` |If not NULL specifies that the default should be applied only if Enterprise_Company_Id equals this value|
@@ -25,6 +26,33 @@ Contains user-specified default values for columns in data entry forms. Entity: 
 |[Table_Name](#table_name)|`nvarchar(64)` |The table, containing the column for which the default value is specified.|
 
 ## Columns
+
+### __Object_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 ### Column_Name
 

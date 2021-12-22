@@ -15,6 +15,7 @@ Represents sets of vehicles, which can travel together. Entity: Fleet_Vehicle_Se
 
 | Name | Type | Description |
 | - | - | --- |
+|[__Object_Version](#__object_version)|`int` ||
 |[Active](#active)|`bit` |1 if the vehicle set is active for choosing; 0 - otherwise|
 |[Enterprise_Company_Id](#enterprise_company_id)|`uniqueidentifier` |The enterprise company operating the vehicle set|
 |[Row_Version](#row_version)|`timestamp` ||
@@ -22,6 +23,33 @@ Represents sets of vehicles, which can travel together. Entity: Fleet_Vehicle_Se
 |[Vehicle_Set_Name](#vehicle_set_name)|`nvarchar(128)` `ML`|Name of the vehicle set (Multilanguage)|
 
 ## Columns
+
+### __Object_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 ### Active
 

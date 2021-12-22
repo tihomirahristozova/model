@@ -128,6 +128,11 @@ Aggregate Root:<br>
 <td>User comments for the principal recipe.</td>
 </tr>
 <tr>
+<td><a href="Production.Technologies.PrincipalRecipes.html#objectversion">ObjectVersion</a></td>
+<td>int32</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="Production.Technologies.PrincipalRecipes.html#producequantity">ProduceQuantity</a></td>
 <td><a href="../data-types.html#quantity">Quantity (18, 3)</a></td>
 <td>Suggested quantity to produce. Usually it is equal to 1. <code>Unit: ProduceUnit</code> <code>Required</code> <code>Default(1)</code> <code>Filter(ge;le)</code></td>
@@ -136,11 +141,6 @@ Aggregate Root:<br>
 <td><a href="Production.Technologies.PrincipalRecipes.html#releasedate">ReleaseDate</a></td>
 <td>datetime</td>
 <td>The date, when the recipe model is released for use. <code>Required</code> <code>Default(Today)</code> <code>Filter(ge;le)</code></td>
-</tr>
-<tr>
-<td><a href="Production.Technologies.PrincipalRecipes.html#rowversion">RowVersion</a></td>
-<td>byte[]</td>
-<td></td>
 </tr>
 <tr>
 <td><a href="Production.Technologies.PrincipalRecipes.html#scraprate">ScrapRate</a></td>
@@ -222,6 +222,10 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>254</strong></p>
+<h3 id="objectversion">ObjectVersion</h3>
+<p><em>Type</em>: <strong>int32</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****</p>
 <h3 id="producequantity">ProduceQuantity</h3>
 <p>Suggested quantity to produce. Usually it is equal to 1. <code>Unit: ProduceUnit</code> <code>Required</code> <code>Default(1)</code> <code>Filter(ge;le)</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a></strong><br>
@@ -234,10 +238,6 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>CurrentDate</strong></p>
-<h3 id="rowversion">RowVersion</h3>
-<p><em>Type</em>: <strong>byte[]</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="scraprate">ScrapRate</h3>
 <p>The percentage (0..1) of scrap usually occurring during the production operations. Specifying this leads to inflated requirements of all raw materials for the recipe. <code>Required</code> <code>Default(0)</code></p>
 <p><em>Type</em>: <strong>decimal (7, 6)</strong><br>

@@ -32,11 +32,11 @@ Aggregate Tree
 | [IsDefault](Production.Technologies.Recipes.md#isdefault) | boolean | Default for period: Release_Date - Expiry_Date. `Required` `Default(false)` `Filter(eq)` 
 | [Name](Production.Technologies.Recipes.md#name) | string (64) | The name of the recipe. When there is only 1 recipe, it is often equal to the product name. However, when there are multiple recipes for one product, the name is used for diferentiation. `Required` `Filter(like)` 
 | [Notes](Production.Technologies.Recipes.md#notes) | string (254) __nullable__ | User comments for the recipe. 
+| [ObjectVersion](Production.Technologies.Recipes.md#objectversion) | int32 |  
 | [Price](Production.Technologies.Recipes.md#price) | [Amount (18, 4)](../data-types.md#amount) | The price for the specified Produce_Quantity. `Currency: Product.CostingCurrency` `Required` `Default(0)` 
 | [PricePerLot](Production.Technologies.Recipes.md#priceperlot) | [Amount (18, 4)](../data-types.md#amount) | Price for one lot of the product (according to Lot_Size_Quantity_Base). `Currency: Product.CostingCurrency` `Required` `Default(0)` 
 | [ProduceQuantity](Production.Technologies.Recipes.md#producequantity) | [Quantity (18, 3)](../data-types.md#quantity) | Lot size. This is the produced quantity in one production run. The quantity is measured in the primary unit of Product_Id. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Default(1)` 
 | [ReleaseDate](Production.Technologies.Recipes.md#releasedate) | datetime | The date, when the recipe was released to production. `Required` `Default(Today)` `Filter(ge;le)` 
-| [RowVersion](Production.Technologies.Recipes.md#rowversion) | byte[] |  
 | [ScrapRate](Production.Technologies.Recipes.md#scraprate) | decimal (7, 6) | The percentage (0..1) of scrap usually occurring during the operation. Specifying this leads to inflated requirements of all raw materials for this recipe. `Required` `Default(0)` 
 | [UpdateTime](Production.Technologies.Recipes.md#updatetime) | datetime __nullable__ | Date and time when the Recipe was last updated. `Filter(ge;le)` `ReadOnly` 
 | [UpdateUser](Production.Technologies.Recipes.md#updateuser) | string (64) __nullable__ | Login name of the user, who last updated the Recipe. `Filter(like)` `ReadOnly` 
@@ -119,6 +119,12 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
 
+### ObjectVersion
+
+_Type_: **int32**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+
 ### Price
 
 The price for the specified Produce_Quantity. `Currency: Product.CostingCurrency` `Required` `Default(0)`
@@ -154,12 +160,6 @@ _Type_: **datetime**
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **CurrentDate**  
-
-### RowVersion
-
-_Type_: **byte[]**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
 
 ### ScrapRate
 

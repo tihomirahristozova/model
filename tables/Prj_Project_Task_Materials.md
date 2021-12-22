@@ -15,6 +15,7 @@ Contains the materials, which are required for a project task. Entity: Prj_Proje
 
 | Name | Type | Description |
 | - | - | --- |
+|[__Object_Version](#__object_version)|`int` ||
 |[Budgeted_Material_Amount](#budgeted_material_amount)|`decimal(12, 2)` |Budgeted amount for the material in the currency of the project. NULL means there is still no budgeted amount|
 |[Line_Number](#line_number)|`int` |Line number within the task, increased in steps of 10. Used for sorting purposes|
 |[Material_Product_Id](#material_product_id)|`uniqueidentifier` |The product Id of the required material|
@@ -26,6 +27,33 @@ Contains the materials, which are required for a project task. Entity: Prj_Proje
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
+
+### __Object_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 ### Budgeted_Material_Amount
 

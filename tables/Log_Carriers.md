@@ -11,6 +11,7 @@ Represents a carrier agreement. One actual carrier can have different agreements
 
 | Name | Type | Description |
 | - | - | --- |
+|[__Object_Version](#__object_version)|`int` ||
 |[Agreement_End_Date](#agreement_end_date)|`date` |The ending date of the agreement with this carrier. NULL for agreements which are still active.|
 |[Agreement_Start_Date](#agreement_start_date)|`date` |The start date of the agreement with this carrier.|
 |[Carrier_Id](#carrier_id)|`uniqueidentifier` `PK`||
@@ -22,6 +23,33 @@ Represents a carrier agreement. One actual carrier can have different agreements
 |[Supplier_Id](#supplier_id)|`uniqueidentifier` |The supplier contract with the carrier.|
 
 ## Columns
+
+### __Object_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 ### Agreement_End_Date
 

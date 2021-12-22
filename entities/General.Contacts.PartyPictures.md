@@ -29,9 +29,9 @@ Aggregate Root:
 | [Id](General.Contacts.PartyPictures.md#id) | guid |  
 | [IsDefault](General.Contacts.PartyPictures.md#isdefault) | boolean | True=This is the default picture for the party; false=otherwise. `Required` `Default(false)` `Filter(eq)` 
 | [IsLogo](General.Contacts.PartyPictures.md#islogo) | boolean | If checked specifies that this picture is used to visualize the logo of this party in the system. `Required` `Default(false)` `Filter(eq)` 
+| [ObjectVersion](General.Contacts.PartyPictures.md#objectversion) | int32 |  
 | [Picture](General.Contacts.PartyPictures.md#picture) | byte[] __nullable__ | The actual party picture data. Can be null if we insert only some comments. 
 | [PictureNo](General.Contacts.PartyPictures.md#pictureno) | int32 | Unique picture number within the party. Also used for sorting. `Required` `Filter(eq)` 
-| [RowVersion](General.Contacts.PartyPictures.md#rowversion) | byte[] |  
 
 ## References
 
@@ -78,6 +78,12 @@ _Supported Filters_: **Equals**
 _Supports Order By_: **False**  
 _Default Value_: **False**  
 
+### ObjectVersion
+
+_Type_: **int32**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+
 ### Picture
 
 The actual party picture data. Can be null if we insert only some comments.
@@ -99,12 +105,6 @@ _Back-End Default Expression:_
 
 _Front-End Recalc Expressions:_  
 `( obj.Party.Pictures.Select( c => c.PictureNo).DefaultIfEmpty( 0).Max( ) + 10)`
-### RowVersion
-
-_Type_: **byte[]**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-
 
 ## Reference Details
 

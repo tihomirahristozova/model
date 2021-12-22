@@ -15,6 +15,7 @@ Contains the headers of the Intrastat declarations, issued by the enterprise com
 
 | Name | Type | Description |
 | - | - | --- |
+|[__Object_Version](#__object_version)|`int` ||
 |[Authorized_Person_Id](#authorized_person_id)|`uniqueidentifier` |The authorized person who submits the intrastat declaration.|
 |[Declaration_Function](#declaration_function)|`nvarchar(1)` Allowed: `R`, `C`|Specifies whether this is a regular or corrective declaration. R=Regular, C=Corrective|
 |[Declare_Statistical_Values](#declare_statistical_values)|`bit` |Does the declaration contain statistical values? 1=Yes; 0=No|
@@ -30,6 +31,33 @@ Contains the headers of the Intrastat declarations, issued by the enterprise com
 |[Third_Declaring_Party_Id](#third_declaring_party_id)|`uniqueidentifier` |Third declaring party, which holds the electronic signature. This is the company which submits the declaration.|
 
 ## Columns
+
+### __Object_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 ### Authorized_Person_Id
 

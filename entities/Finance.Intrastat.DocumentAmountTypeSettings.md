@@ -28,7 +28,7 @@ Aggregate Root:
 | [AddToInvoicedValue](Finance.Intrastat.DocumentAmountTypeSettings.md#addtoinvoicedvalue) | boolean | True= to add the amount to the invoiced value, false=otherwise. `Required` `Default(false)` 
 | [AddToStatisticalValue](Finance.Intrastat.DocumentAmountTypeSettings.md#addtostatisticalvalue) | boolean | True= to add the amount to the statistical value, false=otherwise. `Required` `Default(false)` 
 | [Id](Finance.Intrastat.DocumentAmountTypeSettings.md#id) | guid |  
-| [RowVersion](Finance.Intrastat.DocumentAmountTypeSettings.md#rowversion) | byte[] |  
+| [ObjectVersion](Finance.Intrastat.DocumentAmountTypeSettings.md#objectversion) | int32 |  
 
 ## References
 
@@ -65,11 +65,11 @@ _Indexed_: **True**
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
-### RowVersion
+### ObjectVersion
 
-_Type_: **byte[]**  
+_Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Supports Order By_: ****  
 
 
 ## Reference Details

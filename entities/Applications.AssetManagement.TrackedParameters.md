@@ -28,7 +28,7 @@ Aggregate Tree
 | [IsActive](Applications.AssetManagement.TrackedParameters.md#isactive) | boolean | Specifies whether the parameter is active for choosing in drop downs. `Required` `Default(true)` `Filter(multi eq)` 
 | [Name](Applications.AssetManagement.TrackedParameters.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Multilanguage name of the asset parameter. `Required` `Filter(multi eq;like)` 
 | [Notes](Applications.AssetManagement.TrackedParameters.md#notes) | string (max) __nullable__ | Notes for this TrackedParameter. `Filter(like)` 
-| [RowVersion](Applications.AssetManagement.TrackedParameters.md#rowversion) | byte[] |  
+| [ObjectVersion](Applications.AssetManagement.TrackedParameters.md#objectversion) | int32 |  
 
 
 ## Attribute Details
@@ -76,11 +76,11 @@ _Supported Filters_: **Like**
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
 
-### RowVersion
+### ObjectVersion
 
-_Type_: **byte[]**  
+_Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Supports Order By_: ****  
 
 
 

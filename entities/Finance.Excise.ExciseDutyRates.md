@@ -9,7 +9,7 @@ Duty rates are specified by the taxation and customs authorities. They are the b
 
 ## Default Visualization
 Default Display Text Format:  
-_{Id}: {ExciseProductId}_  
+_{Id}: {ObjectVersion}_  
 Default Search Members:  
 __  
 
@@ -26,7 +26,7 @@ Aggregate Tree
 | [ExciseDutyRateField](Finance.Excise.ExciseDutyRates.md#excisedutyratefield) | decimal (10, 6) | The rate which should be applied for the specified product and purpose. `Required` `Default(0)` `Filter(eq;ge;le)` 
 | [Id](Finance.Excise.ExciseDutyRates.md#id) | guid |  
 | [Notes](Finance.Excise.ExciseDutyRates.md#notes) | string (max) __nullable__ | Notes for this ExciseDutyRate. 
-| [RowVersion](Finance.Excise.ExciseDutyRates.md#rowversion) | byte[] |  
+| [ObjectVersion](Finance.Excise.ExciseDutyRates.md#objectversion) | int32 |  
 
 ## References
 
@@ -64,11 +64,11 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
 
-### RowVersion
+### ObjectVersion
 
-_Type_: **byte[]**  
+_Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Supports Order By_: ****  
 
 
 ## Reference Details

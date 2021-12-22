@@ -28,7 +28,7 @@ Aggregate Root:
 | [Active](Applications.Fleet.VehicleSets.md#active) | boolean | True if the vehicle set is active for choosing; false - otherwise. `Required` `Default(true)` `Filter(eq)` 
 | [Id](Applications.Fleet.VehicleSets.md#id) | guid |  
 | [Name](Applications.Fleet.VehicleSets.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Name of the vehicle set (Multilanguage). `Required` `Filter(eq;like)` 
-| [RowVersion](Applications.Fleet.VehicleSets.md#rowversion) | byte[] |  
+| [ObjectVersion](Applications.Fleet.VehicleSets.md#objectversion) | int32 |  
 
 ## References
 
@@ -69,11 +69,11 @@ _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 
-### RowVersion
+### ObjectVersion
 
-_Type_: **byte[]**  
+_Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Supports Order By_: ****  
 
 
 ## Reference Details

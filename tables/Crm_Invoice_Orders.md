@@ -15,6 +15,7 @@ Invoice Orders can be created by different modules and order the creation of Inv
 
 | Name | Type | Description |
 | - | - | --- |
+|[__Object_Version](#__object_version)|`int` ||
 |[Apply_Date](#apply_date)|`datetime` |Apply date to be passed to the invoice. When not NULL specifies that the VAT entry should be applied for a different period than that specified by the document date.|
 |[Credit_Note_Description](#credit_note_description)|`nvarchar(254)` |Descriptions/reason for the credit note.|
 |[Credit_Note_Original_Invoice_Id](#credit_note_original_invoice_id)|`uniqueidentifier` |When the order is for credit note, may contain the original Invoice. NULL for normal orders or when the original document is unknown.|
@@ -37,6 +38,33 @@ Invoice Orders can be created by different modules and order the creation of Inv
 |[Sales_Order_Id](#sales_order_id)|`uniqueidentifier` |Default value and filter for the lines. Used to differenciate the invoice order for each sales order.|
 
 ## Columns
+
+### __Object_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 ### Apply_Date
 

@@ -28,8 +28,8 @@ Aggregate Tree
 | [InformationMessageType](Systems.Core.InformationMessages.md#informationmessagetype) | [InformationMessageType](Systems.Core.InformationMessages.md#informationmessagetype) | Type of the information message: 'INF' = Information, 'WRN' = Warning, Error = 'ERR'. `Required` `Default("INF")` `Filter(multi eq)` `ReadOnly` 
 | [MachineName](Systems.Core.InformationMessages.md#machinename) | string (128) | Machine name of the computer from which the process which creates the message has been initiated. `Required` `ReadOnly` 
 | [Message](Systems.Core.InformationMessages.md#message) | string (max) | The actual content of the information message. `Required` `Filter(like)` `ReadOnly` 
+| [ObjectVersion](Systems.Core.InformationMessages.md#objectversion) | int32 |  
 | [ProcessDescription](Systems.Core.InformationMessages.md#processdescription) | string (254) | Name or description of the process that creates the message. `Required` `Filter(eq;like)` `ReadOnly` 
-| [RowVersion](Systems.Core.InformationMessages.md#rowversion) | byte[] |  
 | [URL](Systems.Core.InformationMessages.md#url) | string (254) __nullable__ | URL of the record that has posted the information message. `Filter(eq)` 
 | [UserName](Systems.Core.InformationMessages.md#username) | string (128) | Login name of the user that has initiated the process which creates the message. `Required` `Filter(eq)` `ReadOnly` 
 
@@ -88,6 +88,12 @@ _Supported Filters_: **Like**
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
 
+### ObjectVersion
+
+_Type_: **int32**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+
 ### ProcessDescription
 
 Name or description of the process that creates the message. `Required` `Filter(eq;like)` `ReadOnly`
@@ -96,12 +102,6 @@ _Type_: **string (254)**
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
-
-### RowVersion
-
-_Type_: **byte[]**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
 
 ### URL
 

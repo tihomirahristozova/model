@@ -11,6 +11,7 @@ Defines the relationships between the parties. The data is preserved over time. 
 
 | Name | Type | Description |
 | - | - | --- |
+|[__Object_Version](#__object_version)|`int` ||
 |[From_Date](#from_date)|`datetime` |The starting date of the relationship. NULL means the date is the begining of the time|
 |[From_Party_Id](#from_party_id)|`uniqueidentifier` |The first party in the relationship|
 |[Notes](#notes)|`nvarchar(254)` ||
@@ -21,6 +22,33 @@ Defines the relationships between the parties. The data is preserved over time. 
 |[To_Party_Id](#to_party_id)|`uniqueidentifier` |The second party in the relationship|
 
 ## Columns
+
+### __Object_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 ### From_Date
 

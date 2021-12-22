@@ -15,6 +15,7 @@ Scheduled and released production orders. Each order can contain the production 
 
 | Name | Type | Description |
 | - | - | --- |
+|[__Object_Version](#__object_version)|`int` ||
 |[Completion_Date](#completion_date)|`datetime` |Scheduled date of completion. Specifies the date when the workorder was completed. NULL means that the order is not yet completed.|
 |[Default_Materials_Store_Id](#default_materials_store_id)|`uniqueidentifier` |Default materials store for the ingredients|
 |[Default_Output_Store_Id](#default_output_store_id)|`uniqueidentifier` |Default output store for the finished products|
@@ -31,6 +32,33 @@ Scheduled and released production orders. Each order can contain the production 
 |[Workgroup_Id](#workgroup_id)|`uniqueidentifier` |The workgroup which performs the operations|
 
 ## Columns
+
+### __Object_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 ### Completion_Date
 

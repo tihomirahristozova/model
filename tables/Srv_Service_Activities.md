@@ -16,6 +16,7 @@ Contains service activity headers. The service activities are the actual actions
 
 | Name | Type | Description |
 | - | - | --- |
+|[__Object_Version](#__object_version)|`int` ||
 |[Activity_Id](#activity_id)|`uniqueidentifier` |The base activity of the service activity. The activity contains the time frames, reminders, etc.|
 |[Credit_Limit_Override](#credit_limit_override)|`bit` |Specifies a value, which would be provided to SalesOrder.CreditLimitOverride, when generating SalesOrder.|
 |[Customer_Id](#customer_id)|`uniqueidentifier` |The receiver of the work|
@@ -30,6 +31,33 @@ Contains service activity headers. The service activities are the actual actions
 |[Store_Id](#store_id)|`uniqueidentifier` |The default store from which materials are taken|
 
 ## Columns
+
+### __Object_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 ### Activity_Id
 

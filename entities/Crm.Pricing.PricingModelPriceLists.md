@@ -28,7 +28,7 @@ Aggregate Root:
 | [Id](Crm.Pricing.PricingModelPriceLists.md#id) | guid |  
 | [LineNo](Crm.Pricing.PricingModelPriceLists.md#lineno) | int32 | The consecutive number of this price list within the pricing model. `Required` 
 | [MarginPercent](Crm.Pricing.PricingModelPriceLists.md#marginpercent) | decimal (6, 5) __nullable__ | Used, when the price will be automatically calculated as percentage difference from standard price. It is usually a negative value. null, when the price will not be automatically calculated in this way. 
-| [RowVersion](Crm.Pricing.PricingModelPriceLists.md#rowversion) | byte[] |  
+| [ObjectVersion](Crm.Pricing.PricingModelPriceLists.md#objectversion) | int32 |  
 
 ## References
 
@@ -68,11 +68,11 @@ _Type_: **decimal (6, 5) __nullable__**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
-### RowVersion
+### ObjectVersion
 
-_Type_: **byte[]**  
+_Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Supports Order By_: ****  
 
 
 ## Reference Details

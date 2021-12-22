@@ -32,7 +32,7 @@ Aggregate Tree
 | [Id](Applications.Cms.WebSites.md#id) | guid |  
 | [IsPublished](Applications.Cms.WebSites.md#ispublished) | boolean | Specifies whether the site is published for public Internet access. `Required` `Default(false)` `Filter(eq)` 
 | [Name](Applications.Cms.WebSites.md#name) | string (256) | Multilanguage web site name. `Required` `Filter(like)` 
-| [RowVersion](Applications.Cms.WebSites.md#rowversion) | byte[] |  
+| [ObjectVersion](Applications.Cms.WebSites.md#objectversion) | int32 |  
 
 ## References
 
@@ -85,11 +85,11 @@ _Supported Filters_: **Like**
 _Supports Order By_: **False**  
 _Maximum Length_: **256**  
 
-### RowVersion
+### ObjectVersion
 
-_Type_: **byte[]**  
+_Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Supports Order By_: ****  
 
 
 ## Reference Details

@@ -11,6 +11,7 @@ Entity: [Systems.External.PublicUsers](~/entities/Systems.External.PublicUsers.m
 
 | Name | Type | Description |
 | - | - | --- |
+|[__Object_Version](#__object_version)|`int` ||
 |[About_Me_Text](#about_me_text)|`nvarchar(1024)` |About me text, written by the user.|
 |[Address](#address)|`nvarchar(128)` |The primary address of the user. Can be specified with latin or local characters.|
 |[Alternate_Email](#alternate_email)|`nvarchar(64)` |Alternate email of the user. Can be used for backup email for password restore.|
@@ -38,6 +39,33 @@ Entity: [Systems.External.PublicUsers](~/entities/Systems.External.PublicUsers.m
 |[State](#state)|`nvarchar(64)` |The state of residence of the user within the country. Can be specified with latin or local characters.|
 
 ## Columns
+
+### __Object_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 ### About_Me_Text
 

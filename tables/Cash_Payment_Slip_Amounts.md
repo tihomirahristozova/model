@@ -16,6 +16,7 @@ Mass payment amount. Each record generates one payment transaction. Entity: Cash
 
 | Name | Type | Description |
 | - | - | --- |
+|[__Object_Version](#__object_version)|`int` ||
 |[Description](#description)|`nvarchar(254)` |Description of the payed amount. The numbers of the documents which are payed for example.|
 |[Direction](#direction)|`nvarchar(1)` Allowed: `I`, `R`|'I' for Payment issue, 'R' for payment receipt|
 |[Is_Party_Payment](#is_party_payment)|`bit` |Indicates whether the amount is payed or received by party or not (i.e. the amount is for fee, tax, etc.)|
@@ -30,6 +31,33 @@ Mass payment amount. Each record generates one payment transaction. Entity: Cash
 |[Total_Amount](#total_amount)|`decimal(18, 2)` |The total amount payed. The distribution of the amount amongst the payment orders for this party is specified with payment slip lines. If NULL the total amount is calculated as sum of the amounts in the payment slip lines.|
 
 ## Columns
+
+### __Object_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 ### Description
 

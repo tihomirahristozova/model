@@ -25,7 +25,7 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [ColumnName](Systems.Security.ColumnPermissions.md#columnname) | string (128) | The name of the secured column. `Required` `Filter(eq)` 
 | [Id](Systems.Security.ColumnPermissions.md#id) | guid |  
-| [RowVersion](Systems.Security.ColumnPermissions.md#rowversion) | byte[] |  
+| [ObjectVersion](Systems.Security.ColumnPermissions.md#objectversion) | int32 |  
 | [TableName](Systems.Security.ColumnPermissions.md#tablename) | string (128) | The table in which is the secured column. `Required` `Filter(eq)` `ORD` 
 
 ## References
@@ -53,11 +53,11 @@ _Indexed_: **True**
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
-### RowVersion
+### ObjectVersion
 
-_Type_: **byte[]**  
+_Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Supports Order By_: ****  
 
 ### TableName
 

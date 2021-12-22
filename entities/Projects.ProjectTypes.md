@@ -29,7 +29,7 @@ Aggregate Tree
 | [Id](Projects.ProjectTypes.md#id) | guid |  
 | [Name](Projects.ProjectTypes.md#name) | string (254) | The name of the project type. `Required` `Filter(eq;like)` 
 | [Notes](Projects.ProjectTypes.md#notes) | string (max) __nullable__ | Notes. 
-| [RowVersion](Projects.ProjectTypes.md#rowversion) | byte[] |  
+| [ObjectVersion](Projects.ProjectTypes.md#objectversion) | int32 |  
 
 ## References
 
@@ -73,11 +73,11 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
 
-### RowVersion
+### ObjectVersion
 
-_Type_: **byte[]**  
+_Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Supports Order By_: ****  
 
 
 ## Reference Details

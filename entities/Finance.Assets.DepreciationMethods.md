@@ -29,8 +29,8 @@ Aggregate Tree
 | [IsSystem](Finance.Assets.DepreciationMethods.md#issystem) | boolean | Is_System is True for those depreciation methods that are managed by the system via update procedures and cannot be edited by the user. `Required` `Default(false)` `Filter(eq)` `ReadOnly` 
 | [MonthsInAPeriod](Finance.Assets.DepreciationMethods.md#monthsinaperiod) | int32 | Number of equal valued months calculated with single application of the function. `Required` `Default(12)` 
 | [Name](Finance.Assets.DepreciationMethods.md#name) | string (254) | The name of this DepreciationMethod. `Required` `Filter(like)` 
+| [ObjectVersion](Finance.Assets.DepreciationMethods.md#objectversion) | int32 |  
 | [PeriodDeterminationMethod](Finance.Assets.DepreciationMethods.md#perioddeterminationmethod) | [PeriodDeterminationMethod](Finance.Assets.DepreciationMethods.md#perioddeterminationmethod) | Determines when the depreciation starts and when it ends. NM=Next_Month, CM=Current_Month, BD=By_Days. `Required` 
-| [RowVersion](Finance.Assets.DepreciationMethods.md#rowversion) | byte[] |  
 | [StartFromNextMonth](Finance.Assets.DepreciationMethods.md#startfromnextmonth) | boolean | When true, denotes that the depreciation starts from the month, following the month of deployment. When false, the depreciation starts from the same month. `Required` `Default(true)` `ReadOnly` 
 
 
@@ -98,6 +98,12 @@ _Supported Filters_: **Like**
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
 
+### ObjectVersion
+
+_Type_: **int32**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+
 ### PeriodDeterminationMethod
 
 Determines when the depreciation starts and when it ends. NM=Next_Month, CM=Current_Month, BD=By_Days. `Required`
@@ -112,12 +118,6 @@ _Allowed Values (Finance.Assets.DepreciationMethodsRepository.PeriodDeterminatio
 | CurrentMonth | CurrentMonth value. Stored as 'CM'. <br /> _Database Value:_ 'CM' <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'CurrentMonth' |
 | ByDays | ByDays value. Stored as 'BD'. <br /> _Database Value:_ 'BD' <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'ByDays' |
 
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-
-### RowVersion
-
-_Type_: **byte[]**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 

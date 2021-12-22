@@ -28,7 +28,7 @@ Aggregate Tree
 | [Id](Communities.SocialGroups.md#id) | guid |  
 | [Name](Communities.SocialGroups.md#name) | string (256) | Multilanguage name of the group. `Required` 
 | [Notes](Communities.SocialGroups.md#notes) | string (max) __nullable__ | Notes for this SocialGroup. 
-| [RowVersion](Communities.SocialGroups.md#rowversion) | byte[] |  
+| [ObjectVersion](Communities.SocialGroups.md#objectversion) | int32 |  
 
 ## Child Collections
 
@@ -74,11 +74,11 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
 
-### RowVersion
+### ObjectVersion
 
-_Type_: **byte[]**  
+_Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Supports Order By_: ****  
 
 
 

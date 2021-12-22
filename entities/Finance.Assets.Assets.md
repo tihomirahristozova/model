@@ -29,8 +29,8 @@ Aggregate Tree
 | [IsActive](Finance.Assets.Assets.md#isactive) | boolean | Checked if the assets is active and can be used in documents. The inactive assets can be used only for reports. `Required` `Default(true)` `Filter(eq)` 
 | [Name](Finance.Assets.Assets.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | The name of this Asset. `Required` `Filter(like)` 
 | [Notes](Finance.Assets.Assets.md#notes) | string (254) __nullable__ | Notes for this Asset. 
+| [ObjectVersion](Finance.Assets.Assets.md#objectversion) | int32 |  
 | [PurchaseDate](Finance.Assets.Assets.md#purchasedate) | datetime | Original purchase date of the asset. `Required` 
-| [RowVersion](Finance.Assets.Assets.md#rowversion) | byte[] |  
 | [SerialNumber](Finance.Assets.Assets.md#serialnumber) | string (30) __nullable__ | Serial number of the asset. `Filter(eq)` 
 
 ## References
@@ -97,17 +97,17 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
 
+### ObjectVersion
+
+_Type_: **int32**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+
 ### PurchaseDate
 
 Original purchase date of the asset. `Required`
 
 _Type_: **datetime**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-
-### RowVersion
-
-_Type_: **byte[]**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 

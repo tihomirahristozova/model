@@ -123,14 +123,14 @@ Aggregate Root:<br>
 <td></td>
 </tr>
 <tr>
+<td><a href="Logistics.Wms.WarehousePolicies.html#objectversion">ObjectVersion</a></td>
+<td>int32</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="Logistics.Wms.WarehousePolicies.html#policykind">PolicyKind</a></td>
 <td><a href="Logistics.Wms.WarehousePolicies.html#policykind">PolicyKind</a></td>
 <td>The kind of policy, which is being applied. <code>Required</code> <code>Filter(multi eq)</code></td>
-</tr>
-<tr>
-<td><a href="Logistics.Wms.WarehousePolicies.html#rowversion">RowVersion</a></td>
-<td>byte[]</td>
-<td></td>
 </tr>
 <tr>
 <td><a href="Logistics.Wms.WarehousePolicies.html#todate">ToDate</a></td>
@@ -203,6 +203,10 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>2147483647</strong></p>
+<h3 id="objectversion">ObjectVersion</h3>
+<p><em>Type</em>: <strong>int32</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****</p>
 <h3 id="policykind">PolicyKind</h3>
 <p>The kind of policy, which is being applied. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Logistics.Wms.WarehousePolicies.html#policykind">PolicyKind</a></strong><br>
@@ -247,10 +251,6 @@ Allowed values for the <code>PolicyKind</code>(Logistics.Wms.WarehousePolicies.m
 </tbody>
 </table>
 <p><em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
-<h3 id="rowversion">RowVersion</h3>
-<p><em>Type</em>: <strong>byte[]</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="todate">ToDate</h3>
 <p>When set, specifies the de-activation date of the policy. <code>Filter(eq;ge;le)</code></p>

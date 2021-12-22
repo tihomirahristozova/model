@@ -16,6 +16,7 @@ Contains details of executions of transportation order lines. Entity: Log_Transp
 
 | Name | Type | Description |
 | - | - | --- |
+|[__Object_Version](#__object_version)|`int` ||
 |[Execution_Date](#execution_date)|`date` |The date when the operation was executed.|
 |[Execution_Of_Transportation_Order_Line_Id](#execution_of_transportation_order_line_id)|`uniqueidentifier` |The transportation order line, which is executed.|
 |[Execution_Time](#execution_time)|`time` |The time when the operation was executed.|
@@ -31,6 +32,33 @@ Contains details of executions of transportation order lines. Entity: Log_Transp
 |[Weight_Kg](#weight_kg)|`int` |Cargo weight in kg, affected by this operation. NULL when unknown or N/A.|
 
 ## Columns
+
+### __Object_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 ### Execution_Date
 

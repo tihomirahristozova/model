@@ -28,9 +28,9 @@ Aggregate Root:
 | [Description](Projects.TemplateRisks.md#description) | string (max) __nullable__ | The description of this TemplateRisk. 
 | [Id](Projects.TemplateRisks.md#id) | guid |  
 | [ImpactPercent](Projects.TemplateRisks.md#impactpercent) | decimal (3, 2) | The impact of the risk to the project, expressed as percentage of the total project value. `Required` `Default(0)` 
+| [ObjectVersion](Projects.TemplateRisks.md#objectversion) | int32 |  
 | [ProbabilityPercent](Projects.TemplateRisks.md#probabilitypercent) | decimal (3, 2) | The probability of the risk occurring. `Required` `Default(0)` 
 | [RiskName](Projects.TemplateRisks.md#riskname) | string (254) | The name of the risk. `Required` 
-| [RowVersion](Projects.TemplateRisks.md#rowversion) | byte[] |  
 
 ## References
 
@@ -66,6 +66,12 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Default Value_: **0**  
 
+### ObjectVersion
+
+_Type_: **int32**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+
 ### ProbabilityPercent
 
 The probability of the risk occurring. `Required` `Default(0)`
@@ -83,12 +89,6 @@ _Type_: **string (254)**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
-
-### RowVersion
-
-_Type_: **byte[]**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
 
 
 ## Reference Details

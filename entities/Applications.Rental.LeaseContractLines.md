@@ -30,7 +30,7 @@ Aggregate Root:
 | [Id](Applications.Rental.LeaseContractLines.md#id) | guid |  
 | [LineNo](Applications.Rental.LeaseContractLines.md#lineno) | int32 | Consecutive number of the line within the lease contract. `Required` `Filter(eq;ge;le)` 
 | [LineNotes](Applications.Rental.LeaseContractLines.md#linenotes) | string (max) __nullable__ | Notes for this line. 
-| [RowVersion](Applications.Rental.LeaseContractLines.md#rowversion) | byte[] |  
+| [ObjectVersion](Applications.Rental.LeaseContractLines.md#objectversion) | int32 |  
 | [StartDate](Applications.Rental.LeaseContractLines.md#startdate) | date | Starting date of lease for this asset. `Required` `Filter(multi eq;ge;le)` 
 
 ## References
@@ -99,11 +99,11 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
 
-### RowVersion
+### ObjectVersion
 
-_Type_: **byte[]**  
+_Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Supports Order By_: ****  
 
 ### StartDate
 

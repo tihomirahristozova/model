@@ -26,8 +26,8 @@ Aggregate Tree
 | [Id](Finance.Accounting.CostCenters.md#id) | guid |  
 | [Name](Finance.Accounting.CostCenters.md#name) | string (254) | The name of this CostCenter. `Required` `Filter(like)` 
 | [Notes](Finance.Accounting.CostCenters.md#notes) | string (254) __nullable__ | Notes for this CostCenter. 
+| [ObjectVersion](Finance.Accounting.CostCenters.md#objectversion) | int32 |  
 | [RelativeWeight](Finance.Accounting.CostCenters.md#relativeweight) | decimal (18, 4) | The weight of this cost center, relative to the other cost centers within the same parent. The weight is used during cost distribution calculations. The sum of weights of all cost centers within a parent does not need to be 100, the ratio of total weight over weight is used. `Required` `Default(1)` 
-| [RowVersion](Finance.Accounting.CostCenters.md#rowversion) | byte[] |  
 
 ## References
 
@@ -64,6 +64,12 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
 
+### ObjectVersion
+
+_Type_: **int32**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+
 ### RelativeWeight
 
 The weight of this cost center, relative to the other cost centers within the same parent. The weight is used during cost distribution calculations. The sum of weights of all cost centers within a parent does not need to be 100, the ratio of total weight over weight is used. `Required` `Default(1)`
@@ -72,12 +78,6 @@ _Type_: **decimal (18, 4)**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **1**  
-
-### RowVersion
-
-_Type_: **byte[]**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
 
 
 ## Reference Details

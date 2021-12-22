@@ -9,7 +9,7 @@ Obsolete. Not used. Entity: Gen_Document_Manual_Distributed_Amounts
 
 ## Default Visualization
 Default Display Text Format:  
-_{Id}: {DocumentId}_  
+_{Id}: {ObjectVersion}_  
 Default Search Members:  
 __  
 
@@ -28,8 +28,8 @@ Aggregate Tree
 | [DocumentLineId](General.DocumentManualDistributedAmounts.md#documentlineid) | guid | Obsolete. Not used. `Required` `Filter(multi eq)` 
 | [Id](General.DocumentManualDistributedAmounts.md#id) | guid |  
 | [LinePercent](General.DocumentManualDistributedAmounts.md#linepercent) | decimal (7, 6) | Obsolete. Not used. `Required` 
+| [ObjectVersion](General.DocumentManualDistributedAmounts.md#objectversion) | int32 |  
 | [ProductId](General.DocumentManualDistributedAmounts.md#productid) | guid | Obsolete. Not used. `Required` `Filter(multi eq)` 
-| [RowVersion](General.DocumentManualDistributedAmounts.md#rowversion) | byte[] |  
 
 
 ## Attribute Details
@@ -69,18 +69,18 @@ _Type_: **decimal (7, 6)**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
+### ObjectVersion
+
+_Type_: **int32**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+
 ### ProductId
 
 Obsolete. Not used. `Required` `Filter(multi eq)`
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  
-
-### RowVersion
-
-_Type_: **byte[]**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
 
 
 

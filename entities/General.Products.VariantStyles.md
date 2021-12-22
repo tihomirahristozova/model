@@ -26,7 +26,7 @@ Aggregate Tree
 | [Code](General.Products.VariantStyles.md#code) | string (8) | Unique code of the style. Used to generate parts of bar-codes and in other coding schemes. `Required` `Filter(eq;like)` `ORD` 
 | [Id](General.Products.VariantStyles.md#id) | guid |  
 | [Name](General.Products.VariantStyles.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | The name of this VariantStyle. `Required` `Filter(eq;like)` `ORD` 
-| [RowVersion](General.Products.VariantStyles.md#rowversion) | byte[] |  
+| [ObjectVersion](General.Products.VariantStyles.md#objectversion) | int32 |  
 
 
 ## Attribute Details
@@ -57,11 +57,11 @@ _Indexed_: **True**
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
 
-### RowVersion
+### ObjectVersion
 
-_Type_: **byte[]**  
+_Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Supports Order By_: ****  
 
 
 

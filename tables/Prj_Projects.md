@@ -11,6 +11,7 @@ Contains the planned, running and completed projects of the enterprises. Entity:
 
 | Name | Type | Description |
 | - | - | --- |
+|[__Object_Version](#__object_version)|`int` ||
 |[Budgeting_Currency_Id](#budgeting_currency_id)|`uniqueidentifier` |The currency in which the project budget is calculated|
 |[Client_Party_Id](#client_party_id)|`uniqueidentifier` |The external or internal client of the project|
 |[Enterprise_Company_Id](#enterprise_company_id)|`uniqueidentifier` ||
@@ -26,6 +27,33 @@ Contains the planned, running and completed projects of the enterprises. Entity:
 |[Start_Date](#start_date)|`date` |Expected date, when the execution of the tasks will start. NULL means that the start date is still unknown|
 
 ## Columns
+
+### __Object_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 ### Budgeting_Currency_Id
 

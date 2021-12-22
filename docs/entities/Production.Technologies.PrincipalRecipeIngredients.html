@@ -133,8 +133,8 @@ Aggregate Root:<br>
 <td>The position of the line in the recipe model. <code>Required</code></td>
 </tr>
 <tr>
-<td><a href="Production.Technologies.PrincipalRecipeIngredients.html#rowversion">RowVersion</a></td>
-<td>byte[]</td>
+<td><a href="Production.Technologies.PrincipalRecipeIngredients.html#objectversion">ObjectVersion</a></td>
+<td>int32</td>
 <td></td>
 </tr>
 <tr>
@@ -251,10 +251,10 @@ Aggregate Root:<br>
 <code>( obj.PrincipalRecipe.Ingredients.Select( c =&gt; c.LineOrd).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>( obj.PrincipalRecipe.Ingredients.Select( c =&gt; c.LineOrd).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
-<h3 id="rowversion">RowVersion</h3>
-<p><em>Type</em>: <strong>byte[]</strong><br>
+<h3 id="objectversion">ObjectVersion</h3>
+<p><em>Type</em>: <strong>int32</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: ****</p>
 <h3 id="scraprate">ScrapRate</h3>
 <p>The usual percentage (0..1) of scrap of the raw material; inflates the requirements of this material for this recipe. <code>Required</code> <code>Default(0)</code> <code>Filter(ge;le)</code></p>
 <p><em>Type</em>: <strong>decimal (7, 6)</strong><br>

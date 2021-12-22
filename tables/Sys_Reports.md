@@ -11,6 +11,7 @@ User-defined reports. Reports retrieve data from data sources and present it in 
 
 | Name | Type | Description |
 | - | - | --- |
+|[__Object_Version](#__object_version)|`int` ||
 |[Data_Source_Id](#data_source_id)|`uniqueidentifier` |Report data source. If specified should be based on the query in Query_Name. NULL means that the report is based directly on the query|
 |[Layout_Format](#layout_format)|`nvarchar(32)` |Format specifier of the layout. Recognized by the application|
 |[Notes](#notes)|`nvarchar(512)` ||
@@ -25,6 +26,33 @@ User-defined reports. Reports retrieve data from data sources and present it in 
 |[Template_Priority](#template_priority)|`int` |Specifies the priority of the current report, relative to other reports. Used only when choosing which report to show as a template subreport, NULL otherwise.|
 
 ## Columns
+
+### __Object_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 ### Data_Source_Id
 

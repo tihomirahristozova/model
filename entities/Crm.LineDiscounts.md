@@ -9,7 +9,7 @@ Discount policies for sales documents. Entity: Crm_Line_Discounts
 
 ## Default Visualization
 Default Display Text Format:  
-_{Id}: {MaxQuantityValue}_  
+_{Id}: {ObjectVersion}_  
 Default Search Members:  
 __  
 
@@ -29,8 +29,8 @@ Aggregate Tree
 | [Id](Crm.LineDiscounts.md#id) | guid |  
 | [MaxQuantity](Crm.LineDiscounts.md#maxquantity) | [Quantity (18, 3)](../data-types.md#quantity) __nullable__ | Apply the discount only if the quantity sold is equal to or less than the specified here. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Filter(eq;ge;le)` 
 | [MinQuantity](Crm.LineDiscounts.md#minquantity) | [Quantity (18, 3)](../data-types.md#quantity) __nullable__ | Apply the discount only if the quantity sold is equal to or more than the specified here. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Filter(eq;ge;le)` 
+| [ObjectVersion](Crm.LineDiscounts.md#objectversion) | int32 |  
 | [Priority](Crm.LineDiscounts.md#priority) | [Priority](Crm.LineDiscounts.md#priority) | The priority of this discount policy. When selecting a discount for a sales document line, only the highest priority policy, matching the criteria is applied. `Required` `Default(3)` 
-| [RowVersion](Crm.LineDiscounts.md#rowversion) | byte[] |  
 | [ThruDate](Crm.LineDiscounts.md#thrudate) | datetime __nullable__ | Ending date (inclusive) of validity of the discount. If null, the discount is valid forever. `Filter(eq;ge;le)` 
 
 ## References
@@ -100,6 +100,12 @@ _Type_: **[Quantity (18, 3)](../data-types.md#quantity) __nullable__**
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
+### ObjectVersion
+
+_Type_: **int32**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+
 ### Priority
 
 The priority of this discount policy. When selecting a discount for a sales document line, only the highest priority policy, matching the criteria is applied. `Required` `Default(3)`
@@ -119,12 +125,6 @@ _Allowed Values (General.Priority Enum Members)_
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **3**  
-
-### RowVersion
-
-_Type_: **byte[]**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
 
 ### ThruDate
 

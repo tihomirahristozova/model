@@ -30,6 +30,7 @@ Aggregate Root:
 | [Id](Logistics.Shipment.TransportationExecutionLines.md#id) | guid |  
 | [LineNo](Logistics.Shipment.TransportationExecutionLines.md#lineno) | int32 | Consecutive line number within this execution. `Required` 
 | [Notes](Logistics.Shipment.TransportationExecutionLines.md#notes) | string (max) __nullable__ | Notes for this Transportation<br />ExecutionLine. 
+| [ObjectVersion](Logistics.Shipment.TransportationExecutionLines.md#objectversion) | int32 |  
 | [OperationType](Logistics.Shipment.TransportationExecutionLines.md#operationtype) | [OperationType](Logistics.Shipment.TransportationExecutionLines.md#operationtype) | The type of operation being executed. L=Loading; U=Unloading; O=Other. `Required` 
 | [PalletNumber](Logistics.Shipment.TransportationExecutionLines.md#palletnumber) | string (32) __nullable__ | Pallet number, when applicable. null when unknown or not applicable. 
 | [PalletsCount](Logistics.Shipment.TransportationExecutionLines.md#palletscount) | int32 __nullable__ | Number of pallets affected by this operation. null when unknown or N/A. 
@@ -102,6 +103,12 @@ _Type_: **string (max) __nullable__**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
+
+### ObjectVersion
+
+_Type_: **int32**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### OperationType
 

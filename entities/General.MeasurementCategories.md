@@ -27,7 +27,7 @@ Aggregate Tree
 | [Id](General.MeasurementCategories.md#id) | guid |  
 | [IsDefault](General.MeasurementCategories.md#isdefault) | boolean | True=This category is the default category; false=otherwise. `Required` `Default(false)` `Filter(eq)` 
 | [Name](General.MeasurementCategories.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | The name of this MeasurementCategory. `Required` `Filter(eq;like)` `ORD` 
-| [RowVersion](General.MeasurementCategories.md#rowversion) | byte[] |  
+| [ObjectVersion](General.MeasurementCategories.md#objectversion) | int32 |  
 
 ## Child Collections
 
@@ -63,11 +63,11 @@ _Indexed_: **True**
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
 
-### RowVersion
+### ObjectVersion
 
-_Type_: **byte[]**  
+_Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Supports Order By_: ****  
 
 
 

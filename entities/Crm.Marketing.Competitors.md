@@ -27,7 +27,7 @@ Aggregate Tree
 | [Id](Crm.Marketing.Competitors.md#id) | guid |  
 | [Name](Crm.Marketing.Competitors.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | The name of this Competitor. `Required` `Filter(like)` 
 | [Notes](Crm.Marketing.Competitors.md#notes) | string (max) __nullable__ | Notes for this Competitor. 
-| [RowVersion](Crm.Marketing.Competitors.md#rowversion) | byte[] |  
+| [ObjectVersion](Crm.Marketing.Competitors.md#objectversion) | int32 |  
 
 ## References
 
@@ -69,11 +69,11 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
 
-### RowVersion
+### ObjectVersion
 
-_Type_: **byte[]**  
+_Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Supports Order By_: ****  
 
 
 ## Reference Details

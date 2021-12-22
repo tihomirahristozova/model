@@ -16,6 +16,7 @@ Contains the additional participants in the activities. These are the participat
 
 | Name | Type | Description |
 | - | - | --- |
+|[__Object_Version](#__object_version)|`int` ||
 |[Activity_Id](#activity_id)|`uniqueidentifier` ||
 |[Activity_Participant_Id](#activity_participant_id)|`uniqueidentifier` `PK`||
 |[Notes](#notes)|`nvarchar(255)` ||
@@ -24,6 +25,33 @@ Contains the additional participants in the activities. These are the participat
 |[Work_Load_Percent](#work_load_percent)|`decimal(3, 2)` |The planned work load of the participant for this activity.|
 
 ## Columns
+
+### __Object_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 ### Activity_Id
 

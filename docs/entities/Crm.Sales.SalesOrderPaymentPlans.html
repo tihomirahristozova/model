@@ -143,6 +143,11 @@ Aggregate Root:<br>
 <td>Notes for this SalesOrderPaymentPlan.</td>
 </tr>
 <tr>
+<td><a href="Crm.Sales.SalesOrderPaymentPlans.html#objectversion">ObjectVersion</a></td>
+<td>int32</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="Crm.Sales.SalesOrderPaymentPlans.html#paymentstartdays">PaymentStartDays</a></td>
 <td>int32</td>
 <td>Number of days until the payment becomes executable. The days are counted, starting with the date, specified by due date formation method. <code>Required</code> <code>Default(0)</code></td>
@@ -156,11 +161,6 @@ Aggregate Root:<br>
 <td><a href="Crm.Sales.SalesOrderPaymentPlans.html#remainder">Remainder</a></td>
 <td>boolean</td>
 <td>Indicates wheather this amount is the remainder of the document. Amount = Total amount of the sales order - explicitly specified amounts in the plan (by Amount_Percent or Amount). <code>Required</code> <code>Default(false)</code></td>
-</tr>
-<tr>
-<td><a href="Crm.Sales.SalesOrderPaymentPlans.html#rowversion">RowVersion</a></td>
-<td>byte[]</td>
-<td></td>
 </tr>
 </tbody>
 </table>
@@ -273,6 +273,10 @@ Generic enum type for PaymentPlanDueDateSource properties<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>254</strong></p>
+<h3 id="objectversion">ObjectVersion</h3>
+<p><em>Type</em>: <strong>int32</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****</p>
 <h3 id="paymentstartdays">PaymentStartDays</h3>
 <p>Number of days until the payment becomes executable. The days are counted, starting with the date, specified by due date formation method. <code>Required</code> <code>Default(0)</code></p>
 <p><em>Type</em>: <strong>int32</strong><br>
@@ -299,10 +303,6 @@ Generic enum type for PaymentPlanDueDateSource properties<br>
 <code>IIF( ( obj.AmountPercent != null), False, obj.Remainder)</code></p>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>IIF( ( obj.AmountPercent != null), False, obj.Remainder)</code></p>
-<h3 id="rowversion">RowVersion</h3>
-<p><em>Type</em>: <strong>byte[]</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="paymentaccount">PaymentAccount</h3>
 <p>Specifies the payment account towards which the payment is expected. null means that there is no expectation for payment account. For POS implementations, this can be used to denote the payment account in which the payment actually occurred. <code>Filter(multi eq)</code></p>

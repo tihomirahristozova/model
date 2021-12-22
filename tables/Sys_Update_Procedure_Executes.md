@@ -11,6 +11,7 @@ Contains data about the execution of Upgrade Procedures. Contains status message
 
 | Name | Type | Description |
 | - | - | --- |
+|[__Object_Version](#__object_version)|`int` ||
 |[Execute_Time](#execute_time)|`datetime` |The time, when the update procedure was executed.|
 |[Result_Message](#result_message)|`nvarchar(1024)` |Error or success message|
 |[Row_Version](#row_version)|`timestamp` ||
@@ -19,6 +20,33 @@ Contains data about the execution of Upgrade Procedures. Contains status message
 |[Update_Procedure_Execute_Id](#update_procedure_execute_id)|`uniqueidentifier` `PK`||
 
 ## Columns
+
+### __Object_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 ### Execute_Time
 

@@ -27,9 +27,9 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [DefaultPercent](General.DocumentTypeAmounts.md#defaultpercent) | decimal (7, 6) __nullable__ | Default input percent. Valid only for amount types, supporting percent and takes precedence over Default_Percent in the definition of the amount type. 
 | [Id](General.DocumentTypeAmounts.md#id) | guid |  
+| [ObjectVersion](General.DocumentTypeAmounts.md#objectversion) | int32 |  
 | [RequiredFromDate](General.DocumentTypeAmounts.md#requiredfromdate) | date __nullable__ | When not null, specifies a date, after which the amount becomes required for the current document type. The date is compared against the document date. `Filter(ge;le)` 
 | [RequiredThruDate](General.DocumentTypeAmounts.md#requiredthrudate) | date __nullable__ | When not null, specifies a date, up to which the amount is required for the current document type. The date is compared against the document date. `Filter(ge;le)` 
-| [RowVersion](General.DocumentTypeAmounts.md#rowversion) | byte[] |  
 | [UserCanChangeInput](General.DocumentTypeAmounts.md#usercanchangeinput) | boolean | True if the user, entering the document is allowed to change the default input percent. `Required` `Default(true)` 
 
 ## References
@@ -57,6 +57,12 @@ _Indexed_: **True**
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
+### ObjectVersion
+
+_Type_: **int32**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+
 ### RequiredFromDate
 
 When not null, specifies a date, after which the amount becomes required for the current document type. The date is compared against the document date. `Filter(ge;le)`
@@ -71,12 +77,6 @@ When not null, specifies a date, up to which the amount is required for the curr
 
 _Type_: **date __nullable__**  
 _Supported Filters_: **GreaterThanOrLessThan**  
-_Supports Order By_: **False**  
-
-### RowVersion
-
-_Type_: **byte[]**  
-_Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
 ### UserCanChangeInput

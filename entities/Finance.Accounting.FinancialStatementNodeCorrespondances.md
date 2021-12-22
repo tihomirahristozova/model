@@ -27,7 +27,7 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [Id](Finance.Accounting.FinancialStatementNodeCorrespondances.md#id) | guid |  
 | [Multiplier](Finance.Accounting.FinancialStatementNodeCorrespondances.md#multiplier) | decimal (18, 0) | Factor by which the correspondence balance will be multiplied. `Required` `Default(1)` 
-| [RowVersion](Finance.Accounting.FinancialStatementNodeCorrespondances.md#rowversion) | byte[] |  
+| [ObjectVersion](Finance.Accounting.FinancialStatementNodeCorrespondances.md#objectversion) | int32 |  
 
 ## References
 
@@ -56,11 +56,11 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Default Value_: **1**  
 
-### RowVersion
+### ObjectVersion
 
-_Type_: **byte[]**  
+_Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Supports Order By_: ****  
 
 
 ## Reference Details

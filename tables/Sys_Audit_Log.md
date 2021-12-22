@@ -5,6 +5,7 @@
 
 | Name | Type | Description |
 | - | - | --- |
+|[__Object_Version](#__object_version)|`int` ||
 |[New_Values_XML](#new_values_xml)|`nvarchar(max)` |The new values of the columns|
 |[Object_Id](#object_id)|`uniqueidentifier` `PK`|The Id of the affected object|
 |[Old_Values_XML](#old_values_xml)|`nvarchar(max)` |Values of the document columns (without BLOBs) before the operation |
@@ -14,6 +15,33 @@
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
+
+### __Object_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 ### New_Values_XML
 

@@ -28,7 +28,7 @@ Aggregate Root:
 | [Id](Crm.Sales.SalesOrderPromotionalPackages.md#id) | guid |  
 | [LineNumber](Crm.Sales.SalesOrderPromotionalPackages.md#linenumber) | int32 | Consecutive line number of the package, unique within the document. `Required` `Filter(eq)` 
 | [NumberOfPackages](Crm.Sales.SalesOrderPromotionalPackages.md#numberofpackages) | int32 | Number of packages sold. `Required` `Default(0)` 
-| [RowVersion](Crm.Sales.SalesOrderPromotionalPackages.md#rowversion) | byte[] |  
+| [ObjectVersion](Crm.Sales.SalesOrderPromotionalPackages.md#objectversion) | int32 |  
 
 ## References
 
@@ -69,11 +69,11 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Default Value_: **0**  
 
-### RowVersion
+### ObjectVersion
 
-_Type_: **byte[]**  
+_Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Supports Order By_: ****  
 
 
 ## Reference Details

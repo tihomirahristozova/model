@@ -83,7 +83,7 @@
 <p>Serial numbers, used by the items. Rows are created on first occurrence of the serial number in a document. Rows can be deleted after deleting the last occurence of the serial number in a document. Entity: Inv_Serial_Numbers</p>
 <h2 id="default-visualization">Default Visualization</h2>
 <p>Default Display Text Format:<br>
-<em>{Id}: {ProductId}</em><br>
+<em>{Id}: {ObjectVersion}</em><br>
 Default Search Members:<br>
 __</p>
 <h2 id="aggregate">Aggregate</h2>
@@ -108,8 +108,8 @@ __</p>
 <td></td>
 </tr>
 <tr>
-<td><a href="Logistics.Inventory.SerialNumbers.html#rowversion">RowVersion</a></td>
-<td>byte[]</td>
+<td><a href="Logistics.Inventory.SerialNumbers.html#objectversion">ObjectVersion</a></td>
+<td>int32</td>
 <td></td>
 </tr>
 <tr>
@@ -142,10 +142,10 @@ __</p>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
-<h3 id="rowversion">RowVersion</h3>
-<p><em>Type</em>: <strong>byte[]</strong><br>
+<h3 id="objectversion">ObjectVersion</h3>
+<p><em>Type</em>: <strong>int32</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: ****</p>
 <h3 id="serialnumberfield">SerialNumberField</h3>
 <p>The serial number text. <code>Required</code> <code>Filter(multi eq;like)</code></p>
 <p><em>Type</em>: <strong>string (40)</strong><br>

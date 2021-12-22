@@ -15,12 +15,40 @@ Specifies the base amounts on which an amount depends. . Entity: Gen_Document_Am
 
 | Name | Type | Description |
 | - | - | --- |
+|[__Object_Version](#__object_version)|`int` ||
 |[Depends_On_Document_Amount_Type_Id](#depends_on_document_amount_type_id)|`uniqueidentifier` |The base amount type on which the current amount depends.|
 |[Document_Amount_Type_Dependency_Id](#document_amount_type_dependency_id)|`uniqueidentifier` `PK`||
 |[Document_Amount_Type_Id](#document_amount_type_id)|`uniqueidentifier` |The amount for which the base amount is specified.|
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
+
+### __Object_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 ### Depends_On_Document_Amount_Type_Id
 

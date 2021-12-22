@@ -15,6 +15,7 @@ Contains the sub-queries, which a report contains. Entity: Gen_Report_Queries
 
 | Name | Type | Description |
 | - | - | --- |
+|[__Object_Version](#__object_version)|`int` ||
 |[Depends_On_Child_Rows](#depends_on_child_rows)|`bit` |If True the data in the current report table contains only the rows that have child rows in sub-tables.|
 |[Extensions_List](#extensions_list)|`nvarchar(max)` |A comma separated list of report extension names. An extension is set of additional fields that participate in the query|
 |[Filter_Xml](#filter_xml)|`nvarchar(max)` |Filter for the loaded table|
@@ -28,6 +29,33 @@ Contains the sub-queries, which a report contains. Entity: Gen_Report_Queries
 |[Unique_Name](#unique_name)|`nvarchar(64)` |The name of the data table in the printout datasource. If NULL the Reference_Path is used.|
 
 ## Columns
+
+### __Object_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 ### Depends_On_Child_Rows
 

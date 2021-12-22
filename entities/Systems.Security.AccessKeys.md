@@ -27,7 +27,7 @@ Aggregate Tree
 | [EntityName](Systems.Security.AccessKeys.md#entityname) | string (64) __nullable__ | What entitity the key secures. Can be null for private, legacy keys. `Filter(eq;like)` `ORD` 
 | [Id](Systems.Security.AccessKeys.md#id) | guid |  
 | [Name](Systems.Security.AccessKeys.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) __nullable__ | Multilanguage descriptive name of the security key. Can be null for legacy keys. `Filter(eq;like)` 
-| [RowVersion](Systems.Security.AccessKeys.md#rowversion) | byte[] |  
+| [ObjectVersion](Systems.Security.AccessKeys.md#objectversion) | int32 |  
 
 
 ## Attribute Details
@@ -66,11 +66,11 @@ _Type_: **[MultilanguageString](../data-types.md#multilanguagestring) __nullable
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 
-### RowVersion
+### ObjectVersion
 
-_Type_: **byte[]**  
+_Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Supports Order By_: ****  
 
 
 

@@ -29,7 +29,7 @@ Aggregate Root:
 | [Id](Projects.ProjectRiskDiscussion.md#id) | guid |  
 | [LastEditTime](Projects.ProjectRiskDiscussion.md#lastedittime) | datetime __nullable__ | Contains the last edit time of the message. null if the message was never edited. `Filter(eq)` `ReadOnly` 
 | [Message](Projects.ProjectRiskDiscussion.md#message) | string (max) | The contents of the message. `Required` 
-| [RowVersion](Projects.ProjectRiskDiscussion.md#rowversion) | byte[] |  
+| [ObjectVersion](Projects.ProjectRiskDiscussion.md#objectversion) | int32 |  
 
 ## References
 
@@ -74,11 +74,11 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
 
-### RowVersion
+### ObjectVersion
 
-_Type_: **byte[]**  
+_Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Supports Order By_: ****  
 
 
 ## Reference Details

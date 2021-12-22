@@ -31,6 +31,7 @@ Aggregate Tree
 | [MileageKm](Applications.Fleet.MaintenancePlans.md#mileagekm) | int32 __nullable__ | When not null, specifies the number of kilometers that must have passed since the last maintenance, for the next maintenance to occur. 
 | [Name](Applications.Fleet.MaintenancePlans.md#name) | string (254) | Maintenance plan name (Multilanguage). `Required` 
 | [Notes](Applications.Fleet.MaintenancePlans.md#notes) | string (max) __nullable__ | Notes for this MaintenancePlan. 
+| [ObjectVersion](Applications.Fleet.MaintenancePlans.md#objectversion) | int32 |  
 | [TripCount](Applications.Fleet.MaintenancePlans.md#tripcount) | int32 __nullable__ | When not null, specifies the number of trips that must be performed since the last maintenance, for the next maintenance to occur. 
 
 
@@ -102,6 +103,12 @@ _Type_: **string (max) __nullable__**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
+
+### ObjectVersion
+
+_Type_: **int32**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### TripCount
 

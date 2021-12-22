@@ -30,6 +30,7 @@ Aggregate Root:
 | [NextServiceDate](Applications.AssetManagement.MaintenanceOrderLines.md#nextservicedate) | date __nullable__ | Specifies, that the maintenance required a specific date for the next maintenance. null means that default scheduling should be used. 
 | [NextServiceTracked<br />ParameterValue](Applications.AssetManagement.MaintenanceOrderLines.md#nextservicetrackedparametervalue) | int32 __nullable__ | Specifies, that the maintenance required the next maintenance to be performed on a specific value of the tracked parameter. null means that default scheduling should be used. 
 | [Notes](Applications.AssetManagement.MaintenanceOrderLines.md#notes) | string (max) __nullable__ | Notes for this MaintenanceOrderLine. 
+| [ObjectVersion](Applications.AssetManagement.MaintenanceOrderLines.md#objectversion) | int32 |  
 
 ## References
 
@@ -87,6 +88,12 @@ _Type_: **string (max) __nullable__**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
+
+### ObjectVersion
+
+_Type_: **int32**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 
 ## Reference Details

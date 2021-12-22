@@ -28,8 +28,8 @@ Aggregate Root:
 | [EndDate](Applications.Fleet.VehicleEquipment.md#enddate) | date __nullable__ | The date when the equipment was removed. null when the equipment is still installed on the vehicle. `Filter(ge;le)` 
 | [Id](Applications.Fleet.VehicleEquipment.md#id) | guid |  
 | [Notes](Applications.Fleet.VehicleEquipment.md#notes) | string (max) __nullable__ | Notes for the installed equipment. 
+| [ObjectVersion](Applications.Fleet.VehicleEquipment.md#objectversion) | int32 |  
 | [Quantity](Applications.Fleet.VehicleEquipment.md#quantity) | int32 | Quantity of the equipment. `Required` `Default(1)` `Filter(ge;le)` 
-| [RowVersion](Applications.Fleet.VehicleEquipment.md#rowversion) | byte[] |  
 | [StartDate](Applications.Fleet.VehicleEquipment.md#startdate) | date | The installation date of the equipment. `Required` `Filter(ge;le)` 
 
 ## References
@@ -66,6 +66,12 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
 
+### ObjectVersion
+
+_Type_: **int32**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+
 ### Quantity
 
 Quantity of the equipment. `Required` `Default(1)` `Filter(ge;le)`
@@ -74,12 +80,6 @@ _Type_: **int32**
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **1**  
-
-### RowVersion
-
-_Type_: **byte[]**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
 
 ### StartDate
 

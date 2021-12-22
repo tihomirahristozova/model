@@ -83,7 +83,7 @@
 <p>Contains alerts, specific to one vehicle. Alerts are created based on many sources and stay active, until excplicitly hidden. Entity: Fleet_Vehicle_Alerts</p>
 <h2 id="default-visualization">Default Visualization</h2>
 <p>Default Display Text Format:<br>
-<em>{Id}: {VehicleId}</em><br>
+<em>{Id}: {ObjectVersion}</em><br>
 Default Search Members:<br>
 __</p>
 <h2 id="aggregate">Aggregate</h2>
@@ -121,6 +121,11 @@ __</p>
 <td><a href="Applications.Fleet.VehicleAlerts.html#ishidden">IsHidden</a></td>
 <td>boolean</td>
 <td>Specifies, whether the alert is hidden (e.g. managed by the responsible person). <code>Required</code> <code>Default(false)</code></td>
+</tr>
+<tr>
+<td><a href="Applications.Fleet.VehicleAlerts.html#objectversion">ObjectVersion</a></td>
+<td>int32</td>
+<td></td>
 </tr>
 <tr>
 <td><a href="Applications.Fleet.VehicleAlerts.html#source">Source</a></td>
@@ -175,6 +180,10 @@ __</p>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
+<h3 id="objectversion">ObjectVersion</h3>
+<p><em>Type</em>: <strong>int32</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****</p>
 <h3 id="source">Source</h3>
 <p>The source of the alert. G=GPS, O=OBD, M=Maintenance. <code>Required</code></p>
 <p><em>Type</em>: <strong>string (1)</strong><br>

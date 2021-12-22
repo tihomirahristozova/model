@@ -29,10 +29,10 @@ Aggregate Root:
 | [Id](General.Products.ProductPictures.md#id) | guid |  
 | [IsDefault](General.Products.ProductPictures.md#isdefault) | boolean | True=This is the default picture for the product and the size class; false=otherwise. `Required` `Default(false)` `Filter(eq)` 
 | [LastUpdateTime](General.Products.ProductPictures.md#lastupdatetime) | datetime __nullable__ | The exact server time, when the picture was last updated. Set automatically. `Filter(ge;le)` `ReadOnly` 
+| [ObjectVersion](General.Products.ProductPictures.md#objectversion) | int32 |  
 | [Picture](General.Products.ProductPictures.md#picture) | byte[] __nullable__ | The actual product picture. Can be null if we insert only some comments. 
 | [PictureNo](General.Products.ProductPictures.md#pictureno) | int32 | Unique picture number within the product. Also used for sorting. `Required` `Filter(eq;like)` 
 | [PictureSizeClass](General.Products.ProductPictures.md#picturesizeclass) | [PictureSizeClass](General.Products.ProductPictures.md#picturesizeclass) __nullable__ | Specifies the relative picture size and usage. S=Small picture (thumbnail), L=Large picture (full size), null=unspecified. 
-| [RowVersion](General.Products.ProductPictures.md#rowversion) | byte[] |  
 
 ## References
 
@@ -78,6 +78,12 @@ _Type_: **datetime __nullable__**
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
+### ObjectVersion
+
+_Type_: **int32**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+
 ### Picture
 
 The actual product picture. Can be null if we insert only some comments.
@@ -112,12 +118,6 @@ _Allowed Values (General.Products.ProductPicturesRepository.PictureSizeClass Enu
 | SmallPictureThumbnail | SmallPictureThumbnail value. Stored as 'S'. <br /> _Database Value:_ 'S' <br /> _Model Value:_ 0 <br /> _Domain API Value:_ 'SmallPictureThumbnail' |
 | LargePictureFullSize | LargePictureFullSize value. Stored as 'L'. <br /> _Database Value:_ 'L' <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'LargePictureFullSize' |
 
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-
-### RowVersion
-
-_Type_: **byte[]**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 

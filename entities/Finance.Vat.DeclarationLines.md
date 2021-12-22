@@ -29,7 +29,7 @@ Aggregate Root:
 | [Id](Finance.Vat.DeclarationLines.md#id) | guid |  
 | [LineNo](Finance.Vat.DeclarationLines.md#lineno) | int32 | Consecutive line number within the document. `Required` 
 | [Notes](Finance.Vat.DeclarationLines.md#notes) | string (max) __nullable__ | Notes for this DeclarationLine. 
-| [RowVersion](Finance.Vat.DeclarationLines.md#rowversion) | byte[] |  
+| [ObjectVersion](Finance.Vat.DeclarationLines.md#objectversion) | int32 |  
 
 ## References
 
@@ -80,11 +80,11 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
 
-### RowVersion
+### ObjectVersion
 
-_Type_: **byte[]**  
+_Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Supports Order By_: ****  
 
 
 ## Reference Details

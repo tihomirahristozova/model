@@ -118,14 +118,14 @@ Aggregate Root:<br>
 <td>The location number of Party. <code>Required</code> <code>Filter(multi eq;like)</code> <code>ORD</code></td>
 </tr>
 <tr>
+<td><a href="General.PartyLocationNumbers.html#objectversion">ObjectVersion</a></td>
+<td>int32</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="General.PartyLocationNumbers.html#partnerlocationnumber">PartnerLocationNumber</a></td>
 <td>string (16) <strong>nullable</strong></td>
 <td>The location number of the partner party for which we define the main Party location number. The location number of the main Party might be different depending on the location number of the partner party. null means that the location number is not dependent on the partner location number. <code>Filter(multi eq)</code></td>
-</tr>
-<tr>
-<td><a href="General.PartyLocationNumbers.html#rowversion">RowVersion</a></td>
-<td>byte[]</td>
-<td></td>
 </tr>
 <tr>
 <td><a href="General.PartyLocationNumbers.html#significance">Significance</a></td>
@@ -195,16 +195,16 @@ Allowed values for the <code>LocationCodingSystem</code>(General.PartyLocationNu
 <em>Supported Filters</em>: <strong>Equals, Like, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>True</strong><br>
 <em>Maximum Length</em>: <strong>16</strong></p>
+<h3 id="objectversion">ObjectVersion</h3>
+<p><em>Type</em>: <strong>int32</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****</p>
 <h3 id="partnerlocationnumber">PartnerLocationNumber</h3>
 <p>The location number of the partner party for which we define the main Party location number. The location number of the main Party might be different depending on the location number of the partner party. null means that the location number is not dependent on the partner location number. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong>string (16) <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>16</strong></p>
-<h3 id="rowversion">RowVersion</h3>
-<p><em>Type</em>: <strong>byte[]</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="significance">Significance</h3>
 <p>Order of significance of the location number within the main Party. If there are multiple location numbers, only the most significant is used. 0 is the least significant and higher numbers indicate higher significance. <code>Required</code> <code>Default(0)</code> <code>Filter(multi eq;ge;le)</code></p>
 <p><em>Type</em>: <strong>int32</strong><br>

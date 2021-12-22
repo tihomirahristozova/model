@@ -15,6 +15,7 @@ Transportation ordered to specific carrier or vehicle. Entity: Log_Transportatio
 
 | Name | Type | Description |
 | - | - | --- |
+|[__Object_Version](#__object_version)|`int` ||
 |[Arrival_Date](#arrival_date)|`date` |Planned arrival date.|
 |[Arrival_Time](#arrival_time)|`time` |Planned arrival time.|
 |[Carrier_Id](#carrier_id)|`uniqueidentifier` |The carrier chosen for this transportation. NULL when the transportation is done with own transport.|
@@ -30,6 +31,33 @@ Transportation ordered to specific carrier or vehicle. Entity: Log_Transportatio
 |[Transportation_Vehicle_Id](#transportation_vehicle_id)|`uniqueidentifier` |The own transportation vehicle, which will be used for the transportation.|
 
 ## Columns
+
+### __Object_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 ### Arrival_Date
 

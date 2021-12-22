@@ -30,7 +30,7 @@ Aggregate Root:
 | [ExecutionPriority](Systems.Bpm.UserBusinessRuleEvents.md#executionpriority) | [RuleExecutionPriority](Systems.Bpm.UserBusinessRuleEvents.md#executionpriority) | Execution priority. Lower values indicate earlier priorities. Possible values - 30-Early, 50-Normal, 70-Late. `Required` `Default(50)` 
 | [Id](Systems.Bpm.UserBusinessRuleEvents.md#id) | guid |  
 | [Layer](Systems.Bpm.UserBusinessRuleEvents.md#layer) | [Layer](Systems.Bpm.UserBusinessRuleEvents.md#layer) | Specifies the layer on which to register the event. Allowed values = FTE-FrontEnd, BKE-BackEnd. `Required` `Default("BKE")` 
-| [RowVersion](Systems.Bpm.UserBusinessRuleEvents.md#rowversion) | byte[] |  
+| [ObjectVersion](Systems.Bpm.UserBusinessRuleEvents.md#objectversion) | int32 |  
 
 ## References
 
@@ -115,11 +115,11 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Default Value_: **BackEnd**  
 
-### RowVersion
+### ObjectVersion
 
-_Type_: **byte[]**  
+_Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Supports Order By_: ****  
 
 
 ## Reference Details

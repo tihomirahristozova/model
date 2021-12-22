@@ -16,12 +16,40 @@ Contains the list of responsible parties (usually persons) for the stores. Store
 
 | Name | Type | Description |
 | - | - | --- |
+|[__Object_Version](#__object_version)|`int` ||
 |[Responsible_Party_Id](#responsible_party_id)|`uniqueidentifier` |The responsible party (usually employee) of the store.|
 |[Row_Version](#row_version)|`timestamp` ||
 |[Store_Id](#store_id)|`uniqueidentifier` |The store for which we specify the responsible party.|
 |[Store_Responsible_Party_Id](#store_responsible_party_id)|`uniqueidentifier` `PK`||
 
 ## Columns
+
+### __Object_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 ### Responsible_Party_Id
 

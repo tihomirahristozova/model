@@ -16,6 +16,7 @@ Each record contains usage of resource, reported by the related Work Report. Ent
 
 | Name | Type | Description |
 | - | - | --- |
+|[__Object_Version](#__object_version)|`int` ||
 |[Actual_End_Time](#actual_end_time)|`datetime` |Optionally, specifies the actual date and time when the resource usage ended.|
 |[Actual_Start_Time](#actual_start_time)|`datetime` |Optionally, specifies the actual date and time when the resource usage began.|
 |[Project_Task_Id](#project_task_id)|`uniqueidentifier` |The project task for which the work is reported.|
@@ -27,6 +28,33 @@ Each record contains usage of resource, reported by the related Work Report. Ent
 |[Work_Report_Resource_Id](#work_report_resource_id)|`uniqueidentifier` `PK`||
 
 ## Columns
+
+### __Object_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 ### Actual_End_Time
 

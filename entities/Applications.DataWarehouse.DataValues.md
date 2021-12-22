@@ -9,7 +9,7 @@ The actual values in the general data warehouse. Entity: Dw_Data_Values (Introdu
 
 ## Default Visualization
 Default Display Text Format:  
-_{Id}: {DataMeasureId}_  
+_{Id}: {ObjectVersion}_  
 Default Search Members:  
 __  
 
@@ -26,6 +26,7 @@ Aggregate Tree
 | [ActualValue](Applications.DataWarehouse.DataValues.md#actualvalue) | decimal (17, 5) | Accumulates actual value for the measure. `Required` `Default(0)` `Filter(eq)` 
 | [Date](Applications.DataWarehouse.DataValues.md#date) | date | The date for which the measure is recorded. All records with dates within each period are summed. `Required` `Filter(eq;ge;le)` 
 | [Id](Applications.DataWarehouse.DataValues.md#id) | guid |  
+| [ObjectVersion](Applications.DataWarehouse.DataValues.md#objectversion) | int32 |  
 | [TargetValue](Applications.DataWarehouse.DataValues.md#targetvalue) | decimal (17, 5) | Accumulates target value for the measure. `Required` `Default(0)` `Filter(eq)` 
 
 ## References
@@ -61,6 +62,12 @@ _Type_: **guid**
 _Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
+
+### ObjectVersion
+
+_Type_: **int32**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### TargetValue
 

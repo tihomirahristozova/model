@@ -37,9 +37,9 @@ Aggregate Tree
 | [DistributeBy](General.DocumentAmountTypes.md#distributeby) | [DistributeBy](General.DocumentAmountTypes.md#distributeby) | Specifies how the amount will be distributed among the document lines. Valid values are: ('AMOUNT','MEASUREMENT','PRODUCT DEFINITION','DEAL TYPE'). `Required` `Default("AMOUNT")` `Filter(eq)` 
 | [Id](General.DocumentAmountTypes.md#id) | guid |  
 | [IsActive](General.DocumentAmountTypes.md#isactive) | boolean | True when the amount type is active for new records; false - otherwise. `Required` `Default(true)` `Filter(eq)` 
+| [ObjectVersion](General.DocumentAmountTypes.md#objectversion) | int32 |  
 | [PercentInputAllowed](General.DocumentAmountTypes.md#percentinputallowed) | boolean | True when the user is allowed to input percent of total for distribution. `Required` `Default(true)` `Filter(eq)` 
 | [RoundScale](General.DocumentAmountTypes.md#roundscale) | int32 __nullable__ | The amounts should be rounded with the specified number of digits after the decimal point. null means to use the currency default. 
-| [RowVersion](General.DocumentAmountTypes.md#rowversion) | byte[] |  
 | [UnitAmountInputAllowed](General.DocumentAmountTypes.md#unitamountinputallowed) | boolean | Specifies whether the user is allowed to input fixed unit amount for the calculation of the amount. `Required` `Default(false)` `Filter(eq)` 
 
 ## References
@@ -185,6 +185,12 @@ _Supported Filters_: **Equals**
 _Supports Order By_: **False**  
 _Default Value_: **True**  
 
+### ObjectVersion
+
+_Type_: **int32**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+
 ### PercentInputAllowed
 
 True when the user is allowed to input percent of total for distribution. `Required` `Default(true)` `Filter(eq)`
@@ -199,12 +205,6 @@ _Default Value_: **True**
 The amounts should be rounded with the specified number of digits after the decimal point. null means to use the currency default.
 
 _Type_: **int32 __nullable__**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-
-### RowVersion
-
-_Type_: **byte[]**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 

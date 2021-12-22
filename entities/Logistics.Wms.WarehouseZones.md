@@ -29,7 +29,7 @@ Aggregate Root:
 | [Id](Logistics.Wms.WarehouseZones.md#id) | guid |  
 | [Name](Logistics.Wms.WarehouseZones.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Multi-language name of the zone. `Required` `Filter(eq;like)` 
 | [Notes](Logistics.Wms.WarehouseZones.md#notes) | string (max) __nullable__ | Notes for this WarehouseZone. 
-| [RowVersion](Logistics.Wms.WarehouseZones.md#rowversion) | byte[] |  
+| [ObjectVersion](Logistics.Wms.WarehouseZones.md#objectversion) | int32 |  
 
 ## References
 
@@ -79,11 +79,11 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
 
-### RowVersion
+### ObjectVersion
 
-_Type_: **byte[]**  
+_Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Supports Order By_: ****  
 
 
 ## Reference Details

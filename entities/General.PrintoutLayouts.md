@@ -31,7 +31,7 @@ Aggregate Tree
 | [LayoutFormat](General.PrintoutLayouts.md#layoutformat) | string (32) | Format specifier of the layout. Recognized by the application. `Required` `Filter(multi eq)` 
 | [Name](General.PrintoutLayouts.md#name) | string (64) | The name of this PrintoutLayout. `Required` `Filter(eq;like)` `ORD` 
 | [Notes](General.PrintoutLayouts.md#notes) | string (254) __nullable__ | Notes for this PrintoutLayout. 
-| [RowVersion](General.PrintoutLayouts.md#rowversion) | byte[] |  
+| [ObjectVersion](General.PrintoutLayouts.md#objectversion) | int32 |  
 
 ## References
 
@@ -111,11 +111,11 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
 
-### RowVersion
+### ObjectVersion
 
-_Type_: **byte[]**  
+_Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Supports Order By_: ****  
 
 
 ## Reference Details

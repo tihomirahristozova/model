@@ -31,7 +31,7 @@ Aggregate Root:
 | [DebitAmount](Finance.Accounting.VoucherCorrespondances.md#debitamount) | decimal (18, 2) | Obsolete. Not used. `Required` `Default(0)` 
 | [DebitVoucherLineId](Finance.Accounting.VoucherCorrespondances.md#debitvoucherlineid) | guid | Obsolete. Not used. (The voucher line which contains the debited account). `Required` `Filter(multi eq)` 
 | [Id](Finance.Accounting.VoucherCorrespondances.md#id) | guid |  
-| [RowVersion](Finance.Accounting.VoucherCorrespondances.md#rowversion) | byte[] |  
+| [ObjectVersion](Finance.Accounting.VoucherCorrespondances.md#objectversion) | int32 |  
 
 ## References
 
@@ -90,11 +90,11 @@ _Indexed_: **True**
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
-### RowVersion
+### ObjectVersion
 
-_Type_: **byte[]**  
+_Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Supports Order By_: ****  
 
 
 ## Reference Details

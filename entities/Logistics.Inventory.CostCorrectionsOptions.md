@@ -9,7 +9,7 @@ Options per document type for the cost corrections. Entity: Inv_Cost_Corrections
 
 ## Default Visualization
 Default Display Text Format:  
-_{Id}: {DocumentTypeId}_  
+_{Id}: {ObjectVersion}_  
 Default Search Members:  
 __  
 
@@ -24,8 +24,8 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](Logistics.Inventory.CostCorrectionsOptions.md#id) | guid |  
+| [ObjectVersion](Logistics.Inventory.CostCorrectionsOptions.md#objectversion) | int32 |  
 | [ResetTransactions<br />StateOnReleasing](Logistics.Inventory.CostCorrectionsOptions.md#resettransactionsstateonreleasing) | boolean | When true, the stock transactions state are re-set when the cost correction is released. The idea is to notify these documents, so that they have chance to re-generate their sub-documents. `Required` `Default(false)` `Filter(eq)` 
-| [RowVersion](Logistics.Inventory.CostCorrectionsOptions.md#rowversion) | byte[] |  
 | [ScheduleDocumentEvents](Logistics.Inventory.CostCorrectionsOptions.md#scheduledocumentevents) | boolean | Indicates wheather the document events caused by the cost correction should be scheduled for later procession. `Required` `Default(false)` 
 
 ## References
@@ -44,6 +44,12 @@ _Indexed_: **True**
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
+### ObjectVersion
+
+_Type_: **int32**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+
 ### ResetTransactionsStateOnReleasing
 
 When true, the stock transactions state are re-set when the cost correction is released. The idea is to notify these documents, so that they have chance to re-generate their sub-documents. `Required` `Default(false)` `Filter(eq)`
@@ -52,12 +58,6 @@ _Type_: **boolean**
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **False**  
-
-### RowVersion
-
-_Type_: **byte[]**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
 
 ### ScheduleDocumentEvents
 

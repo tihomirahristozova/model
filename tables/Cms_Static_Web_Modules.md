@@ -16,6 +16,7 @@ A web module, which contains one web page with static text. Entity: Cms_Static_W
 
 | Name | Type | Description |
 | - | - | --- |
+|[__Object_Version](#__object_version)|`int` ||
 |[Content_Html](#content_html)|`nvarchar(max)` |The actual html content of the pade. Only the <BODY> of the html is stored.|
 |[Language_Code](#language_code)|`nvarchar(7)` |The language code of the content.|
 |[Row_Version](#row_version)|`timestamp` ||
@@ -23,6 +24,33 @@ A web module, which contains one web page with static text. Entity: Cms_Static_W
 |[Web_Module_Id](#web_module_id)|`uniqueidentifier` |The web module, which is inherited by this static module.|
 
 ## Columns
+
+### __Object_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 ### Content_Html
 

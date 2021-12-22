@@ -16,6 +16,7 @@ Contains options for generation of payment orders. Each option set is assigned t
 
 | Name | Type | Description |
 | - | - | --- |
+|[__Object_Version](#__object_version)|`int` ||
 |[Create_For_Invoiced_Amounts](#create_for_invoiced_amounts)|`bit` |1 to add to the payment order, the part of the amount of the sales order, which is invoiced.|
 |[Create_For_Not_Invoiced_Amounts](#create_for_not_invoiced_amounts)|`bit` |1 to add to the payment order, the part of the amount of the sales order, which is not included in any invoice.|
 |[Id](#id)|`uniqueidentifier` `PK`||
@@ -25,6 +26,33 @@ Contains options for generation of payment orders. Each option set is assigned t
 |[Update_For_Invoices](#update_for_invoices)|`bit` |Update the payment order when invoices are issued for any of the sales orders lines.|
 
 ## Columns
+
+### __Object_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 ### Create_For_Invoiced_Amounts
 

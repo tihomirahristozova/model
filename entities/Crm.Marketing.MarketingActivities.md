@@ -38,7 +38,6 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [ActivitiesCreated](Crm.Marketing.MarketingActivities.md#activitiescreated) | boolean | True if the related activites are already created. Related activity can be created for each member of the target group. `Required` `Default(false)` 
-| [ActivityRowVersion](Crm.Marketing.MarketingActivities.md#activityrowversion) | byte[] |  
 | [AdjustmentNumber](Crm.Marketing.MarketingActivities.md#adjustmentnumber) | int32 | Consecutive number of the correction that this document is applying to the adjusted document. `Required` `Default(0)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [AdjustmentTime](Crm.Marketing.MarketingActivities.md#adjustmenttime) | datetime __nullable__ | Date/time when the document last has been adjusted by corrective document. `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [AdjustmentUser](Crm.Marketing.MarketingActivities.md#adjustmentuser) | string (64) __nullable__ | The user who adjusted the document. `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
@@ -49,7 +48,6 @@ Aggregate Tree
 | [DocumentDate](Crm.Marketing.MarketingActivities.md#documentdate) | date | The date on which the document was issued. `Required` `Default(Today)` `Filter(eq;ge;le)` `ORD` (Inherited from [Documents](General.Documents.md)) 
 | [DocumentNo](Crm.Marketing.MarketingActivities.md#documentno) | string (20) | Document number, unique within Document_Type_Id. `Required` `Filter(eq;like)` `ORD` (Inherited from [Documents](General.Documents.md)) 
 | [DocumentNotes](Crm.Marketing.MarketingActivities.md#documentnotes) | string (max) __nullable__ | Notes for this Document. (Inherited from [Documents](General.Documents.md)) 
-| [DocumentRowVersion](Crm.Marketing.MarketingActivities.md#documentrowversion) | byte[] |  
 | [DocumentVersion](Crm.Marketing.MarketingActivities.md#documentversion) | int32 | Consecutive version number, starting with 1. Each update produces a new version of the document. `Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [EndTime](Crm.Marketing.MarketingActivities.md#endtime) | datetime __nullable__ | Currently planned ending time of the task. `Filter(ge;le)` (Inherited from [Activities](General.Contacts.Activities.md)) 
 | [EntityName](Crm.Marketing.MarketingActivities.md#entityname) | string (64) | The entity name of the document header. `Required` `Filter(eq)` `ORD` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
@@ -57,6 +55,7 @@ Aggregate Tree
 | [Id](Crm.Marketing.MarketingActivities.md#id) | guid |  
 | [IsSingleExecution](Crm.Marketing.MarketingActivities.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document. `Required` `Default(false)` `Filter(eq)` `ReadOnly` (Inherited from [Activities](General.Contacts.Activities.md)) 
 | [Notes](Crm.Marketing.MarketingActivities.md#notes) | string (254) __nullable__ | Notes for this Activity. (Inherited from [Activities](General.Contacts.Activities.md)) 
+| [ObjectVersion](Crm.Marketing.MarketingActivities.md#objectversion) | int32 |  
 | [ParentDocument<br />RelationshipType](Crm.Marketing.MarketingActivities.md#parentdocumentrelationshiptype) | [ParentDocument<br />RelationshipType](Crm.Marketing.MarketingActivities.md#parentdocumentrelationshiptype) __nullable__ | Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [PlannedDurationMinutes](Crm.Marketing.MarketingActivities.md#planneddurationminutes) | int32 __nullable__ | Total planned duration of the activity, regardless of the current execution status. `Filter(ge;le)` (Inherited from [Activities](General.Contacts.Activities.md)) 
 | [PlanningOnly](Crm.Marketing.MarketingActivities.md#planningonly) | boolean | Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned). `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
@@ -67,7 +66,6 @@ Aggregate Tree
 | [ReferenceDocumentNo](Crm.Marketing.MarketingActivities.md#referencedocumentno) | string (20) __nullable__ | The number of the document (issued by the other party), which was the reason for the creation of the current document. The numebr should be unique within the party documents. `Filter(eq;like)` (Inherited from [Documents](General.Documents.md)) 
 | [ReleaseTime](Crm.Marketing.MarketingActivities.md#releasetime) | datetime __nullable__ | Date and time when the document was released (State set to Released). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [ReminderTime](Crm.Marketing.MarketingActivities.md#remindertime) | datetime __nullable__ | When to snooze to the owner to remind him for the task. This default reminder is copied to and managed by the Reminders entity. (Inherited from [Activities](General.Contacts.Activities.md)) 
-| [RowVersion](Crm.Marketing.MarketingActivities.md#rowversion) | byte[] |  
 | [StartTime](Crm.Marketing.MarketingActivities.md#starttime) | datetime | Currently planned starting time of the task. `Required` `Default(Now)` `Filter(ge;le)` (Inherited from [Activities](General.Contacts.Activities.md)) 
 | [State](Crm.Marketing.MarketingActivities.md#state) | [DocumentState](Crm.Marketing.MarketingActivities.md#state) | The current system state of the document. Allowed values: 0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed. `Required` `Default(0)` `Filter(multi eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [Subject](Crm.Marketing.MarketingActivities.md#subject) | string (254) | Task primary subject (required). `Required` `Filter(eq;like)` (Inherited from [Activities](General.Contacts.Activities.md)) 
@@ -135,12 +133,6 @@ _Type_: **boolean**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **False**  
-
-### ActivityRowVersion
-
-_Type_: **byte[]**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
 
 ### AdjustmentNumber
 
@@ -231,12 +223,6 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
 
-### DocumentRowVersion
-
-_Type_: **byte[]**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-
 ### DocumentVersion
 
 Consecutive version number, starting with 1. Each update produces a new version of the document. `Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md))
@@ -297,6 +283,12 @@ _Type_: **string (254) __nullable__**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
+
+### ObjectVersion
+
+_Type_: **int32**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### ParentDocumentRelationshipType
 
@@ -400,12 +392,6 @@ _Supports Order By_: **False**
 When to snooze to the owner to remind him for the task. This default reminder is copied to and managed by the Reminders entity. (Inherited from [Activities](General.Contacts.Activities.md))
 
 _Type_: **datetime __nullable__**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-
-### RowVersion
-
-_Type_: **byte[]**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 

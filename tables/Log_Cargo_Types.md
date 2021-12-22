@@ -11,6 +11,7 @@ Represents a cargo type. Different cargo types might require different types of 
 
 | Name | Type | Description |
 | - | - | --- |
+|[__Object_Version](#__object_version)|`int` ||
 |[Cargo_Type_Code](#cargo_type_code)|`nvarchar(16)` ||
 |[Cargo_Type_Id](#cargo_type_id)|`uniqueidentifier` `PK`||
 |[Cargo_Type_Name](#cargo_type_name)|`nvarchar(256)` ||
@@ -18,6 +19,33 @@ Represents a cargo type. Different cargo types might require different types of 
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
+
+### __Object_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 ### Cargo_Type_Code
 

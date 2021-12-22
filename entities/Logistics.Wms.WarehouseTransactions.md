@@ -9,7 +9,7 @@ Represents increase or decrease in the quantity available in a warehouse locatio
 
 ## Default Visualization
 Default Display Text Format:  
-_{Id}: {WarehouseOrderId}_  
+_{Id}: {ObjectVersion}_  
 Default Search Members:  
 __  
 
@@ -27,8 +27,8 @@ Aggregate Tree
 | [CreationTimeUtc](Logistics.Wms.WarehouseTransactions.md#creationtimeutc) | datetime |  
 | [Direction](Logistics.Wms.WarehouseTransactions.md#direction) | [Direction](Logistics.Wms.WarehouseTransactions.md#direction) | Direction of the transaction - I=IN, O=OUT. `Required` `Default("I")` `Filter(eq)` 
 | [Id](Logistics.Wms.WarehouseTransactions.md#id) | guid |  
+| [ObjectVersion](Logistics.Wms.WarehouseTransactions.md#objectversion) | int32 |  
 | [Quantity](Logistics.Wms.WarehouseTransactions.md#quantity) | decimal (12, 3) | The transacted net change in quantity. Positive values indicate transactions. Negative values are used for adjustments. `Required` `Default(0)` `Filter(multi eq;ge;le)` 
-| [RowVersion](Logistics.Wms.WarehouseTransactions.md#rowversion) | byte[] |  
 
 ## References
 
@@ -89,6 +89,12 @@ _Indexed_: **True**
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
+### ObjectVersion
+
+_Type_: **int32**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+
 ### Quantity
 
 The transacted net change in quantity. Positive values indicate transactions. Negative values are used for adjustments. `Required` `Default(0)` `Filter(multi eq;ge;le)`
@@ -97,12 +103,6 @@ _Type_: **decimal (12, 3)**
 _Supported Filters_: **Equals, GreaterThanOrLessThan, EqualsIn**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  
-
-### RowVersion
-
-_Type_: **byte[]**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
 
 
 ## Reference Details

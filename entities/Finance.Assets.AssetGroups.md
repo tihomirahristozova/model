@@ -26,7 +26,7 @@ Aggregate Tree
 | [Code](Finance.Assets.AssetGroups.md#code) | string (20) | The unique code of the AssetGroup. `Required` `Filter(eq)` `ORD` 
 | [Id](Finance.Assets.AssetGroups.md#id) | guid |  
 | [Name](Finance.Assets.AssetGroups.md#name) | string (254) | The name of this AssetGroup. `Required` `Filter(like)` 
-| [RowVersion](Finance.Assets.AssetGroups.md#rowversion) | byte[] |  
+| [ObjectVersion](Finance.Assets.AssetGroups.md#objectversion) | int32 |  
 
 ## References
 
@@ -64,11 +64,11 @@ _Supported Filters_: **Like**
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
 
-### RowVersion
+### ObjectVersion
 
-_Type_: **byte[]**  
+_Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Supports Order By_: ****  
 
 
 ## Reference Details

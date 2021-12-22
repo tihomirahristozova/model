@@ -122,14 +122,14 @@ Default Search Members:<br>
 <td>The name of this Report. <code>Required</code> <code>Filter(eq;like)</code></td>
 </tr>
 <tr>
+<td><a href="General.Reports.html#objectversion">ObjectVersion</a></td>
+<td>int32</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="General.Reports.html#queryname">QueryName</a></td>
 <td>string (128)</td>
 <td>The name of the query or table that is used for root reference point of the loaded data. <code>Required</code> <code>Filter(eq;like)</code></td>
-</tr>
-<tr>
-<td><a href="General.Reports.html#rowversion">RowVersion</a></td>
-<td>byte[]</td>
-<td></td>
 </tr>
 <tr>
 <td><a href="General.Reports.html#showparenttables">ShowParentTables</a></td>
@@ -173,16 +173,16 @@ Default Search Members:<br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>64</strong></p>
+<h3 id="objectversion">ObjectVersion</h3>
+<p><em>Type</em>: <strong>int32</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****</p>
 <h3 id="queryname">QueryName</h3>
 <p>The name of the query or table that is used for root reference point of the loaded data. <code>Required</code> <code>Filter(eq;like)</code></p>
 <p><em>Type</em>: <strong>string (128)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>128</strong></p>
-<h3 id="rowversion">RowVersion</h3>
-<p><em>Type</em>: <strong>byte[]</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="showparenttables">ShowParentTables</h3>
 <p>Indicates whether the parent nodes in the Reference_Path in Sys_Data_Source_Queries_Table are automaticaly included in the report or not. <code>Required</code> <code>Default(false)</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>

@@ -33,7 +33,7 @@ Aggregate Root:
 | [Id](General.Contacts.PartyBankAccounts.md#id) | guid |  
 | [IsDefault](General.Contacts.PartyBankAccounts.md#isdefault) | boolean | True if the this is the default account for the party. Only one default per party is allowed. `Required` `Default(false)` `Filter(eq)` 
 | [Notes](General.Contacts.PartyBankAccounts.md#notes) | string (254) __nullable__ | Notes for this PartyBankAccount. 
-| [RowVersion](General.Contacts.PartyBankAccounts.md#rowversion) | byte[] |  
+| [ObjectVersion](General.Contacts.PartyBankAccounts.md#objectversion) | int32 |  
 
 ## References
 
@@ -111,11 +111,11 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
 
-### RowVersion
+### ObjectVersion
 
-_Type_: **byte[]**  
+_Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Supports Order By_: ****  
 
 
 ## Reference Details

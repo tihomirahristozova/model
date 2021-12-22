@@ -11,6 +11,7 @@ Contains vehicle definitions. Entity: Fleet_Vehicles
 
 | Name | Type | Description |
 | - | - | --- |
+|[__Object_Version](#__object_version)|`int` ||
 |[Active_From](#active_from)|`datetime` |The date and time, when the vehicle has been purchased or started to be managed. Null when the date and time are unknown.|
 |[Active_Till](#active_till)|`datetime` |The date and time, when the vehicle has been sold or has stopped being managed. Null when the date and time are unknown.|
 |[Authority_Maximum_Laden_Mass_Kg](#authority_maximum_laden_mass_kg)|`int` |Maximum permissible laden mass, as determined by the registration authority|
@@ -45,6 +46,33 @@ Contains vehicle definitions. Entity: Fleet_Vehicles
 |[Vehicle_Type](#vehicle_type)|`nvarchar(64)` `ML`|Type of vehicle - e.g. automobile, bus, etc. NULL means the value is unknown|
 
 ## Columns
+
+### __Object_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 ### Active_From
 

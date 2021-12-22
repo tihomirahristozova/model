@@ -128,14 +128,14 @@ Aggregate Root:<br>
 <td>Indicates whether the device is currently active and can be choosen from drop-downs in new records. <code>Required</code> <code>Default(true)</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
+<td><a href="Crm.Pos.Devices.html#objectversion">ObjectVersion</a></td>
+<td>int32</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="Crm.Pos.Devices.html#protocolname">ProtocolName</a></td>
 <td><a href="Crm.Pos.Devices.html#protocolname">ProtocolName</a> <strong>nullable</strong></td>
 <td>The name of the protocol, which can be used to communicate with the device. null means that the protocol is unknown and programmatic communication with the device would not be performed.</td>
-</tr>
-<tr>
-<td><a href="Crm.Pos.Devices.html#rowversion">RowVersion</a></td>
-<td>byte[]</td>
-<td></td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.Devices.html#settingsjson">SettingsJson</a></td>
@@ -219,6 +219,10 @@ Allowed values for the <code>DeviceType</code>(Crm.Pos.Devices.md#devicetype) da
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>True</strong></p>
+<h3 id="objectversion">ObjectVersion</h3>
+<p><em>Type</em>: <strong>int32</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****</p>
 <h3 id="protocolname">ProtocolName</h3>
 <p>The name of the protocol, which can be used to communicate with the device. null means that the protocol is unknown and programmatic communication with the device would not be performed.</p>
 <p><em>Type</em>: <strong><a href="Crm.Pos.Devices.html#protocolname">ProtocolName</a> <strong>nullable</strong></strong><br>
@@ -239,10 +243,6 @@ Allowed values for the <code>ProtocolName</code>(Crm.Pos.Devices.md#protocolname
 </tbody>
 </table>
 <p><em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
-<h3 id="rowversion">RowVersion</h3>
-<p><em>Type</em>: <strong>byte[]</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="settingsjson">SettingsJson</h3>
 <p>Settings and operator access codes for the POS device. The data is stored as Json, encrypted for the current application server instance. null means that there are no settings for this device.</p>

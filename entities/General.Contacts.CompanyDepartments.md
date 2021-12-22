@@ -28,7 +28,7 @@ Aggregate Root:
 | [DepartmentName](General.Contacts.CompanyDepartments.md#departmentname) | string (254) | The name of the department. `Required` `Filter(like)` 
 | [Id](General.Contacts.CompanyDepartments.md#id) | guid |  
 | [Notes](General.Contacts.CompanyDepartments.md#notes) | string (max) __nullable__ | Notes for this CompanyDepartment. 
-| [RowVersion](General.Contacts.CompanyDepartments.md#rowversion) | byte[] |  
+| [ObjectVersion](General.Contacts.CompanyDepartments.md#objectversion) | int32 |  
 
 ## References
 
@@ -65,11 +65,11 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
 
-### RowVersion
+### ObjectVersion
 
-_Type_: **byte[]**  
+_Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Supports Order By_: ****  
 
 
 ## Reference Details

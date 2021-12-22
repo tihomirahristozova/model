@@ -118,6 +118,11 @@ Aggregate Root:<br>
 <td>If Is_Debit=true then this property is for the debit account in the template line for which is this record. If Is_Debit=false then the property is for the credit account. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
+<td><a href="Finance.Accounting.TemplateLineProperties.html#objectversion">ObjectVersion</a></td>
+<td>int32</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="Finance.Accounting.TemplateLineProperties.html#propertydescription">PropertyDescription</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString</a> <strong>nullable</strong></td>
 <td>Description for the property value that should be used when the description can't be determined by the source (e.g. when the source type is constant).</td>
@@ -136,11 +141,6 @@ Aggregate Root:<br>
 <td><a href="Finance.Accounting.TemplateLineProperties.html#propertyvaluesourcetype">PropertyValueSourceType</a></td>
 <td>string (64)</td>
 <td>Type of source for the property value. For example: System properties, User properties for document, Constant, ... <code>Required</code></td>
-</tr>
-<tr>
-<td><a href="Finance.Accounting.TemplateLineProperties.html#rowversion">RowVersion</a></td>
-<td>byte[]</td>
-<td></td>
 </tr>
 </tbody>
 </table>
@@ -182,6 +182,10 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>True</strong></p>
+<h3 id="objectversion">ObjectVersion</h3>
+<p><em>Type</em>: <strong>int32</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****</p>
 <h3 id="propertydescription">PropertyDescription</h3>
 <p>Description for the property value that should be used when the description can't be determined by the source (e.g. when the source type is constant).</p>
 <p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a> <strong>nullable</strong></strong><br>
@@ -204,10 +208,6 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>64</strong></p>
-<h3 id="rowversion">RowVersion</h3>
-<p><em>Type</em>: <strong>byte[]</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="property">Property</h3>
 <p>The property which value will be included in the item key of the account. <code>Required</code> <code>Filter(multi eq)</code></p>

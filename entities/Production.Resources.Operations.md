@@ -30,7 +30,7 @@ Aggregate Root:
 | [MinimumConcurrent<br />StartTimeMinutes](Production.Resources.Operations.md#minimumconcurrentstarttimeminutes) | int32 __nullable__ | How many minutes after the start of this operation can the next operation start. null means that the next operation should wait this operation to finish before starting. 
 | [MoveTimeMinutes](Production.Resources.Operations.md#movetimeminutes) | int32 | The time required for the product to move to the next operation. During this time no resource is allocated. `Required` `Default(0)` 
 | [Name](Production.Resources.Operations.md#name) | string (50) | The name of this Operation. `Required` `Filter(like)` 
-| [RowVersion](Production.Resources.Operations.md#rowversion) | byte[] |  
+| [ObjectVersion](Production.Resources.Operations.md#objectversion) | int32 |  
 | [RunTimeMinutes](Production.Resources.Operations.md#runtimeminutes) | int32 | The time required to process one product lot. The run time is calculated for each produced lot. `Required` `Default(0)` 
 | [ScrapRate](Production.Resources.Operations.md#scraprate) | decimal (7, 6) __nullable__ | The percentage (0..1) of scrap usually occurring during the production operation. null means that the scrap rate cannot be generally calculated. 
 | [SetupTimeMinutes](Production.Resources.Operations.md#setuptimeminutes) | int32 | The time required to setup the operation. The setup is incurred only once, regardless of the produced quntity. `Required` `Default(0)` 
@@ -92,11 +92,11 @@ _Supported Filters_: **Like**
 _Supports Order By_: **False**  
 _Maximum Length_: **50**  
 
-### RowVersion
+### ObjectVersion
 
-_Type_: **byte[]**  
+_Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Supports Order By_: ****  
 
 ### RunTimeMinutes
 

@@ -11,6 +11,7 @@ Payment accounts are cash, bank and other accounts, which are used in payments. 
 
 | Name | Type | Description |
 | - | - | --- |
+|[__Object_Version](#__object_version)|`int` ||
 |[Access_Key_Id](#access_key_id)|`uniqueidentifier` ||
 |[Bank_Account_Id](#bank_account_id)|`uniqueidentifier` |The bank account, which is represented by this payment account.|
 |[Currency_Id](#currency_id)|`uniqueidentifier` |The currency in which the movements for this payment account will be recorded.|
@@ -24,6 +25,33 @@ Payment accounts are cash, bank and other accounts, which are used in payments. 
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
+
+### __Object_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 ### Access_Key_Id
 

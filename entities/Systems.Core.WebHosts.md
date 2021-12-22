@@ -31,7 +31,7 @@ Aggregate Tree
 | [Id](Systems.Core.WebHosts.md#id) | guid |  
 | [Name](Systems.Core.WebHosts.md#name) | string (max) | The unique Internet name of the host. Should NOT include protocol name and should NOT include any forward slashes. This is just the dot-separated host name. `Required` `Filter(multi eq;like)` 
 | [Notes](Systems.Core.WebHosts.md#notes) | string (max) __nullable__ | Notes for this WebHost. 
-| [RowVersion](Systems.Core.WebHosts.md#rowversion) | byte[] |  
+| [ObjectVersion](Systems.Core.WebHosts.md#objectversion) | int32 |  
 
 
 ## Attribute Details
@@ -105,11 +105,11 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
 
-### RowVersion
+### ObjectVersion
 
-_Type_: **byte[]**  
+_Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Supports Order By_: ****  
 
 
 

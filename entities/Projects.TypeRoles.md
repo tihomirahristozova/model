@@ -27,8 +27,8 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [Description](Projects.TypeRoles.md#description) | string (max) __nullable__ | Description of the participant role. 
 | [Id](Projects.TypeRoles.md#id) | guid |  
+| [ObjectVersion](Projects.TypeRoles.md#objectversion) | int32 |  
 | [RoleName](Projects.TypeRoles.md#rolename) | string (255) | The name of the participant role. `Required` `Filter(multi eq;like)` 
-| [RowVersion](Projects.TypeRoles.md#rowversion) | byte[] |  
 
 ## References
 
@@ -55,6 +55,12 @@ _Indexed_: **True**
 _Supported Filters_: **Equals, Like, EqualsIn**  
 _Default Value_: **NewGuid**  
 
+### ObjectVersion
+
+_Type_: **int32**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+
 ### RoleName
 
 The name of the participant role. `Required` `Filter(multi eq;like)`
@@ -63,12 +69,6 @@ _Type_: **string (255)**
 _Supported Filters_: **Equals, Like, EqualsIn**  
 _Supports Order By_: **False**  
 _Maximum Length_: **255**  
-
-### RowVersion
-
-_Type_: **byte[]**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
 
 
 ## Reference Details

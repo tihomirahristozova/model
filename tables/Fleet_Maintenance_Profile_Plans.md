@@ -15,6 +15,7 @@ Contains the plans, included in the maintenance profile. Entity: Fleet_Maintenan
 
 | Name | Type | Description |
 | - | - | --- |
+|[__Object_Version](#__object_version)|`int` ||
 |[Is_Active](#is_active)|`bit` |1 if the maintenance plan is active for this profile. When a plan is not active, maintenance for it will not occur for the current profile.|
 |[Maintenance_Plan_Id](#maintenance_plan_id)|`uniqueidentifier` |The maintenance plan, which is included in the profile.|
 |[Maintenance_Profile_Id](#maintenance_profile_id)|`uniqueidentifier` |The maintenance profile, which includes the plan.|
@@ -22,6 +23,33 @@ Contains the plans, included in the maintenance profile. Entity: Fleet_Maintenan
 |[Notes](#notes)|`nvarchar(max)` ||
 
 ## Columns
+
+### __Object_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 ### Is_Active
 

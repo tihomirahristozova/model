@@ -16,6 +16,7 @@ Contains lists of vehicles in the vehicle sets. Entity: Fleet_Vehicle_Set_Vehicl
 
 | Name | Type | Description |
 | - | - | --- |
+|[__Object_Version](#__object_version)|`int` ||
 |[Notes](#notes)|`nvarchar(254)` ||
 |[Ordinal_Pos](#ordinal_pos)|`int` |Ordinal position of the vehicle within the vehicle set. Position 0 has special meaning - this is the leading vehicle|
 |[Row_Version](#row_version)|`timestamp` ||
@@ -24,6 +25,33 @@ Contains lists of vehicles in the vehicle sets. Entity: Fleet_Vehicle_Set_Vehicl
 |[Vehicle_Set_Vehicle_Id](#vehicle_set_vehicle_id)|`uniqueidentifier` `PK`||
 
 ## Columns
+
+### __Object_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 ### Notes
 

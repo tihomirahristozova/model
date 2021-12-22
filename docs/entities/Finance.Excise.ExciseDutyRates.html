@@ -83,7 +83,7 @@
 <p>Duty rates are specified by the taxation and customs authorities. They are the basis for the calculation of the excise amount (based on the calculation algorithm, specified in the Product Category). Entity: Exc_Excise_Duty_Rates (Introduced in version 21.1.3.87)</p>
 <h2 id="default-visualization">Default Visualization</h2>
 <p>Default Display Text Format:<br>
-<em>{Id}: {ExciseProductId}</em><br>
+<em>{Id}: {ObjectVersion}</em><br>
 Default Search Members:<br>
 __</p>
 <h2 id="aggregate">Aggregate</h2>
@@ -118,8 +118,8 @@ __</p>
 <td>Notes for this ExciseDutyRate.</td>
 </tr>
 <tr>
-<td><a href="Finance.Excise.ExciseDutyRates.html#rowversion">RowVersion</a></td>
-<td>byte[]</td>
+<td><a href="Finance.Excise.ExciseDutyRates.html#objectversion">ObjectVersion</a></td>
+<td>int32</td>
 <td></td>
 </tr>
 </tbody>
@@ -169,10 +169,10 @@ __</p>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>2147483647</strong></p>
-<h3 id="rowversion">RowVersion</h3>
-<p><em>Type</em>: <strong>byte[]</strong><br>
+<h3 id="objectversion">ObjectVersion</h3>
+<p><em>Type</em>: <strong>int32</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: ****</p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="excisemeasurementunit">ExciseMeasurementUnit</h3>
 <p>The measurement unit which should be used in the excise calculation. This is only for verification purposes. <code>Required</code> <code>Filter(multi eq)</code></p>

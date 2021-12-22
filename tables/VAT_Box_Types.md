@@ -11,6 +11,7 @@ The types of boxes in a VAT declaration. . Entity: VAT_Box_Types (Introduced in 
 
 | Name | Type | Description |
 | - | - | --- |
+|[__Object_Version](#__object_version)|`int` ||
 |[Box_Type_Id](#box_type_id)|`uniqueidentifier` `PK`|The type of box in a VAT declaration.|
 |[Code](#code)|`nvarchar(32)` ||
 |[Country_Id](#country_id)|`uniqueidentifier` |The Country for which this type of box is declared.|
@@ -19,6 +20,33 @@ The types of boxes in a VAT declaration. . Entity: VAT_Box_Types (Introduced in 
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
+
+### __Object_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 ### Box_Type_Id
 

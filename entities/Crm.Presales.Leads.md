@@ -27,6 +27,7 @@ Aggregate Tree
 | [CreationTimestampUtc](Crm.Presales.Leads.md#creationtimestamputc) | datetime | System assigned date and time (in UTC), when the lead was initially created. `Required` `Filter(ge;le)` `ReadOnly` 
 | [Id](Crm.Presales.Leads.md#id) | guid |  
 | [MQLTimestampUtc](Crm.Presales.Leads.md#mqltimestamputc) | datetime __nullable__ | System assigned date and time (in UTC), when the lead was first promoted to Marketing Qualified Lead (MQL). `Filter(ge;le)` `ReadOnly` 
+| [ObjectVersion](Crm.Presales.Leads.md#objectversion) | int32 |  
 | [PersonEmail](Crm.Presales.Leads.md#personemail) | string (64) __nullable__ | The email address of the sales lead person. `Filter(eq;like)` 
 | [PersonFirstName](Crm.Presales.Leads.md#personfirstname) | string (64) __nullable__ | The first name of the person, representing the sales lead. `Filter(eq;like)` 
 | [PersonLastName](Crm.Presales.Leads.md#personlastname) | string (64) __nullable__ | The last name of the person, representing the sales lead. `Filter(eq;like)` 
@@ -35,7 +36,6 @@ Aggregate Tree
 | [PersonWebProfile](Crm.Presales.Leads.md#personwebprofile) | string (64) __nullable__ | Web address (including protocol like https) of the personal profile in a social or professional network. The address itself, as it is full valid Internet address, contains also the network name. `Filter(like)` 
 | [PersonWorkPhone](Crm.Presales.Leads.md#personworkphone) | string (32) __nullable__ | The work phone of the sales lead person. `Filter(like)` 
 | [RoleInCompany](Crm.Presales.Leads.md#roleincompany) | string (32) __nullable__ | The role of the person in the company. `Filter(eq;like)` 
-| [RowVersion](Crm.Presales.Leads.md#rowversion) | byte[] __nullable__ |  
 | [SQLTimestampUtc](Crm.Presales.Leads.md#sqltimestamputc) | datetime __nullable__ | System assigned date and time (in UTC), when the lead was first promoted to Sales Qualified Lead. `Filter(ge;le)` `ReadOnly` 
 | [SystemStage](Crm.Presales.Leads.md#systemstage) | [SystemStage](Crm.Presales.Leads.md#systemstage) | The system stage of the lead - New, Qualifying, Marketing Qualified Lead, Sales Qualified Lead, Closed. (NEW, QUA, MQL, SQL, CLO). `Required` `Default("NEW")` `Filter(multi eq)` 
 
@@ -92,6 +92,12 @@ System assigned date and time (in UTC), when the lead was first promoted to Mark
 _Type_: **datetime __nullable__**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
+
+### ObjectVersion
+
+_Type_: **int32**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### PersonEmail
 
@@ -164,12 +170,6 @@ _Type_: **string (32) __nullable__**
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **32**  
-
-### RowVersion
-
-_Type_: **byte[] __nullable__**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
 
 ### SQLTimestampUtc
 

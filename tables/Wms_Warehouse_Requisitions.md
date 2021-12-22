@@ -15,6 +15,7 @@ Contains request for warehouse operation created from another module. Entity: Wm
 
 | Name | Type | Description |
 | - | - | --- |
+|[__Object_Version](#__object_version)|`int` ||
 |[Document_Id](#document_id)|`uniqueidentifier` ||
 |[Expected_Date](#expected_date)|`date` |Date, when the requisition is expected to be fulfilled.|
 |[Expected_Time](#expected_time)|`time` |Time, when the requisition is expected to be executed. NULL when the time is unknown.|
@@ -24,6 +25,33 @@ Contains request for warehouse operation created from another module. Entity: Wm
 |[Warehouse_Requisition_Id](#warehouse_requisition_id)|`uniqueidentifier` `PK`||
 
 ## Columns
+
+### __Object_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 ### Document_Id
 

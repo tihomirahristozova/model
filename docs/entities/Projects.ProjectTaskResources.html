@@ -128,6 +128,11 @@ Aggregate Root:<br>
 <td>Notes for this ProjectTaskResource.</td>
 </tr>
 <tr>
+<td><a href="Projects.ProjectTaskResources.html#objectversion">ObjectVersion</a></td>
+<td>int32</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="Projects.ProjectTaskResources.html#perusecost">PerUseCost</a></td>
 <td><a href="../data-types.html#amount">Amount (14, 2)</a> <strong>nullable</strong></td>
 <td>One time cost for each resource usage, specified in the projects currency. <code>Currency: ProjectTask.Project.BudgetingCurrency</code></td>
@@ -141,11 +146,6 @@ Aggregate Root:<br>
 <td><a href="Projects.ProjectTaskResources.html#resourceusagepercent">ResourceUsagePercent</a></td>
 <td>decimal (18, 4)</td>
 <td>The planned resource usage for this activity in percents. Values of more than 100% are allowed when more than 1 resource is required. <code>Required</code> <code>Default(1)</code> <code>Filter(eq)</code></td>
-</tr>
-<tr>
-<td><a href="Projects.ProjectTaskResources.html#rowversion">RowVersion</a></td>
-<td>byte[]</td>
-<td></td>
 </tr>
 <tr>
 <td><a href="Projects.ProjectTaskResources.html#tasktotalcost">TaskTotalCost</a></td>
@@ -215,6 +215,10 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>254</strong></p>
+<h3 id="objectversion">ObjectVersion</h3>
+<p><em>Type</em>: <strong>int32</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****</p>
 <h3 id="perusecost">PerUseCost</h3>
 <p>One time cost for each resource usage, specified in the projects currency. <code>Currency: ProjectTask.Project.BudgetingCurrency</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount (14, 2)</a> <strong>nullable</strong></strong><br>
@@ -236,10 +240,6 @@ Aggregate Root:<br>
 <em>Default Value</em>: <strong>1</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>IIF( ( obj.ProjectTask.PlannedDurationHours == 0), 0, ( obj.ResourceUsageHours / obj.ProjectTask.PlannedDurationHours))</code></p>
-<h3 id="rowversion">RowVersion</h3>
-<p><em>Type</em>: <strong>byte[]</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="tasktotalcost">TaskTotalCost</h3>
 <p>Total cost for this task (in the currency of the project). <code>Required</code> <code>Default(0)</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong>decimal (14, 2)</strong><br>

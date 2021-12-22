@@ -11,6 +11,7 @@ Marketing target group, containing a fixed list of parties. Entity: Crm_Target_G
 
 | Name | Type | Description |
 | - | - | --- |
+|[__Object_Version](#__object_version)|`int` ||
 |[Description](#description)|`nvarchar(254)` ||
 |[Row_Version](#row_version)|`timestamp` ||
 |[Target_Group_Code](#target_group_code)|`nvarchar(16)` |Short code for identification of target groups.|
@@ -18,6 +19,33 @@ Marketing target group, containing a fixed list of parties. Entity: Crm_Target_G
 |[Target_Group_Name](#target_group_name)|`nvarchar(64)` ||
 
 ## Columns
+
+### __Object_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 ### Description
 

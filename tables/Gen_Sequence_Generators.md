@@ -15,6 +15,7 @@ Contains one or more sequence generators for each sequence. Many sequence genera
 
 | Name | Type | Description |
 | - | - | --- |
+|[__Object_Version](#__object_version)|`int` ||
 |[Allow_Explicit_Numbering](#allow_explicit_numbering)|`bit` |Allows to assign numbers explicitely regardless of the Next_Value of the generator (Next_Value is updated if needed)|
 |[Enterprise_Company_Id](#enterprise_company_id)|`uniqueidentifier` ||
 |[Enterprise_Company_Location_Id](#enterprise_company_location_id)|`uniqueidentifier` ||
@@ -26,6 +27,33 @@ Contains one or more sequence generators for each sequence. Many sequence genera
 |[Sequence_Priority](#sequence_priority)|`int` |The priority in which the sequence is used, compared to other similar sequences. Used only for sequences, for which Simultaneous Transactions=True|
 
 ## Columns
+
+### __Object_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 ### Allow_Explicit_Numbering
 

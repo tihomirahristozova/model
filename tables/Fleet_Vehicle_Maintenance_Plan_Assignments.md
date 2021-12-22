@@ -11,6 +11,7 @@ Represents assignment of a maintenance plan to a vehicle. Entity: Fleet_Vehicle_
 
 | Name | Type | Description |
 | - | - | --- |
+|[__Object_Version](#__object_version)|`int` ||
 |[Is_Active](#is_active)|`bit` |Specifies whether the plan is active.|
 |[Last_Maintenance_Mileage_Km](#last_maintenance_mileage_km)|`int` |The mileage of the vehicle (in Kilometers), when the last maintenance of this type occurred. Should be specified for plans, which require mileage check.|
 |[Last_Maintenance_Trip_Count](#last_maintenance_trip_count)|`int` |The trip count of the vehicle, when the last maintenance of this type occurred. Should be specified for plans, which trip count check.|
@@ -21,6 +22,33 @@ Represents assignment of a maintenance plan to a vehicle. Entity: Fleet_Vehicle_
 |[Vehicle_Maintenance_Plan_Assignment_Id](#vehicle_maintenance_plan_assignment_id)|`uniqueidentifier` `PK`||
 
 ## Columns
+
+### __Object_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 ### Is_Active
 

@@ -31,7 +31,7 @@ Aggregate Root:
 | [ContractStartDate](Crm.SalesPersons.md#contractstartdate) | datetime __nullable__ | The starting date of the contract with the sales person. null when it is unknown. `Filter(ge;le)` 
 | [Id](Crm.SalesPersons.md#id) | guid |  
 | [IsActive](Crm.SalesPersons.md#isactive) | boolean | Specifies whether the sales person is active and should be included in the list when choosing sales person through drop-downs, lists, etc. `Required` `Default(true)` `Filter(eq)` 
-| [RowVersion](Crm.SalesPersons.md#rowversion) | byte[] |  
+| [ObjectVersion](Crm.SalesPersons.md#objectversion) | int32 |  
 
 ## References
 
@@ -92,11 +92,11 @@ _Supported Filters_: **Equals**
 _Supports Order By_: **False**  
 _Default Value_: **True**  
 
-### RowVersion
+### ObjectVersion
 
-_Type_: **byte[]**  
+_Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Supports Order By_: ****  
 
 
 ## Reference Details

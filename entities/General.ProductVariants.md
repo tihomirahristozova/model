@@ -29,7 +29,7 @@ Aggregate Root:
 | [Code](General.ProductVariants.md#code) | string (16) | The code of the variant. The code is unique within the Product. It is the concatenation of the codes of the color, size and style. `Required` `Filter(eq;like)` `ReadOnly` 
 | [Id](General.ProductVariants.md#id) | guid |  
 | [Name](General.ProductVariants.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) __nullable__ | Product variant name. It is the concatenation of the names of the color, size and style. `ReadOnly` 
-| [RowVersion](General.ProductVariants.md#rowversion) | byte[] |  
+| [ObjectVersion](General.ProductVariants.md#objectversion) | int32 |  
 
 ## References
 
@@ -82,11 +82,11 @@ _Back-End Default Expression:_
 
 _Front-End Recalc Expressions:_  
 `Join( " ", new [] {obj.VariantColor.Name, obj.VariantSize.Name, obj.VariantStyle.Name})`
-### RowVersion
+### ObjectVersion
 
-_Type_: **byte[]**  
+_Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Supports Order By_: ****  
 
 
 ## Reference Details

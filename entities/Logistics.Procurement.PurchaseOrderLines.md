@@ -32,13 +32,13 @@ Aggregate Root:
 | [Id](Logistics.Procurement.PurchaseOrderLines.md#id) | guid |  
 | [LineNo](Logistics.Procurement.PurchaseOrderLines.md#lineno) | int32 | Line number, unique within the PurchaseOrder. Usually is increasing number like 10, 20, 30, ... when initially entering the PurchaseOrder (in order to allow insertions with adjustment documents). `Required` 
 | [Notes](Logistics.Procurement.PurchaseOrderLines.md#notes) | string (254) __nullable__ | Notes for this PurchaseOrderLine. 
+| [ObjectVersion](Logistics.Procurement.PurchaseOrderLines.md#objectversion) | int32 |  
 | [ParentLineNo](Logistics.Procurement.PurchaseOrderLines.md#parentlineno) | int32 __nullable__ | The number of the line within the parent document, which the current line executes. null when the current line does not execute line. `Filter(eq)` `Introduced in version 18.2` 
 | [PlannedDeliveryDate](Logistics.Procurement.PurchaseOrderLines.md#planneddeliverydate) | datetime | The planned delivery date for this line. `Required` `Filter(ge;le)` 
 | [PricePerUnit](Logistics.Procurement.PurchaseOrderLines.md#priceperunit) | [Amount (14, 5)](../data-types.md#amount) __nullable__ | The expected unit price of the ordered products, in the document currency. `Currency: PurchaseOrder.DocumentCurrency` 
 | [ProductDescription](Logistics.Procurement.PurchaseOrderLines.md#productdescription) | [MultilanguageString](../data-types.md#multilanguagestring) | The name of the ordered product, initially copied from the name in the product definition. The field can be edited by the user. `Required` `Filter(like)` 
 | [Quantity](Logistics.Procurement.PurchaseOrderLines.md#quantity) | [Quantity (18, 3)](../data-types.md#quantity) | The quantity ordered. `Unit: QuantityUnit` `Required` `Default(0)` `Filter(ge;le)` 
 | [QuantityBase](Logistics.Procurement.PurchaseOrderLines.md#quantitybase) | [Quantity (18, 3)](../data-types.md#quantity) | The equivalence of Quantity, in the base measurement category of the product. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Default(0)` `ReadOnly` 
-| [RowVersion](Logistics.Procurement.PurchaseOrderLines.md#rowversion) | byte[] |  
 | [StandardQuantityBase](Logistics.Procurement.PurchaseOrderLines.md#standardquantitybase) | [Quantity (18, 3)](../data-types.md#quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` `Introduced in version 18.2` 
 
 ## References
@@ -124,6 +124,12 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
 
+### ObjectVersion
+
+_Type_: **int32**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+
 ### ParentLineNo
 
 The number of the line within the parent document, which the current line executes. null when the current line does not execute line. `Filter(eq)` `Introduced in version 18.2`
@@ -191,12 +197,6 @@ _Back-End Default Expression:_
 
 _Front-End Recalc Expressions:_  
 `IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.QuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))`
-### RowVersion
-
-_Type_: **byte[]**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-
 ### StandardQuantityBase
 
 The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` `Introduced in version 18.2`

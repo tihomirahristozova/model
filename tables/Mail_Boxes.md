@@ -11,6 +11,7 @@ Represents user mailboxes. Entity: Mail_Boxes
 
 | Name | Type | Description |
 | - | - | --- |
+|[__Object_Version](#__object_version)|`int` ||
 |[Active](#active)|`bit` |1 when the mail box is active for mail sinchronization, sending and receiving|
 |[Email_Address](#email_address)|`nvarchar(254)` |The email address associated with this mail box|
 |[Is_Default](#is_default)|`bit` |1 when this is the default mailbox for the user.|
@@ -28,6 +29,33 @@ Represents user mailboxes. Entity: Mail_Boxes
 |[Sync_User_Name](#sync_user_name)|`nvarchar(64)` |User name to supply to the server, when retrieving email. NULL when the connection is not setup or the server does not require user name|
 
 ## Columns
+
+### __Object_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 ### Active
 

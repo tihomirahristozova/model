@@ -18,6 +18,7 @@ Contains scheduled operations usage of the resources. Entity: Prd_Load
 
 | Name | Type | Description |
 | - | - | --- |
+|[__Object_Version](#__object_version)|`int` ||
 |[Calendar_Date](#calendar_date)|`datetime` |Date of the scheduled load. This is date only. Start_Time and End_Time specify time of day|
 |[Id](#id)|`uniqueidentifier` `PK`||
 |[Priority](#priority)|`smallint` Allowed: `1`, `2`, `3`, `4`, `5`|Priority of the allocation. 1=Lowest ... 5=Highest|
@@ -31,6 +32,33 @@ Contains scheduled operations usage of the resources. Entity: Prd_Load
 |[Workgroup_Resource_Id](#workgroup_resource_id)|`uniqueidentifier` |The exact resource being utilised|
 
 ## Columns
+
+### __Object_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 ### Calendar_Date
 

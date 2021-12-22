@@ -15,6 +15,7 @@ Contains the different working time periods within the work schedule. Entity: Ge
 
 | Name | Type | Description |
 | - | - | --- |
+|[__Object_Version](#__object_version)|`int` ||
 |[Day_No](#day_no)|`int` |Consequtive day in the work schedule recurrence, starting at 1|
 |[End_Time](#end_time)|`time` |End of working time period|
 |[Id](#id)|`uniqueidentifier` `PK`||
@@ -23,6 +24,33 @@ Contains the different working time periods within the work schedule. Entity: Ge
 |[Work_Schedule_Id](#work_schedule_id)|`uniqueidentifier` ||
 
 ## Columns
+
+### __Object_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 ### Day_No
 

@@ -29,7 +29,7 @@ Aggregate Root:
 | [AvailableQuantityOnly](Crm.Sales.SalesOrdersOptions.md#availablequantityonly) | boolean | When true indicates that the sales order can be released only if there is sufficient available quantity (by ATP). `Required` `Default(false)` `Filter(eq)` 
 | [Id](Crm.Sales.SalesOrdersOptions.md#id) | guid |  
 | [MinimumAmount](Crm.Sales.SalesOrdersOptions.md#minimumamount) | [Amount (14, 2)](../data-types.md#amount) __nullable__ | When not null, specifies minimal total amount of the sales order, which is required for order releasing. `Currency: MinimumAmountCurrency` 
-| [RowVersion](Crm.Sales.SalesOrdersOptions.md#rowversion) | byte[] |  
+| [ObjectVersion](Crm.Sales.SalesOrdersOptions.md#objectversion) | int32 |  
 | [ShipmentAllowance](Crm.Sales.SalesOrdersOptions.md#shipmentallowance) | [ShipmentAllowance](Crm.Sales.SalesOrdersOptions.md#shipmentallowance) | Terms on which the shipment of the products in the sales order is allowed. `Required` `Default("A")` 
 
 ## References
@@ -87,11 +87,11 @@ _Type_: **[Amount (14, 2)](../data-types.md#amount) __nullable__**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
-### RowVersion
+### ObjectVersion
 
-_Type_: **byte[]**  
+_Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Supports Order By_: ****  
 
 ### ShipmentAllowance
 

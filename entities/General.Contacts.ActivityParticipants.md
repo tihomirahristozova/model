@@ -27,7 +27,7 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [Id](General.Contacts.ActivityParticipants.md#id) | guid |  
 | [Notes](General.Contacts.ActivityParticipants.md#notes) | string (255) __nullable__ | Notes for this ActivityParticipant. 
-| [RowVersion](General.Contacts.ActivityParticipants.md#rowversion) | byte[] |  
+| [ObjectVersion](General.Contacts.ActivityParticipants.md#objectversion) | int32 |  
 | [WorkLoadPercent](General.Contacts.ActivityParticipants.md#workloadpercent) | decimal (3, 2) | The planned work load of the participant for this activity. `Required` `Default(1)` 
 
 ## References
@@ -56,11 +56,11 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Maximum Length_: **255**  
 
-### RowVersion
+### ObjectVersion
 
-_Type_: **byte[]**  
+_Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Supports Order By_: ****  
 
 ### WorkLoadPercent
 

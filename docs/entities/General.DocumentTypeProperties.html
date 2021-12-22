@@ -128,6 +128,11 @@ Aggregate Root:<br>
 <td>Line number, unique within the document type. <code>Required</code> <code>Filter(ge;le)</code> <code>ORD</code></td>
 </tr>
 <tr>
+<td><a href="General.DocumentTypeProperties.html#objectversion">ObjectVersion</a></td>
+<td>int32</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="General.DocumentTypeProperties.html#required">Required</a></td>
 <td>boolean</td>
 <td>True if the property is required when creating documents of this type. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
@@ -141,11 +146,6 @@ Aggregate Root:<br>
 <td><a href="General.DocumentTypeProperties.html#requiredthrudate">RequiredThruDate</a></td>
 <td>datetime <strong>nullable</strong></td>
 <td>When not null, specifies a date, up to which the property is required for the current document type. The date is compared against the document date. <code>Filter(ge;le)</code></td>
-</tr>
-<tr>
-<td><a href="General.DocumentTypeProperties.html#rowversion">RowVersion</a></td>
-<td>byte[]</td>
-<td></td>
 </tr>
 </tbody>
 </table>
@@ -206,6 +206,10 @@ Aggregate Root:<br>
 <code>( obj.DocumentType.DocumentTypeProperties.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>( obj.DocumentType.DocumentTypeProperties.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
+<h3 id="objectversion">ObjectVersion</h3>
+<p><em>Type</em>: <strong>int32</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****</p>
 <h3 id="required">Required</h3>
 <p>True if the property is required when creating documents of this type. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>
@@ -221,10 +225,6 @@ Aggregate Root:<br>
 <p>When not null, specifies a date, up to which the property is required for the current document type. The date is compared against the document date. <code>Filter(ge;le)</code></p>
 <p><em>Type</em>: <strong>datetime <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
-<h3 id="rowversion">RowVersion</h3>
-<p><em>Type</em>: <strong>byte[]</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="documenttype">DocumentType</h3>

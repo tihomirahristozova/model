@@ -32,8 +32,8 @@ Aggregate Root:
 | [MinimumConcurrent<br />StartTimeMinutes](Production.Technologies.PrincipalRecipeOperations.md#minimumconcurrentstarttimeminutes) | int32 __nullable__ | How many minutes after the start of the previous operation can this operation start. null means that this operation should wait the previous operation to finish before starting. 
 | [MoveTimeMinutes](Production.Technologies.PrincipalRecipeOperations.md#movetimeminutes) | int32 | Time to move the lot to the next operation in minutes. `Required` `Default(0)` `Filter(ge;le)` 
 | [Notes](Production.Technologies.PrincipalRecipeOperations.md#notes) | string (254) __nullable__ | Notes for this PrincipalRecipeOperation. 
+| [ObjectVersion](Production.Technologies.PrincipalRecipeOperations.md#objectversion) | int32 |  
 | [OperationDescription](Production.Technologies.PrincipalRecipeOperations.md#operationdescription) | string (max) __nullable__ | The description of the operation. Initially copied from the generic operation definition. 
-| [RowVersion](Production.Technologies.PrincipalRecipeOperations.md#rowversion) | byte[] |  
 | [RunTimeMinutes](Production.Technologies.PrincipalRecipeOperations.md#runtimeminutes) | int32 | Duration of the operation for one piece in the standard measurement unit of the product. `Required` `Default(0)` `Filter(ge;le)` 
 | [ScrapRate](Production.Technologies.PrincipalRecipeOperations.md#scraprate) | decimal (7, 6) | Standard rate of scrap during the operation. `Required` `Default(0)` 
 | [SetupTimeMinutes](Production.Technologies.PrincipalRecipeOperations.md#setuptimeminutes) | int32 | Time needed to setup the equipment. `Required` `Default(0)` `Filter(ge;le)` 
@@ -120,6 +120,12 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
 
+### ObjectVersion
+
+_Type_: **int32**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+
 ### OperationDescription
 
 The description of the operation. Initially copied from the generic operation definition.
@@ -131,12 +137,6 @@ _Maximum Length_: **2147483647**
 
 _Front-End Recalc Expressions:_  
 `obj.Operation.Description`
-### RowVersion
-
-_Type_: **byte[]**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-
 ### RunTimeMinutes
 
 Duration of the operation for one piece in the standard measurement unit of the product. `Required` `Default(0)` `Filter(ge;le)`

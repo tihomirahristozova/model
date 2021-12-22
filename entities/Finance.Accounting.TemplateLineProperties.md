@@ -28,11 +28,11 @@ Aggregate Root:
 | [ConstantValueId](Finance.Accounting.TemplateLineProperties.md#constantvalueid) | guid __nullable__ | The internal Id of a property value, selected as constant value. Applicable only when Property Value Source Type = Constant. `Filter(multi eq)` 
 | [Id](Finance.Accounting.TemplateLineProperties.md#id) | guid |  
 | [IsDebit](Finance.Accounting.TemplateLineProperties.md#isdebit) | boolean | If Is_Debit=true then this property is for the debit account in the template line for which is this record. If Is_Debit=false then the property is for the credit account. `Required` `Default(true)` `Filter(eq)` 
+| [ObjectVersion](Finance.Accounting.TemplateLineProperties.md#objectversion) | int32 |  
 | [PropertyDescription](Finance.Accounting.TemplateLineProperties.md#propertydescription) | [MultilanguageString](../data-types.md#multilanguagestring) __nullable__ | Description for the property value that should be used when the description can't be determined by the source (e.g. when the source type is constant). 
 | [PropertyNo](Finance.Accounting.TemplateLineProperties.md#propertyno) | int32 | The ordinal position of the property value in the item key of the account. `Required` `Filter(eq)` 
 | [PropertyValueSource](Finance.Accounting.TemplateLineProperties.md#propertyvaluesource) | string (2000) | Source for the property value according to the chosen source type. `Required` 
 | [PropertyValueSourceType](Finance.Accounting.TemplateLineProperties.md#propertyvaluesourcetype) | string (64) | Type of source for the property value. For example: System properties, User properties for document, Constant, ... `Required` 
-| [RowVersion](Finance.Accounting.TemplateLineProperties.md#rowversion) | byte[] |  
 
 ## References
 
@@ -67,6 +67,12 @@ _Supported Filters_: **Equals**
 _Supports Order By_: **False**  
 _Default Value_: **True**  
 
+### ObjectVersion
+
+_Type_: **int32**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+
 ### PropertyDescription
 
 Description for the property value that should be used when the description can't be determined by the source (e.g. when the source type is constant).
@@ -100,12 +106,6 @@ _Type_: **string (64)**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  
-
-### RowVersion
-
-_Type_: **byte[]**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
 
 
 ## Reference Details

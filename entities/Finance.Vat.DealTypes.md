@@ -28,7 +28,7 @@ Aggregate Tree
 | [Id](Finance.Vat.DealTypes.md#id) | guid |  
 | [IsSystem](Finance.Vat.DealTypes.md#issystem) | boolean | Is_System is True for those deal types that are managed by the system via update procedures and cannot be edited by the user. `Required` `Default(false)` `Filter(eq)` `ReadOnly` 
 | [Name](Finance.Vat.DealTypes.md#name) | string (254) | Description of the deal type. `Required` `Filter(eq;like)` 
-| [RowVersion](Finance.Vat.DealTypes.md#rowversion) | byte[] |  
+| [ObjectVersion](Finance.Vat.DealTypes.md#objectversion) | int32 |  
 
 ## References
 
@@ -86,11 +86,11 @@ _Supported Filters_: **Equals, Like**
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
 
-### RowVersion
+### ObjectVersion
 
-_Type_: **byte[]**  
+_Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Supports Order By_: ****  
 
 
 ## Reference Details

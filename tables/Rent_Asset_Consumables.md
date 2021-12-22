@@ -16,6 +16,7 @@ Consumables are products, which are usually sold accompanying an asset rental. E
 
 | Name | Type | Description |
 | - | - | --- |
+|[__Object_Version](#__object_version)|`int` ||
 |[Asset_Consumable_Id](#asset_consumable_id)|`uniqueidentifier` `PK`||
 |[Consumable_Quantity](#consumable_quantity)|`decimal(12, 3)` |Specifies what quantity of the consumable should be offered for each rented asset.|
 |[Consumable_Quantity_Unit_Id](#consumable_quantity_unit_id)|`uniqueidentifier` |The measurement unit of Consumable Quantity.|
@@ -26,6 +27,33 @@ Consumables are products, which are usually sold accompanying an asset rental. E
 |[Store_Id](#store_id)|`uniqueidentifier` |The store which contains the consumable.|
 
 ## Columns
+
+### __Object_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 ### Asset_Consumable_Id
 

@@ -28,7 +28,7 @@ Aggregate Root:
 | [ApplicableLegislation](General.PartyApplicableLegislations.md#applicablelegislation) | [ApplicableLegislation](General.PartyApplicableLegislations.md#applicablelegislation) | A legislation, which applies to the specified party. The list of legislations is system defined, and contains legislations for which system rules are currently defined. For example: US, UK, EU, DE, FR, ES, IT, BG, MK, RO, GR, etc. `Required` `Filter(multi eq)` `ORD` 
 | [Id](General.PartyApplicableLegislations.md#id) | guid |  
 | [Notes](General.PartyApplicableLegislations.md#notes) | string (254) __nullable__ | Notes for this PartyApplicableLegislation. `Filter(like)` 
-| [RowVersion](General.PartyApplicableLegislations.md#rowversion) | byte[] |  
+| [ObjectVersion](General.PartyApplicableLegislations.md#objectversion) | int32 |  
 
 ## References
 
@@ -94,11 +94,11 @@ _Supported Filters_: **Like**
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
 
-### RowVersion
+### ObjectVersion
 
-_Type_: **byte[]**  
+_Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Supports Order By_: ****  
 
 
 ## Reference Details

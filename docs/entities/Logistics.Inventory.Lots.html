@@ -128,6 +128,11 @@ Default Search Members:<br>
 <td>The unique number of the Lot. May contain characters, if required. <code>Required</code> <code>Filter(eq;like)</code></td>
 </tr>
 <tr>
+<td><a href="Logistics.Inventory.Lots.html#objectversion">ObjectVersion</a></td>
+<td>int32</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="Logistics.Inventory.Lots.html#productionbatchid">ProductionBatchId</a></td>
 <td>guid <strong>nullable</strong></td>
 <td>Non-null if the production batch is known. Production batches are automatically created for internal production, but can also be used for specifying production batches for purchased goods. <code>Filter(multi eq)</code></td>
@@ -141,11 +146,6 @@ Default Search Members:<br>
 <td><a href="Logistics.Inventory.Lots.html#receiptdate">ReceiptDate</a></td>
 <td>date <strong>nullable</strong></td>
 <td>The date of the first receipt of products in this lot. <code>ReadOnly</code></td>
-</tr>
-<tr>
-<td><a href="Logistics.Inventory.Lots.html#rowversion">RowVersion</a></td>
-<td>byte[]</td>
-<td></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.Lots.html#status">Status</a></td>
@@ -224,6 +224,10 @@ Default Search Members:<br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>30</strong></p>
+<h3 id="objectversion">ObjectVersion</h3>
+<p><em>Type</em>: <strong>int32</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****</p>
 <h3 id="productionbatchid">ProductionBatchId</h3>
 <p>Non-null if the production batch is known. Production batches are automatically created for internal production, but can also be used for specifying production batches for purchased goods. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong>guid <strong>nullable</strong></strong><br>
@@ -237,10 +241,6 @@ Default Search Members:<br>
 <h3 id="receiptdate">ReceiptDate</h3>
 <p>The date of the first receipt of products in this lot. <code>ReadOnly</code></p>
 <p><em>Type</em>: <strong>date <strong>nullable</strong></strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
-<h3 id="rowversion">RowVersion</h3>
-<p><em>Type</em>: <strong>byte[]</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="status">Status</h3>

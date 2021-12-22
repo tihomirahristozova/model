@@ -27,7 +27,7 @@ Aggregate Tree
 | [FullPath](General.Geography.Areas.md#fullpath) | string (254) __nullable__ | Full path to the area, starting with '/' and containing the area codes of all parent areas using '/' as separator and terminator. For example root area with code 'BG' would have full path = '/BG/'. `Filter(eq;like)` `ReadOnly` 
 | [Id](General.Geography.Areas.md#id) | guid |  
 | [Name](General.Geography.Areas.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Obsolete. Not used. `Required` `Filter(eq;like)` `ORD` 
-| [RowVersion](General.Geography.Areas.md#rowversion) | byte[] |  
+| [ObjectVersion](General.Geography.Areas.md#objectversion) | int32 |  
 
 ## References
 
@@ -73,11 +73,11 @@ _Indexed_: **True**
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
 
-### RowVersion
+### ObjectVersion
 
-_Type_: **byte[]**  
+_Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Supports Order By_: ****  
 
 
 ## Reference Details

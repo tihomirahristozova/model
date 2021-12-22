@@ -128,14 +128,14 @@ Aggregate Root:<br>
 <td>Notes for this ServiceAgreementLine.</td>
 </tr>
 <tr>
+<td><a href="Applications.Service.ServiceAgreementLines.html#objectversion">ObjectVersion</a></td>
+<td>int32</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="Applications.Service.ServiceAgreementLines.html#quantity">Quantity</a></td>
 <td>decimal (14, 3)</td>
 <td>The quantity of the service object that is included in the agreement. <code>Required</code> <code>Default(1)</code> <code>Filter(ge;le)</code></td>
-</tr>
-<tr>
-<td><a href="Applications.Service.ServiceAgreementLines.html#rowversion">RowVersion</a></td>
-<td>byte[]</td>
-<td></td>
 </tr>
 </tbody>
 </table>
@@ -205,16 +205,16 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>254</strong></p>
+<h3 id="objectversion">ObjectVersion</h3>
+<p><em>Type</em>: <strong>int32</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****</p>
 <h3 id="quantity">Quantity</h3>
 <p>The quantity of the service object that is included in the agreement. <code>Required</code> <code>Default(1)</code> <code>Filter(ge;le)</code></p>
 <p><em>Type</em>: <strong>decimal (14, 3)</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>1</strong></p>
-<h3 id="rowversion">RowVersion</h3>
-<p><em>Type</em>: <strong>byte[]</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="serviceagreement">ServiceAgreement</h3>
 <p>The <see cref="ServiceAgreement"></see> to which this ServiceAgreementLine belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>

@@ -29,8 +29,8 @@ Aggregate Root:
 | [FullPath](Finance.Accounting.FinancialStatementNodes.md#fullpath) | string (25) __nullable__ | Full identification path of the financial statement node. `Filter(like)` `ReadOnly` 
 | [Id](Finance.Accounting.FinancialStatementNodes.md#id) | guid |  
 | [Name](Finance.Accounting.FinancialStatementNodes.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Name of the financial statement node. `Required` `Filter(like)` 
+| [ObjectVersion](Finance.Accounting.FinancialStatementNodes.md#objectversion) | int32 |  
 | [ParentFullPath](Finance.Accounting.FinancialStatementNodes.md#parentfullpath) | string (25) __nullable__ | Parent financial statement node specified through its full identification path. `Filter(like)` 
-| [RowVersion](Finance.Accounting.FinancialStatementNodes.md#rowversion) | byte[] |  
 
 ## References
 
@@ -80,6 +80,12 @@ _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 
+### ObjectVersion
+
+_Type_: **int32**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+
 ### ParentFullPath
 
 Parent financial statement node specified through its full identification path. `Filter(like)`
@@ -88,12 +94,6 @@ _Type_: **string (25) __nullable__**
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **25**  
-
-### RowVersion
-
-_Type_: **byte[]**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
 
 
 ## Reference Details

@@ -30,7 +30,7 @@ Aggregate Tree
 | [IsActive](Applications.AssetManagement.ManagedAssetTypes.md#isactive) | boolean | Specifies whether the asset type is active for choosing in drop-down choices. `Required` `Default(true)` 
 | [Name](Applications.AssetManagement.ManagedAssetTypes.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Multilanguage name of the asset type. `Required` `Filter(multi eq;like)` 
 | [Notes](Applications.AssetManagement.ManagedAssetTypes.md#notes) | string (max) __nullable__ | Notes for this ManagedAssetType. 
-| [RowVersion](Applications.AssetManagement.ManagedAssetTypes.md#rowversion) | byte[] |  
+| [ObjectVersion](Applications.AssetManagement.ManagedAssetTypes.md#objectversion) | int32 |  
 
 ## Child Collections
 
@@ -85,11 +85,11 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
 
-### RowVersion
+### ObjectVersion
 
-_Type_: **byte[]**  
+_Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Supports Order By_: ****  
 
 
 

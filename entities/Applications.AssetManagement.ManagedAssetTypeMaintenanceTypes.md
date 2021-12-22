@@ -30,7 +30,7 @@ Aggregate Root:
 | [DefaultScheduleMonths](Applications.AssetManagement.ManagedAssetTypeMaintenanceTypes.md#defaultschedulemonths) | int32 __nullable__ | Specifies the number of months between two maintenances. When not null, this schedule is taken with priority related to the general maintenance type schedule. null means that there is no default schedule in months. 
 | [Id](Applications.AssetManagement.ManagedAssetTypeMaintenanceTypes.md#id) | guid |  
 | [Notes](Applications.AssetManagement.ManagedAssetTypeMaintenanceTypes.md#notes) | string (max) __nullable__ | Notes for this ManagedAssetType<br />MaintenanceType. 
-| [RowVersion](Applications.AssetManagement.ManagedAssetTypeMaintenanceTypes.md#rowversion) | byte[] |  
+| [ObjectVersion](Applications.AssetManagement.ManagedAssetTypeMaintenanceTypes.md#objectversion) | int32 |  
 
 ## References
 
@@ -82,11 +82,11 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
 
-### RowVersion
+### ObjectVersion
 
-_Type_: **byte[]**  
+_Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Supports Order By_: ****  
 
 
 ## Reference Details

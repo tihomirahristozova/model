@@ -30,7 +30,7 @@ Aggregate Tree
 | [Description](Applications.AssetManagement.MaintenanceTypes.md#description) | [MultilanguageString](../data-types.md#multilanguagestring) __nullable__ | Detailed description of the maintenance (multilanguage). 
 | [Id](Applications.AssetManagement.MaintenanceTypes.md#id) | guid |  
 | [Name](Applications.AssetManagement.MaintenanceTypes.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Multilanguage name of the maintenance type. `Required` `Filter(eq;like)` 
-| [RowVersion](Applications.AssetManagement.MaintenanceTypes.md#rowversion) | byte[] |  
+| [ObjectVersion](Applications.AssetManagement.MaintenanceTypes.md#objectversion) | int32 |  
 
 ## References
 
@@ -99,11 +99,11 @@ _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 
-### RowVersion
+### ObjectVersion
 
-_Type_: **byte[]**  
+_Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Supports Order By_: ****  
 
 
 ## Reference Details

@@ -15,6 +15,7 @@ Human or robot worker, which can execute warehouse tasks. Entity: Wms_Warehouse_
 
 | Name | Type | Description |
 | - | - | --- |
+|[__Object_Version](#__object_version)|`int` ||
 |[Active_From](#active_from)|`date` |The date, from which the worker record has become active in the warehouse.|
 |[Active_To](#active_to)|`date` |The date of termination of the activity of the worker in the warehouse. Can be NULL for workers, which are still active and do not have previous terminations.|
 |[Is_Active](#is_active)|`bit` |Specifies whether the worker is active and can execute new warehouse tasks.|
@@ -26,6 +27,33 @@ Human or robot worker, which can execute warehouse tasks. Entity: Wms_Warehouse_
 |[Warehouse_Worker_Name](#warehouse_worker_name)|`nvarchar(254)` `ML`|Name of the worker (multi-language).|
 
 ## Columns
+
+### __Object_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 ### Active_From
 

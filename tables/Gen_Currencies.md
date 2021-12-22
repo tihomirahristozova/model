@@ -11,6 +11,7 @@ List of user-defined currencies. Entity: Gen_Currencies
 
 | Name | Type | Description |
 | - | - | --- |
+|[__Object_Version](#__object_version)|`int` ||
 |[Currency_Id](#currency_id)|`uniqueidentifier` `PK`||
 |[Currency_Name](#currency_name)|`nvarchar(50)` ||
 |[Currency_Sign](#currency_sign)|`nvarchar(4)` |The international currency designator, as defined in ISO 4217. For example euro is represented as 'EUR'.|
@@ -18,6 +19,33 @@ List of user-defined currencies. Entity: Gen_Currencies
 |[Show_Order](#show_order)|`int` |The order in which to show the currency in combo boxes, etc.|
 
 ## Columns
+
+### __Object_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 ### Currency_Id
 

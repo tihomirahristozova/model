@@ -180,11 +180,6 @@ Default Search Members:<br>
 <td>Notes for this Document. (Inherited from <a href="General.Documents.html">Documents</a>)</td>
 </tr>
 <tr>
-<td><a href="Finance.Vat.Entries.html#documentrowversion">DocumentRowVersion</a></td>
-<td>byte[]</td>
-<td></td>
-</tr>
-<tr>
 <td><a href="Finance.Vat.Entries.html#documentversion">DocumentVersion</a></td>
 <td>int32</td>
 <td>Consecutive version number, starting with 1. Each update produces a new version of the document. <code>Required</code> <code>Default(1)</code> <code>Filter(eq;ge;le)</code> <code>ReadOnly</code> (Inherited from <a href="General.Documents.html">Documents</a>)</td>
@@ -208,6 +203,11 @@ Default Search Members:<br>
 <td><a href="Finance.Vat.Entries.html#issingleexecution">IsSingleExecution</a></td>
 <td>boolean</td>
 <td>Specifies whether the document is a single execution of its order document. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code></td>
+</tr>
+<tr>
+<td><a href="Finance.Vat.Entries.html#objectversion">ObjectVersion</a></td>
+<td>int32</td>
+<td></td>
 </tr>
 <tr>
 <td><a href="Finance.Vat.Entries.html#parentdocumentrelationshiptype">ParentDocument<br>RelationshipType</a></td>
@@ -253,11 +253,6 @@ Default Search Members:<br>
 <td><a href="Finance.Vat.Entries.html#releasetime">ReleaseTime</a></td>
 <td>datetime <strong>nullable</strong></td>
 <td>Date and time when the document was released (State set to Released). <code>Filter(ge;le)</code> <code>ReadOnly</code> (Inherited from <a href="General.Documents.html">Documents</a>)</td>
-</tr>
-<tr>
-<td><a href="Finance.Vat.Entries.html#rowversion">RowVersion</a></td>
-<td>byte[]</td>
-<td></td>
 </tr>
 <tr>
 <td><a href="Finance.Vat.Entries.html#state">State</a></td>
@@ -538,10 +533,6 @@ Default Search Members:<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>2147483647</strong></p>
-<h3 id="documentrowversion">DocumentRowVersion</h3>
-<p><em>Type</em>: <strong>byte[]</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="documentversion">DocumentVersion</h3>
 <p>Consecutive version number, starting with 1. Each update produces a new version of the document. <code>Required</code> <code>Default(1)</code> <code>Filter(eq;ge;le)</code> <code>ReadOnly</code> (Inherited from <a href="General.Documents.html">Documents</a>)</p>
 <p><em>Type</em>: <strong>int32</strong><br>
@@ -594,6 +585,10 @@ Allowed values for the <code>EntryType</code>(Finance.Vat.Entries.md#entrytype) 
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
+<h3 id="objectversion">ObjectVersion</h3>
+<p><em>Type</em>: <strong>int32</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****</p>
 <h3 id="parentdocumentrelationshiptype">ParentDocumentRelationshipType</h3>
 <p>Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. <code>ReadOnly</code> (Inherited from <a href="General.Documents.html">Documents</a>)</p>
 <p><em>Type</em>: <strong><a href="Finance.Vat.Entries.html#parentdocumentrelationshiptype">ParentDocument<br>RelationshipType</a> <strong>nullable</strong></strong><br>
@@ -669,10 +664,6 @@ Relationship between parent and child documents<br>
 <p>Date and time when the document was released (State set to Released). <code>Filter(ge;le)</code> <code>ReadOnly</code> (Inherited from <a href="General.Documents.html">Documents</a>)</p>
 <p><em>Type</em>: <strong>datetime <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
-<h3 id="rowversion">RowVersion</h3>
-<p><em>Type</em>: <strong>byte[]</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="state">State</h3>
 <p>The current system state of the document. Allowed values: 0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed. <code>Required</code> <code>Default(0)</code> <code>Filter(multi eq;ge;le)</code> <code>ReadOnly</code> (Inherited from <a href="General.Documents.html">Documents</a>)</p>

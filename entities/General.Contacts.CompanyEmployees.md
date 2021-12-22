@@ -30,7 +30,7 @@ Aggregate Root:
 | [ContractStartDate](General.Contacts.CompanyEmployees.md#contractstartdate) | datetime __nullable__ | Start date of the employee contract. Null if it is unkown. `Filter(ge;le)` 
 | [Id](General.Contacts.CompanyEmployees.md#id) | guid |  
 | [Notes](General.Contacts.CompanyEmployees.md#notes) | string (254) __nullable__ | Notes for this CompanyEmployee. 
-| [RowVersion](General.Contacts.CompanyEmployees.md#rowversion) | byte[] |  
+| [ObjectVersion](General.Contacts.CompanyEmployees.md#objectversion) | int32 |  
 
 ## References
 
@@ -84,11 +84,11 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
 
-### RowVersion
+### ObjectVersion
 
-_Type_: **byte[]**  
+_Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Supports Order By_: ****  
 
 
 ## Reference Details

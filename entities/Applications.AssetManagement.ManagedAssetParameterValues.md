@@ -27,7 +27,7 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [Id](Applications.AssetManagement.ManagedAssetParameterValues.md#id) | guid |  
 | [Notes](Applications.AssetManagement.ManagedAssetParameterValues.md#notes) | string (max) __nullable__ | Notes for this ManagedAssetParameterValue. 
-| [RowVersion](Applications.AssetManagement.ManagedAssetParameterValues.md#rowversion) | byte[] |  
+| [ObjectVersion](Applications.AssetManagement.ManagedAssetParameterValues.md#objectversion) | int32 |  
 | [TimeUtc](Applications.AssetManagement.ManagedAssetParameterValues.md#timeutc) | datetime | The date and time for which the parameter value is recorded. `Required` `Default(NowUtc)` `Filter(multi eq;ge;le)` 
 | [Value](Applications.AssetManagement.ManagedAssetParameterValues.md#value) | int32 | The value of the parameter for the specified time. `Required` `Filter(multi eq;ge;le)` 
 
@@ -57,11 +57,11 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
 
-### RowVersion
+### ObjectVersion
 
-_Type_: **byte[]**  
+_Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Supports Order By_: ****  
 
 ### TimeUtc
 

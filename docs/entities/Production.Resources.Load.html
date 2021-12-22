@@ -113,14 +113,14 @@ Aggregate Root:<br>
 <td></td>
 </tr>
 <tr>
+<td><a href="Production.Resources.Load.html#objectversion">ObjectVersion</a></td>
+<td>int32</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="Production.Resources.Load.html#priority">Priority</a></td>
 <td><a href="Production.Resources.Load.html#priority">Priority</a></td>
 <td>Priority of the allocation. 1=Lowest ... 5=Highest. <code>Required</code> <code>Default(3)</code></td>
-</tr>
-<tr>
-<td><a href="Production.Resources.Load.html#rowversion">RowVersion</a></td>
-<td>byte[]</td>
-<td></td>
 </tr>
 <tr>
 <td><a href="Production.Resources.Load.html#timetype">TimeType</a></td>
@@ -182,6 +182,10 @@ Aggregate Root:<br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
+<h3 id="objectversion">ObjectVersion</h3>
+<p><em>Type</em>: <strong>int32</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****</p>
 <h3 id="priority">Priority</h3>
 <p>Priority of the allocation. 1=Lowest ... 5=Highest. <code>Required</code> <code>Default(3)</code></p>
 <p><em>Type</em>: <strong><a href="Production.Resources.Load.html#priority">Priority</a></strong><br>
@@ -220,10 +224,6 @@ Allowed values for the <code>Priority</code>(Production.Resources.Load.md#priori
 <p><em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>3</strong></p>
-<h3 id="rowversion">RowVersion</h3>
-<p><em>Type</em>: <strong>byte[]</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="timetype">TimeType</h3>
 <p>S=Setup; R=Run; W=Wait; M=Move. <code>Required</code> <code>Default(&quot;R&quot;)</code></p>
 <p><em>Type</em>: <strong><a href="Production.Resources.Load.html#timetype">TimeType</a></strong><br>

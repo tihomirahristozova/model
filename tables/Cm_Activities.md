@@ -15,6 +15,7 @@ Generic activity. Provides task management functionality. Activity can be one of
 
 | Name | Type | Description |
 | - | - | --- |
+|[__Object_Version](#__object_version)|`int` ||
 |[Activity_Id](#activity_id)|`uniqueidentifier` `PK`||
 |[Contact_Person_Id](#contact_person_id)|`uniqueidentifier` |The contact person, from the side of the Target Party.|
 |[Deadline_Time](#deadline_time)|`datetime` |The deadline for the task. NULL if there is no deadline|
@@ -37,6 +38,33 @@ Generic activity. Provides task management functionality. Activity can be one of
 |[Target_Party_Id](#target_party_id)|`uniqueidentifier` |External participant or target of the task|
 
 ## Columns
+
+### __Object_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 ### Activity_Id
 

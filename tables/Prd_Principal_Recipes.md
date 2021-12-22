@@ -15,6 +15,7 @@ List of base recipe models. Recipe models are used by the Product Configurator t
 
 | Name | Type | Description |
 | - | - | --- |
+|[__Object_Version](#__object_version)|`int` ||
 |[Duration_Hour](#duration_hour)|`decimal(10, 0)` |The approximate duration of the operation (for the specified quantities) in seconds. This is pure operation time and excludes setup time.|
 |[Expiry_Date](#expiry_date)|`datetime` |The last date, when the recipe should be used. NULL means that there is no expiry date yet and the recipe model is still active.|
 |[Id](#id)|`uniqueidentifier` `PK`|The principal recipe unique id|
@@ -29,6 +30,33 @@ List of base recipe models. Recipe models are used by the Product Configurator t
 |[Scrap_Rate](#scrap_rate)|`decimal(7, 6)` |The percentage (0..1) of scrap usually occurring during the production operations. Specifying this leads to inflated requirements of all raw materials for the recipe.|
 
 ## Columns
+
+### __Object_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 ### Duration_Hour
 

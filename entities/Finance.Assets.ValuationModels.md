@@ -26,7 +26,7 @@ Aggregate Tree
 | [Id](Finance.Assets.ValuationModels.md#id) | guid |  
 | [IsSystem](Finance.Assets.ValuationModels.md#issystem) | boolean | Is_System is True for those valuation models that are managed by the system via update procedures and cannot be edited by the user. `Required` `Default(false)` `Filter(eq)` `ReadOnly` 
 | [Name](Finance.Assets.ValuationModels.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | The name of this ValuationModel. `Required` `Filter(like)` 
-| [RowVersion](Finance.Assets.ValuationModels.md#rowversion) | byte[] |  
+| [ObjectVersion](Finance.Assets.ValuationModels.md#objectversion) | int32 |  
 
 ## References
 
@@ -61,11 +61,11 @@ _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 
-### RowVersion
+### ObjectVersion
 
-_Type_: **byte[]**  
+_Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Supports Order By_: ****  
 
 
 ## Reference Details

@@ -113,6 +113,11 @@ Aggregate Root:<br>
 <td>Consecutive number of the line within the calculation. <code>Required</code></td>
 </tr>
 <tr>
+<td><a href="Finance.Cost.CalculationProductOutputs.html#objectversion">ObjectVersion</a></td>
+<td>int32</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="Finance.Cost.CalculationProductOutputs.html#projectid">ProjectId</a></td>
 <td>guid <strong>nullable</strong></td>
 <td>The Project, which absorbed the cost. <code>Filter(multi eq)</code></td>
@@ -121,11 +126,6 @@ Aggregate Root:<br>
 <td><a href="Finance.Cost.CalculationProductOutputs.html#quantity">Quantity</a></td>
 <td>decimal (18, 3)</td>
 <td>The quantity produced. <code>Required</code> <code>Default(0)</code></td>
-</tr>
-<tr>
-<td><a href="Finance.Cost.CalculationProductOutputs.html#rowversion">RowVersion</a></td>
-<td>byte[]</td>
-<td></td>
 </tr>
 </tbody>
 </table>
@@ -196,6 +196,10 @@ Aggregate Root:<br>
 <code>( obj.Calculation.ProductOutputs.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>( obj.Calculation.ProductOutputs.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
+<h3 id="objectversion">ObjectVersion</h3>
+<p><em>Type</em>: <strong>int32</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****</p>
 <h3 id="projectid">ProjectId</h3>
 <p>The Project, which absorbed the cost. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong>guid <strong>nullable</strong></strong><br>
@@ -206,10 +210,6 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>0</strong></p>
-<h3 id="rowversion">RowVersion</h3>
-<p><em>Type</em>: <strong>byte[]</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="calculation">Calculation</h3>
 <p>The <see cref="Calculation"></see> to which this CalculationProductOutput belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>

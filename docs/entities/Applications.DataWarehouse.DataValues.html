@@ -83,7 +83,7 @@
 <p>The actual values in the general data warehouse. Entity: Dw_Data_Values (Introduced in version 18.2)</p>
 <h2 id="default-visualization">Default Visualization</h2>
 <p>Default Display Text Format:<br>
-<em>{Id}: {DataMeasureId}</em><br>
+<em>{Id}: {ObjectVersion}</em><br>
 Default Search Members:<br>
 __</p>
 <h2 id="aggregate">Aggregate</h2>
@@ -115,6 +115,11 @@ __</p>
 <tr>
 <td><a href="Applications.DataWarehouse.DataValues.html#id">Id</a></td>
 <td>guid</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="Applications.DataWarehouse.DataValues.html#objectversion">ObjectVersion</a></td>
+<td>int32</td>
 <td></td>
 </tr>
 <tr>
@@ -163,6 +168,10 @@ __</p>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
+<h3 id="objectversion">ObjectVersion</h3>
+<p><em>Type</em>: <strong>int32</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****</p>
 <h3 id="targetvalue">TargetValue</h3>
 <p>Accumulates target value for the measure. <code>Required</code> <code>Default(0)</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong>decimal (17, 5)</strong><br>

@@ -16,6 +16,7 @@ Detail records (lines) of Invoice Orders. Entity: Crm_Invoice_Order_Lines
 
 | Name | Type | Description |
 | - | - | --- |
+|[__Object_Version](#__object_version)|`int` ||
 |[Business_Reason](#business_reason)|`nvarchar(1)` Allowed: `P`, `S`|Business reason for invoicing of this product or service. S=Shipment, P=Payment|
 |[Invoice_Order_Id](#invoice_order_id)|`uniqueidentifier` ||
 |[Invoice_Order_Line_Id](#invoice_order_line_id)|`uniqueidentifier` `PK`||
@@ -40,6 +41,33 @@ Detail records (lines) of Invoice Orders. Entity: Crm_Invoice_Order_Lines
 |[Unit_Price](#unit_price)|`decimal(14, 5)` |Unit selling price in the unit of measure, specified in Quantity Unit|
 
 ## Columns
+
+### __Object_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 ### Business_Reason
 

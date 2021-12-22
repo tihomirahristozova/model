@@ -118,8 +118,8 @@ Aggregate Root:<br>
 <td></td>
 </tr>
 <tr>
-<td><a href="Projects.WorkReportResources.html#rowversion">RowVersion</a></td>
-<td>byte[]</td>
+<td><a href="Projects.WorkReportResources.html#objectversion">ObjectVersion</a></td>
+<td>int32</td>
 <td></td>
 </tr>
 <tr>
@@ -177,10 +177,10 @@ Aggregate Root:<br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
-<h3 id="rowversion">RowVersion</h3>
-<p><em>Type</em>: <strong>byte[]</strong><br>
+<h3 id="objectversion">ObjectVersion</h3>
+<p><em>Type</em>: <strong>int32</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: ****</p>
 <h3 id="totalresourceusagehours">TotalResourceUsageHours</h3>
 <p>The total number of resource-hours, which are actually consumed. Equals to the duration of the task, multiplied by the average resource usage. <code>Required</code> <code>Default(0)</code> <code>Filter(eq;like)</code></p>
 <p><em>Type</em>: <strong>decimal (18, 2)</strong><br>

@@ -16,6 +16,7 @@ Details records of Transactions. Each detail contains the movement for one produ
 
 | Name | Type | Description |
 | - | - | --- |
+|[__Object_Version](#__object_version)|`int` ||
 |[Allow_Over_Execution](#allow_over_execution)|`bit` |When true, specifies, that we explicitly allow over-execution. Over-execution is when the quantity in all execution lines exceed the quantity in the parent store order line.|
 |[Finished](#finished)|`bit` |1 if this transaction entry completes the operation. 0 if there might be more entries|
 |[Guarantee_Period_Days](#guarantee_period_days)|`int` |Guarantee period in days for the offered product. NULL for non-serviced products|
@@ -49,6 +50,33 @@ Details records of Transactions. Each detail contains the movement for one produ
 |[Unit_Cost](#unit_cost)|`decimal(14, 5)` |Cost for 1 of the specified quantity|
 
 ## Columns
+
+### __Object_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 ### Allow_Over_Execution
 

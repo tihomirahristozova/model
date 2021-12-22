@@ -118,6 +118,11 @@ Aggregate Root:<br>
 <td></td>
 </tr>
 <tr>
+<td><a href="Systems.Bpm.UserBusinessRuleActions.html#objectversion">ObjectVersion</a></td>
+<td>int32</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="Systems.Bpm.UserBusinessRuleActions.html#parameter1type">Parameter1Type</a></td>
 <td><a href="Systems.Bpm.UserBusinessRuleActions.html#parameter1type">ActionParameterType</a> <strong>nullable</strong></td>
 <td>The type of the parameter specifies how to obtain the parameter value.</td>
@@ -146,11 +151,6 @@ Aggregate Root:<br>
 <td><a href="Systems.Bpm.UserBusinessRuleActions.html#parameter3value">Parameter3Value</a></td>
 <td>string (256) <strong>nullable</strong></td>
 <td>The actual value of the parameter.</td>
-</tr>
-<tr>
-<td><a href="Systems.Bpm.UserBusinessRuleActions.html#rowversion">RowVersion</a></td>
-<td>byte[]</td>
-<td></td>
 </tr>
 </tbody>
 </table>
@@ -223,6 +223,10 @@ Allowed values for the <code>ActionType</code>(Systems.Bpm.UserBusinessRuleActio
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
+<h3 id="objectversion">ObjectVersion</h3>
+<p><em>Type</em>: <strong>int32</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****</p>
 <h3 id="parameter1type">Parameter1Type</h3>
 <p>The type of the parameter specifies how to obtain the parameter value.</p>
 <p><em>Type</em>: <strong><a href="Systems.Bpm.UserBusinessRuleActions.html#parameter1type">ActionParameterType</a> <strong>nullable</strong></strong><br>
@@ -352,10 +356,6 @@ Generic enum type for ActionParameterType properties<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>256</strong></p>
-<h3 id="rowversion">RowVersion</h3>
-<p><em>Type</em>: <strong>byte[]</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="userbusinessrule">UserBusinessRule</h3>
 <p>The business rule, for which the action is defined. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>

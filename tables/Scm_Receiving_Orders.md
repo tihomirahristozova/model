@@ -15,6 +15,7 @@ Contains the received quantities from a supplier. Entity: Scm_Receiving_Orders
 
 | Name | Type | Description |
 | - | - | --- |
+|[__Object_Version](#__object_version)|`int` ||
 |[Document_Currency_Id](#document_currency_id)|`uniqueidentifier` |The currency of the unit prices and amounts in the document.|
 |[Document_Id](#document_id)|`uniqueidentifier` ||
 |[Invoice_Document_No](#invoice_document_no)|`nvarchar(20)` |Contains the purchase invoice number when it is known in advance, null otherwise.|
@@ -35,6 +36,33 @@ Contains the received quantities from a supplier. Entity: Scm_Receiving_Orders
 |[Supplier_Id](#supplier_id)|`uniqueidentifier` |The supplier of the products for this receiving order.|
 
 ## Columns
+
+### __Object_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 ### Document_Currency_Id
 

@@ -26,8 +26,8 @@ Aggregate Tree
 | [ColumnName](Systems.Core.TextTranslations.md#columnname) | string (128) | Obsolete. Not used. `Required` `Filter(eq)` 
 | [Id](Systems.Core.TextTranslations.md#id) | guid |  
 | [Language](Systems.Core.TextTranslations.md#language) | string (50) | Obsolete. Not used. `Required` `Filter(eq)` 
+| [ObjectVersion](Systems.Core.TextTranslations.md#objectversion) | int32 |  
 | [RowId](Systems.Core.TextTranslations.md#rowid) | guid | Obsolete. Not used. `Required` `Filter(multi eq)` 
-| [RowVersion](Systems.Core.TextTranslations.md#rowversion) | byte[] |  
 | [TableName](Systems.Core.TextTranslations.md#tablename) | string (128) | Obsolete. Not used. `Required` `Filter(eq)` `ORD` `ReadOnly` 
 | [TranslatedText](Systems.Core.TextTranslations.md#translatedtext) | string (254) __nullable__ | Obsolete. Not used. `Filter(eq)` 
 
@@ -59,18 +59,18 @@ _Supported Filters_: **Equals**
 _Supports Order By_: **False**  
 _Maximum Length_: **50**  
 
+### ObjectVersion
+
+_Type_: **int32**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+
 ### RowId
 
 Obsolete. Not used. `Required` `Filter(multi eq)`
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  
-
-### RowVersion
-
-_Type_: **byte[]**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
 
 ### TableName
 

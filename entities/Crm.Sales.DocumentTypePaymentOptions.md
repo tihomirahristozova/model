@@ -27,7 +27,7 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [DeferredPayment<br />MinimalAmmount](Crm.Sales.DocumentTypePaymentOptions.md#deferredpaymentminimalammount) | [Amount (14, 2)](../data-types.md#amount) | The minimal order total amount, which an order must have in order to use deferred payment. `Currency: DeferredPayment<br />MinimalAmmount<br />Currency` `Required` 
 | [Id](Crm.Sales.DocumentTypePaymentOptions.md#id) | guid |  
-| [RowVersion](Crm.Sales.DocumentTypePaymentOptions.md#rowversion) | byte[] |  
+| [ObjectVersion](Crm.Sales.DocumentTypePaymentOptions.md#objectversion) | int32 |  
 
 ## References
 
@@ -55,11 +55,11 @@ _Indexed_: **True**
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
-### RowVersion
+### ObjectVersion
 
-_Type_: **byte[]**  
+_Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Supports Order By_: ****  
 
 
 ## Reference Details

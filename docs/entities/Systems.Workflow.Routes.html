@@ -163,6 +163,11 @@ Aggregate Root:<br>
 <td>Notes for this Route.</td>
 </tr>
 <tr>
+<td><a href="Systems.Workflow.Routes.html#objectversion">ObjectVersion</a></td>
+<td>int32</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="Systems.Workflow.Routes.html#parentdocumentrelationshiptype">ParentDocument<br>RelationshipType</a></td>
 <td><a href="Systems.Workflow.Routes.html#parentdocumentrelationshiptype">ParentDocument<br>RelationshipType</a></td>
 <td>Determines the default relationship type between the generated document and the parent document. <code>Required</code> <code>Default(&quot;S&quot;)</code></td>
@@ -181,11 +186,6 @@ Aggregate Root:<br>
 <td><a href="Systems.Workflow.Routes.html#readonly">ReadOnly</a></td>
 <td>boolean</td>
 <td>Indicates wheather the destination document shoul be read only. true - the destination document is read only. <code>Required</code> <code>Default(false)</code></td>
-</tr>
-<tr>
-<td><a href="Systems.Workflow.Routes.html#rowversion">RowVersion</a></td>
-<td>byte[]</td>
-<td></td>
 </tr>
 </tbody>
 </table>
@@ -459,6 +459,10 @@ Enumeration of document system states<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>254</strong></p>
+<h3 id="objectversion">ObjectVersion</h3>
+<p><em>Type</em>: <strong>int32</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****</p>
 <h3 id="parentdocumentrelationshiptype">ParentDocumentRelationshipType</h3>
 <p>Determines the default relationship type between the generated document and the parent document. <code>Required</code> <code>Default(&quot;S&quot;)</code></p>
 <p><em>Type</em>: <strong><a href="Systems.Workflow.Routes.html#parentdocumentrelationshiptype">ParentDocument<br>RelationshipType</a></strong><br>
@@ -503,10 +507,6 @@ Relationship between parent and child documents<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
-<h3 id="rowversion">RowVersion</h3>
-<p><em>Type</em>: <strong>byte[]</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="conditionenterprisecompany">ConditionEnterpriseCompany</h3>
 <p>The enterprise company for which this route is activated. <code>Filter(multi eq)</code></p>

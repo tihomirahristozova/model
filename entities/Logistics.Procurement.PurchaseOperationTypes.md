@@ -27,6 +27,7 @@ Aggregate Tree
 | [Id](Logistics.Procurement.PurchaseOperationTypes.md#id) | guid |  
 | [Name](Logistics.Procurement.PurchaseOperationTypes.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Name of the purchase operation type (multilanguage). `Required` `Filter(multi eq;like)` 
 | [Notes](Logistics.Procurement.PurchaseOperationTypes.md#notes) | string (max) __nullable__ | Notes for this PurchaseOperationType. `Filter(eq;like)` 
+| [ObjectVersion](Logistics.Procurement.PurchaseOperationTypes.md#objectversion) | int32 |  
 
 
 ## Attribute Details
@@ -63,6 +64,12 @@ _Type_: **string (max) __nullable__**
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
+
+### ObjectVersion
+
+_Type_: **int32**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 
 

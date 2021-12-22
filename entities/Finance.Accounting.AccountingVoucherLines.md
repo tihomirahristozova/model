@@ -34,9 +34,9 @@ Aggregate Root:
 | [Id](Finance.Accounting.AccountingVoucherLines.md#id) | guid |  
 | [ItemKey](Finance.Accounting.AccountingVoucherLines.md#itemkey) | string (64) __nullable__ | The item (grouping) key for the account in the line. Account_Id + Item_Key - the smallest unit of calculation for account balance. `Filter(eq;like)` 
 | [LineNo](Finance.Accounting.AccountingVoucherLines.md#lineno) | int32 | Consecutive number of the line within the voucher. `Required` 
+| [ObjectVersion](Finance.Accounting.AccountingVoucherLines.md#objectversion) | int32 |  
 | [RateDivisor](Finance.Accounting.AccountingVoucherLines.md#ratedivisor) | decimal (18, 6) | The divisor for conversion from Debit/Credit to base currency. `Required` `Default(1)` 
 | [RateMultiplier](Finance.Accounting.AccountingVoucherLines.md#ratemultiplier) | decimal (18, 6) | The multiplier for conversion from Debit/Credit to base currency. `Required` `Default(1)` 
-| [RowVersion](Finance.Accounting.AccountingVoucherLines.md#rowversion) | byte[] |  
 
 ## References
 
@@ -135,6 +135,12 @@ _Back-End Default Expression:_
 
 _Front-End Recalc Expressions:_  
 `( obj.Voucher.Lines.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)`
+### ObjectVersion
+
+_Type_: **int32**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+
 ### RateDivisor
 
 The divisor for conversion from Debit/Credit to base currency. `Required` `Default(1)`
@@ -152,12 +158,6 @@ _Type_: **decimal (18, 6)**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **1**  
-
-### RowVersion
-
-_Type_: **byte[]**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
 
 
 ## Reference Details

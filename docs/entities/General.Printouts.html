@@ -153,6 +153,11 @@ Aggregate Root:<br>
 <td>Notes for this Printout.</td>
 </tr>
 <tr>
+<td><a href="General.Printouts.html#objectversion">ObjectVersion</a></td>
+<td>int32</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="General.Printouts.html#ord">Ord</a></td>
 <td>int32</td>
 <td>Order in the list of printouts when using direct printing. <code>Required</code> <code>Default(0)</code></td>
@@ -166,11 +171,6 @@ Aggregate Root:<br>
 <td><a href="General.Printouts.html#ordpriority">OrdPriority</a></td>
 <td>int32 <strong>nullable</strong></td>
 <td>Ordinal position and priority of the printout, in regard to other printouts within the current document type. Used for sorting, when executing printouts with &quot;Print All&quot; command. <code>Default(0)</code></td>
-</tr>
-<tr>
-<td><a href="General.Printouts.html#rowversion">RowVersion</a></td>
-<td>byte[]</td>
-<td></td>
 </tr>
 </tbody>
 </table>
@@ -303,6 +303,10 @@ Allowed values for the <code>AllowPrintingOnState</code>(General.Printouts.md#al
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>512</strong></p>
+<h3 id="objectversion">ObjectVersion</h3>
+<p><em>Type</em>: <strong>int32</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****</p>
 <h3 id="ord">Ord</h3>
 <p>Order in the list of printouts when using direct printing. <code>Required</code> <code>Default(0)</code></p>
 <p><em>Type</em>: <strong>int32</strong><br>
@@ -320,10 +324,6 @@ Allowed values for the <code>AllowPrintingOnState</code>(General.Printouts.md#al
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>0</strong></p>
-<h3 id="rowversion">RowVersion</h3>
-<p><em>Type</em>: <strong>byte[]</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="documenttype">DocumentType</h3>
 <p>The document type to which this printout layout is bound. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>

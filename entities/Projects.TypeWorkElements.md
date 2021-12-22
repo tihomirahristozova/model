@@ -28,8 +28,8 @@ Aggregate Root:
 | [FullPath](Projects.TypeWorkElements.md#fullpath) | string (25) __nullable__ | The full path of the node in the format of dot-delimited, dot-terminated codes of the parents. `Filter(eq;like)` `ReadOnly` 
 | [Id](Projects.TypeWorkElements.md#id) | guid |  
 | [Notes](Projects.TypeWorkElements.md#notes) | string (max) __nullable__ | Notes for this TypeWorkElement. 
+| [ObjectVersion](Projects.TypeWorkElements.md#objectversion) | int32 |  
 | [ParentFullPath](Projects.TypeWorkElements.md#parentfullpath) | string (25) __nullable__ | The full path of the parent work element in this project type. null when this is root element. `Filter(eq;like)` 
-| [RowVersion](Projects.TypeWorkElements.md#rowversion) | byte[] |  
 | [WorkElementCode](Projects.TypeWorkElements.md#workelementcode) | string (3) | The code of the work element, unique among the sibling elements within the parent work element. `Required` `Filter(eq)` 
 | [WorkElementName](Projects.TypeWorkElements.md#workelementname) | string (254) | The name of the work element, unique among the sibling elements within the parent work element. `Required` `Filter(eq)` 
 
@@ -67,6 +67,12 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
 
+### ObjectVersion
+
+_Type_: **int32**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+
 ### ParentFullPath
 
 The full path of the parent work element in this project type. null when this is root element. `Filter(eq;like)`
@@ -75,12 +81,6 @@ _Type_: **string (25) __nullable__**
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **25**  
-
-### RowVersion
-
-_Type_: **byte[]**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
 
 ### WorkElementCode
 

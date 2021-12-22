@@ -27,7 +27,7 @@ Aggregate Tree
 | [Id](Finance.Payments.PaymentTypes.md#id) | guid |  
 | [IsActive](Finance.Payments.PaymentTypes.md#isactive) | boolean | Indicates wheather the payment type is active and usable for choosing in new documents. `Required` `Default(true)` `Filter(eq)` `Introduced in version 19.1` 
 | [Name](Finance.Payments.PaymentTypes.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | The name of this PaymentType. `Required` `Filter(like)` `ORD` 
-| [RowVersion](Finance.Payments.PaymentTypes.md#rowversion) | byte[] |  
+| [ObjectVersion](Finance.Payments.PaymentTypes.md#objectversion) | int32 |  
 | [SystemType](Finance.Payments.PaymentTypes.md#systemtype) | [SystemType](Finance.Payments.PaymentTypes.md#systemtype) __nullable__ | Not null only when this is one of the system payment types. CS=Cash; CD=By Card; BT=Bank Transfer. 
 
 ## References
@@ -75,11 +75,11 @@ _Indexed_: **True**
 _Supported Filters_: **Like**  
 _Supports Order By_: **True**  
 
-### RowVersion
+### ObjectVersion
 
-_Type_: **byte[]**  
+_Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Supports Order By_: ****  
 
 ### SystemType
 

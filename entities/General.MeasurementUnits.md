@@ -32,7 +32,7 @@ Aggregate Root:
 | [IsDefaultUnit](General.MeasurementUnits.md#isdefaultunit) | boolean | True if this measurement unit is the default measurement unit within the category. There can be only one default measurement unit within a category. `Required` `Default(false)` `Filter(eq)` 
 | [Multiplier](General.MeasurementUnits.md#multiplier) | decimal (9, 3) | Multiplier of the relative value of the measurement unit against other units (multiplier when converting to base). `Required` `Default(1)` 
 | [Name](General.MeasurementUnits.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Name of the measurement unit. `Required` `Filter(eq;like)` `ORD` 
-| [RowVersion](General.MeasurementUnits.md#rowversion) | byte[] |  
+| [ObjectVersion](General.MeasurementUnits.md#objectversion) | int32 |  
 | [SystemUnit](General.MeasurementUnits.md#systemunit) | [SystemUnit](General.MeasurementUnits.md#systemunit) __nullable__ | Not null only when this is one of the system measurement units. N=NetKG; G=GrossKG; V=VolumeL; H=HeightM; W=WidthM, L=LengthM, P=Piece, T=TimeH. `Filter(eq;like)` 
 
 ## References
@@ -105,11 +105,11 @@ _Indexed_: **True**
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
 
-### RowVersion
+### ObjectVersion
 
-_Type_: **byte[]**  
+_Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Supports Order By_: ****  
 
 ### SystemUnit
 

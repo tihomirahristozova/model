@@ -28,7 +28,7 @@ Aggregate Root:
 | [DefaultValue](Applications.Rental.AssetTypeProperties.md#defaultvalue) | string (254) __nullable__ | The default value of the property. `Filter(like)` 
 | [DefaultValueId](Applications.Rental.AssetTypeProperties.md#defaultvalueid) | guid __nullable__ | The value id of the default value of the property. `Filter(multi eq)` 
 | [Id](Applications.Rental.AssetTypeProperties.md#id) | guid |  
-| [RowVersion](Applications.Rental.AssetTypeProperties.md#rowversion) | byte[] |  
+| [ObjectVersion](Applications.Rental.AssetTypeProperties.md#objectversion) | int32 |  
 
 ## References
 
@@ -63,11 +63,11 @@ _Indexed_: **True**
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
-### RowVersion
+### ObjectVersion
 
-_Type_: **byte[]**  
+_Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Supports Order By_: ****  
 
 
 ## Reference Details

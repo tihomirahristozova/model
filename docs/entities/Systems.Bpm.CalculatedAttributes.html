@@ -137,14 +137,14 @@ Default Search Members:<br>
 <td>Notes for this CalculatedAttribute.</td>
 </tr>
 <tr>
+<td><a href="Systems.Bpm.CalculatedAttributes.html#objectversion">ObjectVersion</a></td>
+<td>int32</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="Systems.Bpm.CalculatedAttributes.html#repositoryname">RepositoryName</a></td>
 <td>string (128)</td>
 <td>The repository, for which the attribute is defined. <code>Required</code> <code>Filter(multi eq)</code> <code>ORD</code></td>
-</tr>
-<tr>
-<td><a href="Systems.Bpm.CalculatedAttributes.html#rowversion">RowVersion</a></td>
-<td>byte[]</td>
-<td></td>
 </tr>
 <tr>
 <td><a href="Systems.Bpm.CalculatedAttributes.html#startingexpressionno">StartingExpressionNo</a></td>
@@ -204,6 +204,10 @@ Default Search Members:<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>2147483647</strong></p>
+<h3 id="objectversion">ObjectVersion</h3>
+<p><em>Type</em>: <strong>int32</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****</p>
 <h3 id="repositoryname">RepositoryName</h3>
 <p>The repository, for which the attribute is defined. <code>Required</code> <code>Filter(multi eq)</code> <code>ORD</code></p>
 <p><em>Type</em>: <strong>string (128)</strong><br>
@@ -211,10 +215,6 @@ Default Search Members:<br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>True</strong><br>
 <em>Maximum Length</em>: <strong>128</strong></p>
-<h3 id="rowversion">RowVersion</h3>
-<p><em>Type</em>: <strong>byte[]</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="startingexpressionno">StartingExpressionNo</h3>
 <p>The expression, from which the calculation starts. The result of the expression gives the value of the calculated attribute. <code>Required</code> <code>Default(10)</code></p>
 <p><em>Type</em>: <strong>int32</strong><br>

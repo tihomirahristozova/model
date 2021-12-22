@@ -28,7 +28,7 @@ Aggregate Root:
 | [ConsumableQuantity](Applications.Rental.LeaseContractLineConsumables.md#consumablequantity) | [Quantity (12, 3)](../data-types.md#quantity) | The quantity sold of the consumable. `Unit: ConsumableQuantityUnit` `Required` `Default(0)` 
 | [Id](Applications.Rental.LeaseContractLineConsumables.md#id) | guid |  
 | [LineNo](Applications.Rental.LeaseContractLineConsumables.md#lineno) | int32 | Consecutive number of the consumable within the lease contract line. `Required` `Filter(eq;ge;le)` 
-| [RowVersion](Applications.Rental.LeaseContractLineConsumables.md#rowversion) | byte[] |  
+| [ObjectVersion](Applications.Rental.LeaseContractLineConsumables.md#objectversion) | int32 |  
 
 ## References
 
@@ -71,11 +71,11 @@ _Back-End Default Expression:_
 
 _Front-End Recalc Expressions:_  
 `( obj.LeaseLine.Consumables.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)`
-### RowVersion
+### ObjectVersion
 
-_Type_: **byte[]**  
+_Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Supports Order By_: ****  
 
 
 ## Reference Details

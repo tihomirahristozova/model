@@ -27,8 +27,8 @@ Aggregate Tree
 | [Id](Applications.Cms.NewsWebModuleArticles.md#id) | guid |  
 | [IsPublished](Applications.Cms.NewsWebModuleArticles.md#ispublished) | boolean | Specifies whether the article is published for display on web. `Required` `Default(false)` 
 | [LanguageCode](Applications.Cms.NewsWebModuleArticles.md#languagecode) | string (8) | The language code of the article text. `Required` 
+| [ObjectVersion](Applications.Cms.NewsWebModuleArticles.md#objectversion) | int32 |  
 | [PublishDate](Applications.Cms.NewsWebModuleArticles.md#publishdate) | datetime | The date and time when the news article should appear to be published. `Required` `Default(Now)` 
-| [RowVersion](Applications.Cms.NewsWebModuleArticles.md#rowversion) | byte[] |  
 
 ## References
 
@@ -74,6 +74,12 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Maximum Length_: **8**  
 
+### ObjectVersion
+
+_Type_: **int32**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+
 ### PublishDate
 
 The date and time when the news article should appear to be published. `Required` `Default(Now)`
@@ -82,12 +88,6 @@ _Type_: **datetime**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **CurrentDateTime**  
-
-### RowVersion
-
-_Type_: **byte[]**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
 
 
 ## Reference Details

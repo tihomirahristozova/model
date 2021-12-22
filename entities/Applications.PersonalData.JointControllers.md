@@ -27,7 +27,7 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [Id](Applications.PersonalData.JointControllers.md#id) | guid |  
 | [Notes](Applications.PersonalData.JointControllers.md#notes) | string (max) __nullable__ | Should usually contain a short description of the role of the joint controller. 
-| [RowVersion](Applications.PersonalData.JointControllers.md#rowversion) | byte[] |  
+| [ObjectVersion](Applications.PersonalData.JointControllers.md#objectversion) | int32 |  
 
 ## References
 
@@ -55,11 +55,11 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
 
-### RowVersion
+### ObjectVersion
 
-_Type_: **byte[]**  
+_Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Supports Order By_: ****  
 
 
 ## Reference Details

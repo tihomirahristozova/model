@@ -83,7 +83,7 @@
 <p>Fulfillment of a warehouse order line. Entity: Wms_Warehouse_Order_Fulfillments (Introduced in version 20.1)</p>
 <h2 id="default-visualization">Default Visualization</h2>
 <p>Default Display Text Format:<br>
-<em>{Id}: {WarehouseOrderId}</em><br>
+<em>{Id}: {ObjectVersion}</em><br>
 Default Search Members:<br>
 __</p>
 <h2 id="aggregate">Aggregate</h2>
@@ -118,14 +118,14 @@ __</p>
 <td>Specifies whether this fulfillment will finalize the fulfillment of the order line, regardless of any remaining quantities. <code>Required</code></td>
 </tr>
 <tr>
+<td><a href="Logistics.Wms.WarehouseOrderFulfillments.html#objectversion">ObjectVersion</a></td>
+<td>int32</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="Logistics.Wms.WarehouseOrderFulfillments.html#quantity">Quantity</a></td>
 <td>decimal (12, 3)</td>
 <td>Fulfilled quantity in the measurement unit of the warehouse order line. <code>Required</code></td>
-</tr>
-<tr>
-<td><a href="Logistics.Wms.WarehouseOrderFulfillments.html#rowversion">RowVersion</a></td>
-<td>byte[]</td>
-<td></td>
 </tr>
 </tbody>
 </table>
@@ -172,13 +172,13 @@ __</p>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="objectversion">ObjectVersion</h3>
+<p><em>Type</em>: <strong>int32</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****</p>
 <h3 id="quantity">Quantity</h3>
 <p>Fulfilled quantity in the measurement unit of the warehouse order line. <code>Required</code></p>
 <p><em>Type</em>: <strong>decimal (12, 3)</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
-<h3 id="rowversion">RowVersion</h3>
-<p><em>Type</em>: <strong>byte[]</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>

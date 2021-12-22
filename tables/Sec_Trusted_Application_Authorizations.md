@@ -15,6 +15,7 @@ Authorization of a trusted application to access the data on behalf of a context
 
 | Name | Type | Description |
 | - | - | --- |
+|[__Object_Version](#__object_version)|`int` ||
 |[Context_User_Id](#context_user_id)|`uniqueidentifier` |The user, whose permissions are granted to the application.|
 |[Grant_Time_Utc](#grant_time_utc)|`datetime` |The time (in UTC) when the authorization was granted.|
 |[Granting_User_Id](#granting_user_id)|`uniqueidentifier` |The user, who authorized the application.|
@@ -27,6 +28,33 @@ Authorization of a trusted application to access the data on behalf of a context
 |[Valid_Until_Utc](#valid_until_utc)|`datetime` |The time (in UTC) when the grant expires. NULL means that there is no time restriction.|
 
 ## Columns
+
+### __Object_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 ### Context_User_Id
 

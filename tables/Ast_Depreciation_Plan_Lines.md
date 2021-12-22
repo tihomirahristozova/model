@@ -16,6 +16,7 @@ Each record contains one depreciation plan for one valuation model of one asset.
 
 | Name | Type | Description |
 | - | - | --- |
+|[__Object_Version](#__object_version)|`int` ||
 |[Asset_Id](#asset_id)|`uniqueidentifier` |The asset that is planned for depreciation|
 |[Depreciation_End_Date](#depreciation_end_date)|`datetime` |End date of the depreciation plan for this asset|
 |[Depreciation_Method_Id](#depreciation_method_id)|`uniqueidentifier` |Depreciation method by which the asset will be depreciated|
@@ -28,6 +29,33 @@ Each record contains one depreciation plan for one valuation model of one asset.
 |[Valuation_Model_Id](#valuation_model_id)|`uniqueidentifier` |Valuation model in which the asset is accounted|
 
 ## Columns
+
+### __Object_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 ### Asset_Id
 

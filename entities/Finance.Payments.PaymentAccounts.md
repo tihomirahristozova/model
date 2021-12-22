@@ -27,7 +27,7 @@ Aggregate Tree
 | [Id](Finance.Payments.PaymentAccounts.md#id) | guid |  
 | [IsActive](Finance.Payments.PaymentAccounts.md#isactive) | boolean | Indicates wheather the payment account is currently used (active). `Required` `Default(true)` `Filter(eq)` 
 | [Name](Finance.Payments.PaymentAccounts.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | The name of this PaymentAccount. `Required` `Filter(like)` 
-| [RowVersion](Finance.Payments.PaymentAccounts.md#rowversion) | byte[] |  
+| [ObjectVersion](Finance.Payments.PaymentAccounts.md#objectversion) | int32 |  
 
 ## References
 
@@ -77,11 +77,11 @@ _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 
-### RowVersion
+### ObjectVersion
 
-_Type_: **byte[]**  
+_Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Supports Order By_: ****  
 
 
 ## Reference Details

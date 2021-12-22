@@ -9,7 +9,7 @@ External dealers. Entity: Crm_Dealers
 
 ## Default Visualization
 Default Display Text Format:  
-_{Id}: {PartyId}_  
+_{Id}: {ObjectVersion}_  
 Default Search Members:  
 __  
 
@@ -26,7 +26,7 @@ Aggregate Tree
 | [FromDate](Crm.Dealers.md#fromdate) | datetime __nullable__ | Start of the dealer relationship. `Default(Today)` `Filter(ge;le)` 
 | [Id](Crm.Dealers.md#id) | guid |  
 | [Notes](Crm.Dealers.md#notes) | string (254) __nullable__ | Notes for this Dealer. 
-| [RowVersion](Crm.Dealers.md#rowversion) | byte[] |  
+| [ObjectVersion](Crm.Dealers.md#objectversion) | int32 |  
 | [ThruDate](Crm.Dealers.md#thrudate) | datetime __nullable__ | Termination date of the dealership. null for active dealers. `Filter(ge;le)` 
 
 ## References
@@ -64,11 +64,11 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
 
-### RowVersion
+### ObjectVersion
 
-_Type_: **byte[]**  
+_Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Supports Order By_: ****  
 
 ### ThruDate
 

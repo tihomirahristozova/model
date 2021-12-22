@@ -16,6 +16,7 @@ Detail lines of Requistions. Entity: Scm_Requisition_Lines
 
 | Name | Type | Description |
 | - | - | --- |
+|[__Object_Version](#__object_version)|`int` ||
 |[Line_No](#line_no)|`int` ||
 |[Lot_Id](#lot_id)|`uniqueidentifier` |When not null, indicates a specific lot should be purchased.|
 |[Notes](#notes)|`nvarchar(254)` ||
@@ -32,6 +33,33 @@ Detail lines of Requistions. Entity: Scm_Requisition_Lines
 |[Suggested_Supplier_Id](#suggested_supplier_id)|`uniqueidentifier` |When the requisitor knows the supplier or has a supplier preference it is denoted in this field.|
 
 ## Columns
+
+### __Object_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 ### Line_No
 

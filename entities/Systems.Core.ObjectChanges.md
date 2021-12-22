@@ -28,8 +28,8 @@ Aggregate Root:
 | [ChangeType](Systems.Core.ObjectChanges.md#changetype) | [ChangeType](Systems.Core.ObjectChanges.md#changetype) | Type of change - Create, Update or Delete. `Required` 
 | [EntityItemId](Systems.Core.ObjectChanges.md#entityitemid) | guid | The id of the actual changed object, described by this change. This is different than the aggregate root, which is pointed by Root Object. `Required` `Filter(multi eq)` 
 | [Id](Systems.Core.ObjectChanges.md#id) | guid |  
+| [ObjectVersion](Systems.Core.ObjectChanges.md#objectversion) | int32 |  
 | [RepositoryName](Systems.Core.ObjectChanges.md#repositoryname) | string (64) | The repository of the actual changed object, described by this change. This is different than the aggregate root, which is pointed by Root Object. `Required` `Filter(multi eq;like)` 
-| [RowVersion](Systems.Core.ObjectChanges.md#rowversion) | byte[] __nullable__ |  
 
 ## References
 
@@ -73,6 +73,12 @@ _Indexed_: **True**
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
+### ObjectVersion
+
+_Type_: **int32**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+
 ### RepositoryName
 
 The repository of the actual changed object, described by this change. This is different than the aggregate root, which is pointed by Root Object. `Required` `Filter(multi eq;like)`
@@ -81,12 +87,6 @@ _Type_: **string (64)**
 _Supported Filters_: **Equals, Like, EqualsIn**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  
-
-### RowVersion
-
-_Type_: **byte[] __nullable__**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
 
 
 ## Reference Details

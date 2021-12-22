@@ -27,8 +27,8 @@ Aggregate Tree
 | [FullPath](Production.Resources.FunctionGroups.md#fullpath) | string (254) | The full path of the item. `Required` `Default("")` `Filter(eq;like)` 
 | [Id](Production.Resources.FunctionGroups.md#id) | guid |  
 | [Name](Production.Resources.FunctionGroups.md#name) | string (64) | The name of this FunctionGroup. `Required` `Filter(like)` 
+| [ObjectVersion](Production.Resources.FunctionGroups.md#objectversion) | int32 |  
 | [Parent](Production.Resources.FunctionGroups.md#parent) | string (254) | The path of the parent item. `Required` `Default("/")` `Filter(eq;like)` `ORD` 
-| [RowVersion](Production.Resources.FunctionGroups.md#rowversion) | byte[] |  
 
 ## Child Collections
 
@@ -65,6 +65,12 @@ _Supported Filters_: **Like**
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  
 
+### ObjectVersion
+
+_Type_: **int32**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+
 ### Parent
 
 The path of the parent item. `Required` `Default("/")` `Filter(eq;like)` `ORD`
@@ -75,12 +81,6 @@ _Supported Filters_: **Equals, Like**
 _Supports Order By_: **True**  
 _Maximum Length_: **254**  
 _Default Value_: **/**  
-
-### RowVersion
-
-_Type_: **byte[]**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
 
 
 

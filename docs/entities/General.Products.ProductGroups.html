@@ -164,6 +164,11 @@ Default Search Members:<br>
 <td>User notes for the item group.</td>
 </tr>
 <tr>
+<td><a href="General.Products.ProductGroups.html#objectversion">ObjectVersion</a></td>
+<td>int32</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="General.Products.ProductGroups.html#parent">Parent</a></td>
 <td>string (254)</td>
 <td>Full tree path of the parent group in the form /parent/.../leaf/. Contains the group names. <code>Required</code> <code>Default(&quot;/&quot;)</code> <code>Filter(eq)</code> <code>ORD</code></td>
@@ -187,11 +192,6 @@ Default Search Members:<br>
 <td><a href="General.Products.ProductGroups.html#productnamemask">ProductNameMask</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString</a> <strong>nullable</strong></td>
 <td>When not null specifies mask for new product names for this group and its sub-groups. The mask substitutes {0}..{n} with the appropriate custom attributes.</td>
-</tr>
-<tr>
-<td><a href="General.Products.ProductGroups.html#rowversion">RowVersion</a></td>
-<td>byte[]</td>
-<td></td>
 </tr>
 <tr>
 <td><a href="General.Products.ProductGroups.html#uselots">UseLots</a></td>
@@ -345,6 +345,10 @@ Allowed values for the <code>ConfiguratorStatus</code>(General.Products.ProductG
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>254</strong></p>
+<h3 id="objectversion">ObjectVersion</h3>
+<p><em>Type</em>: <strong>int32</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****</p>
 <h3 id="parent">Parent</h3>
 <p>Full tree path of the parent group in the form /parent/.../leaf/. Contains the group names. <code>Required</code> <code>Default(&quot;/&quot;)</code> <code>Filter(eq)</code> <code>ORD</code></p>
 <p><em>Type</em>: <strong>string (254)</strong><br>
@@ -371,10 +375,6 @@ Allowed values for the <code>ConfiguratorStatus</code>(General.Products.ProductG
 <h3 id="productnamemask">ProductNameMask</h3>
 <p>When not null specifies mask for new product names for this group and its sub-groups. The mask substitutes {0}..{n} with the appropriate custom attributes.</p>
 <p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a> <strong>nullable</strong></strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
-<h3 id="rowversion">RowVersion</h3>
-<p><em>Type</em>: <strong>byte[]</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="uselots">UseLots</h3>

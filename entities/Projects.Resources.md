@@ -28,7 +28,7 @@ Aggregate Root:
 | [Description](Projects.Resources.md#description) | string (max) __nullable__ | The description of this Resource. 
 | [Id](Projects.Resources.md#id) | guid |  
 | [Name](Projects.Resources.md#name) | string (254) | The name of this Resource. `Required` 
-| [RowVersion](Projects.Resources.md#rowversion) | byte[] |  
+| [ObjectVersion](Projects.Resources.md#objectversion) | int32 |  
 
 ## References
 
@@ -64,11 +64,11 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
 
-### RowVersion
+### ObjectVersion
 
-_Type_: **byte[]**  
+_Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Supports Order By_: ****  
 
 
 ## Reference Details

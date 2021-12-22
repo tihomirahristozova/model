@@ -108,6 +108,11 @@ Aggregate Root:<br>
 <td></td>
 </tr>
 <tr>
+<td><a href="Crm.Distribution.SalesPersonTargetLines.html#objectversion">ObjectVersion</a></td>
+<td>int32</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="Crm.Distribution.SalesPersonTargetLines.html#perioddate">PeriodDate</a></td>
 <td>datetime</td>
 <td>Calculated date representation of the target period (used for grouping, filtering and other auxiliary purposes). <code>Required</code> <code>ReadOnly</code></td>
@@ -121,11 +126,6 @@ Aggregate Root:<br>
 <td><a href="Crm.Distribution.SalesPersonTargetLines.html#periodyear">PeriodYear</a></td>
 <td>int16</td>
 <td>Year of the period in which the target must be fulfilled (the period is determined by specifying a month and an year). <code>Required</code> <code>Filter(ge;le)</code></td>
-</tr>
-<tr>
-<td><a href="Crm.Distribution.SalesPersonTargetLines.html#rowversion">RowVersion</a></td>
-<td>byte[]</td>
-<td></td>
 </tr>
 <tr>
 <td><a href="Crm.Distribution.SalesPersonTargetLines.html#targetamount">TargetAmount</a></td>
@@ -197,6 +197,10 @@ Aggregate Root:<br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
+<h3 id="objectversion">ObjectVersion</h3>
+<p><em>Type</em>: <strong>int32</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****</p>
 <h3 id="perioddate">PeriodDate</h3>
 <p>Calculated date representation of the target period (used for grouping, filtering and other auxiliary purposes). <code>Required</code> <code>ReadOnly</code></p>
 <p><em>Type</em>: <strong>datetime</strong><br>
@@ -211,10 +215,6 @@ Aggregate Root:<br>
 <p>Year of the period in which the target must be fulfilled (the period is determined by specifying a month and an year). <code>Required</code> <code>Filter(ge;le)</code></p>
 <p><em>Type</em>: <strong>int16</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
-<h3 id="rowversion">RowVersion</h3>
-<p><em>Type</em>: <strong>byte[]</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="targetamount">TargetAmount</h3>
 <p>Target amount to be fulfilled by the specified sales person. Deprecated - use Target_Value. <code>Currency: TargetAmountCurrency</code></p>

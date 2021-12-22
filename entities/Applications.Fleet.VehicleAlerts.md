@@ -9,7 +9,7 @@ Contains alerts, specific to one vehicle. Alerts are created based on many sourc
 
 ## Default Visualization
 Default Display Text Format:  
-_{Id}: {VehicleId}_  
+_{Id}: {ObjectVersion}_  
 Default Search Members:  
 __  
 
@@ -27,6 +27,7 @@ Aggregate Tree
 | [Description](Applications.Fleet.VehicleAlerts.md#description) | string (254) | Description of the alert (Multilanguage). `Required` 
 | [Id](Applications.Fleet.VehicleAlerts.md#id) | guid |  
 | [IsHidden](Applications.Fleet.VehicleAlerts.md#ishidden) | boolean | Specifies, whether the alert is hidden (e.g. managed by the responsible person). `Required` `Default(false)` 
+| [ObjectVersion](Applications.Fleet.VehicleAlerts.md#objectversion) | int32 |  
 | [Source](Applications.Fleet.VehicleAlerts.md#source) | string (1) | The source of the alert. G=GPS, O=OBD, M=Maintenance. `Required` 
 | [Time](Applications.Fleet.VehicleAlerts.md#time) | datetime | The time of the alert. `Required` `ORD` 
 
@@ -72,6 +73,12 @@ _Type_: **boolean**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **False**  
+
+### ObjectVersion
+
+_Type_: **int32**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Source
 

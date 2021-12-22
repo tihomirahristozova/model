@@ -123,14 +123,14 @@ Aggregate Root:<br>
 <td>Consecutive number of the line within the depreciation plan. <code>Required</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
+<td><a href="Finance.Assets.DepreciationPlanLines.html#objectversion">ObjectVersion</a></td>
+<td>int32</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="Finance.Assets.DepreciationPlanLines.html#plandepreciationvalue">PlanDepreciationValue</a></td>
 <td><a href="../data-types.html#amount">Amount (14, 2)</a></td>
 <td>The part of the total amount of the asset (in the currency of the asset), which is due for depreciation. <code>Currency: Asset.ValuationCurrency</code> <code>Required</code> <code>Default(0)</code></td>
-</tr>
-<tr>
-<td><a href="Finance.Assets.DepreciationPlanLines.html#rowversion">RowVersion</a></td>
-<td>byte[]</td>
-<td></td>
 </tr>
 </tbody>
 </table>
@@ -213,16 +213,16 @@ Aggregate Root:<br>
 <code>( obj.DepreciationPlan.Lines.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>( obj.DepreciationPlan.Lines.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
+<h3 id="objectversion">ObjectVersion</h3>
+<p><em>Type</em>: <strong>int32</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****</p>
 <h3 id="plandepreciationvalue">PlanDepreciationValue</h3>
 <p>The part of the total amount of the asset (in the currency of the asset), which is due for depreciation. <code>Currency: Asset.ValuationCurrency</code> <code>Required</code> <code>Default(0)</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount (14, 2)</a></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
-<h3 id="rowversion">RowVersion</h3>
-<p><em>Type</em>: <strong>byte[]</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="asset">Asset</h3>
 <p>The asset that is planned for depreciation. <code>Required</code> <code>Filter(multi eq)</code></p>

@@ -16,6 +16,7 @@ Detail records of output orders. Entity: Prd_Output_Order_Lines
 
 | Name | Type | Description |
 | - | - | --- |
+|[__Object_Version](#__object_version)|`int` ||
 |[Begin_Date_Time](#begin_date_time)|`datetime` |Not used.|
 |[End_Time](#end_time)|`datetime` |Date and time when the operation has ended|
 |[Finished](#finished)|`bit` |1 if this output entry completes the operation. 0 if there might be more entries|
@@ -43,6 +44,33 @@ Detail records of output orders. Entity: Prd_Output_Order_Lines
 |[Workgroup_Resource_Id](#workgroup_resource_id)|`uniqueidentifier` |The resource, which was used to perform the operation.|
 
 ## Columns
+
+### __Object_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 ### Begin_Date_Time
 

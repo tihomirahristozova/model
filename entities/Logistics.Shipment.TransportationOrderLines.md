@@ -29,9 +29,9 @@ Aggregate Root:
 | [Id](Logistics.Shipment.TransportationOrderLines.md#id) | guid |  
 | [LineNo](Logistics.Shipment.TransportationOrderLines.md#lineno) | int32 | Line number, unique within the TransportationOrder. Usually is increasing number like 10, 20, 30, ... when initially entering the TransportationOrder (in order to allow insertions with adjustment documents). `Required` `Filter(eq)` 
 | [Notes](Logistics.Shipment.TransportationOrderLines.md#notes) | string (max) __nullable__ | Notes for this TransportationOrderLine. `Introduced in version 18.2` 
+| [ObjectVersion](Logistics.Shipment.TransportationOrderLines.md#objectversion) | int32 |  
 | [PalletsCount](Logistics.Shipment.TransportationOrderLines.md#palletscount) | int32 __nullable__ | Number of palettes comprising the cargo. null when it is unknown. 
 | [ParentLineNo](Logistics.Shipment.TransportationOrderLines.md#parentlineno) | int32 __nullable__ | The number of the line within the parent document, which the current line executes. null when the current line does not execute parent line. `Filter(eq)` 
-| [RowVersion](Logistics.Shipment.TransportationOrderLines.md#rowversion) | byte[] |  
 | [VolumeCbm](Logistics.Shipment.TransportationOrderLines.md#volumecbm) | int32 __nullable__ | The volume of the cargo, in CBM (cubic meters). null when it is unknown. 
 | [WeightKg](Logistics.Shipment.TransportationOrderLines.md#weightkg) | int32 __nullable__ | The weight of the cargo, in KG (kilogramms). null when it is unknown. 
 
@@ -85,6 +85,12 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
 
+### ObjectVersion
+
+_Type_: **int32**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+
 ### PalletsCount
 
 Number of palettes comprising the cargo. null when it is unknown.
@@ -99,12 +105,6 @@ The number of the line within the parent document, which the current line execut
 
 _Type_: **int32 __nullable__**  
 _Supported Filters_: **Equals**  
-_Supports Order By_: **False**  
-
-### RowVersion
-
-_Type_: **byte[]**  
-_Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
 ### VolumeCbm

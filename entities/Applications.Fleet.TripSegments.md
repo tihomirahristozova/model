@@ -29,7 +29,7 @@ Aggregate Root:
 | [Id](Applications.Fleet.TripSegments.md#id) | guid |  
 | [Mileage](Applications.Fleet.TripSegments.md#mileage) | decimal (9, 0) __nullable__ | Mileage of the route segment. The mileage is measured in the operational units of the vehicle even when it is not miles or kilometers. null means unknown mileage. 
 | [Notes](Applications.Fleet.TripSegments.md#notes) | string (254) __nullable__ | Notes for the segment. 
-| [RowVersion](Applications.Fleet.TripSegments.md#rowversion) | byte[] |  
+| [ObjectVersion](Applications.Fleet.TripSegments.md#objectversion) | int32 |  
 | [StartingTimestamp](Applications.Fleet.TripSegments.md#startingtimestamp) | datetime | The starting date and time of the travel on the segment. `Required` 
 
 ## References
@@ -75,11 +75,11 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
 
-### RowVersion
+### ObjectVersion
 
-_Type_: **byte[]**  
+_Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Supports Order By_: ****  
 
 ### StartingTimestamp
 

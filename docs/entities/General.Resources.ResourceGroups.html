@@ -123,8 +123,8 @@ Default Search Members:<br>
 <td>Resource group name. Unique within its parent. <code>Required</code> <code>Filter(eq;like)</code></td>
 </tr>
 <tr>
-<td><a href="General.Resources.ResourceGroups.html#rowversion">RowVersion</a></td>
-<td>byte[]</td>
+<td><a href="General.Resources.ResourceGroups.html#objectversion">ObjectVersion</a></td>
+<td>int32</td>
 <td></td>
 </tr>
 </tbody>
@@ -179,10 +179,10 @@ Default Search Members:<br>
 <p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
-<h3 id="rowversion">RowVersion</h3>
-<p><em>Type</em>: <strong>byte[]</strong><br>
+<h3 id="objectversion">ObjectVersion</h3>
+<p><em>Type</em>: <strong>int32</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: ****</p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="enterprisecompany">EnterpriseCompany</h3>
 <p>The enterprise company to which this resource group belongs. null means that the group is valid for all companies. Can be null only if the parent group company is also null. <code>Filter(multi eq)</code></p>

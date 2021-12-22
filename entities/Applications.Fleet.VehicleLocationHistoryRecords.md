@@ -9,7 +9,7 @@ Stores information about vehicle locations. Entity: Fleet_Vehicle_Location_Histo
 
 ## Default Visualization
 Default Display Text Format:  
-_{Id}: {VehicleId}_  
+_{Id}: {ObjectVersion}_  
 Default Search Members:  
 __  
 
@@ -27,6 +27,7 @@ Aggregate Tree
 | [Id](Applications.Fleet.VehicleLocationHistoryRecords.md#id) | guid |  
 | [Latitude](Applications.Fleet.VehicleLocationHistoryRecords.md#latitude) | decimal (10, 7) | Latitude of the vehicle at the specified time. Latitude is the vertical angle from equator to the pole of the point. Positive values denote points north of the equator. The value is in the range `-90, 90`. `Required` 
 | [Longitude](Applications.Fleet.VehicleLocationHistoryRecords.md#longitude) | decimal (10, 7) | Longitude of the vehicle at the specified time. Longitude is angle from the prime meridian (in England) in east-west direction. Positive values denote east and negative - west. The value is in the range `-180, 180`. `Required` 
+| [ObjectVersion](Applications.Fleet.VehicleLocationHistoryRecords.md#objectversion) | int32 |  
 | [Time](Applications.Fleet.VehicleLocationHistoryRecords.md#time) | datetime | The time, for which the location is stored. `Required` 
 
 ## References
@@ -68,6 +69,12 @@ Longitude of the vehicle at the specified time. Longitude is angle from the prim
 _Type_: **decimal (10, 7)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+
+### ObjectVersion
+
+_Type_: **int32**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Time
 

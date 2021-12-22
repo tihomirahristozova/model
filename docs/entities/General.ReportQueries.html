@@ -123,14 +123,14 @@ Aggregate Root:<br>
 <td></td>
 </tr>
 <tr>
+<td><a href="General.ReportQueries.html#objectversion">ObjectVersion</a></td>
+<td>int32</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="General.ReportQueries.html#referencepath">ReferencePath</a></td>
 <td>string (512)</td>
 <td>A sequence of table names and foreign key columns that define how the data will be loaded by this query. For example - Gen_Documents/<br>Enterprise_Company_<br>Id/Company_Id - will load the definition of the company for the enterprise company of a document. <code>Required</code></td>
-</tr>
-<tr>
-<td><a href="General.ReportQueries.html#rowversion">RowVersion</a></td>
-<td>byte[]</td>
-<td></td>
 </tr>
 <tr>
 <td><a href="General.ReportQueries.html#showcustomproperties">ShowCustomProperties</a></td>
@@ -194,16 +194,16 @@ Aggregate Root:<br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
+<h3 id="objectversion">ObjectVersion</h3>
+<p><em>Type</em>: <strong>int32</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****</p>
 <h3 id="referencepath">ReferencePath</h3>
 <p>A sequence of table names and foreign key columns that define how the data will be loaded by this query. For example - Gen_Documents/Enterprise_Company_Id/Company_Id - will load the definition of the company for the enterprise company of a document. <code>Required</code></p>
 <p><em>Type</em>: <strong>string (512)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>512</strong></p>
-<h3 id="rowversion">RowVersion</h3>
-<p><em>Type</em>: <strong>byte[]</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="showcustomproperties">ShowCustomProperties</h3>
 <p>True to include the custom properties. <code>Required</code> <code>Default(false)</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>

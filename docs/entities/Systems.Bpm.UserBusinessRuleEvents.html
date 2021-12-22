@@ -128,8 +128,8 @@ Aggregate Root:<br>
 <td>Specifies the layer on which to register the event. Allowed values = FTE-FrontEnd, BKE-BackEnd. <code>Required</code> <code>Default(&quot;BKE&quot;)</code></td>
 </tr>
 <tr>
-<td><a href="Systems.Bpm.UserBusinessRuleEvents.html#rowversion">RowVersion</a></td>
-<td>byte[]</td>
+<td><a href="Systems.Bpm.UserBusinessRuleEvents.html#objectversion">ObjectVersion</a></td>
+<td>int32</td>
 <td></td>
 </tr>
 </tbody>
@@ -275,10 +275,10 @@ Allowed values for the <code>Layer</code>(Systems.Bpm.UserBusinessRuleEvents.md#
 <p><em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>BackEnd</strong></p>
-<h3 id="rowversion">RowVersion</h3>
-<p><em>Type</em>: <strong>byte[]</strong><br>
+<h3 id="objectversion">ObjectVersion</h3>
+<p><em>Type</em>: <strong>int32</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: ****</p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="userbusinessrule">UserBusinessRule</h3>
 <p>The rule, which will be registered for the event. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>

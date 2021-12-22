@@ -26,7 +26,7 @@ Aggregate Tree
 | [Id](Systems.External.PublicUserLists.md#id) | guid |  
 | [Name](Systems.External.PublicUserLists.md#name) | string (64) | The name of this PublicUserList. `Required` `Filter(like)` 
 | [Notes](Systems.External.PublicUserLists.md#notes) | string (max) __nullable__ | Notes for this PublicUserList. 
-| [RowVersion](Systems.External.PublicUserLists.md#rowversion) | byte[] |  
+| [ObjectVersion](Systems.External.PublicUserLists.md#objectversion) | int32 |  
 
 ## References
 
@@ -62,11 +62,11 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
 
-### RowVersion
+### ObjectVersion
 
-_Type_: **byte[]**  
+_Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Supports Order By_: ****  
 
 
 ## Reference Details

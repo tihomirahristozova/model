@@ -26,7 +26,7 @@ Aggregate Tree
 | [CurrencySign](General.Currencies.md#currencysign) | string (4) | The international currency designator, as defined in ISO 4217. For example euro is represented as 'EUR'. `Required` `Filter(eq;like)` `ORD` 
 | [Id](General.Currencies.md#id) | guid |  
 | [Name](General.Currencies.md#name) | string (50) | The name of this Currency. `Required` `Filter(like)` 
-| [RowVersion](General.Currencies.md#rowversion) | byte[] |  
+| [ObjectVersion](General.Currencies.md#objectversion) | int32 |  
 | [ShowOrder](General.Currencies.md#showorder) | int32 | The order in which to show the currency in combo boxes, etc. `Required` `Default(0)` 
 
 
@@ -58,11 +58,11 @@ _Supported Filters_: **Like**
 _Supports Order By_: **False**  
 _Maximum Length_: **50**  
 
-### RowVersion
+### ObjectVersion
 
-_Type_: **byte[]**  
+_Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Supports Order By_: ****  
 
 ### ShowOrder
 

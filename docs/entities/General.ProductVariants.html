@@ -123,8 +123,8 @@ Aggregate Root:<br>
 <td>Product variant name. It is the concatenation of the names of the color, size and style. <code>ReadOnly</code></td>
 </tr>
 <tr>
-<td><a href="General.ProductVariants.html#rowversion">RowVersion</a></td>
-<td>byte[]</td>
+<td><a href="General.ProductVariants.html#objectversion">ObjectVersion</a></td>
+<td>int32</td>
 <td></td>
 </tr>
 </tbody>
@@ -189,10 +189,10 @@ Aggregate Root:<br>
 <code>Join( &quot; &quot;, new [] {obj.VariantColor.Name, obj.VariantSize.Name, obj.VariantStyle.Name})</code></p>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>Join( &quot; &quot;, new [] {obj.VariantColor.Name, obj.VariantSize.Name, obj.VariantStyle.Name})</code></p>
-<h3 id="rowversion">RowVersion</h3>
-<p><em>Type</em>: <strong>byte[]</strong><br>
+<h3 id="objectversion">ObjectVersion</h3>
+<p><em>Type</em>: <strong>int32</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: ****</p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="product">Product</h3>
 <p>The product for which this variant is defined. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>

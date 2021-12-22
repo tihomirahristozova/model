@@ -37,11 +37,11 @@ Aggregate Root:
 | [Id](Systems.Workflow.Routes.md#id) | guid |  
 | [NegativeConditionFilterXml](Systems.Workflow.Routes.md#negativeconditionfilterxml) | dataaccessfilter __nullable__ | The negative condition should NOT be matched by the document in order to execute the route. 
 | [Notes](Systems.Workflow.Routes.md#notes) | string (254) __nullable__ | Notes for this Route. 
+| [ObjectVersion](Systems.Workflow.Routes.md#objectversion) | int32 |  
 | [ParentDocument<br />RelationshipType](Systems.Workflow.Routes.md#parentdocumentrelationshiptype) | [ParentDocument<br />RelationshipType](Systems.Workflow.Routes.md#parentdocumentrelationshiptype) | Determines the default relationship type between the generated document and the parent document. `Required` `Default("S")` 
 | [ProcedureName](Systems.Workflow.Routes.md#procedurename) | string (254) | The system name of the generation procedure, which must be executed by the route. `Required` 
 | [ProcessEvent](Systems.Workflow.Routes.md#processevent) | string (254) | Event which triggers the route. Usually the event is change of state. Every document entity may define own custom events. `Required` 
 | [ReadOnly](Systems.Workflow.Routes.md#readonly) | boolean | Indicates wheather the destination document shoul be read only. true - the destination document is read only. `Required` `Default(false)` 
-| [RowVersion](Systems.Workflow.Routes.md#rowversion) | byte[] |  
 
 ## References
 
@@ -212,6 +212,12 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
 
+### ObjectVersion
+
+_Type_: **int32**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+
 ### ParentDocumentRelationshipType
 
 Determines the default relationship type between the generated document and the parent document. `Required` `Default("S")`
@@ -255,12 +261,6 @@ _Type_: **boolean**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **False**  
-
-### RowVersion
-
-_Type_: **byte[]**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
 
 
 ## Reference Details

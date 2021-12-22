@@ -26,7 +26,7 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](Logistics.Inventory.ProductDefaultStoreBins.md#id) | guid |  
-| [RowVersion](Logistics.Inventory.ProductDefaultStoreBins.md#rowversion) | byte[] |  
+| [ObjectVersion](Logistics.Inventory.ProductDefaultStoreBins.md#objectversion) | int32 |  
 
 ## References
 
@@ -46,11 +46,11 @@ _Indexed_: **True**
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
-### RowVersion
+### ObjectVersion
 
-_Type_: **byte[]**  
+_Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Supports Order By_: ****  
 
 
 ## Reference Details

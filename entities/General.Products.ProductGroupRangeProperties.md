@@ -27,9 +27,9 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [FromPropertyValue](General.Products.ProductGroupRangeProperties.md#frompropertyvalue) | string (254) __nullable__ | Starting value of the range of alternative values. Used only when Rage Type = R (range). 
 | [Id](General.Products.ProductGroupRangeProperties.md#id) | guid |  
+| [ObjectVersion](General.Products.ProductGroupRangeProperties.md#objectversion) | int32 |  
 | [PropertyValuesList](General.Products.ProductGroupRangeProperties.md#propertyvalueslist) | string (max) __nullable__ | Contains the enumeration of all values in the alternating value set. Used only when Rage Type = E (enumeratio). 
 | [RangeType](General.Products.ProductGroupRangeProperties.md#rangetype) | [RangeType](General.Products.ProductGroupRangeProperties.md#rangetype) | Specifies the method of the creation of the value set: R - by range from-to; E - by enumeration of all values;. `Required` `Default("R")` 
-| [RowVersion](General.Products.ProductGroupRangeProperties.md#rowversion) | byte[] |  
 | [ToPropertyValue](General.Products.ProductGroupRangeProperties.md#topropertyvalue) | string (254) __nullable__ | Ending value of the range of alternative values. Used only when Rage Type = R (range). 
 
 ## References
@@ -58,6 +58,12 @@ _Indexed_: **True**
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
+### ObjectVersion
+
+_Type_: **int32**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+
 ### PropertyValuesList
 
 Contains the enumeration of all values in the alternating value set. Used only when Rage Type = E (enumeratio).
@@ -83,12 +89,6 @@ _Allowed Values (General.Products.ProductGroupRangePropertiesRepository.RangeTyp
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Range**  
-
-### RowVersion
-
-_Type_: **byte[]**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
 
 ### ToPropertyValue
 

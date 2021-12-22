@@ -15,6 +15,7 @@ Contains document routes, which specify which document generation procedures wil
 
 | Name | Type | Description |
 | - | - | --- |
+|[__Object_Version](#__object_version)|`int` ||
 |[Activation_Date](#activation_date)|`date` |The date from which (including) the route is active. The date is matched against the document date of the generating document.|
 |[Active](#active)|`bit` |1 if the route is active, otherwise 0.|
 |[Allow_Obsolete_Generation](#allow_obsolete_generation)|`bit` |Allows the usage of unsupported generation procedures (marked as obsolete). This is a user override of the system prohibition of the usage of obsolete procedures.|
@@ -42,6 +43,33 @@ Contains document routes, which specify which document generation procedures wil
 |[Schema_XML](#schema_xml)|`nvarchar(max)` ||
 
 ## Columns
+
+### __Object_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 ### Activation_Date
 

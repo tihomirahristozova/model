@@ -31,7 +31,7 @@ Aggregate Root:
 | [Id](Production.ShopFloor.OutputOrderConsumptionLines.md#id) | guid |  
 | [LineNo](Production.ShopFloor.OutputOrderConsumptionLines.md#lineno) | int32 | Line number, unique within the OutputOrder. Usually is increasing number like 10, 20, 30, ... when initially entering the OutputOrder (in order to allow insertions with adjustment documents). `Required` 
 | [Notes](Production.ShopFloor.OutputOrderConsumptionLines.md#notes) | string (max) __nullable__ | Notes for this OutputOrderConsumptionLine. 
-| [RowVersion](Production.ShopFloor.OutputOrderConsumptionLines.md#rowversion) | byte[] |  
+| [ObjectVersion](Production.ShopFloor.OutputOrderConsumptionLines.md#objectversion) | int32 |  
 
 ## References
 
@@ -105,11 +105,11 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
 
-### RowVersion
+### ObjectVersion
 
-_Type_: **byte[]**  
+_Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Supports Order By_: ****  
 
 
 ## Reference Details

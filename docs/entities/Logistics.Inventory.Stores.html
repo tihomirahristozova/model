@@ -161,6 +161,11 @@ Default Search Members:<br>
 <td>Number of dimensions in the coordinate system of the storage bins. 0 means single-bin store. Currently, this is only stored for information and is not used for automatical generation of store bins, as it was intended. <code>Required</code> <code>Default(0)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
+<td><a href="Logistics.Inventory.Stores.html#objectversion">ObjectVersion</a></td>
+<td>int32</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="Logistics.Inventory.Stores.html#partycode">PartyCode</a></td>
 <td>string (16)</td>
 <td>The unique code of the party. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code> <code>ReadOnly</code> (Inherited from <a href="General.Contacts.Parties.html">Parties</a>)</td>
@@ -186,11 +191,6 @@ Default Search Members:<br>
 <td>Notes for this Party. (Inherited from <a href="General.Contacts.Parties.html">Parties</a>)</td>
 </tr>
 <tr>
-<td><a href="Logistics.Inventory.Stores.html#partyrowversion">PartyRowVersion</a></td>
-<td>byte[]</td>
-<td></td>
-</tr>
-<tr>
 <td><a href="Logistics.Inventory.Stores.html#partytype">PartyType</a></td>
 <td><a href="Logistics.Inventory.Stores.html#partytype">PartyType</a></td>
 <td>Type of party. Currently supported are P=Person, C=Company, S=Store, L=Company Location, V=Division. <code>Required</code> <code>Default(&quot;P&quot;)</code> <code>Filter(multi eq)</code> (Inherited from <a href="General.Contacts.Parties.html">Parties</a>)</td>
@@ -209,11 +209,6 @@ Default Search Members:<br>
 <td><a href="Logistics.Inventory.Stores.html#partyupdateuser">PartyUpdateUser</a></td>
 <td>string (64) <strong>nullable</strong></td>
 <td>Login name of the user, who last updated the Party. <code>Filter(like)</code> <code>ReadOnly</code> (Inherited from <a href="General.Contacts.Parties.html">Parties</a>)</td>
-</tr>
-<tr>
-<td><a href="Logistics.Inventory.Stores.html#rowversion">RowVersion</a></td>
-<td>byte[]</td>
-<td></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.Stores.html#schemaxml">SchemaXML</a></td>
@@ -428,6 +423,10 @@ Default Search Members:<br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>0</strong></p>
+<h3 id="objectversion">ObjectVersion</h3>
+<p><em>Type</em>: <strong>int32</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****</p>
 <h3 id="partycode">PartyCode</h3>
 <p>The unique code of the party. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code> <code>ReadOnly</code> (Inherited from <a href="General.Contacts.Parties.html">Parties</a>)</p>
 <p><em>Type</em>: <strong>string (16)</strong><br>
@@ -458,10 +457,6 @@ Default Search Members:<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>254</strong></p>
-<h3 id="partyrowversion">PartyRowVersion</h3>
-<p><em>Type</em>: <strong>byte[]</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="partytype">PartyType</h3>
 <p>Type of party. Currently supported are P=Person, C=Company, S=Store, L=Company Location, V=Division. <code>Required</code> <code>Default(&quot;P&quot;)</code> <code>Filter(multi eq)</code> (Inherited from <a href="General.Contacts.Parties.html">Parties</a>)</p>
 <p><em>Type</em>: <strong><a href="Logistics.Inventory.Stores.html#partytype">PartyType</a></strong><br>
@@ -517,10 +512,6 @@ Allowed values for the PartyType data attribute<br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>64</strong></p>
-<h3 id="rowversion">RowVersion</h3>
-<p><em>Type</em>: <strong>byte[]</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="schemaxml">SchemaXML</h3>
 <p>Obsolete. Not used.</p>
 <p><em>Type</em>: <strong>string (max) <strong>nullable</strong></strong><br>

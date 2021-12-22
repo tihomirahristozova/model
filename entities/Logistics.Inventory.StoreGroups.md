@@ -27,8 +27,8 @@ Aggregate Tree
 | [FullPath](Logistics.Inventory.StoreGroups.md#fullpath) | string (25) __nullable__ | The full path to the store group in a dot separated, non-leading dot format. For example: 001.005.008. `Filter(eq;like)` `ORD` `ReadOnly` 
 | [Id](Logistics.Inventory.StoreGroups.md#id) | guid |  
 | [Name](Logistics.Inventory.StoreGroups.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | The name of this StoreGroup. `Required` `Filter(like)` 
+| [ObjectVersion](Logistics.Inventory.StoreGroups.md#objectversion) | int32 |  
 | [ParentFullPath](Logistics.Inventory.StoreGroups.md#parentfullpath) | string (25) __nullable__ | The full path to the parent store group. It is stored in a dot separated, non-leading dot format. For example: 001.005. `Filter(eq;like)` 
-| [RowVersion](Logistics.Inventory.StoreGroups.md#rowversion) | byte[] |  
 
 ## References
 
@@ -74,6 +74,12 @@ _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 
+### ObjectVersion
+
+_Type_: **int32**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+
 ### ParentFullPath
 
 The full path to the parent store group. It is stored in a dot separated, non-leading dot format. For example: 001.005. `Filter(eq;like)`
@@ -82,12 +88,6 @@ _Type_: **string (25) __nullable__**
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **25**  
-
-### RowVersion
-
-_Type_: **byte[]**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
 
 
 ## Reference Details

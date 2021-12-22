@@ -11,6 +11,7 @@ Contains the data measures of the General data warehouse. Entity: Dw_Data_Measur
 
 | Name | Type | Description |
 | - | - | --- |
+|[__Object_Version](#__object_version)|`int` ||
 |[Data_Measure_Code](#data_measure_code)|`nvarchar(16)` |Unique measure code.|
 |[Data_Measure_Group_Id](#data_measure_group_id)|`uniqueidentifier` |The group to which this measure belongs.|
 |[Data_Measure_Id](#data_measure_id)|`uniqueidentifier` `PK`||
@@ -21,6 +22,33 @@ Contains the data measures of the General data warehouse. Entity: Dw_Data_Measur
 |[Period](#period)|`nvarchar(1)` Allowed: `D`, `M`, `Q`, `Y`|The period for which the data is collected. D=Day, M=Month, Q=Quarter, Y=Year.|
 
 ## Columns
+
+### __Object_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 ### Data_Measure_Code
 

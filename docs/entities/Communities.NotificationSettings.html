@@ -83,7 +83,7 @@
 <p>User notification settings for the different notification classes. Entity: Cmm_Notification_Settings (Introduced in version 20.1)</p>
 <h2 id="default-visualization">Default Visualization</h2>
 <p>Default Display Text Format:<br>
-<em>{Id}: {UserId}</em><br>
+<em>{Id}: {ObjectVersion}</em><br>
 Default Search Members:<br>
 __</p>
 <h2 id="aggregate">Aggregate</h2>
@@ -113,6 +113,11 @@ __</p>
 <td>The class of the notification, for which the user is specifying settings. When null, the setting is applied to all notification classes. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
+<td><a href="Communities.NotificationSettings.html#objectversion">ObjectVersion</a></td>
+<td>int32</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="Communities.NotificationSettings.html#receivemail">ReceiveMail</a></td>
 <td>boolean</td>
 <td>True if the user should receive mail. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
@@ -126,11 +131,6 @@ __</p>
 <td><a href="Communities.NotificationSettings.html#receivesms">ReceiveSms</a></td>
 <td>boolean</td>
 <td>True if the user should receive SMS. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
-</tr>
-<tr>
-<td><a href="Communities.NotificationSettings.html#rowversion">RowVersion</a></td>
-<td>byte[]</td>
-<td></td>
 </tr>
 </tbody>
 </table>
@@ -163,6 +163,10 @@ __</p>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>64</strong></p>
+<h3 id="objectversion">ObjectVersion</h3>
+<p><em>Type</em>: <strong>int32</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****</p>
 <h3 id="receivemail">ReceiveMail</h3>
 <p>True if the user should receive mail. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>
@@ -181,10 +185,6 @@ __</p>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
-<h3 id="rowversion">RowVersion</h3>
-<p><em>Type</em>: <strong>byte[]</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="user">User</h3>
 <p>The user for whom the notification setting is about. <code>Required</code> <code>Filter(multi eq)</code></p>

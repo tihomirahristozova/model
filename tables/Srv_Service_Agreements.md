@@ -15,6 +15,7 @@ Service agreements represent SLAs between the enterprise company and its clients
 
 | Name | Type | Description |
 | - | - | --- |
+|[__Object_Version](#__object_version)|`int` ||
 |[Customer_Id](#customer_id)|`uniqueidentifier` |The client of the service agreement.|
 |[Document_Id](#document_id)|`uniqueidentifier` ||
 |[End_Date_Time](#end_date_time)|`datetime` |End date and time of the validity of the agreement.|
@@ -25,6 +26,33 @@ Service agreements represent SLAs between the enterprise company and its clients
 |[Start_Date_Time](#start_date_time)|`datetime` |Start date and time of the validity of the agreement.|
 
 ## Columns
+
+### __Object_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 ### Customer_Id
 

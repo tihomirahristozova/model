@@ -28,7 +28,7 @@ Aggregate Tree
 | [Id](Crm.Presales.LeadUserStages.md#id) | guid |  
 | [Name](Crm.Presales.LeadUserStages.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Multi-language name of the user stage. `Required` `Filter(like)` 
 | [Notes](Crm.Presales.LeadUserStages.md#notes) | string (max) __nullable__ | Notes for this LeadUserStage. 
-| [RowVersion](Crm.Presales.LeadUserStages.md#rowversion) | byte[] |  
+| [ObjectVersion](Crm.Presales.LeadUserStages.md#objectversion) | int32 |  
 | [SystemStage](Crm.Presales.LeadUserStages.md#systemstage) | [SystemStage](Crm.Presales.LeadUserStages.md#systemstage) | The system stage, on which the user stage is based. System stages are New, Qualifying, Marketing Qualified Lead, Sales Qualified Lead, Closed. (NEW, QUA, MQL, SQL, CLO). `Required` `Filter(multi eq)` 
 
 
@@ -77,11 +77,11 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
 
-### RowVersion
+### ObjectVersion
 
-_Type_: **byte[]**  
+_Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Supports Order By_: ****  
 
 ### SystemStage
 

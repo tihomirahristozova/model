@@ -11,6 +11,7 @@ Represents one user domain. The users in a domain have different emails. But one
 
 | Name | Type | Description |
 | - | - | --- |
+|[__Object_Version](#__object_version)|`int` ||
 |[Allow_Local_Accounts](#allow_local_accounts)|`bit` |Specifies whether users can have local accounts with locally stored passwords in the DB (not recommended).|
 |[Description](#description)|`nvarchar(256)` `ML`|Multi-language description of the domain.|
 |[Domain_Id](#domain_id)|`uniqueidentifier` `PK`||
@@ -19,6 +20,33 @@ Represents one user domain. The users in a domain have different emails. But one
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
+
+### __Object_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 ### Allow_Local_Accounts
 

@@ -26,9 +26,9 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [Id](Crm.Pos.Terminals.md#id) | guid |  
 | [IsActive](Crm.Pos.Terminals.md#isactive) | boolean | Represents whether the POS terminal is active and can be chosen from drop-downs for new records. `Required` `Default(true)` `Filter(multi eq)` 
+| [ObjectVersion](Crm.Pos.Terminals.md#objectversion) | int32 |  
 | [PosTerminalCode](Crm.Pos.Terminals.md#posterminalcode) | string (16) | Unique (within the location) code of the POS terminal. `Required` `Filter(eq;like)` 
 | [PosTerminalName](Crm.Pos.Terminals.md#posterminalname) | [MultilanguageString](../data-types.md#multilanguagestring) | The multi-language name of the terminal, like "Cash 1", "Self-checkout 5", etc. `Required` `Filter(multi eq;like)` 
-| [RowVersion](Crm.Pos.Terminals.md#rowversion) | byte[] |  
 
 ## References
 
@@ -62,6 +62,12 @@ _Supported Filters_: **Equals, EqualsIn**
 _Supports Order By_: **False**  
 _Default Value_: **True**  
 
+### ObjectVersion
+
+_Type_: **int32**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+
 ### PosTerminalCode
 
 Unique (within the location) code of the POS terminal. `Required` `Filter(eq;like)`
@@ -77,12 +83,6 @@ The multi-language name of the terminal, like "Cash 1", "Self-checkout 5", etc. 
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Supported Filters_: **Equals, Like, EqualsIn**  
-_Supports Order By_: **False**  
-
-### RowVersion
-
-_Type_: **byte[]**  
-_Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
 

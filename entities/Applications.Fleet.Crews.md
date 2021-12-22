@@ -28,7 +28,7 @@ Aggregate Root:
 | [Active](Applications.Fleet.Crews.md#active) | boolean | Is the crew active? true-active for choosing; false-otherwise. `Required` `Default(true)` `Filter(eq)` 
 | [Id](Applications.Fleet.Crews.md#id) | guid |  
 | [Name](Applications.Fleet.Crews.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | The name of the crew (multilanguage). `Required` `Filter(eq;like)` 
-| [RowVersion](Applications.Fleet.Crews.md#rowversion) | byte[] |  
+| [ObjectVersion](Applications.Fleet.Crews.md#objectversion) | int32 |  
 
 ## References
 
@@ -69,11 +69,11 @@ _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 
-### RowVersion
+### ObjectVersion
 
-_Type_: **byte[]**  
+_Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Supports Order By_: ****  
 
 
 ## Reference Details

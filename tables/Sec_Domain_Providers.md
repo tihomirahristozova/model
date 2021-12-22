@@ -15,6 +15,7 @@ The external authentication providers, linked to the domain. Contains data about
 
 | Name | Type | Description |
 | - | - | --- |
+|[__Object_Version](#__object_version)|`int` ||
 |[Client_ID](#client_id)|`nvarchar(254)` |This is the Client_ID of our registration within the provider.|
 |[Client_Secret](#client_secret)|`nvarchar(254)` |This is the password, which we, as a client app, use to access the authentication provider.|
 |[Display_Name](#display_name)|`nvarchar(254)` `ML`|Specifies the (multi-language) display name of the button in the login form. Especially useful for multi-tenant providers.|
@@ -27,6 +28,33 @@ The external authentication providers, linked to the domain. Contains data about
 |[Tenant_ID](#tenant_id)|`nvarchar(254)` |When the authentication provider is multi-tenant, this specifies the tenant ID. For example, Google, Facebook and Microsoft are singe-tenant, while AzureAD is multi-tenant.|
 
 ## Columns
+
+### __Object_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 ### Client_ID
 

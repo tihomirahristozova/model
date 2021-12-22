@@ -26,7 +26,7 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [Id](Logistics.Inventory.SupplySchemata.md#id) | guid |  
 | [Name](Logistics.Inventory.SupplySchemata.md#name) | string (254) | The name of this SupplySchema. `Required` 
-| [RowVersion](Logistics.Inventory.SupplySchemata.md#rowversion) | byte[] |  
+| [ObjectVersion](Logistics.Inventory.SupplySchemata.md#objectversion) | int32 |  
 
 ## Child Collections
 
@@ -53,11 +53,11 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
 
-### RowVersion
+### ObjectVersion
 
-_Type_: **byte[]**  
+_Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Supports Order By_: ****  
 
 
 

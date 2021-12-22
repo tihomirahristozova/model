@@ -29,7 +29,7 @@ Aggregate Root:
 | [Id](Applications.AssetManagement.ManagedAssetScheduledMaintenances.md#id) | guid |  
 | [IsDismissed](Applications.AssetManagement.ManagedAssetScheduledMaintenances.md#isdismissed) | boolean | Specifies whether the notification for the maintenance is dismissed and the planner has decided the course of action. `Required` `Default(false)` `Filter(multi eq)` 
 | [Notes](Applications.AssetManagement.ManagedAssetScheduledMaintenances.md#notes) | string (max) __nullable__ | Notes for this ManagedAssetScheduled<br />Maintenance. 
-| [RowVersion](Applications.AssetManagement.ManagedAssetScheduledMaintenances.md#rowversion) | byte[] |  
+| [ObjectVersion](Applications.AssetManagement.ManagedAssetScheduledMaintenances.md#objectversion) | int32 |  
 | [TrackedParameterValue](Applications.AssetManagement.ManagedAssetScheduledMaintenances.md#trackedparametervalue) | int32 __nullable__ | The value of the tracked parameter (as specified in the maintenance type) at which the maintenance will be performed. For example, for a car, we can schedule maintenance at 20,000 km mileage. null means, that the maintenance is not planned based on parameter, but rather only for date. If both date and parameter are specified, the maintenance is performed when any of the conditions is met. `Filter(multi eq;ge;le)` 
 
 ## References
@@ -75,11 +75,11 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
 
-### RowVersion
+### ObjectVersion
 
-_Type_: **byte[]**  
+_Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Supports Order By_: ****  
 
 ### TrackedParameterValue
 

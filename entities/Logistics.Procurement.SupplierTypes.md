@@ -25,7 +25,7 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [Id](Logistics.Procurement.SupplierTypes.md#id) | guid |  
 | [Name](Logistics.Procurement.SupplierTypes.md#name) | string (254) | The name of this SupplierType. `Required` `Filter(eq;like)` 
-| [RowVersion](Logistics.Procurement.SupplierTypes.md#rowversion) | byte[] |  
+| [ObjectVersion](Logistics.Procurement.SupplierTypes.md#objectversion) | int32 |  
 
 ## References
 
@@ -52,11 +52,11 @@ _Supported Filters_: **Equals, Like**
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
 
-### RowVersion
+### ObjectVersion
 
-_Type_: **byte[]**  
+_Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Supports Order By_: ****  
 
 
 ## Reference Details

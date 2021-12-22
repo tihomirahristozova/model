@@ -128,14 +128,14 @@ Aggregate Root:<br>
 <td>Notes for this RecipeIngredient.</td>
 </tr>
 <tr>
+<td><a href="Production.Technologies.RecipeIngredients.html#objectversion">ObjectVersion</a></td>
+<td>int32</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="Production.Technologies.RecipeIngredients.html#price">Price</a></td>
 <td><a href="../data-types.html#amount">Amount (18, 4)</a></td>
 <td>Total price of the ingredient. <code>Currency: Recipe.Product.CostingCurrency</code> <code>Required</code> <code>Default(0)</code> <code>Filter(ge;le)</code></td>
-</tr>
-<tr>
-<td><a href="Production.Technologies.RecipeIngredients.html#rowversion">RowVersion</a></td>
-<td>byte[]</td>
-<td></td>
 </tr>
 <tr>
 <td><a href="Production.Technologies.RecipeIngredients.html#scraprate">ScrapRate</a></td>
@@ -234,16 +234,16 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>254</strong></p>
+<h3 id="objectversion">ObjectVersion</h3>
+<p><em>Type</em>: <strong>int32</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****</p>
 <h3 id="price">Price</h3>
 <p>Total price of the ingredient. <code>Currency: Recipe.Product.CostingCurrency</code> <code>Required</code> <code>Default(0)</code> <code>Filter(ge;le)</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount (18, 4)</a></strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
-<h3 id="rowversion">RowVersion</h3>
-<p><em>Type</em>: <strong>byte[]</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="scraprate">ScrapRate</h3>
 <p>The usual percentage (0..1) of scrap of the raw material; inflates the requirements of this material for this recipe. <code>Required</code> <code>Default(0)</code></p>
 <p><em>Type</em>: <strong>decimal (7, 6)</strong><br>

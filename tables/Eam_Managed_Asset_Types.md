@@ -11,6 +11,7 @@ Types of managed assets. Used to categorize the assets and the tracked parameter
 
 | Name | Type | Description |
 | - | - | --- |
+|[__Object_Version](#__object_version)|`int` ||
 |[Is_Active](#is_active)|`bit` |Specifies whether the asset type is active for choosing in drop-down choices.|
 |[Managed_Asset_Type_Code](#managed_asset_type_code)|`nvarchar(16)` |Unique code of the asset type.|
 |[Managed_Asset_Type_Id](#managed_asset_type_id)|`uniqueidentifier` `PK`|Types of Managed assets. Used to categorize the tracked parameters of the assets.|
@@ -19,6 +20,33 @@ Types of managed assets. Used to categorize the assets and the tracked parameter
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
+
+### __Object_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 ### Is_Active
 

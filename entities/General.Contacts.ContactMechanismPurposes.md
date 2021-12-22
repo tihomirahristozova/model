@@ -28,7 +28,7 @@ Aggregate Tree
 | [Description](General.Contacts.ContactMechanismPurposes.md#description) | string (max) __nullable__ | The description of this ContactMechanismPurpos. `Filter(like)` 
 | [Id](General.Contacts.ContactMechanismPurposes.md#id) | guid |  
 | [Name](General.Contacts.ContactMechanismPurposes.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Name of the contact mechanism purpose (Multilanguage). `Required` `Filter(like)` 
-| [RowVersion](General.Contacts.ContactMechanismPurposes.md#rowversion) | byte[] |  
+| [ObjectVersion](General.Contacts.ContactMechanismPurposes.md#objectversion) | int32 |  
 
 
 ## Attribute Details
@@ -90,11 +90,11 @@ _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 
-### RowVersion
+### ObjectVersion
 
-_Type_: **byte[]**  
+_Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Supports Order By_: ****  
 
 
 

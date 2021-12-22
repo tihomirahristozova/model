@@ -9,7 +9,7 @@ Represents assignment of a maintenance plan to a vehicle. Entity: Fleet_Vehicle_
 
 ## Default Visualization
 Default Display Text Format:  
-_{Id}: {VehicleId}_  
+_{Id}: {ObjectVersion}_  
 Default Search Members:  
 __  
 
@@ -28,6 +28,7 @@ Aggregate Tree
 | [LastMaintenanceMileageKm](Applications.Fleet.VehicleMaintenancePlanAssignments.md#lastmaintenancemileagekm) | int32 __nullable__ | The mileage of the vehicle (in Kilometers), when the last maintenance of this type occurred. Should be specified for plans, which require mileage check. 
 | [LastMaintenanceTripCount](Applications.Fleet.VehicleMaintenancePlanAssignments.md#lastmaintenancetripcount) | int32 __nullable__ | The trip count of the vehicle, when the last maintenance of this type occurred. Should be specified for plans, which trip count check. 
 | [Notes](Applications.Fleet.VehicleMaintenancePlanAssignments.md#notes) | string (max) __nullable__ | Notes for this VehicleMaintenance<br />PlanAssignment. 
+| [ObjectVersion](Applications.Fleet.VehicleMaintenancePlanAssignments.md#objectversion) | int32 |  
 | [StartingDate](Applications.Fleet.VehicleMaintenancePlanAssignments.md#startingdate) | date | The date on which the periodic maintenance should start. `Required` 
 
 ## References
@@ -80,6 +81,12 @@ _Type_: **string (max) __nullable__**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
+
+### ObjectVersion
+
+_Type_: **int32**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### StartingDate
 

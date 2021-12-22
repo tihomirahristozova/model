@@ -11,6 +11,7 @@ Access keys provide the basic locking mechanism for data security. Each record c
 
 | Name | Type | Description |
 | - | - | --- |
+|[__Object_Version](#__object_version)|`int` ||
 |[Access_Key_Code](#access_key_code)|`nvarchar(16)` |Unique code for the access key. The codes can be null for legacy keys or entities that do not support codes. The codes are unique only among non-null entries|
 |[Access_Key_Id](#access_key_id)|`uniqueidentifier` `PK`||
 |[Access_Key_Name](#access_key_name)|`nvarchar(1024)` `ML`|Multilanguage descriptive name of the security key. Can be null for legacy keys|
@@ -18,6 +19,33 @@ Access keys provide the basic locking mechanism for data security. Each record c
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
+
+### __Object_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 ### Access_Key_Code
 

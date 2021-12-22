@@ -27,8 +27,8 @@ Aggregate Tree
 | [FullPath](General.Geography.AdministrativeRegions.md#fullpath) | string (254) __nullable__ | Full identification path of the current country territorial subdivision. `Filter(eq;like)` 
 | [Id](General.Geography.AdministrativeRegions.md#id) | guid |  
 | [Name](General.Geography.AdministrativeRegions.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Name of country territorial subdivision. `Required` `Filter(like)` 
+| [ObjectVersion](General.Geography.AdministrativeRegions.md#objectversion) | int32 |  
 | [ParentFullPath](General.Geography.AdministrativeRegions.md#parentfullpath) | string (254) __nullable__ | Parent region of the current territorial subdivision. `Filter(eq;like)` 
-| [RowVersion](General.Geography.AdministrativeRegions.md#rowversion) | byte[] |  
 | [ValidFrom](General.Geography.AdministrativeRegions.md#validfrom) | date __nullable__ | Start date of validity of this administrative division. null when the starting date is unknown in the past. `Filter(ge;le)` 
 | [ValidTo](General.Geography.AdministrativeRegions.md#validto) | date __nullable__ | End date of validity of this administative division. null when the division is still active or ending date is unknown. `Filter(ge;le)` 
 
@@ -74,6 +74,12 @@ _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 
+### ObjectVersion
+
+_Type_: **int32**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+
 ### ParentFullPath
 
 Parent region of the current territorial subdivision. `Filter(eq;like)`
@@ -82,12 +88,6 @@ _Type_: **string (254) __nullable__**
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
-
-### RowVersion
-
-_Type_: **byte[]**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
 
 ### ValidFrom
 

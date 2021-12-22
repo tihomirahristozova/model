@@ -16,6 +16,7 @@ Accounting templates are used to automate the postings for repetitive business t
 
 | Name | Type | Description |
 | - | - | --- |
+|[__Object_Version](#__object_version)|`int` ||
 |[Route_Id](#route_id)|`uniqueidentifier` |The route which activates the template|
 |[Row_Version](#row_version)|`timestamp` ||
 |[Template_Id](#template_id)|`uniqueidentifier` `PK`||
@@ -24,6 +25,33 @@ Accounting templates are used to automate the postings for repetitive business t
 |[Voucher_Description_Mask](#voucher_description_mask)|`nvarchar(max)` |Template voucher description. Can use field substitutes, surrounded with square brackets|
 
 ## Columns
+
+### __Object_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 ### Route_Id
 

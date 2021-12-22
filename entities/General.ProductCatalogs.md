@@ -35,7 +35,7 @@ Aggregate Tree
 | [Logo](General.ProductCatalogs.md#logo) | byte[] __nullable__ | The logo of the product catalog. Used for web and other visualization of the catalog. 
 | [Name](General.ProductCatalogs.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Product catalog name (multilanguage). `Required` 
 | [Notes](General.ProductCatalogs.md#notes) | string (max) __nullable__ | Notes for this ProductCatalog. 
-| [RowVersion](General.ProductCatalogs.md#rowversion) | byte[] |  
+| [ObjectVersion](General.ProductCatalogs.md#objectversion) | int32 |  
 
 ## References
 
@@ -177,11 +177,11 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
 
-### RowVersion
+### ObjectVersion
 
-_Type_: **byte[]**  
+_Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Supports Order By_: ****  
 
 
 ## Reference Details

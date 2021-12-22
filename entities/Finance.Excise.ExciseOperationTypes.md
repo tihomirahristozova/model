@@ -27,7 +27,7 @@ Aggregate Tree
 | [Id](Finance.Excise.ExciseOperationTypes.md#id) | guid |  
 | [Name](Finance.Excise.ExciseOperationTypes.md#name) | string (254) | The name of this ExciseOperationType. `Required` `Filter(multi eq;like)` 
 | [Notes](Finance.Excise.ExciseOperationTypes.md#notes) | string (max) __nullable__ | Notes for this ExciseOperationType. 
-| [RowVersion](Finance.Excise.ExciseOperationTypes.md#rowversion) | byte[] |  
+| [ObjectVersion](Finance.Excise.ExciseOperationTypes.md#objectversion) | int32 |  
 
 
 ## Attribute Details
@@ -67,11 +67,11 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
 
-### RowVersion
+### ObjectVersion
 
-_Type_: **byte[]**  
+_Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Supports Order By_: ****  
 
 
 

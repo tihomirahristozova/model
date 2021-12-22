@@ -11,6 +11,7 @@ Represents a POS workplace for 1 person, with all the attached devices. (Not to 
 
 | Name | Type | Description |
 | - | - | --- |
+|[__Object_Version](#__object_version)|`int` ||
 |[Default_Fiscal_Printer_Pos_Device_Id](#default_fiscal_printer_pos_device_id)|`uniqueidentifier` |The POS Fiscal Device which is set by default in documents when the POS Terminal is selected.|
 |[Is_Active](#is_active)|`bit` |Represents whether the POS terminal is active and can be chosen from drop-downs for new records.|
 |[Pos_Location_Id](#pos_location_id)|`uniqueidentifier` |The POS location, where the terminal is located.|
@@ -20,6 +21,33 @@ Represents a POS workplace for 1 person, with all the attached devices. (Not to 
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
+
+### __Object_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 ### Default_Fiscal_Printer_Pos_Device_Id
 

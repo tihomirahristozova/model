@@ -29,7 +29,7 @@ Aggregate Tree
 | [CallUniqueId](Applications.Telephony.CallDetails.md#calluniqueid) | string (32) __nullable__ | The unique id of the call, as reported by the telephone central. null when the central did not report unique Id. Used for integration purposes. 
 | [DurationSeconds](Applications.Telephony.CallDetails.md#durationseconds) | int32 | The duration of the call (in seconds). `Required` `Default(0)` `Filter(ge;le)` 
 | [Id](Applications.Telephony.CallDetails.md#id) | guid |  
-| [RowVersion](Applications.Telephony.CallDetails.md#rowversion) | byte[] |  
+| [ObjectVersion](Applications.Telephony.CallDetails.md#objectversion) | int32 |  
 | [StartTime](Applications.Telephony.CallDetails.md#starttime) | datetime | The starting date and time of the call. `Required` `Filter(ge;le)` 
 
 ## References
@@ -105,11 +105,11 @@ _Indexed_: **True**
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
-### RowVersion
+### ObjectVersion
 
-_Type_: **byte[]**  
+_Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Supports Order By_: ****  
 
 ### StartTime
 

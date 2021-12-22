@@ -15,6 +15,7 @@ Stores verification tokens for users - e.g. tokens for email, phone or two-facto
 
 | Name | Type | Description |
 | - | - | --- |
+|[__Object_Version](#__object_version)|`int` ||
 |[Login_Provider_Name](#login_provider_name)|`nvarchar(450)` |Name of the login provider. Could be Facebook, Twitter, E1UserStore, etc|
 |[Token_Name](#token_name)|`nvarchar(450)` |What kind of token we store, Could be (but is not limited to): AuthenticatorKey (two-factor auth), RecoveryCodes (password recovery)|
 |[Token_Value](#token_value)|`nvarchar(max)` |Actual value depends on Login_Provider_Name and Token_Name. Could be null because the presence of (User_Id, Login_Provider_Name and Token_Name) might be enough for some providers.|
@@ -22,6 +23,33 @@ Stores verification tokens for users - e.g. tokens for email, phone or two-facto
 |[User_Provider_Token_Id](#user_provider_token_id)|`uniqueidentifier` `PK`|Primary key - not used|
 
 ## Columns
+
+### __Object_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 ### Login_Provider_Name
 

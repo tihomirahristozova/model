@@ -133,14 +133,14 @@ Aggregate Root:<br>
 <td>Net mass of the goods in kg. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
+<td><a href="Finance.Intrastat.DeclarationLines.html#objectversion">ObjectVersion</a></td>
+<td>int32</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="Finance.Intrastat.DeclarationLines.html#quantitysupplementaryunit">QuantitySupplementaryUnit</a></td>
 <td>decimal (10, 0) <strong>nullable</strong></td>
 <td>Quantity of the goods in the supplementary unit. null when no supplementary unit is specified.</td>
-</tr>
-<tr>
-<td><a href="Finance.Intrastat.DeclarationLines.html#rowversion">RowVersion</a></td>
-<td>byte[]</td>
-<td></td>
 </tr>
 <tr>
 <td><a href="Finance.Intrastat.DeclarationLines.html#statisticalvalueamountbase">StatisticalValueAmountBase</a></td>
@@ -325,13 +325,13 @@ Allowed values for the <code>LineAction</code>(Finance.Intrastat.DeclarationLine
 <p><em>Type</em>: <strong>decimal (14, 3)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="objectversion">ObjectVersion</h3>
+<p><em>Type</em>: <strong>int32</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****</p>
 <h3 id="quantitysupplementaryunit">QuantitySupplementaryUnit</h3>
 <p>Quantity of the goods in the supplementary unit. null when no supplementary unit is specified.</p>
 <p><em>Type</em>: <strong>decimal (10, 0) <strong>nullable</strong></strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
-<h3 id="rowversion">RowVersion</h3>
-<p><em>Type</em>: <strong>byte[]</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="statisticalvalueamountbase">StatisticalValueAmountBase</h3>

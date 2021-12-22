@@ -16,6 +16,7 @@ Sales persons (or representatives) are sellers inside the enterprise company who
 
 | Name | Type | Description |
 | - | - | --- |
+|[__Object_Version](#__object_version)|`int` ||
 |[Commission_Percent](#commission_percent)|`decimal(7, 6)` |The percentage (0..1) of commission percent. NULL means that there is no commission percent.|
 |[Commission_Policy_Id](#commission_policy_id)|`uniqueidentifier` |Current commission policy for the sales person. NULL means there is no commission policy|
 |[Contract_End_Date](#contract_end_date)|`datetime` |The ending date of the contract with the sales person. NULL when the sales person is still active.|
@@ -29,6 +30,33 @@ Sales persons (or representatives) are sellers inside the enterprise company who
 |[Sales_Person_Id](#sales_person_id)|`uniqueidentifier` `PK`|Unique sales person Id|
 
 ## Columns
+
+### __Object_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 ### Commission_Percent
 

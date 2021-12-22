@@ -28,7 +28,7 @@ Aggregate Tree
 | [ForecastedCost](Crm.Marketing.Campaigns.md#forecastedcost) | decimal (18, 0) | Forecasted total cost of the campaign. `Required` `Default(0)` 
 | [Id](Crm.Marketing.Campaigns.md#id) | guid |  
 | [Name](Crm.Marketing.Campaigns.md#name) | string (64) | Short name of the campaign. `Required` `Filter(like)` `ORD` 
-| [RowVersion](Crm.Marketing.Campaigns.md#rowversion) | byte[] |  
+| [ObjectVersion](Crm.Marketing.Campaigns.md#objectversion) | int32 |  
 | [StartDate](Crm.Marketing.Campaigns.md#startdate) | datetime | Starting date of the campaign. `Required` `Default(Today)` 
 
 
@@ -77,11 +77,11 @@ _Supported Filters_: **Like**
 _Supports Order By_: **True**  
 _Maximum Length_: **64**  
 
-### RowVersion
+### ObjectVersion
 
-_Type_: **byte[]**  
+_Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Supports Order By_: ****  
 
 ### StartDate
 

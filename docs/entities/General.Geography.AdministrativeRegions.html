@@ -123,14 +123,14 @@ Default Search Members:<br>
 <td>Name of country territorial subdivision. <code>Required</code> <code>Filter(like)</code></td>
 </tr>
 <tr>
+<td><a href="General.Geography.AdministrativeRegions.html#objectversion">ObjectVersion</a></td>
+<td>int32</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="General.Geography.AdministrativeRegions.html#parentfullpath">ParentFullPath</a></td>
 <td>string (254) <strong>nullable</strong></td>
 <td>Parent region of the current territorial subdivision. <code>Filter(eq;like)</code></td>
-</tr>
-<tr>
-<td><a href="General.Geography.AdministrativeRegions.html#rowversion">RowVersion</a></td>
-<td>byte[]</td>
-<td></td>
 </tr>
 <tr>
 <td><a href="General.Geography.AdministrativeRegions.html#validfrom">ValidFrom</a></td>
@@ -184,16 +184,16 @@ Default Search Members:<br>
 <p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a></strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="objectversion">ObjectVersion</h3>
+<p><em>Type</em>: <strong>int32</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****</p>
 <h3 id="parentfullpath">ParentFullPath</h3>
 <p>Parent region of the current territorial subdivision. <code>Filter(eq;like)</code></p>
 <p><em>Type</em>: <strong>string (254) <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>254</strong></p>
-<h3 id="rowversion">RowVersion</h3>
-<p><em>Type</em>: <strong>byte[]</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="validfrom">ValidFrom</h3>
 <p>Start date of validity of this administrative division. null when the starting date is unknown in the past. <code>Filter(ge;le)</code></p>
 <p><em>Type</em>: <strong>date <strong>nullable</strong></strong><br>

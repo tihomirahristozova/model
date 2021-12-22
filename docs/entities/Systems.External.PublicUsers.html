@@ -168,6 +168,11 @@ Default Search Members:<br>
 <td>Notes for this PublicUser.</td>
 </tr>
 <tr>
+<td><a href="Systems.External.PublicUsers.html#objectversion">ObjectVersion</a></td>
+<td>int32</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="Systems.External.PublicUsers.html#passwordalgorithm">PasswordAlgorithm</a></td>
 <td>string (16)</td>
 <td>Uniquely specifies the password storage algorithm among some system recognized algorithms. Usually specifies the hashing and the stretching functions. For example, 'PBKDF2-SHA1'. <code>Required</code> <code>Filter(like)</code></td>
@@ -201,11 +206,6 @@ Default Search Members:<br>
 <td><a href="Systems.External.PublicUsers.html#profilepicture">ProfilePicture</a></td>
 <td>byte[] <strong>nullable</strong></td>
 <td>Profile picture of the user.</td>
-</tr>
-<tr>
-<td><a href="Systems.External.PublicUsers.html#rowversion">RowVersion</a></td>
-<td>byte[]</td>
-<td></td>
 </tr>
 <tr>
 <td><a href="Systems.External.PublicUsers.html#state">State</a></td>
@@ -319,6 +319,10 @@ Default Search Members:<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>2147483647</strong></p>
+<h3 id="objectversion">ObjectVersion</h3>
+<p><em>Type</em>: <strong>int32</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****</p>
 <h3 id="passwordalgorithm">PasswordAlgorithm</h3>
 <p>Uniquely specifies the password storage algorithm among some system recognized algorithms. Usually specifies the hashing and the stretching functions. For example, 'PBKDF2-SHA1'. <code>Required</code> <code>Filter(like)</code></p>
 <p><em>Type</em>: <strong>string (16)</strong><br>
@@ -355,10 +359,6 @@ Default Search Members:<br>
 <h3 id="profilepicture">ProfilePicture</h3>
 <p>Profile picture of the user.</p>
 <p><em>Type</em>: <strong>byte[] <strong>nullable</strong></strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
-<h3 id="rowversion">RowVersion</h3>
-<p><em>Type</em>: <strong>byte[]</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="state">State</h3>

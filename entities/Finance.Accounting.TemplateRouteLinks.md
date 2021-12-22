@@ -26,7 +26,7 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](Finance.Accounting.TemplateRouteLinks.md#id) | guid |  
-| [RowVersion](Finance.Accounting.TemplateRouteLinks.md#rowversion) | byte[] |  
+| [ObjectVersion](Finance.Accounting.TemplateRouteLinks.md#objectversion) | int32 |  
 
 ## References
 
@@ -45,11 +45,11 @@ _Indexed_: **True**
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
-### RowVersion
+### ObjectVersion
 
-_Type_: **byte[]**  
+_Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Supports Order By_: ****  
 
 
 ## Reference Details

@@ -15,6 +15,7 @@ One zone within a warehouse. Each zone can have different rack structure and dif
 
 | Name | Type | Description |
 | - | - | --- |
+|[__Object_Version](#__object_version)|`int` ||
 |[Notes](#notes)|`nvarchar(max)` ||
 |[Parent_Warehouse_Zone_Id](#parent_warehouse_zone_id)|`uniqueidentifier` |The parent Warehouse Zone of the current Warehouse Zone.|
 |[Row_Version](#row_version)|`timestamp` ||
@@ -24,6 +25,33 @@ One zone within a warehouse. Each zone can have different rack structure and dif
 |[Warehouse_Zone_Name](#warehouse_zone_name)|`nvarchar(254)` `ML`|Multi-language name of the zone.|
 
 ## Columns
+
+### __Object_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 ### Notes
 

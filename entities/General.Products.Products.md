@@ -50,11 +50,11 @@ Aggregate Tree
 | [MinimalSalesPricePerLot](General.Products.Products.md#minimalsalespriceperlot) | [Amount (18, 4)](../data-types.md#amount) __nullable__ | Minimal allowed price for sales of this product. The price is for one standard lot and in the costing currency of the product. The minimum is enforced upon planning and/or releasing a document. null means that there is no minimal sales price enforcement. `Currency: CostingCurrency` 
 | [MinimalSalesQuantityBase](General.Products.Products.md#minimalsalesquantitybase) | decimal (18, 3) __nullable__ | Minimal base quantity of this product that has to be specified in any sale. 
 | [Name](General.Products.Products.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Name of the item. `Required` `Filter(eq;like)` 
+| [ObjectVersion](General.Products.Products.md#objectversion) | int32 |  
 | [PartNumber](General.Products.Products.md#partnumber) | string (32) | Unique part number of the product. `Required` `Filter(multi eq;like)` `ORD` 
 | [PlanningDemand<br />TimeFenceDays](General.Products.Products.md#planningdemandtimefencedays) | int32 __nullable__ | Period in the future, in which changes to the MPS are not accepted due to the high cost of changing. Demand for the period is calculated based entirely on the customer orders. Abbr. - DTF (null = Default of 30 days). 
 | [PlanningHorizonDays](General.Products.Products.md#planninghorizondays) | int32 __nullable__ | Number of days in the future for which to plan the demand and supply (null = Default of 180 days). 
 | [PlanningTimeFenceDays](General.Products.Products.md#planningtimefencedays) | int32 __nullable__ | Period in the future inside of which changes to the MPS are carefully evaluated to prevent costly schedule disruption. Demand for the period between DTF and PTF is calculated as the bigger of customer orders and sales forecast. Abbr. - PTF. (null = Default of 90 days). 
-| [RowVersion](General.Products.Products.md#rowversion) | byte[] |  
 | [ScrapRate](General.Products.Products.md#scraprate) | decimal (7, 6) | Default scrap rate for the recipe, when this product is used as ingredient. `Required` `Default(0)` 
 | [ShortName](General.Products.Products.md#shortname) | [MultilanguageString](../data-types.md#multilanguagestring) __nullable__ | Short name of the product. Used for space-constrained devices, like mobile phones, fiscal printers, etc. `Filter(eq;like)` 
 | [ShowInCatalog](General.Products.Products.md#showincatalog) | boolean | Specifies whether to show the product in catalogs, referring to the product group of the product. false=Do not show; true=Show. `Required` `Default(false)` `Filter(multi eq)` 
@@ -309,6 +309,12 @@ _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 
+### ObjectVersion
+
+_Type_: **int32**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+
 ### PartNumber
 
 Unique part number of the product. `Required` `Filter(multi eq;like)` `ORD`
@@ -340,12 +346,6 @@ _Supports Order By_: **False**
 Period in the future inside of which changes to the MPS are carefully evaluated to prevent costly schedule disruption. Demand for the period between DTF and PTF is calculated as the bigger of customer orders and sales forecast. Abbr. - PTF. (null = Default of 90 days).
 
 _Type_: **int32 __nullable__**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-
-### RowVersion
-
-_Type_: **byte[]**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 

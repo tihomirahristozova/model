@@ -28,10 +28,10 @@ Aggregate Tree
 | [FullPath](Applications.Rental.AssetGroups.md#fullpath) | string (25) __nullable__ | The full path of the node in the format of dot-delimited, dot-terminated codes of the parents. `ORD` `ReadOnly` 
 | [Id](Applications.Rental.AssetGroups.md#id) | guid |  
 | [Notes](Applications.Rental.AssetGroups.md#notes) | string (max) __nullable__ | Notes for this AssetGroup. 
+| [ObjectVersion](Applications.Rental.AssetGroups.md#objectversion) | int32 |  
 | [ParentFullPath](Applications.Rental.AssetGroups.md#parentfullpath) | string (25) __nullable__ | The full path of the parent node. `Filter(eq)` 
 | [RentalAssetGroupCode](Applications.Rental.AssetGroups.md#rentalassetgroupcode) | string (3) | Asset group code, unique within the parent node. `Required` `Filter(eq;like)` 
 | [RentalAssetGroupName](Applications.Rental.AssetGroups.md#rentalassetgroupname) | string (254) | Asset group name, unique within the parent node. `Required` `Filter(eq;like)` 
-| [RowVersion](Applications.Rental.AssetGroups.md#rowversion) | byte[] |  
 
 ## Child Collections
 
@@ -68,6 +68,12 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
 
+### ObjectVersion
+
+_Type_: **int32**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+
 ### ParentFullPath
 
 The full path of the parent node. `Filter(eq)`
@@ -94,12 +100,6 @@ _Type_: **string (254)**
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
-
-### RowVersion
-
-_Type_: **byte[]**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
 
 
 

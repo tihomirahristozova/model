@@ -26,7 +26,7 @@ Aggregate Tree
 | [Id](Applications.Service.ServiceObjects.md#id) | guid |  
 | [Name](Applications.Service.ServiceObjects.md#name) | string (254) | The name of this ServiceObject. `Required` `Filter(eq;like)` 
 | [Notes](Applications.Service.ServiceObjects.md#notes) | string (254) __nullable__ | Notes for this ServiceObject. 
-| [RowVersion](Applications.Service.ServiceObjects.md#rowversion) | byte[] |  
+| [ObjectVersion](Applications.Service.ServiceObjects.md#objectversion) | int32 |  
 | [SerialNumber](Applications.Service.ServiceObjects.md#serialnumber) | string (32) __nullable__ | The serial number of the item, that is being serviced. `Filter(like)` 
 
 ## References
@@ -69,11 +69,11 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
 
-### RowVersion
+### ObjectVersion
 
-_Type_: **byte[]**  
+_Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Supports Order By_: ****  
 
 ### SerialNumber
 

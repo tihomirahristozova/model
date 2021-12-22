@@ -9,7 +9,7 @@ Stores the last issued fiscal sales number for each POS device. Entity: Pos_Sequ
 
 ## Default Visualization
 Default Display Text Format:  
-_{Id}: {PosDeviceId}_  
+_{Id}: {ObjectVersion}_  
 Default Search Members:  
 __  
 
@@ -27,7 +27,7 @@ Aggregate Tree
 | [IsActive](Crm.Pos.Sequences.md#isactive) | boolean | Indicates whether this sequence is active. `Required` `Default(true)` `Filter(multi eq)` 
 | [MaxNo](Crm.Pos.Sequences.md#maxno) | string (16) __nullable__ | Specifies the maximum number allowed in the sequence. null means that the sequence will grow unlimited. `Filter(multi eq;ge;le)` 
 | [NextNo](Crm.Pos.Sequences.md#nextno) | string (16) | The next consecutive number which will be assigned on the next request. `Required` `Filter(multi eq;ge;le)` 
-| [RowVersion](Crm.Pos.Sequences.md#rowversion) | byte[] |  
+| [ObjectVersion](Crm.Pos.Sequences.md#objectversion) | int32 |  
 
 ## References
 
@@ -72,11 +72,11 @@ _Supported Filters_: **Equals, GreaterThanOrLessThan, EqualsIn**
 _Supports Order By_: **False**  
 _Maximum Length_: **16**  
 
-### RowVersion
+### ObjectVersion
 
-_Type_: **byte[]**  
+_Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Supports Order By_: ****  
 
 
 ## Reference Details

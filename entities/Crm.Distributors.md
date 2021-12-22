@@ -27,7 +27,7 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [FlatCommisionPercentage](Crm.Distributors.md#flatcommisionpercentage) | decimal (7, 6) | Not-zero if commision percentage should be applyied to all sales, regardless of product/discount/progressi<br />ve/qunatity considerations. `Required` `Default(0)` 
 | [Id](Crm.Distributors.md#id) | guid |  
-| [RowVersion](Crm.Distributors.md#rowversion) | byte[] |  
+| [ObjectVersion](Crm.Distributors.md#objectversion) | int32 |  
 
 ## References
 
@@ -54,11 +54,11 @@ _Indexed_: **True**
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
-### RowVersion
+### ObjectVersion
 
-_Type_: **byte[]**  
+_Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Supports Order By_: ****  
 
 
 ## Reference Details

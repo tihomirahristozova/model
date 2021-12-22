@@ -30,7 +30,7 @@ Aggregate Root:
 | [ContentDownloaded](Applications.Mail.MessageAttachments.md#contentdownloaded) | boolean | True when the content is included, false when this is only an empty container. Content should be included when sending mail. `Required` `Default(false)` `Filter(eq)` 
 | [Id](Applications.Mail.MessageAttachments.md#id) | guid |  
 | [Name](Applications.Mail.MessageAttachments.md#name) | string (128) __nullable__ | The name of this MessageAttachment. `Filter(eq;like)` 
-| [RowVersion](Applications.Mail.MessageAttachments.md#rowversion) | byte[] |  
+| [ObjectVersion](Applications.Mail.MessageAttachments.md#objectversion) | int32 |  
 
 ## References
 
@@ -83,11 +83,11 @@ _Supported Filters_: **Equals, Like**
 _Supports Order By_: **False**  
 _Maximum Length_: **128**  
 
-### RowVersion
+### ObjectVersion
 
-_Type_: **byte[]**  
+_Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Supports Order By_: ****  
 
 
 ## Reference Details

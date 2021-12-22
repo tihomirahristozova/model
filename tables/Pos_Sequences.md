@@ -11,6 +11,7 @@ Stores the last issued fiscal sales number for each POS device. Entity: Pos_Sequ
 
 | Name | Type | Description |
 | - | - | --- |
+|[__Object_Version](#__object_version)|`int` ||
 |[Is_Active](#is_active)|`bit` |Indicates whether this sequence is active.|
 |[Max_No](#max_no)|`nvarchar(16)` |Specifies the maximum number allowed in the sequence. NULL means that the sequence will grow unlimited.|
 |[Next_No](#next_no)|`nvarchar(16)` |The next consecutive number which will be assigned on the next request.|
@@ -19,6 +20,33 @@ Stores the last issued fiscal sales number for each POS device. Entity: Pos_Sequ
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
+
+### __Object_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 ### Is_Active
 

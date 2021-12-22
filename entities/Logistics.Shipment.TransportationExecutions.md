@@ -44,12 +44,12 @@ Aggregate Tree
 | [DocumentDate](Logistics.Shipment.TransportationExecutions.md#documentdate) | date | The date on which the document was issued. `Required` `Default(Today)` `Filter(eq;ge;le)` `ORD` (Inherited from [Documents](General.Documents.md)) 
 | [DocumentNo](Logistics.Shipment.TransportationExecutions.md#documentno) | string (20) | Document number, unique within Document_Type_Id. `Required` `Filter(eq;like)` `ORD` (Inherited from [Documents](General.Documents.md)) 
 | [DocumentNotes](Logistics.Shipment.TransportationExecutions.md#documentnotes) | string (max) __nullable__ | Notes for this Document. (Inherited from [Documents](General.Documents.md)) 
-| [DocumentRowVersion](Logistics.Shipment.TransportationExecutions.md#documentrowversion) | byte[] |  
 | [DocumentVersion](Logistics.Shipment.TransportationExecutions.md#documentversion) | int32 | Consecutive version number, starting with 1. Each update produces a new version of the document. `Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [EntityName](Logistics.Shipment.TransportationExecutions.md#entityname) | string (64) | The entity name of the document header. `Required` `Filter(eq)` `ORD` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [ExecutionDate](Logistics.Shipment.TransportationExecutions.md#executiondate) | date __nullable__ | Specifies the execution date, if it is the same for all lines. null means that the lines have different execution dates. 
 | [ExecutionTime](Logistics.Shipment.TransportationExecutions.md#executiontime) | time __nullable__ | Specifies the execution time, if it is the same for all lines. null means that the lines have different execution times. 
 | [Id](Logistics.Shipment.TransportationExecutions.md#id) | guid |  
+| [ObjectVersion](Logistics.Shipment.TransportationExecutions.md#objectversion) | int32 |  
 | [ParentDocument<br />RelationshipType](Logistics.Shipment.TransportationExecutions.md#parentdocumentrelationshiptype) | [ParentDocument<br />RelationshipType](Logistics.Shipment.TransportationExecutions.md#parentdocumentrelationshiptype) __nullable__ | Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [PlanningOnly](Logistics.Shipment.TransportationExecutions.md#planningonly) | boolean | Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned). `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [ReadOnly](Logistics.Shipment.TransportationExecutions.md#readonly) | boolean | True - the document is read only; false - the document is not read only. `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
@@ -185,12 +185,6 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
 
-### DocumentRowVersion
-
-_Type_: **byte[]**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-
 ### DocumentVersion
 
 Consecutive version number, starting with 1. Each update produces a new version of the document. `Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md))
@@ -236,6 +230,12 @@ _Type_: **guid**
 _Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
+
+### ObjectVersion
+
+_Type_: **int32**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### ParentDocumentRelationshipType
 

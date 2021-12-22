@@ -30,7 +30,7 @@ Aggregate Root:
 | [ConditionNo](Systems.Bpm.UserBusinessRuleConditions.md#conditionno) | int32 | Unique consecutive number of the condition within the business rule. `Required` 
 | [Id](Systems.Bpm.UserBusinessRuleConditions.md#id) | guid |  
 | [Notes](Systems.Bpm.UserBusinessRuleConditions.md#notes) | string (max) __nullable__ | Notes for this UserBusinessRuleCondition. `Introduced in version 20.1` 
-| [RowVersion](Systems.Bpm.UserBusinessRuleConditions.md#rowversion) | byte[] |  
+| [ObjectVersion](Systems.Bpm.UserBusinessRuleConditions.md#objectversion) | int32 |  
 | [Value](Systems.Bpm.UserBusinessRuleConditions.md#value) | string (254) __nullable__ | The value against which the data attribute will be tested. 
 
 ## References
@@ -101,11 +101,11 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
 
-### RowVersion
+### ObjectVersion
 
-_Type_: **byte[]**  
+_Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Supports Order By_: ****  
 
 ### Value
 

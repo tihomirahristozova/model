@@ -28,7 +28,7 @@ Aggregate Root:
 | [Id](Finance.Accounting.AccountRequiredProperties.md#id) | guid |  
 | [KeyOrder](Finance.Accounting.AccountRequiredProperties.md#keyorder) | int32 | The key order determines in which order the values and descriptions of the properties will form the item (grouping) key and description. `Required` 
 | [KeyProperty](Finance.Accounting.AccountRequiredProperties.md#keyproperty) | boolean | Key properties particiate in forming the grouping key, which is the smallest unit of calculation for account balance. Non-key properties simply serve for comment and clarification purposes. `Required` `Default(true)` `Filter(eq)` 
-| [RowVersion](Finance.Accounting.AccountRequiredProperties.md#rowversion) | byte[] |  
+| [ObjectVersion](Finance.Accounting.AccountRequiredProperties.md#objectversion) | int32 |  
 
 ## References
 
@@ -69,11 +69,11 @@ _Supported Filters_: **Equals**
 _Supports Order By_: **False**  
 _Default Value_: **True**  
 
-### RowVersion
+### ObjectVersion
 
-_Type_: **byte[]**  
+_Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Supports Order By_: ****  
 
 
 ## Reference Details

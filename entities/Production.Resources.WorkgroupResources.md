@@ -28,7 +28,7 @@ Aggregate Root:
 | [AvailableQuantity](Production.Resources.WorkgroupResources.md#availablequantity) | [Quantity (18, 3)](../data-types.md#quantity) | Quantity available of the resource in this workgroup. The measurement unit is specified in Prd_Resources. `Unit: Resource.PrimaryUnit` `Required` `Default(0)` 
 | [Id](Production.Resources.WorkgroupResources.md#id) | guid |  
 | [Notes](Production.Resources.WorkgroupResources.md#notes) | string (254) __nullable__ | User notes for the workgroup resource. 
-| [RowVersion](Production.Resources.WorkgroupResources.md#rowversion) | byte[] |  
+| [ObjectVersion](Production.Resources.WorkgroupResources.md#objectversion) | int32 |  
 
 ## References
 
@@ -71,11 +71,11 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
 
-### RowVersion
+### ObjectVersion
 
-_Type_: **byte[]**  
+_Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Supports Order By_: ****  
 
 
 ## Reference Details

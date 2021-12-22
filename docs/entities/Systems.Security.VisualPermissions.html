@@ -123,6 +123,11 @@ Default Search Members:<br>
 <td></td>
 </tr>
 <tr>
+<td><a href="Systems.Security.VisualPermissions.html#objectversion">ObjectVersion</a></td>
+<td>int32</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="Systems.Security.VisualPermissions.html#operationname">OperationName</a></td>
 <td>string (64) <strong>nullable</strong></td>
 <td>Optionally, the operation on the element which will be secured. <code>Filter(eq)</code></td>
@@ -131,11 +136,6 @@ Default Search Members:<br>
 <td><a href="Systems.Security.VisualPermissions.html#panelname">PanelName</a></td>
 <td>string (128) <strong>nullable</strong></td>
 <td>Optionally, the panel from the form which will be secured. <code>Filter(eq)</code></td>
-</tr>
-<tr>
-<td><a href="Systems.Security.VisualPermissions.html#rowversion">RowVersion</a></td>
-<td>byte[]</td>
-<td></td>
 </tr>
 </tbody>
 </table>
@@ -180,6 +180,10 @@ Default Search Members:<br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
+<h3 id="objectversion">ObjectVersion</h3>
+<p><em>Type</em>: <strong>int32</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****</p>
 <h3 id="operationname">OperationName</h3>
 <p>Optionally, the operation on the element which will be secured. <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong>string (64) <strong>nullable</strong></strong><br>
@@ -192,10 +196,6 @@ Default Search Members:<br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>128</strong></p>
-<h3 id="rowversion">RowVersion</h3>
-<p><em>Type</em>: <strong>byte[]</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="accesskey">AccessKey</h3>
 <p>The security access key which controls the access to the visual permission. <code>Filter(multi eq)</code></p>

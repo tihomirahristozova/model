@@ -122,14 +122,14 @@ Default Search Members:<br>
 <td>Number of days in a recurring period. Valid only when Recurrence_Type=D.</td>
 </tr>
 <tr>
+<td><a href="General.Resources.WorkSchedules.html#objectversion">ObjectVersion</a></td>
+<td>int32</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="General.Resources.WorkSchedules.html#recurrencetype">RecurrenceType</a></td>
 <td><a href="General.Resources.WorkSchedules.html#recurrencetype">RecurrenceType</a></td>
 <td>D=recurring each X days; W=recurring each week; M=recurring each month. <code>Required</code> <code>Filter(multi eq)</code></td>
-</tr>
-<tr>
-<td><a href="General.Resources.WorkSchedules.html#rowversion">RowVersion</a></td>
-<td>byte[]</td>
-<td></td>
 </tr>
 </tbody>
 </table>
@@ -167,6 +167,10 @@ Default Search Members:<br>
 <p><em>Type</em>: <strong>int16 <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="objectversion">ObjectVersion</h3>
+<p><em>Type</em>: <strong>int32</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****</p>
 <h3 id="recurrencetype">RecurrenceType</h3>
 <p>D=recurring each X days; W=recurring each week; M=recurring each month. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.Resources.WorkSchedules.html#recurrencetype">RecurrenceType</a></strong><br>
@@ -195,10 +199,6 @@ Allowed values for the <code>RecurrenceType</code>(General.Resources.WorkSchedul
 </tbody>
 </table>
 <p><em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
-<h3 id="rowversion">RowVersion</h3>
-<p><em>Type</em>: <strong>byte[]</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="business-rules">Business Rules</h2>
 <p>None</p>

@@ -25,10 +25,10 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [Id](Systems.Core.Jobs.md#id) | guid |  
 | [IsActive](Systems.Core.Jobs.md#isactive) | boolean | Specifies whether the job is active and ready for running. `Required` `Default(true)` `Filter(eq)` 
-| [JobRowVersion](Systems.Core.Jobs.md#jobrowversion) | byte[] |  
 | [JobType](Systems.Core.Jobs.md#jobtype) | [JobType](Systems.Core.Jobs.md#jobtype) | The system type of the job. DOC=Document Change State, POS=Run Postponed Events, DNT=Delete Old Notifications. `Required` `Filter(multi eq)` 
 | [Name](Systems.Core.Jobs.md#name) | string (254) | The name of the job. `Required` `Filter(eq;like)` `ORD` 
 | [Notes](Systems.Core.Jobs.md#notes) | string (max) __nullable__ | Notes for this Job. 
+| [ObjectVersion](Systems.Core.Jobs.md#objectversion) | int32 |  
 | [RunOnIdle](Systems.Core.Jobs.md#runonidle) | boolean | Specifies whether to automatically run the job when the server is idle. `Required` `Default(true)` `Filter(eq)` 
 
 
@@ -49,12 +49,6 @@ _Type_: **boolean**
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **True**  
-
-### JobRowVersion
-
-_Type_: **byte[]**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
 
 ### JobType
 
@@ -92,6 +86,12 @@ _Type_: **string (max) __nullable__**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
+
+### ObjectVersion
+
+_Type_: **int32**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### RunOnIdle
 

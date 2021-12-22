@@ -27,6 +27,7 @@ Aggregate Tree
 | [Id](Applications.DataWarehouse.DataMeasureGroups.md#id) | guid |  
 | [Name](Applications.DataWarehouse.DataMeasureGroups.md#name) | string (254) | Group name (multilanguage). `Required` `Filter(eq;like)` 
 | [Notes](Applications.DataWarehouse.DataMeasureGroups.md#notes) | string (max) __nullable__ | Notes for this DataMeasureGroup. 
+| [ObjectVersion](Applications.DataWarehouse.DataMeasureGroups.md#objectversion) | int32 |  
 
 ## References
 
@@ -71,6 +72,12 @@ _Type_: **string (max) __nullable__**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
+
+### ObjectVersion
+
+_Type_: **int32**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 
 ## Reference Details

@@ -43,8 +43,8 @@ Aggregate Tree
 | [MaximumSpeedKmH](Applications.Fleet.Vehicles.md#maximumspeedkmh) | int32 __nullable__ | Maximum speed in km/h. 
 | [Model](Applications.Fleet.Vehicles.md#model) | [MultilanguageString](../data-types.md#multilanguagestring) __nullable__ | The model of the vehicle. `Filter(eq;like)` 
 | [Notes](Applications.Fleet.Vehicles.md#notes) | string (max) __nullable__ | Notes for this Vehicle. 
+| [ObjectVersion](Applications.Fleet.Vehicles.md#objectversion) | int32 |  
 | [PrimaryColor](Applications.Fleet.Vehicles.md#primarycolor) | [MultilanguageString](../data-types.md#multilanguagestring) __nullable__ | The primary color of the vehicle. null means that the value is unknown or not applicable. `Filter(eq;like)` 
-| [RowVersion](Applications.Fleet.Vehicles.md#rowversion) | byte[] |  
 | [SeatingPlacesCount](Applications.Fleet.Vehicles.md#seatingplacescount) | int32 __nullable__ | Number of seating places, excluding driver. `Filter(eq;ge;le)` 
 | [StandingPlacesCount](Applications.Fleet.Vehicles.md#standingplacescount) | int32 __nullable__ | Number of standing places, if applicable. 
 | [TechnicalMaximum<br />LadenMassKg](Applications.Fleet.Vehicles.md#technicalmaximumladenmasskg) | int32 __nullable__ | Maximum technically permissible laden mass in kg. 
@@ -221,18 +221,18 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
 
+### ObjectVersion
+
+_Type_: **int32**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+
 ### PrimaryColor
 
 The primary color of the vehicle. null means that the value is unknown or not applicable. `Filter(eq;like)`
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring) __nullable__**  
 _Supported Filters_: **Equals, Like**  
-_Supports Order By_: **False**  
-
-### RowVersion
-
-_Type_: **byte[]**  
-_Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
 ### SeatingPlacesCount

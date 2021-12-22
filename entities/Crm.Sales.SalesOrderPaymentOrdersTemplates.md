@@ -29,7 +29,7 @@ Aggregate Root:
 | [CreateForNotInvoiced<br />Amounts](Crm.Sales.SalesOrderPaymentOrdersTemplates.md#createfornotinvoicedamounts) | boolean | True to add to the payment order, the part of the amount of the sales order, which is not included in any invoice. `Required` 
 | [Id](Crm.Sales.SalesOrderPaymentOrdersTemplates.md#id) | guid |  
 | [IsAmountWithVAT](Crm.Sales.SalesOrderPaymentOrdersTemplates.md#isamountwithvat) | boolean | True to indicate that the parent document includes VAT and the generated the payment order should be with Is Amount With VAT = true. This setting DOES NOT affect whether the generated amount should include VAT or not, it simply sets the flag in the generated order. `Required` 
-| [RowVersion](Crm.Sales.SalesOrderPaymentOrdersTemplates.md#rowversion) | byte[] |  
+| [ObjectVersion](Crm.Sales.SalesOrderPaymentOrdersTemplates.md#objectversion) | int32 |  
 | [UpdateForInvoices](Crm.Sales.SalesOrderPaymentOrdersTemplates.md#updateforinvoices) | boolean | Update the payment order when invoices are issued for any of the sales orders lines. `Required` 
 
 ## References
@@ -72,11 +72,11 @@ _Type_: **boolean**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
-### RowVersion
+### ObjectVersion
 
-_Type_: **byte[]**  
+_Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Supports Order By_: ****  
 
 ### UpdateForInvoices
 

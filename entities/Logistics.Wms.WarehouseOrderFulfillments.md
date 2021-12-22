@@ -9,7 +9,7 @@ Fulfillment of a warehouse order line. Entity: Wms_Warehouse_Order_Fulfillments 
 
 ## Default Visualization
 Default Display Text Format:  
-_{Id}: {WarehouseOrderId}_  
+_{Id}: {ObjectVersion}_  
 Default Search Members:  
 __  
 
@@ -26,8 +26,8 @@ Aggregate Tree
 | [CreationTimeUtc](Logistics.Wms.WarehouseOrderFulfillments.md#creationtimeutc) | datetime | The exact time in UTC, when the fulfillment was created in the system. `Required` 
 | [Id](Logistics.Wms.WarehouseOrderFulfillments.md#id) | guid |  
 | [IsFinal](Logistics.Wms.WarehouseOrderFulfillments.md#isfinal) | boolean | Specifies whether this fulfillment will finalize the fulfillment of the order line, regardless of any remaining quantities. `Required` 
+| [ObjectVersion](Logistics.Wms.WarehouseOrderFulfillments.md#objectversion) | int32 |  
 | [Quantity](Logistics.Wms.WarehouseOrderFulfillments.md#quantity) | decimal (12, 3) | Fulfilled quantity in the measurement unit of the warehouse order line. `Required` 
-| [RowVersion](Logistics.Wms.WarehouseOrderFulfillments.md#rowversion) | byte[] |  
 
 ## References
 
@@ -63,17 +63,17 @@ _Type_: **boolean**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
+### ObjectVersion
+
+_Type_: **int32**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+
 ### Quantity
 
 Fulfilled quantity in the measurement unit of the warehouse order line. `Required`
 
 _Type_: **decimal (12, 3)**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-
-### RowVersion
-
-_Type_: **byte[]**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 

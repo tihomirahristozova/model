@@ -9,7 +9,7 @@ Contains options for generation of payment transactions. Each option set is assi
 
 ## Default Visualization
 Default Display Text Format:  
-_{Id}: {RouteId}_  
+_{Id}: {ObjectVersion}_  
 Default Search Members:  
 __  
 
@@ -26,7 +26,7 @@ Aggregate Tree
 | [CreateExpensePayments](Finance.Payments.PaymentSlipPaymentTransactionsTemplates.md#createexpensepayments) | boolean | True if the generation creates payment transactions for Payment Slip Amounts with direction Expense. `Required` `Filter(eq)` 
 | [CreateIncomePayments](Finance.Payments.PaymentSlipPaymentTransactionsTemplates.md#createincomepayments) | boolean | True if the generation creates payment transactions for Payment Slip Amounts with direction Income. `Required` `Filter(eq)` 
 | [Id](Finance.Payments.PaymentSlipPaymentTransactionsTemplates.md#id) | guid |  
-| [RowVersion](Finance.Payments.PaymentSlipPaymentTransactionsTemplates.md#rowversion) | byte[] |  
+| [ObjectVersion](Finance.Payments.PaymentSlipPaymentTransactionsTemplates.md#objectversion) | int32 |  
 
 ## References
 
@@ -59,11 +59,11 @@ _Type_: **guid**
 _Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
 
-### RowVersion
+### ObjectVersion
 
-_Type_: **byte[]**  
+_Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Supports Order By_: ****  
 
 
 ## Reference Details

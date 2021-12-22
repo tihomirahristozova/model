@@ -118,14 +118,14 @@ Default Search Members:<br>
 <td>Obsolete. Not used. <code>Required</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
+<td><a href="Systems.Core.TextTranslations.html#objectversion">ObjectVersion</a></td>
+<td>int32</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="Systems.Core.TextTranslations.html#rowid">RowId</a></td>
 <td>guid</td>
 <td>Obsolete. Not used. <code>Required</code> <code>Filter(multi eq)</code></td>
-</tr>
-<tr>
-<td><a href="Systems.Core.TextTranslations.html#rowversion">RowVersion</a></td>
-<td>byte[]</td>
-<td></td>
 </tr>
 <tr>
 <td><a href="Systems.Core.TextTranslations.html#tablename">TableName</a></td>
@@ -157,14 +157,14 @@ Default Search Members:<br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>50</strong></p>
+<h3 id="objectversion">ObjectVersion</h3>
+<p><em>Type</em>: <strong>int32</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****</p>
 <h3 id="rowid">RowId</h3>
 <p>Obsolete. Not used. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
-<h3 id="rowversion">RowVersion</h3>
-<p><em>Type</em>: <strong>byte[]</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="tablename">TableName</h3>
 <p>Obsolete. Not used. <code>Required</code> <code>Filter(eq)</code> <code>ORD</code> <code>ReadOnly</code></p>
 <p><em>Type</em>: <strong>string (128)</strong><br>

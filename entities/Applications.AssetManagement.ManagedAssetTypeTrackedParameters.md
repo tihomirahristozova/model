@@ -27,7 +27,7 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [Id](Applications.AssetManagement.ManagedAssetTypeTrackedParameters.md#id) | guid |  
 | [Notes](Applications.AssetManagement.ManagedAssetTypeTrackedParameters.md#notes) | string (max) __nullable__ | Notes for this ManagedAssetType<br />TrackedParameter. 
-| [RowVersion](Applications.AssetManagement.ManagedAssetTypeTrackedParameters.md#rowversion) | byte[] |  
+| [ObjectVersion](Applications.AssetManagement.ManagedAssetTypeTrackedParameters.md#objectversion) | int32 |  
 
 ## References
 
@@ -55,11 +55,11 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
 
-### RowVersion
+### ObjectVersion
 
-_Type_: **byte[]**  
+_Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Supports Order By_: ****  
 
 
 ## Reference Details

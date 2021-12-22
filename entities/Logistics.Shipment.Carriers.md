@@ -29,7 +29,7 @@ Aggregate Tree
 | [Id](Logistics.Shipment.Carriers.md#id) | guid |  
 | [IsActive](Logistics.Shipment.Carriers.md#isactive) | boolean | Specifies whether the carrier agreement is active. `Required` `Default(true)` `Filter(eq)` 
 | [Notes](Logistics.Shipment.Carriers.md#notes) | string (max) __nullable__ | Notes for this Carrier. 
-| [RowVersion](Logistics.Shipment.Carriers.md#rowversion) | byte[] |  
+| [ObjectVersion](Logistics.Shipment.Carriers.md#objectversion) | int32 |  
 
 ## References
 
@@ -93,11 +93,11 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
 
-### RowVersion
+### ObjectVersion
 
-_Type_: **byte[]**  
+_Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Supports Order By_: ****  
 
 
 ## Reference Details

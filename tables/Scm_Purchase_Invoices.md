@@ -15,6 +15,7 @@ Contains purchase invoice headers. Entity: Scm_Purchase_Invoices
 
 | Name | Type | Description |
 | - | - | --- |
+|[__Object_Version](#__object_version)|`int` ||
 |[Apply_Date](#apply_date)|`date` |Specifies the date on which to create the VAT ledger entry for this purchase invoice. Usually, this date is equal to the document date, except when the document is received too late to be applied on its original document date.|
 |[Cost_Center_Id](#cost_center_id)|`uniqueidentifier` |Cost center for which the amount from this document will be accounted.|
 |[Credit_Note_Original_Purchase_Invoice_Id](#credit_note_original_purchase_invoice_id)|`uniqueidentifier` |The original invoice, which is debited/credited with this note|
@@ -43,6 +44,33 @@ Contains purchase invoice headers. Entity: Scm_Purchase_Invoices
 |[VAT_Notes](#vat_notes)|`nvarchar(254)` |Description of the operation that will be entered in the VAT ledgers.|
 
 ## Columns
+
+### __Object_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 ### Apply_Date
 

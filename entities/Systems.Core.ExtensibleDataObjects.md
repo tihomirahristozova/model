@@ -9,7 +9,7 @@ Extends data in other tables with attached files, custom properties, etc. Each r
 
 ## Default Visualization
 Default Display Text Format:  
-_{Id}: {EntityType}_  
+_{Id}: {ObjectVersion}_  
 Default Search Members:  
 __  
 
@@ -32,7 +32,7 @@ Aggregate Tree
 | [IsDeleted](Systems.Core.ExtensibleDataObjects.md#isdeleted) | boolean | Specifies whether the object represented by this system object is deleted. After deletion of the original object, the system object remains in the system, but can be purged later by some cleanup processes. `Required` `Default(false)` `Filter(eq)` `Introduced in version 19.1` 
 | [LastUpdateTimeUtc](Systems.Core.ExtensibleDataObjects.md#lastupdatetimeutc) | datetime __nullable__ | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. `Filter(ge;le)` `Introduced in version 19.1` 
 | [LatestVersion](Systems.Core.ExtensibleDataObjects.md#latestversion) | int32 | The latest saved version of the object. Starts from 1 and increments with 1 for each new version. `Required` `Default(1)` 
-| [RowVersion](Systems.Core.ExtensibleDataObjects.md#rowversion) | byte[] |  
+| [ObjectVersion](Systems.Core.ExtensibleDataObjects.md#objectversion) | int32 |  
 
 ## References
 
@@ -110,11 +110,11 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Default Value_: **1**  
 
-### RowVersion
+### ObjectVersion
 
-_Type_: **byte[]**  
+_Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Supports Order By_: ****  
 
 
 ## Reference Details

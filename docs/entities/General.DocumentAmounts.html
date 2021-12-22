@@ -128,8 +128,8 @@ Aggregate Root:<br>
 <td>Input unit amount for the calculation of the current amount. <code>Currency: GetInputAmountCurrency()</code> <code>Filter(eq;ge;le)</code></td>
 </tr>
 <tr>
-<td><a href="General.DocumentAmounts.html#rowversion">RowVersion</a></td>
-<td>byte[]</td>
+<td><a href="General.DocumentAmounts.html#objectversion">ObjectVersion</a></td>
+<td>int32</td>
 <td></td>
 </tr>
 <tr>
@@ -227,10 +227,10 @@ Aggregate Root:<br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>IIF( obj.DocumentAmountType.UnitAmountInputAllowed, obj.InputUnitAmount, null)</code></p>
-<h3 id="rowversion">RowVersion</h3>
-<p><em>Type</em>: <strong>byte[]</strong><br>
+<h3 id="objectversion">ObjectVersion</h3>
+<p><em>Type</em>: <strong>int32</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: ****</p>
 <h3 id="totaldistributedamount">TotalDistributedAmount</h3>
 <p>The total amount (in documents currency) which was distributed to the documents lines. Null if the amount is not distributed yet. <code>Currency: LogisticsDocument.DocumentCurrency</code> <code>ReadOnly</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount (14, 2)</a> <strong>nullable</strong></strong><br>

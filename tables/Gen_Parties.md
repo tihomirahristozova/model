@@ -11,6 +11,7 @@ Contains base data for different kind of parties - companies, persons, departmen
 
 | Name | Type | Description |
 | - | - | --- |
+|[__Object_Version](#__object_version)|`int` ||
 |[Administrative_Region_Id](#administrative_region_id)|`uniqueidentifier` |The administrative region in which the party is situated.|
 |[Area_Id](#area_id)|`uniqueidentifier` |The area in which the party is situated.|
 |[Creation_Time](#creation_time)|`datetime` Readonly||
@@ -30,6 +31,33 @@ Contains base data for different kind of parties - companies, persons, departmen
 |[Update_User](#update_user)|`nvarchar(64)` Readonly||
 
 ## Columns
+
+### __Object_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 ### Administrative_Region_Id
 

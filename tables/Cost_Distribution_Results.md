@@ -16,6 +16,7 @@ Contains the results of a cost distribution calculation. Entity: Cost_Distributi
 
 | Name | Type | Description |
 | - | - | --- |
+|[__Object_Version](#__object_version)|`int` ||
 |[Cost_Distribution_Id](#cost_distribution_id)|`uniqueidentifier` ||
 |[Cost_Distribution_Result_Id](#cost_distribution_result_id)|`uniqueidentifier` `PK`||
 |[Cost_Type_Id](#cost_type_id)|`uniqueidentifier` |The cost type for which the current distribution is calculated.|
@@ -24,6 +25,33 @@ Contains the results of a cost distribution calculation. Entity: Cost_Distributi
 |[Output_Line_No](#output_line_no)|`int` |The line number (within the document) of the output over which the cost is distributed.|
 
 ## Columns
+
+### __Object_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 ### Cost_Distribution_Id
 

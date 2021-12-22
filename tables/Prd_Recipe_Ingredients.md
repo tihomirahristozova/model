@@ -15,6 +15,7 @@ Contains the materials of a recipe that make up the product. Entity: Prd_Recipe_
 
 | Name | Type | Description |
 | - | - | --- |
+|[__Object_Version](#__object_version)|`int` ||
 |[Cost](#cost)|`decimal(18, 4)` |The cost of the specified quantity of the ingredient|
 |[Fixed_Scrap_Quantity](#fixed_scrap_quantity)|`decimal(18, 3)` |Fixed scrap quantity of the material, needed for setup.|
 |[Id](#id)|`uniqueidentifier` `PK`||
@@ -34,6 +35,33 @@ Contains the materials of a recipe that make up the product. Entity: Prd_Recipe_
 |[Usage_Unit_Id](#usage_unit_id)|`uniqueidentifier` |The measurement unit of Usage_Quantity. The selected item must support the specified unit|
 
 ## Columns
+
+### __Object_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 ### Cost
 

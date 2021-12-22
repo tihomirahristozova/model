@@ -15,6 +15,7 @@ Definition of the functions that the resources can perform. Entity: Prd_Function
 
 | Name | Type | Description |
 | - | - | --- |
+|[__Object_Version](#__object_version)|`int` ||
 |[Function_Group_Id](#function_group_id)|`uniqueidentifier` ||
 |[Function_Name](#function_name)|`nvarchar(64)` ||
 |[Id](#id)|`uniqueidentifier` `PK`||
@@ -23,6 +24,33 @@ Definition of the functions that the resources can perform. Entity: Prd_Function
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
+
+### __Object_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 ### Function_Group_Id
 

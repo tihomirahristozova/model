@@ -27,7 +27,7 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [HierarchyLevel](Finance.Cost.TemplateCostTypes.md#hierarchylevel) | int32 | The level in the hierarchy on which this cost is incurred (0..9). `Required` `Filter(ge;le)` 
 | [Id](Finance.Cost.TemplateCostTypes.md#id) | guid |  
-| [RowVersion](Finance.Cost.TemplateCostTypes.md#rowversion) | byte[] |  
+| [ObjectVersion](Finance.Cost.TemplateCostTypes.md#objectversion) | int32 |  
 
 ## References
 
@@ -54,11 +54,11 @@ _Indexed_: **True**
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
-### RowVersion
+### ObjectVersion
 
-_Type_: **byte[]**  
+_Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Supports Order By_: ****  
 
 
 ## Reference Details

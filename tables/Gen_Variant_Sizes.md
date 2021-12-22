@@ -11,12 +11,40 @@ Contains the different sizes, which can be assigned to product variants. Entity:
 
 | Name | Type | Description |
 | - | - | --- |
+|[__Object_Version](#__object_version)|`int` ||
 |[Row_Version](#row_version)|`timestamp` ||
 |[Variant_Size_Code](#variant_size_code)|`nvarchar(8)` |Unique code of the size. Used to generate parts of bar-codes and in other coding schemes.|
 |[Variant_Size_Id](#variant_size_id)|`uniqueidentifier` `PK`||
 |[Variant_Size_Name](#variant_size_name)|`nvarchar(254)` `ML`|The name of the variant size.|
 
 ## Columns
+
+### __Object_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 ### Row_Version
 

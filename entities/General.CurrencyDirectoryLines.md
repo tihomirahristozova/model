@@ -26,9 +26,9 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](General.CurrencyDirectoryLines.md#id) | guid |  
+| [ObjectVersion](General.CurrencyDirectoryLines.md#objectversion) | int32 |  
 | [RateDivisor](General.CurrencyDirectoryLines.md#ratedivisor) | decimal (18, 6) | The divisor for conversion from From_Currency to Directory.To_Currency. `Required` `Default(1)` 
 | [RateMultiplier](General.CurrencyDirectoryLines.md#ratemultiplier) | decimal (18, 6) | The multiplier for conversion from From_Currency to Directory.To_Currency. `Required` `Default(1)` 
-| [RowVersion](General.CurrencyDirectoryLines.md#rowversion) | byte[] |  
 
 ## References
 
@@ -47,6 +47,12 @@ _Indexed_: **True**
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
+### ObjectVersion
+
+_Type_: **int32**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+
 ### RateDivisor
 
 The divisor for conversion from From_Currency to Directory.To_Currency. `Required` `Default(1)`
@@ -64,12 +70,6 @@ _Type_: **decimal (18, 6)**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **1**  
-
-### RowVersion
-
-_Type_: **byte[]**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
 
 
 ## Reference Details

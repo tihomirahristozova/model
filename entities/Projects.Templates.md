@@ -27,8 +27,8 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [Id](Projects.Templates.md#id) | guid |  
 | [Notes](Projects.Templates.md#notes) | string (max) __nullable__ | Notes for this Template. 
+| [ObjectVersion](Projects.Templates.md#objectversion) | int32 |  
 | [ProjectTemplateName](Projects.Templates.md#projecttemplatename) | string (254) | The name of the project template. `Required` 
-| [RowVersion](Projects.Templates.md#rowversion) | byte[] |  
 
 ## Child Collections
 
@@ -56,6 +56,12 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
 
+### ObjectVersion
+
+_Type_: **int32**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+
 ### ProjectTemplateName
 
 The name of the project template. `Required`
@@ -64,12 +70,6 @@ _Type_: **string (254)**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
-
-### RowVersion
-
-_Type_: **byte[]**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
 
 
 

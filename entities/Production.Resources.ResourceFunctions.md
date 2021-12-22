@@ -27,7 +27,7 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [Id](Production.Resources.ResourceFunctions.md#id) | guid |  
 | [Notes](Production.Resources.ResourceFunctions.md#notes) | string (254) __nullable__ | User notes on the resource function. 
-| [RowVersion](Production.Resources.ResourceFunctions.md#rowversion) | byte[] |  
+| [ObjectVersion](Production.Resources.ResourceFunctions.md#objectversion) | int32 |  
 
 ## References
 
@@ -55,11 +55,11 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
 
-### RowVersion
+### ObjectVersion
 
-_Type_: **byte[]**  
+_Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Supports Order By_: ****  
 
 
 ## Reference Details

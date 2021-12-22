@@ -9,7 +9,7 @@ Serial numbers, used by the items. Rows are created on first occurrence of the s
 
 ## Default Visualization
 Default Display Text Format:  
-_{Id}: {ProductId}_  
+_{Id}: {ObjectVersion}_  
 Default Search Members:  
 __  
 
@@ -24,7 +24,7 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Id](Logistics.Inventory.SerialNumbers.md#id) | guid |  
-| [RowVersion](Logistics.Inventory.SerialNumbers.md#rowversion) | byte[] |  
+| [ObjectVersion](Logistics.Inventory.SerialNumbers.md#objectversion) | int32 |  
 | [SerialNumberField](Logistics.Inventory.SerialNumbers.md#serialnumberfield) | string (40) | The serial number text. `Required` `Filter(multi eq;like)` 
 
 ## References
@@ -43,11 +43,11 @@ _Indexed_: **True**
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
-### RowVersion
+### ObjectVersion
 
-_Type_: **byte[]**  
+_Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Supports Order By_: ****  
 
 ### SerialNumberField
 

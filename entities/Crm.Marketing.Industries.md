@@ -27,7 +27,7 @@ Aggregate Tree
 | [Id](Crm.Marketing.Industries.md#id) | guid |  
 | [Name](Crm.Marketing.Industries.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Industry name (multi-language). `Required` `Filter(eq;like)` 
 | [Notes](Crm.Marketing.Industries.md#notes) | string (max) __nullable__ | Notes for this Industry. 
-| [RowVersion](Crm.Marketing.Industries.md#rowversion) | byte[] |  
+| [ObjectVersion](Crm.Marketing.Industries.md#objectversion) | int32 |  
 
 
 ## Attribute Details
@@ -66,11 +66,11 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
 
-### RowVersion
+### ObjectVersion
 
-_Type_: **byte[]**  
+_Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Supports Order By_: ****  
 
 
 

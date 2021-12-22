@@ -28,9 +28,9 @@ Aggregate Root:
 | [FullCost](Finance.Cost.CalculationResults.md#fullcost) | decimal (14, 2) | The full cost of the specified quantity. `Required` `Default(0)` 
 | [Id](Finance.Cost.CalculationResults.md#id) | guid |  
 | [LineNo](Finance.Cost.CalculationResults.md#lineno) | int32 | Consecutive number of the line within the calculation. `Required` 
+| [ObjectVersion](Finance.Cost.CalculationResults.md#objectversion) | int32 |  
 | [ProjectId](Finance.Cost.CalculationResults.md#projectid) | guid __nullable__ | The Project to which the cost was allocated. When null, the cost was not allocated to any specific Project. `Filter(multi eq)` 
 | [Quantity](Finance.Cost.CalculationResults.md#quantity) | decimal (14, 3) | The quantity of the product. `Required` `Default(0)` 
-| [RowVersion](Finance.Cost.CalculationResults.md#rowversion) | byte[] |  
 
 ## References
 
@@ -75,6 +75,12 @@ _Back-End Default Expression:_
 
 _Front-End Recalc Expressions:_  
 `( obj.Calculation.Results.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)`
+### ObjectVersion
+
+_Type_: **int32**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+
 ### ProjectId
 
 The Project to which the cost was allocated. When null, the cost was not allocated to any specific Project. `Filter(multi eq)`
@@ -90,12 +96,6 @@ _Type_: **decimal (14, 3)**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  
-
-### RowVersion
-
-_Type_: **byte[]**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
 
 
 ## Reference Details

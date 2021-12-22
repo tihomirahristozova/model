@@ -28,7 +28,7 @@ Aggregate Tree
 | [Id](Crm.Marketing.DistributionChannels.md#id) | guid |  
 | [IsActive](Crm.Marketing.DistributionChannels.md#isactive) | boolean | Is the channel active for new sales? true=Yes, false=No. `Required` `Default(true)` `Filter(eq)` 
 | [Name](Crm.Marketing.DistributionChannels.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Multi-language name of the distribution channel. `Required` `Filter(eq;like)` 
-| [RowVersion](Crm.Marketing.DistributionChannels.md#rowversion) | byte[] |  
+| [ObjectVersion](Crm.Marketing.DistributionChannels.md#objectversion) | int32 |  
 
 
 ## Attribute Details
@@ -75,11 +75,11 @@ _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 
-### RowVersion
+### ObjectVersion
 
-_Type_: **byte[]**  
+_Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Supports Order By_: ****  
 
 
 

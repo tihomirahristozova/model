@@ -15,6 +15,7 @@ Specification of a logistic unit. The database can contain any kind of specifica
 
 | Name | Type | Description |
 | - | - | --- |
+|[__Object_Version](#__object_version)|`int` ||
 |[Code](#code)|`nvarchar(32)` |The code of the specification, unique within the logistic unit. It can contain only alphanumeric characters and cannot contain spaces.|
 |[Logistic_Unit_Id](#logistic_unit_id)|`uniqueidentifier` |The logistic unit, which is detailed by this specification.|
 |[Logistic_Unit_Specification_Id](#logistic_unit_specification_id)|`uniqueidentifier` `PK`||
@@ -24,6 +25,33 @@ Specification of a logistic unit. The database can contain any kind of specifica
 |[Value](#value)|`nvarchar(254)` |Text value of the specification. If this is GS1 specification, it can contain only numbers and letters and cannot contain spaces.|
 
 ## Columns
+
+### __Object_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 ### Code
 

@@ -15,6 +15,7 @@ Contains the lease contracts for rental assets. Entity: Rent_Lease_Contracts
 
 | Name | Type | Description |
 | - | - | --- |
+|[__Object_Version](#__object_version)|`int` ||
 |[Credit_Limit_Override](#credit_limit_override)|`bit` ||
 |[Currency_Id](#currency_id)|`uniqueidentifier` |The currency of the lease contract amounts|
 |[Document_Id](#document_id)|`uniqueidentifier` ||
@@ -28,6 +29,33 @@ Contains the lease contracts for rental assets. Entity: Rent_Lease_Contracts
 |[Start_Date](#start_date)|`date` |Starting date of the lease contract|
 
 ## Columns
+
+### __Object_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 ### Credit_Limit_Override
 

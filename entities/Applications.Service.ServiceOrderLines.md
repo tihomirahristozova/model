@@ -27,7 +27,7 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [Id](Applications.Service.ServiceOrderLines.md#id) | guid |  
 | [LineNo](Applications.Service.ServiceOrderLines.md#lineno) | int32 | Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc. `Required` `Filter(eq)` 
-| [RowVersion](Applications.Service.ServiceOrderLines.md#rowversion) | byte[] |  
+| [ObjectVersion](Applications.Service.ServiceOrderLines.md#objectversion) | int32 |  
 | [SymptomDescription](Applications.Service.ServiceOrderLines.md#symptomdescription) | string (254) __nullable__ | Description or synopsis of the symptoms of the failed object. `Filter(like)` 
 
 ## References
@@ -60,11 +60,11 @@ _Back-End Default Expression:_
 
 _Front-End Recalc Expressions:_  
 `( obj.ServiceOrder.Lines.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)`
-### RowVersion
+### ObjectVersion
 
-_Type_: **byte[]**  
+_Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Supports Order By_: ****  
 
 ### SymptomDescription
 

@@ -11,6 +11,7 @@ Contains permissions, which are honored only by client applications and are used
 
 | Name | Type | Description |
 | - | - | --- |
+|[__Object_Version](#__object_version)|`int` ||
 |[Access_Key_Id](#access_key_id)|`uniqueidentifier` |The security access key which controls the access to the visual permission|
 |[Application_Name](#application_name)|`nvarchar(64)` |The application for which the permission is specified|
 |[Element_Name](#element_name)|`nvarchar(4000)` |Optionally, the element from the panel which will be secured|
@@ -21,6 +22,33 @@ Contains permissions, which are honored only by client applications and are used
 |[Visual_Permission_Id](#visual_permission_id)|`uniqueidentifier` `PK`||
 
 ## Columns
+
+### __Object_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 ### Access_Key_Id
 

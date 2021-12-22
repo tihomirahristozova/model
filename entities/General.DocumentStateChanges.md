@@ -27,7 +27,7 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [Id](General.DocumentStateChanges.md#id) | guid |  
 | [NewState](General.DocumentStateChanges.md#newstate) | [NewState](General.DocumentStateChanges.md#newstate) | The new state after the change. `Required` `Filter(eq)` 
-| [RowVersion](General.DocumentStateChanges.md#rowversion) | byte[] |  
+| [ObjectVersion](General.DocumentStateChanges.md#objectversion) | int32 |  
 | [SystemInitiated](General.DocumentStateChanges.md#systeminitiated) | boolean | Specifies whether the state change was caused by system process or from user action. `Required` `Default(false)` `ReadOnly` 
 | [UpdateTime](General.DocumentStateChanges.md#updatetime) | datetime | The time when the change took effect. `Required` `Filter(ge;le)` `ORD` 
 | [UpdateUser](General.DocumentStateChanges.md#updateuser) | string (64) | The login name of the user, who made the status change. `Required` `Filter(eq)` 
@@ -71,11 +71,11 @@ _Allowed Values (General.DocumentStateChangesRepository.NewState Enum Members)_
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 
-### RowVersion
+### ObjectVersion
 
-_Type_: **byte[]**  
+_Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Supports Order By_: ****  
 
 ### SystemInitiated
 

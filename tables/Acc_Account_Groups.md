@@ -11,6 +11,7 @@ Hierarchical chart of account groups. Entity: Acc_Account_Groups
 
 | Name | Type | Description |
 | - | - | --- |
+|[__Object_Version](#__object_version)|`int` ||
 |[Account_Group_Id](#account_group_id)|`uniqueidentifier` `PK`||
 |[Account_Group_Name](#account_group_name)|`nvarchar(160)` `ML`|Account group name, required. Must be unique within the parent group|
 |[Account_Group_Number](#account_group_number)|`nvarchar(30)` |Unique account group number. May contain characters, if required|
@@ -21,6 +22,33 @@ Hierarchical chart of account groups. Entity: Acc_Account_Groups
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
+
+### __Object_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 ### Account_Group_Id
 

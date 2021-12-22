@@ -25,7 +25,7 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [Description](Logistics.Inventory.ProductValuationGroups.md#description) | string (254) __nullable__ | The description of this ProductValuationGroup. `Filter(like)` 
 | [Id](Logistics.Inventory.ProductValuationGroups.md#id) | guid |  
-| [RowVersion](Logistics.Inventory.ProductValuationGroups.md#rowversion) | byte[] |  
+| [ObjectVersion](Logistics.Inventory.ProductValuationGroups.md#objectversion) | int32 |  
 | [ValuationGroupCode](Logistics.Inventory.ProductValuationGroups.md#valuationgroupcode) | string (64) | The unique code of the product valuation group. `Required` `Filter(eq;like)` `ORD` 
 | [ValuationGroupName](Logistics.Inventory.ProductValuationGroups.md#valuationgroupname) | [MultilanguageString](../data-types.md#multilanguagestring) | The name of the product valuation group. `Required` `Filter(eq;like)` 
 
@@ -48,11 +48,11 @@ _Indexed_: **True**
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
-### RowVersion
+### ObjectVersion
 
-_Type_: **byte[]**  
+_Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Supports Order By_: ****  
 
 ### ValuationGroupCode
 

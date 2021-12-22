@@ -27,7 +27,7 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [Id](Applications.Rental.TransactionLines.md#id) | guid |  
 | [Notes](Applications.Rental.TransactionLines.md#notes) | string (max) __nullable__ | Notes. 
-| [RowVersion](Applications.Rental.TransactionLines.md#rowversion) | byte[] |  
+| [ObjectVersion](Applications.Rental.TransactionLines.md#objectversion) | int32 |  
 | [TransactionTimestamp](Applications.Rental.TransactionLines.md#transactiontimestamp) | datetime | Transaction Timestamp. `Required` `Filter(multi eq;ge;le)` 
 | [TransactionType](Applications.Rental.TransactionLines.md#transactiontype) | [TransactionType](Applications.Rental.TransactionLines.md#transactiontype) | Transaction Type. `Required` `Filter(eq;like)` 
 
@@ -59,11 +59,11 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
 
-### RowVersion
+### ObjectVersion
 
-_Type_: **byte[]**  
+_Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Supports Order By_: ****  
 
 ### TransactionTimestamp
 

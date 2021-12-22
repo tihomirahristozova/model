@@ -28,7 +28,7 @@ Aggregate Root:
 | [Id](Production.Resources.Functions.md#id) | guid |  
 | [Name](Production.Resources.Functions.md#name) | string (64) | The name of this Function. `Required` `Filter(like)` 
 | [Notes](Production.Resources.Functions.md#notes) | string (254) __nullable__ | User comments on the function. 
-| [RowVersion](Production.Resources.Functions.md#rowversion) | byte[] |  
+| [ObjectVersion](Production.Resources.Functions.md#objectversion) | int32 |  
 
 ## References
 
@@ -65,11 +65,11 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
 
-### RowVersion
+### ObjectVersion
 
-_Type_: **byte[]**  
+_Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Supports Order By_: ****  
 
 
 ## Reference Details

@@ -27,7 +27,7 @@ Aggregate Tree
 | [IsActive](Finance.Payments.PaymentReasons.md#isactive) | boolean | Specifies whether the payment reason is active and usable for choosing in new documents. `Required` `Default(true)` `Filter(eq)` 
 | [IsSystem](Finance.Payments.PaymentReasons.md#issystem) | boolean | Specifies whether the payment reason is defined by the system. The system defined records are created by the system and are read-only for the user. `Required` `Default(false)` `Filter(eq)` `ReadOnly` 
 | [Name](Finance.Payments.PaymentReasons.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | The name of this PaymentReason. `Required` `Filter(eq;like)` `ORD` 
-| [RowVersion](Finance.Payments.PaymentReasons.md#rowversion) | byte[] |  
+| [ObjectVersion](Finance.Payments.PaymentReasons.md#objectversion) | int32 |  
 
 
 ## Attribute Details
@@ -66,11 +66,11 @@ _Indexed_: **True**
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
 
-### RowVersion
+### ObjectVersion
 
-_Type_: **byte[]**  
+_Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Supports Order By_: ****  
 
 
 

@@ -123,6 +123,11 @@ Aggregate Root:<br>
 <td>The exact server time, when the picture was last updated. Set automatically. <code>Filter(ge;le)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
+<td><a href="General.Products.ProductPictures.html#objectversion">ObjectVersion</a></td>
+<td>int32</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="General.Products.ProductPictures.html#picture">Picture</a></td>
 <td>byte[] <strong>nullable</strong></td>
 <td>The actual product picture. Can be null if we insert only some comments.</td>
@@ -136,11 +141,6 @@ Aggregate Root:<br>
 <td><a href="General.Products.ProductPictures.html#picturesizeclass">PictureSizeClass</a></td>
 <td><a href="General.Products.ProductPictures.html#picturesizeclass">PictureSizeClass</a> <strong>nullable</strong></td>
 <td>Specifies the relative picture size and usage. S=Small picture (thumbnail), L=Large picture (full size), null=unspecified.</td>
-</tr>
-<tr>
-<td><a href="General.Products.ProductPictures.html#rowversion">RowVersion</a></td>
-<td>byte[]</td>
-<td></td>
 </tr>
 </tbody>
 </table>
@@ -186,6 +186,10 @@ Aggregate Root:<br>
 <p><em>Type</em>: <strong>datetime <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="objectversion">ObjectVersion</h3>
+<p><em>Type</em>: <strong>int32</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****</p>
 <h3 id="picture">Picture</h3>
 <p>The actual product picture. Can be null if we insert only some comments.</p>
 <p><em>Type</em>: <strong>byte[] <strong>nullable</strong></strong><br>
@@ -224,10 +228,6 @@ Allowed values for the <code>PictureSizeClass</code>(General.Products.ProductPic
 </tbody>
 </table>
 <p><em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
-<h3 id="rowversion">RowVersion</h3>
-<p><em>Type</em>: <strong>byte[]</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="product">Product</h3>

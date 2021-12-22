@@ -29,7 +29,7 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [Id](General.Resources.ResourceGroups.md#id) | guid |  
 | [Name](General.Resources.ResourceGroups.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Resource group name. Unique within its parent. `Required` `Filter(eq;like)` 
-| [RowVersion](General.Resources.ResourceGroups.md#rowversion) | byte[] |  
+| [ObjectVersion](General.Resources.ResourceGroups.md#objectversion) | int32 |  
 
 ## References
 
@@ -62,11 +62,11 @@ _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 
-### RowVersion
+### ObjectVersion
 
-_Type_: **byte[]**  
+_Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Supports Order By_: ****  
 
 
 ## Reference Details

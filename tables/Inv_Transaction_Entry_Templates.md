@@ -11,6 +11,7 @@ Obsolete. Not used. Entity: Inv_Transaction_Entry_Templates
 
 | Name | Type | Description |
 | - | - | --- |
+|[__Object_Version](#__object_version)|`int` ||
 |[Deal_Type_Id](#deal_type_id)|`uniqueidentifier` |Obsolete. Not used.|
 |[Document_Notes_Fixed_Text](#document_notes_fixed_text)|`nvarchar(max)` |Specifies the text for the document notes in the created entry in the VAT ledgers, in case the source is set to be fixed text.|
 |[Route_Id](#route_id)|`uniqueidentifier` |Obsolete. Not used.|
@@ -18,6 +19,33 @@ Obsolete. Not used. Entity: Inv_Transaction_Entry_Templates
 |[Transaction_Entry_Template_Id](#transaction_entry_template_id)|`uniqueidentifier` `PK`||
 
 ## Columns
+
+### __Object_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 ### Deal_Type_Id
 

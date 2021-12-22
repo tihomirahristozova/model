@@ -15,6 +15,7 @@ Location numbers for a party. Depending on the partner with which we are doing a
 
 | Name | Type | Description |
 | - | - | --- |
+|[__Object_Version](#__object_version)|`int` ||
 |[Location_Coding_System](#location_coding_system)|`nvarchar(3)` Allowed: `GLN`, `INT`|The coding system for which we are defining the location number.|
 |[Location_Number](#location_number)|`nvarchar(16)` |The location number of Party.|
 |[Partner_Location_Number](#partner_location_number)|`nvarchar(16)` |The location number of the partner party for which we define the main Party location number. The location number of the main Party might be different depending on the location number of the partner party. NULL means that the location number is not dependent on the partner location number.|
@@ -25,6 +26,33 @@ Location numbers for a party. Depending on the partner with which we are doing a
 |[Significance](#significance)|`int` |Order of significance of the location number within the main Party. If there are multiple location numbers, only the most significant is used. 0 is the least significant and higher numbers indicate higher significance.|
 
 ## Columns
+
+### __Object_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 ### Location_Coding_System
 

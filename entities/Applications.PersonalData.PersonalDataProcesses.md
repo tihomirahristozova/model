@@ -41,9 +41,9 @@ Aggregate Tree
 | [ListOfUsedSoftware](Applications.PersonalData.PersonalDataProcesses.md#listofusedsoftware) | string (254) __nullable__ | Comma-separated list of the names of the software products used to process the data. `Filter(eq;like)` 
 | [Name](Applications.PersonalData.PersonalDataProcesses.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Name of the process (Multilanguage). `Required` `Filter(eq;like)` 
 | [Notes](Applications.PersonalData.PersonalDataProcesses.md#notes) | string (max) __nullable__ | Notes for this PersonalDataProcess. 
+| [ObjectVersion](Applications.PersonalData.PersonalDataProcesses.md#objectversion) | int32 |  
 | [ProcessingRole](Applications.PersonalData.PersonalDataProcesses.md#processingrole) | [ProcessingRole](Applications.PersonalData.PersonalDataProcesses.md#processingrole) | The role of the enterprise company in the process - Controller or Processor. The controller owns the personal data process. The processor operates on behalf of the controller. C=Controller; P=Processor. . `Required` `Default("C")` `Filter(eq)` 
 | [RetentionPeriodMonths](Applications.PersonalData.PersonalDataProcesses.md#retentionperiodmonths) | int32 __nullable__ | The period in months, for which the data is kept. Null when the period is unknown or N/A. `Filter(eq)` 
-| [RowVersion](Applications.PersonalData.PersonalDataProcesses.md#rowversion) | byte[] |  
 | [ThirdCountryTransfers<br />Safeguards](Applications.PersonalData.PersonalDataProcesses.md#thirdcountrytransferssafeguards) | string (254) __nullable__ | Description of safeguards, taken to protect personal data in case of third country transfers. `Filter(eq;like)` 
 
 ## References
@@ -225,6 +225,12 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
 
+### ObjectVersion
+
+_Type_: **int32**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+
 ### ProcessingRole
 
 The role of the enterprise company in the process - Controller or Processor. The controller owns the personal data process. The processor operates on behalf of the controller. C=Controller; P=Processor. . `Required` `Default("C")` `Filter(eq)`
@@ -248,12 +254,6 @@ The period in months, for which the data is kept. Null when the period is unknow
 
 _Type_: **int32 __nullable__**  
 _Supported Filters_: **Equals**  
-_Supports Order By_: **False**  
-
-### RowVersion
-
-_Type_: **byte[]**  
-_Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
 ### ThirdCountryTransfersSafeguards

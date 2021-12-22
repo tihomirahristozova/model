@@ -11,6 +11,7 @@ The fixed assets. Entity: Ast_Assets
 
 | Name | Type | Description |
 | - | - | --- |
+|[__Object_Version](#__object_version)|`int` ||
 |[Asset_Category_Id](#asset_category_id)|`uniqueidentifier` |The category of this asset. The category may determine default values for the depreciation plans for the different valuation models for this asset.|
 |[Asset_Code](#asset_code)|`nvarchar(20)` ||
 |[Asset_Group_Id](#asset_group_id)|`uniqueidentifier` |The asset group to which this asset belongs.|
@@ -27,6 +28,33 @@ The fixed assets. Entity: Ast_Assets
 |[Valuation_Currency_Id](#valuation_currency_id)|`uniqueidentifier` |Currency in which changes of the asset values (purchase value, depreciation value and etc.) are stored.|
 
 ## Columns
+
+### __Object_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 ### Asset_Category_Id
 

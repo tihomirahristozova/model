@@ -30,7 +30,7 @@ Aggregate Root:
 | [Id](General.DocumentTypeUserStatuses.md#id) | guid |  
 | [Instructions](General.DocumentTypeUserStatuses.md#instructions) | string (max) __nullable__ | Instructions what should be done when this user status is active (Rich Text). 
 | [IsExitStatus](General.DocumentTypeUserStatuses.md#isexitstatus) | boolean | True when the status allows going to the next system status, false otherwise. For example for system status Firm Planned, only user status Approved might allow going to Released. `Required` `Default(true)` `Filter(eq)` 
-| [RowVersion](General.DocumentTypeUserStatuses.md#rowversion) | byte[] |  
+| [ObjectVersion](General.DocumentTypeUserStatuses.md#objectversion) | int32 |  
 | [State](General.DocumentTypeUserStatuses.md#state) | [DocumentState](General.DocumentTypeUserStatuses.md#state) | The system state to which this user status is bound. `Required` `Filter(eq)` 
 | [UserStatusName](General.DocumentTypeUserStatuses.md#userstatusname) | string (128) | Multi-language name of the user status. `Required` `Filter(eq;like)` 
 
@@ -90,11 +90,11 @@ _Supported Filters_: **Equals**
 _Supports Order By_: **False**  
 _Default Value_: **True**  
 
-### RowVersion
+### ObjectVersion
 
-_Type_: **byte[]**  
+_Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Supports Order By_: ****  
 
 ### State
 

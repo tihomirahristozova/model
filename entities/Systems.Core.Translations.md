@@ -28,9 +28,9 @@ Aggregate Tree
 | [CreationTime](Systems.Core.Translations.md#creationtime) | datetime | Timestamp when the translation was first created. `Required` `Default(Now)` `Filter(ge;le)` `ReadOnly` 
 | [Id](Systems.Core.Translations.md#id) | guid |  
 | [Language](Systems.Core.Translations.md#language) | string (8) | The code of the language or language-culture pair. Standard Windows codes are used. English="en"; US English = "en-us". `Required` `Default("en")` `Filter(eq)` 
+| [ObjectVersion](Systems.Core.Translations.md#objectversion) | int32 |  
 | [ResourceId](Systems.Core.Translations.md#resourceid) | string (800) | The unique identifier of the translated resource. Should use ASCII/English chars only. Shorter strings are suggested. Depending on Text_Type: T:TableName; C:ColumnName; H:TableName.ColumnName; E,M,S: Application specific code. `Required` `Filter(eq;like)` 
 | [ResourceType](Systems.Core.Translations.md#resourcetype) | [ResourceType](Systems.Core.Translations.md#resourcetype) | T=Table (entity) Name; C=Column Name; H=Column Hint; R=Meta Resource; E=Error; M=Message; S=Other application specific String. `Required` `Default("S")` `Filter(eq)` 
-| [RowVersion](Systems.Core.Translations.md#rowversion) | byte[] |  
 | [TranslationField](Systems.Core.Translations.md#translationfield) | string (max) | The translated text. `Required` 
 | [UpdateTime](Systems.Core.Translations.md#updatetime) | datetime | When the translation was last updated. `Required` `Default(Now)` `ReadOnly` 
 
@@ -84,6 +84,12 @@ _Supports Order By_: **False**
 _Maximum Length_: **8**  
 _Default Value_: **en**  
 
+### ObjectVersion
+
+_Type_: **int32**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+
 ### ResourceId
 
 The unique identifier of the translated resource. Should use ASCII/English chars only. Shorter strings are suggested. Depending on Text_Type: T:TableName; C:ColumnName; H:TableName.ColumnName; E,M,S: Application specific code. `Required` `Filter(eq;like)`
@@ -114,12 +120,6 @@ _Allowed Values (Systems.Core.TranslationsRepository.ResourceType Enum Members)_
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **OtherApplicationSpecific**  
-
-### RowVersion
-
-_Type_: **byte[]**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
 
 ### TranslationField
 

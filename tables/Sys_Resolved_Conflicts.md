@@ -11,6 +11,7 @@ Contains records of conflicts, which were automatically resolved by update proce
 
 | Name | Type | Description |
 | - | - | --- |
+|[__Object_Version](#__object_version)|`int` ||
 |[Conflict_Description](#conflict_description)|`nvarchar(400)` `ML`, Readonly|Description of the conflict.|
 |[Resolve_Confirmed_By_User](#resolve_confirmed_by_user)|`bit` |True, when the conflict resolution was manually confirmed by user.|
 |[Resolve_Confirmed_Time](#resolve_confirmed_time)|`datetime` Readonly|Time when the conflict resolution was confirmed by the user.|
@@ -23,6 +24,33 @@ Contains records of conflicts, which were automatically resolved by update proce
 |[URL](#url)|`nvarchar(254)` Readonly|URL of the item (the row) for which the conflict occurred.|
 
 ## Columns
+
+### __Object_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 ### Conflict_Description
 

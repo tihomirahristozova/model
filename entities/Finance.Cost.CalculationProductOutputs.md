@@ -27,9 +27,9 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [Id](Finance.Cost.CalculationProductOutputs.md#id) | guid |  
 | [LineNo](Finance.Cost.CalculationProductOutputs.md#lineno) | int32 | Consecutive number of the line within the calculation. `Required` 
+| [ObjectVersion](Finance.Cost.CalculationProductOutputs.md#objectversion) | int32 |  
 | [ProjectId](Finance.Cost.CalculationProductOutputs.md#projectid) | guid __nullable__ | The Project, which absorbed the cost. `Filter(multi eq)` 
 | [Quantity](Finance.Cost.CalculationProductOutputs.md#quantity) | decimal (18, 3) | The quantity produced. `Required` `Default(0)` 
-| [RowVersion](Finance.Cost.CalculationProductOutputs.md#rowversion) | byte[] |  
 
 ## References
 
@@ -67,6 +67,12 @@ _Back-End Default Expression:_
 
 _Front-End Recalc Expressions:_  
 `( obj.Calculation.ProductOutputs.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)`
+### ObjectVersion
+
+_Type_: **int32**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+
 ### ProjectId
 
 The Project, which absorbed the cost. `Filter(multi eq)`
@@ -82,12 +88,6 @@ _Type_: **decimal (18, 3)**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  
-
-### RowVersion
-
-_Type_: **byte[]**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
 
 
 ## Reference Details

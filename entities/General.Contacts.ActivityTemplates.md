@@ -9,7 +9,7 @@ Templates for automatical generation of activity from any document. Entity: Cm_A
 
 ## Default Visualization
 Default Display Text Format:  
-_{Id}: {RouteId}_  
+_{Id}: {ObjectVersion}_  
 Default Search Members:  
 __  
 
@@ -26,8 +26,8 @@ Aggregate Tree
 | [ActivitySubjectMask](General.Contacts.ActivityTemplates.md#activitysubjectmask) | string (max) __nullable__ | A mask that uses fields from the header table of the source document in the specified route and is used to fill the Subject of the generated activity. 
 | [AdditionalDays](General.Contacts.ActivityTemplates.md#additionaldays) | int32 | The number of days that will be added to the date in the Header_Date_Field. The result value is set to Start_Time of the activity. `Required` `Default(0)` 
 | [Id](General.Contacts.ActivityTemplates.md#id) | guid |  
+| [ObjectVersion](General.Contacts.ActivityTemplates.md#objectversion) | int32 |  
 | [ReminderTime](General.Contacts.ActivityTemplates.md#remindertime) | time __nullable__ | Time of the day for the reminder. 
-| [RowVersion](General.Contacts.ActivityTemplates.md#rowversion) | byte[] |  
 | [SourceDateField](General.Contacts.ActivityTemplates.md#sourcedatefield) | string (64) | A name of a field from the header or the document table of the source document in the specified route, that will be used along with Additional_Days to set the Start_Time of the generated activity. `Required` 
 | [StartTime](General.Contacts.ActivityTemplates.md#starttime) | time | The time of the day when the activity starts. `Required` 
 
@@ -66,6 +66,12 @@ _Indexed_: **True**
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
+### ObjectVersion
+
+_Type_: **int32**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+
 ### ReminderTime
 
 Time of the day for the reminder.
@@ -76,12 +82,6 @@ _Supports Order By_: **False**
 
 _Front-End Recalc Expressions:_  
 `IIF( ( obj.StartTime > FromMinutes( 30)), ( obj.StartTime - FromMinutes( 30)), obj.StartTime)`
-### RowVersion
-
-_Type_: **byte[]**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-
 ### SourceDateField
 
 A name of a field from the header or the document table of the source document in the specified route, that will be used along with Additional_Days to set the Start_Time of the generated activity. `Required`

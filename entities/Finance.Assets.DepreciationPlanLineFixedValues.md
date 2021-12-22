@@ -29,7 +29,7 @@ Aggregate Root:
 | [FixedValuePeriodMonth](Finance.Assets.DepreciationPlanLineFixedValues.md#fixedvalueperiodmonth) | byte | Month of the period for which the depreciation value is fixed. `Required` 
 | [FixedValuePeriodYear](Finance.Assets.DepreciationPlanLineFixedValues.md#fixedvalueperiodyear) | int16 | Year of the period for which the depreciation value is fixed. `Required` 
 | [Id](Finance.Assets.DepreciationPlanLineFixedValues.md#id) | guid |  
-| [RowVersion](Finance.Assets.DepreciationPlanLineFixedValues.md#rowversion) | byte[] |  
+| [ObjectVersion](Finance.Assets.DepreciationPlanLineFixedValues.md#objectversion) | int32 |  
 
 ## References
 
@@ -72,11 +72,11 @@ _Indexed_: **True**
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
-### RowVersion
+### ObjectVersion
 
-_Type_: **byte[]**  
+_Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Supports Order By_: ****  
 
 
 ## Reference Details

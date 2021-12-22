@@ -113,6 +113,11 @@ Aggregate Root:<br>
 <td></td>
 </tr>
 <tr>
+<td><a href="General.Products.ProductGroupRangeProperties.html#objectversion">ObjectVersion</a></td>
+<td>int32</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="General.Products.ProductGroupRangeProperties.html#propertyvalueslist">PropertyValuesList</a></td>
 <td>string (max) <strong>nullable</strong></td>
 <td>Contains the enumeration of all values in the alternating value set. Used only when Rage Type = E (enumeratio).</td>
@@ -121,11 +126,6 @@ Aggregate Root:<br>
 <td><a href="General.Products.ProductGroupRangeProperties.html#rangetype">RangeType</a></td>
 <td><a href="General.Products.ProductGroupRangeProperties.html#rangetype">RangeType</a></td>
 <td>Specifies the method of the creation of the value set: R - by range from-to; E - by enumeration of all values;. <code>Required</code> <code>Default(&quot;R&quot;)</code></td>
-</tr>
-<tr>
-<td><a href="General.Products.ProductGroupRangeProperties.html#rowversion">RowVersion</a></td>
-<td>byte[]</td>
-<td></td>
 </tr>
 <tr>
 <td><a href="General.Products.ProductGroupRangeProperties.html#topropertyvalue">ToPropertyValue</a></td>
@@ -168,6 +168,10 @@ Aggregate Root:<br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
+<h3 id="objectversion">ObjectVersion</h3>
+<p><em>Type</em>: <strong>int32</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****</p>
 <h3 id="propertyvalueslist">PropertyValuesList</h3>
 <p>Contains the enumeration of all values in the alternating value set. Used only when Rage Type = E (enumeratio).</p>
 <p><em>Type</em>: <strong>string (max) <strong>nullable</strong></strong><br>
@@ -200,10 +204,6 @@ Allowed values for the <code>RangeType</code>(General.Products.ProductGroupRange
 <p><em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Range</strong></p>
-<h3 id="rowversion">RowVersion</h3>
-<p><em>Type</em>: <strong>byte[]</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="topropertyvalue">ToPropertyValue</h3>
 <p>Ending value of the range of alternative values. Used only when Rage Type = R (range).</p>
 <p><em>Type</em>: <strong>string (254) <strong>nullable</strong></strong><br>

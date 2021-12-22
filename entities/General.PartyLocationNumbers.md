@@ -28,8 +28,8 @@ Aggregate Root:
 | [Id](General.PartyLocationNumbers.md#id) | guid |  
 | [LocationCodingSystem](General.PartyLocationNumbers.md#locationcodingsystem) | [LocationCodingSystem](General.PartyLocationNumbers.md#locationcodingsystem) | The coding system for which we are defining the location number. `Required` `Default("GLN")` `Filter(multi eq)` 
 | [LocationNumber](General.PartyLocationNumbers.md#locationnumber) | string (16) | The location number of Party. `Required` `Filter(multi eq;like)` `ORD` 
+| [ObjectVersion](General.PartyLocationNumbers.md#objectversion) | int32 |  
 | [PartnerLocationNumber](General.PartyLocationNumbers.md#partnerlocationnumber) | string (16) __nullable__ | The location number of the partner party for which we define the main Party location number. The location number of the main Party might be different depending on the location number of the partner party. null means that the location number is not dependent on the partner location number. `Filter(multi eq)` 
-| [RowVersion](General.PartyLocationNumbers.md#rowversion) | byte[] |  
 | [Significance](General.PartyLocationNumbers.md#significance) | int32 | Order of significance of the location number within the main Party. If there are multiple location numbers, only the most significant is used. 0 is the least significant and higher numbers indicate higher significance. `Required` `Default(0)` `Filter(multi eq;ge;le)` 
 
 ## References
@@ -76,6 +76,12 @@ _Supported Filters_: **Equals, Like, EqualsIn**
 _Supports Order By_: **True**  
 _Maximum Length_: **16**  
 
+### ObjectVersion
+
+_Type_: **int32**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+
 ### PartnerLocationNumber
 
 The location number of the partner party for which we define the main Party location number. The location number of the main Party might be different depending on the location number of the partner party. null means that the location number is not dependent on the partner location number. `Filter(multi eq)`
@@ -84,12 +90,6 @@ _Type_: **string (16) __nullable__**
 _Supported Filters_: **Equals, EqualsIn**  
 _Supports Order By_: **False**  
 _Maximum Length_: **16**  
-
-### RowVersion
-
-_Type_: **byte[]**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
 
 ### Significance
 

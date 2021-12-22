@@ -26,7 +26,7 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [Id](General.Sequences.md#id) | guid |  
 | [Name](General.Sequences.md#name) | string (50) | The name of this Sequence. `Required` `Filter(like)` 
-| [RowVersion](General.Sequences.md#rowversion) | byte[] |  
+| [ObjectVersion](General.Sequences.md#objectversion) | int32 |  
 | [SimultaneousTransactions](General.Sequences.md#simultaneoustransactions) | boolean | When false, specifies that the users will wait in a queue for a single numbering sequence generator. When true, the system will allow parallel numbering, by using any of the available sequence generators. However, parallel numbering has the drawback that, if no sequence generator is free, it will immediately throw exception, instead of waiting. So before setting to true, make sure that enough sequence generators are available. `Required` `Default(false)` 
 
 ## Child Collections
@@ -54,11 +54,11 @@ _Supported Filters_: **Like**
 _Supports Order By_: **False**  
 _Maximum Length_: **50**  
 
-### RowVersion
+### ObjectVersion
 
-_Type_: **byte[]**  
+_Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Supports Order By_: ****  
 
 ### SimultaneousTransactions
 

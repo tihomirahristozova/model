@@ -27,8 +27,8 @@ Aggregate Tree
 | [FullPath](Production.Resources.OperationGroups.md#fullpath) | string (254) | The full path to the operation group. The full path starts with, ends with and is delimited by the "/" (forward slash) character. `Required` `Default("")` `Filter(like)` 
 | [Id](Production.Resources.OperationGroups.md#id) | guid |  
 | [Name](Production.Resources.OperationGroups.md#name) | string (64) | The name of this OperationGroup. `Required` `Filter(like)` 
+| [ObjectVersion](Production.Resources.OperationGroups.md#objectversion) | int32 |  
 | [Parent](Production.Resources.OperationGroups.md#parent) | string (254) | Path of parent group. `Required` `Default("/")` `Filter(like)` `ORD` 
-| [RowVersion](Production.Resources.OperationGroups.md#rowversion) | byte[] |  
 
 ## Child Collections
 
@@ -65,6 +65,12 @@ _Supported Filters_: **Like**
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  
 
+### ObjectVersion
+
+_Type_: **int32**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+
 ### Parent
 
 Path of parent group. `Required` `Default("/")` `Filter(like)` `ORD`
@@ -75,12 +81,6 @@ _Supported Filters_: **Like**
 _Supports Order By_: **True**  
 _Maximum Length_: **254**  
 _Default Value_: **/**  
-
-### RowVersion
-
-_Type_: **byte[]**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
 
 
 

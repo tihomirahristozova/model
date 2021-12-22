@@ -27,7 +27,7 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [FilterXml](General.PropertyEnterpriseCompanyFilters.md#filterxml) | dataaccessfilter __nullable__ | When not null, specifies a filter for the allowed values of the property for the specified enterprise company. 
 | [Id](General.PropertyEnterpriseCompanyFilters.md#id) | guid |  
-| [RowVersion](General.PropertyEnterpriseCompanyFilters.md#rowversion) | byte[] |  
+| [ObjectVersion](General.PropertyEnterpriseCompanyFilters.md#objectversion) | int32 |  
 
 ## References
 
@@ -54,11 +54,11 @@ _Indexed_: **True**
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
-### RowVersion
+### ObjectVersion
 
-_Type_: **byte[]**  
+_Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Supports Order By_: ****  
 
 
 ## Reference Details

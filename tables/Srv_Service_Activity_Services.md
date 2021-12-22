@@ -17,6 +17,7 @@ Contains the services, which were actually performed during the service activity
 
 | Name | Type | Description |
 | - | - | --- |
+|[__Object_Version](#__object_version)|`int` ||
 |[Covered_By_Guarantee](#covered_by_guarantee)|`bit` |True when the performed service is covered by the guarantee.|
 |[Line_No](#line_no)|`int` |Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc.|
 |[Notes](#notes)|`nvarchar(254)` |Short notes for the service|
@@ -30,6 +31,33 @@ Contains the services, which were actually performed during the service activity
 |[Service_Object_Id](#service_object_id)|`uniqueidentifier` |The service object that was serviced. NULL means that it is unknown or N/A|
 
 ## Columns
+
+### __Object_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 ### Covered_By_Guarantee
 

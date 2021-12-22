@@ -140,14 +140,14 @@ Default Search Members:<br>
 <td>True when the mailbox messages are stored in encrypted format. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
+<td><a href="Applications.Mail.Boxes.html#objectversion">ObjectVersion</a></td>
+<td>int32</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="Applications.Mail.Boxes.html#resetonnextsync">ResetOnNextSync</a></td>
 <td>boolean</td>
 <td>Reset is pending: true = next sync should delete and retrieve again all messages; false = no pending reset. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code></td>
-</tr>
-<tr>
-<td><a href="Applications.Mail.Boxes.html#rowversion">RowVersion</a></td>
-<td>byte[]</td>
-<td></td>
 </tr>
 <tr>
 <td><a href="Applications.Mail.Boxes.html#sendserveraddress">SendServerAddress</a></td>
@@ -250,16 +250,16 @@ Default Search Members:<br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
+<h3 id="objectversion">ObjectVersion</h3>
+<p><em>Type</em>: <strong>int32</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****</p>
 <h3 id="resetonnextsync">ResetOnNextSync</h3>
 <p>Reset is pending: true = next sync should delete and retrieve again all messages; false = no pending reset. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
-<h3 id="rowversion">RowVersion</h3>
-<p><em>Type</em>: <strong>byte[]</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="sendserveraddress">SendServerAddress</h3>
 <p>The address of the server to use for sending mail. The same credentials as the sync server are used. When null, the mail will be sent using the default server, which is setup at the application server.</p>
 <p><em>Type</em>: <strong>string (254) <strong>nullable</strong></strong><br>

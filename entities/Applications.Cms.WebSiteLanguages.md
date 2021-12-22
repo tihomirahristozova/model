@@ -29,7 +29,7 @@ Aggregate Root:
 | [IsActive](Applications.Cms.WebSiteLanguages.md#isactive) | boolean | Specifies whether the support for the language is activated and should be published on the web. `Required` `Default(false)` 
 | [LanguageCode](Applications.Cms.WebSiteLanguages.md#languagecode) | string (2) | Two letter ISO language code. Sub-tags are currently not supported. `Required` 
 | [Notes](Applications.Cms.WebSiteLanguages.md#notes) | string (max) __nullable__ | Notes for this WebSiteLanguage. 
-| [RowVersion](Applications.Cms.WebSiteLanguages.md#rowversion) | byte[] |  
+| [ObjectVersion](Applications.Cms.WebSiteLanguages.md#objectversion) | int32 |  
 
 ## References
 
@@ -74,11 +74,11 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
 
-### RowVersion
+### ObjectVersion
 
-_Type_: **byte[]**  
+_Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
+_Supports Order By_: ****  
 
 
 ## Reference Details
