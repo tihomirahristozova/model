@@ -9810,7 +9810,19 @@
       "output": {
         ".html": {
           "relative_path": "business-rules/R32732.html",
-          "hash": "fMcqgSxXh40McIRyRUVyFA=="
+          "hash": "xqItLctFR4V0MCPI9Uy4YA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "business-rules/R32739.md",
+      "output": {
+        ".html": {
+          "relative_path": "business-rules/R32739.html",
+          "hash": "WFZ2rhZ8IDGb5H1LIO0Oxw=="
         }
       },
       "is_incremental": false,
@@ -12760,7 +12772,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Finance.Payments.PaymentSlips.html",
-          "hash": "nUUMZMrAjwemN23B9CNYIA=="
+          "hash": "aI3S1M0+a/y/ReTycPqccQ=="
         }
       },
       "is_incremental": false,
@@ -17286,7 +17298,7 @@
       "output": {
         ".html": {
           "relative_path": "reference/common-business-rules/master-detail.html",
-          "hash": "XHzlO+N9R9oVcAiRC5Rr0g=="
+          "hash": "S4Io4WqRI6mETD9SepqSbw=="
         }
       },
       "is_incremental": false,
