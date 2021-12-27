@@ -1663,6 +1663,9 @@ references:
 - uid: Systems.Core.UpdateProcedureExecutes
   name: Systems.Core.UpdateProcedureExecutes Entity
   href: entities/Systems.Core.UpdateProcedureExecutes.html
+- uid: Systems.Core.WebHooks
+  name: Systems.Core.WebHooks Entity
+  href: entities/Systems.Core.WebHooks.html
 - uid: Systems.Core.WebHosts
   name: Systems.Core.WebHosts Entity
   href: entities/Systems.Core.WebHosts.html
