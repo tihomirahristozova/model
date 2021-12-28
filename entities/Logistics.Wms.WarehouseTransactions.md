@@ -29,6 +29,8 @@ Aggregate Tree
 | [Id](Logistics.Wms.WarehouseTransactions.md#id) | guid |  
 | [ObjectVersion](Logistics.Wms.WarehouseTransactions.md#objectversion) | int32 |  
 | [Quantity](Logistics.Wms.WarehouseTransactions.md#quantity) | decimal (12, 3) | The transacted net change in quantity. Positive values indicate transactions. Negative values are used for adjustments. `Required` `Default(0)` `Filter(multi eq;ge;le)` 
+| [QuantityBase](Logistics.Wms.WarehouseTransactions.md#quantitybase) | decimal (12, 3) | Quantity in the base measurement unit of the product. `Required` `Introduced in version 22.1.5.9` 
+| [StandardQuantity](Logistics.Wms.WarehouseTransactions.md#standardquantity) | decimal (12, 3) | The theoretical quantity according to the current measurement dimensions of the product. Used to measure the execution. `Required` `Introduced in version 22.1.5.9` 
 
 ## References
 
@@ -103,6 +105,22 @@ _Type_: **decimal (12, 3)**
 _Supported Filters_: **Equals, GreaterThanOrLessThan, EqualsIn**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  
+
+### QuantityBase
+
+Quantity in the base measurement unit of the product. `Required` `Introduced in version 22.1.5.9`
+
+_Type_: **decimal (12, 3)**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+
+### StandardQuantity
+
+The theoretical quantity according to the current measurement dimensions of the product. Used to measure the execution. `Required` `Introduced in version 22.1.5.9`
+
+_Type_: **decimal (12, 3)**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 
 ## Reference Details

@@ -22,9 +22,11 @@ Represents increase or decrease in the quantity available in a warehouse locatio
 |[Product_Id](#product_id)|`uniqueidentifier` |The product, which was transacted.|
 |[Product_Variant_Id](#product_variant_id)|`uniqueidentifier` |The product variant, which was transacted. NULL when the transaction was not for a product variant.|
 |[Quantity](#quantity)|`decimal(12, 3)` |The transacted net change in quantity. Positive values indicate transactions. Negative values are used for adjustments.|
+|[Quantity_Base](#quantity_base)|`decimal(12, 3)` |Quantity in the base measurement unit of the product.|
 |[Quantity_Unit_Id](#quantity_unit_id)|`uniqueidentifier` |The measurement unit of quantity.|
 |[Row_Version](#row_version)|`timestamp` ||
 |[Serial_Number_Id](#serial_number_id)|`uniqueidentifier` |The serial number which was transacted. NULL when the transaction was not for a specific serial number.|
+|[Standard_Quantity](#standard_quantity)|`decimal(12, 3)` |The theoretical quantity according to the current measurement dimensions of the product. Used to measure the execution.|
 |[Warehouse_Id](#warehouse_id)|`uniqueidentifier` |The warehouse in which the transaction occurred.|
 |[Warehouse_Location_Id](#warehouse_location_id)|`uniqueidentifier` |The warehouse location, where the transaction occurred.|
 |[Warehouse_Order_Id](#warehouse_order_id)|`uniqueidentifier` |The order which created this transaction. NULL when this transaction was not based on order.|
@@ -417,6 +419,36 @@ The transacted net change in quantity. Positive values indicate transactions. Ne
 |Equals|`NULL`|no|no|
 |GreaterThanOrLessThan|None|no|no|
 
+### Quantity_Base
+
+
+Quantity in the base measurement unit of the product.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|decimal(12, 3)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
 ### Quantity_Unit_Id
 
 
@@ -517,6 +549,36 @@ The serial number which was transacted. NULL when the transaction was not for a 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|yes|no|
+
+### Standard_Quantity
+
+
+The theoretical quantity according to the current measurement dimensions of the product. Used to measure the execution.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|decimal(12, 3)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
 
 ### Warehouse_Id
 
