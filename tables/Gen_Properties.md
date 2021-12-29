@@ -70,7 +70,7 @@ When not NULL, specifies that the allowed values are retrieved from the specifie
 |Default Value|None|
 |Enter Stop|no|
 |Ignore for Insert Order|no|
-|Is Entity Name|no|
+|Is Entity Name|yes|
 |Max Length|64|
 |Order|2147483647|
 |Ownership Reference|no|
@@ -102,7 +102,7 @@ When not NULL specifies the filter to apply when extracting allowed values from 
 | Property | Value |
 | - | - |
 |Auto Complete|no|
-|Data Filter|no|
+|Data Filter|yes|
 |Default Value|None|
 |Enter Stop|no|
 |Ignore for Insert Order|no|
@@ -210,7 +210,7 @@ The entity for which the property is applicable.
 |Default Value|None|
 |Enter Stop|no|
 |Ignore for Insert Order|no|
-|Is Entity Name|no|
+|Is Entity Name|yes|
 |Max Length|64|
 |Order|2147483647|
 |Ownership Reference|no|

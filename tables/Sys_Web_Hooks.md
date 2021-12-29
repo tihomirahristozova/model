@@ -14,13 +14,13 @@ Webhook templates. Activated by business rules or other means. Entity: Sys_Web_H
 |[__Object_Version](#__object_version)|`int` ||
 |[Body](#body)|`nvarchar(max)` |The body of the POST request (interpolated string).|
 |[Code](#code)|`nvarchar(32)` ||
-|[Entity_Type](#entity_type)|`nvarchar(128)` |The entity type for which the webhook is setup. All interpolated strings will be evaluated in the context of entities of the specified type.|
 |[Headers](#headers)|`nvarchar(max)` |Optional headers for the request (interpolated string). Each header is specified on a separate line.|
-|[Id](#id)|`uniqueidentifier` `PK`||
-|[Name](#name)|`nvarchar(254)` `ML`|Webhook template name (multi-language).|
+|[Name](#name)|`nvarchar(254)` `ML`|Webhook name (multi-language).|
 |[Notes](#notes)|`nvarchar(max)` ||
+|[Repository_Name](#repository_name)|`nvarchar(128)` |The name of the repository for which the webhook is setup. All interpolated strings will be evaluated in the context of entities of the specified type.|
 |[Retry_Logic](#retry_logic)|`nvarchar(1)` Allowed: `0`, `3`|0=Don't retry (default); 3=Retry up to 3 times|
 |[URL](#url)|`nvarchar(2000)` |The destination URL, which should be called by the webhook (interpolated string).|
+|[Web_Hook_Id](#web_hook_id)|`uniqueidentifier` `PK`||
 
 ## Columns
 
@@ -115,43 +115,6 @@ The body of the POST request (interpolated string).
 |Equals|`NULL`|no|no|
 |Like|None|no|no|
 
-### Entity_Type
-
-
-The entity type for which the webhook is setup. All interpolated strings will be evaluated in the context of entities of the specified type.
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|128|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|nvarchar(128)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|yes|
-
-#### Entity_Type - Supported Filters
-
-| Filter Type | Default | Include Nulls | Hidden by Default |
-| - | - | - | - |
-|Equals|`NULL`|no|no|
-|Like|None|no|no|
-
 ### Headers
 
 
@@ -182,43 +145,10 @@ Optional headers for the request (interpolated string). Each header is specified
 |User Login|no|
 |Visible|yes|
 
-### Id
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|NewGuid|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|yes (order: 1)|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|yes|
-|Type|uniqueidentifier|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
-
-#### Id - Supported Filters
-
-| Filter Type | Default | Include Nulls | Hidden by Default |
-| - | - | - | - |
-|Equals|`NULL`|no|no|
-
 ### Name
 
 
-Webhook template name (multi-language).
+Webhook name (multi-language).
 
 | Property | Value |
 | - | - |
@@ -277,6 +207,43 @@ Webhook template name (multi-language).
 |UI Width|Medium|
 |User Login|no|
 |Visible|yes|
+
+### Repository_Name
+
+
+The name of the repository for which the webhook is setup. All interpolated strings will be evaluated in the context of entities of the specified type.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|128|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|nvarchar(128)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Repository_Name - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|no|no|
+|Like|None|no|no|
 
 ### Retry_Logic
 
@@ -338,5 +305,38 @@ The destination URL, which should be called by the webhook (interpolated string)
 |UI Width|Medium|
 |User Login|no|
 |Visible|yes|
+
+### Web_Hook_Id
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|NewGuid|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|yes (order: 1)|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
+
+#### Web_Hook_Id - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|no|no|
 
 

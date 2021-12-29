@@ -113,11 +113,6 @@ Default Search Members:<br>
 <td>The unique code of the WebHook. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></td>
 </tr>
 <tr>
-<td><a href="Systems.Core.WebHooks.html#entitytype">EntityType</a></td>
-<td>string (128)</td>
-<td>The entity type for which the webhook is setup. All interpolated strings will be evaluated in the context of entities of the specified type. <code>Required</code> <code>Filter(eq;like)</code></td>
-</tr>
-<tr>
 <td><a href="Systems.Core.WebHooks.html#headers">Headers</a></td>
 <td>string (max) <strong>nullable</strong></td>
 <td>Optional headers for the request (interpolated string). Each header is specified on a separate line.</td>
@@ -130,7 +125,7 @@ Default Search Members:<br>
 <tr>
 <td><a href="Systems.Core.WebHooks.html#name">Name</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString</a></td>
-<td>Webhook template name (multi-language). <code>Required</code> <code>Filter(like)</code></td>
+<td>Webhook name (multi-language). <code>Required</code> <code>Filter(like)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Core.WebHooks.html#notes">Notes</a></td>
@@ -141,6 +136,11 @@ Default Search Members:<br>
 <td><a href="Systems.Core.WebHooks.html#objectversion">ObjectVersion</a></td>
 <td>int32</td>
 <td></td>
+</tr>
+<tr>
+<td><a href="Systems.Core.WebHooks.html#repositoryname">RepositoryName</a></td>
+<td>string (128)</td>
+<td>The name of the repository for which the webhook is setup. All interpolated strings will be evaluated in the context of entities of the specified type. <code>Required</code> <code>Filter(eq;like)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Core.WebHooks.html#retrylogic">RetryLogic</a></td>
@@ -168,12 +168,6 @@ Default Search Members:<br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>True</strong><br>
 <em>Maximum Length</em>: <strong>32</strong></p>
-<h3 id="entitytype">EntityType</h3>
-<p>The entity type for which the webhook is setup. All interpolated strings will be evaluated in the context of entities of the specified type. <code>Required</code> <code>Filter(eq;like)</code></p>
-<p><em>Type</em>: <strong>string (128)</strong><br>
-<em>Supported Filters</em>: <strong>Equals, Like</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Maximum Length</em>: <strong>128</strong></p>
 <h3 id="headers">Headers</h3>
 <p>Optional headers for the request (interpolated string). Each header is specified on a separate line.</p>
 <p><em>Type</em>: <strong>string (max) <strong>nullable</strong></strong><br>
@@ -186,7 +180,7 @@ Default Search Members:<br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="name">Name</h3>
-<p>Webhook template name (multi-language). <code>Required</code> <code>Filter(like)</code></p>
+<p>Webhook name (multi-language). <code>Required</code> <code>Filter(like)</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a></strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -200,6 +194,12 @@ Default Search Members:<br>
 <p><em>Type</em>: <strong>int32</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: ****</p>
+<h3 id="repositoryname">RepositoryName</h3>
+<p>The name of the repository for which the webhook is setup. All interpolated strings will be evaluated in the context of entities of the specified type. <code>Required</code> <code>Filter(eq;like)</code></p>
+<p><em>Type</em>: <strong>string (128)</strong><br>
+<em>Supported Filters</em>: <strong>Equals, Like</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>128</strong></p>
 <h3 id="retrylogic">RetryLogic</h3>
 <p>0=Don't retry (default); 3=Retry up to 3 times. <code>Required</code> <code>Default(&quot;0&quot;)</code></p>
 <p><em>Type</em>: <strong><a href="Systems.Core.WebHooks.html#retrylogic">RetryLogic</a></strong><br>

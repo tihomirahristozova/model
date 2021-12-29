@@ -29,8 +29,8 @@ Aggregate Tree
 | [Id](Logistics.Wms.WarehouseTransactions.md#id) | guid |  
 | [ObjectVersion](Logistics.Wms.WarehouseTransactions.md#objectversion) | int32 |  
 | [Quantity](Logistics.Wms.WarehouseTransactions.md#quantity) | decimal (12, 3) | The transacted net change in quantity. Positive values indicate transactions. Negative values are used for adjustments. `Required` `Default(0)` `Filter(multi eq;ge;le)` 
-| [QuantityBase](Logistics.Wms.WarehouseTransactions.md#quantitybase) | decimal (12, 3) | Quantity in the base measurement unit of the product. `Required` `Introduced in version 22.1.5.9` 
-| [StandardQuantity](Logistics.Wms.WarehouseTransactions.md#standardquantity) | decimal (12, 3) | The theoretical quantity according to the current measurement dimensions of the product. Used to measure the execution. `Required` `Introduced in version 22.1.5.9` 
+| [QuantityBase](Logistics.Wms.WarehouseTransactions.md#quantitybase) | [Quantity (12, 3)](../data-types.md#quantity) | Quantity in the base measurement unit of the product. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Introduced in version 22.1.5.9` 
+| [StandardQuantity](Logistics.Wms.WarehouseTransactions.md#standardquantity) | [Quantity (12, 3)](../data-types.md#quantity) | The theoretical quantity according to the current measurement dimensions of the product. Used to measure the execution. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Introduced in version 22.1.5.9` 
 
 ## References
 
@@ -108,17 +108,17 @@ _Default Value_: **0**
 
 ### QuantityBase
 
-Quantity in the base measurement unit of the product. `Required` `Introduced in version 22.1.5.9`
+Quantity in the base measurement unit of the product. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Introduced in version 22.1.5.9`
 
-_Type_: **decimal (12, 3)**  
+_Type_: **[Quantity (12, 3)](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
 ### StandardQuantity
 
-The theoretical quantity according to the current measurement dimensions of the product. Used to measure the execution. `Required` `Introduced in version 22.1.5.9`
+The theoretical quantity according to the current measurement dimensions of the product. Used to measure the execution. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Introduced in version 22.1.5.9`
 
-_Type_: **decimal (12, 3)**  
+_Type_: **[Quantity (12, 3)](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 

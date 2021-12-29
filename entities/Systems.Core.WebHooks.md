@@ -25,12 +25,12 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [Body](Systems.Core.WebHooks.md#body) | string (max) __nullable__ | The body of the POST request (interpolated string). 
 | [Code](Systems.Core.WebHooks.md#code) | string (32) | The unique code of the WebHook. `Required` `Filter(eq;like)` `ORD` 
-| [EntityType](Systems.Core.WebHooks.md#entitytype) | string (128) | The entity type for which the webhook is setup. All interpolated strings will be evaluated in the context of entities of the specified type. `Required` `Filter(eq;like)` 
 | [Headers](Systems.Core.WebHooks.md#headers) | string (max) __nullable__ | Optional headers for the request (interpolated string). Each header is specified on a separate line. 
 | [Id](Systems.Core.WebHooks.md#id) | guid |  
-| [Name](Systems.Core.WebHooks.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Webhook template name (multi-language). `Required` `Filter(like)` 
+| [Name](Systems.Core.WebHooks.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Webhook name (multi-language). `Required` `Filter(like)` 
 | [Notes](Systems.Core.WebHooks.md#notes) | string (max) __nullable__ | Notes for this WebHook. 
 | [ObjectVersion](Systems.Core.WebHooks.md#objectversion) | int32 |  
+| [RepositoryName](Systems.Core.WebHooks.md#repositoryname) | string (128) | The name of the repository for which the webhook is setup. All interpolated strings will be evaluated in the context of entities of the specified type. `Required` `Filter(eq;like)` 
 | [RetryLogic](Systems.Core.WebHooks.md#retrylogic) | [RetryLogic](Systems.Core.WebHooks.md#retrylogic) | 0=Don't retry (default); 3=Retry up to 3 times. `Required` `Default("0")` 
 | [URL](Systems.Core.WebHooks.md#url) | string (2000) | The destination URL, which should be called by the webhook (interpolated string). `Required` 
 
@@ -56,15 +56,6 @@ _Supported Filters_: **Equals, Like**
 _Supports Order By_: **True**  
 _Maximum Length_: **32**  
 
-### EntityType
-
-The entity type for which the webhook is setup. All interpolated strings will be evaluated in the context of entities of the specified type. `Required` `Filter(eq;like)`
-
-_Type_: **string (128)**  
-_Supported Filters_: **Equals, Like**  
-_Supports Order By_: **False**  
-_Maximum Length_: **128**  
-
 ### Headers
 
 Optional headers for the request (interpolated string). Each header is specified on a separate line.
@@ -83,7 +74,7 @@ _Default Value_: **NewGuid**
 
 ### Name
 
-Webhook template name (multi-language). `Required` `Filter(like)`
+Webhook name (multi-language). `Required` `Filter(like)`
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Supported Filters_: **Like**  
@@ -103,6 +94,15 @@ _Maximum Length_: **2147483647**
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
+
+### RepositoryName
+
+The name of the repository for which the webhook is setup. All interpolated strings will be evaluated in the context of entities of the specified type. `Required` `Filter(eq;like)`
+
+_Type_: **string (128)**  
+_Supported Filters_: **Equals, Like**  
+_Supports Order By_: **False**  
+_Maximum Length_: **128**  
 
 ### RetryLogic
 
