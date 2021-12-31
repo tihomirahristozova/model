@@ -19,6 +19,7 @@ Webhook templates. Activated by business rules or other means. Entity: Sys_Web_H
 |[Notes](#notes)|`nvarchar(max)` ||
 |[Repository_Name](#repository_name)|`nvarchar(128)` |The name of the repository for which the webhook is setup. All interpolated strings will be evaluated in the context of entities of the specified type.|
 |[Retry_Logic](#retry_logic)|`nvarchar(1)` Allowed: `0`, `3`|0=Don't retry (default); 3=Retry up to 3 times|
+|[Row_Version](#row_version)|`timestamp` ||
 |[URL](#url)|`nvarchar(2000)` |The destination URL, which should be called by the webhook (interpolated string).|
 |[Web_Hook_Id](#web_hook_id)|`uniqueidentifier` `PK`||
 
@@ -275,6 +276,33 @@ The name of the repository for which the webhook is setup. All interpolated stri
 |UI Width|Medium|
 |User Login|no|
 |Visible|yes|
+
+### Row_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|timestamp|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 ### URL
 
