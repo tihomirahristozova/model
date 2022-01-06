@@ -192,7 +192,7 @@ Methods that can be invoked in public APIs.
 
 ### GetAllowedCustomPropertyValues
 
-Gets the allowed values for the specified custom property for this entity object.              If supported the result is ordered by property value. Some property value sources does not support ordering.  
+Gets the allowed values for the specified custom property for this entity object.              If supported the result is ordered by property value. Some property value sources do not support ordering - in that case the result is not ordered.  
 _Return Type_: **Collection Of [CustomPropertyValue](../data-types.md#general.custompropertyvalue)**  
 _Declaring Type_: **EntityObject**  
 _Domain API Request_: **GET**  
@@ -203,7 +203,7 @@ _Domain API Request_: **GET**
     _Type_: string  
 
   * **search**  
-    The search text - searches by value or description  
+    The search text - searches by value or description. Can contain wildcard character %.  
     _Type_: string  
      _Optional_: True  
     _Default Value_: null  
