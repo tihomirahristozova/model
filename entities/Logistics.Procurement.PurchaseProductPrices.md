@@ -9,7 +9,7 @@ Contains purchase prices of the products. Used for automatically loading unit pr
 
 ## Default Visualization
 Default Display Text Format:  
-_{Id}: {ObjectVersion}_  
+_{Id}: {MaxQuantityValue}_  
 Default Search Members:  
 __  
 
@@ -23,6 +23,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [DisplayText](Logistics.Procurement.PurchaseProductPrices.md#displaytext) | string |  
 | [FromDate](Logistics.Procurement.PurchaseProductPrices.md#fromdate) | datetime __nullable__ | Starting date of validity of the price. `Filter(eq;ge;le)` 
 | [Id](Logistics.Procurement.PurchaseProductPrices.md#id) | guid |  
 | [MaxQuantity](Logistics.Procurement.PurchaseProductPrices.md#maxquantity) | [Quantity (18, 3)](../data-types.md#quantity) __nullable__ | Maximum quantity for which this price is valid in the Price_Quantity_<br />Measurement_Unit. `Unit: PriceQuantityMeasurement<br />Unit` `Filter(eq)` 
@@ -47,6 +48,12 @@ Aggregate Tree
 
 
 ## Attribute Details
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### FromDate
 

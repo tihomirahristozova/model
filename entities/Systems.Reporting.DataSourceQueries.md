@@ -12,6 +12,8 @@ Default Display Text Format:
 _{TableName}_  
 Default Search Members:  
 _TableName_  
+Name Data Member:  
+_TableName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -26,6 +28,7 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [DependsOnChildRows](Systems.Reporting.DataSourceQueries.md#dependsonchildrows) | [DependsOnChildRows](Systems.Reporting.DataSourceQueries.md#dependsonchildrows) | Determines the visibility of rows in this table. 0 - allways visible; 1 - the row is visible if there is at least one child row; 2 - the row is visible if all sub-tables contain child rows. `Required` `Default(0)` 
+| [DisplayText](Systems.Reporting.DataSourceQueries.md#displaytext) | string |  
 | [ExtensionsList](Systems.Reporting.DataSourceQueries.md#extensionslist) | string (max) __nullable__ | A comma separated list of report extension names. An extension is set of additional fields that participate in the query. 
 | [FilterXml](Systems.Reporting.DataSourceQueries.md#filterxml) | dataaccessfilter __nullable__ | Filter for the loaded table. 
 | [FirstRow](Systems.Reporting.DataSourceQueries.md#firstrow) | boolean | Specifies, that only the first row of the current query will be retrieved. Used and applied only when the data source type is not multitable. `Required` `Default(false)` 
@@ -61,6 +64,12 @@ _Allowed Values (Systems.Reporting.DataSourceQueriesRepository.DependsOnChildRow
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### ExtensionsList
 

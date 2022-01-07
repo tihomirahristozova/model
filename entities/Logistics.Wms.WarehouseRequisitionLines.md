@@ -25,6 +25,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [DisplayText](Logistics.Wms.WarehouseRequisitionLines.md#displaytext) | string |  
 | [Id](Logistics.Wms.WarehouseRequisitionLines.md#id) | guid |  
 | [LineNo](Logistics.Wms.WarehouseRequisitionLines.md#lineno) | int32 | The unique, consecutive line number within the requisition. `Required` 
 | [Notes](Logistics.Wms.WarehouseRequisitionLines.md#notes) | string (max) __nullable__ | Notes for this WarehouseRequisitionLine. 
@@ -49,6 +50,12 @@ Aggregate Root:
 
 
 ## Attribute Details
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

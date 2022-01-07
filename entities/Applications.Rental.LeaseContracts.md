@@ -13,6 +13,8 @@ Default Display Text Format:
 _{DocumentType.TypeName:T} {DocumentNo}_  
 Default Search Members:  
 _DocumentNo_  
+Code Data Member:  
+_DocumentNo_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -43,6 +45,7 @@ Aggregate Tree
 | [CreationTime](Applications.Rental.LeaseContracts.md#creationtime) | datetime | Date/Time when the document was created. `Required` `Default(Now)` `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [CreationUser](Applications.Rental.LeaseContracts.md#creationuser) | string (64) | The login name of the user, who created the document. `Required` `Filter(like)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [CreditLimitOverride](Applications.Rental.LeaseContracts.md#creditlimitoverride) | boolean | Specifies whether the sales orders for rent and consumables that are created by this contract are allowed to be released even in the case of violations of credit limit or presence of overdue receivables. `Required` `Default(false)` 
+| [DisplayText](Applications.Rental.LeaseContracts.md#displaytext) | string |  
 | [DocumentDate](Applications.Rental.LeaseContracts.md#documentdate) | date | The date on which the document was issued. `Required` `Default(Today)` `Filter(eq;ge;le)` `ORD` (Inherited from [Documents](General.Documents.md)) 
 | [DocumentNo](Applications.Rental.LeaseContracts.md#documentno) | string (20) | Document number, unique within Document_Type_Id. `Required` `Filter(eq;like)` `ORD` (Inherited from [Documents](General.Documents.md)) 
 | [DocumentNotes](Applications.Rental.LeaseContracts.md#documentnotes) | string (max) __nullable__ | Notes for this Document. (Inherited from [Documents](General.Documents.md)) 
@@ -169,6 +172,12 @@ _Type_: **boolean**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **False**  
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### DocumentDate
 

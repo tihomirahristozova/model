@@ -9,7 +9,7 @@ Stores information about vehicle locations. Entity: Fleet_Vehicle_Location_Histo
 
 ## Default Visualization
 Default Display Text Format:  
-_{Id}: {ObjectVersion}_  
+_{Id}: {VehicleId}_  
 Default Search Members:  
 __  
 
@@ -24,6 +24,7 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [CurrentSpeedKmH](Applications.Fleet.VehicleLocationHistoryRecords.md#currentspeedkmh) | int32 __nullable__ | The current speed of the vehicle in km/h. null means the speed is unknown. `Introduced in version 19.1` 
+| [DisplayText](Applications.Fleet.VehicleLocationHistoryRecords.md#displaytext) | string |  
 | [Id](Applications.Fleet.VehicleLocationHistoryRecords.md#id) | guid |  
 | [Latitude](Applications.Fleet.VehicleLocationHistoryRecords.md#latitude) | decimal (10, 7) | Latitude of the vehicle at the specified time. Latitude is the vertical angle from equator to the pole of the point. Positive values denote points north of the equator. The value is in the range `-90, 90`. `Required` 
 | [Longitude](Applications.Fleet.VehicleLocationHistoryRecords.md#longitude) | decimal (10, 7) | Longitude of the vehicle at the specified time. Longitude is angle from the prime meridian (in England) in east-west direction. Positive values denote east and negative - west. The value is in the range `-180, 180`. `Required` 
@@ -46,6 +47,12 @@ The current speed of the vehicle in km/h. null means the speed is unknown. `Intr
 _Type_: **int32 __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

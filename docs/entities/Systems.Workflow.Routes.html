@@ -85,6 +85,8 @@
 <p>Default Display Text Format:<br>
 <em>{ProcedureName}</em><br>
 Default Search Members:<br>
+<em>ProcedureName</em><br>
+Name Data Member:<br>
 <em>ProcedureName</em></p>
 <h2 id="aggregate">Aggregate</h2>
 <p>An <a href="https://docs.erp.net/tech/advanced/concepts/aggregates.html">aggregate</a> is a cluster of domain objects that can be treated as a single unit.</p>
@@ -146,6 +148,11 @@ Aggregate Root:<br>
 <td><a href="Systems.Workflow.Routes.html#destinationstate">DestinationState</a></td>
 <td><a href="Systems.Workflow.Routes.html#destinationstate">DocumentState</a></td>
 <td>0=New;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed. <code>Required</code></td>
+</tr>
+<tr>
+<td><a href="Systems.Workflow.Routes.html#displaytext">DisplayText</a></td>
+<td>string</td>
+<td></td>
 </tr>
 <tr>
 <td><a href="Systems.Workflow.Routes.html#id">Id</a></td>
@@ -443,6 +450,10 @@ Enumeration of document system states<br>
 </table>
 <p><em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="displaytext">DisplayText</h3>
+<p><em>Type</em>: <strong>string</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****</p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>

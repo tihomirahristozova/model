@@ -85,7 +85,11 @@
 <p>Default Display Text Format:<br>
 <em>{Name}</em><br>
 Default Search Members:<br>
-<em>Code; Name</em></p>
+<em>Code; Name</em><br>
+Code Data Member:<br>
+<em>Code</em><br>
+Name Data Member:<br>
+<em>Name</em></p>
 <h2 id="aggregate">Aggregate</h2>
 <p>An <a href="https://docs.erp.net/tech/advanced/concepts/aggregates.html">aggregate</a> is a cluster of domain objects that can be treated as a single unit.</p>
 <p>Aggregate Tree</p>
@@ -116,6 +120,11 @@ Default Search Members:<br>
 <td><a href="Crm.DiscountTypes.html#code">Code</a></td>
 <td>string (32)</td>
 <td>The unique code of the DiscountType. <code>Required</code> <code>Filter(eq)</code></td>
+</tr>
+<tr>
+<td><a href="Crm.DiscountTypes.html#displaytext">DisplayText</a></td>
+<td>string</td>
+<td></td>
 </tr>
 <tr>
 <td><a href="Crm.DiscountTypes.html#id">Id</a></td>
@@ -215,6 +224,10 @@ Allowed values for the <code>CalculationMethod</code>(Crm.DiscountTypes.md#calcu
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>32</strong></p>
+<h3 id="displaytext">DisplayText</h3>
+<p><em>Type</em>: <strong>string</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****</p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>

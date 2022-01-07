@@ -12,6 +12,10 @@ Default Display Text Format:
 _{Name:T}_  
 Default Search Members:  
 _Code; Name_  
+Code Data Member:  
+_Code_  
+Name Data Member:  
+_Name_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -24,6 +28,7 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Code](General.Documents.DocumentPartyRoles.md#code) | string (32) | The unique code of the DocumentPartyRole. `Required` `Filter(eq;like)` `ORD` 
+| [DisplayText](General.Documents.DocumentPartyRoles.md#displaytext) | string |  
 | [Id](General.Documents.DocumentPartyRoles.md#id) | guid |  
 | [Name](General.Documents.DocumentPartyRoles.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Party role name (multi-language). `Required` `Filter(eq;like)` 
 | [Notes](General.Documents.DocumentPartyRoles.md#notes) | string (max) __nullable__ | Notes for this DocumentPartyRole. 
@@ -41,6 +46,12 @@ _Indexed_: **True**
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
 _Maximum Length_: **32**  
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

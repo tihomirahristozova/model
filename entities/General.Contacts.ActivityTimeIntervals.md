@@ -12,6 +12,8 @@ Default Display Text Format:
 _{Party.PartyName:T}_  
 Default Search Members:  
 _Party.PartyName_  
+Name Data Member:  
+_Party.PartyName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -26,6 +28,7 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Date](General.Contacts.ActivityTimeIntervals.md#date) | date | The date on which the work was performed. `Required` `Filter(eq;ge;le)` 
+| [DisplayText](General.Contacts.ActivityTimeIntervals.md#displaytext) | string |  
 | [EndTime](General.Contacts.ActivityTimeIntervals.md#endtime) | time | The ending time of the time interval within 'Date'. `Required` `Filter(ge;le)` 
 | [ExecutionCompletePercent](General.Contacts.ActivityTimeIntervals.md#executioncompletepercent) | decimal (3, 2) | Percent of task completed. `Required` `Default(0)` `Filter(ge;le)` 
 | [Id](General.Contacts.ActivityTimeIntervals.md#id) | guid |  
@@ -52,6 +55,12 @@ The date on which the work was performed. `Required` `Filter(eq;ge;le)`
 _Type_: **date**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### EndTime
 

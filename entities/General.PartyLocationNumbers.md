@@ -12,6 +12,10 @@ Default Display Text Format:
 _{Party.PartyName:T}_  
 Default Search Members:  
 _LocationNumber; Party.PartyName_  
+Code Data Member:  
+_LocationNumber_  
+Name Data Member:  
+_Party.PartyName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -25,6 +29,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [DisplayText](General.PartyLocationNumbers.md#displaytext) | string |  
 | [Id](General.PartyLocationNumbers.md#id) | guid |  
 | [LocationCodingSystem](General.PartyLocationNumbers.md#locationcodingsystem) | [LocationCodingSystem](General.PartyLocationNumbers.md#locationcodingsystem) | The coding system for which we are defining the location number. `Required` `Default("GLN")` `Filter(multi eq)` 
 | [LocationNumber](General.PartyLocationNumbers.md#locationnumber) | string (16) | The location number of Party. `Required` `Filter(multi eq;like)` `ORD` 
@@ -41,6 +46,12 @@ Aggregate Root:
 
 
 ## Attribute Details
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

@@ -123,6 +123,11 @@ Aggregate Root:<br>
 <td>Determines whether the material cost is distributed among all produced products, or only one (specified in the Work Order Item Ingredient). <code>Required</code> <code>Filter(eq)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
+<td><a href="Production.ShopFloor.ConsumptionOrderLines.html#displaytext">DisplayText</a></td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
 <td><a href="Production.ShopFloor.ConsumptionOrderLines.html#id">Id</a></td>
 <td>guid</td>
 <td></td>
@@ -259,6 +264,10 @@ Allowed values for the <code>ConsumptionType</code>(Production.ShopFloor.Consump
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>IIF( ( ( obj.WorkOrderItemIngredient != null) AndAlso ( obj.WorkOrderItemIngredient.WorkOrderItem != null)), ForSpecifiedItem, ForAllItems)</code></p>
+<h3 id="displaytext">DisplayText</h3>
+<p><em>Type</em>: <strong>string</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****</p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>

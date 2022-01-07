@@ -12,6 +12,8 @@ Default Display Text Format:
 _{ParentName}_  
 Default Search Members:  
 _ParentName_  
+Name Data Member:  
+_ParentName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -31,6 +33,7 @@ Aggregate Tree
 | [ConsentImage](Applications.PersonalData.ProcessingConsents.md#consentimage) | byte[] __nullable__ | If not null, it is a graphical image, containing additional information for the consent. 
 | [ConsentText](Applications.PersonalData.ProcessingConsents.md#consenttext) | string (max) __nullable__ | The actual text of the consent. `Filter(like)` 
 | [ConsentType](Applications.PersonalData.ProcessingConsents.md#consenttype) | [ConsentType](Applications.PersonalData.ProcessingConsents.md#consenttype) | The way the consent was given. O=Online; I=Implicit; V=Verbal; W=Written; E=Email; T=Other (should be stated in Notes). `Required` `Filter(eq)` 
+| [DisplayText](Applications.PersonalData.ProcessingConsents.md#displaytext) | string |  
 | [GivenOnUtc](Applications.PersonalData.ProcessingConsents.md#givenonutc) | datetime | The date and time (in Utc), when the consent was given. `Required` `Filter(ge;le)` 
 | [Id](Applications.PersonalData.ProcessingConsents.md#id) | guid |  
 | [IsActive](Applications.PersonalData.ProcessingConsents.md#isactive) | boolean | Whether the consent is active or retracted. Once retracted, the consent record cannot be modified again and a new consent should be given. `Required` `Default(true)` `Filter(eq)` 
@@ -134,6 +137,12 @@ _Allowed Values (Applications.PersonalData.ProcessingConsentsRepository.ConsentT
 
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### GivenOnUtc
 

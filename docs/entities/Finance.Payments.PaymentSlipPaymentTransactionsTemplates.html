@@ -83,7 +83,7 @@
 <p>Contains options for generation of payment transactions. Each option set is assigned to specific generation route. Entity: Cash_Payment_Slip_Payment_Transactions_Templates (Introduced in version 19.1)</p>
 <h2 id="default-visualization">Default Visualization</h2>
 <p>Default Display Text Format:<br>
-<em>{Id}: {ObjectVersion}</em><br>
+<em>{Id}: {RouteId}</em><br>
 Default Search Members:<br>
 __</p>
 <h2 id="aggregate">Aggregate</h2>
@@ -111,6 +111,11 @@ __</p>
 <td><a href="Finance.Payments.PaymentSlipPaymentTransactionsTemplates.html#createincomepayments">CreateIncomePayments</a></td>
 <td>boolean</td>
 <td>True if the generation creates payment transactions for Payment Slip Amounts with direction Income. <code>Required</code> <code>Filter(eq)</code></td>
+</tr>
+<tr>
+<td><a href="Finance.Payments.PaymentSlipPaymentTransactionsTemplates.html#displaytext">DisplayText</a></td>
+<td>string</td>
+<td></td>
 </tr>
 <tr>
 <td><a href="Finance.Payments.PaymentSlipPaymentTransactionsTemplates.html#id">Id</a></td>
@@ -152,6 +157,10 @@ __</p>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="displaytext">DisplayText</h3>
+<p><em>Type</em>: <strong>string</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****</p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>

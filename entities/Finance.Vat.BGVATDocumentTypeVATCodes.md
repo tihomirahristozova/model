@@ -9,7 +9,7 @@ Contains the VAT codes, which should be used, when reporting VAT for the differe
 
 ## Default Visualization
 Default Display Text Format:  
-_{Id}: {ObjectVersion}_  
+_{Id}: {DocumentTypeId}_  
 Default Search Members:  
 __  
 
@@ -24,6 +24,7 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [CashReportingVATCode](Finance.Vat.BGVATDocumentTypeVATCodes.md#cashreportingvatcode) | [CashReportingVATCode](Finance.Vat.BGVATDocumentTypeVATCodes.md#cashreportingvatcode) __nullable__ | VAT code, which will be used when Cash Reporting mode is used for the entry. Allowed values are the same as for VAT Code. 
+| [DisplayText](Finance.Vat.BGVATDocumentTypeVATCodes.md#displaytext) | string |  
 | [Id](Finance.Vat.BGVATDocumentTypeVATCodes.md#id) | guid |  
 | [ObjectVersion](Finance.Vat.BGVATDocumentTypeVATCodes.md#objectversion) | int32 |  
 | [VATCode](Finance.Vat.BGVATDocumentTypeVATCodes.md#vatcode) | [VATCode](Finance.Vat.BGVATDocumentTypeVATCodes.md#vatcode) __nullable__ | VAT code to use when creating VAT export files for the specified Document Type. Allowed values is government-regulated list of values. 
@@ -66,6 +67,12 @@ _Allowed Values (Finance.Vat.BGVATDocumentTypeVATCodesRepository.CashReportingVA
 
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

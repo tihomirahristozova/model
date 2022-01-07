@@ -12,6 +12,8 @@ Default Display Text Format:
 _{CostAllocationModelName}_  
 Default Search Members:  
 _CostAllocationModelName_  
+Name Data Member:  
+_CostAllocationModelName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -24,6 +26,7 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [CostAllocationModelName](Finance.Cost.AllocationModels.md#costallocationmodelname) | string (254) | Multilanguage allocation model name. `Required` 
+| [DisplayText](Finance.Cost.AllocationModels.md#displaytext) | string |  
 | [Id](Finance.Cost.AllocationModels.md#id) | guid |  
 | [ObjectVersion](Finance.Cost.AllocationModels.md#objectversion) | int32 |  
 
@@ -44,6 +47,12 @@ _Type_: **string (254)**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

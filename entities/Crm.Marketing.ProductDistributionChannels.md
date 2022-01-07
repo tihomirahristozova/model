@@ -12,6 +12,8 @@ Default Display Text Format:
 _{Product.Name:T}_  
 Default Search Members:  
 _Product.Name_  
+Name Data Member:  
+_Product.Name_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -25,6 +27,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [DisplayText](Crm.Marketing.ProductDistributionChannels.md#displaytext) | string |  
 | [FromDate](Crm.Marketing.ProductDistributionChannels.md#fromdate) | date __nullable__ | When the product was listed. null-the product was not yet listed. The data is for informational purposes only and does not affect the listing status of the product (Is_Active does). `Default(Today)` `Filter(ge;le)` 
 | [Id](Crm.Marketing.ProductDistributionChannels.md#id) | guid |  
 | [IsActive](Crm.Marketing.ProductDistributionChannels.md#isactive) | boolean | Is this product listing active? true=Yes, false=No. `Required` `Default(true)` `Filter(eq)` 
@@ -42,6 +45,12 @@ Aggregate Root:
 
 
 ## Attribute Details
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### FromDate
 

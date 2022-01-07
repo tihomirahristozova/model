@@ -12,6 +12,8 @@ Default Display Text Format:
 _{Number}_  
 Default Search Members:  
 _Number_  
+Code Data Member:  
+_Number_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -24,6 +26,7 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Description](Logistics.Inventory.Lots.md#description) | [MultilanguageString](../data-types.md#multilanguagestring) __nullable__ | The description of this Lot. 
+| [DisplayText](Logistics.Inventory.Lots.md#displaytext) | string |  
 | [ExpiryDate](Logistics.Inventory.Lots.md#expirydate) | datetime __nullable__ | Expiry date for this lot. 
 | [Id](Logistics.Inventory.Lots.md#id) | guid |  
 | [LicenseNo](Logistics.Inventory.Lots.md#licenseno) | string (50) __nullable__ | The license number for this lot. Null when license number is N/A or unknown. 
@@ -55,6 +58,12 @@ The description of this Lot.
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### ExpiryDate
 

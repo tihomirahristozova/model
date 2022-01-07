@@ -12,6 +12,8 @@ Default Display Text Format:
 _{Name}_  
 Default Search Members:  
 _Name_  
+Name Data Member:  
+_Name_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -23,6 +25,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [DisplayText](General.Folders.md#displaytext) | string |  
 | [Id](General.Folders.md#id) | guid |  
 | [Name](General.Folders.md#name) | string (128) | Name of the folder. Unique within its parent folder. `Required` `Filter(multi eq;like)` 
 | [Notes](General.Folders.md#notes) | string (max) __nullable__ | Notes for this Folder. 
@@ -37,6 +40,12 @@ Aggregate Tree
 
 
 ## Attribute Details
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

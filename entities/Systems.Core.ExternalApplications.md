@@ -12,6 +12,8 @@ Default Display Text Format:
 _{Name:T}_  
 Default Search Members:  
 _Name_  
+Name Data Member:  
+_Name_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -25,6 +27,7 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [Address](Systems.Core.ExternalApplications.md#address) | string (max) | The address (path) to the application. The address is platform-dependant. `Required` 
 | [AvailableInMode](Systems.Core.ExternalApplications.md#availableinmode) | [AvailableInMode](Systems.Core.ExternalApplications.md#availableinmode) | Whether the application will be displayed to the end users when a single object is opened or when multiple objects are listed. `Required` `Default("SINGLE")` `Filter(eq)` 
+| [DisplayText](Systems.Core.ExternalApplications.md#displaytext) | string |  
 | [EntityName](Systems.Core.ExternalApplications.md#entityname) | string (64) | The entity, for which the application is defined. `Required` `Filter(eq)` `ORD` 
 | [ExecuteForAllObjects](Systems.Core.ExternalApplications.md#executeforallobjects) | boolean | Whether to execute the application for all selected objects at once or to execute the application for each object, one by one. `Required` `Default(true)` `Filter(eq)` 
 | [Id](Systems.Core.ExternalApplications.md#id) | guid |  
@@ -71,6 +74,12 @@ _Allowed Values (Systems.Core.ExternalApplicationsRepository.AvailableInMode Enu
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **SINGLE**  
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### EntityName
 

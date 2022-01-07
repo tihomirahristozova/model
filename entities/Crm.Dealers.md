@@ -9,7 +9,7 @@ External dealers. Entity: Crm_Dealers
 
 ## Default Visualization
 Default Display Text Format:  
-_{Id}: {ObjectVersion}_  
+_{Id}: {PartyId}_  
 Default Search Members:  
 __  
 
@@ -23,6 +23,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [DisplayText](Crm.Dealers.md#displaytext) | string |  
 | [FromDate](Crm.Dealers.md#fromdate) | datetime __nullable__ | Start of the dealer relationship. `Default(Today)` `Filter(ge;le)` 
 | [Id](Crm.Dealers.md#id) | guid |  
 | [Notes](Crm.Dealers.md#notes) | string (254) __nullable__ | Notes for this Dealer. 
@@ -38,6 +39,12 @@ Aggregate Tree
 
 
 ## Attribute Details
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### FromDate
 

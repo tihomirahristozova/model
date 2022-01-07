@@ -12,6 +12,8 @@ Default Display Text Format:
 _{Name}_  
 Default Search Members:  
 _Name_  
+Name Data Member:  
+_Name_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -25,6 +27,7 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [BinaryLayout](General.PrintoutLayouts.md#binarylayout) | byte[] __nullable__ | The printout layout, when the format requires binary storage. Alternative to Layout. 
+| [DisplayText](General.PrintoutLayouts.md#displaytext) | string |  
 | [DocumentEntityName](General.PrintoutLayouts.md#documententityname) | string (64) | The entity name of the document type e.g. Crm_Sales_Orders, Inv_Store_Orders etc. `Required` `Filter(eq)` 
 | [Id](General.PrintoutLayouts.md#id) | guid |  
 | [Layout](General.PrintoutLayouts.md#layout) | string (max) __nullable__ | The textual representation of the printout layout, when the format requires text representation. Alternative to Binary_Layout. 
@@ -55,6 +58,12 @@ The printout layout, when the format requires binary storage. Alternative to Lay
 _Type_: **byte[] __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### DocumentEntityName
 

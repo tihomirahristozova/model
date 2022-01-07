@@ -9,7 +9,7 @@ A single notification of a user. Entity: Cmm_Notifications (Introduced in versio
 
 ## Default Visualization
 Default Display Text Format:  
-_{Id}: {ObjectVersion}_  
+_{Id}: {UserId}_  
 Default Search Members:  
 __  
 
@@ -24,6 +24,7 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [CreationTimeUtc](Communities.Notifications.md#creationtimeutc) | datetime | The exact server time (in UTC), when the notification was created. `Required` `Default(NowUtc)` `Filter(ge;le)` `ORD` `ReadOnly` 
+| [DisplayText](Communities.Notifications.md#displaytext) | string |  
 | [Id](Communities.Notifications.md#id) | guid |  
 | [IsRead](Communities.Notifications.md#isread) | boolean | Specifies whether the user has read the notification. If the system changes the notification after first reading, the flag is reset to unread again. `Required` `Default(false)` `Filter(eq)` 
 | [NotificationClass](Communities.Notifications.md#notificationclass) | string (64) | The class of the notification from a predefined list of system classes. `Required` `Filter(multi eq)` 
@@ -48,6 +49,12 @@ _Type_: **datetime**
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **True**  
 _Default Value_: **CurrentDateTimeUtc**  
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

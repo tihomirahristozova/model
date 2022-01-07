@@ -85,7 +85,11 @@
 <p>Default Display Text Format:<br>
 <em>{FileName}</em><br>
 Default Search Members:<br>
-<em>PurposeCode; FileName</em></p>
+<em>PurposeCode; FileName</em><br>
+Code Data Member:<br>
+<em>PurposeCode</em><br>
+Name Data Member:<br>
+<em>FileName</em></p>
 <h2 id="aggregate">Aggregate</h2>
 <p>An <a href="https://docs.erp.net/tech/advanced/concepts/aggregates.html">aggregate</a> is a cluster of domain objects that can be treated as a single unit.</p>
 <p>Aggregate Parent:<br>
@@ -111,6 +115,11 @@ Aggregate Root:<br>
 <td><a href="Systems.Core.ObjectFiles.html#creationtimeutc">CreationTimeUtc</a></td>
 <td>datetime</td>
 <td>Time (in UTC), when the file was created. <code>Required</code> <code>Default(NowUtc)</code> <code>Introduced in version 20.1</code></td>
+</tr>
+<tr>
+<td><a href="Systems.Core.ObjectFiles.html#displaytext">DisplayText</a></td>
+<td>string</td>
+<td></td>
 </tr>
 <tr>
 <td><a href="Systems.Core.ObjectFiles.html#embeddedfilecontents">EmbeddedFileContents</a></td>
@@ -238,6 +247,10 @@ Allowed values for the <code>ContentLocation</code>(Systems.Core.ObjectFiles.md#
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>CurrentDateTimeUtc</strong></p>
+<h3 id="displaytext">DisplayText</h3>
+<p><em>Type</em>: <strong>string</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****</p>
 <h3 id="embeddedfilecontents">EmbeddedFileContents</h3>
 <p>Contains the contents of the file, when it is embedded in the database. null for linked files.</p>
 <p><em>Type</em>: <strong>byte[] <strong>nullable</strong></strong><br>

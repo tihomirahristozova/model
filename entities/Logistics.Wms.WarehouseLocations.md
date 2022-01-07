@@ -12,6 +12,8 @@ Default Display Text Format:
 _{LocationAddress}_  
 Default Search Members:  
 _Warehouse.Name_  
+Name Data Member:  
+_Warehouse.Name_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -25,6 +27,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [DisplayText](Logistics.Wms.WarehouseLocations.md#displaytext) | string |  
 | [Id](Logistics.Wms.WarehouseLocations.md#id) | guid |  
 | [LocationAddress](Logistics.Wms.WarehouseLocations.md#locationaddress) | string (32) | The address of the location. Should be unique within the warehouse. `Required` `Filter(eq;like)` 
 | [Notes](Logistics.Wms.WarehouseLocations.md#notes) | string (max) __nullable__ | Notes for this WarehouseLocation. 
@@ -39,6 +42,12 @@ Aggregate Root:
 
 
 ## Attribute Details
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

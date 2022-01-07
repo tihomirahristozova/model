@@ -12,6 +12,10 @@ Default Display Text Format:
 _{Name:T}_  
 Default Search Members:  
 _Code; Name_  
+Code Data Member:  
+_Code_  
+Name Data Member:  
+_Name_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -24,6 +28,7 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Code](Applications.AssetManagement.TrackedParameters.md#code) | string (16) | Unique code of the asset parameter. `Required` `Filter(multi eq;like)` `ORD` 
+| [DisplayText](Applications.AssetManagement.TrackedParameters.md#displaytext) | string |  
 | [Id](Applications.AssetManagement.TrackedParameters.md#id) | guid |  
 | [IsActive](Applications.AssetManagement.TrackedParameters.md#isactive) | boolean | Specifies whether the parameter is active for choosing in drop downs. `Required` `Default(true)` `Filter(multi eq)` 
 | [Name](Applications.AssetManagement.TrackedParameters.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Multilanguage name of the asset parameter. `Required` `Filter(multi eq;like)` 
@@ -42,6 +47,12 @@ _Indexed_: **True**
 _Supported Filters_: **Equals, Like, EqualsIn**  
 _Supports Order By_: **True**  
 _Maximum Length_: **16**  
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

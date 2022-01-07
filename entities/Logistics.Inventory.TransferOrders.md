@@ -13,6 +13,8 @@ Default Display Text Format:
 _{DocumentType.TypeName:T} {DocumentNo}_  
 Default Search Members:  
 _DocumentNo_  
+Code Data Member:  
+_DocumentNo_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -43,6 +45,7 @@ Aggregate Tree
 | [CreationUser](Logistics.Inventory.TransferOrders.md#creationuser) | string (64) | The login name of the user, who created the document. `Required` `Filter(like)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [DefaultDueDateIn](Logistics.Inventory.TransferOrders.md#defaultduedatein) | datetime | The date, when the goods are expected to be received in the destination warehouse. `Required` `Default(Today)` `Filter(ge;le)` 
 | [DefaultDueDateOut](Logistics.Inventory.TransferOrders.md#defaultduedateout) | datetime | When the transfer is scheduled to issue the goods from the source warehouse. `Required` `Default(Today)` `Filter(ge;le)` 
+| [DisplayText](Logistics.Inventory.TransferOrders.md#displaytext) | string |  
 | [DocumentDate](Logistics.Inventory.TransferOrders.md#documentdate) | date | The date on which the document was issued. `Required` `Default(Today)` `Filter(eq;ge;le)` `ORD` (Inherited from [Documents](General.Documents.md)) 
 | [DocumentNo](Logistics.Inventory.TransferOrders.md#documentno) | string (20) | Document number, unique within Document_Type_Id. `Required` `Filter(eq;like)` `ORD` (Inherited from [Documents](General.Documents.md)) 
 | [DocumentNotes](Logistics.Inventory.TransferOrders.md#documentnotes) | string (max) __nullable__ | Notes for this Document. (Inherited from [Documents](General.Documents.md)) 
@@ -182,6 +185,12 @@ _Default Value_: **CurrentDate**
 
 _Front-End Recalc Expressions:_  
 `obj.Lines.Select( c => TransferOrderLinesRepository.DueDateOutAttribute.GetUntypedValue( c, False)).Distinct( ).OnlyIfSingle( )`
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+
 ### DocumentDate
 
 The date on which the document was issued. `Required` `Default(Today)` `Filter(eq;ge;le)` `ORD` (Inherited from [Documents](General.Documents.md))

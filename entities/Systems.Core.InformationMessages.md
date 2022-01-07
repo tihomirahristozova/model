@@ -12,6 +12,8 @@ Default Display Text Format:
 _{MachineName}_  
 Default Search Members:  
 _MachineName_  
+Name Data Member:  
+_MachineName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -23,6 +25,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [DisplayText](Systems.Core.InformationMessages.md#displaytext) | string |  
 | [Id](Systems.Core.InformationMessages.md#id) | guid |  
 | [InformationMessageTime](Systems.Core.InformationMessages.md#informationmessagetime) | datetime | Date and time when thet message occurred. `Required` `Default(Now)` `Filter(ge;le)` `ORD` `ReadOnly` 
 | [InformationMessageType](Systems.Core.InformationMessages.md#informationmessagetype) | [InformationMessageType](Systems.Core.InformationMessages.md#informationmessagetype) | Type of the information message: 'INF' = Information, 'WRN' = Warning, Error = 'ERR'. `Required` `Default("INF")` `Filter(multi eq)` `ReadOnly` 
@@ -35,6 +38,12 @@ Aggregate Tree
 
 
 ## Attribute Details
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

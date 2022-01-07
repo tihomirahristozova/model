@@ -12,6 +12,8 @@ Default Display Text Format:
 _{SalesOrder.EntityName}_  
 Default Search Members:  
 _SalesOrder.EntityName_  
+Name Data Member:  
+_SalesOrder.EntityName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -25,6 +27,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [DisplayText](Crm.Sales.SalesOrderPromotionalPackages.md#displaytext) | string |  
 | [Id](Crm.Sales.SalesOrderPromotionalPackages.md#id) | guid |  
 | [LineNumber](Crm.Sales.SalesOrderPromotionalPackages.md#linenumber) | int32 | Consecutive line number of the package, unique within the document. `Required` `Filter(eq)` 
 | [NumberOfPackages](Crm.Sales.SalesOrderPromotionalPackages.md#numberofpackages) | int32 | Number of packages sold. `Required` `Default(0)` 
@@ -39,6 +42,12 @@ Aggregate Root:
 
 
 ## Attribute Details
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

@@ -12,6 +12,8 @@ Default Display Text Format:
 _{Document.EntityName}_  
 Default Search Members:  
 _Document.EntityName_  
+Name Data Member:  
+_Document.EntityName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -27,6 +29,7 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [Amount](General.DocumentDistributedAmounts.md#amount) | [Amount (14, 2)](../data-types.md#amount) | The amount which has beed distributed over the current line. The amount is in the currency of the document. `Currency: GetDocumentCurrency()` `Required` `Filter(ge;le)` 
 | [BaseAmount](General.DocumentDistributedAmounts.md#baseamount) | [Amount (14, 2)](../data-types.md#amount) __nullable__ | The calculated base amount for the line in document currency. The base amount is the base, over which the additional amounts are calculated. Null if the base amount is not stored (for amounts distributed in older versions of the system). . `Currency: GetDocumentCurrency()` `Introduced in version 22.1.4.44` 
+| [DisplayText](General.DocumentDistributedAmounts.md#displaytext) | string |  
 | [DocumentLineId](General.DocumentDistributedAmounts.md#documentlineid) | guid __nullable__ | The Id of the line over which the amount is distributed. `Filter(multi eq)` 
 | [Id](General.DocumentDistributedAmounts.md#id) | guid |  
 | [ObjectVersion](General.DocumentDistributedAmounts.md#objectversion) | int32 |  
@@ -57,6 +60,12 @@ The calculated base amount for the line in document currency. The base amount is
 _Type_: **[Amount (14, 2)](../data-types.md#amount) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### DocumentLineId
 

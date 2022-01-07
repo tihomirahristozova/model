@@ -85,7 +85,11 @@
 <p>Default Display Text Format:<br>
 <em>{Name:T}</em><br>
 Default Search Members:<br>
-<em>Code; Name</em></p>
+<em>Code; Name</em><br>
+Code Data Member:<br>
+<em>Code</em><br>
+Name Data Member:<br>
+<em>Name</em></p>
 <h2 id="aggregate">Aggregate</h2>
 <p>An <a href="https://docs.erp.net/tech/advanced/concepts/aggregates.html">aggregate</a> is a cluster of domain objects that can be treated as a single unit.</p>
 <p>Aggregate Tree</p>
@@ -106,6 +110,11 @@ Default Search Members:<br>
 <td><a href="Logistics.Procurement.PurchaseOperationTypes.html#code">Code</a></td>
 <td>string (16)</td>
 <td>Unique code of the purchase operation type. <code>Required</code> <code>Filter(multi eq;like)</code></td>
+</tr>
+<tr>
+<td><a href="Logistics.Procurement.PurchaseOperationTypes.html#displaytext">DisplayText</a></td>
+<td>string</td>
+<td></td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.PurchaseOperationTypes.html#id">Id</a></td>
@@ -136,6 +145,10 @@ Default Search Members:<br>
 <em>Supported Filters</em>: <strong>Equals, Like, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>16</strong></p>
+<h3 id="displaytext">DisplayText</h3>
+<p><em>Type</em>: <strong>string</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****</p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>

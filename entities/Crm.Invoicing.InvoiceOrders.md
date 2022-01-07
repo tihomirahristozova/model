@@ -13,6 +13,8 @@ Default Display Text Format:
 _{DocumentType.TypeName:T} {DocumentNo}_  
 Default Search Members:  
 _DocumentNo_  
+Code Data Member:  
+_DocumentNo_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -44,6 +46,7 @@ Aggregate Tree
 | [CreationUser](Crm.Invoicing.InvoiceOrders.md#creationuser) | string (64) | The login name of the user, who created the document. `Required` `Filter(like)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [CreditNoteDescription](Crm.Invoicing.InvoiceOrders.md#creditnotedescription) | string (254) __nullable__ | Descriptions/reason for the credit note. 
 | [DeliveryDate](Crm.Invoicing.InvoiceOrders.md#deliverydate) | datetime __nullable__ | Date, when the delivery was effected. When null = document date. 
+| [DisplayText](Crm.Invoicing.InvoiceOrders.md#displaytext) | string |  
 | [DocumentDate](Crm.Invoicing.InvoiceOrders.md#documentdate) | date | The date on which the document was issued. `Required` `Default(Today)` `Filter(eq;ge;le)` `ORD` (Inherited from [Documents](General.Documents.md)) 
 | [DocumentNo](Crm.Invoicing.InvoiceOrders.md#documentno) | string (20) | Document number, unique within Document_Type_Id. `Required` `Filter(eq;like)` `ORD` (Inherited from [Documents](General.Documents.md)) 
 | [DocumentNotes](Crm.Invoicing.InvoiceOrders.md#documentnotes) | string (max) __nullable__ | Notes for this Document. (Inherited from [Documents](General.Documents.md)) 
@@ -193,6 +196,12 @@ Date, when the delivery was effected. When null = document date.
 _Type_: **datetime __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### DocumentDate
 

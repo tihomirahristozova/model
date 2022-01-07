@@ -26,6 +26,7 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [AllowOverExecution](Logistics.Inventory.StoreTransactionLines.md#allowoverexecution) | boolean | When true, specifies, that we explicitly allow over-execution. Over-execution is when the quantity in all execution lines exceed the quantity in the parent store order line. `Required` `Default(false)` 
+| [DisplayText](Logistics.Inventory.StoreTransactionLines.md#displaytext) | string |  
 | [Finished](Logistics.Inventory.StoreTransactionLines.md#finished) | boolean __nullable__ | True if this transaction entry completes the operation. false if there might be more entries. `Default(false)` `Filter(eq)` 
 | [GuaranteePeriodDays](Logistics.Inventory.StoreTransactionLines.md#guaranteeperioddays) | int32 __nullable__ | Guarantee period in days for the offered product. null for non-serviced products. 
 | [Id](Logistics.Inventory.StoreTransactionLines.md#id) | guid |  
@@ -74,6 +75,12 @@ _Type_: **boolean**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **False**  
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Finished
 

@@ -13,6 +13,10 @@ Default Display Text Format:
 _{PartyName:T}_  
 Default Search Members:  
 _PartyCode; PartyName_  
+Code Data Member:  
+_PartyCode_  
+Name Data Member:  
+_PartyName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -37,6 +41,7 @@ Aggregate Tree
 | [City](General.Contacts.Persons.md#city) | [MultilanguageString](../data-types.md#multilanguagestring) __nullable__ | City from the legal registration address for the person. `Filter(like)` 
 | [CreationTime](General.Contacts.Persons.md#creationtime) | datetime __nullable__ | Date and time when the Person was created. `Filter(ge;le)` `ReadOnly` 
 | [CreationUser](General.Contacts.Persons.md#creationuser) | string (64) __nullable__ | Login name of the user, who created the Person. `Filter(like)` `ReadOnly` 
+| [DisplayText](General.Contacts.Persons.md#displaytext) | string |  
 | [FirstName](General.Contacts.Persons.md#firstname) | [MultilanguageString](../data-types.md#multilanguagestring) __nullable__ | First name of the person. `Filter(eq;like)` 
 | [Gender](General.Contacts.Persons.md#gender) | [Gender](General.Contacts.Persons.md#gender) __nullable__ | Person gender. M=Male;F=Female;null=not known/not provided. `Filter(eq)` 
 | [GLN](General.Contacts.Persons.md#gln) | string (13) __nullable__ | Global Location Number used by EDI systems. `Filter(multi eq)` `ORD` (Inherited from [Parties](General.Contacts.Parties.md)) 
@@ -121,6 +126,12 @@ _Type_: **string (64) __nullable__**
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### FirstName
 

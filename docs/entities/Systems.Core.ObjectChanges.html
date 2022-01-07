@@ -85,6 +85,8 @@
 <p>Default Display Text Format:<br>
 <em>{RepositoryName}</em><br>
 Default Search Members:<br>
+<em>RepositoryName</em><br>
+Name Data Member:<br>
 <em>RepositoryName</em></p>
 <h2 id="aggregate">Aggregate</h2>
 <p>An <a href="https://docs.erp.net/tech/advanced/concepts/aggregates.html">aggregate</a> is a cluster of domain objects that can be treated as a single unit.</p>
@@ -106,6 +108,11 @@ Aggregate Root:<br>
 <td><a href="Systems.Core.ObjectChanges.html#changetype">ChangeType</a></td>
 <td><a href="Systems.Core.ObjectChanges.html#changetype">ChangeType</a></td>
 <td>Type of change - Create, Update or Delete. <code>Required</code></td>
+</tr>
+<tr>
+<td><a href="Systems.Core.ObjectChanges.html#displaytext">DisplayText</a></td>
+<td>string</td>
+<td></td>
 </tr>
 <tr>
 <td><a href="Systems.Core.ObjectChanges.html#entityitemid">EntityItemId</a></td>
@@ -181,6 +188,10 @@ Allowed values for the <code>ChangeType</code>(Systems.Core.ObjectChanges.md#cha
 </table>
 <p><em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="displaytext">DisplayText</h3>
+<p><em>Type</em>: <strong>string</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****</p>
 <h3 id="entityitemid">EntityItemId</h3>
 <p>The id of the actual changed object, described by this change. This is different than the aggregate root, which is pointed by Root Object. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong>guid</strong><br>

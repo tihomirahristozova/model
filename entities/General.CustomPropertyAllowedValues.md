@@ -12,6 +12,10 @@ Default Display Text Format:
 _{Description:T}_  
 Default Search Members:  
 _PropertyAllowedValueField; Description_  
+Code Data Member:  
+_PropertyAllowedValueField_  
+Name Data Member:  
+_Description_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -27,6 +31,7 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [Active](General.CustomPropertyAllowedValues.md#active) | boolean | Specifies whether the allowed value is active and can be used when selecting property values. `Required` `Default(true)` `Filter(eq)` 
 | [Description](General.CustomPropertyAllowedValues.md#description) | [MultilanguageString](../data-types.md#multilanguagestring) __nullable__ | The description of the property allowed value. Used to fill the Description column of the Property_Value in Gen_Property_Values_Table. `Filter(eq;like)` 
+| [DisplayText](General.CustomPropertyAllowedValues.md#displaytext) | string |  
 | [Id](General.CustomPropertyAllowedValues.md#id) | guid |  
 | [LongDescription](General.CustomPropertyAllowedValues.md#longdescription) | string (max) __nullable__ | When not null, specifies a long description of the allowed value. This long description is only used as helper information when selecting values, it is not copied in the property value. 
 | [ObjectVersion](General.CustomPropertyAllowedValues.md#objectversion) | int32 |  
@@ -60,6 +65,12 @@ The description of the property allowed value. Used to fill the Description colu
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring) __nullable__**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

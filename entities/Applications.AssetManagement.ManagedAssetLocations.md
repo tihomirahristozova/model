@@ -12,6 +12,8 @@ Default Display Text Format:
 _{ManagedAsset.Name:T}_  
 Default Search Members:  
 _ManagedAsset.Name_  
+Name Data Member:  
+_ManagedAsset.Name_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -25,6 +27,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [DisplayText](Applications.AssetManagement.ManagedAssetLocations.md#displaytext) | string |  
 | [FromDate](Applications.AssetManagement.ManagedAssetLocations.md#fromdate) | date | The date on which the asset is assigned to the location. `Required` `Default(Now)` 
 | [Id](Applications.AssetManagement.ManagedAssetLocations.md#id) | guid |  
 | [Notes](Applications.AssetManagement.ManagedAssetLocations.md#notes) | string (max) __nullable__ | Might contain additional notes for the exact location of the asset within the enterprise company location. 
@@ -40,6 +43,12 @@ Aggregate Root:
 
 
 ## Attribute Details
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### FromDate
 

@@ -203,9 +203,7 @@ VATDealType = PurchaseInvoiceLine.LineDealType Group By LineDealType - it is sam
 </tr>
 </tbody>
 </table>
-<pre><code>
-If PurchaseInvoice.ReferenceDate.HasValue then
-    Entry.DocumentDate = PurchaseInvoice.ReferenceDate else Entry.DocumentDate = PurchaseInvoice.DocumentDate
+<pre><code>Entry.DocumentDate = PurchaseInvoice.DocumentDate
 
 Entry.EntryType = Purchase
 
@@ -225,7 +223,10 @@ Entry.ReferencedDocumentNo =
         PurchaseInvoice.ReferenceDocumentNo
     else PurchaseInvoice.DocumentNo
 
-Entry.ReferencedDocumentNo = PurchaseInvoice.DocumentNo
+Entry.ReferenceDate = 
+    If PurchaseInvoice.ReferenceDate.HasValue then
+        PurchaseInvoice.ReferenceDate 
+    else PurchaseInvoice.DocumentDate
 
 Entry.AmountBase = Remaining(AmountBase)
 

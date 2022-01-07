@@ -12,6 +12,8 @@ Default Display Text Format:
 _{RentalAssetType.RentalAssetTypeName}_  
 Default Search Members:  
 _RentalAssetType.RentalAssetTypeName_  
+Name Data Member:  
+_RentalAssetType.RentalAssetTypeName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -27,6 +29,7 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [DefaultValue](Applications.Rental.AssetTypeProperties.md#defaultvalue) | string (254) __nullable__ | The default value of the property. `Filter(like)` 
 | [DefaultValueId](Applications.Rental.AssetTypeProperties.md#defaultvalueid) | guid __nullable__ | The value id of the default value of the property. `Filter(multi eq)` 
+| [DisplayText](Applications.Rental.AssetTypeProperties.md#displaytext) | string |  
 | [Id](Applications.Rental.AssetTypeProperties.md#id) | guid |  
 | [ObjectVersion](Applications.Rental.AssetTypeProperties.md#objectversion) | int32 |  
 
@@ -55,6 +58,12 @@ The value id of the default value of the property. `Filter(multi eq)`
 
 _Type_: **guid __nullable__**  
 _Supported Filters_: **Equals, EqualsIn**  
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

@@ -12,6 +12,8 @@ Default Display Text Format:
 _{Name}_  
 Default Search Members:  
 _Name_  
+Name Data Member:  
+_Name_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -23,12 +25,19 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [DisplayText](Applications.Service.ServiceObjectTypes.md#displaytext) | string |  
 | [Id](Applications.Service.ServiceObjectTypes.md#id) | guid |  
 | [Name](Applications.Service.ServiceObjectTypes.md#name) | string (254) | The name of this ServiceObjectType. `Required` `Filter(eq;like)` 
 | [ObjectVersion](Applications.Service.ServiceObjectTypes.md#objectversion) | int32 |  
 
 
 ## Attribute Details
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

@@ -12,6 +12,8 @@ Default Display Text Format:
 _{PrincipalRecipe.Name}_  
 Default Search Members:  
 _PrincipalRecipe.Name_  
+Name Data Member:  
+_PrincipalRecipe.Name_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -27,6 +29,7 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [ConditionalProperty<br />Description](Production.Technologies.PrincipalRecipeOperations.md#conditionalpropertydescription) | [MultilanguageString](../data-types.md#multilanguagestring) __nullable__ | The desired description of the Conditional Property. . 
 | [ConditionalPropertyValue](Production.Technologies.PrincipalRecipeOperations.md#conditionalpropertyvalue) | string (254) __nullable__ | The desired value of the Conditional Property. . 
+| [DisplayText](Production.Technologies.PrincipalRecipeOperations.md#displaytext) | string |  
 | [Id](Production.Technologies.PrincipalRecipeOperations.md#id) | guid |  
 | [LineOrd](Production.Technologies.PrincipalRecipeOperations.md#lineord) | int32 | Consecutive line number within the principal recipe. `Required` 
 | [MinimumConcurrent<br />StartTimeMinutes](Production.Technologies.PrincipalRecipeOperations.md#minimumconcurrentstarttimeminutes) | int32 __nullable__ | How many minutes after the start of the previous operation can this operation start. null means that this operation should wait the previous operation to finish before starting. 
@@ -71,6 +74,12 @@ _Type_: **string (254) __nullable__**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

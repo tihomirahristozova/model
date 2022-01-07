@@ -85,7 +85,11 @@
 <p>Default Display Text Format:<br>
 <em>{Name:T}</em><br>
 Default Search Members:<br>
-<em>Code; Name</em></p>
+<em>Code; Name</em><br>
+Code Data Member:<br>
+<em>Code</em><br>
+Name Data Member:<br>
+<em>Name</em></p>
 <h2 id="aggregate">Aggregate</h2>
 <p>An <a href="https://docs.erp.net/tech/advanced/concepts/aggregates.html">aggregate</a> is a cluster of domain objects that can be treated as a single unit.</p>
 <p>Aggregate Tree</p>
@@ -106,6 +110,11 @@ Default Search Members:<br>
 <td><a href="Systems.Security.AccessKeys.html#code">Code</a></td>
 <td>string (16) <strong>nullable</strong></td>
 <td>Unique code for the access key. The codes can be null for legacy keys or entities that do not support codes. The codes are unique only among non-null entries. <code>Filter(eq;like)</code></td>
+</tr>
+<tr>
+<td><a href="Systems.Security.AccessKeys.html#displaytext">DisplayText</a></td>
+<td>string</td>
+<td></td>
 </tr>
 <tr>
 <td><a href="Systems.Security.AccessKeys.html#entityname">EntityName</a></td>
@@ -136,6 +145,10 @@ Default Search Members:<br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>16</strong></p>
+<h3 id="displaytext">DisplayText</h3>
+<p><em>Type</em>: <strong>string</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****</p>
 <h3 id="entityname">EntityName</h3>
 <p>What entitity the key secures. Can be null for private, legacy keys. <code>Filter(eq;like)</code> <code>ORD</code></p>
 <p><em>Type</em>: <strong>string (64) <strong>nullable</strong></strong><br>

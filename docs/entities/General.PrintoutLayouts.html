@@ -85,6 +85,8 @@
 <p>Default Display Text Format:<br>
 <em>{Name}</em><br>
 Default Search Members:<br>
+<em>Name</em><br>
+Name Data Member:<br>
 <em>Name</em></p>
 <h2 id="aggregate">Aggregate</h2>
 <p>An <a href="https://docs.erp.net/tech/advanced/concepts/aggregates.html">aggregate</a> is a cluster of domain objects that can be treated as a single unit.</p>
@@ -110,6 +112,11 @@ Default Search Members:<br>
 <td><a href="General.PrintoutLayouts.html#binarylayout">BinaryLayout</a></td>
 <td>byte[] <strong>nullable</strong></td>
 <td>The printout layout, when the format requires binary storage. Alternative to Layout.</td>
+</tr>
+<tr>
+<td><a href="General.PrintoutLayouts.html#displaytext">DisplayText</a></td>
+<td>string</td>
+<td></td>
 </tr>
 <tr>
 <td><a href="General.PrintoutLayouts.html#documententityname">DocumentEntityName</a></td>
@@ -188,6 +195,10 @@ Default Search Members:<br>
 <p><em>Type</em>: <strong>byte[] <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="displaytext">DisplayText</h3>
+<p><em>Type</em>: <strong>string</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****</p>
 <h3 id="documententityname">DocumentEntityName</h3>
 <p>The entity name of the document type e.g. Crm_Sales_Orders, Inv_Store_Orders etc. <code>Required</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong>string (64)</strong><br>

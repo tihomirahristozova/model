@@ -12,6 +12,8 @@ Default Display Text Format:
 _{AssetTransaction.EntityName}_  
 Default Search Members:  
 _AssetTransaction.EntityName_  
+Name Data Member:  
+_AssetTransaction.EntityName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -27,6 +29,7 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [DepreciationValue](Finance.Assets.AssetTransactionLines.md#depreciationvalue) | [Amount (14, 2)](../data-types.md#amount) | Change in the depreciation value of the asset (in the currency of the asset). `Currency: Asset.ValuationCurrency` `Required` `Default(0)` 
 | [DepreciationValueBase](Finance.Assets.AssetTransactionLines.md#depreciationvaluebase) | [Amount (14, 2)](../data-types.md#amount) | Change in the depreciation value of the asset (in the currency of the enterprise company). `Currency: Asset.EnterpriseCompany.BaseCurrency` `Required` `Default(0)` 
+| [DisplayText](Finance.Assets.AssetTransactionLines.md#displaytext) | string |  
 | [Id](Finance.Assets.AssetTransactionLines.md#id) | guid |  
 | [NegativeReserveValue](Finance.Assets.AssetTransactionLines.md#negativereservevalue) | [Amount (14, 2)](../data-types.md#amount) | Change in the value of the negative reserve after asset valuations (in the currency of the asset). `Currency: Asset.ValuationCurrency` `Required` `Default(0)` 
 | [NegativeReserveValueBase](Finance.Assets.AssetTransactionLines.md#negativereservevaluebase) | [Amount (14, 2)](../data-types.md#amount) | Change in the value of the negative reserve after asset valuations (in the currency of the enterprise company). `Currency: Asset.EnterpriseCompany.BaseCurrency` `Required` `Default(0)` 
@@ -72,6 +75,12 @@ _Default Value_: **Constant**
 
 _Front-End Recalc Expressions:_  
 `obj.DepreciationValue.ConvertTo( obj.Asset.EnterpriseCompany.BaseCurrency, obj.AssetTransaction.CurrencyDirectory)`
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+
 ### Id
 
 _Type_: **guid**  

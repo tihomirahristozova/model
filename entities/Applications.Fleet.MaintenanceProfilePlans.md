@@ -12,6 +12,8 @@ Default Display Text Format:
 _{MaintenanceProfile.Name}_  
 Default Search Members:  
 _MaintenanceProfile.Name_  
+Name Data Member:  
+_MaintenanceProfile.Name_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -25,6 +27,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [DisplayText](Applications.Fleet.MaintenanceProfilePlans.md#displaytext) | string |  
 | [Id](Applications.Fleet.MaintenanceProfilePlans.md#id) | guid |  
 | [IsActive](Applications.Fleet.MaintenanceProfilePlans.md#isactive) | boolean | True if the maintenance plan is active for this profile. When a plan is not active, maintenance for it will not occur for the current profile. `Required` `Default(true)` `Introduced in version 18.2` 
 | [Notes](Applications.Fleet.MaintenanceProfilePlans.md#notes) | string (max) __nullable__ | Notes for this MaintenanceProfilePlan. 
@@ -39,6 +42,12 @@ Aggregate Root:
 
 
 ## Attribute Details
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

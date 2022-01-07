@@ -12,6 +12,8 @@ Default Display Text Format:
 _{ProcedureName}_  
 Default Search Members:  
 _ProcedureName_  
+Name Data Member:  
+_ProcedureName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -34,6 +36,7 @@ Aggregate Root:
 | [ConnectedPartyCondition](Systems.Workflow.Routes.md#connectedpartycondition) | [ConnectedPartyCondition](Systems.Workflow.Routes.md#connectedpartycondition) | A - any party; C - connected party: to_party is enterprise company; U - unconnected party - not enterprise company;. `Required` `Default("A")` 
 | [DeactivationDate](Systems.Workflow.Routes.md#deactivationdate) | date __nullable__ | The date until (including) the route is active. The date is matched against the document date of the generating document. Null means the route does not have a deactivation date. `Filter(ge;le)` 
 | [DestinationState](Systems.Workflow.Routes.md#destinationstate) | [DocumentState](Systems.Workflow.Routes.md#destinationstate) | 0=New;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed. `Required` 
+| [DisplayText](Systems.Workflow.Routes.md#displaytext) | string |  
 | [Id](Systems.Workflow.Routes.md#id) | guid |  
 | [NegativeConditionFilterXml](Systems.Workflow.Routes.md#negativeconditionfilterxml) | dataaccessfilter __nullable__ | The negative condition should NOT be matched by the document in order to execute the route. 
 | [Notes](Systems.Workflow.Routes.md#notes) | string (254) __nullable__ | Notes for this Route. 
@@ -187,6 +190,12 @@ _Allowed Values (General.DocumentState Enum Members)_
 
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

@@ -12,6 +12,8 @@ Default Display Text Format:
 _{CostTemplate.CostTemplateName}_  
 Default Search Members:  
 _CostTemplate.CostTemplateName_  
+Name Data Member:  
+_CostTemplate.CostTemplateName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -25,6 +27,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [DisplayText](Finance.Cost.TemplateCostTypes.md#displaytext) | string |  
 | [HierarchyLevel](Finance.Cost.TemplateCostTypes.md#hierarchylevel) | int32 | The level in the hierarchy on which this cost is incurred (0..9). `Required` `Filter(ge;le)` 
 | [Id](Finance.Cost.TemplateCostTypes.md#id) | guid |  
 | [ObjectVersion](Finance.Cost.TemplateCostTypes.md#objectversion) | int32 |  
@@ -38,6 +41,12 @@ Aggregate Root:
 
 
 ## Attribute Details
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### HierarchyLevel
 

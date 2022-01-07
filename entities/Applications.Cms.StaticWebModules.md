@@ -13,6 +13,10 @@ Default Display Text Format:
 _{Name}_  
 Default Search Members:  
 _LanguageCode; Name_  
+Code Data Member:  
+_LanguageCode_  
+Name Data Member:  
+_Name_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -27,6 +31,7 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [ContentHtml](Applications.Cms.StaticWebModules.md#contenthtml) | string (max) __nullable__ | The actual html content of the pade. Only the &lt;BODY&gt; of the html is stored. 
+| [DisplayText](Applications.Cms.StaticWebModules.md#displaytext) | string |  
 | [Id](Applications.Cms.StaticWebModules.md#id) | guid |  
 | [IsPublished](Applications.Cms.StaticWebModules.md#ispublished) | boolean | Specifies whether the module is published and will be showed in the web site. `Required` `Default(false)` `Filter(eq)` (Inherited from [WebModules](Applications.Cms.WebModules.md)) 
 | [LanguageCode](Applications.Cms.StaticWebModules.md#languagecode) | string (7) | The language code of the content. `Required` `Default("EN")` 
@@ -54,6 +59,12 @@ _Type_: **string (max) __nullable__**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

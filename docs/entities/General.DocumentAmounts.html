@@ -85,6 +85,8 @@
 <p>Default Display Text Format:<br>
 <em>{Document.EntityName}</em><br>
 Default Search Members:<br>
+<em>Document.EntityName</em><br>
+Name Data Member:<br>
 <em>Document.EntityName</em></p>
 <h2 id="aggregate">Aggregate</h2>
 <p>An <a href="https://docs.erp.net/tech/advanced/concepts/aggregates.html">aggregate</a> is a cluster of domain objects that can be treated as a single unit.</p>
@@ -106,6 +108,11 @@ Aggregate Root:<br>
 <td><a href="General.DocumentAmounts.html#baseamount">BaseAmount</a></td>
 <td><a href="../data-types.html#amount">Amount (14, 2)</a> <strong>nullable</strong></td>
 <td>The calculated base amount (in documents currency) from the last document amount recalculation. The base amount is the base, over which the additional amounts are calculated. Null if the amount is not distributed yet. <code>Currency: LogisticsDocument.DocumentCurrency</code> <code>ReadOnly</code></td>
+</tr>
+<tr>
+<td><a href="General.DocumentAmounts.html#displaytext">DisplayText</a></td>
+<td>string</td>
+<td></td>
 </tr>
 <tr>
 <td><a href="General.DocumentAmounts.html#id">Id</a></td>
@@ -199,6 +206,10 @@ Aggregate Root:<br>
 <p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount (14, 2)</a> <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="displaytext">DisplayText</h3>
+<p><em>Type</em>: <strong>string</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****</p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>

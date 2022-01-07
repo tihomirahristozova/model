@@ -12,6 +12,8 @@ Default Display Text Format:
 _{PosLocationCode}_  
 Default Search Members:  
 _PosLocationCode_  
+Code Data Member:  
+_PosLocationCode_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -23,6 +25,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [DisplayText](Crm.Pos.Locations.md#displaytext) | string |  
 | [Id](Crm.Pos.Locations.md#id) | guid |  
 | [IsActive](Crm.Pos.Locations.md#isactive) | boolean __nullable__ | Indicates whether the POS location is currently active and can be chosen in drop-downs, etc. `Default(true)` `Filter(eq)` 
 | [ObjectVersion](Crm.Pos.Locations.md#objectversion) | int32 |  
@@ -37,6 +40,12 @@ Aggregate Tree
 
 
 ## Attribute Details
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

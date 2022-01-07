@@ -12,6 +12,8 @@ Default Display Text Format:
 _{Workgroup.Name}_  
 Default Search Members:  
 _Workgroup.Name_  
+Name Data Member:  
+_Workgroup.Name_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -26,6 +28,7 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [AvailableQuantity](Production.Resources.WorkgroupResources.md#availablequantity) | [Quantity (18, 3)](../data-types.md#quantity) | Quantity available of the resource in this workgroup. The measurement unit is specified in Prd_Resources. `Unit: Resource.PrimaryUnit` `Required` `Default(0)` 
+| [DisplayText](Production.Resources.WorkgroupResources.md#displaytext) | string |  
 | [Id](Production.Resources.WorkgroupResources.md#id) | guid |  
 | [Notes](Production.Resources.WorkgroupResources.md#notes) | string (254) __nullable__ | User notes for the workgroup resource. 
 | [ObjectVersion](Production.Resources.WorkgroupResources.md#objectversion) | int32 |  
@@ -54,6 +57,12 @@ _Type_: **[Quantity (18, 3)](../data-types.md#quantity)**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

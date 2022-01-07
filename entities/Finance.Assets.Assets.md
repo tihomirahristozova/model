@@ -12,6 +12,10 @@ Default Display Text Format:
 _{Name:T}_  
 Default Search Members:  
 _Code; Name_  
+Code Data Member:  
+_Code_  
+Name Data Member:  
+_Name_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -25,6 +29,7 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [Code](Finance.Assets.Assets.md#code) | string (20) | The unique code of the Asset. `Required` `Filter(eq;like)` `ORD` 
 | [DeploymentDate](Finance.Assets.Assets.md#deploymentdate) | datetime __nullable__ | Date, when the asset is first deployed. Null if the asset is not deployed yet. 
+| [DisplayText](Finance.Assets.Assets.md#displaytext) | string |  
 | [Id](Finance.Assets.Assets.md#id) | guid |  
 | [IsActive](Finance.Assets.Assets.md#isactive) | boolean | Checked if the assets is active and can be used in documents. The inactive assets can be used only for reports. `Required` `Default(true)` `Filter(eq)` 
 | [Name](Finance.Assets.Assets.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | The name of this Asset. `Required` `Filter(like)` 
@@ -63,6 +68,12 @@ Date, when the asset is first deployed. Null if the asset is not deployed yet.
 _Type_: **datetime __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

@@ -83,7 +83,7 @@
 <p>Extends data in other tables with attached files, custom properties, etc. Each row is an object, bound to exactly one row in the primary table. Each object can be bound to a row in a different primary table, specified in Entity_Type. Entity: Sys_Objects</p>
 <h2 id="default-visualization">Default Visualization</h2>
 <p>Default Display Text Format:<br>
-<em>{Id}: {ObjectVersion}</em><br>
+<em>{Id}: {EntityType}</em><br>
 Default Search Members:<br>
 __</p>
 <h2 id="aggregate">Aggregate</h2>
@@ -111,6 +111,11 @@ __</p>
 <td><a href="Systems.Core.ExtensibleDataObjects.html#creationtimeutc">CreationTimeUtc</a></td>
 <td>datetime <strong>nullable</strong></td>
 <td>The exact server time (in UTC) when the object represented by this system object was created. null means that it is unknown. <code>Filter(ge;le)</code> <code>Introduced in version 19.1</code></td>
+</tr>
+<tr>
+<td><a href="Systems.Core.ExtensibleDataObjects.html#displaytext">DisplayText</a></td>
+<td>string</td>
+<td></td>
 </tr>
 <tr>
 <td><a href="Systems.Core.ExtensibleDataObjects.html#entityitemid">EntityItemId</a></td>
@@ -199,6 +204,10 @@ __</p>
 <p><em>Type</em>: <strong>datetime <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="displaytext">DisplayText</h3>
+<p><em>Type</em>: <strong>string</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****</p>
 <h3 id="entityitemid">EntityItemId</h3>
 <p>The Id of the primary row to which the object is bound. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong>guid</strong><br>

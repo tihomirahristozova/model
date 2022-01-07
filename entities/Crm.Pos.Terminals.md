@@ -12,6 +12,10 @@ Default Display Text Format:
 _{PosTerminalName:T}_  
 Default Search Members:  
 _PosTerminalCode; PosTerminalName_  
+Code Data Member:  
+_PosTerminalCode_  
+Name Data Member:  
+_PosTerminalName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -24,6 +28,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [DisplayText](Crm.Pos.Terminals.md#displaytext) | string |  
 | [Id](Crm.Pos.Terminals.md#id) | guid |  
 | [IsActive](Crm.Pos.Terminals.md#isactive) | boolean | Represents whether the POS terminal is active and can be chosen from drop-downs for new records. `Required` `Default(true)` `Filter(multi eq)` 
 | [ObjectVersion](Crm.Pos.Terminals.md#objectversion) | int32 |  
@@ -45,6 +50,12 @@ Aggregate Tree
 
 
 ## Attribute Details
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

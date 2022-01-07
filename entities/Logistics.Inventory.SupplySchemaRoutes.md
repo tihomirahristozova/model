@@ -12,6 +12,8 @@ Default Display Text Format:
 _{SupplySchema.Name}_  
 Default Search Members:  
 _SupplySchema.Name_  
+Name Data Member:  
+_SupplySchema.Name_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -25,6 +27,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [DisplayText](Logistics.Inventory.SupplySchemaRoutes.md#displaytext) | string |  
 | [Id](Logistics.Inventory.SupplySchemaRoutes.md#id) | guid |  
 | [Notes](Logistics.Inventory.SupplySchemaRoutes.md#notes) | string (254) __nullable__ | Notes for this SupplySchemaRoute. 
 | [ObjectVersion](Logistics.Inventory.SupplySchemaRoutes.md#objectversion) | int32 |  
@@ -41,6 +44,12 @@ Aggregate Root:
 
 
 ## Attribute Details
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

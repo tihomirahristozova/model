@@ -85,6 +85,8 @@
 <p>Default Display Text Format:<br>
 <em>{PosTerminal.PosTerminalName:T}</em><br>
 Default Search Members:<br>
+<em>PosTerminal.PosTerminalName</em><br>
+Name Data Member:<br>
 <em>PosTerminal.PosTerminalName</em></p>
 <h2 id="aggregate">Aggregate</h2>
 <p>An <a href="https://docs.erp.net/tech/advanced/concepts/aggregates.html">aggregate</a> is a cluster of domain objects that can be treated as a single unit.</p>
@@ -111,6 +113,11 @@ Aggregate Root:<br>
 <td><a href="Crm.Pos.Devices.html#devicetype">DeviceType</a></td>
 <td><a href="Crm.Pos.Devices.html#devicetype">DeviceType</a></td>
 <td>Type of the POS device. PAY=Payment Terminal; CSH=Cash Drawer; FIP=Fiscal Printer; OTH=Other. <code>Required</code> <code>Default(&quot;OTH&quot;)</code> <code>Filter(multi eq)</code></td>
+</tr>
+<tr>
+<td><a href="Crm.Pos.Devices.html#displaytext">DisplayText</a></td>
+<td>string</td>
+<td></td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.Devices.html#electronicaddress">ElectronicAddress</a></td>
@@ -202,6 +209,10 @@ Allowed values for the <code>DeviceType</code>(Crm.Pos.Devices.md#devicetype) da
 <p><em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Other</strong></p>
+<h3 id="displaytext">DisplayText</h3>
+<p><em>Type</em>: <strong>string</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****</p>
 <h3 id="electronicaddress">ElectronicAddress</h3>
 <p>The absolute address (Internet or other) which can be used for electronic communication with the device. The address should contain communication protocol/type, colon, space, then the actual address. Addresses, which are local to a specific computer, should also include the computer name. For example: &quot;COM: PC_WORK1:COM1&quot;, &quot;HTTP: https://&lt;addr&gt;&quot;, etc. <code>Filter(multi eq;like)</code></p>
 <p><em>Type</em>: <strong>string (254) <strong>nullable</strong></strong><br>

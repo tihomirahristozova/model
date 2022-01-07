@@ -83,7 +83,7 @@
 <p>Contains data about the execution of Upgrade Procedures. Contains status messages and ensures that each procedure is executed only once. Entity: Sys_Update_Procedure_Executes</p>
 <h2 id="default-visualization">Default Visualization</h2>
 <p>Default Display Text Format:<br>
-<em>{Id}: {ObjectVersion}</em><br>
+<em>{Id}: {UpdateProcedure}</em><br>
 Default Search Members:<br>
 __</p>
 <h2 id="aggregate">Aggregate</h2>
@@ -102,6 +102,11 @@ __</p>
 </tr>
 </thead>
 <tbody>
+<tr>
+<td><a href="Systems.Core.UpdateProcedureExecutes.html#displaytext">DisplayText</a></td>
+<td>string</td>
+<td></td>
+</tr>
 <tr>
 <td><a href="Systems.Core.UpdateProcedureExecutes.html#executetime">ExecuteTime</a></td>
 <td>datetime</td>
@@ -135,6 +140,10 @@ __</p>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
+<h3 id="displaytext">DisplayText</h3>
+<p><em>Type</em>: <strong>string</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****</p>
 <h3 id="executetime">ExecuteTime</h3>
 <p>The time, when the update procedure was executed. <code>Required</code> <code>Default(Now)</code></p>
 <p><em>Type</em>: <strong>datetime</strong><br>

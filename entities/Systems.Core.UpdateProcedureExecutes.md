@@ -9,7 +9,7 @@ Contains data about the execution of Upgrade Procedures. Contains status message
 
 ## Default Visualization
 Default Display Text Format:  
-_{Id}: {ObjectVersion}_  
+_{Id}: {UpdateProcedure}_  
 Default Search Members:  
 __  
 
@@ -23,6 +23,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [DisplayText](Systems.Core.UpdateProcedureExecutes.md#displaytext) | string |  
 | [ExecuteTime](Systems.Core.UpdateProcedureExecutes.md#executetime) | datetime | The time, when the update procedure was executed. `Required` `Default(Now)` 
 | [Id](Systems.Core.UpdateProcedureExecutes.md#id) | guid |  
 | [ObjectVersion](Systems.Core.UpdateProcedureExecutes.md#objectversion) | int32 |  
@@ -32,6 +33,12 @@ Aggregate Tree
 
 
 ## Attribute Details
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### ExecuteTime
 

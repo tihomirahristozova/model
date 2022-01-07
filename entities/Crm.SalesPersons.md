@@ -12,6 +12,8 @@ Default Display Text Format:
 _{Person.PartyName:T}_  
 Default Search Members:  
 _Person.PartyName_  
+Name Data Member:  
+_Person.PartyName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -29,6 +31,7 @@ Aggregate Root:
 | [CommissionPolicyId](Crm.SalesPersons.md#commissionpolicyid) | guid __nullable__ | Current commission policy for the sales person. null means there is no commission policy. `Filter(multi eq)` 
 | [ContractEndDate](Crm.SalesPersons.md#contractenddate) | datetime __nullable__ | The ending date of the contract with the sales person. null when the sales person is still active. `Filter(ge;le)` 
 | [ContractStartDate](Crm.SalesPersons.md#contractstartdate) | datetime __nullable__ | The starting date of the contract with the sales person. null when it is unknown. `Filter(ge;le)` 
+| [DisplayText](Crm.SalesPersons.md#displaytext) | string |  
 | [Id](Crm.SalesPersons.md#id) | guid |  
 | [IsActive](Crm.SalesPersons.md#isactive) | boolean | Specifies whether the sales person is active and should be included in the list when choosing sales person through drop-downs, lists, etc. `Required` `Default(true)` `Filter(eq)` 
 | [ObjectVersion](Crm.SalesPersons.md#objectversion) | int32 |  
@@ -75,6 +78,12 @@ The starting date of the contract with the sales person. null when it is unknown
 _Type_: **datetime __nullable__**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

@@ -12,6 +12,10 @@ Default Display Text Format:
 _{Vehicle}_  
 Default Search Members:  
 _Code; Vehicle_  
+Code Data Member:  
+_Code_  
+Name Data Member:  
+_Vehicle_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -26,6 +30,7 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Code](Logistics.Shipment.TransportationVehicles.md#code) | string (16) | The unique code (or call sign) of this transportation vehicle. `Required` `Filter(eq;like)` `ORD` 
+| [DisplayText](Logistics.Shipment.TransportationVehicles.md#displaytext) | string |  
 | [Id](Logistics.Shipment.TransportationVehicles.md#id) | guid |  
 | [MaxCargoWeightKg](Logistics.Shipment.TransportationVehicles.md#maxcargoweightkg) | int32 __nullable__ | The maximum weight of the cargo (in kg), which can be transported. null when this is unknown and no limit should be enforced. 
 | [MaxPalletsCount](Logistics.Shipment.TransportationVehicles.md#maxpalletscount) | int32 __nullable__ | The maximum number of pallets, which can be transported by the vehicle. null when this is unknown and no limit should be enforced. 
@@ -54,6 +59,12 @@ _Indexed_: **True**
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
 _Maximum Length_: **16**  
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

@@ -12,6 +12,10 @@ Default Display Text Format:
 _{WorkElementName}_  
 Default Search Members:  
 _WorkElementCode; WorkElementName_  
+Code Data Member:  
+_WorkElementCode_  
+Name Data Member:  
+_WorkElementName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -25,6 +29,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [DisplayText](Projects.TypeWorkElements.md#displaytext) | string |  
 | [FullPath](Projects.TypeWorkElements.md#fullpath) | string (25) __nullable__ | The full path of the node in the format of dot-delimited, dot-terminated codes of the parents. `Filter(eq;like)` `ReadOnly` 
 | [Id](Projects.TypeWorkElements.md#id) | guid |  
 | [Notes](Projects.TypeWorkElements.md#notes) | string (max) __nullable__ | Notes for this TypeWorkElement. 
@@ -41,6 +46,12 @@ Aggregate Root:
 
 
 ## Attribute Details
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### FullPath
 

@@ -12,6 +12,10 @@ Default Display Text Format:
 _{Name}_  
 Default Search Members:  
 _Code; Name_  
+Code Data Member:  
+_Code_  
+Name Data Member:  
+_Name_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -26,6 +30,7 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [Code](Crm.Marketing.TargetGroups.md#code) | string (16) | Short code for identification of target groups. `Required` `Filter(eq;like)` `ORD` 
 | [Description](Crm.Marketing.TargetGroups.md#description) | string (254) __nullable__ | The description of this TargetGroup. 
+| [DisplayText](Crm.Marketing.TargetGroups.md#displaytext) | string |  
 | [Id](Crm.Marketing.TargetGroups.md#id) | guid |  
 | [Name](Crm.Marketing.TargetGroups.md#name) | string (64) | The name of this TargetGroup. `Required` `Filter(like)` 
 | [ObjectVersion](Crm.Marketing.TargetGroups.md#objectversion) | int32 |  
@@ -57,6 +62,12 @@ _Type_: **string (254) __nullable__**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

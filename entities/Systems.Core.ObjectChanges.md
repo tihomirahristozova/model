@@ -12,6 +12,8 @@ Default Display Text Format:
 _{RepositoryName}_  
 Default Search Members:  
 _RepositoryName_  
+Name Data Member:  
+_RepositoryName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -26,6 +28,7 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [ChangeType](Systems.Core.ObjectChanges.md#changetype) | [ChangeType](Systems.Core.ObjectChanges.md#changetype) | Type of change - Create, Update or Delete. `Required` 
+| [DisplayText](Systems.Core.ObjectChanges.md#displaytext) | string |  
 | [EntityItemId](Systems.Core.ObjectChanges.md#entityitemid) | guid | The id of the actual changed object, described by this change. This is different than the aggregate root, which is pointed by Root Object. `Required` `Filter(multi eq)` 
 | [Id](Systems.Core.ObjectChanges.md#id) | guid |  
 | [ObjectVersion](Systems.Core.ObjectChanges.md#objectversion) | int32 |  
@@ -57,6 +60,12 @@ _Allowed Values (Systems.Core.ObjectChangesRepository.ChangeType Enum Members)_
 
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### EntityItemId
 

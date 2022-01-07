@@ -83,7 +83,7 @@
 <p>User comment to any object in the system. Entity: Cmm_Social_Comments (Introduced in version 20.1)</p>
 <h2 id="default-visualization">Default Visualization</h2>
 <p>Default Display Text Format:<br>
-<em>{Id}: {ObjectVersion}</em><br>
+<em>{Id}: {DataObjectId}</em><br>
 Default Search Members:<br>
 __</p>
 <h2 id="aggregate">Aggregate</h2>
@@ -111,6 +111,11 @@ __</p>
 <td><a href="Communities.SocialComments.html#creationtimeutc">CreationTimeUtc</a></td>
 <td>datetime</td>
 <td>The exact server time (in UTC), when the comment was created. <code>Required</code> <code>ORD</code></td>
+</tr>
+<tr>
+<td><a href="Communities.SocialComments.html#displaytext">DisplayText</a></td>
+<td>string</td>
+<td></td>
 </tr>
 <tr>
 <td><a href="Communities.SocialComments.html#id">Id</a></td>
@@ -164,6 +169,10 @@ __</p>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>True</strong></p>
+<h3 id="displaytext">DisplayText</h3>
+<p><em>Type</em>: <strong>string</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****</p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>

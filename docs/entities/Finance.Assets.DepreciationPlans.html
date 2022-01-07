@@ -86,6 +86,8 @@
 <p>Default Display Text Format:<br>
 <em>{DocumentType.TypeName:T} {DocumentNo}</em><br>
 Default Search Members:<br>
+<em>DocumentNo</em><br>
+Code Data Member:<br>
 <em>DocumentNo</em></p>
 <h2 id="aggregate">Aggregate</h2>
 <p>An <a href="https://docs.erp.net/tech/advanced/concepts/aggregates.html">aggregate</a> is a cluster of domain objects that can be treated as a single unit.</p>
@@ -153,6 +155,11 @@ Default Search Members:<br>
 <td><a href="Finance.Assets.DepreciationPlans.html#creationuser">CreationUser</a></td>
 <td>string (64)</td>
 <td>The login name of the user, who created the document. <code>Required</code> <code>Filter(like)</code> <code>ReadOnly</code> (Inherited from <a href="General.Documents.html">Documents</a>)</td>
+</tr>
+<tr>
+<td><a href="Finance.Assets.DepreciationPlans.html#displaytext">DisplayText</a></td>
+<td>string</td>
+<td></td>
 </tr>
 <tr>
 <td><a href="Finance.Assets.DepreciationPlans.html#documentdate">DocumentDate</a></td>
@@ -450,6 +457,10 @@ Default Search Members:<br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>64</strong></p>
+<h3 id="displaytext">DisplayText</h3>
+<p><em>Type</em>: <strong>string</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****</p>
 <h3 id="documentdate">DocumentDate</h3>
 <p>The date on which the document was issued. <code>Required</code> <code>Default(Today)</code> <code>Filter(eq;ge;le)</code> <code>ORD</code> (Inherited from <a href="General.Documents.html">Documents</a>)</p>
 <p><em>Type</em>: <strong>date</strong><br>

@@ -9,7 +9,7 @@ Types of scrap. Used in store transactions to categorize scrap, when it occurs. 
 
 ## Default Visualization
 Default Display Text Format:  
-_{Id}: {ObjectVersion}_  
+_{Id}: {Description}_  
 Default Search Members:  
 __  
 
@@ -24,6 +24,7 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Description](Logistics.Inventory.ScrapTypes.md#description) | string (254) __nullable__ | The description of this ScrapType. `Filter(like)` 
+| [DisplayText](Logistics.Inventory.ScrapTypes.md#displaytext) | string |  
 | [Id](Logistics.Inventory.ScrapTypes.md#id) | guid |  
 | [IsPlanned](Logistics.Inventory.ScrapTypes.md#isplanned) | boolean | True=Planned (expected) scrap. Scrap of this type will be used to refine planned scrap for future operations. 2=Unexpected scrap. `Required` `Default(true)` `Filter(eq)` 
 | [ObjectVersion](Logistics.Inventory.ScrapTypes.md#objectversion) | int32 |  
@@ -39,6 +40,12 @@ _Type_: **string (254) __nullable__**
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

@@ -12,6 +12,8 @@ Default Display Text Format:
 _{DepartmentName}_  
 Default Search Members:  
 _DepartmentName_  
+Name Data Member:  
+_DepartmentName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -26,6 +28,7 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [DepartmentName](General.Contacts.CompanyDepartments.md#departmentname) | string (254) | The name of the department. `Required` `Filter(like)` 
+| [DisplayText](General.Contacts.CompanyDepartments.md#displaytext) | string |  
 | [Id](General.Contacts.CompanyDepartments.md#id) | guid |  
 | [Notes](General.Contacts.CompanyDepartments.md#notes) | string (max) __nullable__ | Notes for this CompanyDepartment. 
 | [ObjectVersion](General.Contacts.CompanyDepartments.md#objectversion) | int32 |  
@@ -48,6 +51,12 @@ _Type_: **string (254)**
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

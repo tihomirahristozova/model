@@ -13,6 +13,8 @@ Default Display Text Format:
 _{DocumentType.TypeName:T} {DocumentNo}_  
 Default Search Members:  
 _DocumentNo_  
+Code Data Member:  
+_DocumentNo_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -42,6 +44,7 @@ Aggregate Tree
 | [CreationTime](Crm.Presales.Deals.md#creationtime) | datetime | Date/Time when the document was created. `Required` `Default(Now)` `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [CreationUser](Crm.Presales.Deals.md#creationuser) | string (64) | The login name of the user, who created the document. `Required` `Filter(like)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [DealStatus](Crm.Presales.Deals.md#dealstatus) | [DealStatus](Crm.Presales.Deals.md#dealstatus) | Current status of this deal. 'SUC' = Successful, 'UNS' = Unsuccessful, 'INP' = In progress. `Required` `Default("INP")` `Filter(multi eq)` 
+| [DisplayText](Crm.Presales.Deals.md#displaytext) | string |  
 | [DocumentDate](Crm.Presales.Deals.md#documentdate) | date | The date on which the document was issued. `Required` `Default(Today)` `Filter(eq;ge;le)` `ORD` (Inherited from [Documents](General.Documents.md)) 
 | [DocumentNo](Crm.Presales.Deals.md#documentno) | string (20) | Document number, unique within Document_Type_Id. `Required` `Filter(eq;like)` `ORD` (Inherited from [Documents](General.Documents.md)) 
 | [DocumentNotes](Crm.Presales.Deals.md#documentnotes) | string (max) __nullable__ | Notes for this Document. (Inherited from [Documents](General.Documents.md)) 
@@ -183,6 +186,12 @@ _Allowed Values (Crm.Presales.DealsRepository.DealStatus Enum Members)_
 _Supported Filters_: **Equals, EqualsIn**  
 _Supports Order By_: **False**  
 _Default Value_: **InProgress**  
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### DocumentDate
 

@@ -12,6 +12,8 @@ Default Display Text Format:
 _{Name}_  
 Default Search Members:  
 _Name_  
+Name Data Member:  
+_Name_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -23,6 +25,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [DisplayText](General.LinkTypes.md#displaytext) | string |  
 | [FromDocTypeId](General.LinkTypes.md#fromdoctypeid) | guid __nullable__ | From which type of documents the link originates. null means that it might originate from any document type. `Filter(multi eq)` 
 | [Id](General.LinkTypes.md#id) | guid |  
 | [Name](General.LinkTypes.md#name) | string (254) | Obsolete. Not used. `Required` 
@@ -31,6 +34,12 @@ Aggregate Tree
 
 
 ## Attribute Details
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### FromDocTypeId
 

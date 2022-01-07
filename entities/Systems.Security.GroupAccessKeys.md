@@ -12,6 +12,8 @@ Default Display Text Format:
 _{Group.Name:T}_  
 Default Search Members:  
 _Group.Name_  
+Name Data Member:  
+_Group.Name_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -28,6 +30,7 @@ Aggregate Root:
 | [CanAdminister](Systems.Security.GroupAccessKeys.md#canadminister) | boolean | When true, the group is granted with administrative permission (allowance to change access key) for the entity, protected by the access key. `Required` `Default(false)` 
 | [CanDelete](Systems.Security.GroupAccessKeys.md#candelete) | boolean | When true, the group is granted with delete permission for the entity, protected by the access key. `Required` 
 | [CanUpdate](Systems.Security.GroupAccessKeys.md#canupdate) | boolean | When true, the group is granted with update permission for the entity, protected by the access key. `Required` 
+| [DisplayText](Systems.Security.GroupAccessKeys.md#displaytext) | string |  
 | [Id](Systems.Security.GroupAccessKeys.md#id) | guid |  
 | [ObjectVersion](Systems.Security.GroupAccessKeys.md#objectversion) | int32 |  
 | [Permission1](Systems.Security.GroupAccessKeys.md#permission1) | boolean | When true, the group is granted with entity-specific permission for the entity, protected by the access key. `Required` `Default(false)` 
@@ -75,6 +78,12 @@ When true, the group is granted with update permission for the entity, protected
 _Type_: **boolean**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

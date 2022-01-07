@@ -12,6 +12,8 @@ Default Display Text Format:
 _{Vehicle}_  
 Default Search Members:  
 _Vehicle_  
+Name Data Member:  
+_Vehicle_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -25,6 +27,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [DisplayText](Applications.Fleet.VehicleEquipment.md#displaytext) | string |  
 | [EndDate](Applications.Fleet.VehicleEquipment.md#enddate) | date __nullable__ | The date when the equipment was removed. null when the equipment is still installed on the vehicle. `Filter(ge;le)` 
 | [Id](Applications.Fleet.VehicleEquipment.md#id) | guid |  
 | [Notes](Applications.Fleet.VehicleEquipment.md#notes) | string (max) __nullable__ | Notes for the installed equipment. 
@@ -41,6 +44,12 @@ Aggregate Root:
 
 
 ## Attribute Details
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### EndDate
 

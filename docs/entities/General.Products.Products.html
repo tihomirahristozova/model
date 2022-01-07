@@ -85,7 +85,11 @@
 <p>Default Display Text Format:<br>
 <em>{Name:T}</em><br>
 Default Search Members:<br>
-<em>PartNumber; Name</em></p>
+<em>PartNumber; Name</em><br>
+Code Data Member:<br>
+<em>PartNumber</em><br>
+Name Data Member:<br>
+<em>Name</em></p>
 <h2 id="aggregate">Aggregate</h2>
 <p>An <a href="https://docs.erp.net/tech/advanced/concepts/aggregates.html">aggregate</a> is a cluster of domain objects that can be treated as a single unit.</p>
 <p>Aggregate Tree</p>
@@ -151,6 +155,11 @@ Default Search Members:<br>
 <td><a href="General.Products.Products.html#description">Description</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString</a> <strong>nullable</strong></td>
 <td>The description of the product.</td>
+</tr>
+<tr>
+<td><a href="General.Products.Products.html#displaytext">DisplayText</a></td>
+<td>string</td>
+<td></td>
 </tr>
 <tr>
 <td><a href="General.Products.Products.html#excisealcoholicstrength">ExciseAlcoholicStrength</a></td>
@@ -532,6 +541,10 @@ Allowed values for the <code>CostingMethod</code>(General.Products.Products.md#c
 <p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a> <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="displaytext">DisplayText</h3>
+<p><em>Type</em>: <strong>string</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****</p>
 <h3 id="excisealcoholicstrength">ExciseAlcoholicStrength</h3>
 <p>The alcoholic strength, which will be used for Excise reporting purposes. null if the product is not subject to alcoholic Excise reporting. <code>Introduced in version 21.1.3.87</code></p>
 <p><em>Type</em>: <strong>decimal (5, 2) <strong>nullable</strong></strong><br>

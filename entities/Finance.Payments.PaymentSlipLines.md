@@ -12,6 +12,8 @@ Default Display Text Format:
 _{PaymentSlipAmount.PartyName:T}_  
 Default Search Members:  
 _PaymentSlipAmount.PartyName_  
+Name Data Member:  
+_PaymentSlipAmount.PartyName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -27,6 +29,7 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [Amount](Finance.Payments.PaymentSlipLines.md#amount) | [Amount (10, 2)](../data-types.md#amount) | The part of the total amount in the payment slip amount, that is distributed to the specified payment order. `Currency: PaymentSlipAmount.PaymentSlip.DocumentCurrency` `Required` `Default(0)` 
 | [CoveredOrderAmount](Finance.Payments.PaymentSlipLines.md#coveredorderamount) | [Amount (10, 2)](../data-types.md#amount) | The part of the original payment order amount, that is covered by this payment slip line. `Currency: PaymentOrder.TotalAmountCurrency` `Required` `Default(0)` 
+| [DisplayText](Finance.Payments.PaymentSlipLines.md#displaytext) | string |  
 | [Id](Finance.Payments.PaymentSlipLines.md#id) | guid |  
 | [ObjectVersion](Finance.Payments.PaymentSlipLines.md#objectversion) | int32 |  
 
@@ -62,6 +65,12 @@ _Default Value_: **Constant**
 
 _Front-End Recalc Expressions:_  
 `obj.Amount.ConvertTo( obj.PaymentOrder.TotalAmountCurrency, obj.PaymentSlipAmount.PaymentSlip.CurrencyDirectory)`
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+
 ### Id
 
 _Type_: **guid**  

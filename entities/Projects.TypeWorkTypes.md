@@ -12,6 +12,8 @@ Default Display Text Format:
 _{WorkTypeName}_  
 Default Search Members:  
 _WorkTypeName_  
+Name Data Member:  
+_WorkTypeName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -25,6 +27,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [DisplayText](Projects.TypeWorkTypes.md#displaytext) | string |  
 | [Id](Projects.TypeWorkTypes.md#id) | guid |  
 | [IsActive](Projects.TypeWorkTypes.md#isactive) | boolean | True when the work type is currently active and selectable in new documents. `Required` `Default(true)` `Filter(eq)` 
 | [ObjectVersion](Projects.TypeWorkTypes.md#objectversion) | int32 |  
@@ -39,6 +42,12 @@ Aggregate Root:
 
 
 ## Attribute Details
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

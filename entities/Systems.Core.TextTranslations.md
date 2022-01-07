@@ -12,6 +12,8 @@ Default Display Text Format:
 _{ColumnName}_  
 Default Search Members:  
 _ColumnName_  
+Name Data Member:  
+_ColumnName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -24,6 +26,7 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [ColumnName](Systems.Core.TextTranslations.md#columnname) | string (128) | Obsolete. Not used. `Required` `Filter(eq)` 
+| [DisplayText](Systems.Core.TextTranslations.md#displaytext) | string |  
 | [Id](Systems.Core.TextTranslations.md#id) | guid |  
 | [Language](Systems.Core.TextTranslations.md#language) | string (50) | Obsolete. Not used. `Required` `Filter(eq)` 
 | [ObjectVersion](Systems.Core.TextTranslations.md#objectversion) | int32 |  
@@ -42,6 +45,12 @@ _Type_: **string (128)**
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Maximum Length_: **128**  
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

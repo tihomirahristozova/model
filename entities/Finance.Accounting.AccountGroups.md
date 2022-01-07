@@ -12,6 +12,10 @@ Default Display Text Format:
 _{Name:T}_  
 Default Search Members:  
 _Number; Name_  
+Code Data Member:  
+_Number_  
+Name Data Member:  
+_Name_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -25,6 +29,7 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [Description](Finance.Accounting.AccountGroups.md#description) | [MultilanguageString](../data-types.md#multilanguagestring) __nullable__ | The description of this AccountGroup. 
 | [Discontinued](Finance.Accounting.AccountGroups.md#discontinued) | boolean | True means that the account group won't be used any more and should not appear in combo boxes. `Required` `Default(false)` `Filter(eq)` 
+| [DisplayText](Finance.Accounting.AccountGroups.md#displaytext) | string |  
 | [FullPath](Finance.Accounting.AccountGroups.md#fullpath) | string (256) __nullable__ | Full path to the group. Contains delimited list of group numbers of parent groups. `Filter(like)` 
 | [Id](Finance.Accounting.AccountGroups.md#id) | guid |  
 | [Name](Finance.Accounting.AccountGroups.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Account group name, required. Must be unique within the parent group. `Required` `Filter(like)` 
@@ -56,6 +61,12 @@ _Type_: **boolean**
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **False**  
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### FullPath
 

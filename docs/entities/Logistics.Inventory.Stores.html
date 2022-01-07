@@ -86,7 +86,11 @@
 <p>Default Display Text Format:<br>
 <em>{PartyName:T}</em><br>
 Default Search Members:<br>
-<em>Code; PartyName</em></p>
+<em>Code; PartyName</em><br>
+Code Data Member:<br>
+<em>Code</em><br>
+Name Data Member:<br>
+<em>PartyName</em></p>
 <h2 id="aggregate">Aggregate</h2>
 <p>An <a href="https://docs.erp.net/tech/advanced/concepts/aggregates.html">aggregate</a> is a cluster of domain objects that can be treated as a single unit.</p>
 <p>Aggregate Tree</p>
@@ -134,6 +138,11 @@ Default Search Members:<br>
 <td><a href="Logistics.Inventory.Stores.html#defaultsupplystoreid">DefaultSupplyStoreId</a></td>
 <td>guid <strong>nullable</strong></td>
 <td>The store from which goods are usually supplied to this store. <code>Filter(multi eq)</code></td>
+</tr>
+<tr>
+<td><a href="Logistics.Inventory.Stores.html#displaytext">DisplayText</a></td>
+<td>string</td>
+<td></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.Stores.html#gln">GLN</a></td>
@@ -394,6 +403,10 @@ Default Search Members:<br>
 <p>The store from which goods are usually supplied to this store. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong>guid <strong>nullable</strong></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<h3 id="displaytext">DisplayText</h3>
+<p><em>Type</em>: <strong>string</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****</p>
 <h3 id="gln">GLN</h3>
 <p>Global Location Number used by EDI systems. <code>Filter(multi eq)</code> <code>ORD</code> (Inherited from <a href="General.Contacts.Parties.html">Parties</a>)</p>
 <p><em>Type</em>: <strong>string (13) <strong>nullable</strong></strong><br>

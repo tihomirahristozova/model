@@ -85,6 +85,8 @@
 <p>Default Display Text Format:<br>
 <em>{ShiftName}</em><br>
 Default Search Members:<br>
+<em>ShiftName</em><br>
+Name Data Member:<br>
 <em>ShiftName</em></p>
 <h2 id="aggregate">Aggregate</h2>
 <p>An <a href="https://docs.erp.net/tech/advanced/concepts/aggregates.html">aggregate</a> is a cluster of domain objects that can be treated as a single unit.</p>
@@ -102,6 +104,11 @@ Aggregate Root:<br>
 </tr>
 </thead>
 <tbody>
+<tr>
+<td><a href="Production.Resources.WorkgroupShifts.html#displaytext">DisplayText</a></td>
+<td>string</td>
+<td></td>
+</tr>
 <tr>
 <td><a href="Production.Resources.WorkgroupShifts.html#efficiencyfactorpercent">EfficiencyFactorPercent</a></td>
 <td>decimal (3, 2)</td>
@@ -152,6 +159,10 @@ Aggregate Root:<br>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
+<h3 id="displaytext">DisplayText</h3>
+<p><em>Type</em>: <strong>string</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****</p>
 <h3 id="efficiencyfactorpercent">EfficiencyFactorPercent</h3>
 <p>Efficiency factor of the routing steps for this shift, expressed as percentage. <code>Required</code> <code>Default(1)</code></p>
 <p><em>Type</em>: <strong>decimal (3, 2)</strong><br>

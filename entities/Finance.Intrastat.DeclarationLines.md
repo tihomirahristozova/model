@@ -12,6 +12,8 @@ Default Display Text Format:
 _{IntrastatDeclaration.EntityName}_  
 Default Search Members:  
 _IntrastatDeclaration.EntityName_  
+Name Data Member:  
+_IntrastatDeclaration.EntityName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -26,6 +28,7 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [DeliveryTerms](Finance.Intrastat.DeclarationLines.md#deliveryterms) | [DeliveryTerms](Finance.Intrastat.DeclarationLines.md#deliveryterms) | Delivery terms - classification according to Intrastat (which uses the common abbreviations). `Required` 
+| [DisplayText](Finance.Intrastat.DeclarationLines.md#displaytext) | string |  
 | [Id](Finance.Intrastat.DeclarationLines.md#id) | guid |  
 | [InvoicedValueAmountBase](Finance.Intrastat.DeclarationLines.md#invoicedvalueamountbase) | [Amount (10, 0)](../data-types.md#amount) | Invoiced value of the goods in the base currency. `Currency: IntrastatDeclaration.EnterpriseCompany.BaseCurrency` `Required` 
 | [LineAction](Finance.Intrastat.DeclarationLines.md#lineaction) | [LineAction](Finance.Intrastat.DeclarationLines.md#lineaction) | Line action - 'NEW' = New, 'EDN' = Edited-New, 'EDO' = Edited-Old, 'DEL' = Deleted. `Required` `Default("NEW")` 
@@ -76,6 +79,12 @@ _Allowed Values (Finance.Intrastat.DeclarationLinesRepository.DeliveryTerms Enum
 
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

@@ -9,7 +9,7 @@ Contains purchase invoice specific options for the different document types. Ent
 
 ## Default Visualization
 Default Display Text Format:  
-_{Id}: {ObjectVersion}_  
+_{Id}: {DocumentTypeId}_  
 Default Search Members:  
 __  
 
@@ -23,6 +23,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [DisplayText](Logistics.Procurement.PurchaseInvoicesOptions.md#displaytext) | string |  
 | [Id](Logistics.Procurement.PurchaseInvoicesOptions.md#id) | guid |  
 | [ObjectVersion](Logistics.Procurement.PurchaseInvoicesOptions.md#objectversion) | int32 |  
 | [SignRestriction](Logistics.Procurement.PurchaseInvoicesOptions.md#signrestriction) | [SignRestriction](Logistics.Procurement.PurchaseInvoicesOptions.md#signrestriction) | This option can restrict the sign of the Line Amounts for each detail line in purchase invoices of the specified document type. `Required` `Default(0)` 
@@ -36,6 +37,12 @@ Aggregate Tree
 
 
 ## Attribute Details
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

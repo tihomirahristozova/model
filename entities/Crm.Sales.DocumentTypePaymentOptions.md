@@ -12,6 +12,8 @@ Default Display Text Format:
 _{DocumentType.EntityName}_  
 Default Search Members:  
 _DocumentType.EntityName_  
+Name Data Member:  
+_DocumentType.EntityName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -26,6 +28,7 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [DeferredPayment<br />MinimalAmmount](Crm.Sales.DocumentTypePaymentOptions.md#deferredpaymentminimalammount) | [Amount (14, 2)](../data-types.md#amount) | The minimal order total amount, which an order must have in order to use deferred payment. `Currency: DeferredPayment<br />MinimalAmmount<br />Currency` `Required` 
+| [DisplayText](Crm.Sales.DocumentTypePaymentOptions.md#displaytext) | string |  
 | [Id](Crm.Sales.DocumentTypePaymentOptions.md#id) | guid |  
 | [ObjectVersion](Crm.Sales.DocumentTypePaymentOptions.md#objectversion) | int32 |  
 
@@ -47,6 +50,12 @@ The minimal order total amount, which an order must have in order to use deferre
 _Type_: **[Amount (14, 2)](../data-types.md#amount)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

@@ -12,6 +12,8 @@ Default Display Text Format:
 _{CompanyName}_  
 Default Search Members:  
 _CompanyName_  
+Name Data Member:  
+_CompanyName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -25,6 +27,7 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [CompanyName](Crm.Presales.Leads.md#companyname) | string (64) __nullable__ | The name of the company, which the person works for (in relation to the current lead). `Filter(eq;like)` 
 | [CreationTimestampUtc](Crm.Presales.Leads.md#creationtimestamputc) | datetime | System assigned date and time (in UTC), when the lead was initially created. `Required` `Filter(ge;le)` `ReadOnly` 
+| [DisplayText](Crm.Presales.Leads.md#displaytext) | string |  
 | [Id](Crm.Presales.Leads.md#id) | guid |  
 | [MQLTimestampUtc](Crm.Presales.Leads.md#mqltimestamputc) | datetime __nullable__ | System assigned date and time (in UTC), when the lead was first promoted to Marketing Qualified Lead (MQL). `Filter(ge;le)` `ReadOnly` 
 | [ObjectVersion](Crm.Presales.Leads.md#objectversion) | int32 |  
@@ -77,6 +80,12 @@ _Supports Order By_: **False**
 
 _Back-End Default Expression:_  
 `IIF( ( obj.MQLTimestampUtc == null), Convert( DateTime.UtcNow, Nullable`1), obj.MQLTimestampUtc)`
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

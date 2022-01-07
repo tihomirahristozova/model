@@ -12,6 +12,8 @@ Default Display Text Format:
 _{WorkSchedule.Name}_  
 Default Search Members:  
 _WorkSchedule.Name_  
+Name Data Member:  
+_WorkSchedule.Name_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -26,6 +28,7 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [DayNo](General.Resources.WorkScheduleWorkingTime.md#dayno) | int32 | Consequtive day in the work schedule recurrence, starting at 1. `Required` 
+| [DisplayText](General.Resources.WorkScheduleWorkingTime.md#displaytext) | string |  
 | [EndTime](General.Resources.WorkScheduleWorkingTime.md#endtime) | time | End of working time period. `Required` 
 | [Id](General.Resources.WorkScheduleWorkingTime.md#id) | guid |  
 | [ObjectVersion](General.Resources.WorkScheduleWorkingTime.md#objectversion) | int32 |  
@@ -47,6 +50,12 @@ Consequtive day in the work schedule recurrence, starting at 1. `Required`
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### EndTime
 

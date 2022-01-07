@@ -85,6 +85,8 @@
 <p>Default Display Text Format:<br>
 <em>{CompanyName}</em><br>
 Default Search Members:<br>
+<em>CompanyName</em><br>
+Name Data Member:<br>
 <em>CompanyName</em></p>
 <h2 id="aggregate">Aggregate</h2>
 <p>An <a href="https://docs.erp.net/tech/advanced/concepts/aggregates.html">aggregate</a> is a cluster of domain objects that can be treated as a single unit.</p>
@@ -111,6 +113,11 @@ Default Search Members:<br>
 <td><a href="Crm.Presales.Leads.html#creationtimestamputc">CreationTimestampUtc</a></td>
 <td>datetime</td>
 <td>System assigned date and time (in UTC), when the lead was initially created. <code>Required</code> <code>Filter(ge;le)</code> <code>ReadOnly</code></td>
+</tr>
+<tr>
+<td><a href="Crm.Presales.Leads.html#displaytext">DisplayText</a></td>
+<td>string</td>
+<td></td>
 </tr>
 <tr>
 <td><a href="Crm.Presales.Leads.html#id">Id</a></td>
@@ -260,6 +267,10 @@ Default Search Members:<br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Back-End Default Expression:</em><br>
 <code>IIF( ( obj.MQLTimestampUtc == null), Convert( DateTime.UtcNow, Nullable</code>1), obj.MQLTimestampUtc)`</p>
+<h3 id="displaytext">DisplayText</h3>
+<p><em>Type</em>: <strong>string</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****</p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>

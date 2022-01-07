@@ -12,6 +12,8 @@ Default Display Text Format:
 _{FinancialStatementNode.Name:T}_  
 Default Search Members:  
 _FinancialStatementNode.Name_  
+Name Data Member:  
+_FinancialStatementNode.Name_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -25,6 +27,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [DisplayText](Finance.Accounting.FinancialStatementNodeCorrespondances.md#displaytext) | string |  
 | [Id](Finance.Accounting.FinancialStatementNodeCorrespondances.md#id) | guid |  
 | [Multiplier](Finance.Accounting.FinancialStatementNodeCorrespondances.md#multiplier) | decimal (18, 0) | Factor by which the correspondence balance will be multiplied. `Required` `Default(1)` 
 | [ObjectVersion](Finance.Accounting.FinancialStatementNodeCorrespondances.md#objectversion) | int32 |  
@@ -39,6 +42,12 @@ Aggregate Root:
 
 
 ## Attribute Details
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

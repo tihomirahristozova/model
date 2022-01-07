@@ -12,6 +12,8 @@ Default Display Text Format:
 _{ColumnName}_  
 Default Search Members:  
 _ColumnName_  
+Name Data Member:  
+_ColumnName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -24,6 +26,7 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [ColumnName](Systems.Security.ColumnPermissions.md#columnname) | string (128) | The name of the secured column. `Required` `Filter(eq)` 
+| [DisplayText](Systems.Security.ColumnPermissions.md#displaytext) | string |  
 | [Id](Systems.Security.ColumnPermissions.md#id) | guid |  
 | [ObjectVersion](Systems.Security.ColumnPermissions.md#objectversion) | int32 |  
 | [TableName](Systems.Security.ColumnPermissions.md#tablename) | string (128) | The table in which is the secured column. `Required` `Filter(eq)` `ORD` 
@@ -45,6 +48,12 @@ _Type_: **string (128)**
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Maximum Length_: **128**  
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

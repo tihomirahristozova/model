@@ -12,6 +12,8 @@ Default Display Text Format:
 _{SalesPersonTarget.EntityName}_  
 Default Search Members:  
 _SalesPersonTarget.EntityName_  
+Name Data Member:  
+_SalesPersonTarget.EntityName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -25,6 +27,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [DisplayText](Crm.Distribution.SalesPersonTargetLines.md#displaytext) | string |  
 | [Id](Crm.Distribution.SalesPersonTargetLines.md#id) | guid |  
 | [ObjectVersion](Crm.Distribution.SalesPersonTargetLines.md#objectversion) | int32 |  
 | [PeriodDate](Crm.Distribution.SalesPersonTargetLines.md#perioddate) | datetime | Calculated date representation of the target period (used for grouping, filtering and other auxiliary purposes). `Required` `ReadOnly` 
@@ -48,6 +51,12 @@ Aggregate Root:
 
 
 ## Attribute Details
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

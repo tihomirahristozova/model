@@ -12,6 +12,8 @@ Default Display Text Format:
 _{DealType.Name}_  
 Default Search Members:  
 _DealType.Name_  
+Name Data Member:  
+_DealType.Name_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -25,6 +27,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [DisplayText](Finance.Vat.DealTypeDocumentAmounts.md#displaytext) | string |  
 | [Id](Finance.Vat.DealTypeDocumentAmounts.md#id) | guid |  
 | [LinePercent](Finance.Vat.DealTypeDocumentAmounts.md#linepercent) | decimal (14, 3) | Percent by which additional amount is calculated. `Required` `Default(0)` 
 | [Notes](Finance.Vat.DealTypeDocumentAmounts.md#notes) | string (max) __nullable__ | Notes for this DealTypeDocumentAmount. 
@@ -39,6 +42,12 @@ Aggregate Root:
 
 
 ## Attribute Details
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

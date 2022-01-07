@@ -12,6 +12,8 @@ Default Display Text Format:
 _{Calculation.EntityName}_  
 Default Search Members:  
 _Calculation.EntityName_  
+Name Data Member:  
+_Calculation.EntityName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -26,6 +28,7 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Amount](Finance.Cost.CalculationCosts.md#amount) | decimal (14, 2) | The allocated amount of costs in the currency of the calculation. `Required` `Default(0)` 
+| [DisplayText](Finance.Cost.CalculationCosts.md#displaytext) | string |  
 | [Id](Finance.Cost.CalculationCosts.md#id) | guid |  
 | [LineNo](Finance.Cost.CalculationCosts.md#lineno) | int32 | Consecutive number of the line within the calculation. `Required` 
 | [ObjectVersion](Finance.Cost.CalculationCosts.md#objectversion) | int32 |  
@@ -54,6 +57,12 @@ _Type_: **decimal (14, 2)**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

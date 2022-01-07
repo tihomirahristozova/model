@@ -12,6 +12,8 @@ Default Display Text Format:
 _{DocumentType.EntityName}_  
 Default Search Members:  
 _DocumentType.EntityName_  
+Name Data Member:  
+_DocumentType.EntityName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -26,6 +28,7 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [DefaultPercent](General.DocumentTypeAmounts.md#defaultpercent) | decimal (7, 6) __nullable__ | Default input percent. Valid only for amount types, supporting percent and takes precedence over Default_Percent in the definition of the amount type. 
+| [DisplayText](General.DocumentTypeAmounts.md#displaytext) | string |  
 | [Id](General.DocumentTypeAmounts.md#id) | guid |  
 | [ObjectVersion](General.DocumentTypeAmounts.md#objectversion) | int32 |  
 | [RequiredFromDate](General.DocumentTypeAmounts.md#requiredfromdate) | date __nullable__ | When not null, specifies a date, after which the amount becomes required for the current document type. The date is compared against the document date. `Filter(ge;le)` 
@@ -49,6 +52,12 @@ Default input percent. Valid only for amount types, supporting percent and takes
 _Type_: **decimal (7, 6) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

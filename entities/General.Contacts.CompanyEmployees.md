@@ -12,6 +12,10 @@ Default Display Text Format:
 _{Person.PartyName:T}_  
 Default Search Members:  
 _ContractCode; Person.PartyName_  
+Code Data Member:  
+_ContractCode_  
+Name Data Member:  
+_Person.PartyName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -28,6 +32,7 @@ Aggregate Root:
 | [ContractCode](General.Contacts.CompanyEmployees.md#contractcode) | string (16) __nullable__ | Contract number or code, unique within the company. One employee can have more than one contract. `Filter(eq)` 
 | [ContractEndDate](General.Contacts.CompanyEmployees.md#contractenddate) | datetime __nullable__ | End date of the employee contract, null if the contract is still valid. `Filter(ge;le)` 
 | [ContractStartDate](General.Contacts.CompanyEmployees.md#contractstartdate) | datetime __nullable__ | Start date of the employee contract. Null if it is unkown. `Filter(ge;le)` 
+| [DisplayText](General.Contacts.CompanyEmployees.md#displaytext) | string |  
 | [Id](General.Contacts.CompanyEmployees.md#id) | guid |  
 | [Notes](General.Contacts.CompanyEmployees.md#notes) | string (254) __nullable__ | Notes for this CompanyEmployee. 
 | [ObjectVersion](General.Contacts.CompanyEmployees.md#objectversion) | int32 |  
@@ -67,6 +72,12 @@ Start date of the employee contract. Null if it is unkown. `Filter(ge;le)`
 _Type_: **datetime __nullable__**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

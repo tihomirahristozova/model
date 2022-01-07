@@ -13,6 +13,8 @@ Default Display Text Format:
 _{DocumentType.TypeName:T} {DocumentNo}_  
 Default Search Members:  
 _DocumentNo_  
+Code Data Member:  
+_DocumentNo_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -43,6 +45,7 @@ Aggregate Tree
 | [CreationUser](Finance.Intrastat.Declarations.md#creationuser) | string (64) | The login name of the user, who created the document. `Required` `Filter(like)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [DeclarationFunction](Finance.Intrastat.Declarations.md#declarationfunction) | [DeclarationFunction](Finance.Intrastat.Declarations.md#declarationfunction) | Specifies whether this is a regular or corrective declaration. R=Regular, C=Corrective. `Required` `Default("R")` `Filter(eq)` 
 | [DeclareStatisticalValues](Finance.Intrastat.Declarations.md#declarestatisticalvalues) | boolean | Does the declaration contain statistical values? true=Yes; false=No. `Required` `Default(false)` `Filter(multi eq)` 
+| [DisplayText](Finance.Intrastat.Declarations.md#displaytext) | string |  
 | [DocumentDate](Finance.Intrastat.Declarations.md#documentdate) | date | The date on which the document was issued. `Required` `Default(Today)` `Filter(eq;ge;le)` `ORD` (Inherited from [Documents](General.Documents.md)) 
 | [DocumentNo](Finance.Intrastat.Declarations.md#documentno) | string (20) | Document number, unique within Document_Type_Id. `Required` `Filter(eq;like)` `ORD` (Inherited from [Documents](General.Documents.md)) 
 | [DocumentNotes](Finance.Intrastat.Declarations.md#documentnotes) | string (max) __nullable__ | Notes for this Document. (Inherited from [Documents](General.Documents.md)) 
@@ -187,6 +190,12 @@ _Type_: **boolean**
 _Supported Filters_: **Equals, EqualsIn**  
 _Supports Order By_: **False**  
 _Default Value_: **False**  
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### DocumentDate
 

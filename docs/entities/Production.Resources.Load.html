@@ -85,6 +85,8 @@
 <p>Default Display Text Format:<br>
 <em>{WorkOrderItemOperation.WorkOrderItem.WorkOrder.EntityName}</em><br>
 Default Search Members:<br>
+<em>WorkOrderItemOperation.WorkOrderItem.WorkOrder.EntityName</em><br>
+Name Data Member:<br>
 <em>WorkOrderItemOperation.WorkOrderItem.WorkOrder.EntityName</em></p>
 <h2 id="aggregate">Aggregate</h2>
 <p>An <a href="https://docs.erp.net/tech/advanced/concepts/aggregates.html">aggregate</a> is a cluster of domain objects that can be treated as a single unit.</p>
@@ -106,6 +108,11 @@ Aggregate Root:<br>
 <td><a href="Production.Resources.Load.html#calendardate">CalendarDate</a></td>
 <td>datetime</td>
 <td>Date of the scheduled load. This is date only. Start_Time and End_Time specify time of day. <code>Required</code> <code>Filter(ge;le)</code></td>
+</tr>
+<tr>
+<td><a href="Production.Resources.Load.html#displaytext">DisplayText</a></td>
+<td>string</td>
+<td></td>
 </tr>
 <tr>
 <td><a href="Production.Resources.Load.html#id">Id</a></td>
@@ -177,6 +184,10 @@ Aggregate Root:<br>
 <p><em>Type</em>: <strong>datetime</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="displaytext">DisplayText</h3>
+<p><em>Type</em>: <strong>string</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****</p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>

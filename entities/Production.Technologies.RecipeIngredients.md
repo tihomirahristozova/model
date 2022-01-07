@@ -12,6 +12,8 @@ Default Display Text Format:
 _{Recipe.Name}_  
 Default Search Members:  
 _Recipe.Name_  
+Name Data Member:  
+_Recipe.Name_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -26,6 +28,7 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Cost](Production.Technologies.RecipeIngredients.md#cost) | [Amount (18, 4)](../data-types.md#amount) | The cost of the specified quantity of the ingredient. `Currency: Recipe.Product.CostingCurrency` `Required` `Default(0)` `Filter(ge;le)` 
+| [DisplayText](Production.Technologies.RecipeIngredients.md#displaytext) | string |  
 | [FixedScrapQuantity](Production.Technologies.RecipeIngredients.md#fixedscrapquantity) | [Quantity (18, 3)](../data-types.md#quantity) | Fixed scrap quantity of the material, needed for setup. `Unit: UsageUnit` `Required` `Default(0)` 
 | [Id](Production.Technologies.RecipeIngredients.md#id) | guid |  
 | [LineOrd](Production.Technologies.RecipeIngredients.md#lineord) | int32 | The order of this line in the recipe. `Required` 
@@ -59,6 +62,12 @@ _Type_: **[Amount (18, 4)](../data-types.md#amount)**
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### FixedScrapQuantity
 

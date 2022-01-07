@@ -12,6 +12,8 @@ Default Display Text Format:
 _{User.Name:T}_  
 Default Search Members:  
 _User.Name_  
+Name Data Member:  
+_User.Name_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -27,6 +29,7 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [CanDelete](Systems.Security.UserAccessKeys.md#candelete) | boolean | Obsolete. Not used. `Required` 
 | [CanUpdate](Systems.Security.UserAccessKeys.md#canupdate) | boolean | Obsolete. Not used. `Required` 
+| [DisplayText](Systems.Security.UserAccessKeys.md#displaytext) | string |  
 | [Id](Systems.Security.UserAccessKeys.md#id) | guid |  
 | [ObjectVersion](Systems.Security.UserAccessKeys.md#objectversion) | int32 |  
 | [Permission1](Systems.Security.UserAccessKeys.md#permission1) | boolean | Obsolete. Not used. `Required` `Default(false)` 
@@ -65,6 +68,12 @@ Obsolete. Not used. `Required`
 _Type_: **boolean**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

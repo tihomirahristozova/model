@@ -9,7 +9,7 @@ Fulfillment ledger for warehouse requisitions. Entity: Wms_Warehouse_Requisition
 
 ## Default Visualization
 Default Display Text Format:  
-_{Id}: {ObjectVersion}_  
+_{Id}: {WarehouseRequisitionId}_  
 Default Search Members:  
 __  
 
@@ -24,6 +24,7 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [CreationTimeUtc](Logistics.Wms.WarehouseRequisitionFulfillments.md#creationtimeutc) | datetime | The exact time in UTC, when the fulfillment was created in the system. `Required` 
+| [DisplayText](Logistics.Wms.WarehouseRequisitionFulfillments.md#displaytext) | string |  
 | [FulfillmentType](Logistics.Wms.WarehouseRequisitionFulfillments.md#fulfillmenttype) | string (1) | Type of fulfillment: P=Plan created; C=Requisition completed. `Required` 
 | [Id](Logistics.Wms.WarehouseRequisitionFulfillments.md#id) | guid |  
 | [IsFinal](Logistics.Wms.WarehouseRequisitionFulfillments.md#isfinal) | boolean | Specifies whether this fulfillment finalizes the requisition line, regardless of any remaining quantities. `Required` 
@@ -48,6 +49,12 @@ The exact time in UTC, when the fulfillment was created in the system. `Required
 _Type_: **datetime**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### FulfillmentType
 

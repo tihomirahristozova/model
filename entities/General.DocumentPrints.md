@@ -12,6 +12,8 @@ Default Display Text Format:
 _{Document.EntityName}_  
 Default Search Members:  
 _Document.EntityName_  
+Name Data Member:  
+_Document.EntityName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -27,6 +29,7 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [AdditionalData](General.DocumentPrints.md#additionaldata) | string (max) __nullable__ | Contains additional data about the printout. The format of the data is dependent on the Printout Type. `Introduced in version 19.1` 
 | [Description](General.DocumentPrints.md#description) | string (254) __nullable__ | The description of this DocumentPrint. 
+| [DisplayText](General.DocumentPrints.md#displaytext) | string |  
 | [Id](General.DocumentPrints.md#id) | guid |  
 | [IsOriginal](General.DocumentPrints.md#isoriginal) | boolean | True when the printout is the first printout (the original printout). `Required` `Filter(eq)` 
 | [ObjectVersion](General.DocumentPrints.md#objectversion) | int32 |  
@@ -62,6 +65,12 @@ _Type_: **string (254) __nullable__**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

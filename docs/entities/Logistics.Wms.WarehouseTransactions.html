@@ -83,7 +83,7 @@
 <p>Represents increase or decrease in the quantity available in a warehouse location. Entity: Wms_Warehouse_Transactions (Introduced in version 21.1.1.26)</p>
 <h2 id="default-visualization">Default Visualization</h2>
 <p>Default Display Text Format:<br>
-<em>{Id}: {ObjectVersion}</em><br>
+<em>{Id}: {QuantityBaseValue}</em><br>
 Default Search Members:<br>
 __</p>
 <h2 id="aggregate">Aggregate</h2>
@@ -116,6 +116,11 @@ __</p>
 <td><a href="Logistics.Wms.WarehouseTransactions.html#direction">Direction</a></td>
 <td><a href="Logistics.Wms.WarehouseTransactions.html#direction">Direction</a></td>
 <td>Direction of the transaction - I=IN, O=OUT. <code>Required</code> <code>Default(&quot;I&quot;)</code> <code>Filter(eq)</code></td>
+</tr>
+<tr>
+<td><a href="Logistics.Wms.WarehouseTransactions.html#displaytext">DisplayText</a></td>
+<td>string</td>
+<td></td>
 </tr>
 <tr>
 <td><a href="Logistics.Wms.WarehouseTransactions.html#id">Id</a></td>
@@ -253,6 +258,10 @@ Allowed values for the <code>Direction</code>(Logistics.Wms.WarehouseTransaction
 <p><em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>IN</strong></p>
+<h3 id="displaytext">DisplayText</h3>
+<p><em>Type</em>: <strong>string</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****</p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>

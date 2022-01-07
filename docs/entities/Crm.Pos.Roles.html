@@ -85,7 +85,11 @@
 <p>Default Display Text Format:<br>
 <em>{PosRoleName:T}</em><br>
 Default Search Members:<br>
-<em>PosRoleCode; PosRoleName</em></p>
+<em>PosRoleCode; PosRoleName</em><br>
+Code Data Member:<br>
+<em>PosRoleCode</em><br>
+Name Data Member:<br>
+<em>PosRoleName</em></p>
 <h2 id="aggregate">Aggregate</h2>
 <p>An <a href="https://docs.erp.net/tech/advanced/concepts/aggregates.html">aggregate</a> is a cluster of domain objects that can be treated as a single unit.</p>
 <p>Aggregate Tree</p>
@@ -111,6 +115,11 @@ Default Search Members:<br>
 <td><a href="Crm.Pos.Roles.html#canvoidsales">CanVoidSales</a></td>
 <td>boolean</td>
 <td>Indicates whether this role can void sales orders. <code>Required</code> <code>Default(false)</code> <code>Filter(multi eq)</code></td>
+</tr>
+<tr>
+<td><a href="Crm.Pos.Roles.html#displaytext">DisplayText</a></td>
+<td>string</td>
+<td></td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.Roles.html#id">Id</a></td>
@@ -147,6 +156,10 @@ Default Search Members:<br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
+<h3 id="displaytext">DisplayText</h3>
+<p><em>Type</em>: <strong>string</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****</p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>

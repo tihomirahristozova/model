@@ -12,6 +12,8 @@ Default Display Text Format:
 _{Store.Name:T}_  
 Default Search Members:  
 _Store.Name_  
+Name Data Member:  
+_Store.Name_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -25,6 +27,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [DisplayText](Logistics.Inventory.StoreResponsibleParties.md#displaytext) | string |  
 | [Id](Logistics.Inventory.StoreResponsibleParties.md#id) | guid |  
 | [ObjectVersion](Logistics.Inventory.StoreResponsibleParties.md#objectversion) | int32 |  
 
@@ -37,6 +40,12 @@ Aggregate Root:
 
 
 ## Attribute Details
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

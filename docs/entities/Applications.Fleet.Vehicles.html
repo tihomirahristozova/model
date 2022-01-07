@@ -85,6 +85,8 @@
 <p>Default Display Text Format:<br>
 <em>{EngineIdentificationNumber}</em><br>
 Default Search Members:<br>
+<em>EngineIdentificationNumber</em><br>
+Code Data Member:<br>
 <em>EngineIdentificationNumber</em></p>
 <h2 id="aggregate">Aggregate</h2>
 <p>An <a href="https://docs.erp.net/tech/advanced/concepts/aggregates.html">aggregate</a> is a cluster of domain objects that can be treated as a single unit.</p>
@@ -126,6 +128,11 @@ Default Search Members:<br>
 <td><a href="Applications.Fleet.Vehicles.html#crewcount">CrewCount</a></td>
 <td>int32 <strong>nullable</strong></td>
 <td>Crew members count. For road vehicles = 1; for trailers, coaches and wagons =0; air and water vehicles may have higher counts. <code>Default(1)</code> <code>Filter(eq;ge;le)</code></td>
+</tr>
+<tr>
+<td><a href="Applications.Fleet.Vehicles.html#displaytext">DisplayText</a></td>
+<td>string</td>
+<td></td>
 </tr>
 <tr>
 <td><a href="Applications.Fleet.Vehicles.html#engineidentificationnumber">EngineIdentificationNumber</a></td>
@@ -325,6 +332,10 @@ Default Search Members:<br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>1</strong></p>
+<h3 id="displaytext">DisplayText</h3>
+<p><em>Type</em>: <strong>string</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****</p>
 <h3 id="engineidentificationnumber">EngineIdentificationNumber</h3>
 <p>Engine identification number. <code>Filter(eq;like)</code></p>
 <p><em>Type</em>: <strong>string (20) <strong>nullable</strong></strong><br>

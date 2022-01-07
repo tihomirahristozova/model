@@ -12,6 +12,8 @@ Default Display Text Format:
 _{ApplicationName}_  
 Default Search Members:  
 _ApplicationName_  
+Name Data Member:  
+_ApplicationName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -24,6 +26,7 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [ApplicationName](Systems.UI.FormLayouts.md#applicationname) | string (64) | The application, which consumes the layout. `Required` `Filter(eq)` `ORD` 
+| [DisplayText](Systems.UI.FormLayouts.md#displaytext) | string |  
 | [FormName](Systems.UI.FormLayouts.md#formname) | string (64) | The form, for which the layout is applied. `Required` `Filter(eq;like)` 
 | [Id](Systems.UI.FormLayouts.md#id) | guid |  
 | [Layout](Systems.UI.FormLayouts.md#layout) | byte[] __nullable__ | The byte storage of the layout. 
@@ -52,6 +55,12 @@ _Indexed_: **True**
 _Supported Filters_: **Equals**  
 _Supports Order By_: **True**  
 _Maximum Length_: **64**  
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### FormName
 

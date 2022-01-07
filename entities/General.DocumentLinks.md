@@ -9,7 +9,7 @@ Obsolete. Not used. Entity: Gen_Document_Links
 
 ## Default Visualization
 Default Display Text Format:  
-_{Id}: {ObjectVersion}_  
+_{Id}_  
 Default Search Members:  
 __  
 
@@ -23,11 +23,18 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [DisplayText](General.DocumentLinks.md#displaytext) | string |  
 | [Id](General.DocumentLinks.md#id) | guid |  
 | [ObjectVersion](General.DocumentLinks.md#objectversion) | int32 |  
 
 
 ## Attribute Details
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

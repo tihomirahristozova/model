@@ -26,6 +26,7 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [AmountBase](Finance.Vat.DeclarationLines.md#amountbase) | decimal (14, 2) | Declared value in base currency. `Required` `Default(0)` `Filter(eq;ge;le)` 
+| [DisplayText](Finance.Vat.DeclarationLines.md#displaytext) | string |  
 | [Id](Finance.Vat.DeclarationLines.md#id) | guid |  
 | [LineNo](Finance.Vat.DeclarationLines.md#lineno) | int32 | Consecutive line number within the document. `Required` 
 | [Notes](Finance.Vat.DeclarationLines.md#notes) | string (max) __nullable__ | Notes for this DeclarationLine. 
@@ -50,6 +51,12 @@ _Type_: **decimal (14, 2)**
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

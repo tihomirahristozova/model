@@ -9,7 +9,7 @@ Reaction of a user to any social comment to an object of the system. Entity: Cmm
 
 ## Default Visualization
 Default Display Text Format:  
-_{Id}: {ObjectVersion}_  
+_{Id}: {DataObjectId}_  
 Default Search Members:  
 __  
 
@@ -24,6 +24,7 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [CreationTimeUtc](Communities.SocialReactions.md#creationtimeutc) | datetime | The exact server time (in UTC), when the reaction was created. `Required` `Default(NowUtc)` 
+| [DisplayText](Communities.SocialReactions.md#displaytext) | string |  
 | [Id](Communities.SocialReactions.md#id) | guid |  
 | [ObjectVersion](Communities.SocialReactions.md#objectversion) | int32 |  
 | [ReactionType](Communities.SocialReactions.md#reactiontype) | [ReactionType](Communities.SocialReactions.md#reactiontype) | The type of the reaction. LIK = Like; LOV = Love; HAH = Haha; WOW = Wow; SAD = Sad; ANG = Angry. `Required` `Filter(multi eq)` 
@@ -47,6 +48,12 @@ _Type_: **datetime**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **CurrentDateTimeUtc**  
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

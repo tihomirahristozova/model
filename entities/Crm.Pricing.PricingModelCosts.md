@@ -12,6 +12,8 @@ Default Display Text Format:
 _{PricingModel.Name}_  
 Default Search Members:  
 _PricingModel.Name_  
+Name Data Member:  
+_PricingModel.Name_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -27,6 +29,7 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [AmountPercent](Crm.Pricing.PricingModelCosts.md#amountpercent) | decimal (6, 5) __nullable__ | Used when the cost is calculated as percent of the amount. null when the cost is calculated in a different way. 
 | [AmountPerUnit](Crm.Pricing.PricingModelCosts.md#amountperunit) | [Amount (9, 2)](../data-types.md#amount) __nullable__ | Used when the cost is calculated as amount per unit of the product. The unit is defined in Measurement_Unit_Id. null when the cost is calculated in a different way. `Currency: PricingModel.Currency` 
+| [DisplayText](Crm.Pricing.PricingModelCosts.md#displaytext) | string |  
 | [Id](Crm.Pricing.PricingModelCosts.md#id) | guid |  
 | [LineNo](Crm.Pricing.PricingModelCosts.md#lineno) | int32 | The consequtive number of the cost within the pricing model. `Required` 
 | [ObjectVersion](Crm.Pricing.PricingModelCosts.md#objectversion) | int32 |  
@@ -57,6 +60,12 @@ Used when the cost is calculated as amount per unit of the product. The unit is 
 _Type_: **[Amount (9, 2)](../data-types.md#amount) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

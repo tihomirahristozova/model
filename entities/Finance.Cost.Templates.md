@@ -12,6 +12,10 @@ Default Display Text Format:
 _{CostTemplateName}_  
 Default Search Members:  
 _CostTemplateCode; CostTemplateName_  
+Code Data Member:  
+_CostTemplateCode_  
+Name Data Member:  
+_CostTemplateName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -27,6 +31,7 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [CostTemplateCode](Finance.Cost.Templates.md#costtemplatecode) | string (16) | Unique code of the cost template. `Required` `Filter(eq)` 
 | [CostTemplateName](Finance.Cost.Templates.md#costtemplatename) | string (254) | Name of the cost template. `Required` `Filter(like)` 
+| [DisplayText](Finance.Cost.Templates.md#displaytext) | string |  
 | [Id](Finance.Cost.Templates.md#id) | guid |  
 | [ObjectVersion](Finance.Cost.Templates.md#objectversion) | int32 |  
 
@@ -63,6 +68,12 @@ _Type_: **string (254)**
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

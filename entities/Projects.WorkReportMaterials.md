@@ -12,6 +12,8 @@ Default Display Text Format:
 _{WorkReport.EntityName}_  
 Default Search Members:  
 _WorkReport.EntityName_  
+Name Data Member:  
+_WorkReport.EntityName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -25,6 +27,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [DisplayText](Projects.WorkReportMaterials.md#displaytext) | string |  
 | [Id](Projects.WorkReportMaterials.md#id) | guid |  
 | [ObjectVersion](Projects.WorkReportMaterials.md#objectversion) | int32 |  
 | [Quantity](Projects.WorkReportMaterials.md#quantity) | decimal (9, 3) | The consumed quantity of the material. `Required` `Default(0)` `Filter(eq;like)` 
@@ -41,6 +44,12 @@ Aggregate Root:
 
 
 ## Attribute Details
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

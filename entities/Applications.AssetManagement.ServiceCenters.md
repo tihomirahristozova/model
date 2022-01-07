@@ -9,7 +9,7 @@ Contains data about the service centers, which can maintain the assets. Entity: 
 
 ## Default Visualization
 Default Display Text Format:  
-_{Id}: {ObjectVersion}_  
+_{Id}: {EnterpriseCompanyId}_  
 Default Search Members:  
 __  
 
@@ -23,6 +23,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [DisplayText](Applications.AssetManagement.ServiceCenters.md#displaytext) | string |  
 | [Id](Applications.AssetManagement.ServiceCenters.md#id) | guid |  
 | [Notes](Applications.AssetManagement.ServiceCenters.md#notes) | string (max) __nullable__ | Notes for this ServiceCenter. 
 | [ObjectVersion](Applications.AssetManagement.ServiceCenters.md#objectversion) | int32 |  
@@ -36,6 +37,12 @@ Aggregate Tree
 
 
 ## Attribute Details
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

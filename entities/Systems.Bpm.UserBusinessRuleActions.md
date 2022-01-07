@@ -12,6 +12,8 @@ Default Display Text Format:
 _{UserBusinessRule.Name:T}_  
 Default Search Members:  
 _UserBusinessRule.Name_  
+Name Data Member:  
+_UserBusinessRule.Name_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -27,6 +29,7 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [ActionNo](Systems.Bpm.UserBusinessRuleActions.md#actionno) | int32 | Consecutive number of the action, unique within the business rule. `Required` 
 | [ActionType](Systems.Bpm.UserBusinessRuleActions.md#actiontype) | [ActionType](Systems.Bpm.UserBusinessRuleActions.md#actiontype) | Specifies the type of action to perform. `Required` 
+| [DisplayText](Systems.Bpm.UserBusinessRuleActions.md#displaytext) | string |  
 | [Id](Systems.Bpm.UserBusinessRuleActions.md#id) | guid |  
 | [ObjectVersion](Systems.Bpm.UserBusinessRuleActions.md#objectversion) | int32 |  
 | [Parameter1Type](Systems.Bpm.UserBusinessRuleActions.md#parameter1type) | [ActionParameterType](Systems.Bpm.UserBusinessRuleActions.md#parameter1type) __nullable__ | The type of the parameter specifies how to obtain the parameter value. 
@@ -76,6 +79,12 @@ _Allowed Values (Systems.Bpm.UserBusinessRuleActionsRepository.ActionType Enum M
 
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

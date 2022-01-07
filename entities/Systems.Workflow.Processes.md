@@ -12,6 +12,8 @@ Default Display Text Format:
 _{Name:T}_  
 Default Search Members:  
 _Name_  
+Name Data Member:  
+_Name_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -25,6 +27,7 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [CreationTime](Systems.Workflow.Processes.md#creationtime) | datetime __nullable__ | Date and time when the Process was created. `ReadOnly` 
 | [CreationUser](Systems.Workflow.Processes.md#creationuser) | string (64) __nullable__ | Login name of the user, who created the Process. `ReadOnly` 
+| [DisplayText](Systems.Workflow.Processes.md#displaytext) | string |  
 | [Id](Systems.Workflow.Processes.md#id) | guid |  
 | [IsLandscape](Systems.Workflow.Processes.md#islandscape) | boolean | Specifies whether the process diagram is intended to be viewed in landscape mode. `Required` `Default(true)` 
 | [Name](Systems.Workflow.Processes.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | The name of this Process. `Required` `Filter(eq;like)` 
@@ -57,6 +60,12 @@ _Type_: **string (64) __nullable__**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

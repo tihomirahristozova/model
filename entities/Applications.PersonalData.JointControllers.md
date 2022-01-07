@@ -12,6 +12,8 @@ Default Display Text Format:
 _{PersonalDataProcess.Name:T}_  
 Default Search Members:  
 _PersonalDataProcess.Name_  
+Name Data Member:  
+_PersonalDataProcess.Name_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -25,6 +27,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [DisplayText](Applications.PersonalData.JointControllers.md#displaytext) | string |  
 | [Id](Applications.PersonalData.JointControllers.md#id) | guid |  
 | [Notes](Applications.PersonalData.JointControllers.md#notes) | string (max) __nullable__ | Should usually contain a short description of the role of the joint controller. 
 | [ObjectVersion](Applications.PersonalData.JointControllers.md#objectversion) | int32 |  
@@ -38,6 +41,12 @@ Aggregate Root:
 
 
 ## Attribute Details
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

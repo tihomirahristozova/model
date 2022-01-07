@@ -85,6 +85,8 @@
 <p>Default Display Text Format:<br>
 <em>{Name}</em><br>
 Default Search Members:<br>
+<em>Name</em><br>
+Name Data Member:<br>
 <em>Name</em></p>
 <h2 id="aggregate">Aggregate</h2>
 <p>An <a href="https://docs.erp.net/tech/advanced/concepts/aggregates.html">aggregate</a> is a cluster of domain objects that can be treated as a single unit.</p>
@@ -106,6 +108,11 @@ Default Search Members:<br>
 <td><a href="Crm.PriceLists.html#description">Description</a></td>
 <td>string (max) <strong>nullable</strong></td>
 <td>The description of this PriceList.</td>
+</tr>
+<tr>
+<td><a href="Crm.PriceLists.html#displaytext">DisplayText</a></td>
+<td>string</td>
+<td></td>
 </tr>
 <tr>
 <td><a href="Crm.PriceLists.html#fromdate">FromDate</a></td>
@@ -158,6 +165,10 @@ Default Search Members:<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>2147483647</strong></p>
+<h3 id="displaytext">DisplayText</h3>
+<p><em>Type</em>: <strong>string</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****</p>
 <h3 id="fromdate">FromDate</h3>
 <p>Starting validity of the price list. <code>Filter(eq;ge;le)</code></p>
 <p><em>Type</em>: <strong>datetime <strong>nullable</strong></strong><br>

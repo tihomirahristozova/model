@@ -12,6 +12,8 @@ Default Display Text Format:
 _{PrintoutLayout.Name}_  
 Default Search Members:  
 _PrintoutLayout.Name_  
+Name Data Member:  
+_PrintoutLayout.Name_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -25,6 +27,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [DisplayText](General.DocumentPrintImages.md#displaytext) | string |  
 | [Id](General.DocumentPrintImages.md#id) | guid |  
 | [ObjectVersion](General.DocumentPrintImages.md#objectversion) | int32 |  
 | [PrintImage](General.DocumentPrintImages.md#printimage) | byte[] | The data of the printout, stored in the format, specified in Print Image Format. `Required` 
@@ -38,6 +41,12 @@ Aggregate Root:
 
 
 ## Attribute Details
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

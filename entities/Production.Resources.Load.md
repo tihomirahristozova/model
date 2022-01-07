@@ -12,6 +12,8 @@ Default Display Text Format:
 _{WorkOrderItemOperation.WorkOrderItem.WorkOrder.EntityName}_  
 Default Search Members:  
 _WorkOrderItemOperation.WorkOrderItem.WorkOrder.EntityName_  
+Name Data Member:  
+_WorkOrderItemOperation.WorkOrderItem.WorkOrder.EntityName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -26,6 +28,7 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [CalendarDate](Production.Resources.Load.md#calendardate) | datetime | Date of the scheduled load. This is date only. Start_Time and End_Time specify time of day. `Required` `Filter(ge;le)` 
+| [DisplayText](Production.Resources.Load.md#displaytext) | string |  
 | [Id](Production.Resources.Load.md#id) | guid |  
 | [ObjectVersion](Production.Resources.Load.md#objectversion) | int32 |  
 | [Priority](Production.Resources.Load.md#priority) | [Priority](Production.Resources.Load.md#priority) | Priority of the allocation. 1=Lowest ... 5=Highest. `Required` `Default(3)` 
@@ -52,6 +55,12 @@ Date of the scheduled load. This is date only. Start_Time and End_Time specify t
 _Type_: **datetime**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

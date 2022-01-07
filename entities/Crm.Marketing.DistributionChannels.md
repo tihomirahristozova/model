@@ -12,6 +12,10 @@ Default Display Text Format:
 _{Name:T}_  
 Default Search Members:  
 _Code; Name_  
+Code Data Member:  
+_Code_  
+Name Data Member:  
+_Name_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -25,6 +29,7 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [Code](Crm.Marketing.DistributionChannels.md#code) | string (10) | Unique distribution channel code. `Required` `Filter(eq;like)` 
 | [Description](Crm.Marketing.DistributionChannels.md#description) | string (max) __nullable__ | Full description of the distribution channel. 
+| [DisplayText](Crm.Marketing.DistributionChannels.md#displaytext) | string |  
 | [Id](Crm.Marketing.DistributionChannels.md#id) | guid |  
 | [IsActive](Crm.Marketing.DistributionChannels.md#isactive) | boolean | Is the channel active for new sales? true=Yes, false=No. `Required` `Default(true)` `Filter(eq)` 
 | [Name](Crm.Marketing.DistributionChannels.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Multi-language name of the distribution channel. `Required` `Filter(eq;like)` 
@@ -50,6 +55,12 @@ _Type_: **string (max) __nullable__**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

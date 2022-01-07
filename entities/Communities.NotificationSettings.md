@@ -9,7 +9,7 @@ User notification settings for the different notification classes. Entity: Cmm_N
 
 ## Default Visualization
 Default Display Text Format:  
-_{Id}: {ObjectVersion}_  
+_{Id}: {UserId}_  
 Default Search Members:  
 __  
 
@@ -23,6 +23,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [DisplayText](Communities.NotificationSettings.md#displaytext) | string |  
 | [Id](Communities.NotificationSettings.md#id) | guid |  
 | [NotificationClass](Communities.NotificationSettings.md#notificationclass) | string (64) __nullable__ | The class of the notification, for which the user is specifying settings. When null, the setting is applied to all notification classes. `Filter(multi eq)` 
 | [ObjectVersion](Communities.NotificationSettings.md#objectversion) | int32 |  
@@ -38,6 +39,12 @@ Aggregate Tree
 
 
 ## Attribute Details
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

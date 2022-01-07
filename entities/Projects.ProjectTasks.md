@@ -12,6 +12,8 @@ Default Display Text Format:
 _{TaskName}_  
 Default Search Members:  
 _TaskName_  
+Name Data Member:  
+_TaskName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -28,6 +30,7 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [BudgetLaborAmount](Projects.ProjectTasks.md#budgetlaboramount) | [Amount (12, 2)](../data-types.md#amount) __nullable__ | Budgeted amount for the labor for the task in the currency of the project. The material is calculated separately. null means that budgeting for the item is not calculated. `Currency: Project.BudgetingCurrency` 
+| [DisplayText](Projects.ProjectTasks.md#displaytext) | string |  
 | [FinishDateTime](Projects.ProjectTasks.md#finishdatetime) | datetime | The date and time when the task is planned to finish. `Required` `Default(Now)` `Filter(eq;ge;le)` 
 | [Id](Projects.ProjectTasks.md#id) | guid |  
 | [Notes](Projects.ProjectTasks.md#notes) | string (max) __nullable__ | Notes for this ProjectTask. 
@@ -71,6 +74,12 @@ _Supports Order By_: **False**
 
 _Front-End Recalc Expressions:_  
 `IIF( ( ( obj.PlannedDurationHours != 0) AndAlso ( obj.WorkType != null)), obj.CalculateBudgetLaborAmount( ), new Amount( 0, obj.Project.BudgetingCurrency))`
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+
 ### FinishDateTime
 
 The date and time when the task is planned to finish. `Required` `Default(Now)` `Filter(eq;ge;le)`

@@ -12,6 +12,10 @@ Default Display Text Format:
 _{Name}_  
 Default Search Members:  
 _Code; Name_  
+Code Data Member:  
+_Code_  
+Name Data Member:  
+_Name_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -26,6 +30,7 @@ Aggregate Tree
 | [ActionType](Crm.DiscountTypes.md#actiontype) | [ActionType](Crm.DiscountTypes.md#actiontype) | Specifies the way the discount is applied over the previous discounts. `Required` `Default("A")` `Filter(multi eq)` 
 | [CalculationMethod](Crm.DiscountTypes.md#calculationmethod) | [CalculationMethod](Crm.DiscountTypes.md#calculationmethod) | Specifies whether the calculation method of the discount is based on a standard discount, promotional package, bonus program, etc. `Required` `Filter(multi eq)` 
 | [Code](Crm.DiscountTypes.md#code) | string (32) | The unique code of the DiscountType. `Required` `Filter(eq)` 
+| [DisplayText](Crm.DiscountTypes.md#displaytext) | string |  
 | [Id](Crm.DiscountTypes.md#id) | guid |  
 | [IsSystem](Crm.DiscountTypes.md#issystem) | boolean | Specifies whether this discount type is created and managed by the system. `Required` `Default(false)` `Filter(multi eq)` 
 | [Name](Crm.DiscountTypes.md#name) | string (254) | The name of this DiscountType. `Required` `Filter(like)` 
@@ -79,6 +84,12 @@ _Type_: **string (32)**
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Maximum Length_: **32**  
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

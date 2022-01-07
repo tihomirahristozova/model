@@ -85,6 +85,8 @@
 <p>Default Display Text Format:<br>
 <em>{Party.PartyName:T}</em><br>
 Default Search Members:<br>
+<em>Party.PartyName</em><br>
+Name Data Member:<br>
 <em>Party.PartyName</em></p>
 <h2 id="aggregate">Aggregate</h2>
 <p>An <a href="https://docs.erp.net/tech/advanced/concepts/aggregates.html">aggregate</a> is a cluster of domain objects that can be treated as a single unit.</p>
@@ -106,6 +108,11 @@ Aggregate Root:<br>
 <td><a href="General.Contacts.ActivityTimeIntervals.html#date">Date</a></td>
 <td>date</td>
 <td>The date on which the work was performed. <code>Required</code> <code>Filter(eq;ge;le)</code></td>
+</tr>
+<tr>
+<td><a href="General.Contacts.ActivityTimeIntervals.html#displaytext">DisplayText</a></td>
+<td>string</td>
+<td></td>
 </tr>
 <tr>
 <td><a href="General.Contacts.ActivityTimeIntervals.html#endtime">EndTime</a></td>
@@ -177,6 +184,10 @@ Aggregate Root:<br>
 <p><em>Type</em>: <strong>date</strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="displaytext">DisplayText</h3>
+<p><em>Type</em>: <strong>string</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****</p>
 <h3 id="endtime">EndTime</h3>
 <p>The ending time of the time interval within 'Date'. <code>Required</code> <code>Filter(ge;le)</code></p>
 <p><em>Type</em>: <strong>time</strong><br>

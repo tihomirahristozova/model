@@ -12,6 +12,8 @@ Default Display Text Format:
 _{Sequence.Name}_  
 Default Search Members:  
 _Sequence.Name_  
+Name Data Member:  
+_Sequence.Name_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -26,6 +28,7 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [AllowExplicitNumbering](General.SequenceGenerators.md#allowexplicitnumbering) | boolean | Allows to assign numbers explicitely regardless of the Next_Value of the generator (Next_Value is updated if needed). `Required` `Default(false)` 
+| [DisplayText](General.SequenceGenerators.md#displaytext) | string |  
 | [Id](General.SequenceGenerators.md#id) | guid |  
 | [NextValue](General.SequenceGenerators.md#nextvalue) | string (16) | The next number that will be issued by the sequence. `Required` `Default("0000000001")` 
 | [ObjectVersion](General.SequenceGenerators.md#objectversion) | int32 |  
@@ -51,6 +54,12 @@ _Type_: **boolean**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **False**  
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

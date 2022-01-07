@@ -12,6 +12,8 @@ Default Display Text Format:
 _{RelationshipTypeName}_  
 Default Search Members:  
 _RelationshipTypeName_  
+Name Data Member:  
+_RelationshipTypeName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -23,6 +25,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [DisplayText](General.Contacts.PartyRelationshipTypes.md#displaytext) | string |  
 | [Id](General.Contacts.PartyRelationshipTypes.md#id) | guid |  
 | [Notes](General.Contacts.PartyRelationshipTypes.md#notes) | string (254) __nullable__ | Notes for this PartyRelationshipType. 
 | [ObjectVersion](General.Contacts.PartyRelationshipTypes.md#objectversion) | int32 |  
@@ -30,6 +33,12 @@ Aggregate Tree
 
 
 ## Attribute Details
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

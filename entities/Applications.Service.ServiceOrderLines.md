@@ -12,6 +12,8 @@ Default Display Text Format:
 _{ServiceOrder.EntityName}_  
 Default Search Members:  
 _ServiceOrder.EntityName_  
+Name Data Member:  
+_ServiceOrder.EntityName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -25,6 +27,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [DisplayText](Applications.Service.ServiceOrderLines.md#displaytext) | string |  
 | [Id](Applications.Service.ServiceOrderLines.md#id) | guid |  
 | [LineNo](Applications.Service.ServiceOrderLines.md#lineno) | int32 | Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc. `Required` `Filter(eq)` 
 | [ObjectVersion](Applications.Service.ServiceOrderLines.md#objectversion) | int32 |  
@@ -39,6 +42,12 @@ Aggregate Root:
 
 
 ## Attribute Details
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

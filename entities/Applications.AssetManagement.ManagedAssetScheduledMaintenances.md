@@ -12,6 +12,8 @@ Default Display Text Format:
 _{ManagedAsset.Name:T}_  
 Default Search Members:  
 _ManagedAsset.Name_  
+Name Data Member:  
+_ManagedAsset.Name_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -26,6 +28,7 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Date](Applications.AssetManagement.ManagedAssetScheduledMaintenances.md#date) | date __nullable__ | The date, when the maintenance is planned. null means, that the plan is not related to date, but to tracked parameter value. If both date and parameter are specified, the maintenance is performed when any of the conditions is met. `Filter(multi eq;ge;le)` 
+| [DisplayText](Applications.AssetManagement.ManagedAssetScheduledMaintenances.md#displaytext) | string |  
 | [Id](Applications.AssetManagement.ManagedAssetScheduledMaintenances.md#id) | guid |  
 | [IsDismissed](Applications.AssetManagement.ManagedAssetScheduledMaintenances.md#isdismissed) | boolean | Specifies whether the notification for the maintenance is dismissed and the planner has decided the course of action. `Required` `Default(false)` `Filter(multi eq)` 
 | [Notes](Applications.AssetManagement.ManagedAssetScheduledMaintenances.md#notes) | string (max) __nullable__ | Notes for this ManagedAssetScheduled<br />Maintenance. 
@@ -49,6 +52,12 @@ The date, when the maintenance is planned. null means, that the plan is not rela
 _Type_: **date __nullable__**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan, EqualsIn**  
 _Supports Order By_: **False**  
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

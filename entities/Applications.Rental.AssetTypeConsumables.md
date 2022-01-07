@@ -12,6 +12,8 @@ Default Display Text Format:
 _{RentalAssetType.RentalAssetTypeName}_  
 Default Search Members:  
 _RentalAssetType.RentalAssetTypeName_  
+Name Data Member:  
+_RentalAssetType.RentalAssetTypeName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -26,6 +28,7 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [ConsumableQuantity](Applications.Rental.AssetTypeConsumables.md#consumablequantity) | [Quantity (12, 3)](../data-types.md#quantity) | Specifies what quantity of the consumable should be offered for each rented asset. `Unit: ConsumableQuantityUnit` `Required` 
+| [DisplayText](Applications.Rental.AssetTypeConsumables.md#displaytext) | string |  
 | [Id](Applications.Rental.AssetTypeConsumables.md#id) | guid |  
 | [Notes](Applications.Rental.AssetTypeConsumables.md#notes) | string (max) __nullable__ | Notes for this AssetTypeConsumable. 
 | [ObjectVersion](Applications.Rental.AssetTypeConsumables.md#objectversion) | int32 |  
@@ -49,6 +52,12 @@ Specifies what quantity of the consumable should be offered for each rented asse
 _Type_: **[Quantity (12, 3)](../data-types.md#quantity)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

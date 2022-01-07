@@ -85,6 +85,8 @@
 <p>Default Display Text Format:<br>
 <em>{TableName}</em><br>
 Default Search Members:<br>
+<em>TableName</em><br>
+Name Data Member:<br>
 <em>TableName</em></p>
 <h2 id="aggregate">Aggregate</h2>
 <p>An <a href="https://docs.erp.net/tech/advanced/concepts/aggregates.html">aggregate</a> is a cluster of domain objects that can be treated as a single unit.</p>
@@ -106,6 +108,11 @@ Aggregate Root:<br>
 <td><a href="Systems.Reporting.DataSourceQueries.html#dependsonchildrows">DependsOnChildRows</a></td>
 <td><a href="Systems.Reporting.DataSourceQueries.html#dependsonchildrows">DependsOnChildRows</a></td>
 <td>Determines the visibility of rows in this table. 0 - allways visible; 1 - the row is visible if there is at least one child row; 2 - the row is visible if all sub-tables contain child rows. <code>Required</code> <code>Default(0)</code></td>
+</tr>
+<tr>
+<td><a href="Systems.Reporting.DataSourceQueries.html#displaytext">DisplayText</a></td>
+<td>string</td>
+<td></td>
 </tr>
 <tr>
 <td><a href="Systems.Reporting.DataSourceQueries.html#extensionslist">ExtensionsList</a></td>
@@ -197,6 +204,10 @@ Allowed values for the <code>DependsOnChildRows</code>(Systems.Reporting.DataSou
 <p><em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>0</strong></p>
+<h3 id="displaytext">DisplayText</h3>
+<p><em>Type</em>: <strong>string</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****</p>
 <h3 id="extensionslist">ExtensionsList</h3>
 <p>A comma separated list of report extension names. An extension is set of additional fields that participate in the query.</p>
 <p><em>Type</em>: <strong>string (max) <strong>nullable</strong></strong><br>

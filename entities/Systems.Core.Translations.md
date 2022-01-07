@@ -12,6 +12,8 @@ Default Display Text Format:
 _{ApplicationName}_  
 Default Search Members:  
 _ApplicationName_  
+Name Data Member:  
+_ApplicationName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -26,6 +28,7 @@ Aggregate Tree
 | [Active](Systems.Core.Translations.md#active) | boolean | True when the translation is verified and activated. `Required` `Default(true)` `Filter(eq)` 
 | [ApplicationName](Systems.Core.Translations.md#applicationname) | string (50) __nullable__ | The application, containing the resource. For base resource types (T,C,H), this is null. `Filter(eq)` `ORD` 
 | [CreationTime](Systems.Core.Translations.md#creationtime) | datetime | Timestamp when the translation was first created. `Required` `Default(Now)` `Filter(ge;le)` `ReadOnly` 
+| [DisplayText](Systems.Core.Translations.md#displaytext) | string |  
 | [Id](Systems.Core.Translations.md#id) | guid |  
 | [Language](Systems.Core.Translations.md#language) | string (8) | The code of the language or language-culture pair. Standard Windows codes are used. English="en"; US English = "en-us". `Required` `Default("en")` `Filter(eq)` 
 | [ObjectVersion](Systems.Core.Translations.md#objectversion) | int32 |  
@@ -66,6 +69,12 @@ _Type_: **datetime**
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **CurrentDateTime**  
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

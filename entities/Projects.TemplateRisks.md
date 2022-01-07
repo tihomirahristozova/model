@@ -12,6 +12,8 @@ Default Display Text Format:
 _{RiskName}_  
 Default Search Members:  
 _RiskName_  
+Name Data Member:  
+_RiskName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -26,6 +28,7 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Description](Projects.TemplateRisks.md#description) | string (max) __nullable__ | The description of this TemplateRisk. 
+| [DisplayText](Projects.TemplateRisks.md#displaytext) | string |  
 | [Id](Projects.TemplateRisks.md#id) | guid |  
 | [ImpactPercent](Projects.TemplateRisks.md#impactpercent) | decimal (3, 2) | The impact of the risk to the project, expressed as percentage of the total project value. `Required` `Default(0)` 
 | [ObjectVersion](Projects.TemplateRisks.md#objectversion) | int32 |  
@@ -49,6 +52,12 @@ _Type_: **string (max) __nullable__**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

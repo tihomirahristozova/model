@@ -12,6 +12,8 @@ Default Display Text Format:
 _{ProductGroup.Name:T}_  
 Default Search Members:  
 _ProductGroup.Name_  
+Name Data Member:  
+_ProductGroup.Name_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -28,6 +30,7 @@ Aggregate Root:
 | [DefaultPropertyValue](General.Products.ProductGroupRequiredProperties.md#defaultpropertyvalue) | string (254) __nullable__ | When not null, specifies the default value of the property, for new products in the group. 
 | [DefaultProperty<br />ValueDescription](General.Products.ProductGroupRequiredProperties.md#defaultpropertyvaluedescription) | string (254) __nullable__ | When not null, specifies the default description value of the property, for new products in the group. 
 | [DefaultValueId](General.Products.ProductGroupRequiredProperties.md#defaultvalueid) | guid __nullable__ | When not null, specifies the default internal Id value of the property, for new products in the group. `Filter(multi eq)` 
+| [DisplayText](General.Products.ProductGroupRequiredProperties.md#displaytext) | string |  
 | [Id](General.Products.ProductGroupRequiredProperties.md#id) | guid |  
 | [ObjectVersion](General.Products.ProductGroupRequiredProperties.md#objectversion) | int32 |  
 | [PropertyNo](General.Products.ProductGroupRequiredProperties.md#propertyno) | int32 | The consecutive number (position) of the property within the product group and its subgroups. The parent groups of each leaf group should contain only unique property numbers. `Required` `Default(0)` 
@@ -67,6 +70,12 @@ When not null, specifies the default internal Id value of the property, for new 
 
 _Type_: **guid __nullable__**  
 _Supported Filters_: **Equals, EqualsIn**  
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

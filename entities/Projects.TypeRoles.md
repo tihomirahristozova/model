@@ -12,6 +12,8 @@ Default Display Text Format:
 _{RoleName}_  
 Default Search Members:  
 _RoleName_  
+Name Data Member:  
+_RoleName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -26,6 +28,7 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Description](Projects.TypeRoles.md#description) | string (max) __nullable__ | Description of the participant role. 
+| [DisplayText](Projects.TypeRoles.md#displaytext) | string |  
 | [Id](Projects.TypeRoles.md#id) | guid |  
 | [ObjectVersion](Projects.TypeRoles.md#objectversion) | int32 |  
 | [RoleName](Projects.TypeRoles.md#rolename) | string (255) | The name of the participant role. `Required` `Filter(multi eq;like)` 
@@ -47,6 +50,12 @@ _Type_: **string (max) __nullable__**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

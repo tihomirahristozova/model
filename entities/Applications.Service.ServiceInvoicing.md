@@ -12,6 +12,8 @@ Default Display Text Format:
 _{Service.Name}_  
 Default Search Members:  
 _Service.Name_  
+Name Data Member:  
+_Service.Name_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -25,6 +27,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [DisplayText](Applications.Service.ServiceInvoicing.md#displaytext) | string |  
 | [Id](Applications.Service.ServiceInvoicing.md#id) | guid |  
 | [ObjectVersion](Applications.Service.ServiceInvoicing.md#objectversion) | int32 |  
 | [QuantityOfProduct](Applications.Service.ServiceInvoicing.md#quantityofproduct) | [Quantity (18, 3)](../data-types.md#quantity) | The quantity to invoice. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Default(1)` `Filter(ge;le)` 
@@ -39,6 +42,12 @@ Aggregate Root:
 
 
 ## Attribute Details
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

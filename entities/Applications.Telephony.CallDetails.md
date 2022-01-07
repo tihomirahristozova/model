@@ -12,6 +12,8 @@ Default Display Text Format:
 _{CalledPartyNumber}_  
 Default Search Members:  
 _CalledPartyNumber_  
+Code Data Member:  
+_CalledPartyNumber_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -27,6 +29,7 @@ Aggregate Tree
 | [CallingPartyNumber](Applications.Telephony.CallDetails.md#callingpartynumber) | string (80) | The voice number of the originating party of the call. `Required` `Filter(eq;like)` 
 | [CallType](Applications.Telephony.CallDetails.md#calltype) | [CallType](Applications.Telephony.CallDetails.md#calltype) | P=Phone; V=Video; M=Message/SMS. `Required` `Default("P")` `Filter(eq)` 
 | [CallUniqueId](Applications.Telephony.CallDetails.md#calluniqueid) | string (32) __nullable__ | The unique id of the call, as reported by the telephone central. null when the central did not report unique Id. Used for integration purposes. 
+| [DisplayText](Applications.Telephony.CallDetails.md#displaytext) | string |  
 | [DurationSeconds](Applications.Telephony.CallDetails.md#durationseconds) | int32 | The duration of the call (in seconds). `Required` `Default(0)` `Filter(ge;le)` 
 | [Id](Applications.Telephony.CallDetails.md#id) | guid |  
 | [ObjectVersion](Applications.Telephony.CallDetails.md#objectversion) | int32 |  
@@ -88,6 +91,12 @@ _Type_: **string (32) __nullable__**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **32**  
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### DurationSeconds
 

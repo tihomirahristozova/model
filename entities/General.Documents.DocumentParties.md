@@ -12,6 +12,8 @@ Default Display Text Format:
 _{Document.EntityName}_  
 Default Search Members:  
 _Document.EntityName_  
+Name Data Member:  
+_Document.EntityName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -25,6 +27,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [DisplayText](General.Documents.DocumentParties.md#displaytext) | string |  
 | [Id](General.Documents.DocumentParties.md#id) | guid |  
 | [Notes](General.Documents.DocumentParties.md#notes) | string (max) __nullable__ | Notes for this DocumentParty. 
 | [ObjectVersion](General.Documents.DocumentParties.md#objectversion) | int32 |  
@@ -39,6 +42,12 @@ Aggregate Root:
 
 
 ## Attribute Details
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

@@ -12,6 +12,8 @@ Default Display Text Format:
 _{Name}_  
 Default Search Members:  
 _Name_  
+Name Data Member:  
+_Name_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -28,6 +30,7 @@ Aggregate Tree
 | [CertificateOriginal<br />Filename](Systems.Core.WebHosts.md#certificateoriginalfilename) | string (254) __nullable__ | The original name of the file, used to upload the certificate. Used only for reference purposes. When null, means that the user did not provide that information when uploading the certificate. `Filter(eq;like)` 
 | [CertificatePassword](Systems.Core.WebHosts.md#certificatepassword) | string (max) __nullable__ | The password, which should be used to decrypt the certificate. null when the certificate has no password or the system certificate is used. 
 | [CertificateType](Systems.Core.WebHosts.md#certificatetype) | string (3) | The type of certificate uploaded. Currently, only PFX is supported. `Required` `Default("PFX")` `Filter(multi eq)` 
+| [DisplayText](Systems.Core.WebHosts.md#displaytext) | string |  
 | [Id](Systems.Core.WebHosts.md#id) | guid |  
 | [Name](Systems.Core.WebHosts.md#name) | string (max) | The unique Internet name of the host. Should NOT include protocol name and should NOT include any forward slashes. This is just the dot-separated host name. `Required` `Filter(multi eq;like)` 
 | [Notes](Systems.Core.WebHosts.md#notes) | string (max) __nullable__ | Notes for this WebHost. 
@@ -79,6 +82,12 @@ _Supported Filters_: **Equals, EqualsIn**
 _Supports Order By_: **False**  
 _Maximum Length_: **3**  
 _Default Value_: **PFX**  
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

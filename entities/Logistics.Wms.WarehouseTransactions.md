@@ -9,7 +9,7 @@ Represents increase or decrease in the quantity available in a warehouse locatio
 
 ## Default Visualization
 Default Display Text Format:  
-_{Id}: {ObjectVersion}_  
+_{Id}: {QuantityBaseValue}_  
 Default Search Members:  
 __  
 
@@ -26,6 +26,7 @@ Aggregate Tree
 | [CatchQuantity](Logistics.Wms.WarehouseTransactions.md#catchquantity) | decimal (12, 3) __nullable__ | Catch (measured) quantity for the transaction. Positive values indicate transactions. Negative values are used for adjustments. null when catch measurement is not configured for the product. `Filter(eq;ge;le)` 
 | [CreationTimeUtc](Logistics.Wms.WarehouseTransactions.md#creationtimeutc) | datetime |  
 | [Direction](Logistics.Wms.WarehouseTransactions.md#direction) | [Direction](Logistics.Wms.WarehouseTransactions.md#direction) | Direction of the transaction - I=IN, O=OUT. `Required` `Default("I")` `Filter(eq)` 
+| [DisplayText](Logistics.Wms.WarehouseTransactions.md#displaytext) | string |  
 | [Id](Logistics.Wms.WarehouseTransactions.md#id) | guid |  
 | [ObjectVersion](Logistics.Wms.WarehouseTransactions.md#objectversion) | int32 |  
 | [Quantity](Logistics.Wms.WarehouseTransactions.md#quantity) | decimal (12, 3) | The transacted net change in quantity. Positive values indicate transactions. Negative values are used for adjustments. `Required` `Default(0)` `Filter(multi eq;ge;le)` 
@@ -83,6 +84,12 @@ _Allowed Values (Logistics.Wms.WarehouseTransactionsRepository.Direction Enum Me
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **IN**  
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

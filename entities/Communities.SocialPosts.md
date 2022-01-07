@@ -9,7 +9,7 @@ User post in a social group. Entity: Cmm_Social_Posts (Introduced in version 20.
 
 ## Default Visualization
 Default Display Text Format:  
-_{Id}: {ObjectVersion}_  
+_{Id}: {SocialGroupId}_  
 Default Search Members:  
 __  
 
@@ -24,6 +24,7 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [CreationTimeUtc](Communities.SocialPosts.md#creationtimeutc) | datetime | The exact server time (in UTC), when the post was created. `Required` 
+| [DisplayText](Communities.SocialPosts.md#displaytext) | string |  
 | [Id](Communities.SocialPosts.md#id) | guid |  
 | [LastInteractionTimeUtc](Communities.SocialPosts.md#lastinteractiontimeutc) | datetime | The server time (in UTC) of the last interaction with the post, including comments, replies, likes, etc. `Required` 
 | [ObjectVersion](Communities.SocialPosts.md#objectversion) | int32 |  
@@ -46,6 +47,12 @@ The exact server time (in UTC), when the post was created. `Required`
 _Type_: **datetime**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

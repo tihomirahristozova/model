@@ -12,6 +12,8 @@ Default Display Text Format:
 _{MailBoxFolder.FolderName:T}_  
 Default Search Members:  
 _MailBoxFolder.FolderName_  
+Name Data Member:  
+_MailBoxFolder.FolderName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -28,6 +30,7 @@ Aggregate Root:
 | [Body](Applications.Mail.Messages.md#body) | string (max) __nullable__ | The body of the message. 
 | [CcEmailAddressList](Applications.Mail.Messages.md#ccemailaddresslist) | string (2048) __nullable__ | Semicolon-separated list of Cc email addresses. `Filter(like)` 
 | [CreationDateTime](Applications.Mail.Messages.md#creationdatetime) | datetime | Date and time when the message was created. `Required` `Default(Now)` `Filter(ge;le)` 
+| [DisplayText](Applications.Mail.Messages.md#displaytext) | string |  
 | [FromEmailAddress](Applications.Mail.Messages.md#fromemailaddress) | string (512) | Sending email address. `Required` `Filter(like)` 
 | [Id](Applications.Mail.Messages.md#id) | guid |  
 | [IsEncrypted](Applications.Mail.Messages.md#isencrypted) | boolean | True when the message is stored in encrypted format. `Required` `Default(false)` `Filter(eq)` 
@@ -81,6 +84,12 @@ _Type_: **datetime**
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **CurrentDateTime**  
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### FromEmailAddress
 

@@ -12,6 +12,8 @@ Default Display Text Format:
 _{Name}_  
 Default Search Members:  
 _Name_  
+Name Data Member:  
+_Name_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -26,6 +28,7 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [BaseQueryName](Systems.Reporting.DataSources.md#basequeryname) | string (128) | The name of the query or table that is used for root reference point of the loaded data. `Required` `Filter(eq;like)` 
 | [DataSourceType](Systems.Reporting.DataSources.md#datasourcetype) | [DataSourceType](Systems.Reporting.DataSources.md#datasourcetype) | 'M' = MULTI-TABLE (many tables); 'D' = MASTER-DETAIL (two tables); 'S' = SINGLE-TABLE . `Required` `Default("M")` `Filter(eq)` 
+| [DisplayText](Systems.Reporting.DataSources.md#displaytext) | string |  
 | [Id](Systems.Reporting.DataSources.md#id) | guid |  
 | [Name](Systems.Reporting.DataSources.md#name) | string (64) | The name of the data source. `Required` `Filter(eq;like)` 
 | [ObjectVersion](Systems.Reporting.DataSources.md#objectversion) | int32 |  
@@ -66,6 +69,12 @@ _Allowed Values (Systems.Reporting.DataSourcesRepository.DataSourceType Enum Mem
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **MultiTable**  
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

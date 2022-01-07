@@ -9,7 +9,7 @@ The actual values of the user-defined properties for each actual entity. Entity:
 
 ## Default Visualization
 Default Display Text Format:  
-_{Id}: {ObjectVersion}_  
+_{Id}: {EntityItemId}_  
 Default Search Members:  
 __  
 
@@ -24,6 +24,7 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Description](General.PropertyValues.md#description) | [MultilanguageString](../data-types.md#multilanguagestring) __nullable__ | The actual description value of the property for the specified entity (the entity with the specified Id). 
+| [DisplayText](General.PropertyValues.md#displaytext) | string |  
 | [EntityItemId](General.PropertyValues.md#entityitemid) | guid | The Id of the actual entity for which the value is specified. `Required` `Filter(multi eq)` 
 | [Id](General.PropertyValues.md#id) | guid |  
 | [ObjectVersion](General.PropertyValues.md#objectversion) | int32 |  
@@ -47,6 +48,12 @@ The actual description value of the property for the specified entity (the entit
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring) __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### EntityItemId
 

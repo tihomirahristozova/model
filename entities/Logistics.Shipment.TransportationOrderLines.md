@@ -26,6 +26,7 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [ContentsDescription](Logistics.Shipment.TransportationOrderLines.md#contentsdescription) | string (128) | Textual description of the cargo contents. `Required` 
+| [DisplayText](Logistics.Shipment.TransportationOrderLines.md#displaytext) | string |  
 | [Id](Logistics.Shipment.TransportationOrderLines.md#id) | guid |  
 | [LineNo](Logistics.Shipment.TransportationOrderLines.md#lineno) | int32 | Line number, unique within the TransportationOrder. Usually is increasing number like 10, 20, 30, ... when initially entering the TransportationOrder (in order to allow insertions with adjustment documents). `Required` `Filter(eq)` 
 | [Notes](Logistics.Shipment.TransportationOrderLines.md#notes) | string (max) __nullable__ | Notes for this TransportationOrderLine. `Introduced in version 18.2` 
@@ -55,6 +56,12 @@ _Type_: **string (128)**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **128**  
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

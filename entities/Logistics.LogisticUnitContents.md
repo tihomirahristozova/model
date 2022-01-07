@@ -12,6 +12,10 @@ Default Display Text Format:
 _{LogisticUnit}_  
 Default Search Members:  
 _LotNumber; LogisticUnit_  
+Code Data Member:  
+_LotNumber_  
+Name Data Member:  
+_LogisticUnit_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -26,6 +30,7 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [BaseQuantity](Logistics.LogisticUnitContents.md#basequantity) | decimal (12, 3) | The quantity, expressed in the base measurement category of the product. `Required` `Filter(eq;ge;le)` 
+| [DisplayText](Logistics.LogisticUnitContents.md#displaytext) | string |  
 | [ExpirationDate](Logistics.LogisticUnitContents.md#expirationdate) | date __nullable__ | Expiration date of the goods. null means unknown or N/A. `Filter(multi eq;ge;le)` 
 | [GrossWeight](Logistics.LogisticUnitContents.md#grossweight) | decimal (12, 3) __nullable__ | Gross weight in kilograms (kg). null means unknown. `Filter(eq;ge;le)` 
 | [Id](Logistics.LogisticUnitContents.md#id) | guid |  
@@ -54,6 +59,12 @@ The quantity, expressed in the base measurement category of the product. `Requir
 _Type_: **decimal (12, 3)**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### ExpirationDate
 

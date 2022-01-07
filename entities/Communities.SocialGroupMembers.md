@@ -12,6 +12,8 @@ Default Display Text Format:
 _{SocialGroup.Name}_  
 Default Search Members:  
 _SocialGroup.Name_  
+Name Data Member:  
+_SocialGroup.Name_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -25,6 +27,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [DisplayText](Communities.SocialGroupMembers.md#displaytext) | string |  
 | [Id](Communities.SocialGroupMembers.md#id) | guid |  
 | [JoinTimeUtc](Communities.SocialGroupMembers.md#jointimeutc) | datetime | The exact server time (in UTC), when the user joined the group. `Required` `Default(NowUtc)` 
 | [ObjectVersion](Communities.SocialGroupMembers.md#objectversion) | int32 |  
@@ -38,6 +41,12 @@ Aggregate Root:
 
 
 ## Attribute Details
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

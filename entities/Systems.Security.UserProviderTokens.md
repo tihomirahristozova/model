@@ -12,6 +12,8 @@ Default Display Text Format:
 _{LoginProviderName}_  
 Default Search Members:  
 _LoginProviderName_  
+Name Data Member:  
+_LoginProviderName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -25,6 +27,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [DisplayText](Systems.Security.UserProviderTokens.md#displaytext) | string |  
 | [Id](Systems.Security.UserProviderTokens.md#id) | guid |  
 | [LoginProviderName](Systems.Security.UserProviderTokens.md#loginprovidername) | string (450) | Name of the login provider. Could be Facebook, Twitter, E1UserStore, etc. `Required` `Filter(eq)` 
 | [ObjectVersion](Systems.Security.UserProviderTokens.md#objectversion) | int32 |  
@@ -39,6 +42,12 @@ Aggregate Root:
 
 
 ## Attribute Details
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

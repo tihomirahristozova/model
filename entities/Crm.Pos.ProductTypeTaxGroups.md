@@ -12,6 +12,8 @@ Default Display Text Format:
 _{ProductType.Name:T}_  
 Default Search Members:  
 _ProductType.Name_  
+Name Data Member:  
+_ProductType.Name_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -26,6 +28,7 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [ApplicableLegislation](Crm.Pos.ProductTypeTaxGroups.md#applicablelegislation) | [ApplicableLegislation](Crm.Pos.ProductTypeTaxGroups.md#applicablelegislation) | The legislation, for which the tax group is applicable. `Required` `Filter(multi eq)` 
+| [DisplayText](Crm.Pos.ProductTypeTaxGroups.md#displaytext) | string |  
 | [Id](Crm.Pos.ProductTypeTaxGroups.md#id) | guid |  
 | [Notes](Crm.Pos.ProductTypeTaxGroups.md#notes) | string (max) __nullable__ | Notes for this ProductTypeTaxGroup. `Filter(eq;like)` 
 | [ObjectVersion](Crm.Pos.ProductTypeTaxGroups.md#objectversion) | int32 |  
@@ -78,6 +81,12 @@ _Allowed Values (General.PartyApplicableLegislationsRepository.ApplicableLegisla
 
 _Supported Filters_: **Equals, EqualsIn**  
 _Supports Order By_: **False**  
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

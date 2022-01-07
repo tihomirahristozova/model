@@ -9,7 +9,7 @@ Contains alerts, specific to one vehicle. Alerts are created based on many sourc
 
 ## Default Visualization
 Default Display Text Format:  
-_{Id}: {ObjectVersion}_  
+_{Id}: {VehicleId}_  
 Default Search Members:  
 __  
 
@@ -25,6 +25,7 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [AlertType](Applications.Fleet.VehicleAlerts.md#alerttype) | string (3) | The type of the alert. The type is specfic to the Source. `Required` 
 | [Description](Applications.Fleet.VehicleAlerts.md#description) | string (254) | Description of the alert (Multilanguage). `Required` 
+| [DisplayText](Applications.Fleet.VehicleAlerts.md#displaytext) | string |  
 | [Id](Applications.Fleet.VehicleAlerts.md#id) | guid |  
 | [IsHidden](Applications.Fleet.VehicleAlerts.md#ishidden) | boolean | Specifies, whether the alert is hidden (e.g. managed by the responsible person). `Required` `Default(false)` 
 | [ObjectVersion](Applications.Fleet.VehicleAlerts.md#objectversion) | int32 |  
@@ -57,6 +58,12 @@ _Type_: **string (254)**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

@@ -12,6 +12,8 @@ Default Display Text Format:
 _{TableName:T}_  
 Default Search Members:  
 _TableName_  
+Name Data Member:  
+_TableName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -24,6 +26,7 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [ConflictDescription](Systems.Core.ResolvedConflicts.md#conflictdescription) | [MultilanguageString](../data-types.md#multilanguagestring) | Description of the conflict. `Required` `ReadOnly` 
+| [DisplayText](Systems.Core.ResolvedConflicts.md#displaytext) | string |  
 | [Id](Systems.Core.ResolvedConflicts.md#id) | guid |  
 | [ObjectVersion](Systems.Core.ResolvedConflicts.md#objectversion) | int32 |  
 | [ResolveConfirmedByUser](Systems.Core.ResolvedConflicts.md#resolveconfirmedbyuser) | boolean | True, when the conflict resolution was manually confirmed by user. `Required` `Default(false)` `Filter(eq)` 
@@ -44,6 +47,12 @@ Description of the conflict. `Required` `ReadOnly`
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

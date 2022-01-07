@@ -12,6 +12,10 @@ Default Display Text Format:
 _{Name}_  
 Default Search Members:  
 _Code; Name_  
+Code Data Member:  
+_Code_  
+Name Data Member:  
+_Name_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -24,6 +28,7 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Code](Logistics.Shipment.CargoTypes.md#code) | string (16) | The unique code of the CargoType. `Required` `Filter(eq;like)` `ORD` 
+| [DisplayText](Logistics.Shipment.CargoTypes.md#displaytext) | string |  
 | [Id](Logistics.Shipment.CargoTypes.md#id) | guid |  
 | [Name](Logistics.Shipment.CargoTypes.md#name) | string (256) | The name of this CargoType. `Required` `Filter(eq;like)` 
 | [Notes](Logistics.Shipment.CargoTypes.md#notes) | string (max) __nullable__ | Notes for this CargoType. 
@@ -41,6 +46,12 @@ _Indexed_: **True**
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
 _Maximum Length_: **16**  
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

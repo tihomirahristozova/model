@@ -85,6 +85,8 @@
 <p>Default Display Text Format:<br>
 <em>{ApplicationName}</em><br>
 Default Search Members:<br>
+<em>ApplicationName</em><br>
+Name Data Member:<br>
 <em>ApplicationName</em></p>
 <h2 id="aggregate">Aggregate</h2>
 <p>An <a href="https://docs.erp.net/tech/advanced/concepts/aggregates.html">aggregate</a> is a cluster of domain objects that can be treated as a single unit.</p>
@@ -116,6 +118,11 @@ Default Search Members:<br>
 <td><a href="Systems.Core.Translations.html#creationtime">CreationTime</a></td>
 <td>datetime</td>
 <td>Timestamp when the translation was first created. <code>Required</code> <code>Default(Now)</code> <code>Filter(ge;le)</code> <code>ReadOnly</code></td>
+</tr>
+<tr>
+<td><a href="Systems.Core.Translations.html#displaytext">DisplayText</a></td>
+<td>string</td>
+<td></td>
 </tr>
 <tr>
 <td><a href="Systems.Core.Translations.html#id">Id</a></td>
@@ -176,6 +183,10 @@ Default Search Members:<br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>CurrentDateTime</strong></p>
+<h3 id="displaytext">DisplayText</h3>
+<p><em>Type</em>: <strong>string</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****</p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>

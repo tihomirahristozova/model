@@ -12,6 +12,10 @@ Default Display Text Format:
 _{WebSite.Name}_  
 Default Search Members:  
 _LanguageCode; WebSite.Name_  
+Code Data Member:  
+_LanguageCode_  
+Name Data Member:  
+_WebSite.Name_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -25,6 +29,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [DisplayText](Applications.Cms.WebSiteLanguages.md#displaytext) | string |  
 | [Id](Applications.Cms.WebSiteLanguages.md#id) | guid |  
 | [IsActive](Applications.Cms.WebSiteLanguages.md#isactive) | boolean | Specifies whether the support for the language is activated and should be published on the web. `Required` `Default(false)` 
 | [LanguageCode](Applications.Cms.WebSiteLanguages.md#languagecode) | string (2) | Two letter ISO language code. Sub-tags are currently not supported. `Required` 
@@ -39,6 +44,12 @@ Aggregate Root:
 
 
 ## Attribute Details
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

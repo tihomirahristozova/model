@@ -12,6 +12,10 @@ Default Display Text Format:
 _{BankBranchName:T}_  
 Default Search Members:  
 _BankAccountCode; BankBranchName_  
+Code Data Member:  
+_BankAccountCode_  
+Name Data Member:  
+_BankBranchName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -30,6 +34,7 @@ Aggregate Root:
 | [BankBranchName](General.Contacts.PartyBankAccounts.md#bankbranchname) | [MultilanguageString](../data-types.md#multilanguagestring) __nullable__ | The name of the branch office of the bank, where the account is located. Required (not-null) only for own accounts for printing or exporting bank payments. 
 | [BankCode](General.Contacts.PartyBankAccounts.md#bankcode) | string (30) __nullable__ | The code of the bank, usually the BIC code. `Filter(eq)` 
 | [BankName](General.Contacts.PartyBankAccounts.md#bankname) | [MultilanguageString](../data-types.md#multilanguagestring) __nullable__ | The full name of the bank. `Filter(like)` 
+| [DisplayText](General.Contacts.PartyBankAccounts.md#displaytext) | string |  
 | [Id](General.Contacts.PartyBankAccounts.md#id) | guid |  
 | [IsDefault](General.Contacts.PartyBankAccounts.md#isdefault) | boolean | True if the this is the default account for the party. Only one default per party is allowed. `Required` `Default(false)` `Filter(eq)` 
 | [Notes](General.Contacts.PartyBankAccounts.md#notes) | string (254) __nullable__ | Notes for this PartyBankAccount. 
@@ -85,6 +90,12 @@ The full name of the bank. `Filter(like)`
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring) __nullable__**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

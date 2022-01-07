@@ -12,6 +12,8 @@ Default Display Text Format:
 _{SerialCode}_  
 Default Search Members:  
 _SerialCode_  
+Code Data Member:  
+_SerialCode_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -25,6 +27,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [DisplayText](Logistics.LogisticUnits.md#displaytext) | string |  
 | [ExpectedWeight](Logistics.LogisticUnits.md#expectedweight) | decimal (12, 3) __nullable__ | Expected weight in KG. Used for planning purposes. null means unknown. `Filter(eq;ge;le)` 
 | [Id](Logistics.LogisticUnits.md#id) | guid |  
 | [MeasuredWeight](Logistics.LogisticUnits.md#measuredweight) | decimal (12, 3) __nullable__ | Actual measured weight of the unit in KG. null means unknown. `Filter(eq;ge;le)` 
@@ -49,6 +52,12 @@ Aggregate Tree
 
 
 ## Attribute Details
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### ExpectedWeight
 

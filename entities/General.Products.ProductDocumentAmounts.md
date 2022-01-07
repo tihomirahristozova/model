@@ -12,6 +12,8 @@ Default Display Text Format:
 _{Product.Name:T}_  
 Default Search Members:  
 _Product.Name_  
+Name Data Member:  
+_Product.Name_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -25,6 +27,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [DisplayText](General.Products.ProductDocumentAmounts.md#displaytext) | string |  
 | [Id](General.Products.ProductDocumentAmounts.md#id) | guid |  
 | [LinePercent](General.Products.ProductDocumentAmounts.md#linepercent) | decimal (14, 3) | The custom percent for the current product and amount type. `Required` `Default(0)` 
 | [ObjectVersion](General.Products.ProductDocumentAmounts.md#objectversion) | int32 |  
@@ -38,6 +41,12 @@ Aggregate Root:
 
 
 ## Attribute Details
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

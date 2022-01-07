@@ -12,6 +12,8 @@ Default Display Text Format:
 _{Resource.Name:T}_  
 Default Search Members:  
 _Resource.Name_  
+Name Data Member:  
+_Resource.Name_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -26,6 +28,7 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [AvailableResources](General.Resources.ResourceAvailability.md#availableresources) | decimal (12, 2) | The quantity of the resource, available for the specified period. For non-discrete resources, this number can contain fractions. When several availability periods for a resource overlap, the total availability is the sum of all. `Required` `Default(1)` 
+| [DisplayText](General.Resources.ResourceAvailability.md#displaytext) | string |  
 | [FromDate](General.Resources.ResourceAvailability.md#fromdate) | date | The date from which availability starts. `Required` 
 | [Id](General.Resources.ResourceAvailability.md#id) | guid |  
 | [ObjectVersion](General.Resources.ResourceAvailability.md#objectversion) | int32 |  
@@ -48,6 +51,12 @@ _Type_: **decimal (12, 2)**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **1**  
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### FromDate
 

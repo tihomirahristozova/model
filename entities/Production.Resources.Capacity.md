@@ -12,6 +12,8 @@ Default Display Text Format:
 _{WorkgroupResource.Workgroup.Name}_  
 Default Search Members:  
 _WorkgroupResource.Workgroup.Name_  
+Name Data Member:  
+_WorkgroupResource.Workgroup.Name_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -29,6 +31,7 @@ Aggregate Root:
 | [AvailableQuantity](Production.Resources.Capacity.md#availablequantity) | [Quantity (9, 0)](../data-types.md#quantity) | Quantity of the resource, available to production. `Unit: WorkgroupResource.Resource.PrimaryUnit` `Required` 
 | [AvailableStartTime](Production.Resources.Capacity.md#availablestarttime) | datetime | Start of availability period during Calendar_Date. `Required` 
 | [CalendarDate](Production.Resources.Capacity.md#calendardate) | datetime | Date of the availability period. `Required` `Filter(ge;le)` 
+| [DisplayText](Production.Resources.Capacity.md#displaytext) | string |  
 | [Id](Production.Resources.Capacity.md#id) | guid |  
 | [ObjectVersion](Production.Resources.Capacity.md#objectversion) | int32 |  
 
@@ -72,6 +75,12 @@ Date of the availability period. `Required` `Filter(ge;le)`
 _Type_: **datetime**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

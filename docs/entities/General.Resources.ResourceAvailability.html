@@ -85,6 +85,8 @@
 <p>Default Display Text Format:<br>
 <em>{Resource.Name:T}</em><br>
 Default Search Members:<br>
+<em>Resource.Name</em><br>
+Name Data Member:<br>
 <em>Resource.Name</em></p>
 <h2 id="aggregate">Aggregate</h2>
 <p>An <a href="https://docs.erp.net/tech/advanced/concepts/aggregates.html">aggregate</a> is a cluster of domain objects that can be treated as a single unit.</p>
@@ -106,6 +108,11 @@ Aggregate Root:<br>
 <td><a href="General.Resources.ResourceAvailability.html#availableresources">AvailableResources</a></td>
 <td>decimal (12, 2)</td>
 <td>The quantity of the resource, available for the specified period. For non-discrete resources, this number can contain fractions. When several availability periods for a resource overlap, the total availability is the sum of all. <code>Required</code> <code>Default(1)</code></td>
+</tr>
+<tr>
+<td><a href="General.Resources.ResourceAvailability.html#displaytext">DisplayText</a></td>
+<td>string</td>
+<td></td>
 </tr>
 <tr>
 <td><a href="General.Resources.ResourceAvailability.html#fromdate">FromDate</a></td>
@@ -153,6 +160,10 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>1</strong></p>
+<h3 id="displaytext">DisplayText</h3>
+<p><em>Type</em>: <strong>string</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****</p>
 <h3 id="fromdate">FromDate</h3>
 <p>The date from which availability starts. <code>Required</code></p>
 <p><em>Type</em>: <strong>date</strong><br>

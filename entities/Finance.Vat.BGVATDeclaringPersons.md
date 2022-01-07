@@ -12,6 +12,8 @@ Default Display Text Format:
 _{EnterpriseCompany}_  
 Default Search Members:  
 _EnterpriseCompany_  
+Name Data Member:  
+_EnterpriseCompany_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -30,6 +32,7 @@ Aggregate Root:
 | [DeclaringPersonCity](Finance.Vat.BGVATDeclaringPersons.md#declaringpersoncity) | string (50) | City from the address for correspondation of the declaring person. `Required` 
 | [DeclaringPersonPosition](Finance.Vat.BGVATDeclaringPersons.md#declaringpersonposition) | string (50) __nullable__ | Position of the declaring person in the enterprise company. 
 | [DeclaringPersonPostcode](Finance.Vat.BGVATDeclaringPersons.md#declaringpersonpostcode) | string (4) | Postcode from the address for correspondation of the declaring person. `Required` 
+| [DisplayText](Finance.Vat.BGVATDeclaringPersons.md#displaytext) | string |  
 | [Id](Finance.Vat.BGVATDeclaringPersons.md#id) | guid |  
 | [IsDefault](Finance.Vat.BGVATDeclaringPersons.md#isdefault) | boolean | True if this is the default person, which issues VAT declarations for this Enterprise Company. `Required` `Default(true)` 
 | [ObjectVersion](Finance.Vat.BGVATDeclaringPersons.md#objectversion) | int32 |  
@@ -97,6 +100,12 @@ _Type_: **string (4)**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **4**  
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

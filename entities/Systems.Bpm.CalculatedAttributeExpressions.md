@@ -12,6 +12,8 @@ Default Display Text Format:
 _{CalculatedAttribute.Name}_  
 Default Search Members:  
 _CalculatedAttribute.Name_  
+Name Data Member:  
+_CalculatedAttribute.Name_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -25,6 +27,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [DisplayText](Systems.Bpm.CalculatedAttributeExpressions.md#displaytext) | string |  
 | [ExpressionNo](Systems.Bpm.CalculatedAttributeExpressions.md#expressionno) | int32 | Unique number of the expression within the attribute. Expression No 0 is the default expression, which provides the result value of the attribute. `Required` 
 | [Id](Systems.Bpm.CalculatedAttributeExpressions.md#id) | guid |  
 | [Notes](Systems.Bpm.CalculatedAttributeExpressions.md#notes) | string (max) __nullable__ | Notes for this CalculatedAttribute<br />Expression. 
@@ -45,6 +48,12 @@ Aggregate Root:
 
 
 ## Attribute Details
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### ExpressionNo
 

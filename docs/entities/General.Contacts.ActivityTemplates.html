@@ -83,7 +83,7 @@
 <p>Templates for automatical generation of activity from any document. Entity: Cm_Activity_Templates</p>
 <h2 id="default-visualization">Default Visualization</h2>
 <p>Default Display Text Format:<br>
-<em>{Id}: {ObjectVersion}</em><br>
+<em>{Id}: {RouteId}</em><br>
 Default Search Members:<br>
 __</p>
 <h2 id="aggregate">Aggregate</h2>
@@ -111,6 +111,11 @@ __</p>
 <td><a href="General.Contacts.ActivityTemplates.html#additionaldays">AdditionalDays</a></td>
 <td>int32</td>
 <td>The number of days that will be added to the date in the Header_Date_Field. The result value is set to Start_Time of the activity. <code>Required</code> <code>Default(0)</code></td>
+</tr>
+<tr>
+<td><a href="General.Contacts.ActivityTemplates.html#displaytext">DisplayText</a></td>
+<td>string</td>
+<td></td>
 </tr>
 <tr>
 <td><a href="General.Contacts.ActivityTemplates.html#id">Id</a></td>
@@ -174,6 +179,10 @@ __</p>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>0</strong></p>
+<h3 id="displaytext">DisplayText</h3>
+<p><em>Type</em>: <strong>string</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****</p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>

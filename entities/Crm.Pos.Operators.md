@@ -12,6 +12,8 @@ Default Display Text Format:
 _{PosOperatorCode}_  
 Default Search Members:  
 _PosOperatorCode_  
+Code Data Member:  
+_PosOperatorCode_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -23,6 +25,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [DisplayText](Crm.Pos.Operators.md#displaytext) | string |  
 | [Id](Crm.Pos.Operators.md#id) | guid |  
 | [IsActive](Crm.Pos.Operators.md#isactive) | boolean | Indicates whether this operator is active and can be chosen for new records. `Required` `Default(true)` `Filter(multi eq)` 
 | [ObjectVersion](Crm.Pos.Operators.md#objectversion) | int32 |  
@@ -41,6 +44,12 @@ Aggregate Tree
 
 
 ## Attribute Details
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

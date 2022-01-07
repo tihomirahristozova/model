@@ -12,6 +12,10 @@ Default Display Text Format:
 _{RentalAssetName}_  
 Default Search Members:  
 _RentalAssetCode; RentalAssetName_  
+Code Data Member:  
+_RentalAssetCode_  
+Name Data Member:  
+_RentalAssetName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -25,6 +29,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [DisplayText](Applications.Rental.Assets.md#displaytext) | string |  
 | [Id](Applications.Rental.Assets.md#id) | guid |  
 | [IsActive](Applications.Rental.Assets.md#isactive) | boolean | True if the asset is currently active and may be used in new documents. Deactivated assets are used only in reports. `Required` `Default(true)` `Filter(eq)` 
 | [Notes](Applications.Rental.Assets.md#notes) | string (max) __nullable__ | Notes for this Asset. 
@@ -56,6 +61,12 @@ Aggregate Root:
 
 
 ## Attribute Details
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

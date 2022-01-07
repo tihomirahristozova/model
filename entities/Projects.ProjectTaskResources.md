@@ -12,6 +12,8 @@ Default Display Text Format:
 _{ProjectTask.TaskName}_  
 Default Search Members:  
 _ProjectTask.TaskName_  
+Name Data Member:  
+_ProjectTask.TaskName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -28,6 +30,7 @@ Aggregate Root:
 | [BillingPricePerHour](Projects.ProjectTaskResources.md#billingpriceperhour) | decimal (12, 5) __nullable__ | When not null, specifies the price per hour (in the currency of the Project) of resource usage which will be used for billing. null means that the item will be billed in another way. This way of billing is mutually exclusive with Fixed Total Price. `Filter(eq)` 
 | [BillingTotalAmount](Projects.ProjectTaskResources.md#billingtotalamount) | decimal (14, 2) __nullable__ | When not null, specifies that this item will be billed for the specified fixed total price (in the currency of the Project). null means that this item will be billed in another way. This way of billing is mutually exclusive with Billing Price Per Hour. `Filter(eq)` 
 | [CostPerHour](Projects.ProjectTaskResources.md#costperhour) | decimal (12, 5) | Cost per hour for the resource usage for this task (in the currency of the project). `Required` `Default(0)` `Filter(eq)` 
+| [DisplayText](Projects.ProjectTaskResources.md#displaytext) | string |  
 | [Id](Projects.ProjectTaskResources.md#id) | guid |  
 | [Notes](Projects.ProjectTaskResources.md#notes) | string (254) __nullable__ | Notes for this ProjectTaskResource. 
 | [ObjectVersion](Projects.ProjectTaskResources.md#objectversion) | int32 |  
@@ -78,6 +81,12 @@ _Default Value_: **0**
 
 _Front-End Recalc Expressions:_  
 `IIF( ( ( obj.PerUseCost != null) AndAlso ( obj.ResourceUsageHours != 0)), ( ( obj.TaskTotalCost - obj.PerUseCost.Value) / obj.ResourceUsageHours), obj.CostPerHour)`
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+
 ### Id
 
 _Type_: **guid**  

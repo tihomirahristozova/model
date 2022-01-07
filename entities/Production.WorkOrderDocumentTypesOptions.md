@@ -9,7 +9,7 @@ Options for user-defined Work Order document types. Entity: Prd_Work_Order_Docum
 
 ## Default Visualization
 Default Display Text Format:  
-_{Id}: {ObjectVersion}_  
+_{Id}: {DocumentTypeId}_  
 Default Search Members:  
 __  
 
@@ -23,6 +23,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [DisplayText](Production.WorkOrderDocumentTypesOptions.md#displaytext) | string |  
 | [Id](Production.WorkOrderDocumentTypesOptions.md#id) | guid |  
 | [ObjectVersion](Production.WorkOrderDocumentTypesOptions.md#objectversion) | int32 |  
 
@@ -35,6 +36,12 @@ Aggregate Tree
 
 
 ## Attribute Details
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

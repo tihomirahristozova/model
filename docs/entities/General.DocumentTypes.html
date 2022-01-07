@@ -85,7 +85,11 @@
 <p>Default Display Text Format:<br>
 <em>{TypeName:T}</em><br>
 Default Search Members:<br>
-<em>Code; TypeName</em></p>
+<em>Code; TypeName</em><br>
+Code Data Member:<br>
+<em>Code</em><br>
+Name Data Member:<br>
+<em>TypeName</em></p>
 <h2 id="aggregate">Aggregate</h2>
 <p>An <a href="https://docs.erp.net/tech/advanced/concepts/aggregates.html">aggregate</a> is a cluster of domain objects that can be treated as a single unit.</p>
 <p>Aggregate Tree</p>
@@ -156,6 +160,11 @@ Default Search Members:<br>
 <td><a href="General.DocumentTypes.html#disallowoppositevaluesgeneration">DisallowOpposite<br>ValuesGeneration</a></td>
 <td>boolean</td>
 <td>Disallow the generation of decreasing scalar values (values with opposite directions than the original values determined by the parent document) through this document type. <code>Required</code> <code>Default(false)</code></td>
+</tr>
+<tr>
+<td><a href="General.DocumentTypes.html#displaytext">DisplayText</a></td>
+<td>string</td>
+<td></td>
 </tr>
 <tr>
 <td><a href="General.DocumentTypes.html#entityname">EntityName</a></td>
@@ -332,6 +341,10 @@ Default Search Members:<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
+<h3 id="displaytext">DisplayText</h3>
+<p><em>Type</em>: <strong>string</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****</p>
 <h3 id="entityname">EntityName</h3>
 <p>System entity, which contains the documents. <code>Required</code> <code>Filter(multi eq)</code> <code>ORD</code></p>
 <p><em>Type</em>: <strong>string (64)</strong><br>

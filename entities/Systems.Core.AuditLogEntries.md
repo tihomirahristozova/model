@@ -12,6 +12,8 @@ Default Display Text Format:
 _{ApplicationName}_  
 Default Search Members:  
 _ApplicationName_  
+Name Data Member:  
+_ApplicationName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -25,6 +27,7 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [ApplicationName](Systems.Core.AuditLogEntries.md#applicationname) | string (64) __nullable__ | The client application that triggered the event. Null when unknown or N/A. `Filter(eq;like)` 
 | [Details](Systems.Core.AuditLogEntries.md#details) | string (max) __nullable__ | Detailed contents of the event. Contents depend on the Event Type and Event Name. 
+| [DisplayText](Systems.Core.AuditLogEntries.md#displaytext) | string |  
 | [EntityItemId](Systems.Core.AuditLogEntries.md#entityitemid) | guid __nullable__ | The Id of the record, which is referenced by the event. Null when unknown or N/A. `Filter(multi eq)` 
 | [EntityName](Systems.Core.AuditLogEntries.md#entityname) | string (64) __nullable__ | The entity, which is being referenced by the event. Null when unknown or N/A. `Filter(eq;like)` 
 | [EventClass](Systems.Core.AuditLogEntries.md#eventclass) | [EventClass](Systems.Core.AuditLogEntries.md#eventclass) | The event primary classification, which shows the source of the event. E=Entity methods; A=Auth events; S=Server events. `Required` `Filter(multi eq)` 
@@ -61,6 +64,12 @@ _Type_: **string (max) __nullable__**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### EntityItemId
 

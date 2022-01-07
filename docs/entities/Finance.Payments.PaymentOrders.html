@@ -86,6 +86,8 @@
 <p>Default Display Text Format:<br>
 <em>{DocumentType.TypeName:T} {DocumentNo}</em><br>
 Default Search Members:<br>
+<em>DocumentNo</em><br>
+Code Data Member:<br>
 <em>DocumentNo</em></p>
 <h2 id="aggregate">Aggregate</h2>
 <p>An <a href="https://docs.erp.net/tech/advanced/concepts/aggregates.html">aggregate</a> is a cluster of domain objects that can be treated as a single unit.</p>
@@ -163,6 +165,11 @@ Default Search Members:<br>
 <td><a href="Finance.Payments.PaymentOrders.html#direction">Direction</a></td>
 <td><a href="Finance.Payments.PaymentOrders.html#direction">Direction</a></td>
 <td>I for Payment issue, R for payment receipt. <code>Required</code> <code>Default(&quot;I&quot;)</code> <code>Filter(eq)</code></td>
+</tr>
+<tr>
+<td><a href="Finance.Payments.PaymentOrders.html#displaytext">DisplayText</a></td>
+<td>string</td>
+<td></td>
 </tr>
 <tr>
 <td><a href="Finance.Payments.PaymentOrders.html#documentdate">DocumentDate</a></td>
@@ -627,6 +634,10 @@ Allowed values for the <code>Direction</code>(Finance.Payments.PaymentOrders.md#
 <p><em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Expense</strong></p>
+<h3 id="displaytext">DisplayText</h3>
+<p><em>Type</em>: <strong>string</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****</p>
 <h3 id="documentdate">DocumentDate</h3>
 <p>The date on which the document was issued. <code>Required</code> <code>Default(Today)</code> <code>Filter(eq;ge;le)</code> <code>ORD</code> (Inherited from <a href="General.Documents.html">Documents</a>)</p>
 <p><em>Type</em>: <strong>date</strong><br>

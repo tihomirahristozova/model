@@ -12,6 +12,8 @@ Default Display Text Format:
 _{ProjectRisk.RiskName}_  
 Default Search Members:  
 _ProjectRisk.RiskName_  
+Name Data Member:  
+_ProjectRisk.RiskName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -26,6 +28,7 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [ContributionTime](Projects.ProjectRiskDiscussion.md#contributiontime) | datetime | The time, when the message was contributed. `Required` `Default(Now)` `Filter(eq)` `ReadOnly` 
+| [DisplayText](Projects.ProjectRiskDiscussion.md#displaytext) | string |  
 | [Id](Projects.ProjectRiskDiscussion.md#id) | guid |  
 | [LastEditTime](Projects.ProjectRiskDiscussion.md#lastedittime) | datetime __nullable__ | Contains the last edit time of the message. null if the message was never edited. `Filter(eq)` `ReadOnly` 
 | [Message](Projects.ProjectRiskDiscussion.md#message) | string (max) | The contents of the message. `Required` 
@@ -49,6 +52,12 @@ _Type_: **datetime**
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **CurrentDateTime**  
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

@@ -83,7 +83,7 @@
 <p>The current requisition (MRP) plan. The data is deleted and re-created upon each planning. Entity: Inv_Requisition_Plan</p>
 <h2 id="default-visualization">Default Visualization</h2>
 <p>Default Display Text Format:<br>
-<em>{Id}: {ObjectVersion}</em><br>
+<em>{Id}: {FirmPlannedOrderReceiptsValue}</em><br>
 Default Search Members:<br>
 __</p>
 <h2 id="aggregate">Aggregate</h2>
@@ -116,6 +116,11 @@ __</p>
 <td><a href="Logistics.Inventory.RequisitionPlan.html#confirmaction">ConfirmAction</a></td>
 <td>boolean</td>
 <td>True - generate firm planned orders for the current row; false- do not generate;. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
+</tr>
+<tr>
+<td><a href="Logistics.Inventory.RequisitionPlan.html#displaytext">DisplayText</a></td>
+<td>string</td>
+<td></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.RequisitionPlan.html#explanationmessage">ExplanationMessage</a></td>
@@ -243,6 +248,10 @@ __</p>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
+<h3 id="displaytext">DisplayText</h3>
+<p><em>Type</em>: <strong>string</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****</p>
 <h3 id="explanationmessage">ExplanationMessage</h3>
 <p>A message that explains why the program has generated the planned orders for this row.</p>
 <p><em>Type</em>: <strong>string (max) <strong>nullable</strong></strong><br>

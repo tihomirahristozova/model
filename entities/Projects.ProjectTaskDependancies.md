@@ -12,6 +12,8 @@ Default Display Text Format:
 _{ProjectTask.TaskName}_  
 Default Search Members:  
 _ProjectTask.TaskName_  
+Name Data Member:  
+_ProjectTask.TaskName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -26,6 +28,7 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [DependancyType](Projects.ProjectTaskDependancies.md#dependancytype) | [DependancyType](Projects.ProjectTaskDependancies.md#dependancytype) | FS=Finish-to-Start;SS=Start-to-Start;FF=Finish-to-Finish;SF=Start-to-Finish;SY=Sync (all types in the same time). `Required` `Default("FS")` 
+| [DisplayText](Projects.ProjectTaskDependancies.md#displaytext) | string |  
 | [Id](Projects.ProjectTaskDependancies.md#id) | guid |  
 | [ObjectVersion](Projects.ProjectTaskDependancies.md#objectversion) | int32 |  
 
@@ -58,6 +61,12 @@ _Allowed Values (Projects.ProjectTaskDependanciesRepository.DependancyType Enum 
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **FinishToStart**  
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

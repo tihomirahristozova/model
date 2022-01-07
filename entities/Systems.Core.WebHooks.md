@@ -12,6 +12,10 @@ Default Display Text Format:
 _{Name:T}_  
 Default Search Members:  
 _Code; Name_  
+Code Data Member:  
+_Code_  
+Name Data Member:  
+_Name_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -25,6 +29,7 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [Body](Systems.Core.WebHooks.md#body) | string (max) __nullable__ | The body of the POST request (interpolated string). 
 | [Code](Systems.Core.WebHooks.md#code) | string (32) | The unique code of the WebHook. `Required` `Filter(eq;like)` `ORD` 
+| [DisplayText](Systems.Core.WebHooks.md#displaytext) | string |  
 | [Headers](Systems.Core.WebHooks.md#headers) | string (max) __nullable__ | Optional headers for the request (interpolated string). Each header is specified on a separate line. 
 | [Id](Systems.Core.WebHooks.md#id) | guid |  
 | [Name](Systems.Core.WebHooks.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Webhook name (multi-language). `Required` `Filter(like)` 
@@ -55,6 +60,12 @@ _Indexed_: **True**
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
 _Maximum Length_: **32**  
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Headers
 

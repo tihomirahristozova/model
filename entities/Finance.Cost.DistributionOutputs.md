@@ -12,6 +12,8 @@ Default Display Text Format:
 _{CostDistribution.EntityName}_  
 Default Search Members:  
 _CostDistribution.EntityName_  
+Name Data Member:  
+_CostDistribution.EntityName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -25,6 +27,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [DisplayText](Finance.Cost.DistributionOutputs.md#displaytext) | string |  
 | [Id](Finance.Cost.DistributionOutputs.md#id) | guid |  
 | [LineNo](Finance.Cost.DistributionOutputs.md#lineno) | int32 | Unique (within the document), consecutive line number of the output. `Required` 
 | [ObjectVersion](Finance.Cost.DistributionOutputs.md#objectversion) | int32 |  
@@ -39,6 +42,12 @@ Aggregate Root:
 
 
 ## Attribute Details
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

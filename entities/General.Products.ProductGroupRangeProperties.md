@@ -12,6 +12,8 @@ Default Display Text Format:
 _{ProductGroup.Name:T}_  
 Default Search Members:  
 _ProductGroup.Name_  
+Name Data Member:  
+_ProductGroup.Name_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -25,6 +27,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [DisplayText](General.Products.ProductGroupRangeProperties.md#displaytext) | string |  
 | [FromPropertyValue](General.Products.ProductGroupRangeProperties.md#frompropertyvalue) | string (254) __nullable__ | Starting value of the range of alternative values. Used only when Rage Type = R (range). 
 | [Id](General.Products.ProductGroupRangeProperties.md#id) | guid |  
 | [ObjectVersion](General.Products.ProductGroupRangeProperties.md#objectversion) | int32 |  
@@ -41,6 +44,12 @@ Aggregate Root:
 
 
 ## Attribute Details
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### FromPropertyValue
 

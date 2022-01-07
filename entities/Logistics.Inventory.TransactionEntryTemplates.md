@@ -9,7 +9,7 @@ Obsolete. Not used. Entity: Inv_Transaction_Entry_Templates
 
 ## Default Visualization
 Default Display Text Format:  
-_{Id}: {ObjectVersion}_  
+_{Id}: {RouteId}_  
 Default Search Members:  
 __  
 
@@ -23,6 +23,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [DisplayText](Logistics.Inventory.TransactionEntryTemplates.md#displaytext) | string |  
 | [DocumentNotesFixedText](Logistics.Inventory.TransactionEntryTemplates.md#documentnotesfixedtext) | string (max) __nullable__ | Specifies the text for the document notes in the created entry in the VAT ledgers, in case the source is set to be fixed text. 
 | [Id](Logistics.Inventory.TransactionEntryTemplates.md#id) | guid |  
 | [ObjectVersion](Logistics.Inventory.TransactionEntryTemplates.md#objectversion) | int32 |  
@@ -36,6 +37,12 @@ Aggregate Tree
 
 
 ## Attribute Details
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### DocumentNotesFixedText
 

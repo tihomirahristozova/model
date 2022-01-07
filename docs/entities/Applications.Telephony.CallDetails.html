@@ -85,6 +85,8 @@
 <p>Default Display Text Format:<br>
 <em>{CalledPartyNumber}</em><br>
 Default Search Members:<br>
+<em>CalledPartyNumber</em><br>
+Code Data Member:<br>
 <em>CalledPartyNumber</em></p>
 <h2 id="aggregate">Aggregate</h2>
 <p>An <a href="https://docs.erp.net/tech/advanced/concepts/aggregates.html">aggregate</a> is a cluster of domain objects that can be treated as a single unit.</p>
@@ -121,6 +123,11 @@ Default Search Members:<br>
 <td><a href="Applications.Telephony.CallDetails.html#calluniqueid">CallUniqueId</a></td>
 <td>string (32) <strong>nullable</strong></td>
 <td>The unique id of the call, as reported by the telephone central. null when the central did not report unique Id. Used for integration purposes.</td>
+</tr>
+<tr>
+<td><a href="Applications.Telephony.CallDetails.html#displaytext">DisplayText</a></td>
+<td>string</td>
+<td></td>
 </tr>
 <tr>
 <td><a href="Applications.Telephony.CallDetails.html#durationseconds">DurationSeconds</a></td>
@@ -225,6 +232,10 @@ Allowed values for the <code>CallType</code>(Applications.Telephony.CallDetails.
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>32</strong></p>
+<h3 id="displaytext">DisplayText</h3>
+<p><em>Type</em>: <strong>string</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****</p>
 <h3 id="durationseconds">DurationSeconds</h3>
 <p>The duration of the call (in seconds). <code>Required</code> <code>Default(0)</code> <code>Filter(ge;le)</code></p>
 <p><em>Type</em>: <strong>int32</strong><br>

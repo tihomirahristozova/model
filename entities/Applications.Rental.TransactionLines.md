@@ -12,6 +12,8 @@ Default Display Text Format:
 _{RentTransaction.EntityName}_  
 Default Search Members:  
 _RentTransaction.EntityName_  
+Name Data Member:  
+_RentTransaction.EntityName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -25,6 +27,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [DisplayText](Applications.Rental.TransactionLines.md#displaytext) | string |  
 | [Id](Applications.Rental.TransactionLines.md#id) | guid |  
 | [Notes](Applications.Rental.TransactionLines.md#notes) | string (max) __nullable__ | Notes. 
 | [ObjectVersion](Applications.Rental.TransactionLines.md#objectversion) | int32 |  
@@ -42,6 +45,12 @@ Aggregate Root:
 
 
 ## Attribute Details
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

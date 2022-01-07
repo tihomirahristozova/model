@@ -12,6 +12,8 @@ Default Display Text Format:
 _{FolderName:T}_  
 Default Search Members:  
 _FolderName_  
+Name Data Member:  
+_FolderName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -25,6 +27,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [DisplayText](Applications.Mail.BoxFolders.md#displaytext) | string |  
 | [FolderName](Applications.Mail.BoxFolders.md#foldername) | [MultilanguageString](../data-types.md#multilanguagestring) | Multi-language folder name. `Required` `Filter(eq;like)` 
 | [Id](Applications.Mail.BoxFolders.md#id) | guid |  
 | [ObjectVersion](Applications.Mail.BoxFolders.md#objectversion) | int32 |  
@@ -47,6 +50,12 @@ Aggregate Root:
 
 
 ## Attribute Details
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### FolderName
 

@@ -86,7 +86,11 @@
 <p>Default Display Text Format:<br>
 <em>{PartyName:T}</em><br>
 Default Search Members:<br>
-<em>PartyCode; PartyName</em></p>
+<em>PartyCode; PartyName</em><br>
+Code Data Member:<br>
+<em>PartyCode</em><br>
+Name Data Member:<br>
+<em>PartyName</em></p>
 <h2 id="aggregate">Aggregate</h2>
 <p>An <a href="https://docs.erp.net/tech/advanced/concepts/aggregates.html">aggregate</a> is a cluster of domain objects that can be treated as a single unit.</p>
 <p>Aggregate Tree</p>
@@ -117,6 +121,11 @@ Default Search Members:<br>
 <td><a href="General.Contacts.CompanyLocations.html#billto">BillTo</a></td>
 <td><a href="General.Contacts.CompanyLocations.html#billto">BillTo</a> <strong>nullable</strong></td>
 <td>If filled indicates which party is billed for the amounts from documents that require payments. This setting is used in CRM module when the company and the location are customers. Possible values: 'C' = Company, 'L' = Company location, null = unidentified.</td>
+</tr>
+<tr>
+<td><a href="General.Contacts.CompanyLocations.html#displaytext">DisplayText</a></td>
+<td>string</td>
+<td></td>
 </tr>
 <tr>
 <td><a href="General.Contacts.CompanyLocations.html#gln">GLN</a></td>
@@ -310,6 +319,10 @@ Allowed values for the <code>BillTo</code>(General.Contacts.CompanyLocations.md#
 </table>
 <p><em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="displaytext">DisplayText</h3>
+<p><em>Type</em>: <strong>string</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****</p>
 <h3 id="gln">GLN</h3>
 <p>Global Location Number used by EDI systems. <code>Filter(multi eq)</code> <code>ORD</code> (Inherited from <a href="General.Contacts.Parties.html">Parties</a>)</p>
 <p><em>Type</em>: <strong>string (13) <strong>nullable</strong></strong><br>

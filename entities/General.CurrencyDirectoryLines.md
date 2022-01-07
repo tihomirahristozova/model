@@ -12,6 +12,8 @@ Default Display Text Format:
 _{CurrencyDirectory.Name}_  
 Default Search Members:  
 _CurrencyDirectory.Name_  
+Name Data Member:  
+_CurrencyDirectory.Name_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -25,6 +27,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [DisplayText](General.CurrencyDirectoryLines.md#displaytext) | string |  
 | [Id](General.CurrencyDirectoryLines.md#id) | guid |  
 | [ObjectVersion](General.CurrencyDirectoryLines.md#objectversion) | int32 |  
 | [RateDivisor](General.CurrencyDirectoryLines.md#ratedivisor) | decimal (18, 6) | The divisor for conversion from From_Currency to Directory.To_Currency. `Required` `Default(1)` 
@@ -39,6 +42,12 @@ Aggregate Root:
 
 
 ## Attribute Details
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

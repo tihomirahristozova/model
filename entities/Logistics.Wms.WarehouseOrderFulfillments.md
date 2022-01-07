@@ -9,7 +9,7 @@ Fulfillment of a warehouse order line. Entity: Wms_Warehouse_Order_Fulfillments 
 
 ## Default Visualization
 Default Display Text Format:  
-_{Id}: {ObjectVersion}_  
+_{Id}: {WarehouseOrderId}_  
 Default Search Members:  
 __  
 
@@ -24,6 +24,7 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [CreationTimeUtc](Logistics.Wms.WarehouseOrderFulfillments.md#creationtimeutc) | datetime | The exact time in UTC, when the fulfillment was created in the system. `Required` 
+| [DisplayText](Logistics.Wms.WarehouseOrderFulfillments.md#displaytext) | string |  
 | [Id](Logistics.Wms.WarehouseOrderFulfillments.md#id) | guid |  
 | [IsFinal](Logistics.Wms.WarehouseOrderFulfillments.md#isfinal) | boolean | Specifies whether this fulfillment will finalize the fulfillment of the order line, regardless of any remaining quantities. `Required` 
 | [ObjectVersion](Logistics.Wms.WarehouseOrderFulfillments.md#objectversion) | int32 |  
@@ -47,6 +48,12 @@ The exact time in UTC, when the fulfillment was created in the system. `Required
 _Type_: **datetime**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

@@ -12,6 +12,8 @@ Default Display Text Format:
 _{ManagedAssetType.Name:T}_  
 Default Search Members:  
 _ManagedAssetType.Name_  
+Name Data Member:  
+_ManagedAssetType.Name_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -25,6 +27,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [DisplayText](Applications.AssetManagement.ManagedAssetTypeTrackedParameters.md#displaytext) | string |  
 | [Id](Applications.AssetManagement.ManagedAssetTypeTrackedParameters.md#id) | guid |  
 | [Notes](Applications.AssetManagement.ManagedAssetTypeTrackedParameters.md#notes) | string (max) __nullable__ | Notes for this ManagedAssetType<br />TrackedParameter. 
 | [ObjectVersion](Applications.AssetManagement.ManagedAssetTypeTrackedParameters.md#objectversion) | int32 |  
@@ -38,6 +41,12 @@ Aggregate Root:
 
 
 ## Attribute Details
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

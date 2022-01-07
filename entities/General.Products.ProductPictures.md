@@ -12,6 +12,8 @@ Default Display Text Format:
 _{Product.Name:T}_  
 Default Search Members:  
 _Product.Name_  
+Name Data Member:  
+_Product.Name_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -26,6 +28,7 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Comments](General.Products.ProductPictures.md#comments) | string (254) __nullable__ | Comments for this ProductPicture. 
+| [DisplayText](General.Products.ProductPictures.md#displaytext) | string |  
 | [Id](General.Products.ProductPictures.md#id) | guid |  
 | [IsDefault](General.Products.ProductPictures.md#isdefault) | boolean | True=This is the default picture for the product and the size class; false=otherwise. `Required` `Default(false)` `Filter(eq)` 
 | [LastUpdateTime](General.Products.ProductPictures.md#lastupdatetime) | datetime __nullable__ | The exact server time, when the picture was last updated. Set automatically. `Filter(ge;le)` `ReadOnly` 
@@ -51,6 +54,12 @@ _Type_: **string (254) __nullable__**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

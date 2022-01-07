@@ -12,6 +12,8 @@ Default Display Text Format:
 _{Name}_  
 Default Search Members:  
 _Name_  
+Name Data Member:  
+_Name_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -25,6 +27,7 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Caption](Systems.Bpm.CalculatedAttributes.md#caption) | [MultilanguageString](../data-types.md#multilanguagestring) | The multi-language caption, used to display the attribute. `Required` 
+| [DisplayText](Systems.Bpm.CalculatedAttributes.md#displaytext) | string |  
 | [Hint](Systems.Bpm.CalculatedAttributes.md#hint) | [MultilanguageString](../data-types.md#multilanguagestring) __nullable__ | The hint, which is displayed alongside the attribute. `Filter(multi eq;like)` `Introduced in version 21.1.3.53` 
 | [Id](Systems.Bpm.CalculatedAttributes.md#id) | guid |  
 | [IsActive](Systems.Bpm.CalculatedAttributes.md#isactive) | boolean | True if the attribute is activated and added to the repository. `Required` `Default(false)` 
@@ -50,6 +53,12 @@ The multi-language caption, used to display the attribute. `Required`
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Hint
 

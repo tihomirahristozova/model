@@ -12,6 +12,8 @@ Default Display Text Format:
 _{Party.PartyName:T}_  
 Default Search Members:  
 _Party.PartyName_  
+Name Data Member:  
+_Party.PartyName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -26,6 +28,7 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [ApplicableLegislation](General.PartyApplicableLegislations.md#applicablelegislation) | [ApplicableLegislation](General.PartyApplicableLegislations.md#applicablelegislation) | A legislation, which applies to the specified party. The list of legislations is system defined, and contains legislations for which system rules are currently defined. For example: US, UK, EU, DE, FR, ES, IT, BG, MK, RO, GR, etc. `Required` `Filter(multi eq)` `ORD` 
+| [DisplayText](General.PartyApplicableLegislations.md#displaytext) | string |  
 | [Id](General.PartyApplicableLegislations.md#id) | guid |  
 | [Notes](General.PartyApplicableLegislations.md#notes) | string (254) __nullable__ | Notes for this PartyApplicableLegislation. `Filter(like)` 
 | [ObjectVersion](General.PartyApplicableLegislations.md#objectversion) | int32 |  
@@ -77,6 +80,12 @@ _Allowed Values (General.PartyApplicableLegislationsRepository.ApplicableLegisla
 
 _Supported Filters_: **Equals, EqualsIn**  
 _Supports Order By_: **True**  
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

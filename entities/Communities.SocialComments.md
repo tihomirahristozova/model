@@ -9,7 +9,7 @@ User comment to any object in the system. Entity: Cmm_Social_Comments (Introduce
 
 ## Default Visualization
 Default Display Text Format:  
-_{Id}: {ObjectVersion}_  
+_{Id}: {DataObjectId}_  
 Default Search Members:  
 __  
 
@@ -25,6 +25,7 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [CommentText](Communities.SocialComments.md#commenttext) | string (max) | The comment contents in clear text. `Required` 
 | [CreationTimeUtc](Communities.SocialComments.md#creationtimeutc) | datetime | The exact server time (in UTC), when the comment was created. `Required` `ORD` 
+| [DisplayText](Communities.SocialComments.md#displaytext) | string |  
 | [Id](Communities.SocialComments.md#id) | guid |  
 | [ObjectVersion](Communities.SocialComments.md#objectversion) | int32 |  
 
@@ -56,6 +57,12 @@ _Type_: **datetime**
 _Indexed_: **True**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **True**  
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

@@ -85,7 +85,11 @@
 <p>Default Display Text Format:<br>
 <em>{CompanyName}</em><br>
 Default Search Members:<br>
-<em>PhoneNumber; CompanyName</em></p>
+<em>PhoneNumber; CompanyName</em><br>
+Code Data Member:<br>
+<em>PhoneNumber</em><br>
+Name Data Member:<br>
+<em>CompanyName</em></p>
 <h2 id="aggregate">Aggregate</h2>
 <p>An <a href="https://docs.erp.net/tech/advanced/concepts/aggregates.html">aggregate</a> is a cluster of domain objects that can be treated as a single unit.</p>
 <p>Aggregate Tree</p>
@@ -136,6 +140,11 @@ Default Search Members:<br>
 <td><a href="Systems.External.PublicUsers.html#createdon">CreatedOn</a></td>
 <td>datetime <strong>nullable</strong></td>
 <td>The date and time when the user was created. <code>Default(Now)</code></td>
+</tr>
+<tr>
+<td><a href="Systems.External.PublicUsers.html#displaytext">DisplayText</a></td>
+<td>string</td>
+<td></td>
 </tr>
 <tr>
 <td><a href="Systems.External.PublicUsers.html#email">Email</a></td>
@@ -284,6 +293,10 @@ Default Search Members:<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>CurrentDateTime</strong></p>
+<h3 id="displaytext">DisplayText</h3>
+<p><em>Type</em>: <strong>string</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****</p>
 <h3 id="email">Email</h3>
 <p>The primary email of the user. Used for notifications and password restore. <code>Required</code> <code>Filter(like)</code></p>
 <p><em>Type</em>: <strong>string (64)</strong><br>

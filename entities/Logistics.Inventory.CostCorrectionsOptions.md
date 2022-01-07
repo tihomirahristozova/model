@@ -9,7 +9,7 @@ Options per document type for the cost corrections. Entity: Inv_Cost_Corrections
 
 ## Default Visualization
 Default Display Text Format:  
-_{Id}: {ObjectVersion}_  
+_{Id}: {DocumentTypeId}_  
 Default Search Members:  
 __  
 
@@ -23,6 +23,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [DisplayText](Logistics.Inventory.CostCorrectionsOptions.md#displaytext) | string |  
 | [Id](Logistics.Inventory.CostCorrectionsOptions.md#id) | guid |  
 | [ObjectVersion](Logistics.Inventory.CostCorrectionsOptions.md#objectversion) | int32 |  
 | [ResetTransactions<br />StateOnReleasing](Logistics.Inventory.CostCorrectionsOptions.md#resettransactionsstateonreleasing) | boolean | When true, the stock transactions state are re-set when the cost correction is released. The idea is to notify these documents, so that they have chance to re-generate their sub-documents. `Required` `Default(false)` `Filter(eq)` 
@@ -36,6 +37,12 @@ Aggregate Tree
 
 
 ## Attribute Details
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

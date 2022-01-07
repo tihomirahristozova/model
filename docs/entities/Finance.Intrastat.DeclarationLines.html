@@ -85,6 +85,8 @@
 <p>Default Display Text Format:<br>
 <em>{IntrastatDeclaration.EntityName}</em><br>
 Default Search Members:<br>
+<em>IntrastatDeclaration.EntityName</em><br>
+Name Data Member:<br>
 <em>IntrastatDeclaration.EntityName</em></p>
 <h2 id="aggregate">Aggregate</h2>
 <p>An <a href="https://docs.erp.net/tech/advanced/concepts/aggregates.html">aggregate</a> is a cluster of domain objects that can be treated as a single unit.</p>
@@ -106,6 +108,11 @@ Aggregate Root:<br>
 <td><a href="Finance.Intrastat.DeclarationLines.html#deliveryterms">DeliveryTerms</a></td>
 <td><a href="Finance.Intrastat.DeclarationLines.html#deliveryterms">DeliveryTerms</a></td>
 <td>Delivery terms - classification according to Intrastat (which uses the common abbreviations). <code>Required</code></td>
+</tr>
+<tr>
+<td><a href="Finance.Intrastat.DeclarationLines.html#displaytext">DisplayText</a></td>
+<td>string</td>
+<td></td>
 </tr>
 <tr>
 <td><a href="Finance.Intrastat.DeclarationLines.html#id">Id</a></td>
@@ -267,6 +274,10 @@ Allowed values for the <code>DeliveryTerms</code>(Finance.Intrastat.DeclarationL
 </table>
 <p><em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="displaytext">DisplayText</h3>
+<p><em>Type</em>: <strong>string</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****</p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>

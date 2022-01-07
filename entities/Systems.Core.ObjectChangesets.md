@@ -12,6 +12,8 @@ Default Display Text Format:
 _{ApplicationName}_  
 Default Search Members:  
 _ApplicationName_  
+Name Data Member:  
+_ApplicationName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -26,6 +28,7 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [ApplicationName](Systems.Core.ObjectChangesets.md#applicationname) | string (max) __nullable__ | The application which requested the change. null when it is unknown. `Filter(eq)` 
+| [DisplayText](Systems.Core.ObjectChangesets.md#displaytext) | string |  
 | [Id](Systems.Core.ObjectChangesets.md#id) | guid |  
 | [ObjectVersion](Systems.Core.ObjectChangesets.md#objectversion) | int32 |  
 | [ServerVersion](Systems.Core.ObjectChangesets.md#serverversion) | string (16) | The version of the application server at the time of the change. `Required` 
@@ -54,6 +57,12 @@ _Type_: **string (max) __nullable__**
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

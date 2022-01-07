@@ -9,7 +9,7 @@ Contains user requests for application of user rights. Entity: Pdm_Data_Subject_
 
 ## Default Visualization
 Default Display Text Format:  
-_{Id}: {ObjectVersion}_  
+_{Id}: {EnterpriseCompanyId}_  
 Default Search Members:  
 __  
 
@@ -25,6 +25,7 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [CompletedOnUtc](Applications.PersonalData.DataSubjectRightRequests.md#completedonutc) | datetime __nullable__ | Date and time (in UTC), when the requested right was implemented by the responsible entity. Null if the request is still not implemented. 
 | [CreatedOnUtc](Applications.PersonalData.DataSubjectRightRequests.md#createdonutc) | datetime | The date and time (in UTC), when the request was created. `Required` `Default(Now)` 
+| [DisplayText](Applications.PersonalData.DataSubjectRightRequests.md#displaytext) | string |  
 | [Id](Applications.PersonalData.DataSubjectRightRequests.md#id) | guid |  
 | [Notes](Applications.PersonalData.DataSubjectRightRequests.md#notes) | string (max) __nullable__ | This should usually contain detailed implementation notes. 
 | [ObjectVersion](Applications.PersonalData.DataSubjectRightRequests.md#objectversion) | int32 |  
@@ -59,6 +60,12 @@ _Type_: **datetime**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **CurrentDateTime**  
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

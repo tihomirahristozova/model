@@ -83,7 +83,7 @@
 <p>Provides rules to conditionally secure new documents. Entity: Gen_Document_Type_Security_Conditions</p>
 <h2 id="default-visualization">Default Visualization</h2>
 <p>Default Display Text Format:<br>
-<em>{Id}: {ObjectVersion}</em><br>
+<em>{Id}: {DocumentTypeId}</em><br>
 Default Search Members:<br>
 __</p>
 <h2 id="aggregate">Aggregate</h2>
@@ -111,6 +111,11 @@ __</p>
 <td><a href="General.DocumentTypeSecurityConditions.html#description">Description</a></td>
 <td>string (254)</td>
 <td>The description of this DocumentTypeSecurity<br>Condition. <code>Required</code> <code>Filter(eq;like)</code></td>
+</tr>
+<tr>
+<td><a href="General.DocumentTypeSecurityConditions.html#displaytext">DisplayText</a></td>
+<td>string</td>
+<td></td>
 </tr>
 <tr>
 <td><a href="General.DocumentTypeSecurityConditions.html#id">Id</a></td>
@@ -163,6 +168,10 @@ __</p>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>254</strong></p>
+<h3 id="displaytext">DisplayText</h3>
+<p><em>Type</em>: <strong>string</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****</p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>

@@ -9,7 +9,7 @@ Forecast items form demand in MRP calculations. Entity: Crm_Forecast_Items
 
 ## Default Visualization
 Default Display Text Format:  
-_{Id}: {ObjectVersion}_  
+_{Id}: {QuantityValue}_  
 Default Search Members:  
 __  
 
@@ -24,6 +24,7 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Date](Crm.Marketing.ForecastItems.md#date) | datetime | The date for which the sales is forecasted. When forecasting for a period, this contains the first date of the period. `Required` `Filter(ge;le)` 
+| [DisplayText](Crm.Marketing.ForecastItems.md#displaytext) | string |  
 | [Id](Crm.Marketing.ForecastItems.md#id) | guid |  
 | [ObjectVersion](Crm.Marketing.ForecastItems.md#objectversion) | int32 |  
 | [Quantity](Crm.Marketing.ForecastItems.md#quantity) | [Quantity (18, 3)](../data-types.md#quantity) | The forecasted sales quantity in the base measurement category of the product. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Default(0)` `Filter(ge;le)` 
@@ -49,6 +50,12 @@ The date for which the sales is forecasted. When forecasting for a period, this 
 _Type_: **datetime**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

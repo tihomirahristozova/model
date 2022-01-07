@@ -12,6 +12,8 @@ Default Display Text Format:
 _{DepreciationPlanLine.DepreciationPlan.EntityName}_  
 Default Search Members:  
 _DepreciationPlanLine.DepreciationPlan.EntityName_  
+Name Data Member:  
+_DepreciationPlanLine.DepreciationPlan.EntityName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -26,6 +28,7 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [DepreciationValue](Finance.Assets.DepreciationPlanLineFixedValues.md#depreciationvalue) | [Amount (14, 2)](../data-types.md#amount) | Fixed depreciation value for the period specified by Fixed_Value_Period_Month and Fixed_Value_Period_Year. `Currency: DepreciationPlanLine.Asset.ValuationCurrency` `Required` `Default(0)` 
+| [DisplayText](Finance.Assets.DepreciationPlanLineFixedValues.md#displaytext) | string |  
 | [FixedValuePeriodMonth](Finance.Assets.DepreciationPlanLineFixedValues.md#fixedvalueperiodmonth) | byte | Month of the period for which the depreciation value is fixed. `Required` 
 | [FixedValuePeriodYear](Finance.Assets.DepreciationPlanLineFixedValues.md#fixedvalueperiodyear) | int16 | Year of the period for which the depreciation value is fixed. `Required` 
 | [Id](Finance.Assets.DepreciationPlanLineFixedValues.md#id) | guid |  
@@ -48,6 +51,12 @@ _Type_: **[Amount (14, 2)](../data-types.md#amount)**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### FixedValuePeriodMonth
 

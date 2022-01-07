@@ -12,6 +12,8 @@ Default Display Text Format:
 _{AttributeName}_  
 Default Search Members:  
 _AttributeName_  
+Name Data Member:  
+_AttributeName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -28,6 +30,7 @@ Aggregate Root:
 | [AttributeName](Systems.Bpm.UserBusinessRuleConditions.md#attributename) | string (64) | The attribute, which will be tested. `Required` 
 | [ComparisonType](Systems.Bpm.UserBusinessRuleConditions.md#comparisontype) | [ComparisonType](Systems.Bpm.UserBusinessRuleConditions.md#comparisontype) | How to compare the attribute and the value of the condition - e.g. Attribute-Comparison-Value. `Required` `Default("Equals")` 
 | [ConditionNo](Systems.Bpm.UserBusinessRuleConditions.md#conditionno) | int32 | Unique consecutive number of the condition within the business rule. `Required` 
+| [DisplayText](Systems.Bpm.UserBusinessRuleConditions.md#displaytext) | string |  
 | [Id](Systems.Bpm.UserBusinessRuleConditions.md#id) | guid |  
 | [Notes](Systems.Bpm.UserBusinessRuleConditions.md#notes) | string (max) __nullable__ | Notes for this UserBusinessRuleCondition. `Introduced in version 20.1` 
 | [ObjectVersion](Systems.Bpm.UserBusinessRuleConditions.md#objectversion) | int32 |  
@@ -85,6 +88,12 @@ _Back-End Default Expression:_
 
 _Front-End Recalc Expressions:_  
 `( obj.UserBusinessRule.Conditions.Select( c => c.ConditionNo).DefaultIfEmpty( 0).Max( ) + 10)`
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+
 ### Id
 
 _Type_: **guid**  

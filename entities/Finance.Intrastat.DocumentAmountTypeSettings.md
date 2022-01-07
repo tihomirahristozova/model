@@ -12,6 +12,8 @@ Default Display Text Format:
 _{DocumentAmountType.AmountTypeName:T}_  
 Default Search Members:  
 _DocumentAmountType.AmountTypeName_  
+Name Data Member:  
+_DocumentAmountType.AmountTypeName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -27,6 +29,7 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [AddToInvoicedValue](Finance.Intrastat.DocumentAmountTypeSettings.md#addtoinvoicedvalue) | boolean | True= to add the amount to the invoiced value, false=otherwise. `Required` `Default(false)` 
 | [AddToStatisticalValue](Finance.Intrastat.DocumentAmountTypeSettings.md#addtostatisticalvalue) | boolean | True= to add the amount to the statistical value, false=otherwise. `Required` `Default(false)` 
+| [DisplayText](Finance.Intrastat.DocumentAmountTypeSettings.md#displaytext) | string |  
 | [Id](Finance.Intrastat.DocumentAmountTypeSettings.md#id) | guid |  
 | [ObjectVersion](Finance.Intrastat.DocumentAmountTypeSettings.md#objectversion) | int32 |  
 
@@ -57,6 +60,12 @@ _Type_: **boolean**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **False**  
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

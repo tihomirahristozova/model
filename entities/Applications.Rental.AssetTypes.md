@@ -12,6 +12,8 @@ Default Display Text Format:
 _{RentalAssetTypeName}_  
 Default Search Members:  
 _RentalAssetTypeName_  
+Name Data Member:  
+_RentalAssetTypeName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -25,6 +27,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [DisplayText](Applications.Rental.AssetTypes.md#displaytext) | string |  
 | [Id](Applications.Rental.AssetTypes.md#id) | guid |  
 | [Notes](Applications.Rental.AssetTypes.md#notes) | string (max) __nullable__ | Notes for this AssetType. `Filter(like)` 
 | [ObjectVersion](Applications.Rental.AssetTypes.md#objectversion) | int32 |  
@@ -39,6 +42,12 @@ Aggregate Tree
 
 
 ## Attribute Details
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

@@ -12,6 +12,8 @@ Default Display Text Format:
 _{OutputOrderLine.OutputOrder.EntityName}_  
 Default Search Members:  
 _OutputOrderLine.OutputOrder.EntityName_  
+Name Data Member:  
+_OutputOrderLine.OutputOrder.EntityName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -27,6 +29,7 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [ConsumedCost](Production.ShopFloor.OutputOrderDistributedMaterialConsumptions.md#consumedcost) | [Amount (14, 2)](../data-types.md#amount) | Cost of the actually issued Consumed_Quantity. `Currency: ConsumptionOrderLine.GetIssueCurrency()` `Required` `Default(0)` `ReadOnly` 
 | [ConsumedQuantity](Production.ShopFloor.OutputOrderDistributedMaterialConsumptions.md#consumedquantity) | [Quantity (18, 3)](../data-types.md#quantity) | Part of the quantity in the consumption order line which was used for the product in the output order line. `Unit: ConsumptionOrderLine.ConsumedQuantityUnit` `Required` `Default(0)` `ReadOnly` 
+| [DisplayText](Production.ShopFloor.OutputOrderDistributedMaterialConsumptions.md#displaytext) | string |  
 | [Id](Production.ShopFloor.OutputOrderDistributedMaterialConsumptions.md#id) | guid |  
 | [ObjectVersion](Production.ShopFloor.OutputOrderDistributedMaterialConsumptions.md#objectversion) | int32 |  
 
@@ -57,6 +60,12 @@ _Type_: **[Quantity (18, 3)](../data-types.md#quantity)**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

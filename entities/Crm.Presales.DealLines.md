@@ -12,6 +12,8 @@ Default Display Text Format:
 _{Deal.EntityName}_  
 Default Search Members:  
 _Deal.EntityName_  
+Name Data Member:  
+_Deal.EntityName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -25,6 +27,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [DisplayText](Crm.Presales.DealLines.md#displaytext) | string |  
 | [Id](Crm.Presales.DealLines.md#id) | guid |  
 | [LineNo](Crm.Presales.DealLines.md#lineno) | int32 | Consecutive number of the line within the deal. `Required` `Filter(eq)` 
 | [Notes](Crm.Presales.DealLines.md#notes) | string (max) __nullable__ | Notes. 
@@ -41,6 +44,12 @@ Aggregate Root:
 
 
 ## Attribute Details
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

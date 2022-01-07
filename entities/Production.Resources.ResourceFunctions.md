@@ -12,6 +12,8 @@ Default Display Text Format:
 _{Resource.Name}_  
 Default Search Members:  
 _Resource.Name_  
+Name Data Member:  
+_Resource.Name_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -25,6 +27,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [DisplayText](Production.Resources.ResourceFunctions.md#displaytext) | string |  
 | [Id](Production.Resources.ResourceFunctions.md#id) | guid |  
 | [Notes](Production.Resources.ResourceFunctions.md#notes) | string (254) __nullable__ | User notes on the resource function. 
 | [ObjectVersion](Production.Resources.ResourceFunctions.md#objectversion) | int32 |  
@@ -38,6 +41,12 @@ Aggregate Root:
 
 
 ## Attribute Details
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

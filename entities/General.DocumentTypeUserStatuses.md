@@ -12,6 +12,8 @@ Default Display Text Format:
 _{UserStatusName}_  
 Default Search Members:  
 _UserStatusName_  
+Name Data Member:  
+_UserStatusName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -27,6 +29,7 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [Active](General.DocumentTypeUserStatuses.md#active) | boolean | Is the user status active for applying to documents. `Required` `Default(true)` `Filter(eq)` 
 | [DisplayOrder](General.DocumentTypeUserStatuses.md#displayorder) | int32 | Consecutive display order of the status, with regard to other statuses within the same document type. `Required` `Filter(ge;le)` 
+| [DisplayText](General.DocumentTypeUserStatuses.md#displaytext) | string |  
 | [Id](General.DocumentTypeUserStatuses.md#id) | guid |  
 | [Instructions](General.DocumentTypeUserStatuses.md#instructions) | string (max) __nullable__ | Instructions what should be done when this user status is active (Rich Text). 
 | [IsExitStatus](General.DocumentTypeUserStatuses.md#isexitstatus) | boolean | True when the status allows going to the next system status, false otherwise. For example for system status Firm Planned, only user status Approved might allow going to Released. `Required` `Default(true)` `Filter(eq)` 
@@ -65,6 +68,12 @@ _Back-End Default Expression:_
 
 _Front-End Recalc Expressions:_  
 `( obj.DocumentType.UserStatuses.Select( c => c.DisplayOrder).DefaultIfEmpty( 0).Max( ) + 10)`
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
+
 ### Id
 
 _Type_: **guid**  

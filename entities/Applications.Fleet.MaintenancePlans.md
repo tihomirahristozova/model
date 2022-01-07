@@ -12,6 +12,10 @@ Default Display Text Format:
 _{Name}_  
 Default Search Members:  
 _Code; Name_  
+Code Data Member:  
+_Code_  
+Name Data Member:  
+_Name_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -26,6 +30,7 @@ Aggregate Tree
 | [CheckDays](Applications.Fleet.MaintenancePlans.md#checkdays) | int32 __nullable__ | When not null, specifies the number of days between maintenances. 
 | [CheckMonths](Applications.Fleet.MaintenancePlans.md#checkmonths) | int32 __nullable__ | When not null, specifies the number of months between maintenances. 
 | [Code](Applications.Fleet.MaintenancePlans.md#code) | string (16) | The unique code of the MaintenancePlan. `Required` 
+| [DisplayText](Applications.Fleet.MaintenancePlans.md#displaytext) | string |  
 | [Id](Applications.Fleet.MaintenancePlans.md#id) | guid |  
 | [IsActive](Applications.Fleet.MaintenancePlans.md#isactive) | boolean | True if the plan is active and can be selected from drop-downs. `Required` `Default(true)` `Introduced in version 18.2` 
 | [MileageKm](Applications.Fleet.MaintenancePlans.md#mileagekm) | int32 __nullable__ | When not null, specifies the number of kilometers that must have passed since the last maintenance, for the next maintenance to occur. 
@@ -61,6 +66,12 @@ _Type_: **string (16)**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **16**  
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

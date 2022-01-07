@@ -12,6 +12,8 @@ Default Display Text Format:
 _{TemplateLine.AmountColumnName}_  
 Default Search Members:  
 _TemplateLine.AmountColumnName_  
+Name Data Member:  
+_TemplateLine.AmountColumnName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -26,6 +28,7 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [ConstantValueId](Finance.Accounting.TemplateLineProperties.md#constantvalueid) | guid __nullable__ | The internal Id of a property value, selected as constant value. Applicable only when Property Value Source Type = Constant. `Filter(multi eq)` 
+| [DisplayText](Finance.Accounting.TemplateLineProperties.md#displaytext) | string |  
 | [Id](Finance.Accounting.TemplateLineProperties.md#id) | guid |  
 | [IsDebit](Finance.Accounting.TemplateLineProperties.md#isdebit) | boolean | If Is_Debit=true then this property is for the debit account in the template line for which is this record. If Is_Debit=false then the property is for the credit account. `Required` `Default(true)` `Filter(eq)` 
 | [ObjectVersion](Finance.Accounting.TemplateLineProperties.md#objectversion) | int32 |  
@@ -50,6 +53,12 @@ The internal Id of a property value, selected as constant value. Applicable only
 
 _Type_: **guid __nullable__**  
 _Supported Filters_: **Equals, EqualsIn**  
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

@@ -12,6 +12,8 @@ Default Display Text Format:
 _{Voucher.EntityName}_  
 Default Search Members:  
 _Voucher.EntityName_  
+Name Data Member:  
+_Voucher.EntityName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -30,6 +32,7 @@ Aggregate Root:
 | [CreditVoucherLineId](Finance.Accounting.VoucherCorrespondances.md#creditvoucherlineid) | guid | Obsolete. Not used. (The voucher line which contains the credited account). `Required` `Filter(multi eq)` 
 | [DebitAmount](Finance.Accounting.VoucherCorrespondances.md#debitamount) | decimal (18, 2) | Obsolete. Not used. `Required` `Default(0)` 
 | [DebitVoucherLineId](Finance.Accounting.VoucherCorrespondances.md#debitvoucherlineid) | guid | Obsolete. Not used. (The voucher line which contains the debited account). `Required` `Filter(multi eq)` 
+| [DisplayText](Finance.Accounting.VoucherCorrespondances.md#displaytext) | string |  
 | [Id](Finance.Accounting.VoucherCorrespondances.md#id) | guid |  
 | [ObjectVersion](Finance.Accounting.VoucherCorrespondances.md#objectversion) | int32 |  
 
@@ -82,6 +85,12 @@ Obsolete. Not used. (The voucher line which contains the debited account). `Requ
 
 _Type_: **guid**  
 _Supported Filters_: **Equals, EqualsIn**  
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

@@ -85,6 +85,8 @@
 <p>Default Display Text Format:<br>
 <em>{UserStatusName}</em><br>
 Default Search Members:<br>
+<em>UserStatusName</em><br>
+Name Data Member:<br>
 <em>UserStatusName</em></p>
 <h2 id="aggregate">Aggregate</h2>
 <p>An <a href="https://docs.erp.net/tech/advanced/concepts/aggregates.html">aggregate</a> is a cluster of domain objects that can be treated as a single unit.</p>
@@ -111,6 +113,11 @@ Aggregate Root:<br>
 <td><a href="General.DocumentTypeUserStatuses.html#displayorder">DisplayOrder</a></td>
 <td>int32</td>
 <td>Consecutive display order of the status, with regard to other statuses within the same document type. <code>Required</code> <code>Filter(ge;le)</code></td>
+</tr>
+<tr>
+<td><a href="General.DocumentTypeUserStatuses.html#displaytext">DisplayText</a></td>
+<td>string</td>
+<td></td>
 </tr>
 <tr>
 <td><a href="General.DocumentTypeUserStatuses.html#id">Id</a></td>
@@ -177,6 +184,10 @@ Aggregate Root:<br>
 <code>( obj.DocumentType.UserStatuses.Select( c =&gt; c.DisplayOrder).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>( obj.DocumentType.UserStatuses.Select( c =&gt; c.DisplayOrder).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
+<h3 id="displaytext">DisplayText</h3>
+<p><em>Type</em>: <strong>string</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****</p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>

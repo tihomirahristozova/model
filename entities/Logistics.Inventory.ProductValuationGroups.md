@@ -12,6 +12,10 @@ Default Display Text Format:
 _{ValuationGroupName:T}_  
 Default Search Members:  
 _ValuationGroupCode; ValuationGroupName_  
+Code Data Member:  
+_ValuationGroupCode_  
+Name Data Member:  
+_ValuationGroupName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -24,6 +28,7 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Description](Logistics.Inventory.ProductValuationGroups.md#description) | string (254) __nullable__ | The description of this ProductValuationGroup. `Filter(like)` 
+| [DisplayText](Logistics.Inventory.ProductValuationGroups.md#displaytext) | string |  
 | [Id](Logistics.Inventory.ProductValuationGroups.md#id) | guid |  
 | [ObjectVersion](Logistics.Inventory.ProductValuationGroups.md#objectversion) | int32 |  
 | [ValuationGroupCode](Logistics.Inventory.ProductValuationGroups.md#valuationgroupcode) | string (64) | The unique code of the product valuation group. `Required` `Filter(eq;like)` `ORD` 
@@ -40,6 +45,12 @@ _Type_: **string (254) __nullable__**
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

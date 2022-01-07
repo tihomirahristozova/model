@@ -12,6 +12,8 @@ Default Display Text Format:
 _{Route.ProcedureName}_  
 Default Search Members:  
 _Route.ProcedureName_  
+Name Data Member:  
+_Route.ProcedureName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -27,6 +29,7 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [CreateForInvoicedAmounts](Crm.Sales.SalesOrderPaymentOrdersTemplates.md#createforinvoicedamounts) | boolean | True to add to the payment order, the part of the amount of the sales order, which is invoiced. `Required` 
 | [CreateForNotInvoiced<br />Amounts](Crm.Sales.SalesOrderPaymentOrdersTemplates.md#createfornotinvoicedamounts) | boolean | True to add to the payment order, the part of the amount of the sales order, which is not included in any invoice. `Required` 
+| [DisplayText](Crm.Sales.SalesOrderPaymentOrdersTemplates.md#displaytext) | string |  
 | [Id](Crm.Sales.SalesOrderPaymentOrdersTemplates.md#id) | guid |  
 | [IsAmountWithVAT](Crm.Sales.SalesOrderPaymentOrdersTemplates.md#isamountwithvat) | boolean | True to indicate that the parent document includes VAT and the generated the payment order should be with Is Amount With VAT = true. This setting DOES NOT affect whether the generated amount should include VAT or not, it simply sets the flag in the generated order. `Required` 
 | [ObjectVersion](Crm.Sales.SalesOrderPaymentOrdersTemplates.md#objectversion) | int32 |  
@@ -56,6 +59,12 @@ True to add to the payment order, the part of the amount of the sales order, whi
 _Type_: **boolean**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

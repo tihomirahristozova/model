@@ -12,6 +12,8 @@ Default Display Text Format:
 _{AssetCategory.Name}_  
 Default Search Members:  
 _AssetCategory.Name_  
+Name Data Member:  
+_AssetCategory.Name_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -26,6 +28,7 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [AssetLife](Finance.Assets.DepreciationPlanTemplates.md#assetlife) | int32 __nullable__ | Asset life in months by default for the depreciation plans created by this template. null means that the asset is booked for this valuation model but is not depreciated in it (i.e. no depreciation plan is created). 
+| [DisplayText](Finance.Assets.DepreciationPlanTemplates.md#displaytext) | string |  
 | [Id](Finance.Assets.DepreciationPlanTemplates.md#id) | guid |  
 | [ObjectVersion](Finance.Assets.DepreciationPlanTemplates.md#objectversion) | int32 |  
 
@@ -47,6 +50,12 @@ Asset life in months by default for the depreciation plans created by this templ
 _Type_: **int32 __nullable__**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

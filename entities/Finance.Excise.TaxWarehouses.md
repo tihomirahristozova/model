@@ -12,6 +12,10 @@ Default Display Text Format:
 _{Name:T}_  
 Default Search Members:  
 _TaxWarehouseExciseNumber; Name_  
+Code Data Member:  
+_TaxWarehouseExciseNumber_  
+Name Data Member:  
+_Name_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -24,6 +28,7 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [CustomsOffice](Finance.Excise.TaxWarehouses.md#customsoffice) | string (32) __nullable__ | The customs office to which the warehouse is headed. `Filter(like)` `Introduced in version 22.1.4.93` 
+| [DisplayText](Finance.Excise.TaxWarehouses.md#displaytext) | string |  
 | [Id](Finance.Excise.TaxWarehouses.md#id) | guid |  
 | [Name](Finance.Excise.TaxWarehouses.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Tax Warehouse Name (Multilanguage). `Required` `Filter(like)` `Introduced in version 21.1.3.93` 
 | [ObjectVersion](Finance.Excise.TaxWarehouses.md#objectversion) | int32 |  
@@ -47,6 +52,12 @@ _Type_: **string (32) __nullable__**
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **32**  
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

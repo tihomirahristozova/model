@@ -12,6 +12,8 @@ Default Display Text Format:
 _{AssetOrder.EntityName}_  
 Default Search Members:  
 _AssetOrder.EntityName_  
+Name Data Member:  
+_AssetOrder.EntityName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -26,6 +28,7 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [AssetValue](Finance.Assets.AssetOrderLines.md#assetvalue) | [Amount (14, 2)](../data-types.md#amount) | Value of the acquired or retired asset. `Currency: AssetValueCurrency` `Required` `Default(0)` 
+| [DisplayText](Finance.Assets.AssetOrderLines.md#displaytext) | string |  
 | [Id](Finance.Assets.AssetOrderLines.md#id) | guid |  
 | [ObjectVersion](Finance.Assets.AssetOrderLines.md#objectversion) | int32 |  
 | [ParentLineNo](Finance.Assets.AssetOrderLines.md#parentlineno) | int32 __nullable__ | The number of the line within the parent document, which the current line executes. null when the current line does not execute line. `Introduced in version 18.2` 
@@ -52,6 +55,12 @@ _Type_: **[Amount (14, 2)](../data-types.md#amount)**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

@@ -12,6 +12,8 @@ Default Display Text Format:
 _{ProjectTemplate.ProjectTemplateName}_  
 Default Search Members:  
 _ProjectTemplate.ProjectTemplateName_  
+Name Data Member:  
+_ProjectTemplate.ProjectTemplateName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -25,6 +27,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [DisplayText](Projects.TemplateWorkElements.md#displaytext) | string |  
 | [Id](Projects.TemplateWorkElements.md#id) | guid |  
 | [ObjectVersion](Projects.TemplateWorkElements.md#objectversion) | int32 |  
 
@@ -37,6 +40,12 @@ Aggregate Root:
 
 
 ## Attribute Details
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

@@ -12,6 +12,8 @@ Default Display Text Format:
 _{BulkPaymentOrder.EntityName}_  
 Default Search Members:  
 _BulkPaymentOrder.EntityName_  
+Name Data Member:  
+_BulkPaymentOrder.EntityName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -27,6 +29,7 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [BillTo](Finance.Payments.BulkPaymentOrderLines.md#billto) | [BillTo](Finance.Payments.BulkPaymentOrderLines.md#billto) __nullable__ | If filled indicates which party is billed for the total amount. Possible values: 'C' = Company (means the Party_Id), 'L' = Company location (the Location_Party_Id), null = unidentified. 
 | [Direction](Finance.Payments.BulkPaymentOrderLines.md#direction) | [Direction](Finance.Payments.BulkPaymentOrderLines.md#direction) | I for Payment issue, R for payment receipt. `Required` `Default("I")` `Filter(eq)` 
+| [DisplayText](Finance.Payments.BulkPaymentOrderLines.md#displaytext) | string |  
 | [DueDate](Finance.Payments.BulkPaymentOrderLines.md#duedate) | datetime __nullable__ | The due date of the payment. null means there is no due date. `Filter(ge;le)` 
 | [Id](Finance.Payments.BulkPaymentOrderLines.md#id) | guid |  
 | [InstallmentNumber](Finance.Payments.BulkPaymentOrderLines.md#installmentnumber) | int32 __nullable__ | Consequtive installment number. Used for identifying the payment when using payment plans. null means that the payment is not part of a payment plan. 
@@ -90,6 +93,12 @@ _Allowed Values (Finance.Payments.BulkPaymentOrderLinesRepository.Direction Enum
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **Expense**  
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### DueDate
 

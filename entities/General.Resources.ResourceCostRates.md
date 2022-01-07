@@ -12,6 +12,8 @@ Default Display Text Format:
 _{Resource.Name:T}_  
 Default Search Members:  
 _Resource.Name_  
+Name Data Member:  
+_Resource.Name_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -25,6 +27,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [DisplayText](General.Resources.ResourceCostRates.md#displaytext) | string |  
 | [FromDate](General.Resources.ResourceCostRates.md#fromdate) | date | Starting date of validity of the cost rate. The rate is valid until the next cost rate record with later date is defined. `Required` `Filter(eq;ge;le)` 
 | [Id](General.Resources.ResourceCostRates.md#id) | guid |  
 | [Notes](General.Resources.ResourceCostRates.md#notes) | string (max) __nullable__ | Notes for this ResourceCostRate. 
@@ -42,6 +45,12 @@ Aggregate Root:
 
 
 ## Attribute Details
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### FromDate
 

@@ -85,6 +85,8 @@
 <p>Default Display Text Format:<br>
 <em>{Name}</em><br>
 Default Search Members:<br>
+<em>Name</em><br>
+Name Data Member:<br>
 <em>Name</em></p>
 <h2 id="aggregate">Aggregate</h2>
 <p>An <a href="https://docs.erp.net/tech/advanced/concepts/aggregates.html">aggregate</a> is a cluster of domain objects that can be treated as a single unit.</p>
@@ -131,6 +133,11 @@ Aggregate Root:<br>
 <td><a href="General.Printouts.html#definitionformat">DefinitionFormat</a></td>
 <td>string (16) <strong>nullable</strong></td>
 <td>Obsolete. Not used. <code>Default(&quot;default&quot;)</code></td>
+</tr>
+<tr>
+<td><a href="General.Printouts.html#displaytext">DisplayText</a></td>
+<td>string</td>
+<td></td>
 </tr>
 <tr>
 <td><a href="General.Printouts.html#id">Id</a></td>
@@ -280,6 +287,10 @@ Allowed values for the <code>AllowPrintingOnState</code>(General.Printouts.md#al
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>16</strong><br>
 <em>Default Value</em>: <strong>default</strong></p>
+<h3 id="displaytext">DisplayText</h3>
+<p><em>Type</em>: <strong>string</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****</p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>

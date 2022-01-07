@@ -9,7 +9,7 @@ Specifies additional options for document routes, generating Rental Transactions
 
 ## Default Visualization
 Default Display Text Format:  
-_{Id}: {ObjectVersion}_  
+_{Id}: {RouteId}_  
 Default Search Members:  
 __  
 
@@ -23,6 +23,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [DisplayText](Applications.Rental.TransactionTemplates.md#displaytext) | string |  
 | [Id](Applications.Rental.TransactionTemplates.md#id) | guid |  
 | [ObjectVersion](Applications.Rental.TransactionTemplates.md#objectversion) | int32 |  
 | [TransactionType](Applications.Rental.TransactionTemplates.md#transactiontype) | [TransactionType](Applications.Rental.TransactionTemplates.md#transactiontype) | Transaction type for the rent transaction that is to be created. `Required` 
@@ -35,6 +36,12 @@ Aggregate Tree
 
 
 ## Attribute Details
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

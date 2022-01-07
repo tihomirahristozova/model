@@ -12,6 +12,8 @@ Default Display Text Format:
 _{CostDistribution.EntityName}_  
 Default Search Members:  
 _CostDistribution.EntityName_  
+Name Data Member:  
+_CostDistribution.EntityName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -26,6 +28,7 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [AmountBase](Finance.Cost.DistributionCosts.md#amountbase) | [Amount (12, 2)](../data-types.md#amount) | The cost (in base currency) which should be distributed. `Currency: CostDistribution.EnterpriseCompany.BaseCurrency` `Required` `Filter(eq)` 
+| [DisplayText](Finance.Cost.DistributionCosts.md#displaytext) | string |  
 | [Id](Finance.Cost.DistributionCosts.md#id) | guid |  
 | [Notes](Finance.Cost.DistributionCosts.md#notes) | string (max) __nullable__ | Notes for this DistributionCost. 
 | [ObjectVersion](Finance.Cost.DistributionCosts.md#objectversion) | int32 |  
@@ -47,6 +50,12 @@ The cost (in base currency) which should be distributed. `Currency: CostDistribu
 _Type_: **[Amount (12, 2)](../data-types.md#amount)**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

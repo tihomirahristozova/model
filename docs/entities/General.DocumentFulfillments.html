@@ -85,6 +85,8 @@
 <p>Default Display Text Format:<br>
 <em>{DestinationEntityName}</em><br>
 Default Search Members:<br>
+<em>DestinationEntityName</em><br>
+Name Data Member:<br>
 <em>DestinationEntityName</em></p>
 <h2 id="aggregate">Aggregate</h2>
 <p>An <a href="https://docs.erp.net/tech/advanced/concepts/aggregates.html">aggregate</a> is a cluster of domain objects that can be treated as a single unit.</p>
@@ -111,6 +113,11 @@ Default Search Members:<br>
 <td><a href="General.DocumentFulfillments.html#destinationentityname">DestinationEntityName</a></td>
 <td>string (64)</td>
 <td>The name of the entity which fulfills the line. Used to differentiate between different fulfillment types. For example, sales order line can be fulfilled, for different purposes, by store order line and invoice order line. <code>Required</code> <code>Default(&quot;&quot;)</code> <code>Filter(eq)</code> <code>Introduced in version 22.1.4.7</code></td>
+</tr>
+<tr>
+<td><a href="General.DocumentFulfillments.html#displaytext">DisplayText</a></td>
+<td>string</td>
+<td></td>
 </tr>
 <tr>
 <td><a href="General.DocumentFulfillments.html#documentlineid">DocumentLineId</a></td>
@@ -215,6 +222,10 @@ Default Search Members:<br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>64</strong><br>
 <em>Default Value</em>: ****</p>
+<h3 id="displaytext">DisplayText</h3>
+<p><em>Type</em>: <strong>string</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****</p>
 <h3 id="documentlineid">DocumentLineId</h3>
 <p>The Id of the fulfilled line within the document. The attribute contains the Id and is not a reference, because it references different entities depending on document entity type and line type. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong>guid</strong><br>

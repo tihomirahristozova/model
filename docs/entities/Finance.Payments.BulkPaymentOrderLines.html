@@ -85,6 +85,8 @@
 <p>Default Display Text Format:<br>
 <em>{BulkPaymentOrder.EntityName}</em><br>
 Default Search Members:<br>
+<em>BulkPaymentOrder.EntityName</em><br>
+Name Data Member:<br>
 <em>BulkPaymentOrder.EntityName</em></p>
 <h2 id="aggregate">Aggregate</h2>
 <p>An <a href="https://docs.erp.net/tech/advanced/concepts/aggregates.html">aggregate</a> is a cluster of domain objects that can be treated as a single unit.</p>
@@ -111,6 +113,11 @@ Aggregate Root:<br>
 <td><a href="Finance.Payments.BulkPaymentOrderLines.html#direction">Direction</a></td>
 <td><a href="Finance.Payments.BulkPaymentOrderLines.html#direction">Direction</a></td>
 <td>I for Payment issue, R for payment receipt. <code>Required</code> <code>Default(&quot;I&quot;)</code> <code>Filter(eq)</code></td>
+</tr>
+<tr>
+<td><a href="Finance.Payments.BulkPaymentOrderLines.html#displaytext">DisplayText</a></td>
+<td>string</td>
+<td></td>
 </tr>
 <tr>
 <td><a href="Finance.Payments.BulkPaymentOrderLines.html#duedate">DueDate</a></td>
@@ -288,6 +295,10 @@ Allowed values for the <code>Direction</code>(Finance.Payments.BulkPaymentOrderL
 <p><em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Expense</strong></p>
+<h3 id="displaytext">DisplayText</h3>
+<p><em>Type</em>: <strong>string</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****</p>
 <h3 id="duedate">DueDate</h3>
 <p>The due date of the payment. null means there is no due date. <code>Filter(ge;le)</code></p>
 <p><em>Type</em>: <strong>datetime <strong>nullable</strong></strong><br>

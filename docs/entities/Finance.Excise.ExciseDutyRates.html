@@ -83,7 +83,7 @@
 <p>Duty rates are specified by the taxation and customs authorities. They are the basis for the calculation of the excise amount (based on the calculation algorithm, specified in the Product Category). Entity: Exc_Excise_Duty_Rates (Introduced in version 21.1.3.87)</p>
 <h2 id="default-visualization">Default Visualization</h2>
 <p>Default Display Text Format:<br>
-<em>{Id}: {ObjectVersion}</em><br>
+<em>{Id}: {ExciseProductId}</em><br>
 Default Search Members:<br>
 __</p>
 <h2 id="aggregate">Aggregate</h2>
@@ -102,6 +102,11 @@ __</p>
 </tr>
 </thead>
 <tbody>
+<tr>
+<td><a href="Finance.Excise.ExciseDutyRates.html#displaytext">DisplayText</a></td>
+<td>string</td>
+<td></td>
+</tr>
 <tr>
 <td><a href="Finance.Excise.ExciseDutyRates.html#excisedutyratefield">ExciseDutyRateField</a></td>
 <td>decimal (10, 6)</td>
@@ -152,6 +157,10 @@ __</p>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
+<h3 id="displaytext">DisplayText</h3>
+<p><em>Type</em>: <strong>string</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****</p>
 <h3 id="excisedutyratefield">ExciseDutyRateField</h3>
 <p>The rate which should be applied for the specified product and purpose. <code>Required</code> <code>Default(0)</code> <code>Filter(eq;ge;le)</code></p>
 <p><em>Type</em>: <strong>decimal (10, 6)</strong><br>

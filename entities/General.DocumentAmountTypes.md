@@ -12,6 +12,10 @@ Default Display Text Format:
 _{AmountTypeName:T}_  
 Default Search Members:  
 _AmountTypeCode; AmountTypeName_  
+Code Data Member:  
+_AmountTypeCode_  
+Name Data Member:  
+_AmountTypeName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -34,6 +38,7 @@ Aggregate Tree
 | [BaseOnLines](General.DocumentAmountTypes.md#baseonlines) | boolean | True means that the percentages will be applied over lines plus dependant amounts; false means only dependant amounts. `Required` `Default(true)` 
 | [DefaultPercent](General.DocumentAmountTypes.md#defaultpercent) | decimal (7, 6) __nullable__ | Default percent for amounts for which percent input is allowed; null otherwise. 
 | [Description](General.DocumentAmountTypes.md#description) | string (254) __nullable__ | The description of this DocumentAmountType. 
+| [DisplayText](General.DocumentAmountTypes.md#displaytext) | string |  
 | [DistributeBy](General.DocumentAmountTypes.md#distributeby) | [DistributeBy](General.DocumentAmountTypes.md#distributeby) | Specifies how the amount will be distributed among the document lines. Valid values are: ('AMOUNT','MEASUREMENT','PRODUCT DEFINITION','DEAL TYPE'). `Required` `Default("AMOUNT")` `Filter(eq)` 
 | [Id](General.DocumentAmountTypes.md#id) | guid |  
 | [IsActive](General.DocumentAmountTypes.md#isactive) | boolean | True when the amount type is active for new records; false - otherwise. `Required` `Default(true)` `Filter(eq)` 
@@ -149,6 +154,12 @@ _Type_: **string (254) __nullable__**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### DistributeBy
 

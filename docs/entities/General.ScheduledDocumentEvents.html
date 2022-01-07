@@ -83,7 +83,7 @@
 <p>Contains postponed events, which will be executed later. Usually these are large number of recalculation events, resulting from other events. For example, releasing a cost correction, publishes postponed events for all affected documents. Entity: Gen_Scheduled_Document_Events</p>
 <h2 id="default-visualization">Default Visualization</h2>
 <p>Default Display Text Format:<br>
-<em>{Id}: {ObjectVersion}</em><br>
+<em>{Id}: {SourceDocumentId}</em><br>
 Default Search Members:<br>
 __</p>
 <h2 id="aggregate">Aggregate</h2>
@@ -111,6 +111,11 @@ __</p>
 <td><a href="General.ScheduledDocumentEvents.html#creationtime">CreationTime</a></td>
 <td>datetime</td>
 <td>Date and time when the ScheduledDocumentEvent was created. <code>Required</code> <code>Default(Now)</code> <code>ReadOnly</code></td>
+</tr>
+<tr>
+<td><a href="General.ScheduledDocumentEvents.html#displaytext">DisplayText</a></td>
+<td>string</td>
+<td></td>
 </tr>
 <tr>
 <td><a href="General.ScheduledDocumentEvents.html#documentevent">DocumentEvent</a></td>
@@ -184,6 +189,10 @@ __</p>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>CurrentDateTime</strong></p>
+<h3 id="displaytext">DisplayText</h3>
+<p><em>Type</em>: <strong>string</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****</p>
 <h3 id="documentevent">DocumentEvent</h3>
 <p>The type of the document event that is scheduled to be processed. <code>Required</code> <code>ReadOnly</code></p>
 <p><em>Type</em>: <strong>string (254)</strong><br>

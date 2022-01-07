@@ -27,6 +27,7 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [DepreciationEndDate](Finance.Assets.DepreciationPlanLines.md#depreciationenddate) | datetime | End date of the depreciation plan for this asset. `Required` 
 | [DepreciationStartDate](Finance.Assets.DepreciationPlanLines.md#depreciationstartdate) | datetime | Start date of the depreciation plan for this asset. `Required` 
+| [DisplayText](Finance.Assets.DepreciationPlanLines.md#displaytext) | string |  
 | [Id](Finance.Assets.DepreciationPlanLines.md#id) | guid |  
 | [LineNo](Finance.Assets.DepreciationPlanLines.md#lineno) | int32 | Consecutive number of the line within the depreciation plan. `Required` `Filter(eq)` 
 | [ObjectVersion](Finance.Assets.DepreciationPlanLines.md#objectversion) | int32 |  
@@ -66,6 +67,12 @@ Start date of the depreciation plan for this asset. `Required`
 _Type_: **datetime**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

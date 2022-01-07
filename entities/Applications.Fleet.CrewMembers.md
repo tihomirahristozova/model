@@ -12,6 +12,8 @@ Default Display Text Format:
 _{Crew.Name:T}_  
 Default Search Members:  
 _Crew.Name_  
+Name Data Member:  
+_Crew.Name_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -25,6 +27,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [DisplayText](Applications.Fleet.CrewMembers.md#displaytext) | string |  
 | [Id](Applications.Fleet.CrewMembers.md#id) | guid |  
 | [Notes](Applications.Fleet.CrewMembers.md#notes) | string (254) __nullable__ | Notes for this CrewMember. 
 | [ObjectVersion](Applications.Fleet.CrewMembers.md#objectversion) | int32 |  
@@ -39,6 +42,12 @@ Aggregate Root:
 
 
 ## Attribute Details
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

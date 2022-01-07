@@ -12,6 +12,8 @@ Default Display Text Format:
 _{PosTerminal.PosTerminalName:T}_  
 Default Search Members:  
 _PosTerminal.PosTerminalName_  
+Name Data Member:  
+_PosTerminal.PosTerminalName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -27,6 +29,7 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [DeviceRegistrationNo](Crm.Pos.Devices.md#deviceregistrationno) | string (32) __nullable__ | The unique registration number of the device, assigned by the manufacturer. null means the number is unknown or N/A. `Filter(multi eq;like)` 
 | [DeviceType](Crm.Pos.Devices.md#devicetype) | [DeviceType](Crm.Pos.Devices.md#devicetype) | Type of the POS device. PAY=Payment Terminal; CSH=Cash Drawer; FIP=Fiscal Printer; OTH=Other. `Required` `Default("OTH")` `Filter(multi eq)` 
+| [DisplayText](Crm.Pos.Devices.md#displaytext) | string |  
 | [ElectronicAddress](Crm.Pos.Devices.md#electronicaddress) | string (254) __nullable__ | The absolute address (Internet or other) which can be used for electronic communication with the device. The address should contain communication protocol/type, colon, space, then the actual address. Addresses, which are local to a specific computer, should also include the computer name. For example: "COM: PC_WORK1:COM1", "HTTP: https://&lt;addr&gt;", etc. `Filter(multi eq;like)` 
 | [Id](Crm.Pos.Devices.md#id) | guid |  
 | [IsActive](Crm.Pos.Devices.md#isactive) | boolean | Indicates whether the device is currently active and can be choosen from drop-downs in new records. `Required` `Default(true)` `Filter(multi eq)` 
@@ -70,6 +73,12 @@ _Allowed Values (Crm.Pos.DevicesRepository.DeviceType Enum Members)_
 _Supported Filters_: **Equals, EqualsIn**  
 _Supports Order By_: **False**  
 _Default Value_: **Other**  
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### ElectronicAddress
 

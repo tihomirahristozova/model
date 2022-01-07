@@ -83,7 +83,7 @@
 <p>Discount policies for sales documents. Entity: Crm_Line_Discounts</p>
 <h2 id="default-visualization">Default Visualization</h2>
 <p>Default Display Text Format:<br>
-<em>{Id}: {ObjectVersion}</em><br>
+<em>{Id}: {MaxQuantityValue}</em><br>
 Default Search Members:<br>
 __</p>
 <h2 id="aggregate">Aggregate</h2>
@@ -111,6 +111,11 @@ __</p>
 <td><a href="Crm.LineDiscounts.html#discountpercent">DiscountPercent</a></td>
 <td>decimal (7, 6)</td>
 <td>The discount percent that should be applied if all the matching criteria are met. <code>Required</code> <code>Default(0)</code> <code>Filter(ge;le)</code></td>
+</tr>
+<tr>
+<td><a href="Crm.LineDiscounts.html#displaytext">DisplayText</a></td>
+<td>string</td>
+<td></td>
 </tr>
 <tr>
 <td><a href="Crm.LineDiscounts.html#fromdate">FromDate</a></td>
@@ -224,6 +229,10 @@ __</p>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>0</strong></p>
+<h3 id="displaytext">DisplayText</h3>
+<p><em>Type</em>: <strong>string</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****</p>
 <h3 id="fromdate">FromDate</h3>
 <p>Starting date of validity of the discount. null means no from date restriction. <code>Filter(eq;ge;le)</code></p>
 <p><em>Type</em>: <strong>datetime <strong>nullable</strong></strong><br>

@@ -12,6 +12,8 @@ Default Display Text Format:
 _{ProductType.Name:T}_  
 Default Search Members:  
 _ProductType.Name_  
+Name Data Member:  
+_ProductType.Name_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -25,6 +27,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [DisplayText](General.Products.ProductTypePurchaseInvoiceLineProperties.md#displaytext) | string |  
 | [Id](General.Products.ProductTypePurchaseInvoiceLineProperties.md#id) | guid |  
 | [ObjectVersion](General.Products.ProductTypePurchaseInvoiceLineProperties.md#objectversion) | int32 |  
 | [PropertyNo](General.Products.ProductTypePurchaseInvoiceLineProperties.md#propertyno) | int32 | The consecutive number (position) of the property within the current product type. `Required` 
@@ -39,6 +42,12 @@ Aggregate Root:
 
 
 ## Attribute Details
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

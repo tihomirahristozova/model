@@ -12,6 +12,8 @@ Default Display Text Format:
 _{Product.Name:T}_  
 Default Search Members:  
 _Product.Name_  
+Name Data Member:  
+_Product.Name_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -26,6 +28,7 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Active](General.Products.ProductCodes.md#active) | boolean | True when the code is active and can be selected in new documents. `Required` `Default(true)` `Filter(eq)` 
+| [DisplayText](General.Products.ProductCodes.md#displaytext) | string |  
 | [Id](General.Products.ProductCodes.md#id) | guid |  
 | [ObjectVersion](General.Products.ProductCodes.md#objectversion) | int32 |  
 | [ProductCodeField](General.Products.ProductCodes.md#productcodefield) | string (32) | The code of the product in the specified coding system. `Required` `Filter(eq;like)` 
@@ -48,6 +51,12 @@ _Type_: **boolean**
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **True**  
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

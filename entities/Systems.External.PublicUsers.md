@@ -12,6 +12,10 @@ Default Display Text Format:
 _{CompanyName}_  
 Default Search Members:  
 _PhoneNumber; CompanyName_  
+Code Data Member:  
+_PhoneNumber_  
+Name Data Member:  
+_CompanyName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -30,6 +34,7 @@ Aggregate Tree
 | [CompanyName](Systems.External.PublicUsers.md#companyname) | string (64) __nullable__ | The name of the company, for which the user works, as specified by the user. `Filter(like)` 
 | [Country](Systems.External.PublicUsers.md#country) | string (64) __nullable__ | The country of residence of the user, with latin letters. `Filter(like)` 
 | [CreatedOn](Systems.External.PublicUsers.md#createdon) | datetime __nullable__ | The date and time when the user was created. `Default(Now)` 
+| [DisplayText](Systems.External.PublicUsers.md#displaytext) | string |  
 | [Email](Systems.External.PublicUsers.md#email) | string (64) | The primary email of the user. Used for notifications and password restore. `Required` `Filter(like)` 
 | [FirstName](Systems.External.PublicUsers.md#firstname) | string (64) | First name of the user. `Required` `Filter(like)` 
 | [Id](Systems.External.PublicUsers.md#id) | guid |  
@@ -119,6 +124,12 @@ _Type_: **datetime __nullable__**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **CurrentDateTime**  
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Email
 

@@ -12,6 +12,8 @@ Default Display Text Format:
 _{Party.PartyName:T}_  
 Default Search Members:  
 _Party.PartyName_  
+Name Data Member:  
+_Party.PartyName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -25,6 +27,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [DisplayText](Crm.Distributors.md#displaytext) | string |  
 | [FlatCommisionPercentage](Crm.Distributors.md#flatcommisionpercentage) | decimal (7, 6) | Not-zero if commision percentage should be applyied to all sales, regardless of product/discount/progressi<br />ve/qunatity considerations. `Required` `Default(0)` 
 | [Id](Crm.Distributors.md#id) | guid |  
 | [ObjectVersion](Crm.Distributors.md#objectversion) | int32 |  
@@ -37,6 +40,12 @@ Aggregate Root:
 
 
 ## Attribute Details
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### FlatCommisionPercentage
 

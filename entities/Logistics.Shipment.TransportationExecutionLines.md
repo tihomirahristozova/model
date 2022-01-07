@@ -25,6 +25,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [DisplayText](Logistics.Shipment.TransportationExecutionLines.md#displaytext) | string |  
 | [ExecutionDate](Logistics.Shipment.TransportationExecutionLines.md#executiondate) | date | The date when the operation was executed. `Required` 
 | [ExecutionTime](Logistics.Shipment.TransportationExecutionLines.md#executiontime) | time | The time when the operation was executed. `Required` 
 | [Id](Logistics.Shipment.TransportationExecutionLines.md#id) | guid |  
@@ -48,6 +49,12 @@ Aggregate Root:
 
 
 ## Attribute Details
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### ExecutionDate
 

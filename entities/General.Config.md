@@ -9,7 +9,7 @@ Hierarchical repository of configuration options. Entity: Gen_Config
 
 ## Default Visualization
 Default Display Text Format:  
-_{Id}: {ObjectVersion}_  
+_{Id}: {KeyPath}_  
 Default Search Members:  
 __  
 
@@ -24,6 +24,7 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Description](General.Config.md#description) | string (254) __nullable__ | The description of this Config. 
+| [DisplayText](General.Config.md#displaytext) | string |  
 | [Id](General.Config.md#id) | guid |  
 | [IsActive](General.Config.md#isactive) | boolean | Indicates whether this config entry is active. Inactive config entries are not taken into account. `Required` `Default(true)` `Filter(eq)` `Introduced in version 19.1` 
 | [KeyPath](General.Config.md#keypath) | string (128) | Full path of the configuration option. `Required` `Filter(eq)` `ORD` 
@@ -43,6 +44,12 @@ _Type_: **string (254) __nullable__**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

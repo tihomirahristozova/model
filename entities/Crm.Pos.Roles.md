@@ -12,6 +12,10 @@ Default Display Text Format:
 _{PosRoleName:T}_  
 Default Search Members:  
 _PosRoleCode; PosRoleName_  
+Code Data Member:  
+_PosRoleCode_  
+Name Data Member:  
+_PosRoleName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -25,6 +29,7 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [CanProcessMinusSales](Crm.Pos.Roles.md#canprocessminussales) | boolean | Indicates whether the role is allowed to process minus (qty and/or value) sales. `Required` `Default(false)` `Filter(multi eq)` 
 | [CanVoidSales](Crm.Pos.Roles.md#canvoidsales) | boolean | Indicates whether this role can void sales orders. `Required` `Default(false)` `Filter(multi eq)` 
+| [DisplayText](Crm.Pos.Roles.md#displaytext) | string |  
 | [Id](Crm.Pos.Roles.md#id) | guid |  
 | [ObjectVersion](Crm.Pos.Roles.md#objectversion) | int32 |  
 | [PosRoleCode](Crm.Pos.Roles.md#posrolecode) | string (16) | Unique role code. `Required` `Filter(multi eq;like)` `ORD` 
@@ -50,6 +55,12 @@ _Type_: **boolean**
 _Supported Filters_: **Equals, EqualsIn**  
 _Supports Order By_: **False**  
 _Default Value_: **False**  
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

@@ -12,6 +12,8 @@ Default Display Text Format:
 _{ServiceActivityMaterial.ServiceActivity.EntityName}_  
 Default Search Members:  
 _ServiceActivityMaterial.ServiceActivity.EntityName_  
+Name Data Member:  
+_ServiceActivityMaterial.ServiceActivity.EntityName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -26,6 +28,7 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [AgreedQuantity](Applications.Service.ServiceActivityAgreedMaterials.md#agreedquantity) | [Quantity (18, 3)](../data-types.md#quantity) | Quantity from the service agreement material line that is accounted for this service activity material line. `Unit: ServiceAgreementMaterial.QuantityUnit` `Required` `Default(0)` `ReadOnly` 
+| [DisplayText](Applications.Service.ServiceActivityAgreedMaterials.md#displaytext) | string |  
 | [Id](Applications.Service.ServiceActivityAgreedMaterials.md#id) | guid |  
 | [ObjectVersion](Applications.Service.ServiceActivityAgreedMaterials.md#objectversion) | int32 |  
 
@@ -47,6 +50,12 @@ _Type_: **[Quantity (18, 3)](../data-types.md#quantity)**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### Id
 

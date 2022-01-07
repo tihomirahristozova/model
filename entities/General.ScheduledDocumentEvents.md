@@ -9,7 +9,7 @@ Contains postponed events, which will be executed later. Usually these are large
 
 ## Default Visualization
 Default Display Text Format:  
-_{Id}: {ObjectVersion}_  
+_{Id}: {SourceDocumentId}_  
 Default Search Members:  
 __  
 
@@ -25,6 +25,7 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [Cancelled](General.ScheduledDocumentEvents.md#cancelled) | boolean | When true, specifies that this document event has been cancelled (either manually or in respect to another event) and will not be executed. `Required` `Default(false)` `Filter(eq)` 
 | [CreationTime](General.ScheduledDocumentEvents.md#creationtime) | datetime | Date and time when the ScheduledDocumentEvent was created. `Required` `Default(Now)` `ReadOnly` 
+| [DisplayText](General.ScheduledDocumentEvents.md#displaytext) | string |  
 | [DocumentEvent](General.ScheduledDocumentEvents.md#documentevent) | string (254) | The type of the document event that is scheduled to be processed. `Required` `ReadOnly` 
 | [Id](General.ScheduledDocumentEvents.md#id) | guid |  
 | [LastProcessStatus](General.ScheduledDocumentEvents.md#lastprocessstatus) | string (max) __nullable__ | Status/information of the last attemp to process the event. Usually shows the cause in case of failure. `ReadOnly` 
@@ -60,6 +61,12 @@ _Type_: **datetime**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **CurrentDateTime**  
+
+### DisplayText
+
+_Type_: **string**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: ****  
 
 ### DocumentEvent
 

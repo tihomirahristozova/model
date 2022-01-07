@@ -85,6 +85,8 @@
 <p>Default Display Text Format:<br>
 <em>{SentItemsFolderName}</em><br>
 Default Search Members:<br>
+<em>SentItemsFolderName</em><br>
+Name Data Member:<br>
 <em>SentItemsFolderName</em></p>
 <h2 id="aggregate">Aggregate</h2>
 <p>An <a href="https://docs.erp.net/tech/advanced/concepts/aggregates.html">aggregate</a> is a cluster of domain objects that can be treated as a single unit.</p>
@@ -118,6 +120,11 @@ Default Search Members:<br>
 <td><a href="Applications.Mail.Boxes.html#active">Active</a></td>
 <td>boolean</td>
 <td>True when the mail box is active for mail sinchronization, sending and receiving. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></td>
+</tr>
+<tr>
+<td><a href="Applications.Mail.Boxes.html#displaytext">DisplayText</a></td>
+<td>string</td>
+<td></td>
 </tr>
 <tr>
 <td><a href="Applications.Mail.Boxes.html#emailaddress">EmailAddress</a></td>
@@ -227,6 +234,10 @@ Default Search Members:<br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>True</strong></p>
+<h3 id="displaytext">DisplayText</h3>
+<p><em>Type</em>: <strong>string</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: ****</p>
 <h3 id="emailaddress">EmailAddress</h3>
 <p>The email address associated with this mail box. <code>Required</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong>string (254)</strong><br>
