@@ -30,10 +30,10 @@ Aggregate Root:
 | [DefaultParameterChange](Applications.AssetManagement.ManagedAssetTypeMaintenanceTypes.md#defaultparameterchange) | int32 __nullable__ | Default positive change of the tracked parameter between two maintenances. When not null, this schedule is taken with priority related to the general maintenance type schedule. null means, that maintenances are not scheduled based on parameter change. 
 | [DefaultScheduleDays](Applications.AssetManagement.ManagedAssetTypeMaintenanceTypes.md#defaultscheduledays) | int32 __nullable__ | Specifies the maximum number of days between two maintenances (in addition to the number of months specified in Default Schedule Months). When not null, this schedule is taken with priority related to the general maintenance type schedule. null means that there is no default schedule in days. 
 | [DefaultScheduleMonths](Applications.AssetManagement.ManagedAssetTypeMaintenanceTypes.md#defaultschedulemonths) | int32 __nullable__ | Specifies the number of months between two maintenances. When not null, this schedule is taken with priority related to the general maintenance type schedule. null means that there is no default schedule in months. 
-| [DisplayText](Applications.AssetManagement.ManagedAssetTypeMaintenanceTypes.md#displaytext) | string |  
+| [DisplayText](Applications.AssetManagement.ManagedAssetTypeMaintenanceTypes.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [Id](Applications.AssetManagement.ManagedAssetTypeMaintenanceTypes.md#id) | guid |  
 | [Notes](Applications.AssetManagement.ManagedAssetTypeMaintenanceTypes.md#notes) | string (max) __nullable__ | Notes for this ManagedAssetType<br />MaintenanceType. 
-| [ObjectVersion](Applications.AssetManagement.ManagedAssetTypeMaintenanceTypes.md#objectversion) | int32 |  
+| [ObjectVersion](Applications.AssetManagement.ManagedAssetTypeMaintenanceTypes.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 
 ## References
 
@@ -71,6 +71,8 @@ _Supports Order By_: **False**
 
 ### DisplayText
 
+Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
+
 _Type_: **string**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
@@ -92,6 +94,8 @@ _Supports Order By_: **False**
 _Maximum Length_: **2147483647**  
 
 ### ObjectVersion
+
+The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  

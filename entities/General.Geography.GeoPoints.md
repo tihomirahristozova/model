@@ -26,12 +26,12 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Address](General.Geography.GeoPoints.md#address) | string (128) __nullable__ | The descriptive physical address, related to this geo point. `Filter(eq;like)` 
-| [DisplayText](General.Geography.GeoPoints.md#displaytext) | string |  
+| [DisplayText](General.Geography.GeoPoints.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [Id](General.Geography.GeoPoints.md#id) | guid |  
 | [Latitude](General.Geography.GeoPoints.md#latitude) | decimal (10, 7) | Latitude is the vertical angle from equator to the pole of the point. Positive values denote points north of the equator. The value is in the range `-90, 90`. `Required` `Default(0)` `Filter(eq;ge;le)` 
 | [Longitude](General.Geography.GeoPoints.md#longitude) | decimal (10, 7) | Longitude is angle from the prime meridian (in England) in east-west direction. Positive values denote east and negative - west. The value is in the range `-180, 180`. `Required` `Default(0)` `Filter(eq;ge;le)` 
 | [Name](General.Geography.GeoPoints.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Geo point short name (Multilanguage). `Required` `Filter(eq;like)` 
-| [ObjectVersion](General.Geography.GeoPoints.md#objectversion) | int32 |  
+| [ObjectVersion](General.Geography.GeoPoints.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 
 ## References
 
@@ -52,6 +52,8 @@ _Supports Order By_: **False**
 _Maximum Length_: **128**  
 
 ### DisplayText
+
+Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
 _Supported Filters_: **NotFilterable**  
@@ -91,6 +93,8 @@ _Supported Filters_: **Equals, Like**
 _Supports Order By_: **False**  
 
 ### ObjectVersion
+
+The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  

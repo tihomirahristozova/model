@@ -25,10 +25,10 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DisplayText](Logistics.Procurement.SupplierTypes.md#displaytext) | string |  
+| [DisplayText](Logistics.Procurement.SupplierTypes.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [Id](Logistics.Procurement.SupplierTypes.md#id) | guid |  
 | [Name](Logistics.Procurement.SupplierTypes.md#name) | string (254) | The name of this SupplierType. `Required` `Filter(eq;like)` 
-| [ObjectVersion](Logistics.Procurement.SupplierTypes.md#objectversion) | int32 |  
+| [ObjectVersion](Logistics.Procurement.SupplierTypes.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 
 ## References
 
@@ -40,6 +40,8 @@ Aggregate Tree
 ## Attribute Details
 
 ### DisplayText
+
+Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
 _Supported Filters_: **NotFilterable**  
@@ -62,6 +64,8 @@ _Supports Order By_: **False**
 _Maximum Length_: **254**  
 
 ### ObjectVersion
+
+The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  

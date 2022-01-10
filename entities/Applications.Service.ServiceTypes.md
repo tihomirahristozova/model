@@ -26,12 +26,12 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Description](Applications.Service.ServiceTypes.md#description) | string (max) __nullable__ | The description of this ServiceType. 
-| [DisplayText](Applications.Service.ServiceTypes.md#displaytext) | string |  
+| [DisplayText](Applications.Service.ServiceTypes.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [Id](Applications.Service.ServiceTypes.md#id) | guid |  
 | [IsActive](Applications.Service.ServiceTypes.md#isactive) | boolean | True when the service type is currently active and selectable in new documents. `Required` `Default(true)` `Filter(eq)` 
 | [IsDefault](Applications.Service.ServiceTypes.md#isdefault) | boolean | True when this is the default service type for the service object type. false otherwise. `Required` `Default(false)` `Filter(eq)` 
 | [Name](Applications.Service.ServiceTypes.md#name) | string (254) | The name of this ServiceType. `Required` `Filter(like)` 
-| [ObjectVersion](Applications.Service.ServiceTypes.md#objectversion) | int32 |  
+| [ObjectVersion](Applications.Service.ServiceTypes.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 
 ## References
 
@@ -53,6 +53,8 @@ _Supports Order By_: **False**
 _Maximum Length_: **2147483647**  
 
 ### DisplayText
+
+Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
 _Supported Filters_: **NotFilterable**  
@@ -93,6 +95,8 @@ _Supports Order By_: **False**
 _Maximum Length_: **254**  
 
 ### ObjectVersion
+
+The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  

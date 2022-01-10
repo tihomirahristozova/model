@@ -25,17 +25,19 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DisplayText](General.LinkTypes.md#displaytext) | string |  
+| [DisplayText](General.LinkTypes.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [FromDocTypeId](General.LinkTypes.md#fromdoctypeid) | guid __nullable__ | From which type of documents the link originates. null means that it might originate from any document type. `Filter(multi eq)` 
 | [Id](General.LinkTypes.md#id) | guid |  
 | [Name](General.LinkTypes.md#name) | string (254) | Obsolete. Not used. `Required` 
-| [ObjectVersion](General.LinkTypes.md#objectversion) | int32 |  
+| [ObjectVersion](General.LinkTypes.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 | [ToDocTypeId](General.LinkTypes.md#todoctypeid) | guid __nullable__ | To what type of documents the link points. null means that it might point to any document type. `Filter(multi eq)` 
 
 
 ## Attribute Details
 
 ### DisplayText
+
+Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
 _Supported Filters_: **NotFilterable**  
@@ -64,6 +66,8 @@ _Supports Order By_: **False**
 _Maximum Length_: **254**  
 
 ### ObjectVersion
+
+The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  

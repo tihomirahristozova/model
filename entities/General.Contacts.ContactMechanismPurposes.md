@@ -30,10 +30,10 @@ Aggregate Tree
 | [Code](General.Contacts.ContactMechanismPurposes.md#code) | string (16) | The unique code of the ContactMechanismPurpos. `Required` `Filter(eq;like)` `ORD` 
 | [ContactMechanismType](General.Contacts.ContactMechanismPurposes.md#contactmechanismtype) | [ContactMechanismType](General.Contacts.ContactMechanismPurposes.md#contactmechanismtype) __nullable__ | When specified, allows the purpose to be specified only for contact mechanisms of the specified type. `Filter(multi eq)` 
 | [Description](General.Contacts.ContactMechanismPurposes.md#description) | string (max) __nullable__ | The description of this ContactMechanismPurpos. `Filter(like)` 
-| [DisplayText](General.Contacts.ContactMechanismPurposes.md#displaytext) | string |  
+| [DisplayText](General.Contacts.ContactMechanismPurposes.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [Id](General.Contacts.ContactMechanismPurposes.md#id) | guid |  
 | [Name](General.Contacts.ContactMechanismPurposes.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Name of the contact mechanism purpose (Multilanguage). `Required` `Filter(like)` 
-| [ObjectVersion](General.Contacts.ContactMechanismPurposes.md#objectversion) | int32 |  
+| [ObjectVersion](General.Contacts.ContactMechanismPurposes.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 
 
 ## Attribute Details
@@ -82,6 +82,8 @@ _Maximum Length_: **2147483647**
 
 ### DisplayText
 
+Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
+
 _Type_: **string**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
@@ -102,6 +104,8 @@ _Supported Filters_: **Like**
 _Supports Order By_: **False**  
 
 ### ObjectVersion
+
+The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  

@@ -27,11 +27,11 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DisplayText](Crm.Sales.SalesOrderPromotionalPackages.md#displaytext) | string |  
+| [DisplayText](Crm.Sales.SalesOrderPromotionalPackages.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [Id](Crm.Sales.SalesOrderPromotionalPackages.md#id) | guid |  
 | [LineNumber](Crm.Sales.SalesOrderPromotionalPackages.md#linenumber) | int32 | Consecutive line number of the package, unique within the document. `Required` `Filter(eq)` 
 | [NumberOfPackages](Crm.Sales.SalesOrderPromotionalPackages.md#numberofpackages) | int32 | Number of packages sold. `Required` `Default(0)` 
-| [ObjectVersion](Crm.Sales.SalesOrderPromotionalPackages.md#objectversion) | int32 |  
+| [ObjectVersion](Crm.Sales.SalesOrderPromotionalPackages.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 
 ## References
 
@@ -44,6 +44,8 @@ Aggregate Root:
 ## Attribute Details
 
 ### DisplayText
+
+Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
 _Supported Filters_: **NotFilterable**  
@@ -79,6 +81,8 @@ _Supports Order By_: **False**
 _Default Value_: **0**  
 
 ### ObjectVersion
+
+The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  

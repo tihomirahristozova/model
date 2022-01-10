@@ -29,11 +29,11 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [DeviceRegistrationNo](Crm.Pos.Devices.md#deviceregistrationno) | string (32) __nullable__ | The unique registration number of the device, assigned by the manufacturer. null means the number is unknown or N/A. `Filter(multi eq;like)` 
 | [DeviceType](Crm.Pos.Devices.md#devicetype) | [DeviceType](Crm.Pos.Devices.md#devicetype) | Type of the POS device. PAY=Payment Terminal; CSH=Cash Drawer; FIP=Fiscal Printer; OTH=Other. `Required` `Default("OTH")` `Filter(multi eq)` 
-| [DisplayText](Crm.Pos.Devices.md#displaytext) | string |  
+| [DisplayText](Crm.Pos.Devices.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [ElectronicAddress](Crm.Pos.Devices.md#electronicaddress) | string (254) __nullable__ | The absolute address (Internet or other) which can be used for electronic communication with the device. The address should contain communication protocol/type, colon, space, then the actual address. Addresses, which are local to a specific computer, should also include the computer name. For example: "COM: PC_WORK1:COM1", "HTTP: https://&lt;addr&gt;", etc. `Filter(multi eq;like)` 
 | [Id](Crm.Pos.Devices.md#id) | guid |  
 | [IsActive](Crm.Pos.Devices.md#isactive) | boolean | Indicates whether the device is currently active and can be choosen from drop-downs in new records. `Required` `Default(true)` `Filter(multi eq)` 
-| [ObjectVersion](Crm.Pos.Devices.md#objectversion) | int32 |  
+| [ObjectVersion](Crm.Pos.Devices.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 | [ProtocolName](Crm.Pos.Devices.md#protocolname) | [ProtocolName](Crm.Pos.Devices.md#protocolname) __nullable__ | The name of the protocol, which can be used to communicate with the device. null means that the protocol is unknown and programmatic communication with the device would not be performed. 
 | [SettingsJson](Crm.Pos.Devices.md#settingsjson) | string (max) __nullable__ | Settings and operator access codes for the POS device. The data is stored as Json, encrypted for the current application server instance. null means that there are no settings for this device. 
 
@@ -76,6 +76,8 @@ _Default Value_: **Other**
 
 ### DisplayText
 
+Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
+
 _Type_: **string**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
@@ -106,6 +108,8 @@ _Supports Order By_: **False**
 _Default Value_: **True**  
 
 ### ObjectVersion
+
+The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  

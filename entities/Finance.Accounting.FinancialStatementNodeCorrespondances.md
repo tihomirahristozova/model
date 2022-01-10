@@ -27,10 +27,10 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DisplayText](Finance.Accounting.FinancialStatementNodeCorrespondances.md#displaytext) | string |  
+| [DisplayText](Finance.Accounting.FinancialStatementNodeCorrespondances.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [Id](Finance.Accounting.FinancialStatementNodeCorrespondances.md#id) | guid |  
 | [Multiplier](Finance.Accounting.FinancialStatementNodeCorrespondances.md#multiplier) | decimal (18, 0) | Factor by which the correspondence balance will be multiplied. `Required` `Default(1)` 
-| [ObjectVersion](Finance.Accounting.FinancialStatementNodeCorrespondances.md#objectversion) | int32 |  
+| [ObjectVersion](Finance.Accounting.FinancialStatementNodeCorrespondances.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 
 ## References
 
@@ -44,6 +44,8 @@ Aggregate Root:
 ## Attribute Details
 
 ### DisplayText
+
+Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
 _Supported Filters_: **NotFilterable**  
@@ -66,6 +68,8 @@ _Supports Order By_: **False**
 _Default Value_: **1**  
 
 ### ObjectVersion
+
+The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  

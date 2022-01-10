@@ -26,11 +26,11 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [ArticleTextHtml](Applications.Cms.NewsWebModuleArticles.md#articletexthtml) | string (max) __nullable__ | The actual article text, stored as Html. Only the &lt;BODY&gt; of the Html is stored. The language of the text is specified in Language Code. 
-| [DisplayText](Applications.Cms.NewsWebModuleArticles.md#displaytext) | string |  
+| [DisplayText](Applications.Cms.NewsWebModuleArticles.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [Id](Applications.Cms.NewsWebModuleArticles.md#id) | guid |  
 | [IsPublished](Applications.Cms.NewsWebModuleArticles.md#ispublished) | boolean | Specifies whether the article is published for display on web. `Required` `Default(false)` 
 | [LanguageCode](Applications.Cms.NewsWebModuleArticles.md#languagecode) | string (8) | The language code of the article text. `Required` 
-| [ObjectVersion](Applications.Cms.NewsWebModuleArticles.md#objectversion) | int32 |  
+| [ObjectVersion](Applications.Cms.NewsWebModuleArticles.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 | [PublishDate](Applications.Cms.NewsWebModuleArticles.md#publishdate) | datetime | The date and time when the news article should appear to be published. `Required` `Default(Now)` 
 
 ## References
@@ -53,6 +53,8 @@ _Supports Order By_: **False**
 _Maximum Length_: **2147483647**  
 
 ### DisplayText
+
+Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
 _Supported Filters_: **NotFilterable**  
@@ -84,6 +86,8 @@ _Supports Order By_: **False**
 _Maximum Length_: **8**  
 
 ### ObjectVersion
+
+The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  

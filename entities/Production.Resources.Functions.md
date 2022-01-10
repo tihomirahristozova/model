@@ -27,11 +27,11 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DisplayText](Production.Resources.Functions.md#displaytext) | string |  
+| [DisplayText](Production.Resources.Functions.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [Id](Production.Resources.Functions.md#id) | guid |  
 | [Name](Production.Resources.Functions.md#name) | string (64) | The name of this Function. `Required` `Filter(like)` 
 | [Notes](Production.Resources.Functions.md#notes) | string (254) __nullable__ | User comments on the function. 
-| [ObjectVersion](Production.Resources.Functions.md#objectversion) | int32 |  
+| [ObjectVersion](Production.Resources.Functions.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 
 ## References
 
@@ -44,6 +44,8 @@ Aggregate Root:
 ## Attribute Details
 
 ### DisplayText
+
+Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
 _Supported Filters_: **NotFilterable**  
@@ -75,6 +77,8 @@ _Supports Order By_: **False**
 _Maximum Length_: **254**  
 
 ### ObjectVersion
+
+The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  

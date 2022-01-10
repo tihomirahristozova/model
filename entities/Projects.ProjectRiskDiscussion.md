@@ -28,11 +28,11 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [ContributionTime](Projects.ProjectRiskDiscussion.md#contributiontime) | datetime | The time, when the message was contributed. `Required` `Default(Now)` `Filter(eq)` `ReadOnly` 
-| [DisplayText](Projects.ProjectRiskDiscussion.md#displaytext) | string |  
+| [DisplayText](Projects.ProjectRiskDiscussion.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [Id](Projects.ProjectRiskDiscussion.md#id) | guid |  
 | [LastEditTime](Projects.ProjectRiskDiscussion.md#lastedittime) | datetime __nullable__ | Contains the last edit time of the message. null if the message was never edited. `Filter(eq)` `ReadOnly` 
 | [Message](Projects.ProjectRiskDiscussion.md#message) | string (max) | The contents of the message. `Required` 
-| [ObjectVersion](Projects.ProjectRiskDiscussion.md#objectversion) | int32 |  
+| [ObjectVersion](Projects.ProjectRiskDiscussion.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 
 ## References
 
@@ -54,6 +54,8 @@ _Supports Order By_: **False**
 _Default Value_: **CurrentDateTime**  
 
 ### DisplayText
+
+Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
 _Supported Filters_: **NotFilterable**  
@@ -84,6 +86,8 @@ _Supports Order By_: **False**
 _Maximum Length_: **2147483647**  
 
 ### ObjectVersion
+
+The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  

@@ -26,7 +26,7 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [BoxCount](Logistics.Shipment.ShipmentLines.md#boxcount) | int32 __nullable__ | The count of boxes in which the goods are packaged. null means unknown. 
-| [DisplayText](Logistics.Shipment.ShipmentLines.md#displaytext) | string |  
+| [DisplayText](Logistics.Shipment.ShipmentLines.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [Finished](Logistics.Shipment.ShipmentLines.md#finished) | boolean | True if this shipment should prohibit further shipments for the sales order line. `Required` `Default(false)` `Filter(eq)` `ReadOnly` 
 | [GrossWeightkg](Logistics.Shipment.ShipmentLines.md#grossweightkg) | decimal (12, 3) __nullable__ | The gross weight of the whole line in kilogramms. null means unknown. 
 | [GuaranteePeriodDays](Logistics.Shipment.ShipmentLines.md#guaranteeperioddays) | int32 __nullable__ | Guarantee period in days for the offered product. null for non-serviced products. 
@@ -37,7 +37,7 @@ Aggregate Root:
 | [LineRequiredDeliveryDate](Logistics.Shipment.ShipmentLines.md#linerequireddeliverydate) | datetime __nullable__ | Required delivery date for this lines. Depending on the shipment route travel time, the shipment should be released accordingly. 
 | [NetWeightkg](Logistics.Shipment.ShipmentLines.md#netweightkg) | decimal (12, 3) __nullable__ | The net weight of the entire batch of goods in kilograms. null means unknown. 
 | [Notes](Logistics.Shipment.ShipmentLines.md#notes) | string (max) __nullable__ | Specific notes for this line. 
-| [ObjectVersion](Logistics.Shipment.ShipmentLines.md#objectversion) | int32 |  
+| [ObjectVersion](Logistics.Shipment.ShipmentLines.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 | [PalletNo](Logistics.Shipment.ShipmentLines.md#palletno) | int32 __nullable__ | The number of the pallet in which the goods are packaged. null means unknown. 
 | [ParentLineNo](Logistics.Shipment.ShipmentLines.md#parentlineno) | int32 __nullable__ | The number of the line within the parent document, which the current line executes. null when the current line does not execute parent line. `Filter(multi eq)` 
 | [Quantity](Logistics.Shipment.ShipmentLines.md#quantity) | [Quantity (12, 3)](../data-types.md#quantity) | The quantity to be shipped. `Unit: QuantityUnit` `Required` 
@@ -73,6 +73,8 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 
 ### DisplayText
+
+Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
 _Supported Filters_: **NotFilterable**  
@@ -172,6 +174,8 @@ _Supports Order By_: **False**
 _Maximum Length_: **2147483647**  
 
 ### ObjectVersion
+
+The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  

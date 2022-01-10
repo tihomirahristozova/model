@@ -29,10 +29,10 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [AdditionalData](General.DocumentPrints.md#additionaldata) | string (max) __nullable__ | Contains additional data about the printout. The format of the data is dependent on the Printout Type. `Introduced in version 19.1` 
 | [Description](General.DocumentPrints.md#description) | string (254) __nullable__ | The description of this DocumentPrint. 
-| [DisplayText](General.DocumentPrints.md#displaytext) | string |  
+| [DisplayText](General.DocumentPrints.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [Id](General.DocumentPrints.md#id) | guid |  
 | [IsOriginal](General.DocumentPrints.md#isoriginal) | boolean | True when the printout is the first printout (the original printout). `Required` `Filter(eq)` 
-| [ObjectVersion](General.DocumentPrints.md#objectversion) | int32 |  
+| [ObjectVersion](General.DocumentPrints.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 | [PrintoutType](General.DocumentPrints.md#printouttype) | [PrintoutType](General.DocumentPrints.md#printouttype) __nullable__ | Specifies the type of the printout: PPP - Phisycal Printer Printout; FPP - Fiscal Printer Printout; EXP - Export. `Filter(multi eq)` `Introduced in version 19.1` 
 | [PrintTime](General.DocumentPrints.md#printtime) | datetime | The time when the document was printed or exported. `Required` `Default(Now)` `Filter(ge;le)` 
 | [PrintUser](General.DocumentPrints.md#printuser) | string (64) | The user, which printed or exported the document. `Required` 
@@ -68,6 +68,8 @@ _Maximum Length_: **254**
 
 ### DisplayText
 
+Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
+
 _Type_: **string**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
@@ -88,6 +90,8 @@ _Supported Filters_: **Equals**
 _Supports Order By_: **False**  
 
 ### ObjectVersion
+
+The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  

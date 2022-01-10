@@ -29,11 +29,11 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Code](Communities.SocialGroups.md#code) | string (32) | Unique code of the group. Also used as group slug for Internet URL purposes. `Required` `ORD` 
-| [DisplayText](Communities.SocialGroups.md#displaytext) | string |  
+| [DisplayText](Communities.SocialGroups.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [Id](Communities.SocialGroups.md#id) | guid |  
 | [Name](Communities.SocialGroups.md#name) | string (256) | Multilanguage name of the group. `Required` 
 | [Notes](Communities.SocialGroups.md#notes) | string (max) __nullable__ | Notes for this SocialGroup. 
-| [ObjectVersion](Communities.SocialGroups.md#objectversion) | int32 |  
+| [ObjectVersion](Communities.SocialGroups.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 
 ## Child Collections
 
@@ -55,6 +55,8 @@ _Supports Order By_: **True**
 _Maximum Length_: **32**  
 
 ### DisplayText
+
+Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
 _Supported Filters_: **NotFilterable**  
@@ -86,6 +88,8 @@ _Supports Order By_: **False**
 _Maximum Length_: **2147483647**  
 
 ### ObjectVersion
+
+The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  

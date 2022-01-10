@@ -45,7 +45,7 @@ Aggregate Tree
 | [CostSource](Logistics.Inventory.StoreTransactions.md#costsource) | [CostSource](Logistics.Inventory.StoreTransactions.md#costsource) | Determines whether the cost in the transaction is taken from the store current availability (usually this is the case for issue transactions) or the cost must be specified in the transaction itself (usually for receipt transactions). S = Store, D = Document. `Required` `ReadOnly` 
 | [CreationTime](Logistics.Inventory.StoreTransactions.md#creationtime) | datetime | Date/Time when the document was created. `Required` `Default(Now)` `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [CreationUser](Logistics.Inventory.StoreTransactions.md#creationuser) | string (64) | The login name of the user, who created the document. `Required` `Filter(like)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
-| [DisplayText](Logistics.Inventory.StoreTransactions.md#displaytext) | string |  
+| [DisplayText](Logistics.Inventory.StoreTransactions.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [DocumentDate](Logistics.Inventory.StoreTransactions.md#documentdate) | date | The date on which the document was issued. `Required` `Default(Today)` `Filter(eq;ge;le)` `ORD` (Inherited from [Documents](General.Documents.md)) 
 | [DocumentNo](Logistics.Inventory.StoreTransactions.md#documentno) | string (20) | Document number, unique within Document_Type_Id. `Required` `Filter(eq;like)` `ORD` (Inherited from [Documents](General.Documents.md)) 
 | [DocumentNotes](Logistics.Inventory.StoreTransactions.md#documentnotes) | string (max) __nullable__ | Notes for this Document. (Inherited from [Documents](General.Documents.md)) 
@@ -56,7 +56,7 @@ Aggregate Tree
 | [IsSingleExecution](Logistics.Inventory.StoreTransactions.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document. `Required` `Default(false)` `Filter(eq)` `ReadOnly` 
 | [IsValidField](Logistics.Inventory.StoreTransactions.md#isvalidfield) | boolean | Managed by the system and used only for integrity purposes. Do not use. `Required` `Default(false)` `ReadOnly` 
 | [MovementType](Logistics.Inventory.StoreTransactions.md#movementtype) | [MovementType](Logistics.Inventory.StoreTransactions.md#movementtype) | Transaction movement type. R=RECEIPT, I=ISSUE. `Required` `Default("R")` `Filter(multi eq)` 
-| [ObjectVersion](Logistics.Inventory.StoreTransactions.md#objectversion) | int32 |  
+| [ObjectVersion](Logistics.Inventory.StoreTransactions.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 | [ParentDocument<br />RelationshipType](Logistics.Inventory.StoreTransactions.md#parentdocumentrelationshiptype) | [ParentDocument<br />RelationshipType](Logistics.Inventory.StoreTransactions.md#parentdocumentrelationshiptype) __nullable__ | Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [PlanningOnly](Logistics.Inventory.StoreTransactions.md#planningonly) | boolean | Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned). `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [ReadOnly](Logistics.Inventory.StoreTransactions.md#readonly) | boolean | True - the document is read only; false - the document is not read only. `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
@@ -186,6 +186,8 @@ _Maximum Length_: **64**
 
 ### DisplayText
 
+Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
+
 _Type_: **string**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
@@ -290,6 +292,8 @@ _Supports Order By_: **False**
 _Default Value_: **Receipt**  
 
 ### ObjectVersion
+
+The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  

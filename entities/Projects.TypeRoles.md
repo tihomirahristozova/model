@@ -28,9 +28,9 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Description](Projects.TypeRoles.md#description) | string (max) __nullable__ | Description of the participant role. 
-| [DisplayText](Projects.TypeRoles.md#displaytext) | string |  
+| [DisplayText](Projects.TypeRoles.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [Id](Projects.TypeRoles.md#id) | guid |  
-| [ObjectVersion](Projects.TypeRoles.md#objectversion) | int32 |  
+| [ObjectVersion](Projects.TypeRoles.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 | [RoleName](Projects.TypeRoles.md#rolename) | string (255) | The name of the participant role. `Required` `Filter(multi eq;like)` 
 
 ## References
@@ -53,6 +53,8 @@ _Maximum Length_: **2147483647**
 
 ### DisplayText
 
+Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
+
 _Type_: **string**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
@@ -65,6 +67,8 @@ _Supported Filters_: **Equals, Like, EqualsIn**
 _Default Value_: **NewGuid**  
 
 ### ObjectVersion
+
+The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  

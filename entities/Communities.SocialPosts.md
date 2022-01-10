@@ -24,10 +24,10 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [CreationTimeUtc](Communities.SocialPosts.md#creationtimeutc) | datetime | The exact server time (in UTC), when the post was created. `Required` 
-| [DisplayText](Communities.SocialPosts.md#displaytext) | string |  
+| [DisplayText](Communities.SocialPosts.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [Id](Communities.SocialPosts.md#id) | guid |  
 | [LastInteractionTimeUtc](Communities.SocialPosts.md#lastinteractiontimeutc) | datetime | The server time (in UTC) of the last interaction with the post, including comments, replies, likes, etc. `Required` 
-| [ObjectVersion](Communities.SocialPosts.md#objectversion) | int32 |  
+| [ObjectVersion](Communities.SocialPosts.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 | [PostText](Communities.SocialPosts.md#posttext) | string (max) | The post contents in clear text. `Required` 
 
 ## References
@@ -50,6 +50,8 @@ _Supports Order By_: **False**
 
 ### DisplayText
 
+Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
+
 _Type_: **string**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
@@ -70,6 +72,8 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 
 ### ObjectVersion
+
+The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  

@@ -26,10 +26,10 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [ColumnName](Systems.Core.TextTranslations.md#columnname) | string (128) | Obsolete. Not used. `Required` `Filter(eq)` 
-| [DisplayText](Systems.Core.TextTranslations.md#displaytext) | string |  
+| [DisplayText](Systems.Core.TextTranslations.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [Id](Systems.Core.TextTranslations.md#id) | guid |  
 | [Language](Systems.Core.TextTranslations.md#language) | string (50) | Obsolete. Not used. `Required` `Filter(eq)` 
-| [ObjectVersion](Systems.Core.TextTranslations.md#objectversion) | int32 |  
+| [ObjectVersion](Systems.Core.TextTranslations.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 | [RowId](Systems.Core.TextTranslations.md#rowid) | guid | Obsolete. Not used. `Required` `Filter(multi eq)` 
 | [TableName](Systems.Core.TextTranslations.md#tablename) | string (128) | Obsolete. Not used. `Required` `Filter(eq)` `ORD` `ReadOnly` 
 | [TranslatedText](Systems.Core.TextTranslations.md#translatedtext) | string (254) __nullable__ | Obsolete. Not used. `Filter(eq)` 
@@ -47,6 +47,8 @@ _Supports Order By_: **False**
 _Maximum Length_: **128**  
 
 ### DisplayText
+
+Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
 _Supported Filters_: **NotFilterable**  
@@ -69,6 +71,8 @@ _Supports Order By_: **False**
 _Maximum Length_: **50**  
 
 ### ObjectVersion
+
+The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  

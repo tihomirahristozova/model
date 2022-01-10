@@ -28,11 +28,11 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [DepreciationValue](Finance.Assets.DepreciationPlanLineFixedValues.md#depreciationvalue) | [Amount (14, 2)](../data-types.md#amount) | Fixed depreciation value for the period specified by Fixed_Value_Period_Month and Fixed_Value_Period_Year. `Currency: DepreciationPlanLine.Asset.ValuationCurrency` `Required` `Default(0)` 
-| [DisplayText](Finance.Assets.DepreciationPlanLineFixedValues.md#displaytext) | string |  
+| [DisplayText](Finance.Assets.DepreciationPlanLineFixedValues.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [FixedValuePeriodMonth](Finance.Assets.DepreciationPlanLineFixedValues.md#fixedvalueperiodmonth) | byte | Month of the period for which the depreciation value is fixed. `Required` 
 | [FixedValuePeriodYear](Finance.Assets.DepreciationPlanLineFixedValues.md#fixedvalueperiodyear) | int16 | Year of the period for which the depreciation value is fixed. `Required` 
 | [Id](Finance.Assets.DepreciationPlanLineFixedValues.md#id) | guid |  
-| [ObjectVersion](Finance.Assets.DepreciationPlanLineFixedValues.md#objectversion) | int32 |  
+| [ObjectVersion](Finance.Assets.DepreciationPlanLineFixedValues.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 
 ## References
 
@@ -53,6 +53,8 @@ _Supports Order By_: **False**
 _Default Value_: **Constant**  
 
 ### DisplayText
+
+Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
 _Supported Filters_: **NotFilterable**  
@@ -82,6 +84,8 @@ _Supported Filters_: **Equals, EqualsIn**
 _Default Value_: **NewGuid**  
 
 ### ObjectVersion
+
+The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  

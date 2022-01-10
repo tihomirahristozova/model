@@ -28,9 +28,9 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [AssetLife](Finance.Assets.DepreciationPlanTemplates.md#assetlife) | int32 __nullable__ | Asset life in months by default for the depreciation plans created by this template. null means that the asset is booked for this valuation model but is not depreciated in it (i.e. no depreciation plan is created). 
-| [DisplayText](Finance.Assets.DepreciationPlanTemplates.md#displaytext) | string |  
+| [DisplayText](Finance.Assets.DepreciationPlanTemplates.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [Id](Finance.Assets.DepreciationPlanTemplates.md#id) | guid |  
-| [ObjectVersion](Finance.Assets.DepreciationPlanTemplates.md#objectversion) | int32 |  
+| [ObjectVersion](Finance.Assets.DepreciationPlanTemplates.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 
 ## References
 
@@ -53,6 +53,8 @@ _Supports Order By_: **False**
 
 ### DisplayText
 
+Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
+
 _Type_: **string**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
@@ -65,6 +67,8 @@ _Supported Filters_: **Equals, EqualsIn**
 _Default Value_: **NewGuid**  
 
 ### ObjectVersion
+
+The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  

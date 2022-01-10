@@ -29,10 +29,10 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [CalculationAlgorithm](Finance.Excise.ExciseProductCategories.md#calculationalgorithm) | [CalculationAlgorithm](Finance.Excise.ExciseProductCategories.md#calculationalgorithm) | The calculation algorithm for Tax Base. NOP=No operation - manually set Tax Base; QTY=Qty; QAS=Qty * Alcoholic strength; QAP=Qty * Alcoholic strength / 100. `Required` 
 | [Code](Finance.Excise.ExciseProductCategories.md#code) | string (32) | For EU, the product category code is a single character - B,E,I,S,T or W. `Required` `Filter(multi eq;like)` 
-| [DisplayText](Finance.Excise.ExciseProductCategories.md#displaytext) | string |  
+| [DisplayText](Finance.Excise.ExciseProductCategories.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [Id](Finance.Excise.ExciseProductCategories.md#id) | guid |  
 | [Name](Finance.Excise.ExciseProductCategories.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Multilanguage String. `Required` `Filter(like)` 
-| [ObjectVersion](Finance.Excise.ExciseProductCategories.md#objectversion) | int32 |  
+| [ObjectVersion](Finance.Excise.ExciseProductCategories.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 
 
 ## Attribute Details
@@ -66,6 +66,8 @@ _Maximum Length_: **32**
 
 ### DisplayText
 
+Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
+
 _Type_: **string**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
@@ -87,6 +89,8 @@ _Supported Filters_: **Like**
 _Supports Order By_: **False**  
 
 ### ObjectVersion
+
+The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  

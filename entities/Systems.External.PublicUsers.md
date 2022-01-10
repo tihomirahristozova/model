@@ -34,14 +34,14 @@ Aggregate Tree
 | [CompanyName](Systems.External.PublicUsers.md#companyname) | string (64) __nullable__ | The name of the company, for which the user works, as specified by the user. `Filter(like)` 
 | [Country](Systems.External.PublicUsers.md#country) | string (64) __nullable__ | The country of residence of the user, with latin letters. `Filter(like)` 
 | [CreatedOn](Systems.External.PublicUsers.md#createdon) | datetime __nullable__ | The date and time when the user was created. `Default(Now)` 
-| [DisplayText](Systems.External.PublicUsers.md#displaytext) | string |  
+| [DisplayText](Systems.External.PublicUsers.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [Email](Systems.External.PublicUsers.md#email) | string (64) | The primary email of the user. Used for notifications and password restore. `Required` `Filter(like)` 
 | [FirstName](Systems.External.PublicUsers.md#firstname) | string (64) | First name of the user. `Required` `Filter(like)` 
 | [Id](Systems.External.PublicUsers.md#id) | guid |  
 | [IsActive](Systems.External.PublicUsers.md#isactive) | boolean | Specifies whether the user account is active and access should be allowed. `Required` `Default(true)` `Filter(eq)` 
 | [LastName](Systems.External.PublicUsers.md#lastname) | string (64) | Last name of the user. `Required` `Filter(like)` 
 | [Notes](Systems.External.PublicUsers.md#notes) | string (max) __nullable__ | Notes for this PublicUser. 
-| [ObjectVersion](Systems.External.PublicUsers.md#objectversion) | int32 |  
+| [ObjectVersion](Systems.External.PublicUsers.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 | [PasswordAlgorithm](Systems.External.PublicUsers.md#passwordalgorithm) | string (16) | Uniquely specifies the password storage algorithm among some system recognized algorithms. Usually specifies the hashing and the stretching functions. For example, 'PBKDF2-SHA1'. `Required` `Filter(like)` 
 | [PasswordHash](Systems.External.PublicUsers.md#passwordhash) | string (128) | Actual password storage. The format of the contents is determined by Password Algorithm. `Required` `Filter(like)` 
 | [PasswordRecoveryCode](Systems.External.PublicUsers.md#passwordrecoverycode) | guid __nullable__ | Automatically generated unique code for the last password recovery attempt. `Filter(multi eq)` `ReadOnly` 
@@ -127,6 +127,8 @@ _Default Value_: **CurrentDateTime**
 
 ### DisplayText
 
+Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
+
 _Type_: **string**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
@@ -184,6 +186,8 @@ _Supports Order By_: **False**
 _Maximum Length_: **2147483647**  
 
 ### ObjectVersion
+
+The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  

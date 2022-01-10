@@ -28,10 +28,10 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Description](Projects.TemplateRisks.md#description) | string (max) __nullable__ | The description of this TemplateRisk. 
-| [DisplayText](Projects.TemplateRisks.md#displaytext) | string |  
+| [DisplayText](Projects.TemplateRisks.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [Id](Projects.TemplateRisks.md#id) | guid |  
 | [ImpactPercent](Projects.TemplateRisks.md#impactpercent) | decimal (3, 2) | The impact of the risk to the project, expressed as percentage of the total project value. `Required` `Default(0)` 
-| [ObjectVersion](Projects.TemplateRisks.md#objectversion) | int32 |  
+| [ObjectVersion](Projects.TemplateRisks.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 | [ProbabilityPercent](Projects.TemplateRisks.md#probabilitypercent) | decimal (3, 2) | The probability of the risk occurring. `Required` `Default(0)` 
 | [RiskName](Projects.TemplateRisks.md#riskname) | string (254) | The name of the risk. `Required` 
 
@@ -55,6 +55,8 @@ _Maximum Length_: **2147483647**
 
 ### DisplayText
 
+Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
+
 _Type_: **string**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
@@ -76,6 +78,8 @@ _Supports Order By_: **False**
 _Default Value_: **0**  
 
 ### ObjectVersion
+
+The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  

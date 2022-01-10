@@ -26,9 +26,9 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [ColumnName](Systems.Security.ColumnPermissions.md#columnname) | string (128) | The name of the secured column. `Required` `Filter(eq)` 
-| [DisplayText](Systems.Security.ColumnPermissions.md#displaytext) | string |  
+| [DisplayText](Systems.Security.ColumnPermissions.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [Id](Systems.Security.ColumnPermissions.md#id) | guid |  
-| [ObjectVersion](Systems.Security.ColumnPermissions.md#objectversion) | int32 |  
+| [ObjectVersion](Systems.Security.ColumnPermissions.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 | [TableName](Systems.Security.ColumnPermissions.md#tablename) | string (128) | The table in which is the secured column. `Required` `Filter(eq)` `ORD` 
 
 ## References
@@ -51,6 +51,8 @@ _Maximum Length_: **128**
 
 ### DisplayText
 
+Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
+
 _Type_: **string**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
@@ -63,6 +65,8 @@ _Supported Filters_: **Equals, EqualsIn**
 _Default Value_: **NewGuid**  
 
 ### ObjectVersion
+
+The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  

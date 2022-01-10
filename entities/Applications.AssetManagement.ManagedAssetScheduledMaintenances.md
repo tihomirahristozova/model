@@ -28,11 +28,11 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Date](Applications.AssetManagement.ManagedAssetScheduledMaintenances.md#date) | date __nullable__ | The date, when the maintenance is planned. null means, that the plan is not related to date, but to tracked parameter value. If both date and parameter are specified, the maintenance is performed when any of the conditions is met. `Filter(multi eq;ge;le)` 
-| [DisplayText](Applications.AssetManagement.ManagedAssetScheduledMaintenances.md#displaytext) | string |  
+| [DisplayText](Applications.AssetManagement.ManagedAssetScheduledMaintenances.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [Id](Applications.AssetManagement.ManagedAssetScheduledMaintenances.md#id) | guid |  
 | [IsDismissed](Applications.AssetManagement.ManagedAssetScheduledMaintenances.md#isdismissed) | boolean | Specifies whether the notification for the maintenance is dismissed and the planner has decided the course of action. `Required` `Default(false)` `Filter(multi eq)` 
 | [Notes](Applications.AssetManagement.ManagedAssetScheduledMaintenances.md#notes) | string (max) __nullable__ | Notes for this ManagedAssetScheduled<br />Maintenance. 
-| [ObjectVersion](Applications.AssetManagement.ManagedAssetScheduledMaintenances.md#objectversion) | int32 |  
+| [ObjectVersion](Applications.AssetManagement.ManagedAssetScheduledMaintenances.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 | [TrackedParameterValue](Applications.AssetManagement.ManagedAssetScheduledMaintenances.md#trackedparametervalue) | int32 __nullable__ | The value of the tracked parameter (as specified in the maintenance type) at which the maintenance will be performed. For example, for a car, we can schedule maintenance at 20,000 km mileage. null means, that the maintenance is not planned based on parameter, but rather only for date. If both date and parameter are specified, the maintenance is performed when any of the conditions is met. `Filter(multi eq;ge;le)` 
 
 ## References
@@ -54,6 +54,8 @@ _Supported Filters_: **Equals, GreaterThanOrLessThan, EqualsIn**
 _Supports Order By_: **False**  
 
 ### DisplayText
+
+Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
 _Supported Filters_: **NotFilterable**  
@@ -85,6 +87,8 @@ _Supports Order By_: **False**
 _Maximum Length_: **2147483647**  
 
 ### ObjectVersion
+
+The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  

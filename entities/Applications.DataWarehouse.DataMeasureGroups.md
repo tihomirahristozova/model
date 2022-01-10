@@ -28,11 +28,11 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Code](Applications.DataWarehouse.DataMeasureGroups.md#code) | string (16) | Unique group code. `Required` `Filter(eq;like)` `ORD` 
-| [DisplayText](Applications.DataWarehouse.DataMeasureGroups.md#displaytext) | string |  
+| [DisplayText](Applications.DataWarehouse.DataMeasureGroups.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [Id](Applications.DataWarehouse.DataMeasureGroups.md#id) | guid |  
 | [Name](Applications.DataWarehouse.DataMeasureGroups.md#name) | string (254) | Group name (multilanguage). `Required` `Filter(eq;like)` 
 | [Notes](Applications.DataWarehouse.DataMeasureGroups.md#notes) | string (max) __nullable__ | Notes for this DataMeasureGroup. 
-| [ObjectVersion](Applications.DataWarehouse.DataMeasureGroups.md#objectversion) | int32 |  
+| [ObjectVersion](Applications.DataWarehouse.DataMeasureGroups.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 
 ## References
 
@@ -54,6 +54,8 @@ _Supports Order By_: **True**
 _Maximum Length_: **16**  
 
 ### DisplayText
+
+Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
 _Supported Filters_: **NotFilterable**  
@@ -85,6 +87,8 @@ _Supports Order By_: **False**
 _Maximum Length_: **2147483647**  
 
 ### ObjectVersion
+
+The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  

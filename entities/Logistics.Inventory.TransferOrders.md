@@ -45,7 +45,7 @@ Aggregate Tree
 | [CreationUser](Logistics.Inventory.TransferOrders.md#creationuser) | string (64) | The login name of the user, who created the document. `Required` `Filter(like)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [DefaultDueDateIn](Logistics.Inventory.TransferOrders.md#defaultduedatein) | datetime | The date, when the goods are expected to be received in the destination warehouse. `Required` `Default(Today)` `Filter(ge;le)` 
 | [DefaultDueDateOut](Logistics.Inventory.TransferOrders.md#defaultduedateout) | datetime | When the transfer is scheduled to issue the goods from the source warehouse. `Required` `Default(Today)` `Filter(ge;le)` 
-| [DisplayText](Logistics.Inventory.TransferOrders.md#displaytext) | string |  
+| [DisplayText](Logistics.Inventory.TransferOrders.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [DocumentDate](Logistics.Inventory.TransferOrders.md#documentdate) | date | The date on which the document was issued. `Required` `Default(Today)` `Filter(eq;ge;le)` `ORD` (Inherited from [Documents](General.Documents.md)) 
 | [DocumentNo](Logistics.Inventory.TransferOrders.md#documentno) | string (20) | Document number, unique within Document_Type_Id. `Required` `Filter(eq;like)` `ORD` (Inherited from [Documents](General.Documents.md)) 
 | [DocumentNotes](Logistics.Inventory.TransferOrders.md#documentnotes) | string (max) __nullable__ | Notes for this Document. (Inherited from [Documents](General.Documents.md)) 
@@ -54,7 +54,7 @@ Aggregate Tree
 | [Id](Logistics.Inventory.TransferOrders.md#id) | guid |  
 | [IsSingleExecution](Logistics.Inventory.TransferOrders.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document. `Required` `Default(false)` `Filter(eq)` `ReadOnly` 
 | [Notes](Logistics.Inventory.TransferOrders.md#notes) | string (max) __nullable__ | Notes for this TransferOrder. 
-| [ObjectVersion](Logistics.Inventory.TransferOrders.md#objectversion) | int32 |  
+| [ObjectVersion](Logistics.Inventory.TransferOrders.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 | [ParentDocument<br />RelationshipType](Logistics.Inventory.TransferOrders.md#parentdocumentrelationshiptype) | [ParentDocument<br />RelationshipType](Logistics.Inventory.TransferOrders.md#parentdocumentrelationshiptype) __nullable__ | Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [PlanningOnly](Logistics.Inventory.TransferOrders.md#planningonly) | boolean | Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned). `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [ReadOnly](Logistics.Inventory.TransferOrders.md#readonly) | boolean | True - the document is read only; false - the document is not read only. `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
@@ -187,6 +187,8 @@ _Front-End Recalc Expressions:_
 `obj.Lines.Select( c => TransferOrderLinesRepository.DueDateOutAttribute.GetUntypedValue( c, False)).Distinct( ).OnlyIfSingle( )`
 ### DisplayText
 
+Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
+
 _Type_: **string**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
@@ -265,6 +267,8 @@ _Supports Order By_: **False**
 _Maximum Length_: **2147483647**  
 
 ### ObjectVersion
+
+The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  

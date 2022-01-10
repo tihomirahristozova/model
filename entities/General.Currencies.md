@@ -26,10 +26,10 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [CurrencySign](General.Currencies.md#currencysign) | string (4) | The international currency designator, as defined in ISO 4217. For example euro is represented as 'EUR'. `Required` `Filter(eq;like)` `ORD` 
-| [DisplayText](General.Currencies.md#displaytext) | string |  
+| [DisplayText](General.Currencies.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [Id](General.Currencies.md#id) | guid |  
 | [Name](General.Currencies.md#name) | string (50) | The name of this Currency. `Required` `Filter(like)` 
-| [ObjectVersion](General.Currencies.md#objectversion) | int32 |  
+| [ObjectVersion](General.Currencies.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 | [ShowOrder](General.Currencies.md#showorder) | int32 | The order in which to show the currency in combo boxes, etc. `Required` `Default(0)` 
 
 
@@ -46,6 +46,8 @@ _Supports Order By_: **True**
 _Maximum Length_: **4**  
 
 ### DisplayText
+
+Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
 _Supported Filters_: **NotFilterable**  
@@ -68,6 +70,8 @@ _Supports Order By_: **False**
 _Maximum Length_: **50**  
 
 ### ObjectVersion
+
+The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  

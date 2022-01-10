@@ -28,10 +28,10 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [ApplicableLegislation](General.PartyApplicableLegislations.md#applicablelegislation) | [ApplicableLegislation](General.PartyApplicableLegislations.md#applicablelegislation) | A legislation, which applies to the specified party. The list of legislations is system defined, and contains legislations for which system rules are currently defined. For example: US, UK, EU, DE, FR, ES, IT, BG, MK, RO, GR, etc. `Required` `Filter(multi eq)` `ORD` 
-| [DisplayText](General.PartyApplicableLegislations.md#displaytext) | string |  
+| [DisplayText](General.PartyApplicableLegislations.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [Id](General.PartyApplicableLegislations.md#id) | guid |  
 | [Notes](General.PartyApplicableLegislations.md#notes) | string (254) __nullable__ | Notes for this PartyApplicableLegislation. `Filter(like)` 
-| [ObjectVersion](General.PartyApplicableLegislations.md#objectversion) | int32 |  
+| [ObjectVersion](General.PartyApplicableLegislations.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 
 ## References
 
@@ -83,6 +83,8 @@ _Supports Order By_: **True**
 
 ### DisplayText
 
+Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
+
 _Type_: **string**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
@@ -104,6 +106,8 @@ _Supports Order By_: **False**
 _Maximum Length_: **254**  
 
 ### ObjectVersion
+
+The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  

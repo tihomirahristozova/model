@@ -29,9 +29,9 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [AddToInvoicedValue](Finance.Intrastat.DocumentAmountTypeSettings.md#addtoinvoicedvalue) | boolean | True= to add the amount to the invoiced value, false=otherwise. `Required` `Default(false)` 
 | [AddToStatisticalValue](Finance.Intrastat.DocumentAmountTypeSettings.md#addtostatisticalvalue) | boolean | True= to add the amount to the statistical value, false=otherwise. `Required` `Default(false)` 
-| [DisplayText](Finance.Intrastat.DocumentAmountTypeSettings.md#displaytext) | string |  
+| [DisplayText](Finance.Intrastat.DocumentAmountTypeSettings.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [Id](Finance.Intrastat.DocumentAmountTypeSettings.md#id) | guid |  
-| [ObjectVersion](Finance.Intrastat.DocumentAmountTypeSettings.md#objectversion) | int32 |  
+| [ObjectVersion](Finance.Intrastat.DocumentAmountTypeSettings.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 
 ## References
 
@@ -63,6 +63,8 @@ _Default Value_: **False**
 
 ### DisplayText
 
+Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
+
 _Type_: **string**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
@@ -75,6 +77,8 @@ _Supported Filters_: **Equals, EqualsIn**
 _Default Value_: **NewGuid**  
 
 ### ObjectVersion
+
+The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  

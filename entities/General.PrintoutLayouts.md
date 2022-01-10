@@ -27,14 +27,14 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [BinaryLayout](General.PrintoutLayouts.md#binarylayout) | byte[] __nullable__ | The printout layout, when the format requires binary storage. Alternative to Layout. 
-| [DisplayText](General.PrintoutLayouts.md#displaytext) | string |  
+| [DisplayText](General.PrintoutLayouts.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [DocumentEntityName](General.PrintoutLayouts.md#documententityname) | string (64) | The entity name of the document type e.g. Crm_Sales_Orders, Inv_Store_Orders etc. `Required` `Filter(eq)` 
 | [Id](General.PrintoutLayouts.md#id) | guid |  
 | [Layout](General.PrintoutLayouts.md#layout) | string (max) __nullable__ | The textual representation of the printout layout, when the format requires text representation. Alternative to Binary_Layout. 
 | [LayoutFormat](General.PrintoutLayouts.md#layoutformat) | string (32) | Format specifier of the layout. Recognized by the application. `Required` `Filter(multi eq)` 
 | [Name](General.PrintoutLayouts.md#name) | string (64) | The name of this PrintoutLayout. `Required` `Filter(eq;like)` `ORD` 
 | [Notes](General.PrintoutLayouts.md#notes) | string (254) __nullable__ | Notes for this PrintoutLayout. 
-| [ObjectVersion](General.PrintoutLayouts.md#objectversion) | int32 |  
+| [ObjectVersion](General.PrintoutLayouts.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 
 ## References
 
@@ -60,6 +60,8 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 
 ### DisplayText
+
+Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
 _Supported Filters_: **NotFilterable**  
@@ -121,6 +123,8 @@ _Supports Order By_: **False**
 _Maximum Length_: **254**  
 
 ### ObjectVersion
+
+The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  

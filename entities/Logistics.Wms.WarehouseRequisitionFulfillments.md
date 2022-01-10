@@ -24,11 +24,11 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [CreationTimeUtc](Logistics.Wms.WarehouseRequisitionFulfillments.md#creationtimeutc) | datetime | The exact time in UTC, when the fulfillment was created in the system. `Required` 
-| [DisplayText](Logistics.Wms.WarehouseRequisitionFulfillments.md#displaytext) | string |  
+| [DisplayText](Logistics.Wms.WarehouseRequisitionFulfillments.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [FulfillmentType](Logistics.Wms.WarehouseRequisitionFulfillments.md#fulfillmenttype) | string (1) | Type of fulfillment: P=Plan created; C=Requisition completed. `Required` 
 | [Id](Logistics.Wms.WarehouseRequisitionFulfillments.md#id) | guid |  
 | [IsFinal](Logistics.Wms.WarehouseRequisitionFulfillments.md#isfinal) | boolean | Specifies whether this fulfillment finalizes the requisition line, regardless of any remaining quantities. `Required` 
-| [ObjectVersion](Logistics.Wms.WarehouseRequisitionFulfillments.md#objectversion) | int32 |  
+| [ObjectVersion](Logistics.Wms.WarehouseRequisitionFulfillments.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 | [Quantity](Logistics.Wms.WarehouseRequisitionFulfillments.md#quantity) | decimal (12, 3) | Quantity fulfilled (in the measurement unit of the requisition line). `Required` 
 
 ## References
@@ -51,6 +51,8 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 
 ### DisplayText
+
+Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
 _Supported Filters_: **NotFilterable**  
@@ -81,6 +83,8 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 
 ### ObjectVersion
+
+The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  

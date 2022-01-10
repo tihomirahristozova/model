@@ -29,11 +29,11 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [Code](Crm.Marketing.DistributionChannels.md#code) | string (10) | Unique distribution channel code. `Required` `Filter(eq;like)` 
 | [Description](Crm.Marketing.DistributionChannels.md#description) | string (max) __nullable__ | Full description of the distribution channel. 
-| [DisplayText](Crm.Marketing.DistributionChannels.md#displaytext) | string |  
+| [DisplayText](Crm.Marketing.DistributionChannels.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [Id](Crm.Marketing.DistributionChannels.md#id) | guid |  
 | [IsActive](Crm.Marketing.DistributionChannels.md#isactive) | boolean | Is the channel active for new sales? true=Yes, false=No. `Required` `Default(true)` `Filter(eq)` 
 | [Name](Crm.Marketing.DistributionChannels.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Multi-language name of the distribution channel. `Required` `Filter(eq;like)` 
-| [ObjectVersion](Crm.Marketing.DistributionChannels.md#objectversion) | int32 |  
+| [ObjectVersion](Crm.Marketing.DistributionChannels.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 
 
 ## Attribute Details
@@ -57,6 +57,8 @@ _Supports Order By_: **False**
 _Maximum Length_: **2147483647**  
 
 ### DisplayText
+
+Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
 _Supported Filters_: **NotFilterable**  
@@ -87,6 +89,8 @@ _Supported Filters_: **Equals, Like**
 _Supports Order By_: **False**  
 
 ### ObjectVersion
+
+The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  

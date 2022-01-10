@@ -25,9 +25,9 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [CreateExpensePayments](Finance.Payments.PaymentSlipPaymentTransactionsTemplates.md#createexpensepayments) | boolean | True if the generation creates payment transactions for Payment Slip Amounts with direction Expense. `Required` `Filter(eq)` 
 | [CreateIncomePayments](Finance.Payments.PaymentSlipPaymentTransactionsTemplates.md#createincomepayments) | boolean | True if the generation creates payment transactions for Payment Slip Amounts with direction Income. `Required` `Filter(eq)` 
-| [DisplayText](Finance.Payments.PaymentSlipPaymentTransactionsTemplates.md#displaytext) | string |  
+| [DisplayText](Finance.Payments.PaymentSlipPaymentTransactionsTemplates.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [Id](Finance.Payments.PaymentSlipPaymentTransactionsTemplates.md#id) | guid |  
-| [ObjectVersion](Finance.Payments.PaymentSlipPaymentTransactionsTemplates.md#objectversion) | int32 |  
+| [ObjectVersion](Finance.Payments.PaymentSlipPaymentTransactionsTemplates.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 
 ## References
 
@@ -56,6 +56,8 @@ _Supports Order By_: **False**
 
 ### DisplayText
 
+Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
+
 _Type_: **string**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
@@ -67,6 +69,8 @@ _Indexed_: **True**
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ObjectVersion
+
+The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  

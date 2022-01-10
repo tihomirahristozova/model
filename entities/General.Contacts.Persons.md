@@ -41,7 +41,7 @@ Aggregate Tree
 | [City](General.Contacts.Persons.md#city) | [MultilanguageString](../data-types.md#multilanguagestring) __nullable__ | City from the legal registration address for the person. `Filter(like)` 
 | [CreationTime](General.Contacts.Persons.md#creationtime) | datetime __nullable__ | Date and time when the Person was created. `Filter(ge;le)` `ReadOnly` 
 | [CreationUser](General.Contacts.Persons.md#creationuser) | string (64) __nullable__ | Login name of the user, who created the Person. `Filter(like)` `ReadOnly` 
-| [DisplayText](General.Contacts.Persons.md#displaytext) | string |  
+| [DisplayText](General.Contacts.Persons.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [FirstName](General.Contacts.Persons.md#firstname) | [MultilanguageString](../data-types.md#multilanguagestring) __nullable__ | First name of the person. `Filter(eq;like)` 
 | [Gender](General.Contacts.Persons.md#gender) | [Gender](General.Contacts.Persons.md#gender) __nullable__ | Person gender. M=Male;F=Female;null=not known/not provided. `Filter(eq)` 
 | [GLN](General.Contacts.Persons.md#gln) | string (13) __nullable__ | Global Location Number used by EDI systems. `Filter(multi eq)` `ORD` (Inherited from [Parties](General.Contacts.Parties.md)) 
@@ -51,7 +51,7 @@ Aggregate Tree
 | [MiddleName](General.Contacts.Persons.md#middlename) | [MultilanguageString](../data-types.md#multilanguagestring) __nullable__ | Middle name of the person. `Filter(eq;like)` 
 | [NationalNumber](General.Contacts.Persons.md#nationalnumber) | string (14) __nullable__ | Government assigned unique personal number. null means unknown. `Filter(eq;like)` 
 | [Notes](General.Contacts.Persons.md#notes) | string (254) __nullable__ | Internal notes for the person. 
-| [ObjectVersion](General.Contacts.Persons.md#objectversion) | int32 |  
+| [ObjectVersion](General.Contacts.Persons.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 | [PartyCode](General.Contacts.Persons.md#partycode) | string (16) | The unique code of the party. `Required` `Filter(eq;like)` `ORD` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md)) 
 | [PartyCreationTime](General.Contacts.Persons.md#partycreationtime) | datetime __nullable__ | Date and time when the Party was created. `Filter(ge;le)` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md)) 
 | [PartyCreationUser](General.Contacts.Persons.md#partycreationuser) | string (64) __nullable__ | Login name of the user, who created the Party. `Filter(like)` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md)) 
@@ -128,6 +128,8 @@ _Supports Order By_: **False**
 _Maximum Length_: **64**  
 
 ### DisplayText
+
+Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
 _Supported Filters_: **NotFilterable**  
@@ -218,6 +220,8 @@ _Supports Order By_: **False**
 _Maximum Length_: **254**  
 
 ### ObjectVersion
+
+The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  

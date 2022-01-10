@@ -29,11 +29,11 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [DepreciationValue](Finance.Assets.AssetTransactionLines.md#depreciationvalue) | [Amount (14, 2)](../data-types.md#amount) | Change in the depreciation value of the asset (in the currency of the asset). `Currency: Asset.ValuationCurrency` `Required` `Default(0)` 
 | [DepreciationValueBase](Finance.Assets.AssetTransactionLines.md#depreciationvaluebase) | [Amount (14, 2)](../data-types.md#amount) | Change in the depreciation value of the asset (in the currency of the enterprise company). `Currency: Asset.EnterpriseCompany.BaseCurrency` `Required` `Default(0)` 
-| [DisplayText](Finance.Assets.AssetTransactionLines.md#displaytext) | string |  
+| [DisplayText](Finance.Assets.AssetTransactionLines.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [Id](Finance.Assets.AssetTransactionLines.md#id) | guid |  
 | [NegativeReserveValue](Finance.Assets.AssetTransactionLines.md#negativereservevalue) | [Amount (14, 2)](../data-types.md#amount) | Change in the value of the negative reserve after asset valuations (in the currency of the asset). `Currency: Asset.ValuationCurrency` `Required` `Default(0)` 
 | [NegativeReserveValueBase](Finance.Assets.AssetTransactionLines.md#negativereservevaluebase) | [Amount (14, 2)](../data-types.md#amount) | Change in the value of the negative reserve after asset valuations (in the currency of the enterprise company). `Currency: Asset.EnterpriseCompany.BaseCurrency` `Required` `Default(0)` 
-| [ObjectVersion](Finance.Assets.AssetTransactionLines.md#objectversion) | int32 |  
+| [ObjectVersion](Finance.Assets.AssetTransactionLines.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 | [OperationType](Finance.Assets.AssetTransactionLines.md#operationtype) | [OperationType](Finance.Assets.AssetTransactionLines.md#operationtype) | Type of the current asset operation: PUR = Purchase, SLS = Sale, DEP = Depreciation, ADJ = Adjustment, REV = Reevaluation. `Required` `Default("ADJ")` `Filter(multi eq)` 
 | [PositiveReserveValue](Finance.Assets.AssetTransactionLines.md#positivereservevalue) | [Amount (14, 2)](../data-types.md#amount) | Change in the value of the positive reserve after asset valuations (in the currency of the asset). `Currency: Asset.ValuationCurrency` `Required` `Default(0)` 
 | [PositiveReserveValueBase](Finance.Assets.AssetTransactionLines.md#positivereservevaluebase) | [Amount (14, 2)](../data-types.md#amount) | Change in the value of the positive reserve after asset valuations (in the currency of the enterprise company). `Currency: Asset.EnterpriseCompany.BaseCurrency` `Required` `Default(0)` 
@@ -77,6 +77,8 @@ _Front-End Recalc Expressions:_
 `obj.DepreciationValue.ConvertTo( obj.Asset.EnterpriseCompany.BaseCurrency, obj.AssetTransaction.CurrencyDirectory)`
 ### DisplayText
 
+Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
+
 _Type_: **string**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
@@ -111,6 +113,8 @@ _Default Value_: **Constant**
 _Front-End Recalc Expressions:_  
 `obj.NegativeReserveValue.ConvertTo( obj.Asset.EnterpriseCompany.BaseCurrency, obj.AssetTransaction.CurrencyDirectory)`
 ### ObjectVersion
+
+The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  

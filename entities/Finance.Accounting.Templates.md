@@ -27,10 +27,10 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DisplayText](Finance.Accounting.Templates.md#displaytext) | string |  
+| [DisplayText](Finance.Accounting.Templates.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [Id](Finance.Accounting.Templates.md#id) | guid |  
 | [Name](Finance.Accounting.Templates.md#name) | string (254) | The name of this Template. `Required` `Filter(like)` 
-| [ObjectVersion](Finance.Accounting.Templates.md#objectversion) | int32 |  
+| [ObjectVersion](Finance.Accounting.Templates.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 | [VoucherDateSource](Finance.Accounting.Templates.md#voucherdatesource) | string (2000) __nullable__ | Determines the source for the document date of the generated voucher. If not specified the voucher date is set as usual. 
 | [VoucherDescriptionMask](Finance.Accounting.Templates.md#voucherdescriptionmask) | string (max) __nullable__ | Template voucher description. Can use field substitutes, surrounded with square brackets. 
 
@@ -50,6 +50,8 @@ Aggregate Root:
 ## Attribute Details
 
 ### DisplayText
+
+Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
 _Supported Filters_: **NotFilterable**  
@@ -72,6 +74,8 @@ _Supports Order By_: **False**
 _Maximum Length_: **254**  
 
 ### ObjectVersion
+
+The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  

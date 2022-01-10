@@ -28,11 +28,11 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Code](Crm.PriceTypes.md#code) | string (16) | Short identification code of the price type. `Required` `Filter(eq)` `ORD` 
-| [DisplayText](Crm.PriceTypes.md#displaytext) | string |  
+| [DisplayText](Crm.PriceTypes.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [Id](Crm.PriceTypes.md#id) | guid |  
 | [Name](Crm.PriceTypes.md#name) | string (254) | Full name of the price type. `Required` `Filter(eq;like)` 
 | [Notes](Crm.PriceTypes.md#notes) | string (max) __nullable__ | Notes for this PriceType. 
-| [ObjectVersion](Crm.PriceTypes.md#objectversion) | int32 |  
+| [ObjectVersion](Crm.PriceTypes.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 | [OrdinalPos](Crm.PriceTypes.md#ordinalpos) | int32 | Priority position of the price type, with respect to the other price types. `Required` `ORD` 
 
 
@@ -49,6 +49,8 @@ _Supports Order By_: **True**
 _Maximum Length_: **16**  
 
 ### DisplayText
+
+Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
 _Supported Filters_: **NotFilterable**  
@@ -80,6 +82,8 @@ _Supports Order By_: **False**
 _Maximum Length_: **2147483647**  
 
 ### ObjectVersion
+
+The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  

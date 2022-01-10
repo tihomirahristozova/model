@@ -83,7 +83,7 @@
 <p>Depreciation methods. Contains both system-defined and user-defined methods. Entity: Ast_Depreciation_Methods</p>
 <h2 id="default-visualization">Default Visualization</h2>
 <p>Default Display Text Format:<br>
-<em>{Name}</em><br>
+<em>{Name:T}</em><br>
 Default Search Members:<br>
 <em>Name</em><br>
 Name Data Member:<br>
@@ -112,7 +112,7 @@ Name Data Member:<br>
 <tr>
 <td><a href="Finance.Assets.DepreciationMethods.html#displaytext">DisplayText</a></td>
 <td>string</td>
-<td></td>
+<td>Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.</td>
 </tr>
 <tr>
 <td><a href="Finance.Assets.DepreciationMethods.html#factor">Factor</a></td>
@@ -136,13 +136,13 @@ Name Data Member:<br>
 </tr>
 <tr>
 <td><a href="Finance.Assets.DepreciationMethods.html#name">Name</a></td>
-<td>string (254)</td>
-<td>The name of this DepreciationMethod. <code>Required</code> <code>Filter(like)</code></td>
+<td><a href="../data-types.html#multilanguagestring">MultilanguageString</a></td>
+<td>The name of this DepreciationMethod(Multilanguage string).. <code>Required</code> <code>Filter(like)</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Assets.DepreciationMethods.html#objectversion">ObjectVersion</a></td>
 <td>int32</td>
-<td></td>
+<td>The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.</td>
 </tr>
 <tr>
 <td><a href="Finance.Assets.DepreciationMethods.html#perioddeterminationmethod">PeriodDeterminationMethod</a></td>
@@ -192,6 +192,7 @@ Allowed values for the <code>DepreciationFunction</code>(Finance.Assets.Deprecia
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>StraightLine</strong></p>
 <h3 id="displaytext">DisplayText</h3>
+<p>Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.</p>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: ****</p>
@@ -219,12 +220,12 @@ Allowed values for the <code>DepreciationFunction</code>(Finance.Assets.Deprecia
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>12</strong></p>
 <h3 id="name">Name</h3>
-<p>The name of this DepreciationMethod. <code>Required</code> <code>Filter(like)</code></p>
-<p><em>Type</em>: <strong>string (254)</strong><br>
+<p>The name of this DepreciationMethod(Multilanguage string).. <code>Required</code> <code>Filter(like)</code></p>
+<p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a></strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Maximum Length</em>: <strong>254</strong></p>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="objectversion">ObjectVersion</h3>
+<p>The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.</p>
 <p><em>Type</em>: <strong>int32</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: ****</p>

@@ -29,11 +29,11 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Code](Applications.Service.Services.md#code) | string (16) | Unique code of the service. `Required` `Filter(eq;like)` 
-| [DisplayText](Applications.Service.Services.md#displaytext) | string |  
+| [DisplayText](Applications.Service.Services.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [Id](Applications.Service.Services.md#id) | guid |  
 | [IsActive](Applications.Service.Services.md#isactive) | boolean | Indicates wheather this service is currently used. `Required` `Default(true)` `Filter(eq)` 
 | [Name](Applications.Service.Services.md#name) | string (254) | The name of the service. `Required` `Filter(eq;like)` 
-| [ObjectVersion](Applications.Service.Services.md#objectversion) | int32 |  
+| [ObjectVersion](Applications.Service.Services.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 
 ## References
 
@@ -60,6 +60,8 @@ _Supports Order By_: **False**
 _Maximum Length_: **16**  
 
 ### DisplayText
+
+Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
 _Supported Filters_: **NotFilterable**  
@@ -91,6 +93,8 @@ _Supports Order By_: **False**
 _Maximum Length_: **254**  
 
 ### ObjectVersion
+
+The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  

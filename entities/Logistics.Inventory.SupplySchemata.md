@@ -26,10 +26,10 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DisplayText](Logistics.Inventory.SupplySchemata.md#displaytext) | string |  
+| [DisplayText](Logistics.Inventory.SupplySchemata.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [Id](Logistics.Inventory.SupplySchemata.md#id) | guid |  
 | [Name](Logistics.Inventory.SupplySchemata.md#name) | string (254) | The name of this SupplySchema. `Required` 
-| [ObjectVersion](Logistics.Inventory.SupplySchemata.md#objectversion) | int32 |  
+| [ObjectVersion](Logistics.Inventory.SupplySchemata.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 
 ## Child Collections
 
@@ -41,6 +41,8 @@ Aggregate Tree
 ## Attribute Details
 
 ### DisplayText
+
+Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
 _Supported Filters_: **NotFilterable**  
@@ -63,6 +65,8 @@ _Supports Order By_: **False**
 _Maximum Length_: **254**  
 
 ### ObjectVersion
+
+The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  

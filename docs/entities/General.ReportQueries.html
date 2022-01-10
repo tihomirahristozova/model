@@ -112,7 +112,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.ReportQueries.html#displaytext">DisplayText</a></td>
 <td>string</td>
-<td></td>
+<td>Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.</td>
 </tr>
 <tr>
 <td><a href="General.ReportQueries.html#extensionslist">ExtensionsList</a></td>
@@ -132,7 +132,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.ReportQueries.html#objectversion">ObjectVersion</a></td>
 <td>int32</td>
-<td></td>
+<td>The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.</td>
 </tr>
 <tr>
 <td><a href="General.ReportQueries.html#referencepath">ReferencePath</a></td>
@@ -186,6 +186,7 @@ Aggregate Root:<br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
 <h3 id="displaytext">DisplayText</h3>
+<p>Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.</p>
 <p><em>Type</em>: <strong>string</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: ****</p>
@@ -206,6 +207,7 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="objectversion">ObjectVersion</h3>
+<p>The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.</p>
 <p><em>Type</em>: <strong>int32</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: ****</p>

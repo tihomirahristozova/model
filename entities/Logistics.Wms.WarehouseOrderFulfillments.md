@@ -24,10 +24,10 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [CreationTimeUtc](Logistics.Wms.WarehouseOrderFulfillments.md#creationtimeutc) | datetime | The exact time in UTC, when the fulfillment was created in the system. `Required` 
-| [DisplayText](Logistics.Wms.WarehouseOrderFulfillments.md#displaytext) | string |  
+| [DisplayText](Logistics.Wms.WarehouseOrderFulfillments.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [Id](Logistics.Wms.WarehouseOrderFulfillments.md#id) | guid |  
 | [IsFinal](Logistics.Wms.WarehouseOrderFulfillments.md#isfinal) | boolean | Specifies whether this fulfillment will finalize the fulfillment of the order line, regardless of any remaining quantities. `Required` 
-| [ObjectVersion](Logistics.Wms.WarehouseOrderFulfillments.md#objectversion) | int32 |  
+| [ObjectVersion](Logistics.Wms.WarehouseOrderFulfillments.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 | [Quantity](Logistics.Wms.WarehouseOrderFulfillments.md#quantity) | decimal (12, 3) | Fulfilled quantity in the measurement unit of the warehouse order line. `Required` 
 
 ## References
@@ -51,6 +51,8 @@ _Supports Order By_: **False**
 
 ### DisplayText
 
+Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
+
 _Type_: **string**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
@@ -71,6 +73,8 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 
 ### ObjectVersion
+
+The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  

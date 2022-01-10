@@ -30,10 +30,10 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [Code](Crm.Marketing.TargetGroups.md#code) | string (16) | Short code for identification of target groups. `Required` `Filter(eq;like)` `ORD` 
 | [Description](Crm.Marketing.TargetGroups.md#description) | string (254) __nullable__ | The description of this TargetGroup. 
-| [DisplayText](Crm.Marketing.TargetGroups.md#displaytext) | string |  
+| [DisplayText](Crm.Marketing.TargetGroups.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [Id](Crm.Marketing.TargetGroups.md#id) | guid |  
 | [Name](Crm.Marketing.TargetGroups.md#name) | string (64) | The name of this TargetGroup. `Required` `Filter(like)` 
-| [ObjectVersion](Crm.Marketing.TargetGroups.md#objectversion) | int32 |  
+| [ObjectVersion](Crm.Marketing.TargetGroups.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 
 ## Child Collections
 
@@ -65,6 +65,8 @@ _Maximum Length_: **254**
 
 ### DisplayText
 
+Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
+
 _Type_: **string**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
@@ -86,6 +88,8 @@ _Supports Order By_: **False**
 _Maximum Length_: **64**  
 
 ### ObjectVersion
+
+The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
 _Supported Filters_: **NotFilterable**  
