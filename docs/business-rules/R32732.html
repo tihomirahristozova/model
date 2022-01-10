@@ -126,11 +126,11 @@ then the 'CoveredOrderAmount' field must be equal to 0 as well.</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>
-<td>In Payment Slip Line, covering payment order
-'{PaymentSlipLine.PaymentOrder.DocumentText}', the Amount is set as 0
-but the Covered Amount is different from 0.
-<br><br>
-Please, check the amounts and make sure that Currency Directory is set.</td>
+<td>In Payment Slip Line, covering payment order for the referenced document
+'{PaymentSlipLine.PaymentOrder.RefDocumentType} + &quot; &quot; +
+{PaymentSlipLine.PaymentOrder.RefDocumentNo} + &quot; - &quot;  +
+{PaymentSlipLine.PaymentOrder.RefDocumentDate.Date)}', the Amount is set as 0
+but the Covered Amount is different from 0.</td>
 </tr>
 <tr>
 <td><strong>Version</strong></td>
