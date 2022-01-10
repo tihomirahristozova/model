@@ -260,6 +260,11 @@ Human or robot worker, which should execute the operation. null means that the l
 _Type_: **[WarehouseWorkers](Logistics.Wms.WarehouseWorkers.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
+_Back-End Default Expression:_  
+`obj.WarehouseOrder.WarehouseWorker`
+
+_Front-End Recalc Expressions:_  
+`obj.WarehouseOrder.WarehouseWorker`
 ### WarehouseZone
 
 The warehouse zone, in which the operation should be performed. null for operations which do not require specific zone. `Filter(multi eq)`

@@ -499,6 +499,8 @@ When set, denotes that the whole order is assigned to the specified worker. `Fil
 _Type_: **[WarehouseWorkers](Logistics.Wms.WarehouseWorkers.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
+_Front-End Recalc Expressions:_  
+`obj.Lines.Select( c => c.WarehouseWorker).Distinct( ).OnlyIfSingle( )`
 
 ## API Methods
 

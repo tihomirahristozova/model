@@ -34,12 +34,15 @@ Aggregate Root:
 | [LineStartDateTime](Applications.Service.ServiceAgreementLines.md#linestartdatetime) | datetime | The starting date and time of the agreement coverage for the current line. `Required` `Filter(ge;le)` 
 | [Notes](Applications.Service.ServiceAgreementLines.md#notes) | string (254) __nullable__ | Notes for this ServiceAgreementLine. 
 | [ObjectVersion](Applications.Service.ServiceAgreementLines.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
+| [ParentLineNo](Applications.Service.ServiceAgreementLines.md#parentlineno) | int32 __nullable__ | The number of the line within the parent document, which the current line executes. null when the current line does not execute another line. `Introduced in version 22.1.5.18` 
 | [Quantity](Applications.Service.ServiceAgreementLines.md#quantity) | decimal (14, 3) | The quantity of the service object that is included in the agreement. `Required` `Default(1)` `Filter(ge;le)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [Document](Applications.Service.ServiceAgreementLines.md#document) | [ServiceAgreements](Applications.Service.ServiceAgreements.md) | The <see cref="ServiceAgreement"/> to which this ServiceAgreementLine belongs. `Required` `Filter(multi eq)` |
+| [ParentDocument](Applications.Service.ServiceAgreementLines.md#parentdocument) | [Documents](General.Documents.md) (nullable) | The document, which the current line executes. null when the current line does not execute another line. `Filter(multi eq)` |
 | [ServiceAgreement](Applications.Service.ServiceAgreementLines.md#serviceagreement) | [ServiceAgreements](Applications.Service.ServiceAgreements.md) | The <see cref="ServiceAgreement"/> to which this ServiceAgreementLine belongs. `Required` `Filter(multi eq)` `Owner` |
 | [ServiceObject](Applications.Service.ServiceAgreementLines.md#serviceobject) | [ServiceObjects](Applications.Service.ServiceObjects.md) | The service object, which is covered by the current agreement. `Required` `Filter(multi eq)` |
 | [ServiceType](Applications.Service.ServiceAgreementLines.md#servicetype) | [ServiceTypes](Applications.Service.ServiceTypes.md) | The type (level) of service that is agreed. `Required` `Filter(multi eq)` |
@@ -118,6 +121,14 @@ _Type_: **int32**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
+### ParentLineNo
+
+The number of the line within the parent document, which the current line executes. null when the current line does not execute another line. `Introduced in version 22.1.5.18`
+
+_Type_: **int32 __nullable__**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+
 ### Quantity
 
 The quantity of the service object that is included in the agreement. `Required` `Default(1)` `Filter(ge;le)`
@@ -129,6 +140,21 @@ _Default Value_: **1**
 
 
 ## Reference Details
+
+### Document
+
+The <see cref="ServiceAgreement"/> to which this ServiceAgreementLine belongs. `Required` `Filter(multi eq)`
+
+_Type_: **[ServiceAgreements](Applications.Service.ServiceAgreements.md)**  
+_Indexed_: **True**  
+_Supported Filters_: **Equals, EqualsIn**  
+
+### ParentDocument
+
+The document, which the current line executes. null when the current line does not execute another line. `Filter(multi eq)`
+
+_Type_: **[Documents](General.Documents.md) (nullable)**  
+_Supported Filters_: **Equals, EqualsIn**  
 
 ### ServiceAgreement
 

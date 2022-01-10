@@ -49,6 +49,7 @@ Aggregate Tree
 | [AssignedToSalesPerson](Crm.Presales.Leads.md#assignedtosalesperson) | [SalesPersons](Crm.SalesPersons.md) (nullable) | Sales rep to whom this lead is assigned for further processing. null - not yet assigned. `Filter(multi eq)` |
 | [Campaign](Crm.Presales.Leads.md#campaign) | [Campaigns](Crm.Marketing.Campaigns.md) | The marketing campaign under which the lead was generated. `Required` `Filter(multi eq)` |
 | [ConvertedToDeal](Crm.Presales.Leads.md#convertedtodeal) | [Deals](Crm.Presales.Deals.md) (nullable) | Filled when the lead is converted to opportunity (deal). `Filter(multi eq)` |
+| [EnterpriseCompany](Crm.Presales.Leads.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company to which this lead belongs. `Required` `Filter(multi eq)` `Introduced in version 22.1.5.23` |
 | [IdentifiedCompany](Crm.Presales.Leads.md#identifiedcompany) | [Companies](General.Contacts.Companies.md) (nullable) | Filled when the company is identified within our database. `Filter(multi eq)` |
 | [IdentifiedPerson](Crm.Presales.Leads.md#identifiedperson) | [Persons](General.Contacts.Persons.md) (nullable) | Filled when the person is identified and recorded in our master records. `Filter(multi eq)` |
 | [LeadUserStage](Crm.Presales.Leads.md#leaduserstage) | [LeadUserStages](Crm.Presales.LeadUserStages.md) (nullable) | The user-defined sub-stage of the lead. This also defines the step in the sales sequence and the next appropriate activity to engage the lead. null when the user stage is undefined (the pure System Stage defines the stage). `Filter(multi eq)` |
@@ -235,6 +236,13 @@ _Supported Filters_: **Equals, EqualsIn**
 Filled when the lead is converted to opportunity (deal). `Filter(multi eq)`
 
 _Type_: **[Deals](Crm.Presales.Deals.md) (nullable)**  
+_Supported Filters_: **Equals, EqualsIn**  
+
+### EnterpriseCompany
+
+The enterprise company to which this lead belongs. `Required` `Filter(multi eq)` `Introduced in version 22.1.5.23`
+
+_Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### IdentifiedCompany

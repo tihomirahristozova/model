@@ -404,6 +404,10 @@ Allowed values for the <code>TaskType</code>(Logistics.Wms.WarehouseOrderLines.m
 <p>Human or robot worker, which should execute the operation. null means that the line is shared among all workers, assigned to the order. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Logistics.Wms.WarehouseWorkers.html">WarehouseWorkers</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<p><em>Back-End Default Expression:</em><br>
+<code>obj.WarehouseOrder.WarehouseWorker</code></p>
+<p><em>Front-End Recalc Expressions:</em><br>
+<code>obj.WarehouseOrder.WarehouseWorker</code></p>
 <h3 id="warehousezone">WarehouseZone</h3>
 <p>The warehouse zone, in which the operation should be performed. null for operations which do not require specific zone. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Logistics.Wms.WarehouseZones.html">WarehouseZones</a> (nullable)</strong><br>

@@ -719,6 +719,8 @@ Enumeration of document system states<br>
 <p>When set, denotes that the whole order is assigned to the specified worker. <code>Filter(multi eq)</code> <code>Introduced in version 21.1.1.18</code></p>
 <p><em>Type</em>: <strong><a href="Logistics.Wms.WarehouseWorkers.html">WarehouseWorkers</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<p><em>Front-End Recalc Expressions:</em><br>
+<code>obj.Lines.Select( c =&gt; c.WarehouseWorker).Distinct( ).OnlyIfSingle( )</code></p>
 <h2 id="api-methods">API Methods</h2>
 <p>Methods that can be invoked in public APIs.</p>
 <h3 id="changestate">ChangeState</h3>

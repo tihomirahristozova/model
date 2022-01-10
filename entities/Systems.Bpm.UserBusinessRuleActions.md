@@ -76,6 +76,7 @@ _Allowed Values (Systems.Bpm.UserBusinessRuleActionsRepository.ActionType Enum M
 | SENDMAIL | SENDMAIL value. Stored as 'SENDMAIL'. <br /> _Database Value:_ 'SENDMAIL' <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'SENDMAIL' |
 | WARNING | WARNING value. Stored as 'WARNING'. <br /> _Database Value:_ 'WARNING' <br /> _Model Value:_ 3 <br /> _Domain API Value:_ 'WARNING' |
 | NOTIFYUSER | NOTIFYUSER value. Stored as 'NOTIFYUSER'. <br /> _Database Value:_ 'NOTIFYUSER' <br /> _Model Value:_ 4 <br /> _Domain API Value:_ 'NOTIFYUSER' |
+| WEBHOOK | WEBHOOK value. Stored as 'WEBHOOK'. <br /> _Database Value:_ 'WEBHOOK' <br /> _Model Value:_ 5 <br /> _Domain API Value:_ 'WEBHOOK' |
 
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  

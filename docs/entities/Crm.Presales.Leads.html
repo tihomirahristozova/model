@@ -212,6 +212,11 @@ Name Data Member:<br>
 <td>Filled when the lead is converted to opportunity (deal). <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
+<td><a href="Crm.Presales.Leads.html#enterprisecompany">EnterpriseCompany</a></td>
+<td><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a></td>
+<td>The enterprise company to which this lead belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Introduced in version 22.1.5.23</code></td>
+</tr>
+<tr>
 <td><a href="Crm.Presales.Leads.html#identifiedcompany">IdentifiedCompany</a></td>
 <td><a href="General.Contacts.Companies.html">Companies</a> (nullable)</td>
 <td>Filled when the company is identified within our database. <code>Filter(multi eq)</code></td>
@@ -391,6 +396,10 @@ Allowed values for the <code>SystemStage</code>(Crm.Presales.Leads.md#systemstag
 <h3 id="convertedtodeal">ConvertedToDeal</h3>
 <p>Filled when the lead is converted to opportunity (deal). <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Crm.Presales.Deals.html">Deals</a> (nullable)</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<h3 id="enterprisecompany">EnterpriseCompany</h3>
+<p>The enterprise company to which this lead belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Introduced in version 22.1.5.23</code></p>
+<p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a></strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="identifiedcompany">IdentifiedCompany</h3>
 <p>Filled when the company is identified within our database. <code>Filter(multi eq)</code></p>
