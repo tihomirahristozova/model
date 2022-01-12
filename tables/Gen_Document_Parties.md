@@ -17,7 +17,7 @@ Represents a party associated to a document. Entity: Gen_Document_Parties (Intro
 | - | - | --- |
 |[__Object_Version](#__object_version)|`int` ||
 |[Document_Id](#document_id)|`uniqueidentifier` |The document in which the party plays a role.|
-|[Document_Party_Id](#document_party_id)|`uniqueidentifier` `PK`||
+|[Document_Party_Id](#document_party_id)|`uniqueidentifier` `PK`|Document Party|
 |[Notes](#notes)|`nvarchar(max)` ||
 |[Party_Id](#party_id)|`uniqueidentifier` |The party, which plays a role in the document.|
 |[Role_Id](#role_id)|`uniqueidentifier` |The role of the party in the document.|
@@ -90,6 +90,9 @@ The document in which the party plays a role.
 |Equals|`NULL`|no|no|
 
 ### Document_Party_Id
+
+
+Document Party
 
 | Property | Value |
 | - | - |

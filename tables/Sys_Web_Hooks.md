@@ -59,6 +59,7 @@ The body of the POST request (interpolated string).
 
 | Property | Value |
 | - | - |
+|Attributes|IsLongString|
 |Auto Complete|no|
 |Data Filter|no|
 |Default Value|None|
@@ -123,6 +124,7 @@ Optional headers for the request (interpolated string). Each header is specified
 
 | Property | Value |
 | - | - |
+|Attributes|IsLongString|
 |Auto Complete|no|
 |Data Filter|no|
 |Default Value|None|
@@ -186,6 +188,7 @@ Webhook name (multi-language).
 
 | Property | Value |
 | - | - |
+|Attributes|IsLongString|
 |Auto Complete|no|
 |Data Filter|no|
 |Default Value|None|

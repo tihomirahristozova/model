@@ -12,8 +12,8 @@ Represents the different possible roles of a party associated to a document. Ent
 | Name | Type | Description |
 | - | - | --- |
 |[__Object_Version](#__object_version)|`int` ||
-|[Code](#code)|`nvarchar(32)` ||
-|[Document_Party_Role_Id](#document_party_role_id)|`uniqueidentifier` `PK`||
+|[Code](#code)|`nvarchar(32)` |Code|
+|[Document_Party_Role_Id](#document_party_role_id)|`uniqueidentifier` `PK`|Document Party Role|
 |[Name](#name)|`nvarchar(254)` `ML`|Party role name (multi-language).|
 |[Notes](#notes)|`nvarchar(max)` ||
 |[Row_Version](#row_version)|`timestamp` ||
@@ -49,6 +49,9 @@ Represents the different possible roles of a party associated to a document. Ent
 
 ### Code
 
+
+Code
+
 | Property | Value |
 | - | - |
 |Auto Complete|no|
@@ -82,6 +85,9 @@ Represents the different possible roles of a party associated to a document. Ent
 |Like|None|no|no|
 
 ### Document_Party_Role_Id
+
+
+Document Party Role
 
 | Property | Value |
 | - | - |
