@@ -27,6 +27,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [Active](Production.Resources.Operations.md#active) | boolean | Indicates whether the current operation is active. `Required` `Default(true)` `Filter(eq)` `Introduced in version 22.1.5.26` 
 | [Description](Production.Resources.Operations.md#description) | string (max) __nullable__ | The description of this Operation. 
 | [DisplayText](Production.Resources.Operations.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [Id](Production.Resources.Operations.md#id) | guid |  
@@ -52,6 +53,15 @@ Aggregate Root:
 
 
 ## Attribute Details
+
+### Active
+
+Indicates whether the current operation is active. `Required` `Default(true)` `Filter(eq)` `Introduced in version 22.1.5.26`
+
+_Type_: **boolean**  
+_Supported Filters_: **Equals**  
+_Supports Order By_: **False**  
+_Default Value_: **True**  
 
 ### Description
 

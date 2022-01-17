@@ -110,12 +110,12 @@ __</p>
 <tr>
 <td><a href="Logistics.Wms.WarehouseAvailabilityView.html#quantitybaseavailable">QuantityBaseAvailable</a></td>
 <td>decimal (38, 3)</td>
-<td>Currently available quantity in base measurement unit. <code>Required</code></td>
+<td>Currently available quantity in base measurement unit. <code>Required</code> <code>Introduced in version 22.1.5.25</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Wms.WarehouseAvailabilityView.html#standardquantityavailable">StandardQuantityAvailable</a></td>
 <td>decimal (38, 3)</td>
-<td>Currently available theoretical quantity according to the measurement dimensions of the product. It can be used to calculate the quantity available in fixed measurement units like pieces. <code>Required</code></td>
+<td>Currently available theoretical quantity according to the measurement dimensions of the product. It can be used to calculate the quantity available in fixed measurement units like pieces. <code>Required</code> <code>Introduced in version 22.1.5.25</code></td>
 </tr>
 </tbody>
 </table>
@@ -184,12 +184,12 @@ __</p>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="quantitybaseavailable">QuantityBaseAvailable</h3>
-<p>Currently available quantity in base measurement unit. <code>Required</code></p>
+<p>Currently available quantity in base measurement unit. <code>Required</code> <code>Introduced in version 22.1.5.25</code></p>
 <p><em>Type</em>: <strong>decimal (38, 3)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="standardquantityavailable">StandardQuantityAvailable</h3>
-<p>Currently available theoretical quantity according to the measurement dimensions of the product. It can be used to calculate the quantity available in fixed measurement units like pieces. <code>Required</code></p>
+<p>Currently available theoretical quantity according to the measurement dimensions of the product. It can be used to calculate the quantity available in fixed measurement units like pieces. <code>Required</code> <code>Introduced in version 22.1.5.25</code></p>
 <p><em>Type</em>: <strong>decimal (38, 3)</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -238,7 +238,6 @@ __</p>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="warehouse">Warehouse</h3>
 <p><em>Type</em>: <strong><a href="Logistics.Wms.Warehouses.html">Warehouses</a></strong><br>
-<em>Indexed</em>: <strong>True</strong><br>
 <em>Inherited From</em>: <strong>Wms_Warehouses_Table.Warehouse_Id</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>

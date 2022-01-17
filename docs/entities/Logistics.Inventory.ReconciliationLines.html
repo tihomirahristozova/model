@@ -313,6 +313,8 @@ Aggregate Root:<br>
 <p>Item serial number for serialized items. null for non-serializable items. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Logistics.Inventory.SerialNumbers.html">SerialNumbers</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<p><em>Front-End Recalc Expressions:</em><br>
+<code>IIF( ( Not( obj.Product.IsSerialized) OrElse ( ( obj.SerialNumber != null) AndAlso ( obj.Product != obj.SerialNumber.Product))), null, obj.SerialNumber)</code></p>
 <h3 id="store">Store</h3>
 <p>The store, containing the reconciled product. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Logistics.Inventory.Stores.html">Stores</a></strong><br>
@@ -373,6 +375,7 @@ The skip clause - default is 0<br>
 <p>None</p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>
 <ul>
+<li><a href="../business-rules/R30707-2.html">R30707-2 Reconciliation Line - Set Serial Number (Recalc)</a></li>
 <li><a href="../business-rules/R31387-1.html">R31387-1 Reconciliation Line - Set Quantity Base (Recalc)</a></li>
 <li><a href="../business-rules/R31387-2.html">R31387-2 Reconciliation Line - Set Standard Quantity Base (Recalc)</a></li>
 <li><a href="../business-rules/R31387-3.html">R31387-3 Reconciliation Line - Set Store (Recalc)</a></li>

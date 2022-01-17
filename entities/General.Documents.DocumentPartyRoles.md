@@ -27,7 +27,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](General.Documents.DocumentPartyRoles.md#code) | string (32) | The unique code of the DocumentPartyRole. `Required` `Filter(eq;like)` `ORD` 
+| [Code](General.Documents.DocumentPartyRoles.md#code) | string (32) | Code. `Required` `Filter(eq;like)` `ORD` 
 | [DisplayText](General.Documents.DocumentPartyRoles.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [Id](General.Documents.DocumentPartyRoles.md#id) | guid |  
 | [Name](General.Documents.DocumentPartyRoles.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Party role name (multi-language). `Required` `Filter(eq;like)` 
@@ -39,7 +39,7 @@ Aggregate Tree
 
 ### Code
 
-The unique code of the DocumentPartyRole. `Required` `Filter(eq;like)` `ORD`
+Code. `Required` `Filter(eq;like)` `ORD`
 
 _Type_: **string (32)**  
 _Indexed_: **True**  

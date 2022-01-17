@@ -209,6 +209,8 @@ Item serial number for serialized items. null for non-serializable items. `Filte
 _Type_: **[SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
+_Front-End Recalc Expressions:_  
+`IIF( ( Not( obj.Product.IsSerialized) OrElse ( ( obj.SerialNumber != null) AndAlso ( obj.Product != obj.SerialNumber.Product))), null, obj.SerialNumber)`
 ### Store
 
 The store, containing the reconciled product. `Required` `Filter(multi eq)`

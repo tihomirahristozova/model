@@ -16,6 +16,7 @@ Describes the availability of resources in the active workgroups. Entity: Prd_Wo
 | Name | Type | Description |
 | - | - | --- |
 |[__Object_Version](#__object_version)|`int` ||
+|[Active](#active)|`bit` |Indicates whether the current workgroup resource is active.|
 |[Available_Quantity](#available_quantity)|`decimal(18, 3)` |Quantity available of the resource in this workgroup. The measurement unit is specified in Prd_Resources|
 |[Id](#id)|`uniqueidentifier` `PK`||
 |[Notes](#notes)|`nvarchar(254)` |User notes for the workgroup resource|
@@ -52,6 +53,42 @@ Describes the availability of resources in the active workgroups. Entity: Prd_Wo
 |User Login|no|
 |Visible|no|
 
+### Active
+
+
+Indicates whether the current workgroup resource is active.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|True|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|6|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|bit|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Active - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|no|no|
+
 ### Available_Quantity
 
 
@@ -66,7 +103,7 @@ Quantity available of the resource in this workgroup. The measurement unit is sp
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|3|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -93,7 +130,7 @@ Quantity available of the resource in this workgroup. The measurement unit is sp
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|0|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -130,7 +167,7 @@ User notes for the workgroup resource
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|254|
-|Order|2147483647|
+|Order|4|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -160,7 +197,7 @@ The contained resource type
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|2|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -194,7 +231,7 @@ The contained resource type
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|5|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -224,7 +261,7 @@ Id of the workgroup, containing the resource
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|1|
 |Ownership Reference|yes|
 |Pasword|no|
 |Picture|no|

@@ -105,6 +105,11 @@ Aggregate Root:<br>
 </thead>
 <tbody>
 <tr>
+<td><a href="Production.Resources.WorkgroupResources.html#active">Active</a></td>
+<td>boolean</td>
+<td>Indicates whether the current workgroup resource is active. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code> <code>Introduced in version 22.1.5.26</code></td>
+</tr>
+<tr>
 <td><a href="Production.Resources.WorkgroupResources.html#availablequantity">AvailableQuantity</a></td>
 <td><a href="../data-types.html#quantity">Quantity (18, 3)</a></td>
 <td>Quantity available of the resource in this workgroup. The measurement unit is specified in Prd_Resources. <code>Unit: Resource.PrimaryUnit</code> <code>Required</code> <code>Default(0)</code></td>
@@ -171,6 +176,12 @@ Aggregate Root:<br>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
+<h3 id="active">Active</h3>
+<p>Indicates whether the current workgroup resource is active. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code> <code>Introduced in version 22.1.5.26</code></p>
+<p><em>Type</em>: <strong>boolean</strong><br>
+<em>Supported Filters</em>: <strong>Equals</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>True</strong></p>
 <h3 id="availablequantity">AvailableQuantity</h3>
 <p>Quantity available of the resource in this workgroup. The measurement unit is specified in Prd_Resources. <code>Unit: Resource.PrimaryUnit</code> <code>Required</code> <code>Default(0)</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a></strong><br>

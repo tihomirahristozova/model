@@ -27,6 +27,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [Active](Production.Resources.WorkgroupResources.md#active) | boolean | Indicates whether the current workgroup resource is active. `Required` `Default(true)` `Filter(eq)` `Introduced in version 22.1.5.26` 
 | [AvailableQuantity](Production.Resources.WorkgroupResources.md#availablequantity) | [Quantity (18, 3)](../data-types.md#quantity) | Quantity available of the resource in this workgroup. The measurement unit is specified in Prd_Resources. `Unit: Resource.PrimaryUnit` `Required` `Default(0)` 
 | [DisplayText](Production.Resources.WorkgroupResources.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [Id](Production.Resources.WorkgroupResources.md#id) | guid |  
@@ -48,6 +49,15 @@ Aggregate Root:
 
 
 ## Attribute Details
+
+### Active
+
+Indicates whether the current workgroup resource is active. `Required` `Default(true)` `Filter(eq)` `Introduced in version 22.1.5.26`
+
+_Type_: **boolean**  
+_Supported Filters_: **Equals**  
+_Supports Order By_: **False**  
+_Default Value_: **True**  
 
 ### AvailableQuantity
 

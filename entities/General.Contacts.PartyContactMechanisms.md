@@ -42,7 +42,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ContactMechanism](General.Contacts.PartyContactMechanisms.md#contactmechanism) | [ContactMechanisms](General.Contacts.ContactMechanisms.md) | The contact mechanism of the party. `Required` `Filter(multi eq)` |
+| [ContactMechanism](General.Contacts.PartyContactMechanisms.md#contactmechanism) | [ContactMechanisms](General.Contacts.ContactMechanisms.md) | The contact mechanism of the party. `Required` `Filter(multi eq)` `FilterableReference` |
 | [ContactMechanismPurpose](General.Contacts.PartyContactMechanisms.md#contactmechanismpurpose) | [ContactMechanismPurposes](General.Contacts.ContactMechanismPurposes.md) (nullable) | The purpose of this contact mechanism. Unique within the party. Can be used to seek for specific contact mechanisms. `Filter(multi eq)` `Introduced in version 18.2` |
 | [Party](General.Contacts.PartyContactMechanisms.md#party) | [Parties](General.Contacts.Parties.md) | The party, having the contact mechanism. `Required` `Filter(multi eq)` `Owner` |
 | [PersonalDataProcess](General.Contacts.PartyContactMechanisms.md#personaldataprocess) | [PersonalDataProcesses](Applications.PersonalData.PersonalDataProcesses.md) (nullable) | The personal data process, which is used to process the current data. Null when the data is not personal or when the process is unknown. `Filter(multi eq)` `Introduced in version 18.2` |
@@ -144,11 +144,12 @@ _Supports Order By_: **False**
 
 ### ContactMechanism
 
-The contact mechanism of the party. `Required` `Filter(multi eq)`
+The contact mechanism of the party. `Required` `Filter(multi eq)` `FilterableReference`
 
 _Type_: **[ContactMechanisms](General.Contacts.ContactMechanisms.md)**  
 _Indexed_: **True**  
 _Supported Filters_: **Equals, EqualsIn**  
+_[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
 
 ### ContactMechanismPurpose
 

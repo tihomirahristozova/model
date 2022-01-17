@@ -169,7 +169,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.Contacts.PartyContactMechanisms.html#contactmechanism">ContactMechanism</a></td>
 <td><a href="General.Contacts.ContactMechanisms.html">ContactMechanisms</a></td>
-<td>The contact mechanism of the party. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>The contact mechanism of the party. <code>Required</code> <code>Filter(multi eq)</code> <code>FilterableReference</code></td>
 </tr>
 <tr>
 <td><a href="General.Contacts.PartyContactMechanisms.html#contactmechanismpurpose">ContactMechanismPurpose</a></td>
@@ -250,10 +250,11 @@ Aggregate Root:<br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="contactmechanism">ContactMechanism</h3>
-<p>The contact mechanism of the party. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>The contact mechanism of the party. <code>Required</code> <code>Filter(multi eq)</code> <code>FilterableReference</code></p>
 <p><em>Type</em>: <strong><a href="General.Contacts.ContactMechanisms.html">ContactMechanisms</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em><a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a></em>: <strong>True</strong></p>
 <h3 id="contactmechanismpurpose">ContactMechanismPurpose</h3>
 <p>The purpose of this contact mechanism. Unique within the party. Can be used to seek for specific contact mechanisms. <code>Filter(multi eq)</code> <code>Introduced in version 18.2</code></p>
 <p><em>Type</em>: <strong><a href="General.Contacts.ContactMechanismPurposes.html">ContactMechanismPurposes</a> (nullable)</strong><br>

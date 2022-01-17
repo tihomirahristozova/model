@@ -28,6 +28,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [Active](Production.Resources.Workgroups.md#active) | boolean | Indicates whether the current workgroup is active. `Required` `Default(true)` `Filter(eq)` `Introduced in version 22.1.5.26` 
 | [DisplayText](Production.Resources.Workgroups.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [FullPath](Production.Resources.Workgroups.md#fullpath) | string (254) __nullable__ | The full path to the current node, represented with slash ('/') as leading, trailing and separator character. Example: '/rootnode/subnode/'. `Default("")` 
 | [Id](Production.Resources.Workgroups.md#id) | guid |  
@@ -45,6 +46,15 @@ Aggregate Tree
 
 
 ## Attribute Details
+
+### Active
+
+Indicates whether the current workgroup is active. `Required` `Default(true)` `Filter(eq)` `Introduced in version 22.1.5.26`
+
+_Type_: **boolean**  
+_Supported Filters_: **Equals**  
+_Supports Order By_: **False**  
+_Default Value_: **True**  
 
 ### DisplayText
 

@@ -27,6 +27,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [Active](Production.Resources.Resources.md#active) | boolean | Indicates whether the current resource is active. `Required` `Default(true)` `Filter(eq)` `Introduced in version 22.1.5.26` 
 | [DisplayText](Production.Resources.Resources.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [Id](Production.Resources.Resources.md#id) | guid |  
 | [Name](Production.Resources.Resources.md#name) | string (64) | Name of the resource. `Required` `Filter(like)` 
@@ -54,6 +55,15 @@ Aggregate Root:
 
 
 ## Attribute Details
+
+### Active
+
+Indicates whether the current resource is active. `Required` `Default(true)` `Filter(eq)` `Introduced in version 22.1.5.26`
+
+_Type_: **boolean**  
+_Supported Filters_: **Equals**  
+_Supports Order By_: **False**  
+_Default Value_: **True**  
 
 ### DisplayText
 

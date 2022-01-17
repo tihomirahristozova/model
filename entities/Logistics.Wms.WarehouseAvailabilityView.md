@@ -24,8 +24,8 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [CatchBalance](Logistics.Wms.WarehouseAvailabilityView.md#catchbalance) | decimal (38, 3) __nullable__ | Catch (measured) quantity for the transaction. Positive values indicate transactions. Negative values are used for adjustments. null when catch measurement is not configured for the product. `Filter(eq;ge;le)` `Inherited from Wms_Warehouse_<br />Transactions_Table.Catch_Quantity` 
-| [QuantityBaseAvailable](Logistics.Wms.WarehouseAvailabilityView.md#quantitybaseavailable) | decimal (38, 3) | Currently available quantity in base measurement unit. `Required` 
-| [StandardQuantityAvailable](Logistics.Wms.WarehouseAvailabilityView.md#standardquantityavailable) | decimal (38, 3) | Currently available theoretical quantity according to the measurement dimensions of the product. It can be used to calculate the quantity available in fixed measurement units like pieces. `Required` 
+| [QuantityBaseAvailable](Logistics.Wms.WarehouseAvailabilityView.md#quantitybaseavailable) | decimal (38, 3) | Currently available quantity in base measurement unit. `Required` `Introduced in version 22.1.5.25` 
+| [StandardQuantityAvailable](Logistics.Wms.WarehouseAvailabilityView.md#standardquantityavailable) | decimal (38, 3) | Currently available theoretical quantity according to the measurement dimensions of the product. It can be used to calculate the quantity available in fixed measurement units like pieces. `Required` `Introduced in version 22.1.5.25` 
 
 ## References
 
@@ -55,7 +55,7 @@ _Supports Order By_: **False**
 
 ### QuantityBaseAvailable
 
-Currently available quantity in base measurement unit. `Required`
+Currently available quantity in base measurement unit. `Required` `Introduced in version 22.1.5.25`
 
 _Type_: **decimal (38, 3)**  
 _Supported Filters_: **NotFilterable**  
@@ -63,7 +63,7 @@ _Supports Order By_: **False**
 
 ### StandardQuantityAvailable
 
-Currently available theoretical quantity according to the measurement dimensions of the product. It can be used to calculate the quantity available in fixed measurement units like pieces. `Required`
+Currently available theoretical quantity according to the measurement dimensions of the product. It can be used to calculate the quantity available in fixed measurement units like pieces. `Required` `Introduced in version 22.1.5.25`
 
 _Type_: **decimal (38, 3)**  
 _Supported Filters_: **NotFilterable**  
@@ -138,7 +138,6 @@ _Default Value_: **NewGuid**
 ### Warehouse
 
 _Type_: **[Warehouses](Logistics.Wms.Warehouses.md)**  
-_Indexed_: **True**  
 _Inherited From_: **Wms_Warehouses_Table.Warehouse_Id**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
