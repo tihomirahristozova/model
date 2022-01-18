@@ -206,6 +206,8 @@ Name Data Member:<br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>254</strong></p>
+<p><em>Front-End Recalc Expressions:</em><br>
+<code>IIF( ( ( obj.QueryName != null) AndAlso ( obj.Name == null)), obj.QueryName, obj.Name)</code></p>
 <h3 id="notes">Notes</h3>
 <p>Notes for this Report.</p>
 <p><em>Type</em>: <strong>string (512) <strong>nullable</strong></strong><br>
@@ -303,7 +305,9 @@ The skip clause - default is 0<br>
 <h2 id="business-rules">Business Rules</h2>
 <p>None</p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>
-<p>None</p>
+<ul>
+<li><a href="../business-rules/R32777.html">R32777 Report - Set Name (Recalc)</a></li>
+</ul>
 <h2 id="api">API</h2>
 <p>Domain API Query:
 <a href="https://demodb.my.erp.net/api/domain/odata/Systems_Reporting_Reports?$top=10">https://demodb.my.erp.net/api/domain/odata/Systems_Reporting_Reports?$top=10</a></p>

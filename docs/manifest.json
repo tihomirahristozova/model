@@ -9830,6 +9830,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "business-rules/R32777.md",
+      "output": {
+        ".html": {
+          "relative_path": "business-rules/R32777.html",
+          "hash": "du6vs2JaorTkFEK2hW36pw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "data-types.md",
       "output": {
         ".html": {
@@ -11260,7 +11272,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Crm.LineDiscounts.html",
-          "hash": "4+NVzM4rjeP+McX3vefZRw=="
+          "hash": "+PHXMrBTB4srjAi8J8Y5wQ=="
         }
       },
       "is_incremental": false,
@@ -11716,7 +11728,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Crm.ProductPrices.html",
-          "hash": "wMciFknBNVh5WXH3KddW0Q=="
+          "hash": "/GopuYVSffLPFgbhAs1UpA=="
         }
       },
       "is_incremental": false,
@@ -16516,7 +16528,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Systems.Reporting.Reports.html",
-          "hash": "D4j1Qx+xajJFc/utzGu6dg=="
+          "hash": "OTbQ2OgwKJ1cpIMTFFXhMg=="
         }
       },
       "is_incremental": false,
@@ -19434,7 +19446,7 @@
       "output": {
         ".html": {
           "relative_path": "tables/Crm_Product_Prices.html",
-          "hash": "35lEpWz7QaJxPC848VbsrQ=="
+          "hash": "TVSm4+HDoqsbds4buBdJxg=="
         }
       },
       "is_incremental": false,

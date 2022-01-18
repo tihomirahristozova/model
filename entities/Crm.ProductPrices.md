@@ -9,9 +9,9 @@ Specific prices of products. A price is applied after matching the specified cri
 
 ## Default Visualization
 Default Display Text Format:  
-_{Id}: {MaxQuantityValue}_  
+_{Price} {Notes}_  
 Default Search Members:  
-__  
+_Notes_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -28,7 +28,7 @@ Aggregate Tree
 | [Id](Crm.ProductPrices.md#id) | guid |  
 | [MaxQuantity](Crm.ProductPrices.md#maxquantity) | [Quantity (18, 3)](../data-types.md#quantity) __nullable__ | Maximum quantity for which this price is valid in the Price_Quantity_<br />Measurement_Unit. `Unit: PriceQuantityMeasurement<br />Unit` `Filter(eq;ge;le)` 
 | [MinQuantity](Crm.ProductPrices.md#minquantity) | [Quantity (18, 3)](../data-types.md#quantity) __nullable__ | Minimal quantity required to use this price (in the Price_Quantity_Measurement_Unit). `Unit: PriceQuantityMeasurement<br />Unit` `Filter(eq;ge;le)` 
-| [Notes](Crm.ProductPrices.md#notes) | string (254) __nullable__ | Notes for this ProductPrice. 
+| [Notes](Crm.ProductPrices.md#notes) | string (254) __nullable__ | Notes for this ProductPrice. `Filter(like)` 
 | [ObjectVersion](Crm.ProductPrices.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 | [Price](Crm.ProductPrices.md#price) | [Amount (13, 5)](../data-types.md#amount) | Price in the specified currency and for the specified quantity. `Currency: Currency` `Required` `Default(0)` `Filter(eq;ge;le)` 
 | [PriceQuantity](Crm.ProductPrices.md#pricequantity) | [Quantity (10, 3)](../data-types.md#quantity) | The quantity of the product for which the price is specified. `Unit: PriceQuantityMeasurement<br />Unit` `Required` `Default(1)` `Filter(ge;le)` 
@@ -96,10 +96,10 @@ _Supports Order By_: **False**
 
 ### Notes
 
-Notes for this ProductPrice.
+Notes for this ProductPrice. `Filter(like)`
 
 _Type_: **string (254) __nullable__**  
-_Supported Filters_: **NotFilterable**  
+_Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
 

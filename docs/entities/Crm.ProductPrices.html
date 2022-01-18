@@ -83,9 +83,9 @@
 <p>Specific prices of products. A price is applied after matching the specified criteria. Entity: Crm_Product_Prices</p>
 <h2 id="default-visualization">Default Visualization</h2>
 <p>Default Display Text Format:<br>
-<em>{Id}: {MaxQuantityValue}</em><br>
+<em>{Price} {Notes}</em><br>
 Default Search Members:<br>
-__</p>
+<em>Notes</em></p>
 <h2 id="aggregate">Aggregate</h2>
 <p>An <a href="https://docs.erp.net/tech/advanced/concepts/aggregates.html">aggregate</a> is a cluster of domain objects that can be treated as a single unit.</p>
 <p>Aggregate Tree</p>
@@ -130,7 +130,7 @@ __</p>
 <tr>
 <td><a href="Crm.ProductPrices.html#notes">Notes</a></td>
 <td>string (254) <strong>nullable</strong></td>
-<td>Notes for this ProductPrice.</td>
+<td>Notes for this ProductPrice. <code>Filter(like)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.ProductPrices.html#objectversion">ObjectVersion</a></td>
@@ -258,9 +258,9 @@ __</p>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="notes">Notes</h3>
-<p>Notes for this ProductPrice.</p>
+<p>Notes for this ProductPrice. <code>Filter(like)</code></p>
 <p><em>Type</em>: <strong>string (254) <strong>nullable</strong></strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>254</strong></p>
 <h3 id="objectversion">ObjectVersion</h3>

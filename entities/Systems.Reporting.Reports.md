@@ -80,6 +80,8 @@ _Supported Filters_: **Equals, Like**
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
 
+_Front-End Recalc Expressions:_  
+`IIF( ( ( obj.QueryName != null) AndAlso ( obj.Name == null)), obj.QueryName, obj.Name)`
 ### Notes
 
 Notes for this Report.
