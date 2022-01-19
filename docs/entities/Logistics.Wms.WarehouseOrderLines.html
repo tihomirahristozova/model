@@ -382,6 +382,8 @@ Allowed values for the <code>TaskType</code>(Logistics.Wms.WarehouseOrderLines.m
 <p>The measurement unit of Quantity. null for operations, which are not quantity-related. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.MeasurementUnits.html">MeasurementUnits</a> (nullable)</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<p><em>Front-End Recalc Expressions:</em><br>
+<code>obj.Product.MeasurementUnit</code></p>
 <h3 id="serialnumber">SerialNumber</h3>
 <p>The serial number of the product, which should be used. null for operations, which are not serial number-specific, or when any serial number can be used. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Logistics.Inventory.SerialNumbers.html">SerialNumbers</a> (nullable)</strong><br>

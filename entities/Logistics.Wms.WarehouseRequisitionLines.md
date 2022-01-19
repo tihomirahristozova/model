@@ -184,6 +184,8 @@ The measurement unit of Quantity. `Required` `Filter(multi eq)`
 _Type_: **[MeasurementUnits](General.MeasurementUnits.md)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
+_Front-End Recalc Expressions:_  
+`obj.Product.MeasurementUnit`
 ### SerialNumber
 
 The requested serial number. null means that any serial number can be used or the product does not use serial numbers at all. `Filter(multi eq)`

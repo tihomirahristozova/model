@@ -223,6 +223,8 @@ The measurement unit of Quantity. null for operations, which are not quantity-re
 _Type_: **[MeasurementUnits](General.MeasurementUnits.md) (nullable)**  
 _Supported Filters_: **Equals, EqualsIn**  
 
+_Front-End Recalc Expressions:_  
+`obj.Product.MeasurementUnit`
 ### SerialNumber
 
 The serial number of the product, which should be used. null for operations, which are not serial number-specific, or when any serial number can be used. `Filter(multi eq)`
