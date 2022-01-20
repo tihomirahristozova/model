@@ -9,9 +9,9 @@ Serial numbers, used by the items. Rows are created on first occurrence of the s
 
 ## Default Visualization
 Default Display Text Format:  
-_{Id}: {ProductId}_  
+_{SerialNumberField}_  
 Default Search Members:  
-__  
+_SerialNumberField_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
