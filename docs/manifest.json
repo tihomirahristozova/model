@@ -9578,6 +9578,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "business-rules/R32452.md",
+      "output": {
+        ".html": {
+          "relative_path": "business-rules/R32452.html",
+          "hash": "FeLmBcv4aGCNC89DfNODCA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "business-rules/R32453.md",
       "output": {
         ".html": {
@@ -13936,7 +13948,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/General.Products.ProductGroupRequiredProperties.html",
-          "hash": "+WF2zpw+s7pjS39xCgvCBA=="
+          "hash": "tKUI7SbsKRwf6S8AZtZ1qQ=="
         }
       },
       "is_incremental": false,
