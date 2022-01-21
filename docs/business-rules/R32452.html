@@ -73,88 +73,67 @@
 <h1 id="r32452-productgrouprequiredproperties---updatedefaultvalueanddescription">R32452 ProductGroupRequiredProperties - UpdateDefaultValueAndDescription</h1>
 
 <table>
-<col style="width:18.8%">
-<col style="width:81.2%">
+<thead>
+<tr>
+<th>Name</th>
+<th>Value</th>
+</tr>
+</thead>
 <tbody>
 <tr>
-<td><strong>Code</strong></td>
+<td>Code</td>
 <td>R32452</td>
 </tr>
 <tr>
-<td><strong>Entity</strong></td>
+<td>Entity</td>
 <td><a class="xref" href="../entities/General.Products.ProductGroupRequiredProperties.html">General.Products.ProductGroupRequiredProperties Entity</a></td>
 </tr>
 <tr>
-<td><strong>Name</strong></td>
+<td>Name</td>
 <td>UpdateDefaultValueAndDescription</td>
 </tr>
 <tr>
-<td><strong>Attribute</strong></td>
+<td>Attribute</td>
 <td>DefaultPropertyValue</td>
 </tr>
 <tr>
-<td><strong>Layer</strong></td>
+<td>Layer</td>
 <td>Front-End</td>
 </tr>
 <tr>
-<td><strong>Events</strong></td>
+<td>Events</td>
 <td>AttributeChanged(DefaultPropertyValue)</td>
 </tr>
 <tr>
-<td><strong>Priority</strong></td>
+<td>Priority</td>
 <td>Normal</td>
 </tr>
 <tr>
-<td><strong>Modify</strong></td>
+<td>Modify</td>
 <td>YES</td>
 </tr>
 <tr>
-<td><strong>Applicable
-Legislations</strong></td>
-<td><a class="xref" href="https://erpnetdocs.github.io/tech/reference/country-specific-functionality.html">ALL // no condition needed
-</a></td>
+<td>Applicable Legislations</td>
+<td><a class="xref" href="https://erpnetdocs.github.io/tech/reference/country-specific-functionality.html">ALL // no condition needed</a></td>
 </tr>
 <tr>
-<td><strong>Action</strong></td>
-<td><p>If (DefaultPropertyValue.NewValue != NULL and it is a PropertyAllowedValue)
-, then recalculate:
-DefaultPropertyValueDescription =  PropertyAllowedValue.Description
-DefaultValue = PropertyAllowedValue</p>
-<p>If (DefaultPropertyValue.NewValue != NULL and it is NOT a PropertyAllowedValue)
-, then:
-DefaultPropertyValueDescription = NewValue
-DefaultValue = null</p>
-</td>
+<td>Action</td>
+<td>If (DefaultPropertyValue.NewValue != NULL and it is a PropertyAllowedValue) <br>, then recalculate:<br>DefaultPropertyValueDescription =  PropertyAllowedValue.Description <br> DefaultValue = PropertyAllowedValue <br><br> If (DefaultPropertyValue.NewValue != NULL and it is NOT a PropertyAllowedValue) <br> then: <br> DefaultPropertyValueDescription = NewValue <br> DefaultValue = null</td>
 </tr>
 <tr>
-<td><strong>Description</strong></td>
-<td>When a new 'Default Property Value' if this value is an allowed value for this property, then
-its value and describtion are automatically loaded in the corresponding fields.
-If the new value is not an allowed value for this property, then the new value is copied to</td>
+<td>Description*</td>
+<td>When a new 'Default Property Value' if this value is an allowed value for this property, then its value and describtion are automatically loaded in the corresponding fields. If the new value is not an allowed value for this property, then the new value is copied to DefaultPropertyValueDescription and DefaultValue is emptied.</td>
 </tr>
 <tr>
-<td colspan="2">
-<pre><code>                   |DefaultPropertyValueDescription and DefaultValue is emptied.
-</code></pre>
-</td>
+<td>Message</td>
+<td>-</td>
 </tr>
 <tr>
-<td><strong>Message</strong></td>
-<td>
-<ul>
-<li>
-<pre><code>                                                                                       |
-</code></pre>
-</li>
-</ul>
-</td>
-</tr>
-<tr>
-<td><strong>Version</strong></td>
+<td>Version</td>
 <td>Introduced: 2022</td>
 </tr>
 <tr>
-<td><strong>Revocable</strong></td>
+<td>Revocable</td>
 <td>YES</td>
 </tr>
 </tbody>
