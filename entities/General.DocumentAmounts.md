@@ -9,7 +9,7 @@ Contains a specific instance of an additional amount for a specific document. En
 
 ## Default Visualization
 Default Display Text Format:  
-_{Document.EntityName}_  
+_{DocumentAmountType.AmountTypeName:T}_  
 Default Search Members:  
 _Document.EntityName_  
 Name Data Member:  
