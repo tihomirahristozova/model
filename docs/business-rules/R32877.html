@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>R32864 Lead - Update On Closed Not Allowed | ERP.net Domain Model </title>
+    <title>R32877 Folder &#8211; Delete If Files Subfolders Exist Not Allowed | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="R32864 Lead - Update On Closed Not Allowed | ERP.net Domain Model ">
+    <meta name="title" content="R32877 Folder &#8211; Delete If Files Subfolders Exist Not Allowed | ERP.net Domain Model ">
     <meta name="generator" content="docfx 2.56.9.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
@@ -70,7 +70,7 @@
         <div class="article row grid">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="r32864-lead---update-on-closed-not-allowed">R32864 Lead - Update On Closed Not Allowed</h1>
+<h1 id="r32877-folder--delete-if-files-subfolders-exist-not-allowed">R32877 Folder – Delete If Files Subfolders Exist Not Allowed</h1>
 
 <table>
 <col style="width:23.93%">
@@ -78,15 +78,15 @@
 <tbody>
 <tr>
 <td><strong>Code</strong></td>
-<td>R32864</td>
+<td>R32877</td>
 </tr>
 <tr>
 <td><strong>Entity</strong></td>
-<td><a class="xref" href="../entities/Crm.Presales.Leads.html">Crm.Presales.Leads Entity</a></td>
+<td><a class="xref" href="../entities/General.Folders.html">General.Folders Entity</a></td>
 </tr>
 <tr>
 <td><strong>Name</strong></td>
-<td>Update On Closed Not Allowed</td>
+<td>DeleteIfFilesSubfoldersExistNotAllowed</td>
 </tr>
 <tr>
 <td><strong>Attribute</strong></td>
@@ -98,11 +98,11 @@
 </tr>
 <tr>
 <td><strong>Events</strong></td>
-<td>ClientCommit</td>
+<td>Commit</td>
 </tr>
 <tr>
 <td><strong>Record State</strong></td>
-<td>Updated</td>
+<td>Deleted</td>
 </tr>
 <tr>
 <td><strong>Priority</strong></td>
@@ -114,22 +114,27 @@
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td>If (SystemStage = Closed) and the edited field is not SystemStage <br>
-Then FAIL</td>
+<td>if (a record exists where: Folder.Parent = = toBeDeleted Folder.Id    II    <br>
+a record exists where: ExtensibleDataObject.EntityItemId == toBeDeleted Folder.Id) <br>
+throw an error if: <br>
+a record exists where: Folder.Parent = = toBeDeleted Folder.Id (Error1) <br>
+throw an error if: <br>
+a record exists where: ExtensibleDataObject.EntityItemId == toBeDeleted Folder.Id
+(Error2)</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
-<td>If the System Stage of the Lead is Closed, updating its data records by a client
-application is not allowed. Only the value of the System Stage field can be changed.</td>
+<td>If a folder contains subfolders or files, it cannot be deleted.</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>
-<td>The Lead '{DisplayText}' cannot be modified by a client application because its
-System Stage is &quot;Closed&quot;.</td>
+<td>Еrror1: This folder contains other folders. Deletion is impossible!
+Error2: There are files in this folder. To delete the folder, first delete
+the files in it!</td>
 </tr>
 <tr>
 <td><strong>Version</strong></td>
-<td>Introduced: 2022</td>
+<td>Introduced:</td>
 </tr>
 <tr>
 <td><strong>Revocable</strong></td>
@@ -147,7 +152,7 @@ topic <a href="../templates/template-description-system-business-rules.html">Sys
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/ErpNetDocs/model/blob/master/business-rules/R32864.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/ErpNetDocs/model/blob/master/business-rules/R32877.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

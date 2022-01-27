@@ -9870,7 +9870,19 @@
       "output": {
         ".html": {
           "relative_path": "business-rules/R32864.html",
-          "hash": "NBT318V/JV+BvUDEPGTWww=="
+          "hash": "z2uY6u9gC0rlk5d9zxHlXg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "business-rules/R32877.md",
+      "output": {
+        ".html": {
+          "relative_path": "business-rules/R32877.html",
+          "hash": "+fvECMUSsJpTVx/29AUQaw=="
         }
       },
       "is_incremental": false,
@@ -11632,7 +11644,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Crm.Presales.Leads.html",
-          "hash": "8CbPbtW4HhQpqgnGvUwIIQ=="
+          "hash": "Ws0zi2fwUCVQ1K+OKoEN+w=="
         }
       },
       "is_incremental": false,
