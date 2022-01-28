@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>R32877 Folder &#8211; Delete If Files Subfolders Exist Not Allowed | ERP.net Domain Model </title>
+    <title>R32877 Folder &#8211; Delete If Subfolders Exist Not Allowed | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="R32877 Folder &#8211; Delete If Files Subfolders Exist Not Allowed | ERP.net Domain Model ">
+    <meta name="title" content="R32877 Folder &#8211; Delete If Subfolders Exist Not Allowed | ERP.net Domain Model ">
     <meta name="generator" content="docfx 2.56.9.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
@@ -70,7 +70,7 @@
         <div class="article row grid">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="r32877-folder--delete-if-files-subfolders-exist-not-allowed">R32877 Folder – Delete If Files Subfolders Exist Not Allowed</h1>
+<h1 id="r32877-folder--delete-if-subfolders-exist-not-allowed">R32877 Folder – Delete If Subfolders Exist Not Allowed</h1>
 
 <table>
 <col style="width:23.93%">
@@ -86,7 +86,7 @@
 </tr>
 <tr>
 <td><strong>Name</strong></td>
-<td>DeleteIfFilesSubfoldersExistNotAllowed</td>
+<td>DeleteIfSubfoldersExistNotAllowed</td>
 </tr>
 <tr>
 <td><strong>Attribute</strong></td>
@@ -114,23 +114,18 @@
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td>if (a record exists where: Folder.Parent = = toBeDeleted Folder.Id    II    <br>
-a record exists where: ExtensibleDataObject.EntityItemId == toBeDeleted Folder.Id) <br>
-throw an error if: <br>
-a record exists where: Folder.Parent = = toBeDeleted Folder.Id (Error1) <br>
-throw an error if: <br>
-a record exists where: ExtensibleDataObject.EntityItemId == toBeDeleted Folder.Id
-(Error2)</td>
+<td><p>if (Count (Folders, where Parent == current Folder) &gt; 0) <br></p>
+<p>then FAIL <br></p>
+</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
-<td>If a folder contains subfolders or files, it cannot be deleted.</td>
+<td>If a folder contains subfolders, it cannot be deleted.</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>
-<td>Еrror1: This folder contains other folders. Deletion is impossible!
-Error2: There are files in this folder. To delete the folder, first delete
-the files in it!</td>
+<td>The folder'{Name}'contains other folders. To delete the folder, please delete
+its subfolders.</td>
 </tr>
 <tr>
 <td><strong>Version</strong></td>
