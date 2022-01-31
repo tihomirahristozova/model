@@ -34,6 +34,7 @@ Aggregate Root:
 | [DisplayText](Systems.Core.ObjectFiles.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [EmbeddedFileContents](Systems.Core.ObjectFiles.md#embeddedfilecontents) | byte[] __nullable__ | Contains the contents of the file, when it is embedded in the database. null for linked files. 
 | [FileName](Systems.Core.ObjectFiles.md#filename) | string (254) | The file name of the linked or embedded file. `Required` `Filter(eq;like)` 
+| [FileSizeBytes](Systems.Core.ObjectFiles.md#filesizebytes) | int32 __nullable__ | The file size in bytes. If empty the file size is unknown. `Introduced in version 22.1.5.46` 
 | [Id](Systems.Core.ObjectFiles.md#id) | guid |  
 | [LastUpdateTimeUtc](Systems.Core.ObjectFiles.md#lastupdatetimeutc) | datetime | Time (in UTC), when the file was last updated. `Required` `Default(NowUtc)` `Introduced in version 20.1` 
 | [LinkedFilePath](Systems.Core.ObjectFiles.md#linkedfilepath) | string (1024) __nullable__ | When the file is linked, contains the full path (including the file name) to the linked file. null for embedded files. `Filter(eq;like)` 
@@ -107,6 +108,14 @@ _Type_: **string (254)**
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
+
+### FileSizeBytes
+
+The file size in bytes. If empty the file size is unknown. `Introduced in version 22.1.5.46`
+
+_Type_: **int32 __nullable__**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 ### Id
 

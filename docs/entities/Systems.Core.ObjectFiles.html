@@ -132,6 +132,11 @@ Aggregate Root:<br>
 <td>The file name of the linked or embedded file. <code>Required</code> <code>Filter(eq;like)</code></td>
 </tr>
 <tr>
+<td><a href="Systems.Core.ObjectFiles.html#filesizebytes">FileSizeBytes</a></td>
+<td>int32 <strong>nullable</strong></td>
+<td>The file size in bytes. If empty the file size is unknown. <code>Introduced in version 22.1.5.46</code></td>
+</tr>
+<tr>
 <td><a href="Systems.Core.ObjectFiles.html#id">Id</a></td>
 <td>guid</td>
 <td></td>
@@ -263,6 +268,11 @@ Allowed values for the <code>ContentLocation</code>(Systems.Core.ObjectFiles.md#
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>254</strong></p>
+<h3 id="filesizebytes">FileSizeBytes</h3>
+<p>The file size in bytes. If empty the file size is unknown. <code>Introduced in version 22.1.5.46</code></p>
+<p><em>Type</em>: <strong>int32 <strong>nullable</strong></strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>

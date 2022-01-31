@@ -29,7 +29,7 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [DisplayText](Crm.Marketing.CompetitorSolutions.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [Id](Crm.Marketing.CompetitorSolutions.md#id) | guid |  
-| [Name](Crm.Marketing.CompetitorSolutions.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Multi-language string. `Required` `Filter(like)` 
+| [Name](Crm.Marketing.CompetitorSolutions.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Name of solution. `Required` `Filter(like)` 
 | [Notes](Crm.Marketing.CompetitorSolutions.md#notes) | string (max) __nullable__ | Notes for this CompetitorSolution. 
 | [ObjectVersion](Crm.Marketing.CompetitorSolutions.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 
@@ -62,7 +62,7 @@ _Default Value_: **NewGuid**
 
 ### Name
 
-Multi-language string. `Required` `Filter(like)`
+Name of solution. `Required` `Filter(like)`
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Supported Filters_: **Like**  

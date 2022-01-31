@@ -198,6 +198,8 @@
     href: Cmm_Notifications.md
   - name: Cmm_Social_Comments
     href: Cmm_Social_Comments.md
+  - name: Cmm_Social_Follows
+    href: Cmm_Social_Follows.md
   - name: Cmm_Social_Group_Members
     href: Cmm_Social_Group_Members.md
   - name: Cmm_Social_Groups
