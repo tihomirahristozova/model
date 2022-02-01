@@ -1105,6 +1105,9 @@ references:
 - uid: General.Sequences
   name: General.Sequences Entity
   href: entities/General.Sequences.html
+- uid: hierarchical-entities
+  name: Hierarchical entities
+  href: reference/common-business-rules/hierarchical-entities.html
 - uid: Logistics
   name: Logistics Namespace
   href: entities/Logistics.html

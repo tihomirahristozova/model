@@ -282,7 +282,7 @@
       "output": {
         ".html": {
           "relative_path": "business-rules/R20750-3.html",
-          "hash": "RrBBGhOySrKljIXwQYTkYg=="
+          "hash": "iQstZzKq7IctBS7gdXdMjA=="
         }
       },
       "is_incremental": false,
@@ -294,7 +294,7 @@
       "output": {
         ".html": {
           "relative_path": "business-rules/R20750-4.html",
-          "hash": "trmww0ovinv7+jFLhelYYA=="
+          "hash": "gLfR7c8KO/DyyHUTvqfIAA=="
         }
       },
       "is_incremental": false,
@@ -17347,6 +17347,18 @@
         ".html": {
           "relative_path": "reference/common-business-rules/conversion-validation-methods.html",
           "hash": "ThSAZZmwkiSXC+7IiZEKSQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "reference/common-business-rules/hierarchical-entities.md",
+      "output": {
+        ".html": {
+          "relative_path": "reference/common-business-rules/hierarchical-entities.html",
+          "hash": "oqswmpPXAFbwcZ7dmQEmaA=="
         }
       },
       "is_incremental": false,
