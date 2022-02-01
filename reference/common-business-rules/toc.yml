@@ -1,5 +1,7 @@
 - name: All entities
   href: all-entities.md
+- name: Hierarchical entities
+  href: hierarchical-entities.md
 - name: Code 
   href: code-validation.md
 - name: Code (strict)
@@ -20,4 +22,3 @@
   href: conversion-validation-methods.md
 - name: All documents
   href: all-documents.md
-  
