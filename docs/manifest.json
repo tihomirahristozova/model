@@ -290,6 +290,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "business-rules/R20750-4.md",
+      "output": {
+        ".html": {
+          "relative_path": "business-rules/R20750-4.html",
+          "hash": "iFSQ2yug9lRzXPugeS+zxA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "business-rules/R20750-5.md",
       "output": {
         ".html": {
@@ -12868,7 +12880,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Finance.Payments.PaymentTransactions.html",
-          "hash": "Uk4q/87hszvEHU+f+moLhQ=="
+          "hash": "MUx+1izXoEiAzK/I8paRDQ=="
         }
       },
       "is_incremental": false,
