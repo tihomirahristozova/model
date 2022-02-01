@@ -58,6 +58,7 @@ Aggregate Root:
 Requested quantity of the material. `Unit: ConsumedQuantityUnit` `Required` `Filter(ge;le)`
 
 _Type_: **[Quantity (18, 3)](../data-types.md#quantity)**  
+_Category_: **System**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -68,6 +69,7 @@ _Front-End Recalc Expressions:_
 The requested quantity equivalence in the base measurement category of the requested material. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly`
 
 _Type_: **[Quantity (18, 3)](../data-types.md#quantity)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -81,6 +83,7 @@ _Front-End Recalc Expressions:_
 The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. null means to convert the value from Quantity using the measurement ratios. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` `Introduced in version 18.2`
 
 _Type_: **[Quantity (18, 3)](../data-types.md#quantity)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -94,6 +97,7 @@ _Front-End Recalc Expressions:_
 Determines whether the material cost is distributed among all produced products, or only one (specified in the Work Order Item Ingredient). `Required` `Filter(eq)` `ReadOnly`
 
 _Type_: **[ConsumptionType](Production.ShopFloor.ConsumptionOrderLines.md#consumptiontype)**  
+_Category_: **System**  
 Allowed values for the `ConsumptionType`(Production.ShopFloor.ConsumptionOrderLines.md#consumptiontype) data attribute  
 _Allowed Values (Production.ShopFloor.ConsumptionOrderLinesRepository.ConsumptionType Enum Members)_  
 
@@ -112,6 +116,7 @@ _Front-End Recalc Expressions:_
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -119,6 +124,7 @@ _Supports Order By_: ****
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -127,6 +133,7 @@ _Default Value_: **NewGuid**
 Non-unique line number within the order. `Required`
 
 _Type_: **int32**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -140,6 +147,7 @@ _Front-End Recalc Expressions:_
 Notes for this ConsumptionOrderLine.
 
 _Type_: **string (max) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
@@ -149,6 +157,7 @@ _Maximum Length_: **2147483647**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -157,6 +166,7 @@ _Supports Order By_: ****
 The scheduled date, when the material is needed. `Filter(ge;le)`
 
 _Type_: **datetime __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -168,6 +178,7 @@ _Supports Order By_: **False**
 Measurement unit of the requested quantity. `Required` `Filter(multi eq)`
 
 _Type_: **[MeasurementUnits](General.MeasurementUnits.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Front-End Recalc Expressions:_  
@@ -178,6 +189,7 @@ The <see cref="ConsumptionOrder"/> to which this ConsumptionOrderLine belongs. `
 
 _Type_: **[ConsumptionOrders](Production.ShopFloor.ConsumptionOrders.md)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
 
@@ -187,6 +199,7 @@ The <see cref="ConsumptionOrder"/> to which this ConsumptionOrderLine belongs. `
 
 _Type_: **[ConsumptionOrders](Production.ShopFloor.ConsumptionOrders.md)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Lot
@@ -194,6 +207,7 @@ _Supported Filters_: **Equals, EqualsIn**
 If not null, specifies that the material has to be consumed from specific lot. `Filter(multi eq)`
 
 _Type_: **[Lots](Logistics.Inventory.Lots.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Product
@@ -201,6 +215,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The requested material. `Required` `Filter(multi eq)`
 
 _Type_: **[Products](General.Products.Products.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Front-End Recalc Expressions:_  
@@ -210,6 +225,7 @@ _Front-End Recalc Expressions:_
 If not null, specifies that the material has to be consumed with specific serial number. `Filter(multi eq)`
 
 _Type_: **[SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Store
@@ -217,6 +233,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The store, from which the material is requested. `Filter(multi eq)`
 
 _Type_: **[Stores](Logistics.Inventory.Stores.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Back-End Default Expression:_  
@@ -229,6 +246,7 @@ _Front-End Recalc Expressions:_
 If not null, specifies that the material has to be consumed from specific store bin. `Filter(multi eq)`
 
 _Type_: **[StoreBins](Logistics.Inventory.StoreBins.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### WorkOrderItemIngredient
@@ -237,6 +255,7 @@ The Work Order Item Ingredient for which we are ordering materials. `Required` `
 
 _Type_: **[WorkOrderItemIngredients](Production.ShopFloor.WorkOrderItemIngredients.md)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

@@ -60,6 +60,7 @@ Aggregate Root:
 The calculated base amount (in documents currency) from the last document amount recalculation. The base amount is the base, over which the additional amounts are calculated. Null if the amount is not distributed yet. `Currency: LogisticsDocument.DocumentCurrency` `ReadOnly`
 
 _Type_: **[Amount (14, 2)](../data-types.md#amount) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -68,6 +69,7 @@ _Supports Order By_: **False**
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -75,6 +77,7 @@ _Supports Order By_: ****
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -83,6 +86,7 @@ _Default Value_: **NewGuid**
 When not null, specifies directly the amount of the additional amount. `Currency: GetInputAmountCurrency()` `Filter(ge;le)`
 
 _Type_: **[Amount (14, 2)](../data-types.md#amount) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -93,6 +97,7 @@ _Front-End Recalc Expressions:_
 When not null, specifies that the amount for this document will be calculated as percent of the base amounts (which are defined in the amount type). `Filter(ge;le)`
 
 _Type_: **decimal (7, 6) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -106,6 +111,7 @@ _Front-End Recalc Expressions:_
 Input unit amount for the calculation of the current amount. `Currency: GetInputAmountCurrency()` `Filter(eq;ge;le)`
 
 _Type_: **[Amount (14, 5)](../data-types.md#amount) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -116,6 +122,7 @@ _Front-End Recalc Expressions:_
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -124,6 +131,7 @@ _Supports Order By_: ****
 The total amount (in documents currency) which was distributed to the documents lines. Null if the amount is not distributed yet. `Currency: LogisticsDocument.DocumentCurrency` `ReadOnly`
 
 _Type_: **[Amount (14, 2)](../data-types.md#amount) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -132,6 +140,7 @@ _Supports Order By_: **False**
 True if the user, entering the document is allowed to change the default input percent. `Required` `Default(true)`
 
 _Type_: **boolean**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **True**  
@@ -145,6 +154,7 @@ The <see cref="Document"/> to which this DocumentAmount belongs. `Required` `Fil
 
 _Type_: **[Documents](General.Documents.md)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
 
@@ -153,6 +163,7 @@ _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-reference
 The type of the amount. `Required` `Filter(multi eq)`
 
 _Type_: **[DocumentAmountTypes](General.DocumentAmountTypes.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### InputAmountCurrency
@@ -160,6 +171,7 @@ _Supported Filters_: **Equals, EqualsIn**
 When specifying the amount directly in Input Amount, this contains the currency of the amount. Used and required when Input Amount is not null. `Filter(multi eq)`
 
 _Type_: **[Currencies](General.Currencies.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Front-End Recalc Expressions:_  
@@ -169,6 +181,7 @@ _Front-End Recalc Expressions:_
 Measurement unit of the input unit amount. `Filter(multi eq)`
 
 _Type_: **[MeasurementUnits](General.MeasurementUnits.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Front-End Recalc Expressions:_  

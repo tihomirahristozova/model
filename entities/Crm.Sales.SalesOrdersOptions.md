@@ -52,6 +52,7 @@ Aggregate Root:
 Allowed directions (return or normal sale) for the sales orders of this document type. 'S' = Normal sale, 'R' = Sales return, '*' = No limit, 'A' = Allow any, but not both (default). `Required` `Default("A")` `Filter(multi eq)`
 
 _Type_: **[AllowedDirections](Crm.Sales.SalesOrdersOptions.md#alloweddirections)**  
+_Category_: **System**  
 Allowed values for the `AllowedDirections`(Crm.Sales.SalesOrdersOptions.md#alloweddirections) data attribute  
 _Allowed Values (Crm.Sales.SalesOrdersOptionsRepository.AllowedDirections Enum Members)_  
 
@@ -71,6 +72,7 @@ _Default Value_: **AllowAnyButNotBoth**
 When true indicates that the sales order can be released only if there is sufficient available quantity (by ATP). `Required` `Default(false)` `Filter(eq)`
 
 _Type_: **boolean**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **False**  
@@ -80,6 +82,7 @@ _Default Value_: **False**
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -87,6 +90,7 @@ _Supports Order By_: ****
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -95,6 +99,7 @@ _Default Value_: **NewGuid**
 When not null, specifies minimal total amount of the sales order, which is required for order releasing. `Currency: MinimumAmountCurrency`
 
 _Type_: **[Amount (14, 2)](../data-types.md#amount) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -103,6 +108,7 @@ _Supports Order By_: **False**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -111,6 +117,7 @@ _Supports Order By_: ****
 Terms on which the shipment of the products in the sales order is allowed. `Required` `Default("A")`
 
 _Type_: **[ShipmentAllowance](Crm.Sales.SalesOrdersOptions.md#shipmentallowance)**  
+_Category_: **System**  
 Allowed values for the `ShipmentAllowance`(Crm.Sales.SalesOrdersOptions.md#shipmentallowance) data attribute  
 _Allowed Values (Crm.Sales.SalesOrdersOptionsRepository.ShipmentAllowance Enum Members)_  
 
@@ -132,6 +139,7 @@ _Default Value_: **AlwaysAllow**
 If filled then new opportunities (deals) from the specified type are created automatically by the sales orders that aren't assigned to existing opportunities. `Filter(multi eq)`
 
 _Type_: **[DocumentTypes](General.DocumentTypes.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### DocumentType
@@ -139,6 +147,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The document type for which the sales order option applies. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[DocumentTypes](General.DocumentTypes.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
 
@@ -147,6 +156,7 @@ _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-reference
 The currency of Minimal Amount. `Filter(multi eq)`
 
 _Type_: **[Currencies](General.Currencies.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### VATDeviationDocumentAmountType
@@ -154,6 +164,7 @@ _Supported Filters_: **Equals, EqualsIn**
 Document amount that contains the difference between the total amount of the sales order formed by unit prices with VAT and the amount formed by unit prices without VAT. `Filter(multi eq)`
 
 _Type_: **[DocumentAmountTypes](General.DocumentAmountTypes.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

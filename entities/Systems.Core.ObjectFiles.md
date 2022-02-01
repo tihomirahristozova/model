@@ -62,6 +62,7 @@ Aggregate Root:
 The location of the file contents. EMB=Embedded in the database; URL=Internet URL; FSL=File system link. `Required` `Default("EMB")` `Filter(multi eq)` `Introduced in version 20.1`
 
 _Type_: **[ContentLocation](Systems.Core.ObjectFiles.md#contentlocation)**  
+_Category_: **System**  
 Allowed values for the `ContentLocation`(Systems.Core.ObjectFiles.md#contentlocation) data attribute  
 _Allowed Values (Systems.Core.ObjectFilesRepository.ContentLocation Enum Members)_  
 
@@ -80,6 +81,7 @@ _Default Value_: **Embedded**
 Time (in UTC), when the file was created. `Required` `Default(NowUtc)` `Introduced in version 20.1`
 
 _Type_: **datetime**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **CurrentDateTimeUtc**  
@@ -89,6 +91,7 @@ _Default Value_: **CurrentDateTimeUtc**
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -97,6 +100,7 @@ _Supports Order By_: ****
 Contains the contents of the file, when it is embedded in the database. null for linked files.
 
 _Type_: **byte[] __nullable__**  
+_Category_: **Delay Loaded Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -105,6 +109,7 @@ _Supports Order By_: **False**
 The file name of the linked or embedded file. `Required` `Filter(eq;like)`
 
 _Type_: **string (254)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -114,6 +119,7 @@ _Maximum Length_: **254**
 The file size in bytes. If empty the file size is unknown. `Introduced in version 22.1.5.46`
 
 _Type_: **int32 __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -121,6 +127,7 @@ _Supports Order By_: **False**
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -129,6 +136,7 @@ _Default Value_: **NewGuid**
 Time (in UTC), when the file was last updated. `Required` `Default(NowUtc)` `Introduced in version 20.1`
 
 _Type_: **datetime**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **CurrentDateTimeUtc**  
@@ -138,6 +146,7 @@ _Default Value_: **CurrentDateTimeUtc**
 When the file is linked, contains the full path (including the file name) to the linked file. null for embedded files. `Filter(eq;like)`
 
 _Type_: **string (1024) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **1024**  
@@ -147,6 +156,7 @@ _Maximum Length_: **1024**
 Used (non-null) only for media files. Specifies the width for displaying the media. `Introduced in version 20.1`
 
 _Type_: **int32 __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -155,6 +165,7 @@ _Supports Order By_: **False**
 For media files, contains the Media Type as per the IANA registry (formerly known as the MIME Type). null for non-media files. `Introduced in version 20.1`
 
 _Type_: **string (128) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **128**  
@@ -164,6 +175,7 @@ _Maximum Length_: **128**
 Used (non-null) only for media files. Specifies the width for displaying the media. `Introduced in version 20.1`
 
 _Type_: **int32 __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -172,6 +184,7 @@ _Supports Order By_: **False**
 User notes for the file attachment.
 
 _Type_: **string (max) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
@@ -181,6 +194,7 @@ _Maximum Length_: **2147483647**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -189,6 +203,7 @@ _Supports Order By_: ****
 Code, designating the usage purpose of the file. The meaning of each code is up to the application with the exception of 'default/image', which is standartised as the default image for many types of objects. `Filter(eq)`
 
 _Type_: **string (32) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Maximum Length_: **32**  
@@ -198,6 +213,7 @@ _Maximum Length_: **32**
 A section name used to group files. `Introduced in version 21.1.1.84`
 
 _Type_: **string (64) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  
@@ -210,6 +226,7 @@ _Maximum Length_: **64**
 The user, who created the file record. null if it is unknown. `Filter(multi eq)` `Introduced in version 20.1`
 
 _Type_: **[Users](Systems.Security.Users.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### LastUpdateUser
@@ -217,6 +234,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The user, who performed the last update to the file record. null if it is unknown. `Filter(multi eq)` `Introduced in version 20.1`
 
 _Type_: **[Users](Systems.Security.Users.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Object
@@ -225,6 +243,7 @@ The object to which the file is attached. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
 

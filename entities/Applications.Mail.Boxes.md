@@ -64,6 +64,7 @@ Aggregate Tree
 True when the mail box is active for mail sinchronization, sending and receiving. `Required` `Default(true)` `Filter(eq)`
 
 _Type_: **boolean**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **True**  
@@ -73,6 +74,7 @@ _Default Value_: **True**
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -81,6 +83,7 @@ _Supports Order By_: ****
 The email address associated with this mail box. `Required` `Filter(eq)`
 
 _Type_: **string (254)**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -89,6 +92,7 @@ _Maximum Length_: **254**
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -97,6 +101,7 @@ _Default Value_: **NewGuid**
 True when this is the default mailbox for the user. `Required` `Default(true)` `Filter(eq)`
 
 _Type_: **boolean**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **True**  
@@ -106,6 +111,7 @@ _Default Value_: **True**
 True when the mailbox messages are stored in encrypted format. `Required` `Default(false)` `Filter(eq)`
 
 _Type_: **boolean**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **False**  
@@ -115,6 +121,7 @@ _Default Value_: **False**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -123,6 +130,7 @@ _Supports Order By_: ****
 Reset is pending: true = next sync should delete and retrieve again all messages; false = no pending reset. `Required` `Default(false)` `Filter(eq)` `ReadOnly`
 
 _Type_: **boolean**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **False**  
@@ -132,6 +140,7 @@ _Default Value_: **False**
 The address of the server to use for sending mail. The same credentials as the sync server are used. When null, the mail will be sent using the default server, which is setup at the application server.
 
 _Type_: **string (254) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -141,6 +150,7 @@ _Maximum Length_: **254**
 The name of the SentItems folder. It is left empty, EnterpriseOne won't save the sent mail in any folder (but it is still possible that the actual mail server would nevertheless save the mail in a sent items folder, independently from EnterpriseOne).
 
 _Type_: **string (254) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -150,6 +160,7 @@ _Maximum Length_: **254**
 Html text of the default signature, when creating new emails from this mailbox. When is null, a default generic signature is attached.
 
 _Type_: **string (max) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
@@ -159,6 +170,7 @@ _Maximum Length_: **2147483647**
 The password to supply to the server when retrieving email. null when the connection is not setup or the server does not require user name.
 
 _Type_: **string (512) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **512**  
@@ -168,6 +180,7 @@ _Maximum Length_: **512**
 Synchronization protocol, 'POP3' or 'IMAP'. null means that syncrhonization is not setup.
 
 _Type_: **[SyncProtocol](Applications.Mail.Boxes.md#syncprotocol) __nullable__**  
+_Category_: **System**  
 Allowed values for the `SyncProtocol`(Applications.Mail.Boxes.md#syncprotocol) data attribute  
 _Allowed Values (Applications.Mail.BoxesRepository.SyncProtocol Enum Members)_  
 
@@ -185,6 +198,7 @@ _Supports Order By_: **False**
 Incoming and outgoing mail server internet address. null when synchronization is not setup.
 
 _Type_: **string (254) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -194,6 +208,7 @@ _Maximum Length_: **254**
 User name to supply to the server, when retrieving email. null when the connection is not setup or the server does not require user name.
 
 _Type_: **string (64) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  
@@ -207,6 +222,7 @@ The user, who owns the mailbox. `Required` `Filter(multi eq)`
 
 _Type_: **[Users](Systems.Security.Users.md)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

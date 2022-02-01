@@ -44,6 +44,7 @@ Aggregate Tree
 Basic mathematical depreciation function used to calculate asset depreciation. STL=Straight Line, SYD=Sum of Years Digits, FAC=Depreciation change by factor, TAB=User defined with table. `Required` `Default("STL")`
 
 _Type_: **[DepreciationFunction](Finance.Assets.DepreciationMethods.md#depreciationfunction)**  
+_Category_: **System**  
 Allowed values for the `DepreciationFunction`(Finance.Assets.DepreciationMethods.md#depreciationfunction) data attribute  
 _Allowed Values (Finance.Assets.DepreciationMethodsRepository.DepreciationFunction Enum Members)_  
 
@@ -63,6 +64,7 @@ _Default Value_: **StraightLine**
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -71,6 +73,7 @@ _Supports Order By_: ****
 Factor used in factor depreciation function. Factor &lt; 1 means declining depreciation; &gt;1 - increasing. The depreciation is multiplied for each period by the factor. `Required` `Default(1)`
 
 _Type_: **decimal (5, 3)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **1**  
@@ -79,6 +82,7 @@ _Default Value_: **1**
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -87,6 +91,7 @@ _Default Value_: **NewGuid**
 Is_System is True for those depreciation methods that are managed by the system via update procedures and cannot be edited by the user. `Required` `Default(false)` `Filter(eq)` `ReadOnly`
 
 _Type_: **boolean**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **False**  
@@ -96,6 +101,7 @@ _Default Value_: **False**
 Number of equal valued months calculated with single application of the function. `Required` `Default(12)`
 
 _Type_: **int32**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **12**  
@@ -105,6 +111,7 @@ _Default Value_: **12**
 The name of this DepreciationMethod(Multilanguage string).. `Required` `Filter(like)`
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
+_Category_: **System**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 
@@ -113,6 +120,7 @@ _Supports Order By_: **False**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -121,6 +129,7 @@ _Supports Order By_: ****
 Determines when the depreciation starts and when it ends. NM=Next_Month, CM=Current_Month, BD=By_Days. `Required`
 
 _Type_: **[PeriodDeterminationMethod](Finance.Assets.DepreciationMethods.md#perioddeterminationmethod)**  
+_Category_: **System**  
 Allowed values for the `PeriodDeterminationMethod`(Finance.Assets.DepreciationMethods.md#perioddeterminationmethod) data attribute  
 _Allowed Values (Finance.Assets.DepreciationMethodsRepository.PeriodDeterminationMethod Enum Members)_  
 
@@ -138,6 +147,7 @@ _Supports Order By_: **False**
 When true, denotes that the depreciation starts from the month, following the month of deployment. When false, the depreciation starts from the same month. `Required` `Default(true)` `ReadOnly`
 
 _Type_: **boolean**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **True**  

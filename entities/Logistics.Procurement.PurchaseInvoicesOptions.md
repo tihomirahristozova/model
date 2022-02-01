@@ -43,6 +43,7 @@ Aggregate Tree
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -50,6 +51,7 @@ _Supports Order By_: ****
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -58,6 +60,7 @@ _Default Value_: **NewGuid**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -66,6 +69,7 @@ _Supports Order By_: ****
 This option can restrict the sign of the Line Amounts for each detail line in purchase invoices of the specified document type. `Required` `Default(0)`
 
 _Type_: **[SignRestriction](Logistics.Procurement.PurchaseInvoicesOptions.md#signrestriction)**  
+_Category_: **System**  
 Allowed values for the `SignRestriction`(Logistics.Procurement.PurchaseInvoicesOptions.md#signrestriction) data attribute  
 _Allowed Values (Logistics.Procurement.PurchaseInvoicesOptionsRepository.SignRestriction Enum Members)_  
 
@@ -84,6 +88,7 @@ _Default Value_: **0**
 This option can restrict the sign of the Total Amounts of the purchase invoices of the specified document type. The restriction is applied upon document Release. `Required` `Default(0)`
 
 _Type_: **[TotalAmountSignRestriction](Logistics.Procurement.PurchaseInvoicesOptions.md#totalamountsignrestriction)**  
+_Category_: **System**  
 Allowed values for the `TotalAmountSignRestriction`(Logistics.Procurement.PurchaseInvoicesOptions.md#totalamountsignrestriction) data attribute  
 _Allowed Values (Logistics.Procurement.PurchaseInvoicesOptionsRepository.TotalAmountSignRestriction Enum Members)_  
 
@@ -105,6 +110,7 @@ _Default Value_: **0**
 The document type, for which the options are specified. `Required` `Filter(multi eq)`
 
 _Type_: **[DocumentTypes](General.DocumentTypes.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

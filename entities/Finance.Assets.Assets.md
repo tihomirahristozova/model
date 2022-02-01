@@ -57,6 +57,7 @@ The unique code of the Asset. `Required` `Filter(eq;like)` `ORD`
 
 _Type_: **string (20)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
 _Maximum Length_: **20**  
@@ -66,6 +67,7 @@ _Maximum Length_: **20**
 Date, when the asset is first deployed. Null if the asset is not deployed yet.
 
 _Type_: **datetime __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -74,6 +76,7 @@ _Supports Order By_: **False**
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -81,6 +84,7 @@ _Supports Order By_: ****
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -89,6 +93,7 @@ _Default Value_: **NewGuid**
 Checked if the assets is active and can be used in documents. The inactive assets can be used only for reports. `Required` `Default(true)` `Filter(eq)`
 
 _Type_: **boolean**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **True**  
@@ -98,6 +103,7 @@ _Default Value_: **True**
 The name of this Asset. `Required` `Filter(like)`
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
+_Category_: **System**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 
@@ -106,6 +112,7 @@ _Supports Order By_: **False**
 Notes for this Asset.
 
 _Type_: **string (254) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -115,6 +122,7 @@ _Maximum Length_: **254**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -123,6 +131,7 @@ _Supports Order By_: ****
 Original purchase date of the asset. `Required`
 
 _Type_: **datetime**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -131,6 +140,7 @@ _Supports Order By_: **False**
 Serial number of the asset. `Filter(eq)`
 
 _Type_: **string (30) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Maximum Length_: **30**  
@@ -143,6 +153,7 @@ _Maximum Length_: **30**
 The category of this asset. The category may determine default values for the depreciation plans for the different valuation models for this asset. `Required` `Filter(multi eq)`
 
 _Type_: **[AssetCategories](Finance.Assets.AssetCategories.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### AssetGroup
@@ -150,6 +161,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The asset group to which this asset belongs. `Filter(multi eq)`
 
 _Type_: **[AssetGroups](Finance.Assets.AssetGroups.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### EnterpriseCompany
@@ -157,6 +169,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The Enterprise Company to which this Asset applies. `Required` `Filter(multi eq)`
 
 _Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PrimaryValuationModel
@@ -164,6 +177,7 @@ _Supported Filters_: **Equals, EqualsIn**
 Obsolete. Not used. `Required` `Filter(multi eq)`
 
 _Type_: **[ValuationModels](Finance.Assets.ValuationModels.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ValuationCurrency
@@ -171,6 +185,7 @@ _Supported Filters_: **Equals, EqualsIn**
 Currency in which changes of the asset values (purchase value, depreciation value and etc.) are stored. `Required` `Filter(multi eq)`
 
 _Type_: **[Currencies](General.Currencies.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

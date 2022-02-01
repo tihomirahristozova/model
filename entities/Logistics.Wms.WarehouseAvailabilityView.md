@@ -49,6 +49,7 @@ Aggregate Tree
 Catch (measured) quantity for the transaction. Positive values indicate transactions. Negative values are used for adjustments. null when catch measurement is not configured for the product. `Filter(eq;ge;le)` `Inherited from Wms_Warehouse_Transactions_Table.Catch_Quantity`
 
 _Type_: **decimal (38, 3) __nullable__**  
+_Category_: **System**  
 _Inherited From_: **Wms_Warehouse_Transactions_Table.Catch_Quantity**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
@@ -58,6 +59,7 @@ _Supports Order By_: **False**
 Currently available quantity in base measurement unit. `Required` `Introduced in version 22.1.5.25`
 
 _Type_: **decimal (38, 3)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -66,6 +68,7 @@ _Supports Order By_: **False**
 Currently available theoretical quantity according to the measurement dimensions of the product. It can be used to calculate the quantity available in fixed measurement units like pieces. `Required` `Introduced in version 22.1.5.25`
 
 _Type_: **decimal (38, 3)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -77,6 +80,7 @@ _Supports Order By_: **False**
 The measurement unit of the catch quantity. null when catch measurement is not configured for the product. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Gen_Measurement_Units_Table.Id`
 
 _Type_: **[MeasurementUnits](General.MeasurementUnits.md)**  
+_Category_: **System**  
 _Inherited From_: **Gen_Measurement_Units_Table.Id**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
@@ -86,6 +90,7 @@ _Default Value_: **NewGuid**
 Logistic unit, which was transacted. null when the transaction was not for a logistic unit. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Log_Logistic_Units_Table.Logistic_Unit_Id`
 
 _Type_: **[LogisticUnits](Logistics.LogisticUnits.md)**  
+_Category_: **System**  
 _Inherited From_: **Log_Logistic_Units_Table.Logistic_Unit_Id**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
@@ -95,6 +100,7 @@ _Default Value_: **NewGuid**
 The lot which was transacted. null when the transaction was not for a specific lot. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Inv_Lots_Table.Lot_Id`
 
 _Type_: **[Lots](Logistics.Inventory.Lots.md)**  
+_Category_: **System**  
 _Inherited From_: **Inv_Lots_Table.Lot_Id**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
@@ -104,6 +110,7 @@ _Default Value_: **NewGuid**
 The product, which was transacted. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Gen_Products_Table.Id`
 
 _Type_: **[Products](General.Products.Products.md)**  
+_Category_: **System**  
 _Inherited From_: **Gen_Products_Table.Id**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
@@ -113,6 +120,7 @@ _Default Value_: **NewGuid**
 The product variant, which was transacted. null when the transaction was not for a product variant. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Gen_Product_Variants_Table.Product_Variant_Id`
 
 _Type_: **[ProductVariants](General.ProductVariants.md)**  
+_Category_: **System**  
 _Inherited From_: **Gen_Product_Variants_Table.Product_Variant_Id**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
@@ -122,6 +130,7 @@ _Default Value_: **NewGuid**
 The measurement unit of quantity. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Gen_Measurement_Units_Table.Id`
 
 _Type_: **[MeasurementUnits](General.MeasurementUnits.md)**  
+_Category_: **System**  
 _Inherited From_: **Gen_Measurement_Units_Table.Id**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
@@ -131,6 +140,7 @@ _Default Value_: **NewGuid**
 The serial number which was transacted. null when the transaction was not for a specific serial number. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Inv_Serial_Numbers_Table.Id`
 
 _Type_: **[SerialNumbers](Logistics.Inventory.SerialNumbers.md)**  
+_Category_: **System**  
 _Inherited From_: **Inv_Serial_Numbers_Table.Id**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
@@ -138,6 +148,7 @@ _Default Value_: **NewGuid**
 ### Warehouse
 
 _Type_: **[Warehouses](Logistics.Wms.Warehouses.md)**  
+_Category_: **System**  
 _Inherited From_: **Wms_Warehouses_Table.Warehouse_Id**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
@@ -147,6 +158,7 @@ _Default Value_: **NewGuid**
 The warehouse location, where the transaction occurred. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Wms_Warehouse_Locations_Table.Warehouse_Location_Id`
 
 _Type_: **[WarehouseLocations](Logistics.Wms.WarehouseLocations.md)**  
+_Category_: **System**  
 _Inherited From_: **Wms_Warehouse_Locations_Table.Warehouse_Location_Id**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  

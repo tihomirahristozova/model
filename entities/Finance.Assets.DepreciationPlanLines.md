@@ -57,6 +57,7 @@ Aggregate Root:
 End date of the depreciation plan for this asset. `Required`
 
 _Type_: **datetime**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -65,6 +66,7 @@ _Supports Order By_: **False**
 Start date of the depreciation plan for this asset. `Required`
 
 _Type_: **datetime**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -73,6 +75,7 @@ _Supports Order By_: **False**
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -80,6 +83,7 @@ _Supports Order By_: ****
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -88,6 +92,7 @@ _Default Value_: **NewGuid**
 Consecutive number of the line within the depreciation plan. `Required` `Filter(eq)`
 
 _Type_: **int32**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 
@@ -101,6 +106,7 @@ _Front-End Recalc Expressions:_
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -109,6 +115,7 @@ _Supports Order By_: ****
 The part of the total amount of the asset (in the currency of the asset), which is due for depreciation. `Currency: Asset.ValuationCurrency` `Required` `Default(0)`
 
 _Type_: **[Amount (14, 2)](../data-types.md#amount)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -122,6 +129,7 @@ The asset that is planned for depreciation. `Required` `Filter(multi eq)`
 
 _Type_: **[Assets](Finance.Assets.Assets.md)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### DepreciationMethod
@@ -129,6 +137,7 @@ _Supported Filters_: **Equals, EqualsIn**
 Depreciation method by which the asset will be depreciated. `Required` `Filter(multi eq)`
 
 _Type_: **[DepreciationMethods](Finance.Assets.DepreciationMethods.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### DepreciationPlan
@@ -137,6 +146,7 @@ The <see cref="DepreciationPlan"/> to which this DepreciationPlanLine belongs. `
 
 _Type_: **[DepreciationPlans](Finance.Assets.DepreciationPlans.md)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
 
@@ -146,6 +156,7 @@ The <see cref="DepreciationPlan"/> to which this DepreciationPlanLine belongs. `
 
 _Type_: **[DepreciationPlans](Finance.Assets.DepreciationPlans.md)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ValuationModel
@@ -153,6 +164,7 @@ _Supported Filters_: **Equals, EqualsIn**
 Valuation model in which the asset is accounted. `Required` `Filter(multi eq)`
 
 _Type_: **[ValuationModels](Finance.Assets.ValuationModels.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

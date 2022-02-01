@@ -71,6 +71,7 @@ Aggregate Root:
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -79,6 +80,7 @@ _Supports Order By_: ****
 Date and time when the operation has ended. `Required` `Default(Now)` `Filter(ge;le)`
 
 _Type_: **datetime**  
+_Category_: **System**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **CurrentDateTime**  
@@ -88,6 +90,7 @@ _Default Value_: **CurrentDateTime**
 True if this output entry completes the operation. false if there might be more entries. `Required` `Default(false)` `Filter(eq)`
 
 _Type_: **boolean**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **False**  
@@ -96,6 +99,7 @@ _Default Value_: **False**
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -104,6 +108,7 @@ _Default Value_: **NewGuid**
 Line number within the order. `Required`
 
 _Type_: **int32**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -117,6 +122,7 @@ _Front-End Recalc Expressions:_
 Notes for this OutputOrderLine.
 
 _Type_: **string (max) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
@@ -126,6 +132,7 @@ _Maximum Length_: **2147483647**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -134,6 +141,7 @@ _Supports Order By_: ****
 The processed quantity of the end product. `Unit: ProducedQuantityUnit` `Required` `Default(0)` `Filter(ge;le)`
 
 _Type_: **[Quantity (18, 3)](../data-types.md#quantity)**  
+_Category_: **System**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -143,6 +151,7 @@ _Default Value_: **Constant**
 The equivalence of Produced Quantity in the base measurement unit of the product. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Default(0)` `ReadOnly`
 
 _Type_: **[Quantity (18, 3)](../data-types.md#quantity)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -157,6 +166,7 @@ _Front-End Recalc Expressions:_
 The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. null means to convert the value from Quantity using the measurement ratios. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` `Introduced in version 18.2`
 
 _Type_: **[Quantity (18, 3)](../data-types.md#quantity)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -170,6 +180,7 @@ _Front-End Recalc Expressions:_
 Date and time when the operation has began. `Required` `Default(Now)` `Filter(ge;le)`
 
 _Type_: **datetime**  
+_Category_: **System**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **CurrentDateTime**  
@@ -179,6 +190,7 @@ _Default Value_: **CurrentDateTime**
 Sets the timestamp of the receipt store operations for this output order line. Used in completing output orders. `ReadOnly`
 
 _Type_: **datetime __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -191,6 +203,7 @@ The <see cref="OutputOrder"/> to which this OutputOrderLine belongs. `Required` 
 
 _Type_: **[OutputOrders](Production.ShopFloor.OutputOrders.md)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### LineWorkOrder
@@ -198,6 +211,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The work order for which work is being accounted. `Required` `Filter(multi eq)`
 
 _Type_: **[WorkOrders](Production.ShopFloor.WorkOrders.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Back-End Default Expression:_  
@@ -210,6 +224,7 @@ _Front-End Recalc Expressions:_
 The lot of the produced product. `Filter(multi eq)`
 
 _Type_: **[Lots](Logistics.Inventory.Lots.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### OutputOrder
@@ -218,6 +233,7 @@ The <see cref="OutputOrder"/> to which this OutputOrderLine belongs. `Required` 
 
 _Type_: **[OutputOrders](Production.ShopFloor.OutputOrders.md)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
 
@@ -226,6 +242,7 @@ _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-reference
 The measurement unit of Produced Quantity. `Required` `Filter(multi eq)`
 
 _Type_: **[MeasurementUnits](General.MeasurementUnits.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Front-End Recalc Expressions:_  
@@ -235,6 +252,7 @@ _Front-End Recalc Expressions:_
 The actually produced product. `Required` `Filter(multi eq)`
 
 _Type_: **[Products](General.Products.Products.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Front-End Recalc Expressions:_  
@@ -244,6 +262,7 @@ _Front-End Recalc Expressions:_
 Selects the product thru some of the product codes. `Filter(multi eq)`
 
 _Type_: **[ProductCodes](General.Products.ProductCodes.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Front-End Recalc Expressions:_  
@@ -253,6 +272,7 @@ _Front-End Recalc Expressions:_
 If not null, specifies that the product was (has to be) stored with specific serial number. `Filter(multi eq)`
 
 _Type_: **[SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Store
@@ -260,6 +280,7 @@ _Supported Filters_: **Equals, EqualsIn**
 Where to output the produced quantity. Can be null only if Produced_Quantity = 0. `Filter(multi eq)`
 
 _Type_: **[Stores](Logistics.Inventory.Stores.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### StoreBin
@@ -267,6 +288,7 @@ _Supported Filters_: **Equals, EqualsIn**
 If not null, specifies that the product was (has to be) stored to specific store bin. `Filter(multi eq)`
 
 _Type_: **[StoreBins](Logistics.Inventory.StoreBins.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### WorkDoneByParty
@@ -274,6 +296,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The party (usually employee worker) who has accomplished the work. null if unknown or N/A. `Filter(multi eq)`
 
 _Type_: **[Parties](General.Contacts.Parties.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### WorkgroupResource
@@ -281,6 +304,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The resource, which was used to perform the operation. `Filter(multi eq)`
 
 _Type_: **[WorkgroupResources](Production.Resources.WorkgroupResources.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Front-End Recalc Expressions:_  
@@ -291,6 +315,7 @@ The work order item for which this output is recorded. `Required` `Filter(multi 
 
 _Type_: **[WorkOrderItems](Production.ShopFloor.WorkOrderItems.md)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### WorkOrderItemOperation
@@ -298,6 +323,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The operation for which this output is recorded. `Filter(multi eq)`
 
 _Type_: **[WorkOrderItemOperations](Production.ShopFloor.WorkOrderItemOperations.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

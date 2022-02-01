@@ -48,6 +48,7 @@ Aggregate Root:
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -55,6 +56,7 @@ _Supports Order By_: ****
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -63,6 +65,7 @@ _Default Value_: **NewGuid**
 The key order determines in which order the values and descriptions of the properties will form the item (grouping) key and description. `Required`
 
 _Type_: **int32**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -76,6 +79,7 @@ _Front-End Recalc Expressions:_
 Key properties particiate in forming the grouping key, which is the smallest unit of calculation for account balance. Non-key properties simply serve for comment and clarification purposes. `Required` `Default(true)` `Filter(eq)`
 
 _Type_: **boolean**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **True**  
@@ -85,6 +89,7 @@ _Default Value_: **True**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -97,6 +102,7 @@ The <see cref="Account"/> to which this AccountRequiredProperty belongs. `Requir
 
 _Type_: **[Accounts](Finance.Accounting.Accounts.md)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
 
@@ -105,6 +111,7 @@ _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-reference
 A property of type (Entity_Name = Account Voucher Line) for which the user can specify value when entering accounting vouchers. `Required` `Filter(multi eq)`
 
 _Type_: **[CustomProperties](General.CustomProperties.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

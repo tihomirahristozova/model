@@ -58,6 +58,7 @@ Aggregate Root:
 Quantity found at the reconciliation, in the base measurement category of the product. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly`
 
 _Type_: **[Quantity (18, 3)](../data-types.md#quantity)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -66,6 +67,7 @@ _Supports Order By_: **False**
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -73,6 +75,7 @@ _Supports Order By_: ****
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -81,6 +84,7 @@ _Default Value_: **NewGuid**
 The ordinal position of the line within the document. Duplicates are allowed, but not suggested. `Required`
 
 _Type_: **int32**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -94,6 +98,7 @@ _Front-End Recalc Expressions:_
 Notes for this ReconciliationLine.
 
 _Type_: **string (254) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -103,6 +108,7 @@ _Maximum Length_: **254**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -111,6 +117,7 @@ _Supports Order By_: ****
 Quantity found at the reconciliation, . `Unit: QuantityUnit` `Required` `Filter(ge;le)`
 
 _Type_: **[Quantity (18, 3)](../data-types.md#quantity)**  
+_Category_: **System**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -119,6 +126,7 @@ _Supports Order By_: **False**
 Quantity found at the reconciliation, expressed in base measurement units. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Filter(ge;le)`
 
 _Type_: **[Quantity (18, 3)](../data-types.md#quantity)**  
+_Category_: **System**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -132,6 +140,7 @@ _Front-End Recalc Expressions:_
 The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` `Introduced in version 18.2`
 
 _Type_: **[Quantity (18, 3)](../data-types.md#quantity)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -145,6 +154,7 @@ _Front-End Recalc Expressions:_
 Exact time when the transaction occurred.
 
 _Type_: **datetime __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -157,6 +167,7 @@ Parent reconciliation Id. `Required` `Filter(multi eq)`
 
 _Type_: **[Reconciliations](Logistics.Inventory.Reconciliations.md)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Lot
@@ -164,6 +175,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The lot, which was reconciled. `Filter(multi eq)`
 
 _Type_: **[Lots](Logistics.Inventory.Lots.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Product
@@ -171,6 +183,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The id of the reconciled product. `Required` `Filter(multi eq)`
 
 _Type_: **[Products](General.Products.Products.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Front-End Recalc Expressions:_  
@@ -180,6 +193,7 @@ _Front-End Recalc Expressions:_
 Selects the product thru some of the product codes. `Filter(multi eq)`
 
 _Type_: **[ProductCodes](General.Products.ProductCodes.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Front-End Recalc Expressions:_  
@@ -189,6 +203,7 @@ _Front-End Recalc Expressions:_
 The measurement unit of Quantity. `Required` `Filter(multi eq)`
 
 _Type_: **[MeasurementUnits](General.MeasurementUnits.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Front-End Recalc Expressions:_  
@@ -199,6 +214,7 @@ Parent reconciliation Id. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[Reconciliations](Logistics.Inventory.Reconciliations.md)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
 
@@ -207,6 +223,7 @@ _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-reference
 Item serial number for serialized items. null for non-serializable items. `Filter(multi eq)`
 
 _Type_: **[SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Front-End Recalc Expressions:_  
@@ -216,6 +233,7 @@ _Front-End Recalc Expressions:_
 The store, containing the reconciled product. `Required` `Filter(multi eq)`
 
 _Type_: **[Stores](Logistics.Inventory.Stores.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Front-End Recalc Expressions:_  
@@ -225,6 +243,7 @@ _Front-End Recalc Expressions:_
 The store bin, that was counted. `Filter(multi eq)`
 
 _Type_: **[StoreBins](Logistics.Inventory.StoreBins.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Front-End Recalc Expressions:_  

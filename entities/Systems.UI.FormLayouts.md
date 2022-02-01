@@ -52,6 +52,7 @@ The application, which consumes the layout. `Required` `Filter(eq)` `ORD`
 
 _Type_: **string (64)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **True**  
 _Maximum Length_: **64**  
@@ -61,6 +62,7 @@ _Maximum Length_: **64**
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -69,6 +71,7 @@ _Supports Order By_: ****
 The form, for which the layout is applied. `Required` `Filter(eq;like)`
 
 _Type_: **string (64)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  
@@ -77,6 +80,7 @@ _Maximum Length_: **64**
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -85,6 +89,7 @@ _Default Value_: **NewGuid**
 The byte storage of the layout.
 
 _Type_: **byte[] __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -93,6 +98,7 @@ _Supports Order By_: **False**
 The format of the data in the Layout column. Values can be: 'U' - uncompressed; 'L' - LZO compressed; 'D' - Deflate compressed. `Required` `Default("U")`
 
 _Type_: **[LayoutFormat](Systems.UI.FormLayouts.md#layoutformat)**  
+_Category_: **System**  
 Allowed values for the `LayoutFormat`(Systems.UI.FormLayouts.md#layoutformat) data attribute  
 _Allowed Values (Systems.UI.FormLayoutsRepository.LayoutFormat Enum Members)_  
 
@@ -111,6 +117,7 @@ _Default Value_: **Uncompressed**
 The name of a named layout. Standard layouts have empty string names. `Required` `Filter(eq;like)`
 
 _Type_: **string (64)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  
@@ -120,6 +127,7 @@ _Maximum Length_: **64**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -128,6 +136,7 @@ _Supports Order By_: ****
 The visual panel, for which the layout is applied. `Required` `Default("Form")` `Filter(eq)`
 
 _Type_: **string (64)**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  
@@ -138,6 +147,7 @@ _Default Value_: **Form**
 The user for which the layout is applied. null means that the layout is applied for all users. `Filter(eq;like)`
 
 _Type_: **string (64) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  
@@ -150,6 +160,7 @@ _Maximum Length_: **64**
 The security access key which controls the access to the layout view. `Filter(multi eq)`
 
 _Type_: **[AccessKeys](Systems.Security.AccessKeys.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Role
@@ -157,6 +168,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The role, for which the layout is applied. `Filter(multi eq)`
 
 _Type_: **[Roles](Systems.Workflow.Roles.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

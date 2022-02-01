@@ -56,6 +56,7 @@ Aggregate Root:
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -63,6 +64,7 @@ _Supports Order By_: ****
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -71,6 +73,7 @@ _Default Value_: **NewGuid**
 The unique, consecutive line number within the requisition. `Required`
 
 _Type_: **int32**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -84,6 +87,7 @@ _Front-End Recalc Expressions:_
 Notes for this WarehouseRequisitionLine.
 
 _Type_: **string (max) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
@@ -93,6 +97,7 @@ _Maximum Length_: **2147483647**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -101,6 +106,7 @@ _Supports Order By_: ****
 The number of the line within the parent document, which the current line executes. null when the current line does not execute line.
 
 _Type_: **int32 __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -109,6 +115,7 @@ _Supports Order By_: **False**
 The requested quantity. `Unit: QuantityUnit` `Required` `Filter(eq;ge;le)`
 
 _Type_: **[Quantity (12, 3)](../data-types.md#quantity)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -117,6 +124,7 @@ _Supports Order By_: **False**
 Quantity in the base measurement unit of the product. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Filter(multi eq;ge;le)` `Introduced in version 21.1.1.33`
 
 _Type_: **[Quantity (12, 3)](../data-types.md#quantity)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan, EqualsIn**  
 _Supports Order By_: **False**  
 
@@ -130,6 +138,7 @@ _Front-End Recalc Expressions:_
 The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Introduced in version 22.1.4.42`
 
 _Type_: **[Quantity (12, 3)](../data-types.md#quantity)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -147,6 +156,7 @@ The <see cref="WarehouseRequisition"/> to which this WarehouseRequisitionLine be
 
 _Type_: **[WarehouseRequisitions](Logistics.Wms.WarehouseRequisitions.md)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Lot
@@ -154,6 +164,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The requested lot. null means that any lot can be used or the product does not use lots at all. `Filter(multi eq)`
 
 _Type_: **[Lots](Logistics.Inventory.Lots.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ParentDocument
@@ -161,6 +172,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The document, which the current line executes. null when the current line does not execute another line. `Filter(multi eq)`
 
 _Type_: **[Documents](General.Documents.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Product
@@ -168,6 +180,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The requested product. `Required` `Filter(multi eq)`
 
 _Type_: **[Products](General.Products.Products.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ProductVariant
@@ -175,6 +188,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The requested product variant. `Filter(multi eq)` `Introduced in version 22.1.4.56`
 
 _Type_: **[ProductVariants](General.ProductVariants.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### QuantityUnit
@@ -182,6 +196,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The measurement unit of Quantity. `Required` `Filter(multi eq)`
 
 _Type_: **[MeasurementUnits](General.MeasurementUnits.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Front-End Recalc Expressions:_  
@@ -191,6 +206,7 @@ _Front-End Recalc Expressions:_
 The requested serial number. null means that any serial number can be used or the product does not use serial numbers at all. `Filter(multi eq)`
 
 _Type_: **[SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### WarehouseRequisition
@@ -199,6 +215,7 @@ The <see cref="WarehouseRequisition"/> to which this WarehouseRequisitionLine be
 
 _Type_: **[WarehouseRequisitions](Logistics.Wms.WarehouseRequisitions.md)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
 

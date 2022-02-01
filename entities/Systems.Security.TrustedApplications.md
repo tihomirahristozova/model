@@ -65,6 +65,7 @@ Aggregate Tree
 Hash of the secret of the client application. The secret is used when the client application needs to authorize itself in front of the identity provider. `Introduced in version 20.1`
 
 _Type_: **string (250) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **250**  
@@ -74,6 +75,7 @@ _Maximum Length_: **250**
 Application globally unique Uri in reverse host name format. For example: "com.manufacturer/app". `Required` `Filter(eq)`
 
 _Type_: **string (254)**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -83,6 +85,7 @@ _Maximum Length_: **254**
 If true, this application allows login with user name and password. When a client application uses basic authentication it must provide the application uri along with user name and password. Use with caution, because basic authentication is less secure than oauth! If a user is specified in System User, the basic authentication is allowed only for this user. `Required` `Default(false)` `Filter(eq)`
 
 _Type_: **boolean**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **False**  
@@ -92,6 +95,7 @@ _Default Value_: **False**
 Specifies the client type, according to RFC 6749, e.g. the confidentiality of the client app. P=Public (e.g. browser or native app); C=Confidential (e.g. web server app). `Required` `Default("C")` `Introduced in version 20.1`
 
 _Type_: **[ClientType](Systems.Security.TrustedApplications.md#clienttype)**  
+_Category_: **System**  
 Allowed values for the `ClientType`(Systems.Security.TrustedApplications.md#clienttype) data attribute  
 _Allowed Values (Systems.Security.TrustedApplicationsRepository.ClientType Enum Members)_  
 
@@ -109,6 +113,7 @@ _Default Value_: **Confidential**
 Date and time (in UTC) when the application was registered. `Required` `Default(NowUtc)` `Filter(eq;ge;le)`
 
 _Type_: **datetime**  
+_Category_: **System**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **CurrentDateTimeUtc**  
@@ -118,6 +123,7 @@ _Default Value_: **CurrentDateTimeUtc**
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -125,6 +131,7 @@ _Supports Order By_: ****
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -133,6 +140,7 @@ _Default Value_: **NewGuid**
 Allows the application to request login from external users and operate on their behalf. `Required` `Default(false)` `Filter(eq)`
 
 _Type_: **boolean**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **False**  
@@ -142,6 +150,7 @@ _Default Value_: **False**
 Allows the application to request login from internal users and operate on their behalf. `Required` `Default(false)` `Filter(eq)`
 
 _Type_: **boolean**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **False**  
@@ -151,6 +160,7 @@ _Default Value_: **False**
 The login Url used when an application is impersonated as (usually community) user.
 
 _Type_: **string (254) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -160,6 +170,7 @@ _Maximum Length_: **254**
 The logout Url used when an application is impersonated as (usually community) user.
 
 _Type_: **string (254) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -169,6 +180,7 @@ _Maximum Length_: **254**
 Specifies whether the application is enabled for login. `Required` `Default(true)` `Filter(eq)`
 
 _Type_: **boolean**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **True**  
@@ -178,6 +190,7 @@ _Default Value_: **True**
 The multi-language name of the application. `Required` `Filter(eq;like)`
 
 _Type_: **string (254)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -187,6 +200,7 @@ _Maximum Length_: **254**
 Notes for this TrustedApplication.
 
 _Type_: **string (max) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
@@ -196,6 +210,7 @@ _Maximum Length_: **2147483647**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -204,6 +219,7 @@ _Supports Order By_: ****
 The scope (according to RFC 6749) for which the application was trusted. The scope is an unordered list of space-delimited case-sensitive strings. Each string denotes a permission (see docs for possible values). `Introduced in version 20.1`
 
 _Type_: **string (max) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
@@ -213,6 +229,7 @@ _Maximum Length_: **2147483647**
 Allows this application to logon as a service. `Required` `Default(false)` `Filter(eq)`
 
 _Type_: **boolean**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **False**  
@@ -222,6 +239,7 @@ _Default Value_: **False**
 The URL, which will be used by the login process, when the application logs in as a service.
 
 _Type_: **string (254) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -234,6 +252,7 @@ _Maximum Length_: **254**
 The user, which will be used when the application logins as a service. `Filter(multi eq)`
 
 _Type_: **[Users](Systems.Security.Users.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

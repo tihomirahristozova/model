@@ -40,6 +40,7 @@ Aggregate Tree
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -48,12 +49,14 @@ _Supports Order By_: ****
 From which type of documents the link originates. null means that it might originate from any document type. `Filter(multi eq)`
 
 _Type_: **guid __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Id
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 
 ### Name
@@ -61,6 +64,7 @@ _Supported Filters_: **NotFilterable**
 Obsolete. Not used. `Required`
 
 _Type_: **string (254)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -70,6 +74,7 @@ _Maximum Length_: **254**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -78,6 +83,7 @@ _Supports Order By_: ****
 To what type of documents the link points. null means that it might point to any document type. `Filter(multi eq)`
 
 _Type_: **guid __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

@@ -51,6 +51,7 @@ Aggregate Root:
 Budgeted amount for the material in the currency of the project. null means there is still no budgeted amount. `Currency: ProjectTask.Project.BudgetingCurrency`
 
 _Type_: **[Amount (12, 2)](../data-types.md#amount) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -61,6 +62,7 @@ _Front-End Recalc Expressions:_
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -68,6 +70,7 @@ _Supports Order By_: ****
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -76,6 +79,7 @@ _Default Value_: **NewGuid**
 Line number within the task, increased in steps of 10. Used for sorting purposes. `Required` `Default(0)`
 
 _Type_: **int32**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  
@@ -90,6 +94,7 @@ _Front-End Recalc Expressions:_
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -98,6 +103,7 @@ _Supports Order By_: ****
 The required quantity of the material. `Unit: QuantityUnit` `Required` `Default(1)`
 
 _Type_: **[Quantity (9, 3)](../data-types.md#quantity)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -107,6 +113,7 @@ _Default Value_: **Constant**
 The equivalence of Quantity in the base measurement unit of the Material. `Required` `Default(0)` `ReadOnly`
 
 _Type_: **decimal (9, 3)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  
@@ -121,6 +128,7 @@ _Front-End Recalc Expressions:_
 The product Id of the required material. `Required` `Filter(multi eq)`
 
 _Type_: **[Products](General.Products.Products.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ProjectTask
@@ -129,6 +137,7 @@ The task for which is the material requirement. `Required` `Filter(multi eq)` `O
 
 _Type_: **[ProjectTasks](Projects.ProjectTasks.md)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
 
@@ -137,6 +146,7 @@ _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-reference
 The measurement unit of the required quantity. `Required` `Filter(multi eq)`
 
 _Type_: **[MeasurementUnits](General.MeasurementUnits.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

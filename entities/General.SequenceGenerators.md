@@ -51,6 +51,7 @@ Aggregate Root:
 Allows to assign numbers explicitely regardless of the Next_Value of the generator (Next_Value is updated if needed). `Required` `Default(false)`
 
 _Type_: **boolean**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **False**  
@@ -60,6 +61,7 @@ _Default Value_: **False**
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -67,6 +69,7 @@ _Supports Order By_: ****
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -75,6 +78,7 @@ _Default Value_: **NewGuid**
 The next number that will be issued by the sequence. `Required` `Default("0000000001")`
 
 _Type_: **string (16)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **16**  
@@ -85,6 +89,7 @@ _Default Value_: **0000000001**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -93,6 +98,7 @@ _Supports Order By_: ****
 The priority in which the sequence is used, compared to other similar sequences. Used only for sequences, for which Simultaneous Transactions=True. `Required` `Default(1)`
 
 _Type_: **int32**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **1**  
@@ -105,6 +111,7 @@ _Default Value_: **1**
 The Enterprise Company to which this SequenceGenerator applies. `Required` `Filter(multi eq)`
 
 _Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### EnterpriseCompanyLocation
@@ -112,6 +119,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The Enterprise Company Location to which this SequenceGenerator applies, or null if it is for all enterprise company locations. `Filter(multi eq)`
 
 _Type_: **[CompanyLocations](General.Contacts.CompanyLocations.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ResponsiblePerson
@@ -119,6 +127,7 @@ _Supported Filters_: **Equals, EqualsIn**
 If specified then the generator is designated for use only in documents with that Responsible_Person_Id. `Filter(multi eq)`
 
 _Type_: **[Persons](General.Contacts.Persons.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Sequence
@@ -127,6 +136,7 @@ The <see cref="Sequence"/> to which this SequenceGenerator belongs. `Required` `
 
 _Type_: **[Sequences](General.Sequences.md)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
 

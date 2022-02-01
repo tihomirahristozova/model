@@ -52,6 +52,7 @@ Aggregate Root:
 The internal Id of a property value, selected as constant value. Applicable only when Property Value Source Type = Constant. `Filter(multi eq)`
 
 _Type_: **guid __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### DisplayText
@@ -59,6 +60,7 @@ _Supported Filters_: **Equals, EqualsIn**
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -66,6 +68,7 @@ _Supports Order By_: ****
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -74,6 +77,7 @@ _Default Value_: **NewGuid**
 If Is_Debit=true then this property is for the debit account in the template line for which is this record. If Is_Debit=false then the property is for the credit account. `Required` `Default(true)` `Filter(eq)`
 
 _Type_: **boolean**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **True**  
@@ -83,6 +87,7 @@ _Default Value_: **True**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -91,6 +96,7 @@ _Supports Order By_: ****
 Description for the property value that should be used when the description can't be determined by the source (e.g. when the source type is constant).
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -99,6 +105,7 @@ _Supports Order By_: **False**
 The ordinal position of the property value in the item key of the account. `Required` `Filter(eq)`
 
 _Type_: **int32**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 
@@ -107,6 +114,7 @@ _Supports Order By_: **False**
 Source for the property value according to the chosen source type. `Required`
 
 _Type_: **string (2000)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2000**  
@@ -116,6 +124,7 @@ _Maximum Length_: **2000**
 Type of source for the property value. For example: System properties, User properties for document, Constant, ... `Required`
 
 _Type_: **string (64)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  
@@ -128,6 +137,7 @@ _Maximum Length_: **64**
 The property which value will be included in the item key of the account. `Required` `Filter(multi eq)`
 
 _Type_: **[CustomProperties](General.CustomProperties.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### TemplateLine
@@ -136,6 +146,7 @@ The <see cref="TemplateLine"/> to which this TemplateLineProperty belongs. `Requ
 
 _Type_: **[TemplateLines](Finance.Accounting.TemplateLines.md)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
 

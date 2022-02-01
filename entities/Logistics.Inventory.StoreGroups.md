@@ -50,6 +50,7 @@ Aggregate Tree
 The unique code of the StoreGroup. `Required` `Filter(eq;like)`
 
 _Type_: **string (16)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **16**  
@@ -59,6 +60,7 @@ _Maximum Length_: **16**
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -68,6 +70,7 @@ The full path to the store group in a dot separated, non-leading dot format. For
 
 _Type_: **string (25) __nullable__**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
 _Maximum Length_: **25**  
@@ -76,6 +79,7 @@ _Maximum Length_: **25**
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -84,6 +88,7 @@ _Default Value_: **NewGuid**
 The name of this StoreGroup. `Required` `Filter(like)`
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
+_Category_: **System**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 
@@ -92,6 +97,7 @@ _Supports Order By_: **False**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -100,6 +106,7 @@ _Supports Order By_: ****
 The full path to the parent store group. It is stored in a dot separated, non-leading dot format. For example: 001.005. `Filter(eq;like)`
 
 _Type_: **string (25) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **25**  
@@ -112,6 +119,7 @@ _Maximum Length_: **25**
 The Enterprise Company to which this StoreGroup applies, or null if it is for all enterprise companies. `Filter(multi eq)`
 
 _Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### EnterpriseCompanyLocation
@@ -119,6 +127,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The Enterprise Company Location to which this StoreGroup applies, or null if it is for all enterprise company locations. `Filter(multi eq)`
 
 _Type_: **[CompanyLocations](General.Contacts.CompanyLocations.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

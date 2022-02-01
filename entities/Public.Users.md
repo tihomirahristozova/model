@@ -41,6 +41,7 @@ Aggregate Tree
 Unique email of the user. Can be null because there may be login providers that don't use emails. `Required` `Filter(eq;like)`
 
 _Type_: **string (254)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -50,12 +51,14 @@ _Maximum Length_: **254**
 The full name of the user. `Required` `Filter(eq;like)`
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 
 ### UserId
 
 _Type_: **guid**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 
@@ -66,6 +69,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The person from within the system, which is authenticated with this login. null means that this user is not associated with a person record in the database. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Cm_Persons_Table.Person_Id`
 
 _Type_: **[Persons](General.Contacts.Persons.md)**  
+_Category_: **System**  
 _Inherited From_: **Cm_Persons_Table.Person_Id**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  

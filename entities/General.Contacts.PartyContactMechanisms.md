@@ -55,6 +55,7 @@ Aggregate Root:
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -63,6 +64,7 @@ _Supports Order By_: ****
 The first date when the contact mechanism was valid. null means unknown date. `Default(Today)` `Filter(eq;ge;le)`
 
 _Type_: **datetime __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **CurrentDate**  
@@ -71,6 +73,7 @@ _Default Value_: **CurrentDate**
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -79,6 +82,7 @@ _Default Value_: **NewGuid**
 True if the contact mechanism is currently active and can be used to contact the party. `Required` `Default(true)` `Filter(eq)`
 
 _Type_: **boolean**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **True**  
@@ -88,6 +92,7 @@ _Default Value_: **True**
 True - when this is the default contact mechanism for this party; false - otherwise. `Required` `Default(false)` `Filter(eq)`
 
 _Type_: **boolean**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **False**  
@@ -97,6 +102,7 @@ _Default Value_: **False**
 Consecutive number of the contact information. The number is unique within the party. `Required`
 
 _Type_: **int32**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -110,6 +116,7 @@ _Front-End Recalc Expressions:_
 If true then Don't use the mechanism for solicitation purposes. `Required` `Default(false)` `Filter(eq)`
 
 _Type_: **boolean**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **False**  
@@ -119,6 +126,7 @@ _Default Value_: **False**
 Notes for this PartyContactMechanism.
 
 _Type_: **string (254) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -128,6 +136,7 @@ _Maximum Length_: **254**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -136,6 +145,7 @@ _Supports Order By_: ****
 The last date on which the contact mechanism was valid for the party. null if the contact mechanism is still valid. `Filter(eq;ge;le)`
 
 _Type_: **datetime __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -148,6 +158,7 @@ The contact mechanism of the party. `Required` `Filter(multi eq)` `FilterableRef
 
 _Type_: **[ContactMechanisms](General.Contacts.ContactMechanisms.md)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
 
@@ -156,6 +167,7 @@ _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-reference
 The purpose of this contact mechanism. Unique within the party. Can be used to seek for specific contact mechanisms. `Filter(multi eq)` `Introduced in version 18.2`
 
 _Type_: **[ContactMechanismPurposes](General.Contacts.ContactMechanismPurposes.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Party
@@ -164,6 +176,7 @@ The party, having the contact mechanism. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[Parties](General.Contacts.Parties.md)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
 
@@ -172,6 +185,7 @@ _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-reference
 The personal data process, which is used to process the current data. Null when the data is not personal or when the process is unknown. `Filter(multi eq)` `Introduced in version 18.2`
 
 _Type_: **[PersonalDataProcesses](Applications.PersonalData.PersonalDataProcesses.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

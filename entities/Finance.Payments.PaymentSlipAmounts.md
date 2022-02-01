@@ -60,6 +60,7 @@ Aggregate Root:
 Description of the payed amount. The numbers of the documents which are payed for example.
 
 _Type_: **string (254) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -69,6 +70,7 @@ _Maximum Length_: **254**
 'I' for Payment issue, 'R' for payment receipt. `Required` `Filter(eq)`
 
 _Type_: **[Direction](Finance.Payments.PaymentSlipAmounts.md#direction)**  
+_Category_: **System**  
 Allowed values for the `Direction`(Finance.Payments.PaymentOrders.md#direction) data attribute  
 _Allowed Values (Finance.Payments.PaymentOrdersRepository.Direction Enum Members)_  
 
@@ -85,6 +87,7 @@ _Supports Order By_: **False**
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -92,6 +95,7 @@ _Supports Order By_: ****
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -100,6 +104,7 @@ _Default Value_: **NewGuid**
 Indicates whether the amount is payed or received by party or not (i.e. the amount is for fee, tax, etc.). `Required` `Default(true)`
 
 _Type_: **boolean**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **True**  
@@ -109,6 +114,7 @@ _Default Value_: **True**
 The number of the line within the payment. `Required`
 
 _Type_: **int32**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -122,6 +128,7 @@ _Front-End Recalc Expressions:_
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -130,6 +137,7 @@ _Supports Order By_: ****
 The name of the party that is paying or receiving the money. The column can be left blank if there is no party involved (e.g. the amount is fee).
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -140,6 +148,7 @@ _Front-End Recalc Expressions:_
 The date on which the payment is done. `Required` `Filter(ge;le)`
 
 _Type_: **datetime**  
+_Category_: **System**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -150,6 +159,7 @@ _Front-End Recalc Expressions:_
 The total amount payed. The distribution of the amount amongst the payment orders for this party is specified with payment slip lines. If null the total amount is calculated as sum of the amounts in the payment slip lines. `Currency: PaymentSlip.DocumentCurrency`
 
 _Type_: **[Amount (18, 2)](../data-types.md#amount) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -161,6 +171,7 @@ _Supports Order By_: **False**
 The party that is paying or receiving the money. The column can be left blank if there is no party involved (e.g. the amount is fee) or the party isn't present in the database yet. `Filter(multi eq)`
 
 _Type_: **[Parties](General.Contacts.Parties.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PaymentReason
@@ -168,6 +179,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The reason for the payment, as defined in Payment Reasons. `Filter(multi eq)`
 
 _Type_: **[PaymentReasons](Finance.Payments.PaymentReasons.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PaymentSlip
@@ -176,6 +188,7 @@ The <see cref="PaymentSlip"/> to which this PaymentSlipAmount belongs. `Required
 
 _Type_: **[PaymentSlips](Finance.Payments.PaymentSlips.md)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
 

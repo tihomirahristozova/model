@@ -52,6 +52,7 @@ Aggregate Root:
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -59,6 +60,7 @@ _Supports Order By_: ****
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -67,6 +69,7 @@ _Default Value_: **NewGuid**
 The coding system for which we are defining the location number. `Required` `Default("GLN")` `Filter(multi eq)`
 
 _Type_: **[LocationCodingSystem](General.PartyLocationNumbers.md#locationcodingsystem)**  
+_Category_: **System**  
 Allowed values for the `LocationCodingSystem`(General.PartyLocationNumbers.md#locationcodingsystem) data attribute  
 _Allowed Values (General.PartyLocationNumbersRepository.LocationCodingSystem Enum Members)_  
 
@@ -85,6 +88,7 @@ The location number of Party. `Required` `Filter(multi eq;like)` `ORD`
 
 _Type_: **string (16)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, Like, EqualsIn**  
 _Supports Order By_: **True**  
 _Maximum Length_: **16**  
@@ -94,6 +98,7 @@ _Maximum Length_: **16**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -102,6 +107,7 @@ _Supports Order By_: ****
 The location number of the partner party for which we define the main Party location number. The location number of the main Party might be different depending on the location number of the partner party. null means that the location number is not dependent on the partner location number. `Filter(multi eq)`
 
 _Type_: **string (16) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Supports Order By_: **False**  
 _Maximum Length_: **16**  
@@ -111,6 +117,7 @@ _Maximum Length_: **16**
 Order of significance of the location number within the main Party. If there are multiple location numbers, only the most significant is used. 0 is the least significant and higher numbers indicate higher significance. `Required` `Default(0)` `Filter(multi eq;ge;le)`
 
 _Type_: **int32**  
+_Category_: **System**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan, EqualsIn**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  
@@ -123,6 +130,7 @@ _Default Value_: **0**
 The party with which we are doing exchange. Depending on the Partner Party, the main Party might have different location number. null means that the location number is not dependent on the Partner Party. `Filter(multi eq)`
 
 _Type_: **[Parties](General.Contacts.Parties.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Party
@@ -131,6 +139,7 @@ The party for which we are defining the location number. `Required` `Filter(mult
 
 _Type_: **[Parties](General.Contacts.Parties.md)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
 

@@ -53,6 +53,7 @@ Aggregate Root:
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -60,6 +61,7 @@ _Supports Order By_: ****
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -68,6 +70,7 @@ _Default Value_: **NewGuid**
 Specifies whether the module is published and will be showed in the web site. `Required` `Default(false)` `Filter(eq)` (Inherited from [WebModules](Applications.Cms.WebModules.md))
 
 _Type_: **boolean**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **False**  
@@ -77,6 +80,7 @@ _Default Value_: **False**
 The local Module Url. The full Url of a module is formed based on the sites Base Url, the local Urls of all parent modules and the module Local Url. Null means that the web Module is the default web module within the parent path. `Filter(like)` (Inherited from [WebModules](Applications.Cms.WebModules.md))
 
 _Type_: **string (128) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **128**  
@@ -86,6 +90,7 @@ _Maximum Length_: **128**
 Default picture. Used for picture links, small module icons, etc. PNG format is suggested. (Inherited from [WebModules](Applications.Cms.WebModules.md))
 
 _Type_: **byte[] __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -94,6 +99,7 @@ _Supports Order By_: **False**
 Specifies the content handler. The content handler is responsible for generating the actual web page content. Module Types include Category, Static, News, Product, etc. `Required` `Filter(like)` (Inherited from [WebModules](Applications.Cms.WebModules.md))
 
 _Type_: **[ModuleType](Applications.Cms.ProductCatalogWebModules.md#moduletype)**  
+_Category_: **System**  
 Allowed values for the ModuleType data attribute  
 _Allowed Values (Applications.Cms.WebModulesRepository.ModuleType Enum Members)_  
 
@@ -111,6 +117,7 @@ _Supports Order By_: **False**
 Multilanguage Module name. This is used as a title when displaying the web Module. `Required` `Filter(like)` (Inherited from [WebModules](Applications.Cms.WebModules.md))
 
 _Type_: **string (512)**  
+_Category_: **System**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **512**  
@@ -120,6 +127,7 @@ _Maximum Length_: **512**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -131,6 +139,7 @@ _Supports Order By_: ****
 The parent web Module. It can only be a module with Module Type = Category. Null means that the web Module is root web Module. `Filter(multi eq)` (Inherited from [WebModules](Applications.Cms.WebModules.md))
 
 _Type_: **[WebModules](Applications.Cms.WebModules.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ProductCatalog
@@ -138,6 +147,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The product catalog, which is represented by this web module. `Required` `Filter(multi eq)`
 
 _Type_: **[ProductCatalogs](General.ProductCatalogs.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### WebSite
@@ -145,6 +155,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The web site to which the module belongs. `Required` `Filter(multi eq)` `Owner` (Inherited from [WebModules](Applications.Cms.WebModules.md))
 
 _Type_: **[WebSites](Applications.Cms.WebSites.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
 

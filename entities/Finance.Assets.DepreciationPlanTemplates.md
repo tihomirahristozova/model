@@ -48,6 +48,7 @@ Aggregate Root:
 Asset life in months by default for the depreciation plans created by this template. null means that the asset is booked for this valuation model but is not depreciated in it (i.e. no depreciation plan is created).
 
 _Type_: **int32 __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -56,6 +57,7 @@ _Supports Order By_: **False**
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -63,6 +65,7 @@ _Supports Order By_: ****
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -71,6 +74,7 @@ _Default Value_: **NewGuid**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -83,6 +87,7 @@ Asset category for which this template is defined. `Required` `Filter(multi eq)`
 
 _Type_: **[AssetCategories](Finance.Assets.AssetCategories.md)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
 
@@ -91,6 +96,7 @@ _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-reference
 Depreciation method by default for the depreciation plans created by this template. `Required` `Filter(multi eq)`
 
 _Type_: **[DepreciationMethods](Finance.Assets.DepreciationMethods.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ValuationModel
@@ -98,6 +104,7 @@ _Supported Filters_: **Equals, EqualsIn**
 Valuation model for which this template is defined. `Required` `Filter(multi eq)`
 
 _Type_: **[ValuationModels](Finance.Assets.ValuationModels.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

@@ -67,6 +67,7 @@ Aggregate Tree
 The name of the company, which the person works for (in relation to the current lead). `Filter(eq;like)`
 
 _Type_: **string (64) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  
@@ -76,6 +77,7 @@ _Maximum Length_: **64**
 System assigned date and time (in UTC), when the lead was initially created. `Required` `Filter(ge;le)` `ReadOnly`
 
 _Type_: **datetime**  
+_Category_: **System**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -87,6 +89,7 @@ _Back-End Default Expression:_
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -94,6 +97,7 @@ _Supports Order By_: ****
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -102,6 +106,7 @@ _Default Value_: **NewGuid**
 System assigned date and time (in UTC), when the lead was first promoted to Marketing Qualified Lead (MQL). `Filter(ge;le)` `ReadOnly`
 
 _Type_: **datetime __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -110,6 +115,7 @@ _Supports Order By_: **False**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -118,6 +124,7 @@ _Supports Order By_: ****
 The email address of the sales lead person. `Filter(eq;like)`
 
 _Type_: **string (64) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  
@@ -127,6 +134,7 @@ _Maximum Length_: **64**
 The first name of the person, representing the sales lead. `Filter(eq;like)`
 
 _Type_: **string (64) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  
@@ -136,6 +144,7 @@ _Maximum Length_: **64**
 The last name of the person, representing the sales lead. `Filter(eq;like)`
 
 _Type_: **string (64) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  
@@ -145,6 +154,7 @@ _Maximum Length_: **64**
 The mobile phone of the sales lead person. `Filter(like)`
 
 _Type_: **string (32) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **32**  
@@ -154,6 +164,7 @@ _Maximum Length_: **32**
 Salutation for the sales lead person. `Filter(eq;like)`
 
 _Type_: **string (16) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **16**  
@@ -163,6 +174,7 @@ _Maximum Length_: **16**
 Web address (including protocol like https) of the personal profile in a social or professional network. The address itself, as it is full valid Internet address, contains also the network name. `Filter(like)`
 
 _Type_: **string (64) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  
@@ -172,6 +184,7 @@ _Maximum Length_: **64**
 The work phone of the sales lead person. `Filter(like)`
 
 _Type_: **string (32) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **32**  
@@ -181,6 +194,7 @@ _Maximum Length_: **32**
 The role of the person in the company. `Filter(eq;like)`
 
 _Type_: **string (32) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **32**  
@@ -190,6 +204,7 @@ _Maximum Length_: **32**
 System assigned date and time (in UTC), when the lead was first promoted to Sales Qualified Lead. `Filter(ge;le)` `ReadOnly`
 
 _Type_: **datetime __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -198,6 +213,7 @@ _Supports Order By_: **False**
 The system stage of the lead - New, Qualifying, Marketing Qualified Lead, Sales Qualified Lead, Closed. (NEW, QUA, MQL, SQL, CLO). `Required` `Default("NEW")` `Filter(multi eq)`
 
 _Type_: **[SystemStage](Crm.Presales.Leads.md#systemstage)**  
+_Category_: **System**  
 Allowed values for the `SystemStage`(Crm.Presales.Leads.md#systemstage) data attribute  
 _Allowed Values (Crm.Presales.LeadsRepository.SystemStage Enum Members)_  
 
@@ -221,6 +237,7 @@ _Default Value_: **New**
 Sales rep to whom this lead is assigned for further processing. null - not yet assigned. `Filter(multi eq)`
 
 _Type_: **[SalesPersons](Crm.SalesPersons.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Campaign
@@ -229,6 +246,7 @@ The marketing campaign under which the lead was generated. `Required` `Filter(mu
 
 _Type_: **[Campaigns](Crm.Marketing.Campaigns.md)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ConvertedToDeal
@@ -236,6 +254,7 @@ _Supported Filters_: **Equals, EqualsIn**
 Filled when the lead is converted to opportunity (deal). `Filter(multi eq)`
 
 _Type_: **[Deals](Crm.Presales.Deals.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### EnterpriseCompany
@@ -243,6 +262,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The enterprise company to which this lead belongs. `Required` `Filter(multi eq)` `Introduced in version 22.1.5.23`
 
 _Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### IdentifiedCompany
@@ -250,6 +270,7 @@ _Supported Filters_: **Equals, EqualsIn**
 Filled when the company is identified within our database. `Filter(multi eq)`
 
 _Type_: **[Companies](General.Contacts.Companies.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### IdentifiedPerson
@@ -257,6 +278,7 @@ _Supported Filters_: **Equals, EqualsIn**
 Filled when the person is identified and recorded in our master records. `Filter(multi eq)`
 
 _Type_: **[Persons](General.Contacts.Persons.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### LeadUserStage
@@ -265,6 +287,7 @@ The user-defined sub-stage of the lead. This also defines the step in the sales 
 
 _Type_: **[LeadUserStages](Crm.Presales.LeadUserStages.md) (nullable)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### MarketingCompanySize
@@ -272,6 +295,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The size class of the company. `Filter(multi eq)`
 
 _Type_: **[CompanySizeClasses](Crm.Marketing.CompanySizeClasses.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### MarketingIndustry
@@ -279,6 +303,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The industry (for marketing purposes) of the lead. `Filter(multi eq)`
 
 _Type_: **[Industries](Crm.Marketing.Industries.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### MarketingSolution
@@ -286,6 +311,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The marketing solution, in which the lead is interested or which generated the lead. `Filter(multi eq)`
 
 _Type_: **[MarketingSolutions](Crm.Marketing.MarketingSolutions.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### OwnerUser
@@ -293,6 +319,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The user, responsible for this record. `Required` `Filter(multi eq)`
 
 _Type_: **[Users](Systems.Security.Users.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### SalesArea
@@ -300,6 +327,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The sales area, where the lead is located, when it is identified. This should also indicate the Time Zone. `Filter(multi eq)`
 
 _Type_: **[Areas](General.Geography.Areas.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

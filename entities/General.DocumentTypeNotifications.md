@@ -51,6 +51,7 @@ Aggregate Root:
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -59,6 +60,7 @@ _Supports Order By_: ****
 The event which will trigger the notification. `Required` `Default("StateChanging")` `Filter(eq)`
 
 _Type_: **string (254)**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -69,6 +71,7 @@ _Default Value_: **StateChanging**
 Filtering condition for the document. Only documents which match the filter will trigger the event.
 
 _Type_: **string (max) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
@@ -77,6 +80,7 @@ _Maximum Length_: **2147483647**
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -85,6 +89,7 @@ _Default Value_: **NewGuid**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -93,6 +98,7 @@ _Supports Order By_: ****
 The document states that will trigger the event. `Required` `Default(0)`
 
 _Type_: **int32**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  
@@ -102,6 +108,7 @@ _Default Value_: **0**
 Direction of status change. Positive when the new status is greater than the previous. Applicable values: Positive '+', Negative '-', No change '0', Any change '*'. `Required` `Default("*")`
 
 _Type_: **[StatusChangeDirection](General.DocumentTypeNotifications.md#statuschangedirection)**  
+_Category_: **System**  
 Allowed values for the `StatusChangeDirection`(General.DocumentTypeNotifications.md#statuschangedirection) data attribute  
 _Allowed Values (General.DocumentTypeNotificationsRepository.StatusChangeDirection Enum Members)_  
 
@@ -121,6 +128,7 @@ _Default Value_: **AnyChange**
 List of email addressess to be notified. `Required`
 
 _Type_: **string (2048)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2048**  
@@ -133,6 +141,7 @@ _Maximum Length_: **2048**
 The document type for which this notification is set. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[DocumentTypes](General.DocumentTypes.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
 
@@ -141,6 +150,7 @@ _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-reference
 When not null, specifies that the event will be triggered only on this user status. `Filter(multi eq)`
 
 _Type_: **[DocumentTypeUserStatuses](General.DocumentTypeUserStatuses.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

@@ -42,6 +42,7 @@ Aggregate Tree
 The calculation algorithm for Tax Base. NOP=No operation - manually set Tax Base; QTY=Qty; QAS=Qty * Alcoholic strength; QAP=Qty * Alcoholic strength / 100. `Required`
 
 _Type_: **[CalculationAlgorithm](Finance.Excise.ExciseProductCategories.md#calculationalgorithm)**  
+_Category_: **System**  
 Allowed values for the `CalculationAlgorithm`(Finance.Excise.ExciseProductCategories.md#calculationalgorithm) data attribute  
 _Allowed Values (Finance.Excise.ExciseProductCategoriesRepository.CalculationAlgorithm Enum Members)_  
 
@@ -60,6 +61,7 @@ _Supports Order By_: **False**
 For EU, the product category code is a single character - B,E,I,S,T or W. `Required` `Filter(multi eq;like)`
 
 _Type_: **string (32)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, Like, EqualsIn**  
 _Supports Order By_: **False**  
 _Maximum Length_: **32**  
@@ -69,6 +71,7 @@ _Maximum Length_: **32**
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -76,6 +79,7 @@ _Supports Order By_: ****
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
 _Default Value_: **NewGuid**  
@@ -85,6 +89,7 @@ _Default Value_: **NewGuid**
 Multilanguage String. `Required` `Filter(like)`
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
+_Category_: **System**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 
@@ -93,6 +98,7 @@ _Supports Order By_: **False**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 

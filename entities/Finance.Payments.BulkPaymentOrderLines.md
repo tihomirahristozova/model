@@ -66,6 +66,7 @@ Aggregate Root:
 If filled indicates which party is billed for the total amount. Possible values: 'C' = Company (means the Party_Id), 'L' = Company location (the Location_Party_Id), null = unidentified.
 
 _Type_: **[BillTo](Finance.Payments.BulkPaymentOrderLines.md#billto) __nullable__**  
+_Category_: **System**  
 Allowed values for the `BillTo`(Finance.Payments.BulkPaymentOrderLines.md#billto) data attribute  
 _Allowed Values (Finance.Payments.BulkPaymentOrderLinesRepository.BillTo Enum Members)_  
 
@@ -82,6 +83,7 @@ _Supports Order By_: **False**
 I for Payment issue, R for payment receipt. `Required` `Default("I")` `Filter(eq)`
 
 _Type_: **[Direction](Finance.Payments.BulkPaymentOrderLines.md#direction)**  
+_Category_: **System**  
 Allowed values for the `Direction`(Finance.Payments.BulkPaymentOrderLines.md#direction) data attribute  
 _Allowed Values (Finance.Payments.BulkPaymentOrderLinesRepository.Direction Enum Members)_  
 
@@ -99,6 +101,7 @@ _Default Value_: **Expense**
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -107,6 +110,7 @@ _Supports Order By_: ****
 The due date of the payment. null means there is no due date. `Filter(ge;le)`
 
 _Type_: **datetime __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -114,6 +118,7 @@ _Supports Order By_: **False**
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -122,6 +127,7 @@ _Default Value_: **NewGuid**
 Consequtive installment number. Used for identifying the payment when using payment plans. null means that the payment is not part of a payment plan.
 
 _Type_: **int32 __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -130,6 +136,7 @@ _Supports Order By_: **False**
 The specified invoice amount. (the invoice amount converted to the Total_Amount_Currency_Id must be equal to the Total_Amount). `Currency: InvoiceAmountCurrency`
 
 _Type_: **[Amount (18, 2)](../data-types.md#amount) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -138,6 +145,7 @@ _Supports Order By_: **False**
 Is_Amount_With_VAT=true if the requested amount includes VAT. `Required` `Default(true)` `Filter(eq)`
 
 _Type_: **boolean**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **True**  
@@ -147,6 +155,7 @@ _Default Value_: **True**
 Notes for this BulkPaymentOrderLine.
 
 _Type_: **string (254) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -156,6 +165,7 @@ _Maximum Length_: **254**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -164,6 +174,7 @@ _Supports Order By_: ****
 The date of the base document. null means that it is unknown.
 
 _Type_: **datetime __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -172,6 +183,7 @@ _Supports Order By_: **False**
 The number of the document which is the basis for the payment. `Required`
 
 _Type_: **string (20)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **20**  
@@ -181,6 +193,7 @@ _Maximum Length_: **20**
 The apply date of the related invoice. Not specified when the payment order isn't related to any invoice or the apply date is unknown.
 
 _Type_: **datetime __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -189,6 +202,7 @@ _Supports Order By_: **False**
 The date of the related invoice. null means that the payment order isn't related to any invoice or the date is unknown.
 
 _Type_: **datetime __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -197,6 +211,7 @@ _Supports Order By_: **False**
 The number of the invoice which is related and is the basis for the payment. null means that the payment order isn't created or related to any invoice.
 
 _Type_: **string (20) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **20**  
@@ -206,6 +221,7 @@ _Maximum Length_: **20**
 Total amount that should be payed. `Currency: TotalAmountCurrency` `Required` `Default(0)`
 
 _Type_: **[Amount (18, 2)](../data-types.md#amount)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -219,6 +235,7 @@ The <see cref="BulkPaymentOrder"/> to which this BulkPaymentOrderLine belongs. `
 
 _Type_: **[BulkPaymentOrders](Finance.Payments.BulkPaymentOrders.md)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
 
@@ -227,6 +244,7 @@ _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-reference
 The currency of Invoice Amount. `Filter(multi eq)`
 
 _Type_: **[Currencies](General.Currencies.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### LocationParty
@@ -234,6 +252,7 @@ _Supported Filters_: **Equals, EqualsIn**
 Location or sub-party of the Party_Id. `Filter(multi eq)`
 
 _Type_: **[Parties](General.Contacts.Parties.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Party
@@ -241,6 +260,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The party which is to pay or receive the amount. `Required` `Filter(multi eq)`
 
 _Type_: **[Parties](General.Contacts.Parties.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Front-End Recalc Expressions:_  
@@ -250,6 +270,7 @@ _Front-End Recalc Expressions:_
 When not null, specifies the payment account that is expected or will be used by the payment transaction. `Filter(multi eq)`
 
 _Type_: **[PaymentAccounts](Finance.Payments.PaymentAccounts.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Front-End Recalc Expressions:_  
@@ -259,6 +280,7 @@ _Front-End Recalc Expressions:_
 Expected payment type. When null, there is no expectation for payment type. `Filter(multi eq)`
 
 _Type_: **[PaymentTypes](Finance.Payments.PaymentTypes.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### RefDocumentType
@@ -266,6 +288,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The type of the document which is the basis for the payment. `Required` `Filter(multi eq)`
 
 _Type_: **[DocumentTypes](General.DocumentTypes.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### RefInvoiceDocumentType
@@ -273,6 +296,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The document type of the invoice which is related and is the basis for the payment. null means that the payment order isn't created or related to any invoice. `Filter(multi eq)`
 
 _Type_: **[DocumentTypes](General.DocumentTypes.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### TotalAmountCurrency
@@ -280,6 +304,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The currency of Total Amount. `Required` `Filter(multi eq)`
 
 _Type_: **[Currencies](General.Currencies.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Front-End Recalc Expressions:_  

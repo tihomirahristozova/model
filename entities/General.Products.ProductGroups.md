@@ -76,6 +76,7 @@ Aggregate Tree
 True if the product group is active, false - not to list in combo boxes for choosing in new documents. `Required` `Default(true)` `Filter(eq)`
 
 _Type_: **boolean**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **True**  
@@ -86,6 +87,7 @@ The unique code of the ProductGroup. `Required` `Filter(eq;like)` `ORD`
 
 _Type_: **string (16)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
 _Maximum Length_: **16**  
@@ -95,6 +97,7 @@ _Maximum Length_: **16**
 Whether the product configurator should create one default recipe. true=yes;false=no. `Required` `Default(false)`
 
 _Type_: **boolean**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **False**  
@@ -104,6 +107,7 @@ _Default Value_: **False**
 Usage of product configurator for new products. 0=Product configurator cannot be used to create products in this group;1=The configurator can be used;2=The configurator should be used and products cannot be created directly. `Required` `Default(0)`
 
 _Type_: **[ConfiguratorStatus](General.Products.ProductGroups.md#configuratorstatus)**  
+_Category_: **System**  
 Allowed values for the `ConfiguratorStatus`(General.Products.ProductGroups.md#configuratorstatus) data attribute  
 _Allowed Values (General.Products.ProductGroupsRepository.ConfiguratorStatus Enum Members)_  
 
@@ -122,6 +126,7 @@ _Default Value_: **0**
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -131,6 +136,7 @@ Full tree path in the form /parent/.../leaf/. Contains the group names. `Require
 
 _Type_: **string (254)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
 _Maximum Length_: **254**  
@@ -140,6 +146,7 @@ _Default Value_: ****
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -148,6 +155,7 @@ _Default Value_: **NewGuid**
 Group name should be unique among the other groups within the same parent. `Required` `Filter(eq;like)`
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 
@@ -156,6 +164,7 @@ _Supports Order By_: **False**
 Contains the next part number to be auto-assigned to parts, created in the group or sub-groups.
 
 _Type_: **string (16) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **16**  
@@ -165,6 +174,7 @@ _Maximum Length_: **16**
 When not null, specifies the next serial number, that should be assigned to new produced items. `Filter(eq;like)`
 
 _Type_: **string (40) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **40**  
@@ -174,6 +184,7 @@ _Maximum Length_: **40**
 User notes for the item group.
 
 _Type_: **string (254) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -183,6 +194,7 @@ _Maximum Length_: **254**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -192,6 +204,7 @@ Full tree path of the parent group in the form /parent/.../leaf/. Contains the g
 
 _Type_: **string (254)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **True**  
 _Maximum Length_: **254**  
@@ -202,6 +215,7 @@ _Default Value_: **/**
 The picture of the product group.
 
 _Type_: **byte[] __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -210,6 +224,7 @@ _Supports Order By_: **False**
 Last update time of the Picture. `Filter(ge;le)` `ReadOnly`
 
 _Type_: **datetime __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -218,6 +233,7 @@ _Supports Order By_: **False**
 When not null specifies mask for new product descriptions for this group and its sub-groups. The mask substitutes {0}..{n} with the appropriate custom attributes.
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -226,6 +242,7 @@ _Supports Order By_: **False**
 When not null specifies mask for new product names for this group and its sub-groups. The mask substitutes {0}..{n} with the appropriate custom attributes.
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -234,6 +251,7 @@ _Supports Order By_: **False**
 Specifies whether for the products from this group and its sub-groups the use of lots in store documents is required or is unallowed or is allowed while not required.
 
 _Type_: **[UseLots](General.Products.ProductGroups.md#uselots) __nullable__**  
+_Category_: **System**  
 Allowed values for the `UseLots`(General.Products.ProductGroups.md#uselots) data attribute  
 _Allowed Values (General.Products.ProductGroupsRepository.UseLots Enum Members)_  
 
@@ -254,6 +272,7 @@ _Supports Order By_: **False**
 When not null, specifies default measurement unit, which should be assigned to new products in the group. `Filter(multi eq)`
 
 _Type_: **[MeasurementUnits](General.MeasurementUnits.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### DefaultProductType
@@ -261,6 +280,7 @@ _Supported Filters_: **Equals, EqualsIn**
 When not null, specifies default product type, which should be assigned to new products in the group. `Filter(multi eq)`
 
 _Type_: **[ProductTypes](General.Products.ProductTypes.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### EnterpriseCompany
@@ -268,6 +288,7 @@ _Supported Filters_: **Equals, EqualsIn**
 When not null, specifies that the product group, its sub-groups and products are specific to a given enterprise company and may be used only in documents from this enterprise company. `Filter(multi eq)`
 
 _Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PricingModel
@@ -275,6 +296,7 @@ _Supported Filters_: **Equals, EqualsIn**
 When not null, specifies the pricing model, for the products in this product group. The model is by default valid also for sub-groups, unless they have other models. `Filter(multi eq)`
 
 _Type_: **[PricingModels](Crm.Pricing.PricingModels.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

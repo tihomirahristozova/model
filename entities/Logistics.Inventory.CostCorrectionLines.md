@@ -51,6 +51,7 @@ Aggregate Root:
 The amount of correction (plus or minus) for the Base Cost field of the transaction line. `Currency: TransactionLine.TransactionObj.EnterpriseCompany.BaseCurrency` `Required` `Default(0)`
 
 _Type_: **[Amount (14, 2)](../data-types.md#amount)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -60,6 +61,7 @@ _Default Value_: **Constant**
 The amount of correction (plus or minus) for the Amount field of the transaction line. `Currency: TransactionLine.TransactionObj.DocumentCurrency` `Required` `Default(0)`
 
 _Type_: **[Amount (14, 2)](../data-types.md#amount)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -69,6 +71,7 @@ _Default Value_: **Constant**
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -76,6 +79,7 @@ _Supports Order By_: ****
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -84,6 +88,7 @@ _Default Value_: **NewGuid**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -92,6 +97,7 @@ _Supports Order By_: ****
 The amount of correction (plus or minus) for the Product Cost field of the transaction line. `Currency: TransactionLine.Product.CostingCurrency` `Required` `Default(0)`
 
 _Type_: **[Amount (14, 2)](../data-types.md#amount)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -101,6 +107,7 @@ _Default Value_: **Constant**
 The amount of correction (plus or minus) for the Store Cost field of the transaction line. `Currency: TransactionLine.TransactionObj.Store.Currency` `Required` `Default(0)`
 
 _Type_: **[Amount (14, 2)](../data-types.md#amount)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -114,6 +121,7 @@ The <see cref="CostCorrection"/> to which this CostCorrectionLine belongs. `Requ
 
 _Type_: **[CostCorrections](Logistics.Inventory.CostCorrections.md)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
 
@@ -123,6 +131,7 @@ The <see cref="CostCorrection"/> to which this CostCorrectionLine belongs. `Requ
 
 _Type_: **[CostCorrections](Logistics.Inventory.CostCorrections.md)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### TransactionLine
@@ -131,6 +140,7 @@ The transaction line, which is corrected. `Required` `Filter(multi eq)`
 
 _Type_: **[StoreTransactionLines](Logistics.Inventory.StoreTransactionLines.md)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

@@ -52,6 +52,7 @@ Aggregate Root:
 Code of the instance, unique within the resource. `Required` `Filter(eq;like)`
 
 _Type_: **string (16)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **16**  
@@ -61,6 +62,7 @@ _Maximum Length_: **16**
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -68,6 +70,7 @@ _Supports Order By_: ****
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -76,6 +79,7 @@ _Default Value_: **NewGuid**
 Multilanguage resource instance name. `Required` `Filter(eq;like)`
 
 _Type_: **string (max)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
@@ -85,6 +89,7 @@ _Maximum Length_: **2147483647**
 Notes for this ResourceInstance.
 
 _Type_: **string (max) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
@@ -94,6 +99,7 @@ _Maximum Length_: **2147483647**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -105,6 +111,7 @@ _Supports Order By_: ****
 The asset, which is represented by this resource instance. null, when the resource instance is not an asset. `Filter(multi eq)`
 
 _Type_: **[Assets](Finance.Assets.Assets.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Party
@@ -112,6 +119,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The party, which is represented by this resource instance. null, when the resource instance is not a party. `Filter(multi eq)`
 
 _Type_: **[Parties](General.Contacts.Parties.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Resource
@@ -120,6 +128,7 @@ The resource of which this is instance. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[Resources](General.Resources.Resources.md)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
 

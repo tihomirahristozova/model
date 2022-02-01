@@ -67,6 +67,7 @@ Aggregate Tree
 Package status: true = the offer is available for new documents; false = otherwise. `Required` `Default(true)` `Filter(eq)`
 
 _Type_: **boolean**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **True**  
@@ -77,6 +78,7 @@ Unique code of the promotional package. `Required` `Filter(eq;like)` `ORD`
 
 _Type_: **string (20)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
 _Maximum Length_: **20**  
@@ -86,6 +88,7 @@ _Maximum Length_: **20**
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -93,6 +96,7 @@ _Supports Order By_: ****
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -102,6 +106,7 @@ The name of this PromotionalPackage. `Required` `Filter(eq;like)` `ORD`
 
 _Type_: **string (254)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
 _Maximum Length_: **254**  
@@ -111,6 +116,7 @@ _Maximum Length_: **254**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -119,6 +125,7 @@ _Supports Order By_: ****
 When not null, the package is valid only for the customers, that match the filter.
 
 _Type_: **dataaccessfilter __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -127,6 +134,7 @@ _Supports Order By_: **False**
 When not null, the package is valid only if the specified distribution channel of the sales order fits in the filter criteria.
 
 _Type_: **dataaccessfilter __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -135,6 +143,7 @@ _Supports Order By_: **False**
 When not null, specifies validity condition for the Ship To Customer of the sales document.
 
 _Type_: **dataaccessfilter __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -143,6 +152,7 @@ _Supports Order By_: **False**
 When not null specifies the first date when the package is valid for offering. The date is compared against the document date. `Filter(eq;ge;le)`
 
 _Type_: **date __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -151,6 +161,7 @@ _Supports Order By_: **False**
 When not null specifies the last date (inclusive) when the package is valid. The date is compared against the document date. `Filter(eq;ge;le)`
 
 _Type_: **date __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -162,6 +173,7 @@ _Supports Order By_: **False**
 Тhe marketing campaign to which the current definition belongs. `Filter(multi eq)` `Introduced in version 22.1.4.67`
 
 _Type_: **[Campaigns](Crm.Marketing.Campaigns.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### EnterpriseCompany
@@ -169,6 +181,7 @@ _Supported Filters_: **Equals, EqualsIn**
 When not null, indicates that the package is valid only for the specified enterprise company. `Filter(multi eq)`
 
 _Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### EnterpriseCompanyLocation
@@ -176,6 +189,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The Enterprise Company Location to which this PromotionalPackage applies, or null if it is for all enterprise company locations. `Filter(multi eq)`
 
 _Type_: **[CompanyLocations](General.Contacts.CompanyLocations.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ValidForCustomer
@@ -183,6 +197,7 @@ _Supported Filters_: **Equals, EqualsIn**
 When not null, the package is valid only for the specified customer. `Filter(multi eq)`
 
 _Type_: **[Customers](Crm.Customers.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ValidForDistributionChannel
@@ -190,6 +205,7 @@ _Supported Filters_: **Equals, EqualsIn**
 When not null, the package is valid only for the specified distribution channel of the sales order. `Filter(multi eq)`
 
 _Type_: **[DistributionChannels](Crm.Marketing.DistributionChannels.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ValidForPriceList
@@ -197,6 +213,7 @@ _Supported Filters_: **Equals, EqualsIn**
 When not null, the package is valid only for the specified price list. `Filter(multi eq)`
 
 _Type_: **[PriceLists](Crm.PriceLists.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ValidForShipToCustomer
@@ -204,6 +221,7 @@ _Supported Filters_: **Equals, EqualsIn**
 When not null, specifies that the package is valid only when the sales document is for the specified Ship To Customer. `Filter(multi eq)`
 
 _Type_: **[Customers](Crm.Customers.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ValidForTargetGroup
@@ -211,6 +229,7 @@ _Supported Filters_: **Equals, EqualsIn**
 When not null, the package is valid only for the specified customer target group. `Filter(multi eq)`
 
 _Type_: **[TargetGroups](Crm.Marketing.TargetGroups.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

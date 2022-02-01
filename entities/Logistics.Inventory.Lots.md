@@ -56,6 +56,7 @@ Aggregate Tree
 The description of this Lot.
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -64,6 +65,7 @@ _Supports Order By_: **False**
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -72,6 +74,7 @@ _Supports Order By_: ****
 Expiry date for this lot.
 
 _Type_: **datetime __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -79,6 +82,7 @@ _Supports Order By_: **False**
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -87,6 +91,7 @@ _Default Value_: **NewGuid**
 The license number for this lot. Null when license number is N/A or unknown.
 
 _Type_: **string (50) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **50**  
@@ -96,6 +101,7 @@ _Maximum Length_: **50**
 The unique number of the Lot. May contain characters, if required. `Required` `Filter(eq;like)`
 
 _Type_: **string (30)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **30**  
@@ -105,6 +111,7 @@ _Maximum Length_: **30**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -113,6 +120,7 @@ _Supports Order By_: ****
 Non-null if the production batch is known. Production batches are automatically created for internal production, but can also be used for specifying production batches for purchased goods. `Filter(multi eq)`
 
 _Type_: **guid __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PurchaseLotNumber
@@ -120,6 +128,7 @@ _Supported Filters_: **Equals, EqualsIn**
 Identification of the purchase lost with which the products from this store lot are received. E.g. the document number of the Receiving order. `Filter(like)`
 
 _Type_: **string (30) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **30**  
@@ -129,6 +138,7 @@ _Maximum Length_: **30**
 The date of the first receipt of products in this lot. `ReadOnly`
 
 _Type_: **date __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -137,6 +147,7 @@ _Supports Order By_: **False**
 Status of the warehouse lot. Minus statuses describe blocked conditions. -3 blocked for document (sales or service order) -2 blocked for party -1 blocked for inspection 0 free to use. `Required` `Default(0)` `Filter(multi eq)`
 
 _Type_: **[Status](Logistics.Inventory.Lots.md#status)**  
+_Category_: **System**  
 Allowed values for the `Status`(Logistics.Inventory.Lots.md#status) data attribute  
 _Allowed Values (Logistics.Inventory.LotsRepository.Status Enum Members)_  
 
@@ -159,6 +170,7 @@ _Default Value_: **0**
 If non-null, contains the document for which the lot is blocked. `Filter(multi eq)`
 
 _Type_: **[Documents](General.Documents.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### BlockedForParty
@@ -166,6 +178,7 @@ _Supported Filters_: **Equals, EqualsIn**
 Non-null when the warehouse lot is blocked specifically for some party. `Filter(multi eq)`
 
 _Type_: **[Parties](General.Contacts.Parties.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### CertificateDocument
@@ -173,6 +186,7 @@ _Supported Filters_: **Equals, EqualsIn**
 Document, containing the certificate for this lot. `Filter(multi eq)`
 
 _Type_: **[Documents](General.Documents.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ExciseMeasuringTransaction
@@ -180,6 +194,7 @@ _Supported Filters_: **Equals, EqualsIn**
 When the lot was created in an excise controlled environment, specifies the measuring transaction which was used to create the lot. `Filter(multi eq)` `Introduced in version 21.1.1.59`
 
 _Type_: **[MeasuringTransactions](Finance.Excise.MeasuringTransactions.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Product
@@ -188,6 +203,7 @@ The product to which the lot is bound. `Required` `Filter(multi eq)`
 
 _Type_: **[Products](General.Products.Products.md)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ReceiptStoreTransaction
@@ -195,6 +211,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The store receipt transaction, which created the lot. null if the lot is manually created. `Filter(multi eq)`
 
 _Type_: **[StoreTransactions](Logistics.Inventory.StoreTransactions.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

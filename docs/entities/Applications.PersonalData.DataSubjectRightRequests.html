@@ -180,38 +180,45 @@ __</p>
 <h3 id="completedonutc">CompletedOnUtc</h3>
 <p>Date and time (in UTC), when the requested right was implemented by the responsible entity. Null if the request is still not implemented.</p>
 <p><em>Type</em>: <strong>datetime <strong>nullable</strong></strong><br>
+<em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="createdonutc">CreatedOnUtc</h3>
 <p>The date and time (in UTC), when the request was created. <code>Required</code> <code>Default(Now)</code></p>
 <p><em>Type</em>: <strong>datetime</strong><br>
+<em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>CurrentDateTime</strong></p>
 <h3 id="displaytext">DisplayText</h3>
 <p>Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.</p>
 <p><em>Type</em>: <strong>string</strong><br>
+<em>Category</em>: <strong>Calculated Attributes</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: ****</p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
+<em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="notes">Notes</h3>
 <p>This should usually contain detailed implementation notes.</p>
 <p><em>Type</em>: <strong>string (max) <strong>nullable</strong></strong><br>
+<em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>2147483647</strong></p>
 <h3 id="objectversion">ObjectVersion</h3>
 <p>The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.</p>
 <p><em>Type</em>: <strong>int32</strong><br>
+<em>Category</em>: <strong>Extensible Data Object</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: ****</p>
 <h3 id="requestedright">RequestedRight</h3>
 <p>The requested right, according to GDPR and other personal data regulations.  REC=Rectify; ERA=Erasure; RES=Restrict; POR=Portability; OBJ=Object; OTH=Other. <code>Required</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong><a href="Applications.PersonalData.DataSubjectRightRequests.html#requestedright">RequestedRight</a></strong><br>
+<em>Category</em>: <strong>System</strong><br>
 Allowed values for the <code>RequestedRight</code>(Applications.PersonalData.DataSubjectRightRequests.md#requestedright) data attribute<br>
 <em>Allowed Values (Applications.PersonalData.DataSubjectRightRequestsRepository.RequestedRight Enum Members)</em></p>
 <table>
@@ -253,6 +260,7 @@ Allowed values for the <code>RequestedRight</code>(Applications.PersonalData.Dat
 <h3 id="status">Status</h3>
 <p>The status of the request. 1=Requested; 2=Reviewing; 3=Executing; 4=Implemented; 5=Denied. <code>Required</code></p>
 <p><em>Type</em>: <strong><a href="Applications.PersonalData.DataSubjectRightRequests.html#status">Status</a></strong><br>
+<em>Category</em>: <strong>System</strong><br>
 Allowed values for the <code>Status</code>(Applications.PersonalData.DataSubjectRightRequests.md#status) data attribute<br>
 <em>Allowed Values (Applications.PersonalData.DataSubjectRightRequestsRepository.Status Enum Members)</em></p>
 <table>
@@ -291,18 +299,22 @@ Allowed values for the <code>Status</code>(Applications.PersonalData.DataSubject
 <h3 id="completedbyuser">CompletedByUser</h3>
 <p>The internal user account, which marked the request as implemented. Null when the request is still not implemented, or when the user is unknown. <code>Filter(multi eq)</code> <code>ReadOnly</code></p>
 <p><em>Type</em>: <strong><a href="Systems.Security.Users.html">Users</a> (nullable)</strong><br>
+<em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="createdbyuser">CreatedByUser</h3>
 <p>The user account, which was used to create the request. Null when the request was created internally, on behalf of the external person. <code>Filter(multi eq)</code> <code>ReadOnly</code></p>
 <p><em>Type</em>: <strong><a href="Systems.Security.Users.html">Users</a> (nullable)</strong><br>
+<em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="enterprisecompany">EnterpriseCompany</h3>
 <p>The enterprise company, to which the request was made. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a></strong><br>
+<em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="person">Person</h3>
 <p>The person, whose data will be corrected with the request. . <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.Contacts.Persons.html">Persons</a></strong><br>
+<em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="api-methods">API Methods</h2>
 <p>Methods that can be invoked in public APIs.</p>

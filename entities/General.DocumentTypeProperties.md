@@ -54,6 +54,7 @@ Aggregate Root:
 The default value of the property when creating new documents.
 
 _Type_: **string (254) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -63,6 +64,7 @@ _Maximum Length_: **254**
 Default description value of the property when creating new documents.
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -71,6 +73,7 @@ _Supports Order By_: **False**
 Internal Id of the default value of the property. `Filter(multi eq)`
 
 _Type_: **guid __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### DisplayText
@@ -78,6 +81,7 @@ _Supported Filters_: **Equals, EqualsIn**
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -85,6 +89,7 @@ _Supports Order By_: ****
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -93,6 +98,7 @@ _Default Value_: **NewGuid**
 Line number, unique within the document type. `Required` `Filter(ge;le)` `ORD`
 
 _Type_: **int32**  
+_Category_: **System**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **True**  
 
@@ -106,6 +112,7 @@ _Front-End Recalc Expressions:_
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -114,6 +121,7 @@ _Supports Order By_: ****
 True if the property is required when creating documents of this type. `Required` `Default(false)` `Filter(eq)`
 
 _Type_: **boolean**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **False**  
@@ -123,6 +131,7 @@ _Default Value_: **False**
 When not null, specifies a date, after which the property becomes required for the current document type. The date is compared against the document date. `Filter(ge;le)`
 
 _Type_: **datetime __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -131,6 +140,7 @@ _Supports Order By_: **False**
 When not null, specifies a date, up to which the property is required for the current document type. The date is compared against the document date. `Filter(ge;le)`
 
 _Type_: **datetime __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -143,6 +153,7 @@ The document type, for which to add user-defined properties. `Required` `Filter(
 
 _Type_: **[DocumentTypes](General.DocumentTypes.md)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
 
@@ -151,6 +162,7 @@ _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-reference
 When not null, specifies that the current rule is valid only for the specified company. `Filter(multi eq)`
 
 _Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Property
@@ -158,6 +170,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The user-defined property, which should be added. `Required` `Filter(multi eq)`
 
 _Type_: **[CustomProperties](General.CustomProperties.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

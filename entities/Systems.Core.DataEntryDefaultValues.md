@@ -52,6 +52,7 @@ Aggregate Tree
 The column for which the default is specified. `Required` `Filter(eq)`
 
 _Type_: **string (64)**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  
@@ -62,6 +63,7 @@ If not null specifies that the default should be applied only if Form_Name equal
 
 _Type_: **string (64) __nullable__**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **True**  
 _Maximum Length_: **64**  
@@ -71,6 +73,7 @@ _Maximum Length_: **64**
 If not null specifies that the default should be applied only if User_Login equals this value. `Filter(eq)`
 
 _Type_: **string (64) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  
@@ -80,6 +83,7 @@ _Maximum Length_: **64**
 If not null specifies that the default should be applied only if User_Machine equals this value. `Filter(eq)`
 
 _Type_: **string (64) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  
@@ -89,6 +93,7 @@ _Maximum Length_: **64**
 The default value for Column_Name. Should be applied only if the other conditions are met. null specifies null default.
 
 _Type_: **string (254) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -98,6 +103,7 @@ _Maximum Length_: **254**
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -105,6 +111,7 @@ _Supports Order By_: ****
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -113,6 +120,7 @@ _Default Value_: **NewGuid**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -121,6 +129,7 @@ _Supports Order By_: ****
 When not null, specifies the panel for which the default value applies. `Filter(eq;like)`
 
 _Type_: **string (64) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  
@@ -130,6 +139,7 @@ _Maximum Length_: **64**
 The table, containing the column for which the default value is specified. `Filter(eq)`
 
 _Type_: **string (64) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  
@@ -142,6 +152,7 @@ _Maximum Length_: **64**
 If not null specifies that the default should be applied only if Document_Type_Id equals this value. `Filter(multi eq)`
 
 _Type_: **[DocumentTypes](General.DocumentTypes.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ConditionEnterpriseCompany
@@ -149,6 +160,7 @@ _Supported Filters_: **Equals, EqualsIn**
 If not null specifies that the default should be applied only if Enterprise_Company_Id equals this value. `Filter(multi eq)`
 
 _Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ConditionRole
@@ -156,6 +168,7 @@ _Supported Filters_: **Equals, EqualsIn**
 When not null, specifies that the default value should be applied only when the user plays the specified role. `Filter(multi eq)`
 
 _Type_: **[Roles](Systems.Workflow.Roles.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

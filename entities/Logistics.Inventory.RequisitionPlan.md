@@ -60,6 +60,7 @@ Aggregate Tree
 The date for which we are planning. A record is created for each calendar date, on which there are events (orders, executions, planned events, etc.) for the product. Past events are stored on the current date of the planning. `Required` `Filter(ge;le)`
 
 _Type_: **datetime**  
+_Category_: **System**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -68,6 +69,7 @@ _Supports Order By_: **False**
 The suggested by the program value equals Calendar_Date + Planning_Lead_Time_Days of the default product supply for this store; the completion date of the purchase orders to be generated.
 
 _Type_: **datetime __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -76,6 +78,7 @@ _Supports Order By_: **False**
 True - generate firm planned orders for the current row; false- do not generate;. `Required` `Default(false)` `Filter(eq)`
 
 _Type_: **boolean**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **False**  
@@ -85,6 +88,7 @@ _Default Value_: **False**
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -93,6 +97,7 @@ _Supports Order By_: ****
 A message that explains why the program has generated the planned orders for this row.
 
 _Type_: **string (max) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
@@ -102,6 +107,7 @@ _Maximum Length_: **2147483647**
 The quantity, which is expected to be received on the calendar date. The quantity is the same as the quantity, planned in Firm Planned Order Releases, but at a different calendar date - the expected receivement date. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Default(0)`
 
 _Type_: **[Quantity (18, 3)](../data-types.md#quantity)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -111,6 +117,7 @@ _Default Value_: **Constant**
 The order releases which were manually confirmed for release on the specified calendar date. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Default(0)`
 
 _Type_: **[Quantity (18, 3)](../data-types.md#quantity)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -120,6 +127,7 @@ _Default Value_: **Constant**
 Indicates the date on which the plan is generated. `Required` `Default(Now)`
 
 _Type_: **datetime**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **CurrentDateTime**  
@@ -129,6 +137,7 @@ _Default Value_: **CurrentDateTime**
 The gross requirements of the product on the specified calendar date. This is calculated as the unexecuted quantity of issue store orders, whose expected execution date is equal to the calendar date. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Default(0)`
 
 _Type_: **[Quantity (18, 3)](../data-types.md#quantity)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -137,6 +146,7 @@ _Default Value_: **Constant**
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### NetRequirements
@@ -144,6 +154,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The net requirements for the date, which are in shortage for the calendar date. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Default(0)`
 
 _Type_: **[Quantity (18, 3)](../data-types.md#quantity)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -153,6 +164,7 @@ _Default Value_: **Constant**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -161,6 +173,7 @@ _Supports Order By_: ****
 The planned by the calculation process order receipts on the calendar date. This is calculated by the MRP process as the quantity, which is expected to be received on the calendar date. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Default(0)`
 
 _Type_: **[Quantity (18, 3)](../data-types.md#quantity)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -170,6 +183,7 @@ _Default Value_: **Constant**
 The planned by the calculation process order releases on the specified calendar date. This is calculated by the MRP process as the quantity, which should be released for purchasing, transfer or production on the calendar date. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Default(0)`
 
 _Type_: **[Quantity (18, 3)](../data-types.md#quantity)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -179,6 +193,7 @@ _Default Value_: **Constant**
 Expected balance of the product for the calendar date. This is a calculation, based on the current physical inventory and expected future transactions. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Default(0)`
 
 _Type_: **[Quantity (18, 3)](../data-types.md#quantity)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -188,6 +203,7 @@ _Default Value_: **Constant**
 The Quantity of the purchase orders the program shall generate; the suggested value equals Planned_Order_Releases but can be changed by the user;. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Default(0)`
 
 _Type_: **[Quantity (18, 3)](../data-types.md#quantity)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -197,6 +213,7 @@ _Default Value_: **Constant**
 The suggested by the program value equals Calendar_Date; the release date of the purchase orders to be generated.
 
 _Type_: **datetime __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -205,6 +222,7 @@ _Supports Order By_: **False**
 The scheduled receipts of the product on the specified calendar date. This is calculated as the unexecuted quantity of released receipt store orders, whose expected execution date is equal to the calendar date. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Default(0)`
 
 _Type_: **[Quantity (18, 3)](../data-types.md#quantity)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -217,6 +235,7 @@ _Default Value_: **Constant**
 The Enterprise Company to which this RequisitionPlan applies, or null if it is for all enterprise companies. `Filter(multi eq)`
 
 _Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### FromStore
@@ -224,6 +243,7 @@ _Supported Filters_: **Equals, EqualsIn**
 When the order is for transfer, this is the store from which we shall transfer the product. `Filter(multi eq)`
 
 _Type_: **[Stores](Logistics.Inventory.Stores.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Product
@@ -231,6 +251,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The product, for which we are planning. `Required` `Filter(multi eq)`
 
 _Type_: **[Products](General.Products.Products.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Store
@@ -238,6 +259,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The store, which is planned. `Required` `Filter(multi eq)`
 
 _Type_: **[Stores](Logistics.Inventory.Stores.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Supplier
@@ -245,6 +267,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The default supplier in the default product supply for current store, if any. `Filter(multi eq)`
 
 _Type_: **[Suppliers](Logistics.Procurement.Suppliers.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

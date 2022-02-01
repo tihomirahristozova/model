@@ -47,6 +47,7 @@ Aggregate Root:
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -54,6 +55,7 @@ _Supports Order By_: ****
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -62,6 +64,7 @@ _Default Value_: **NewGuid**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -70,6 +73,7 @@ _Supports Order By_: ****
 The key, which the provider provided for logging the user. `Required` `Filter(multi eq)`
 
 _Type_: **string (450)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Supports Order By_: **False**  
 _Maximum Length_: **450**  
@@ -79,6 +83,7 @@ _Maximum Length_: **450**
 The system name of the authentication provider. It should be already registered for the domain. `Required` `Filter(eq)` `Introduced in version 20.1`
 
 _Type_: **[ProviderName](Systems.Security.UserProviderLogins.md#providername)**  
+_Category_: **System**  
 Allowed values for the `ProviderName`(Systems.Security.DomainProviders.md#providername) data attribute  
 _Allowed Values (Systems.Security.DomainProvidersRepository.ProviderName Enum Members)_  
 
@@ -101,6 +106,7 @@ The user for which the login is defined. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[Users](Systems.Security.Users.md)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
 

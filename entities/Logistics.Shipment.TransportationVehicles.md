@@ -56,6 +56,7 @@ The unique code (or call sign) of this transportation vehicle. `Required` `Filte
 
 _Type_: **string (16)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
 _Maximum Length_: **16**  
@@ -65,6 +66,7 @@ _Maximum Length_: **16**
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -72,6 +74,7 @@ _Supports Order By_: ****
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -80,6 +83,7 @@ _Default Value_: **NewGuid**
 The maximum weight of the cargo (in kg), which can be transported. null when this is unknown and no limit should be enforced.
 
 _Type_: **int32 __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -88,6 +92,7 @@ _Supports Order By_: **False**
 The maximum number of pallets, which can be transported by the vehicle. null when this is unknown and no limit should be enforced.
 
 _Type_: **int32 __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -96,6 +101,7 @@ _Supports Order By_: **False**
 Notes for this TransportationVehicle.
 
 _Type_: **string (max) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
@@ -105,6 +111,7 @@ _Maximum Length_: **2147483647**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -116,6 +123,7 @@ _Supports Order By_: ****
 The cargo type supported by this transportation vehicle. `Required` `Filter(multi eq)`
 
 _Type_: **[CargoTypes](Logistics.Shipment.CargoTypes.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Carrier
@@ -123,6 +131,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The carrier, operating the vehicle. null for our own vehicles. `Filter(multi eq)`
 
 _Type_: **[Carriers](Logistics.Shipment.Carriers.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### EnterpriseCompany
@@ -130,6 +139,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The enterprise company to which the transportation vehicle will be bound. `Required` `Filter(multi eq)`
 
 _Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### TransportationMode
@@ -137,6 +147,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The mode of transportation provided by this transportation vehicle. The same base vehicle might be used for more than one mode. `Required` `Filter(multi eq)`
 
 _Type_: **[TransportationModes](Logistics.Shipment.TransportationModes.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Vehicle
@@ -144,6 +155,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The definition of the base vehicle. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[Vehicles](Applications.Fleet.Vehicles.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
 

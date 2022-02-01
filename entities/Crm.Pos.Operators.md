@@ -50,6 +50,7 @@ Aggregate Tree
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -57,6 +58,7 @@ _Supports Order By_: ****
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -65,6 +67,7 @@ _Default Value_: **NewGuid**
 Indicates whether this operator is active and can be chosen for new records. `Required` `Default(true)` `Filter(multi eq)`
 
 _Type_: **boolean**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Supports Order By_: **False**  
 _Default Value_: **True**  
@@ -74,6 +77,7 @@ _Default Value_: **True**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -82,6 +86,7 @@ _Supports Order By_: ****
 Operator code. Unique within the Pos Location. `Required` `Filter(multi eq;like)` `ORD`
 
 _Type_: **string (16)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, Like, EqualsIn**  
 _Supports Order By_: **True**  
 _Maximum Length_: **16**  
@@ -91,6 +96,7 @@ _Maximum Length_: **16**
 The first date, when the operator has started working for this POS location. `Required` `Filter(multi eq;ge;le)`
 
 _Type_: **date**  
+_Category_: **System**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan, EqualsIn**  
 _Supports Order By_: **False**  
 
@@ -99,6 +105,7 @@ _Supports Order By_: **False**
 The date, when the operator has ceased working in this POS location. null means, that the operator is still working or the termination date is still unknown. `Filter(multi eq;ge;le)`
 
 _Type_: **date __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan, EqualsIn**  
 _Supports Order By_: **False**  
 
@@ -110,6 +117,7 @@ _Supports Order By_: **False**
 The default POS terminal for this opertor. null when there is no default. `Filter(multi eq)`
 
 _Type_: **[Terminals](Crm.Pos.Terminals.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PosLocation
@@ -118,6 +126,7 @@ The POS location where this operator works. `Required` `Filter(multi eq)`
 
 _Type_: **[Locations](Crm.Pos.Locations.md)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PosRole
@@ -125,6 +134,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The role, assigned to the operator. The role indicates the permissions of the operator for this POS location. `Required` `Filter(multi eq)`
 
 _Type_: **[Roles](Crm.Pos.Roles.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### User
@@ -132,6 +142,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The login user for this POS operator. `Required` `Filter(multi eq)`
 
 _Type_: **[Users](Systems.Security.Users.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

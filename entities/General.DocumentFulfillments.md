@@ -57,6 +57,7 @@ Aggregate Tree
 The exact time in UTC, when the fulfillment was created in the system. `Required` `Default(NowUtc)` `Filter(multi eq;ge;le)`
 
 _Type_: **datetime**  
+_Category_: **System**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan, EqualsIn**  
 _Supports Order By_: **False**  
 _Default Value_: **CurrentDateTimeUtc**  
@@ -66,6 +67,7 @@ _Default Value_: **CurrentDateTimeUtc**
 The name of the entity which fulfills the line. Used to differentiate between different fulfillment types. For example, sales order line can be fulfilled, for different purposes, by store order line and invoice order line. `Required` `Default("")` `Filter(eq)` `Introduced in version 22.1.4.7`
 
 _Type_: **string (64)**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  
@@ -76,6 +78,7 @@ _Default Value_: ****
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -85,6 +88,7 @@ The Id of the fulfilled line within the document. The attribute contains the Id 
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### FulfillmentType
@@ -92,6 +96,7 @@ _Supported Filters_: **Equals, EqualsIn**
 Type of fulfillment: P=Planned; C=Completed. `Required` `Filter(multi eq)` `Introduced in version 21.1.1.26`
 
 _Type_: **[FulfillmentType](General.DocumentFulfillments.md#fulfillmenttype)**  
+_Category_: **System**  
 Allowed values for the `FulfillmentType`(General.DocumentFulfillments.md#fulfillmenttype) data attribute  
 _Allowed Values (General.DocumentFulfillmentsRepository.FulfillmentType Enum Members)_  
 
@@ -107,6 +112,7 @@ _Supports Order By_: **False**
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -115,6 +121,7 @@ _Default Value_: **NewGuid**
 Specifies whether this fulfillment finalizes the line, regardless of any remaining quantities. `Required` `Filter(eq)`
 
 _Type_: **boolean**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 
@@ -123,6 +130,7 @@ _Supports Order By_: **False**
 Line number. Used for human-readability of the fulfillment. null if the lines do not support line numbers or the line number is unknown. `Filter(multi eq;ge;le)` `Introduced in version 21.1.1.26`
 
 _Type_: **int32 __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan, EqualsIn**  
 _Supports Order By_: **False**  
 
@@ -131,6 +139,7 @@ _Supports Order By_: **False**
 Detail (line) type, for example materials, services, etc. L=Line. Other values are defined by the document entity type. `Required` `Default("L")` `Filter(multi eq)` `Introduced in version 21.1.1.26`
 
 _Type_: **string (1)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Supports Order By_: **False**  
 _Maximum Length_: **1**  
@@ -141,6 +150,7 @@ _Default Value_: **L**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -149,6 +159,7 @@ _Supports Order By_: ****
 Fulfilled quantity in the base measurement unit of the product. `Required` `Filter(multi eq;ge;le)` `Introduced in version 21.1.1.33`
 
 _Type_: **decimal (12, 3)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan, EqualsIn**  
 _Supports Order By_: **False**  
 
@@ -157,6 +168,7 @@ _Supports Order By_: **False**
 The theoretical quantity according to the current measurement dimensions for the product. Used to measure the execution. `Required` `Introduced in version 22.1.4.52`
 
 _Type_: **decimal (12, 3)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -168,6 +180,7 @@ _Supports Order By_: **False**
 The user, who created the record. `Required` `Filter(multi eq)`
 
 _Type_: **[Users](Systems.Security.Users.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Document
@@ -176,6 +189,7 @@ The Document, which is fulfilled. `Required` `Filter(multi eq)` `Introduced in v
 
 _Type_: **[Documents](General.Documents.md)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Lot
@@ -183,6 +197,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The lot, which was fulfilled. null when the fulfillment was not for a specific lot. `Filter(multi eq)` `Introduced in version 22.1.4.52`
 
 _Type_: **[Lots](Logistics.Inventory.Lots.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Product
@@ -191,6 +206,7 @@ The product, which is fulfilled. `Filter(multi eq)` `Introduced in version 22.1.
 
 _Type_: **[Products](General.Products.Products.md) (nullable)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ProductVariant
@@ -198,6 +214,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The product variant, which was fulfilled. null when the fulfillment was not for a product variant. `Filter(multi eq)` `Introduced in version 22.1.4.52`
 
 _Type_: **[ProductVariants](General.ProductVariants.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### SerialNumber
@@ -205,6 +222,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The serial number, which was fulfilled. null when the fulfillment was not for a specific serial number. `Filter(multi eq)` `Introduced in version 22.1.4.52`
 
 _Type_: **[SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

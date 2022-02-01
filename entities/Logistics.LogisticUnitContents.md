@@ -57,6 +57,7 @@ Aggregate Root:
 The quantity, expressed in the base measurement category of the product. `Required` `Filter(eq;ge;le)`
 
 _Type_: **decimal (12, 3)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -65,6 +66,7 @@ _Supports Order By_: **False**
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -73,6 +75,7 @@ _Supports Order By_: ****
 Expiration date of the goods. null means unknown or N/A. `Filter(multi eq;ge;le)`
 
 _Type_: **date __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan, EqualsIn**  
 _Supports Order By_: **False**  
 
@@ -81,6 +84,7 @@ _Supports Order By_: **False**
 Gross weight in kilograms (kg). null means unknown. `Filter(eq;ge;le)`
 
 _Type_: **decimal (12, 3) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -88,6 +92,7 @@ _Supports Order By_: **False**
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -96,6 +101,7 @@ _Default Value_: **NewGuid**
 Consecutive position within the logistic unit. `Required` `Filter(multi eq)`
 
 _Type_: **int32**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Supports Order By_: **False**  
 
@@ -109,6 +115,7 @@ _Front-End Recalc Expressions:_
 The production lot number. null means unknown. `Filter(multi eq;like)`
 
 _Type_: **string (32) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals, Like, EqualsIn**  
 _Supports Order By_: **False**  
 _Maximum Length_: **32**  
@@ -118,6 +125,7 @@ _Maximum Length_: **32**
 Notes for this LogisticUnitContent.
 
 _Type_: **string (max) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
@@ -127,6 +135,7 @@ _Maximum Length_: **2147483647**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -135,6 +144,7 @@ _Supports Order By_: ****
 Quantity of the product in the logistic unit. Expressed in the specified measurement unit. `Required` `Filter(multi eq;ge;le)`
 
 _Type_: **decimal (12, 3)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan, EqualsIn**  
 _Supports Order By_: **False**  
 
@@ -143,6 +153,7 @@ _Supports Order By_: **False**
 The quantity, expessed in the standard measurement unit of the product. `Required` `Filter(eq;ge;le)`
 
 _Type_: **decimal (12, 3)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -155,6 +166,7 @@ The containing logistic unit. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[LogisticUnits](Logistics.LogisticUnits.md)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
 
@@ -163,6 +175,7 @@ _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-reference
 The product, which is contained in the logistic unit. `Required` `Filter(multi eq)`
 
 _Type_: **[Products](General.Products.Products.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### QuantityUnit
@@ -170,6 +183,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The measurement unit of the quantity. `Required` `Filter(multi eq)`
 
 _Type_: **[MeasurementUnits](General.MeasurementUnits.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

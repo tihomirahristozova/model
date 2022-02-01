@@ -48,6 +48,7 @@ Aggregate Root:
 Cost of the actually issued Consumed_Quantity. `Currency: ConsumptionOrderLine.GetIssueCurrency()` `Required` `Default(0)` `ReadOnly`
 
 _Type_: **[Amount (14, 2)](../data-types.md#amount)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -57,6 +58,7 @@ _Default Value_: **Constant**
 Part of the quantity in the consumption order line which was used for the product in the output order line. `Unit: ConsumptionOrderLine.ConsumedQuantityUnit` `Required` `Default(0)` `ReadOnly`
 
 _Type_: **[Quantity (18, 3)](../data-types.md#quantity)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -66,6 +68,7 @@ _Default Value_: **Constant**
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -73,6 +76,7 @@ _Supports Order By_: ****
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -81,6 +85,7 @@ _Default Value_: **NewGuid**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -93,6 +98,7 @@ Consumption order line which requested the Consumed_Quantity. `Required` `Filter
 
 _Type_: **[ConsumptionOrderLines](Production.ShopFloor.ConsumptionOrderLines.md)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### OutputOrderLine
@@ -101,6 +107,7 @@ The output order line for which the distribution is recorded. `Required` `Filter
 
 _Type_: **[OutputOrderLines](Production.ShopFloor.OutputOrderLines.md)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
 

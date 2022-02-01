@@ -48,6 +48,7 @@ Aggregate Tree
 The name of the query or table that is used for root reference point of the loaded data. `Required` `Filter(eq;like)`
 
 _Type_: **string (128)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **128**  
@@ -57,6 +58,7 @@ _Maximum Length_: **128**
 'M' = MULTI-TABLE (many tables); 'D' = MASTER-DETAIL (two tables); 'S' = SINGLE-TABLE . `Required` `Default("M")` `Filter(eq)`
 
 _Type_: **[DataSourceType](Systems.Reporting.DataSources.md#datasourcetype)**  
+_Category_: **System**  
 Allowed values for the `DataSourceType`(Systems.Reporting.DataSources.md#datasourcetype) data attribute  
 _Allowed Values (Systems.Reporting.DataSourcesRepository.DataSourceType Enum Members)_  
 
@@ -75,6 +77,7 @@ _Default Value_: **MultiTable**
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -82,6 +85,7 @@ _Supports Order By_: ****
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -90,6 +94,7 @@ _Default Value_: **NewGuid**
 The name of the data source. `Required` `Filter(eq;like)`
 
 _Type_: **string (64)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  
@@ -99,6 +104,7 @@ _Maximum Length_: **64**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -107,6 +113,7 @@ _Supports Order By_: ****
 Indicates whether the parent nodes in the Reference_Path in Sys_Data_Source_Queries_Table are automaticaly included in the report or not. `Required` `Default(false)`
 
 _Type_: **boolean**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **False**  

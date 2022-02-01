@@ -47,6 +47,7 @@ Aggregate Tree
 When not null, specifies the number of days between maintenances.
 
 _Type_: **int32 __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -55,6 +56,7 @@ _Supports Order By_: **False**
 When not null, specifies the number of months between maintenances.
 
 _Type_: **int32 __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -63,6 +65,7 @@ _Supports Order By_: **False**
 The unique code of the MaintenancePlan. `Required`
 
 _Type_: **string (16)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **16**  
@@ -72,6 +75,7 @@ _Maximum Length_: **16**
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -79,6 +83,7 @@ _Supports Order By_: ****
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -87,6 +92,7 @@ _Default Value_: **NewGuid**
 True if the plan is active and can be selected from drop-downs. `Required` `Default(true)` `Introduced in version 18.2`
 
 _Type_: **boolean**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **True**  
@@ -96,6 +102,7 @@ _Default Value_: **True**
 When not null, specifies the number of kilometers that must have passed since the last maintenance, for the next maintenance to occur.
 
 _Type_: **int32 __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -104,6 +111,7 @@ _Supports Order By_: **False**
 Maintenance plan name (Multilanguage). `Required`
 
 _Type_: **string (254)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -113,6 +121,7 @@ _Maximum Length_: **254**
 Notes for this MaintenancePlan.
 
 _Type_: **string (max) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
@@ -122,6 +131,7 @@ _Maximum Length_: **2147483647**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -130,6 +140,7 @@ _Supports Order By_: ****
 When not null, specifies the number of trips that must be performed since the last maintenance, for the next maintenance to occur.
 
 _Type_: **int32 __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 

@@ -61,6 +61,7 @@ Aggregate Root:
 The desired description of Conditional Property in order for the template line to match.
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -69,6 +70,7 @@ _Supports Order By_: **False**
 The desired value of Conditional Property in order for the template line to match.
 
 _Type_: **string (254) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -78,6 +80,7 @@ _Maximum Length_: **254**
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -86,6 +89,7 @@ _Supports Order By_: ****
 Fixed scrap quantity for setup. `Unit: UsageUnit` `Required` `Default(0)`
 
 _Type_: **[Quantity (18, 3)](../data-types.md#quantity)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -94,6 +98,7 @@ _Default Value_: **Constant**
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -102,6 +107,7 @@ _Default Value_: **NewGuid**
 The principal name of the ingredient. `Required` `Filter(like)`
 
 _Type_: **string (254)**  
+_Category_: **System**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -113,6 +119,7 @@ _Front-End Recalc Expressions:_
 The position of the line in the recipe model. `Required`
 
 _Type_: **int32**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -126,6 +133,7 @@ _Front-End Recalc Expressions:_
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -134,6 +142,7 @@ _Supports Order By_: ****
 The usual percentage (0..1) of scrap of the raw material; inflates the requirements of this material for this recipe. `Required` `Default(0)` `Filter(ge;le)`
 
 _Type_: **decimal (7, 6)**  
+_Category_: **System**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  
@@ -143,6 +152,7 @@ _Default Value_: **0**
 Quantity to be consumed from the material. null means that the quantity is specified with formula. `Unit: UsageUnit` `Default(1)` `Filter(ge;le)`
 
 _Type_: **[Quantity (18, 6)](../data-types.md#quantity) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -154,6 +164,7 @@ _Front-End Recalc Expressions:_
 Specifies formula for the usage quantity. The formula can reference properties in `&lt;Prop_Name&gt;` style, just like products name and description mask. The formula can contain *, /, + and - operators. The formula can also be simple number, directly specifying quantity.
 
 _Type_: **string (max) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
@@ -168,6 +179,7 @@ _Front-End Recalc Expressions:_
 When not null, specifies that, when creating recipe, the ingredient will be added only if this property is set for the main product. `Filter(multi eq)`
 
 _Type_: **[CustomProperties](General.CustomProperties.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ConditionalPropertyAllowedValue
@@ -175,6 +187,7 @@ _Supported Filters_: **Equals, EqualsIn**
 When not null, specifies that, when creating recipe, the ingredient will be added only if the main product property, specified in Conditional_Property_Id equals the specified value. `Filter(multi eq)`
 
 _Type_: **[CustomPropertyAllowedValues](General.CustomPropertyAllowedValues.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### DefaultMaterial
@@ -182,6 +195,7 @@ _Supported Filters_: **Equals, EqualsIn**
 If not null, points to default product for this ingredient. `Filter(multi eq)`
 
 _Type_: **[Products](General.Products.Products.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### DefaultStore
@@ -189,6 +203,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The default store from which to retrieve the material. `Filter(multi eq)`
 
 _Type_: **[Stores](Logistics.Inventory.Stores.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### MaterialFromProperty
@@ -196,6 +211,7 @@ _Supported Filters_: **Equals, EqualsIn**
 When not null, specifies that the material will be obtained from the value of the specified property. The property must have allowed values in the Products domain. `Filter(multi eq)`
 
 _Type_: **[CustomProperties](General.CustomProperties.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### MaterialGroup
@@ -203,6 +219,7 @@ _Supported Filters_: **Equals, EqualsIn**
 Filter for choosing specific material in the recipe (Gen_Product_Groups_Table). `Required` `Filter(multi eq)`
 
 _Type_: **[ProductGroups](General.Products.ProductGroups.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Operation
@@ -210,6 +227,7 @@ _Supported Filters_: **Equals, EqualsIn**
 Specifies for which operation this ingredient will be used. `Filter(multi eq)`
 
 _Type_: **[Operations](Production.Resources.Operations.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PrincipalRecipe
@@ -217,6 +235,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The <see cref="PrincipalRecipe"/> to which this PrincipalRecipeIngredient belongs. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[PrincipalRecipes](Production.Technologies.PrincipalRecipes.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
 
@@ -225,6 +244,7 @@ _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-reference
 The measurement unit of Usage_Quantity. The selected item must support the specified unit. `Required` `Filter(multi eq)`
 
 _Type_: **[MeasurementUnits](General.MeasurementUnits.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Front-End Recalc Expressions:_  

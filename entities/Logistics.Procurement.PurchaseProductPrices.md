@@ -54,6 +54,7 @@ Aggregate Tree
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -62,6 +63,7 @@ _Supports Order By_: ****
 Starting date of validity of the price. `Filter(eq;ge;le)`
 
 _Type_: **datetime __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -69,6 +71,7 @@ _Supports Order By_: **False**
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -77,6 +80,7 @@ _Default Value_: **NewGuid**
 Maximum quantity for which this price is valid in the Price_Quantity_Measurement_Unit. `Unit: PriceQuantityMeasurementUnit` `Filter(eq)`
 
 _Type_: **[Quantity (18, 3)](../data-types.md#quantity) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 
@@ -85,6 +89,7 @@ _Supports Order By_: **False**
 Minimal quantity required to use this price (in the Price_Quantity_Measurement_Unit). `Unit: PriceQuantityMeasurementUnit` `Filter(eq)`
 
 _Type_: **[Quantity (18, 3)](../data-types.md#quantity) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 
@@ -93,6 +98,7 @@ _Supports Order By_: **False**
 Notes for this PurchaseProductPrice.
 
 _Type_: **string (254) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -102,6 +108,7 @@ _Maximum Length_: **254**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -110,6 +117,7 @@ _Supports Order By_: ****
 Price in the specified currency and for the specified quantity. `Currency: Currency` `Required` `Default(0)`
 
 _Type_: **[Amount (13, 5)](../data-types.md#amount)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -119,6 +127,7 @@ _Default Value_: **Constant**
 The quantity of the product for which the price is specified. `Unit: PriceQuantityMeasurementUnit` `Required` `Default(1)`
 
 _Type_: **[Quantity (10, 3)](../data-types.md#quantity)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -128,6 +137,7 @@ _Default Value_: **Constant**
 Priority of the price comparative to other prices. `Required` `Default(2)` `Filter(multi eq)`
 
 _Type_: **[Priority](Logistics.Procurement.PurchaseProductPrices.md#priority)**  
+_Category_: **System**  
 Allowed values for the `Priority`(Logistics.Procurement.PurchaseProductPrices.md#priority) data attribute  
 _Allowed Values (Logistics.Procurement.PurchaseProductPricesRepository.Priority Enum Members)_  
 
@@ -148,6 +158,7 @@ _Default Value_: **2**
 Ending date (inclusive) of the validity of the price. `Filter(eq;ge;le)`
 
 _Type_: **datetime __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -159,6 +170,7 @@ _Supports Order By_: **False**
 The currency of the price. `Required` `Filter(multi eq)`
 
 _Type_: **[Currencies](General.Currencies.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### EnterpriseCompany
@@ -166,6 +178,7 @@ _Supported Filters_: **Equals, EqualsIn**
 Determines for which enterprise company this price is used. If not specified the price is used for all enterprise companies. `Filter(multi eq)`
 
 _Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PriceQuantityMeasurementUnit
@@ -173,6 +186,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The measurement unit of Price_Quantity. `Required` `Filter(multi eq)`
 
 _Type_: **[MeasurementUnits](General.MeasurementUnits.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Front-End Recalc Expressions:_  
@@ -183,6 +197,7 @@ The product for which a purchase price will be defined. `Required` `Filter(multi
 
 _Type_: **[Products](General.Products.Products.md)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PurchasePriceList
@@ -190,6 +205,7 @@ _Supported Filters_: **Equals, EqualsIn**
 When not null, specifies that this price is valid only when the purchase document is set to work with the specified price list. `Filter(multi eq)`
 
 _Type_: **[PurchasePriceLists](Logistics.Procurement.PurchasePriceLists.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Supplier
@@ -197,6 +213,7 @@ _Supported Filters_: **Equals, EqualsIn**
 When not null, specifies that the price is valid only for the specified supplier. `Filter(multi eq)`
 
 _Type_: **[Suppliers](Logistics.Procurement.Suppliers.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

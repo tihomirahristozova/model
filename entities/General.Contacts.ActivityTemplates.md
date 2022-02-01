@@ -47,6 +47,7 @@ Aggregate Tree
 A mask that uses fields from the header table of the source document in the specified route and is used to fill the Subject of the generated activity.
 
 _Type_: **string (max) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
@@ -56,6 +57,7 @@ _Maximum Length_: **2147483647**
 The number of days that will be added to the date in the Header_Date_Field. The result value is set to Start_Time of the activity. `Required` `Default(0)`
 
 _Type_: **int32**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  
@@ -65,6 +67,7 @@ _Default Value_: **0**
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -72,6 +75,7 @@ _Supports Order By_: ****
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -80,6 +84,7 @@ _Default Value_: **NewGuid**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -88,6 +93,7 @@ _Supports Order By_: ****
 Time of the day for the reminder.
 
 _Type_: **time __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -98,6 +104,7 @@ _Front-End Recalc Expressions:_
 A name of a field from the header or the document table of the source document in the specified route, that will be used along with Additional_Days to set the Start_Time of the generated activity. `Required`
 
 _Type_: **string (64)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  
@@ -107,6 +114,7 @@ _Maximum Length_: **64**
 The time of the day when the activity starts. `Required`
 
 _Type_: **time**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -118,6 +126,7 @@ _Supports Order By_: **False**
 If Null the user that starts the generation route is responsible party of the activity. `Filter(multi eq)`
 
 _Type_: **[Parties](General.Contacts.Parties.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Route
@@ -125,6 +134,7 @@ _Supported Filters_: **Equals, EqualsIn**
 Document generation route that uses this template. `Required` `Filter(multi eq)`
 
 _Type_: **[Routes](Systems.Workflow.Routes.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

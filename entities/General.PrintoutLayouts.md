@@ -56,6 +56,7 @@ Aggregate Tree
 The printout layout, when the format requires binary storage. Alternative to Layout.
 
 _Type_: **byte[] __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -64,6 +65,7 @@ _Supports Order By_: **False**
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -72,6 +74,7 @@ _Supports Order By_: ****
 The entity name of the document type e.g. Crm_Sales_Orders, Inv_Store_Orders etc. `Required` `Filter(eq)`
 
 _Type_: **string (64)**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  
@@ -80,6 +83,7 @@ _Maximum Length_: **64**
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -88,6 +92,7 @@ _Default Value_: **NewGuid**
 The textual representation of the printout layout, when the format requires text representation. Alternative to Binary_Layout.
 
 _Type_: **string (max) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
@@ -97,6 +102,7 @@ _Maximum Length_: **2147483647**
 Format specifier of the layout. Recognized by the application. `Required` `Filter(multi eq)`
 
 _Type_: **string (32)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Supports Order By_: **False**  
 _Maximum Length_: **32**  
@@ -107,6 +113,7 @@ The name of this PrintoutLayout. `Required` `Filter(eq;like)` `ORD`
 
 _Type_: **string (64)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
 _Maximum Length_: **64**  
@@ -118,6 +125,7 @@ _Front-End Recalc Expressions:_
 Notes for this PrintoutLayout.
 
 _Type_: **string (254) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -127,6 +135,7 @@ _Maximum Length_: **254**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -138,6 +147,7 @@ _Supports Order By_: ****
 The data source for the printout. `Filter(multi eq)`
 
 _Type_: **[DataSources](Systems.Reporting.DataSources.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

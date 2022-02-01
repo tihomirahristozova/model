@@ -44,6 +44,7 @@ Aggregate Tree
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -51,6 +52,7 @@ _Supports Order By_: ****
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -59,6 +61,7 @@ _Default Value_: **NewGuid**
 Date and time when thet message occurred. `Required` `Default(Now)` `Filter(ge;le)` `ORD` `ReadOnly`
 
 _Type_: **datetime**  
+_Category_: **System**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **True**  
 _Default Value_: **CurrentDateTime**  
@@ -68,6 +71,7 @@ _Default Value_: **CurrentDateTime**
 Type of the information message: 'INF' = Information, 'WRN' = Warning, Error = 'ERR'. `Required` `Default("INF")` `Filter(multi eq)` `ReadOnly`
 
 _Type_: **[InformationMessageType](Systems.Core.InformationMessages.md#informationmessagetype)**  
+_Category_: **System**  
 Allowed values for the `InformationMessageType`(Systems.Core.InformationMessages.md#informationmessagetype) data attribute  
 _Allowed Values (Systems.Core.InformationMessagesRepository.InformationMessageType Enum Members)_  
 
@@ -86,6 +90,7 @@ _Default Value_: **Information**
 Machine name of the computer from which the process which creates the message has been initiated. `Required` `ReadOnly`
 
 _Type_: **string (128)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **128**  
@@ -95,6 +100,7 @@ _Maximum Length_: **128**
 The actual content of the information message. `Required` `Filter(like)` `ReadOnly`
 
 _Type_: **string (max)**  
+_Category_: **System**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
@@ -104,6 +110,7 @@ _Maximum Length_: **2147483647**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -112,6 +119,7 @@ _Supports Order By_: ****
 Name or description of the process that creates the message. `Required` `Filter(eq;like)` `ReadOnly`
 
 _Type_: **string (254)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -121,6 +129,7 @@ _Maximum Length_: **254**
 URL of the record that has posted the information message. `Filter(eq)`
 
 _Type_: **string (254) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -130,6 +139,7 @@ _Maximum Length_: **254**
 Login name of the user that has initiated the process which creates the message. `Required` `Filter(eq)` `ReadOnly`
 
 _Type_: **string (128)**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Maximum Length_: **128**  

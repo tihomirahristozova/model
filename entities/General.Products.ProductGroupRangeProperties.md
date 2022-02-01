@@ -50,6 +50,7 @@ Aggregate Root:
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -58,6 +59,7 @@ _Supports Order By_: ****
 Starting value of the range of alternative values. Used only when Rage Type = R (range).
 
 _Type_: **string (254) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -66,6 +68,7 @@ _Maximum Length_: **254**
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -74,6 +77,7 @@ _Default Value_: **NewGuid**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -82,6 +86,7 @@ _Supports Order By_: ****
 Contains the enumeration of all values in the alternating value set. Used only when Rage Type = E (enumeratio).
 
 _Type_: **string (max) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
@@ -91,6 +96,7 @@ _Maximum Length_: **2147483647**
 Specifies the method of the creation of the value set: R - by range from-to; E - by enumeration of all values;. `Required` `Default("R")`
 
 _Type_: **[RangeType](General.Products.ProductGroupRangeProperties.md#rangetype)**  
+_Category_: **System**  
 Allowed values for the `RangeType`(General.Products.ProductGroupRangeProperties.md#rangetype) data attribute  
 _Allowed Values (General.Products.ProductGroupRangePropertiesRepository.RangeType Enum Members)_  
 
@@ -108,6 +114,7 @@ _Default Value_: **Range**
 Ending value of the range of alternative values. Used only when Rage Type = R (range).
 
 _Type_: **string (254) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -121,6 +128,7 @@ The <see cref="ProductGroup"/> to which this ProductGroupRangeProperty belongs. 
 
 _Type_: **[ProductGroups](General.Products.ProductGroups.md)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
 
@@ -129,6 +137,7 @@ _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-reference
 The property whose values will be altered. `Required` `Filter(multi eq)`
 
 _Type_: **[CustomProperties](General.CustomProperties.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

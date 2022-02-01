@@ -57,6 +57,7 @@ Aggregate Tree
 The exact server time (in UTC) when the object represented by this system object was created. null means that it is unknown. `Filter(ge;le)` `Introduced in version 19.1`
 
 _Type_: **datetime __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -65,6 +66,7 @@ _Supports Order By_: **False**
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -73,6 +75,7 @@ _Supports Order By_: ****
 The Id of the primary row to which the object is bound. `Required` `Filter(multi eq)`
 
 _Type_: **guid**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### EntityType
@@ -81,6 +84,7 @@ The entity type of the row to which the object is bound. `Required` `Default(" "
 
 _Type_: **string (64)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **True**  
 _Maximum Length_: **64**  
@@ -90,6 +94,7 @@ _Default Value_: ** **
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -98,6 +103,7 @@ _Default Value_: **NewGuid**
 Specifies whether the object represented by this system object is deleted. After deletion of the original object, the system object remains in the system, but can be purged later by some cleanup processes. `Required` `Default(false)` `Filter(eq)` `Introduced in version 19.1`
 
 _Type_: **boolean**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **False**  
@@ -107,6 +113,7 @@ _Default Value_: **False**
 The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. `Filter(ge;le)` `Introduced in version 19.1`
 
 _Type_: **datetime __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -115,6 +122,7 @@ _Supports Order By_: **False**
 The latest saved version of the object. Starts from 1 and increments with 1 for each new version. `Required` `Default(1)`
 
 _Type_: **int32**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **1**  
@@ -124,6 +132,7 @@ _Default Value_: **1**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -135,6 +144,7 @@ _Supports Order By_: ****
 The user, who created the object represented by this system object . null means that it is unknown. `Filter(multi eq)` `Introduced in version 19.1`
 
 _Type_: **[Users](Systems.Security.Users.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### LastUpdateUser
@@ -142,6 +152,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The user, who made the last modification of the object represented by this system object . null means that it is unknown. `Filter(multi eq)` `Introduced in version 19.1`
 
 _Type_: **[Users](Systems.Security.Users.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

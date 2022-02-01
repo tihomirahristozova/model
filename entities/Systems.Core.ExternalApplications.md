@@ -53,6 +53,7 @@ Aggregate Tree
 The address (path) to the application. The address is platform-dependant. `Required`
 
 _Type_: **string (max)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
@@ -62,6 +63,7 @@ _Maximum Length_: **2147483647**
 Whether the application will be displayed to the end users when a single object is opened or when multiple objects are listed. `Required` `Default("SINGLE")` `Filter(eq)`
 
 _Type_: **[AvailableInMode](Systems.Core.ExternalApplications.md#availableinmode)**  
+_Category_: **System**  
 Allowed values for the `AvailableInMode`(Systems.Core.ExternalApplications.md#availableinmode) data attribute  
 _Allowed Values (Systems.Core.ExternalApplicationsRepository.AvailableInMode Enum Members)_  
 
@@ -80,6 +82,7 @@ _Default Value_: **SINGLE**
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -89,6 +92,7 @@ The entity, for which the application is defined. `Required` `Filter(eq)` `ORD`
 
 _Type_: **string (64)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **True**  
 _Maximum Length_: **64**  
@@ -98,6 +102,7 @@ _Maximum Length_: **64**
 Whether to execute the application for all selected objects at once or to execute the application for each object, one by one. `Required` `Default(true)` `Filter(eq)`
 
 _Type_: **boolean**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **True**  
@@ -106,6 +111,7 @@ _Default Value_: **True**
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -114,6 +120,7 @@ _Default Value_: **NewGuid**
 Specifies whether the external application is currently used. `Default(true)` `Filter(eq)`
 
 _Type_: **boolean __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **True**  
@@ -123,6 +130,7 @@ _Default Value_: **True**
 The name of the external application. `Required` `Filter(eq;like)`
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 
@@ -131,6 +139,7 @@ _Supports Order By_: **False**
 Notes for this ExternalApplication.
 
 _Type_: **string (max) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
@@ -140,6 +149,7 @@ _Maximum Length_: **2147483647**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -148,6 +158,7 @@ _Supports Order By_: ****
 The execution platform of the application. `Required` `Filter(eq)`
 
 _Type_: **[Platform](Systems.Core.ExternalApplications.md#platform)**  
+_Category_: **System**  
 Allowed values for the `Platform`(Systems.Core.ExternalApplications.md#platform) data attribute  
 _Allowed Values (Systems.Core.ExternalApplicationsRepository.Platform Enum Members)_  
 
@@ -167,6 +178,7 @@ _Supports Order By_: **False**
 Whether to refresh the data, displayed to the user, after the execution finishes. Not all platforms and/or applications support finish notification. `Required` `Default(true)` `Filter(eq)`
 
 _Type_: **boolean**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **True**  
@@ -176,6 +188,7 @@ _Default Value_: **True**
 Whether to save the form data to the server before starting the application. `Required` `Default(true)` `Filter(eq)`
 
 _Type_: **boolean**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **True**  
@@ -188,6 +201,7 @@ _Default Value_: **True**
 The access key, containing the user permissions for this ExternalApplication. Null means that all users have unlimited permissions. `Filter(multi eq)`
 
 _Type_: **[AccessKeys](Systems.Security.AccessKeys.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

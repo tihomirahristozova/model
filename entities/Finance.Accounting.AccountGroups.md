@@ -50,6 +50,7 @@ Aggregate Tree
 The description of this AccountGroup.
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -58,6 +59,7 @@ _Supports Order By_: **False**
 True means that the account group won't be used any more and should not appear in combo boxes. `Required` `Default(false)` `Filter(eq)`
 
 _Type_: **boolean**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **False**  
@@ -67,6 +69,7 @@ _Default Value_: **False**
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -75,6 +78,7 @@ _Supports Order By_: ****
 Full path to the group. Contains delimited list of group numbers of parent groups. `Filter(like)`
 
 _Type_: **string (256) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **256**  
@@ -83,6 +87,7 @@ _Maximum Length_: **256**
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -91,6 +96,7 @@ _Default Value_: **NewGuid**
 Account group name, required. Must be unique within the parent group. `Required` `Filter(like)`
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
+_Category_: **System**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 
@@ -100,6 +106,7 @@ Unique account group number. May contain characters, if required. `Required` `Fi
 
 _Type_: **string (30)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **True**  
 _Maximum Length_: **30**  
@@ -109,6 +116,7 @@ _Maximum Length_: **30**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -121,6 +129,7 @@ Parent account group. null if this is root group. `Filter(multi eq)`
 
 _Type_: **[AccountGroups](Finance.Accounting.AccountGroups.md) (nullable)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

@@ -42,6 +42,7 @@ Aggregate Tree
 Campaign description.
 
 _Type_: **string (254) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -51,6 +52,7 @@ _Maximum Length_: **254**
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -59,6 +61,7 @@ _Supports Order By_: ****
 End date of the campaign. null means that the end date is still unknown.
 
 _Type_: **datetime __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -67,6 +70,7 @@ _Supports Order By_: **False**
 Forecasted total cost of the campaign. `Required` `Default(0)`
 
 _Type_: **decimal (18, 0)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  
@@ -75,6 +79,7 @@ _Default Value_: **0**
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -84,6 +89,7 @@ Short name of the campaign. `Required` `Filter(like)` `ORD`
 
 _Type_: **string (64)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **True**  
 _Maximum Length_: **64**  
@@ -93,6 +99,7 @@ _Maximum Length_: **64**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -101,6 +108,7 @@ _Supports Order By_: ****
 Starting date of the campaign. `Required` `Default(Today)`
 
 _Type_: **datetime**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **CurrentDate**  

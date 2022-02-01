@@ -55,6 +55,7 @@ Aggregate Root:
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -62,6 +63,7 @@ _Supports Order By_: ****
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -70,6 +72,7 @@ _Default Value_: **NewGuid**
 Consecutive number of the line within the calculation. `Required`
 
 _Type_: **int32**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -83,6 +86,7 @@ _Front-End Recalc Expressions:_
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -91,6 +95,7 @@ _Supports Order By_: ****
 The Project, which absorbed the cost. `Filter(multi eq)`
 
 _Type_: **guid __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Quantity
@@ -98,6 +103,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The quantity produced. `Required` `Default(0)`
 
 _Type_: **decimal (18, 3)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  
@@ -111,6 +117,7 @@ The <see cref="Calculation"/> to which this CalculationProductOutput belongs. `R
 
 _Type_: **[Calculations](Finance.Cost.Calculations.md)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
 
@@ -119,6 +126,7 @@ _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-reference
 The Lot, which absorbed the cost. `Filter(multi eq)`
 
 _Type_: **[Lots](Logistics.Inventory.Lots.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Parent
@@ -126,6 +134,7 @@ _Supported Filters_: **Equals, EqualsIn**
 When not null specifies the parent output, whose cost is "absorbed" within the current output. `Filter(multi eq)`
 
 _Type_: **[CalculationProductOutputs](Finance.Cost.CalculationProductOutputs.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Product
@@ -133,6 +142,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The Product, which absorbed the cost. `Required` `Filter(multi eq)`
 
 _Type_: **[Products](General.Products.Products.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ProfitCenter
@@ -140,6 +150,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The Profit Center, which absorbed the cost. `Filter(multi eq)`
 
 _Type_: **[ProfitCenters](Finance.Accounting.ProfitCenters.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### SalesOrder
@@ -147,6 +158,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The Sales Order, which absorbed the cost. `Filter(multi eq)`
 
 _Type_: **[SalesOrders](Crm.Sales.SalesOrders.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Workgroup
@@ -154,6 +166,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The Workgroup, which absorbed the cost. `Filter(multi eq)`
 
 _Type_: **[Workgroups](Production.Resources.Workgroups.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### WorkOrder
@@ -161,6 +174,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The Work Order, which absorbed the cost. `Filter(multi eq)`
 
 _Type_: **[WorkOrders](Production.ShopFloor.WorkOrders.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

@@ -53,6 +53,7 @@ Aggregate Root:
 Consecutive number of the action, unique within the business rule. `Required`
 
 _Type_: **int32**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -66,6 +67,7 @@ _Front-End Recalc Expressions:_
 Specifies the type of action to perform. `Required`
 
 _Type_: **[ActionType](Systems.Bpm.UserBusinessRuleActions.md#actiontype)**  
+_Category_: **System**  
 Allowed values for the `ActionType`(Systems.Bpm.UserBusinessRuleActions.md#actiontype) data attribute  
 _Allowed Values (Systems.Bpm.UserBusinessRuleActionsRepository.ActionType Enum Members)_  
 
@@ -86,6 +88,7 @@ _Supports Order By_: **False**
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -93,6 +96,7 @@ _Supports Order By_: ****
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -101,6 +105,7 @@ _Default Value_: **NewGuid**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -109,6 +114,7 @@ _Supports Order By_: ****
 The type of the parameter specifies how to obtain the parameter value.
 
 _Type_: **[ActionParameterType](Systems.Bpm.UserBusinessRuleActions.md#parameter1type) __nullable__**  
+_Category_: **System**  
 Generic enum type for ActionParameterType properties  
 _Allowed Values (Systems.Bpm.ActionParameterType Enum Members)_  
 
@@ -128,6 +134,7 @@ _Supports Order By_: **False**
 The actual value of the parameter.
 
 _Type_: **string (256) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **256**  
@@ -137,6 +144,7 @@ _Maximum Length_: **256**
 The type of the parameter specifies how to obtain the parameter value.
 
 _Type_: **[ActionParameterType](Systems.Bpm.UserBusinessRuleActions.md#parameter2type) __nullable__**  
+_Category_: **System**  
 Generic enum type for ActionParameterType properties  
 _Allowed Values (Systems.Bpm.ActionParameterType Enum Members)_  
 
@@ -156,6 +164,7 @@ _Supports Order By_: **False**
 The actual value of the parameter.
 
 _Type_: **string (256) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **256**  
@@ -165,6 +174,7 @@ _Maximum Length_: **256**
 The type of the parameter specifies how to obtain the parameter value.
 
 _Type_: **[ActionParameterType](Systems.Bpm.UserBusinessRuleActions.md#parameter3type) __nullable__**  
+_Category_: **System**  
 Generic enum type for ActionParameterType properties  
 _Allowed Values (Systems.Bpm.ActionParameterType Enum Members)_  
 
@@ -184,6 +194,7 @@ _Supports Order By_: **False**
 The actual value of the parameter.
 
 _Type_: **string (256) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **256**  
@@ -196,6 +207,7 @@ _Maximum Length_: **256**
 The business rule, for which the action is defined. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[UserBusinessRules](Systems.Bpm.UserBusinessRules.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
 

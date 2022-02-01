@@ -61,6 +61,7 @@ Aggregate Tree
 Allows the processing of the physical address. `Required` `Default(false)` `Filter(eq)`
 
 _Type_: **boolean**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **False**  
@@ -70,6 +71,7 @@ _Default Value_: **False**
 Allows the processing of basic (usually public) data: Name, AgeGroup21+, public profile picture, etc. `Required` `Default(false)` `Filter(eq)`
 
 _Type_: **boolean**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **False**  
@@ -79,6 +81,7 @@ _Default Value_: **False**
 Allows the processing of the email address. `Required` `Default(false)` `Filter(eq)`
 
 _Type_: **boolean**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **False**  
@@ -88,6 +91,7 @@ _Default Value_: **False**
 Comma-separated list of other types of data, which was allowed for processing with this consent. `Filter(eq)`
 
 _Type_: **string (max) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
@@ -97,6 +101,7 @@ _Maximum Length_: **2147483647**
 Allows the processing of the telephone number. `Required` `Default(false)` `Filter(eq)`
 
 _Type_: **boolean**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **False**  
@@ -106,6 +111,7 @@ _Default Value_: **False**
 If not null, it is a graphical image, containing additional information for the consent.
 
 _Type_: **byte[] __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -114,6 +120,7 @@ _Supports Order By_: **False**
 The actual text of the consent. `Filter(like)`
 
 _Type_: **string (max) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
@@ -123,6 +130,7 @@ _Maximum Length_: **2147483647**
 The way the consent was given. O=Online; I=Implicit; V=Verbal; W=Written; E=Email; T=Other (should be stated in Notes). `Required` `Filter(eq)`
 
 _Type_: **[ConsentType](Applications.PersonalData.ProcessingConsents.md#consenttype)**  
+_Category_: **System**  
 Allowed values for the `ConsentType`(Applications.PersonalData.ProcessingConsents.md#consenttype) data attribute  
 _Allowed Values (Applications.PersonalData.ProcessingConsentsRepository.ConsentType Enum Members)_  
 
@@ -143,6 +151,7 @@ _Supports Order By_: **False**
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -151,6 +160,7 @@ _Supports Order By_: ****
 The date and time (in Utc), when the consent was given. `Required` `Filter(ge;le)`
 
 _Type_: **datetime**  
+_Category_: **System**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -158,6 +168,7 @@ _Supports Order By_: **False**
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -166,6 +177,7 @@ _Default Value_: **NewGuid**
 Whether the consent is active or retracted. Once retracted, the consent record cannot be modified again and a new consent should be given. `Required` `Default(true)` `Filter(eq)`
 
 _Type_: **boolean**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **True**  
@@ -175,6 +187,7 @@ _Default Value_: **True**
 Specifies whether the data subject is child, according to the local regulations. General regulations treat all persons below the age of 16 as child. `Required` `Default(false)` `Filter(eq)`
 
 _Type_: **boolean**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **False**  
@@ -184,6 +197,7 @@ _Default Value_: **False**
 Notes for this ProcessingConsent.
 
 _Type_: **string (max) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
@@ -193,6 +207,7 @@ _Maximum Length_: **2147483647**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -201,6 +216,7 @@ _Supports Order By_: ****
 When a parental rights holder gives a consent for a child, contains the email of the parent. `Filter(like)`
 
 _Type_: **string (50) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **50**  
@@ -210,6 +226,7 @@ _Maximum Length_: **50**
 When a parental rights holder gives a consent for a child, contains the name of the parent. `Filter(eq;like)`
 
 _Type_: **string (50) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **50**  
@@ -219,6 +236,7 @@ _Maximum Length_: **50**
 When a parental rights holder gives a consent for a child, contains the phone number of the parent. `Filter(like)`
 
 _Type_: **string (50) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **50**  
@@ -228,6 +246,7 @@ _Maximum Length_: **50**
 The date and time (in Utc), when the consent was retracted. Null if the consent is not retracted. `Filter(ge;le)`
 
 _Type_: **datetime __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -239,6 +258,7 @@ _Supports Order By_: **False**
 The person, for which the consent is given. Null when the consent is given by an online user, which is still not linked to a specific person record. `Filter(multi eq)`
 
 _Type_: **[Persons](General.Contacts.Persons.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PersonalDataProcess
@@ -246,6 +266,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The process, which will be used to process the data. Null when the process is unknown, or there are multiple processes (not recommended) processing the data, listed in the Notes. `Filter(multi eq)`
 
 _Type_: **[PersonalDataProcesses](Applications.PersonalData.PersonalDataProcesses.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### User
@@ -253,6 +274,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The login user, for which the consent is given. Null when a consent is entered for a natural person, not through online user. `Required` `Filter(multi eq)`
 
 _Type_: **[Users](Systems.Security.Users.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

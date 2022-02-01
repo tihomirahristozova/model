@@ -48,6 +48,7 @@ Aggregate Tree
 The date for which the sales is forecasted. When forecasting for a period, this contains the first date of the period. `Required` `Filter(ge;le)`
 
 _Type_: **datetime**  
+_Category_: **System**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -56,6 +57,7 @@ _Supports Order By_: **False**
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -63,6 +65,7 @@ _Supports Order By_: ****
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -71,6 +74,7 @@ _Default Value_: **NewGuid**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -79,6 +83,7 @@ _Supports Order By_: ****
 The forecasted sales quantity in the base measurement category of the product. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Default(0)` `Filter(ge;le)`
 
 _Type_: **[Quantity (18, 3)](../data-types.md#quantity)**  
+_Category_: **System**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -91,6 +96,7 @@ _Default Value_: **Constant**
 The country for which the forecast is made. When null, the forecast is country neutral. `Filter(multi eq)`
 
 _Type_: **[Countries](General.Geography.Countries.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Customer
@@ -98,6 +104,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The customer for which the forecast is made. When null, the forecast is not for any specfic customer. `Filter(multi eq)`
 
 _Type_: **[Customers](Crm.Customers.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Dealer
@@ -105,6 +112,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The dealer for which the forecast is made. When null, the forecast is not for any specfic dealer. `Filter(multi eq)`
 
 _Type_: **[Dealers](Crm.Dealers.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Product
@@ -112,6 +120,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The product for which the forecast is made. `Required` `Filter(multi eq)`
 
 _Type_: **[Products](General.Products.Products.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### SalesPerson
@@ -119,6 +128,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The sales person for which the forecast is made. When null, the forecast is not for any specfic sales person. `Filter(multi eq)`
 
 _Type_: **[SalesPersons](Crm.SalesPersons.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Store
@@ -126,6 +136,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The store which is expected to sell the products. `Required` `Filter(multi eq)`
 
 _Type_: **[Stores](Logistics.Inventory.Stores.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

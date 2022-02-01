@@ -55,6 +55,7 @@ Aggregate Root:
 When not null, specifies the price per hour (in the currency of the Project) of resource usage which will be used for billing. null means that the item will be billed in another way. This way of billing is mutually exclusive with Fixed Total Price. `Filter(eq)`
 
 _Type_: **decimal (12, 5) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 
@@ -65,6 +66,7 @@ _Front-End Recalc Expressions:_
 When not null, specifies that this item will be billed for the specified fixed total price (in the currency of the Project). null means that this item will be billed in another way. This way of billing is mutually exclusive with Billing Price Per Hour. `Filter(eq)`
 
 _Type_: **decimal (14, 2) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 
@@ -75,6 +77,7 @@ _Front-End Recalc Expressions:_
 Cost per hour for the resource usage for this task (in the currency of the project). `Required` `Default(0)` `Filter(eq)`
 
 _Type_: **decimal (12, 5)**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  
@@ -86,6 +89,7 @@ _Front-End Recalc Expressions:_
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -93,6 +97,7 @@ _Supports Order By_: ****
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -101,6 +106,7 @@ _Default Value_: **NewGuid**
 Notes for this ProjectTaskResource.
 
 _Type_: **string (254) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -110,6 +116,7 @@ _Maximum Length_: **254**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -118,6 +125,7 @@ _Supports Order By_: ****
 One time cost for each resource usage, specified in the projects currency. `Currency: ProjectTask.Project.BudgetingCurrency`
 
 _Type_: **[Amount (14, 2)](../data-types.md#amount) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -126,6 +134,7 @@ _Supports Order By_: **False**
 The total number of resource-hours, which are planned for this task. Equals to the length of the task, multiplied by the resource usage. `Required` `Default(0)` `Filter(eq)`
 
 _Type_: **decimal (10, 2)**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  
@@ -137,6 +146,7 @@ _Front-End Recalc Expressions:_
 The planned resource usage for this activity in percents. Values of more than 100% are allowed when more than 1 resource is required. `Required` `Default(1)` `Filter(eq)`
 
 _Type_: **decimal (18, 4)**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **1**  
@@ -148,6 +158,7 @@ _Front-End Recalc Expressions:_
 Total cost for this task (in the currency of the project). `Required` `Default(0)` `Filter(eq)`
 
 _Type_: **decimal (14, 2)**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  
@@ -165,6 +176,7 @@ _Front-End Recalc Expressions:_
 The task for which the resource is planned. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[ProjectTasks](Projects.ProjectTasks.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
 
@@ -173,6 +185,7 @@ _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-reference
 The planned resource. `Required` `Filter(multi eq)`
 
 _Type_: **[Resources](General.Resources.Resources.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ResourceInstance
@@ -180,6 +193,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The concrete resource instance, which should be used. null when no specific resource instance is required. `Filter(multi eq)`
 
 _Type_: **[ResourceInstances](General.Resources.ResourceInstances.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

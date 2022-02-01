@@ -66,6 +66,7 @@ Aggregate Root:
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -74,6 +75,7 @@ _Supports Order By_: ****
 Specifies that the quantity of the product can be less than free to use quantity, because the product will be supplied . `Required` `Default(false)`
 
 _Type_: **boolean**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **False**  
@@ -83,6 +85,7 @@ _Default Value_: **False**
 Guarantee period in days for the offered product. null for non-serviced products.
 
 _Type_: **int32 __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -92,6 +95,7 @@ _Front-End Recalc Expressions:_
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -100,6 +104,7 @@ _Default Value_: **NewGuid**
 Total cost for the line in the currency of the document. Equals Quantity * Unit_Cost. `Currency: StoreOrder.DocumentCurrency`
 
 _Type_: **[Amount (14, 2)](../data-types.md#amount) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -108,6 +113,7 @@ _Supports Order By_: **False**
 Line number within the store order. `Required` `Filter(eq)`
 
 _Type_: **int32**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 
@@ -121,6 +127,7 @@ _Front-End Recalc Expressions:_
 Obsolete. Not used.
 
 _Type_: **string (16) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **16**  
@@ -130,6 +137,7 @@ _Maximum Length_: **16**
 Notes for this StoreOrderLine.
 
 _Type_: **string (254) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -139,6 +147,7 @@ _Maximum Length_: **254**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -148,6 +157,7 @@ Id of the line of the parent document, which generated the store order. null for
 
 _Type_: **guid __nullable__**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ParentLineNo
@@ -155,6 +165,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The number of the line within the parent document, which the current line executes. null when the current line does not execute parent line. `Filter(eq)`
 
 _Type_: **int32 __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 
@@ -163,6 +174,7 @@ _Supports Order By_: **False**
 If checked specifies that the lot in the line cannot be changed in the sub-documents created by the current document. `Required` `Default(false)` `Filter(eq)`
 
 _Type_: **boolean**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **False**  
@@ -172,6 +184,7 @@ _Default Value_: **False**
 Quantity ordered for receipt/issue. `Unit: QuantityUnit` `Required` `Default(0)`
 
 _Type_: **[Quantity (18, 3)](../data-types.md#quantity)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -181,6 +194,7 @@ _Default Value_: **Constant**
 Quantity in the base (default) measurement unit of the Item (calculated at the time of last update of the current store order line). Should be updated in parallel with each Quantity update. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Default(0)` `ReadOnly`
 
 _Type_: **[Quantity (18, 3)](../data-types.md#quantity)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -195,6 +209,7 @@ _Front-End Recalc Expressions:_
 The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` `Introduced in version 18.2`
 
 _Type_: **[Quantity (18, 3)](../data-types.md#quantity)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -208,6 +223,7 @@ _Front-End Recalc Expressions:_
 Exact time when the transaction for this store order line changes the cost of the product. `ReadOnly`
 
 _Type_: **datetime __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -216,6 +232,7 @@ _Supports Order By_: **False**
 Cost for 1 unit of measure in the currency of the document. `Currency: StoreOrder.DocumentCurrency`
 
 _Type_: **[Amount (14, 5)](../data-types.md#amount) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -228,6 +245,7 @@ The <see cref="StoreOrder"/> to which this StoreOrderLine belongs. `Required` `F
 
 _Type_: **[StoreOrders](Logistics.Inventory.StoreOrders.md)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Lot
@@ -235,6 +253,7 @@ _Supported Filters_: **Equals, EqualsIn**
 If non-null, contains the specific lot to use for the movement. `Filter(multi eq)`
 
 _Type_: **[Lots](Logistics.Inventory.Lots.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ParentDocument
@@ -243,6 +262,7 @@ The document, which the current line executes. null when the current line does n
 
 _Type_: **[Documents](General.Documents.md) (nullable)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Product
@@ -250,6 +270,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The product which should be received/issued. `Required` `Filter(multi eq)`
 
 _Type_: **[Products](General.Products.Products.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ProductVariant
@@ -257,6 +278,7 @@ _Supported Filters_: **Equals, EqualsIn**
 If specified determines which product variant of the current product in this line is used. `Filter(multi eq)`
 
 _Type_: **[ProductVariants](General.ProductVariants.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### QuantityUnit
@@ -264,6 +286,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The measurement unit of Quantity. `Required` `Filter(multi eq)`
 
 _Type_: **[MeasurementUnits](General.MeasurementUnits.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Front-End Recalc Expressions:_  
@@ -274,6 +297,7 @@ Sales order line which is managed by this store order line. When specified sales
 
 _Type_: **[SalesOrderLines](Crm.Sales.SalesOrderLines.md) (nullable)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### SerialNumber
@@ -281,6 +305,7 @@ _Supported Filters_: **Equals, EqualsIn**
 Which serial number to receive/issue. null means that serial number is unknown or not applicable. `Filter(multi eq)`
 
 _Type_: **[SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### StoreBin
@@ -288,6 +313,7 @@ _Supported Filters_: **Equals, EqualsIn**
 From/to which store bin to issue/receive the products. null means that the store bin is unknown or not applicable. `Filter(multi eq)`
 
 _Type_: **[StoreBins](Logistics.Inventory.StoreBins.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### StoreOrder
@@ -296,6 +322,7 @@ The <see cref="StoreOrder"/> to which this StoreOrderLine belongs. `Required` `F
 
 _Type_: **[StoreOrders](Logistics.Inventory.StoreOrders.md)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
 

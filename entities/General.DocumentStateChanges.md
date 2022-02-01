@@ -51,6 +51,7 @@ Aggregate Root:
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -58,6 +59,7 @@ _Supports Order By_: ****
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -66,6 +68,7 @@ _Default Value_: **NewGuid**
 The new state after the change. `Required` `Filter(eq)`
 
 _Type_: **[NewState](General.DocumentStateChanges.md#newstate)**  
+_Category_: **System**  
 Allowed values for the `NewState`(General.DocumentStateChanges.md#newstate) data attribute  
 _Allowed Values (General.DocumentStateChangesRepository.NewState Enum Members)_  
 
@@ -87,6 +90,7 @@ _Supports Order By_: **False**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -95,6 +99,7 @@ _Supports Order By_: ****
 Specifies whether the state change was caused by system process or from user action. `Required` `Default(false)` `ReadOnly`
 
 _Type_: **boolean**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **False**  
@@ -104,6 +109,7 @@ _Default Value_: **False**
 The time when the change took effect. `Required` `Filter(ge;le)` `ORD`
 
 _Type_: **datetime**  
+_Category_: **System**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **True**  
 
@@ -112,6 +118,7 @@ _Supports Order By_: **True**
 The login name of the user, who made the status change. `Required` `Filter(eq)`
 
 _Type_: **string (64)**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  
@@ -121,6 +128,7 @@ _Maximum Length_: **64**
 True if the document is voided with this change. `Required` `Default(false)` `Filter(eq)` `Introduced in version 19.1`
 
 _Type_: **boolean**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **False**  
@@ -134,6 +142,7 @@ The document which has changed state. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[Documents](General.Documents.md)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
 
@@ -142,6 +151,7 @@ _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-reference
 The new user status after the change. `Filter(multi eq)`
 
 _Type_: **[DocumentTypeUserStatuses](General.DocumentTypeUserStatuses.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

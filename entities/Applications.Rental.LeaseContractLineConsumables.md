@@ -50,6 +50,7 @@ Aggregate Root:
 The quantity sold of the consumable. `Unit: ConsumableQuantityUnit` `Required` `Default(0)`
 
 _Type_: **[Quantity (12, 3)](../data-types.md#quantity)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -59,6 +60,7 @@ _Default Value_: **Constant**
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -66,6 +68,7 @@ _Supports Order By_: ****
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -74,6 +77,7 @@ _Default Value_: **NewGuid**
 Consecutive number of the consumable within the lease contract line. `Required` `Filter(eq;ge;le)`
 
 _Type_: **int32**  
+_Category_: **System**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -87,6 +91,7 @@ _Front-End Recalc Expressions:_
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -98,6 +103,7 @@ _Supports Order By_: ****
 The measurement unit of Consumable Quantity. `Required` `Filter(multi eq)`
 
 _Type_: **[MeasurementUnits](General.MeasurementUnits.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### LeaseLine
@@ -106,6 +112,7 @@ Lease line with which the current consumable is given. `Required` `Filter(multi 
 
 _Type_: **[LeaseContractLines](Applications.Rental.LeaseContractLines.md)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
 
@@ -114,6 +121,7 @@ _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-reference
 The consumable to be sold accompanying the asset. `Required` `Filter(multi eq)`
 
 _Type_: **[Products](General.Products.Products.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Store
@@ -121,6 +129,7 @@ _Supported Filters_: **Equals, EqualsIn**
 Store from which the consumable is issued. `Required` `Filter(multi eq)`
 
 _Type_: **[Stores](Logistics.Inventory.Stores.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

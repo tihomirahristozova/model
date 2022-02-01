@@ -54,6 +54,7 @@ Aggregate Root:
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -62,6 +63,7 @@ _Supports Order By_: ****
 The full cost of the specified quantity. `Required` `Default(0)`
 
 _Type_: **decimal (14, 2)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  
@@ -70,6 +72,7 @@ _Default Value_: **0**
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -78,6 +81,7 @@ _Default Value_: **NewGuid**
 Consecutive number of the line within the calculation. `Required`
 
 _Type_: **int32**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -91,6 +95,7 @@ _Front-End Recalc Expressions:_
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -99,6 +104,7 @@ _Supports Order By_: ****
 The Project to which the cost was allocated. When null, the cost was not allocated to any specific Project. `Filter(multi eq)`
 
 _Type_: **guid __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Quantity
@@ -106,6 +112,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The quantity of the product. `Required` `Default(0)`
 
 _Type_: **decimal (14, 3)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  
@@ -119,6 +126,7 @@ The <see cref="Calculation"/> to which this CalculationResult belongs. `Required
 
 _Type_: **[Calculations](Finance.Cost.Calculations.md)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
 
@@ -127,6 +135,7 @@ _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-reference
 The Lot to which the cost was allocated. When null, the cost was not allocated to any specific Lot. `Filter(multi eq)`
 
 _Type_: **[Lots](Logistics.Inventory.Lots.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Product
@@ -134,6 +143,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The Product to which the cost was allocated. When null, the cost was not allocated to any specific Product. `Required` `Filter(multi eq)`
 
 _Type_: **[Products](General.Products.Products.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ProfitCenter
@@ -141,6 +151,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The Profit Center to which the cost was allocated. When null, the cost was not allocated to any specific Profit Center. `Filter(multi eq)`
 
 _Type_: **[ProfitCenters](Finance.Accounting.ProfitCenters.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### SalesOrder
@@ -148,6 +159,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The Sales Order to which the cost was allocated. When null, the cost was not allocated to any specific Sales Order. `Filter(multi eq)`
 
 _Type_: **[SalesOrders](Crm.Sales.SalesOrders.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Workgroup
@@ -155,6 +167,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The Workgroup to which the cost was allocated. When null, the cost was not allocated to any specific Workgroup. `Filter(multi eq)`
 
 _Type_: **[Workgroups](Production.Resources.Workgroups.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

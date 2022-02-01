@@ -45,6 +45,7 @@ Product code from the Intrastat Combined nomenclature. `Required` `Filter(eq;lik
 
 _Type_: **string (8)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
 _Maximum Length_: **8**  
@@ -54,6 +55,7 @@ _Maximum Length_: **8**
 Description of the product code from the Intrastat Combined nomenclature. `Required` `Filter(like)`
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
+_Category_: **System**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 
@@ -62,6 +64,7 @@ _Supports Order By_: **False**
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -70,6 +73,7 @@ _Supports Order By_: ****
 Specifies the alcoholic strength for excise products (if applicable). `Introduced in version 21.1.3.44`
 
 _Type_: **decimal (5, 2) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -78,6 +82,7 @@ _Supports Order By_: **False**
 The code of the product for excise purposes (if applicable). A.k.a. APCode. `Introduced in version 21.1.3.44`
 
 _Type_: **string (20) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **20**  
@@ -86,6 +91,7 @@ _Maximum Length_: **20**
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -94,6 +100,7 @@ _Default Value_: **NewGuid**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -102,6 +109,7 @@ _Supports Order By_: ****
 If not null, the related product should have additional measurement unit with the same code as specified in this field. The additional unit will be used for the purposes of the Intrastat declarations. `Required`
 
 _Type_: **string (16)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **16**  
@@ -111,6 +119,7 @@ _Maximum Length_: **16**
 The starting date of validity of this code. `Filter(ge;le)`
 
 _Type_: **date __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -119,6 +128,7 @@ _Supports Order By_: **False**
 The ending date of validity of this code. `Filter(ge;le)`
 
 _Type_: **date __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 

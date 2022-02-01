@@ -50,6 +50,7 @@ Aggregate Root:
 The attribute, which will be tested. `Required`
 
 _Type_: **string (64)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  
@@ -59,6 +60,7 @@ _Maximum Length_: **64**
 How to compare the attribute and the value of the condition - e.g. Attribute-Comparison-Value. `Required` `Default("Equals")`
 
 _Type_: **[ComparisonType](Systems.Bpm.UserBusinessRuleConditions.md#comparisontype)**  
+_Category_: **System**  
 Allowed values for the `ComparisonType`(Systems.Bpm.UserBusinessRuleConditions.md#comparisontype) data attribute  
 _Allowed Values (Systems.Bpm.UserBusinessRuleConditionsRepository.ComparisonType Enum Members)_  
 
@@ -80,6 +82,7 @@ _Default Value_: **Equals**
 Unique consecutive number of the condition within the business rule. `Required`
 
 _Type_: **int32**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -93,6 +96,7 @@ _Front-End Recalc Expressions:_
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -100,6 +104,7 @@ _Supports Order By_: ****
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -108,6 +113,7 @@ _Default Value_: **NewGuid**
 Notes for this UserBusinessRuleCondition. `Introduced in version 20.1`
 
 _Type_: **string (max) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
@@ -117,6 +123,7 @@ _Maximum Length_: **2147483647**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -125,6 +132,7 @@ _Supports Order By_: ****
 The value against which the data attribute will be tested.
 
 _Type_: **string (254) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -137,6 +145,7 @@ _Maximum Length_: **254**
 The business rule, for which the condition is defined. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[UserBusinessRules](Systems.Bpm.UserBusinessRules.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
 

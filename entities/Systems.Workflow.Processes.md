@@ -49,6 +49,7 @@ Aggregate Tree
 Date and time when the Process was created. `ReadOnly`
 
 _Type_: **datetime __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -57,6 +58,7 @@ _Supports Order By_: **False**
 Login name of the user, who created the Process. `ReadOnly`
 
 _Type_: **string (64) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  
@@ -66,6 +68,7 @@ _Maximum Length_: **64**
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -73,6 +76,7 @@ _Supports Order By_: ****
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -81,6 +85,7 @@ _Default Value_: **NewGuid**
 Specifies whether the process diagram is intended to be viewed in landscape mode. `Required` `Default(true)`
 
 _Type_: **boolean**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **True**  
@@ -90,6 +95,7 @@ _Default Value_: **True**
 The name of this Process. `Required` `Filter(eq;like)`
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 
@@ -98,6 +104,7 @@ _Supports Order By_: **False**
 Notes for this Process.
 
 _Type_: **string (2000) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2000**  
@@ -107,6 +114,7 @@ _Maximum Length_: **2000**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -115,6 +123,7 @@ _Supports Order By_: ****
 Application specific format of the Schema Layout. `Required` `Default("D")`
 
 _Type_: **string (1)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **1**  
@@ -125,6 +134,7 @@ _Default Value_: **D**
 Contains the actual presentation layout of the business process. The layout is stored in the format, specified by Schema Format. `Required`
 
 _Type_: **string (max)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
@@ -134,6 +144,7 @@ _Maximum Length_: **2147483647**
 USR=User created; EML=Email receive (still not supported). null means that there is no starting event for this process.
 
 _Type_: **string (3) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **3**  
@@ -143,6 +154,7 @@ _Maximum Length_: **3**
 When Start_Event='USR' then specifies the role which the user must play in order to start the process. null when Start_Event&lt;&gt;'USR'. `Filter(multi eq)`
 
 _Type_: **guid __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Thumbnail
@@ -150,6 +162,7 @@ _Supported Filters_: **Equals, EqualsIn**
 Contains the visual thumbnail of the presentation of the business process. It is stored in bitmap (BMP) format.
 
 _Type_: **byte[] __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -158,6 +171,7 @@ _Supports Order By_: **False**
 Date and time when the Process was last updated. `ReadOnly`
 
 _Type_: **datetime __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -166,6 +180,7 @@ _Supports Order By_: **False**
 Login name of the user, who last updated the Process. `ReadOnly`
 
 _Type_: **string (64) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  

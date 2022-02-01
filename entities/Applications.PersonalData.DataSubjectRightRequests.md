@@ -49,6 +49,7 @@ Aggregate Tree
 Date and time (in UTC), when the requested right was implemented by the responsible entity. Null if the request is still not implemented.
 
 _Type_: **datetime __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -57,6 +58,7 @@ _Supports Order By_: **False**
 The date and time (in UTC), when the request was created. `Required` `Default(Now)`
 
 _Type_: **datetime**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **CurrentDateTime**  
@@ -66,6 +68,7 @@ _Default Value_: **CurrentDateTime**
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -73,6 +76,7 @@ _Supports Order By_: ****
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -81,6 +85,7 @@ _Default Value_: **NewGuid**
 This should usually contain detailed implementation notes.
 
 _Type_: **string (max) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
@@ -90,6 +95,7 @@ _Maximum Length_: **2147483647**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -98,6 +104,7 @@ _Supports Order By_: ****
 The requested right, according to GDPR and other personal data regulations.  REC=Rectify; ERA=Erasure; RES=Restrict; POR=Portability; OBJ=Object; OTH=Other. `Required` `Filter(eq)`
 
 _Type_: **[RequestedRight](Applications.PersonalData.DataSubjectRightRequests.md#requestedright)**  
+_Category_: **System**  
 Allowed values for the `RequestedRight`(Applications.PersonalData.DataSubjectRightRequests.md#requestedright) data attribute  
 _Allowed Values (Applications.PersonalData.DataSubjectRightRequestsRepository.RequestedRight Enum Members)_  
 
@@ -118,6 +125,7 @@ _Supports Order By_: **False**
 The status of the request. 1=Requested; 2=Reviewing; 3=Executing; 4=Implemented; 5=Denied. `Required`
 
 _Type_: **[Status](Applications.PersonalData.DataSubjectRightRequests.md#status)**  
+_Category_: **System**  
 Allowed values for the `Status`(Applications.PersonalData.DataSubjectRightRequests.md#status) data attribute  
 _Allowed Values (Applications.PersonalData.DataSubjectRightRequestsRepository.Status Enum Members)_  
 
@@ -140,6 +148,7 @@ _Supports Order By_: **False**
 The internal user account, which marked the request as implemented. Null when the request is still not implemented, or when the user is unknown. `Filter(multi eq)` `ReadOnly`
 
 _Type_: **[Users](Systems.Security.Users.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### CreatedByUser
@@ -147,6 +156,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The user account, which was used to create the request. Null when the request was created internally, on behalf of the external person. `Filter(multi eq)` `ReadOnly`
 
 _Type_: **[Users](Systems.Security.Users.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### EnterpriseCompany
@@ -154,6 +164,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The enterprise company, to which the request was made. `Required` `Filter(multi eq)`
 
 _Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Person
@@ -161,6 +172,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The person, whose data will be corrected with the request. . `Required` `Filter(multi eq)`
 
 _Type_: **[Persons](General.Contacts.Persons.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

@@ -49,6 +49,7 @@ Aggregate Root:
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -57,6 +58,7 @@ _Supports Order By_: ****
 Registration parameter. The meaning is determined by the event. Usually - attribute name, document state, etc.
 
 _Type_: **string (128) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **128**  
@@ -66,6 +68,7 @@ _Maximum Length_: **128**
 The event for which to register the business rule. `Required`
 
 _Type_: **[EventType](Systems.Bpm.UserBusinessRuleEvents.md#eventtype)**  
+_Category_: **System**  
 Allowed values for the `EventType`(Systems.Bpm.UserBusinessRuleEvents.md#eventtype) data attribute  
 _Allowed Values (Systems.Bpm.UserBusinessRuleEventsRepository.EventType Enum Members)_  
 
@@ -88,6 +91,7 @@ _Supports Order By_: **False**
 Execution priority. Lower values indicate earlier priorities. Possible values - 30-Early, 50-Normal, 70-Late. `Required` `Default(50)`
 
 _Type_: **[RuleExecutionPriority](Systems.Bpm.UserBusinessRuleEvents.md#executionpriority)**  
+_Category_: **System**  
 _Allowed Values (Aloe.SystemFrameworks.Domain.BusinessLogic.RuleExecutionPriority Enum Members)_  
 
 | Value | Description |
@@ -106,6 +110,7 @@ _Default Value_: **50**
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -114,6 +119,7 @@ _Default Value_: **NewGuid**
 Specifies the layer on which to register the event. Allowed values = FTE-FrontEnd, BKE-BackEnd. `Required` `Default("BKE")`
 
 _Type_: **[Layer](Systems.Bpm.UserBusinessRuleEvents.md#layer)**  
+_Category_: **System**  
 Allowed values for the `Layer`(Systems.Bpm.UserBusinessRuleEvents.md#layer) data attribute  
 _Allowed Values (Systems.Bpm.UserBusinessRuleEventsRepository.Layer Enum Members)_  
 
@@ -131,6 +137,7 @@ _Default Value_: **BackEnd**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -142,6 +149,7 @@ _Supports Order By_: ****
 The rule, which will be registered for the event. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[UserBusinessRules](Systems.Bpm.UserBusinessRules.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
 

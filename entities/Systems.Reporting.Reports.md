@@ -52,6 +52,7 @@ Aggregate Tree
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -59,6 +60,7 @@ _Supports Order By_: ****
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -67,6 +69,7 @@ _Default Value_: **NewGuid**
 Format specifier of the layout. Recognized by the application. `Filter(multi eq)`
 
 _Type_: **string (32) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Supports Order By_: **False**  
 _Maximum Length_: **32**  
@@ -76,6 +79,7 @@ _Maximum Length_: **32**
 Multi-language report name. `Required` `Filter(eq;like)`
 
 _Type_: **string (254)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -85,6 +89,7 @@ _Maximum Length_: **254**
 Notes for this Report.
 
 _Type_: **string (512) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **512**  
@@ -94,6 +99,7 @@ _Maximum Length_: **512**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -102,6 +108,7 @@ _Supports Order By_: ****
 True means that report can be used for one-row forms only. False means that the report can be used for navigators only. `Required` `Default(false)`
 
 _Type_: **boolean**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **False**  
@@ -111,6 +118,7 @@ _Default Value_: **False**
 The query on which the report is based. `Required` `Filter(eq)`
 
 _Type_: **string (128)**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Maximum Length_: **128**  
@@ -120,6 +128,7 @@ _Maximum Length_: **128**
 The printout layout, when the format requires binary storage. Alternative to Report_Layout.
 
 _Type_: **byte[] __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -128,6 +137,7 @@ _Supports Order By_: **False**
 The textual representation of the printout layout, when the format requires text representation. Alternative to Report_Binary_Layout.
 
 _Type_: **string (max) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
@@ -137,6 +147,7 @@ _Maximum Length_: **2147483647**
 Specifies the filter condition, which must be satisfied in order for this report to be prioritized for printing as a template sub-report. null when the current report cannot be used as template sub-report.
 
 _Type_: **string (max) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
@@ -146,6 +157,7 @@ _Maximum Length_: **2147483647**
 Specifies the priority of the current report, relative to other reports. Used only when choosing which report to show as a template subreport, null otherwise.
 
 _Type_: **int32 __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -157,6 +169,7 @@ _Supports Order By_: **False**
 Report data source. If specified should be based on the query in Query_Name. null means that the report is based directly on the query. `Filter(multi eq)`
 
 _Type_: **[DataSources](Systems.Reporting.DataSources.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

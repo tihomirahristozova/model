@@ -59,6 +59,7 @@ Aggregate Root:
 Indicates whether the current operation is active. `Required` `Default(true)` `Filter(eq)` `Introduced in version 22.1.5.26`
 
 _Type_: **boolean**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **True**  
@@ -68,6 +69,7 @@ _Default Value_: **True**
 The description of this Operation.
 
 _Type_: **string (max) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
@@ -77,6 +79,7 @@ _Maximum Length_: **2147483647**
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -84,6 +87,7 @@ _Supports Order By_: ****
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -92,6 +96,7 @@ _Default Value_: **NewGuid**
 How many minutes after the start of this operation can the next operation start. null means that the next operation should wait this operation to finish before starting.
 
 _Type_: **int32 __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -100,6 +105,7 @@ _Supports Order By_: **False**
 The time required for the product to move to the next operation. During this time no resource is allocated. `Required` `Default(0)`
 
 _Type_: **int32**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  
@@ -109,6 +115,7 @@ _Default Value_: **0**
 The name of this Operation. `Required` `Filter(like)`
 
 _Type_: **string (50)**  
+_Category_: **System**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **50**  
@@ -118,6 +125,7 @@ _Maximum Length_: **50**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -126,6 +134,7 @@ _Supports Order By_: ****
 The time required to process one product lot. The run time is calculated for each produced lot. `Required` `Default(0)`
 
 _Type_: **int32**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  
@@ -135,6 +144,7 @@ _Default Value_: **0**
 The percentage (0..1) of scrap usually occurring during the production operation. null means that the scrap rate cannot be generally calculated.
 
 _Type_: **decimal (7, 6) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -143,6 +153,7 @@ _Supports Order By_: **False**
 The time required to setup the operation. The setup is incurred only once, regardless of the produced quntity. `Required` `Default(0)`
 
 _Type_: **int32**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  
@@ -152,6 +163,7 @@ _Default Value_: **0**
 Standard price for 1 hour work for this operation. `Required` `Default(0)`
 
 _Type_: **decimal (18, 6)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  
@@ -161,6 +173,7 @@ _Default Value_: **0**
 Short description of the needed instruments for the operation.
 
 _Type_: **string (254) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -170,6 +183,7 @@ _Maximum Length_: **254**
 Quantity of the resource that need to be allocated for the operation, in base measurement units for the resource. `Unit: WorkgroupResource.Resource.PrimaryUnit` `Required` `Default(1)`
 
 _Type_: **[Quantity (9, 3)](../data-types.md#quantity)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -179,6 +193,7 @@ _Default Value_: **Constant**
 The time required to wait after completing the operation. During this time, the resource is still allocated to the operation. `Required` `Default(0)`
 
 _Type_: **int32**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  
@@ -192,6 +207,7 @@ The <see cref="OperationGroup"/> to which this Operation belongs. `Required` `Fi
 
 _Type_: **[OperationGroups](Production.Resources.OperationGroups.md)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
 
@@ -200,6 +216,7 @@ _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-reference
 Full instructions for the operation. `Filter(multi eq)`
 
 _Type_: **[OperationInstructions](Production.Resources.OperationInstructions.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### WorkgroupResource
@@ -207,6 +224,7 @@ _Supported Filters_: **Equals, EqualsIn**
 When not null, specifies the Workgroup Resource, which is required by the operation. `Filter(multi eq)`
 
 _Type_: **[WorkgroupResources](Production.Resources.WorkgroupResources.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

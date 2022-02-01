@@ -51,6 +51,7 @@ Aggregate Root:
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -58,6 +59,7 @@ _Supports Order By_: ****
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -66,6 +68,7 @@ _Default Value_: **NewGuid**
 The compressed contents of the object. `Required`
 
 _Type_: **byte[]**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -74,6 +77,7 @@ _Supports Order By_: **False**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -82,6 +86,7 @@ _Supports Order By_: ****
 The version of the EnterpriseOne server, which created the version. The version should be in the form (9.9.9.9). null means the version is unknown.
 
 _Type_: **string (15) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **15**  
@@ -91,6 +96,7 @@ _Maximum Length_: **15**
 The version number of the version, stored in the current row, starting from 1. `Required` `Filter(multi eq;ge;le)`
 
 _Type_: **int32**  
+_Category_: **System**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan, EqualsIn**  
 _Supports Order By_: **False**  
 
@@ -99,6 +105,7 @@ _Supports Order By_: **False**
 The timestamp when the version was saved. `Required` `Filter(ge;le)`
 
 _Type_: **datetime**  
+_Category_: **System**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -107,6 +114,7 @@ _Supports Order By_: **False**
 Specifies the action, which occurred on the actual object, referred by the system object.  'C' means that with this version the object was created. 'U' means that this is an update to an existing object. `Required`
 
 _Type_: **[VersionType](Systems.Core.ObjectVersions.md#versiontype)**  
+_Category_: **System**  
 Allowed values for the `VersionType`(Systems.Core.ObjectVersions.md#versiontype) data attribute  
 _Allowed Values (Systems.Core.ObjectVersionsRepository.VersionType Enum Members)_  
 
@@ -127,6 +135,7 @@ The object, for which a version is stored. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
 
@@ -135,6 +144,7 @@ _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-reference
 The user, which saved the version. `Required` `Filter(multi eq)`
 
 _Type_: **[Users](Systems.Security.Users.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

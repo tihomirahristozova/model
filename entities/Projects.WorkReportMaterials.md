@@ -50,6 +50,7 @@ Aggregate Root:
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -57,6 +58,7 @@ _Supports Order By_: ****
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -65,6 +67,7 @@ _Default Value_: **NewGuid**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -73,6 +76,7 @@ _Supports Order By_: ****
 The consumed quantity of the material. `Required` `Default(0)` `Filter(eq;like)`
 
 _Type_: **decimal (9, 3)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  
@@ -82,6 +86,7 @@ _Default Value_: **0**
 The equivalence of Quantity in the base measurement unit of the Material. `Required` `Default(0)` `Filter(eq;like)` `ReadOnly`
 
 _Type_: **decimal (9, 3)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  
@@ -96,6 +101,7 @@ _Front-End Recalc Expressions:_
 The consumed material. `Required` `Filter(multi eq)`
 
 _Type_: **[Products](General.Products.Products.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ProjectTask
@@ -103,6 +109,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The project task for which the materials are reported. `Required` `Filter(multi eq)`
 
 _Type_: **[ProjectTasks](Projects.ProjectTasks.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Back-End Default Expression:_  
@@ -115,6 +122,7 @@ _Front-End Recalc Expressions:_
 The measurement unit of Quantity. It is strongly suggested that the same unit is used for planning and usage reporting. `Required` `Filter(multi eq)`
 
 _Type_: **[MeasurementUnits](General.MeasurementUnits.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### WorkReport
@@ -122,6 +130,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The <see cref="WorkReport"/> to which this WorkReportMaterial belongs. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[WorkReports](Projects.WorkReports.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
 

@@ -47,6 +47,7 @@ Aggregate Tree
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -54,6 +55,7 @@ _Supports Order By_: ****
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -62,6 +64,7 @@ _Default Value_: **NewGuid**
 Indicates whether the web site is active and will be instantiated upon next web server restart. `Required` `Default(true)` `Filter(eq)`
 
 _Type_: **boolean**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **True**  
@@ -71,6 +74,7 @@ _Default Value_: **True**
 Notes for this WebSite.
 
 _Type_: **string (max) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
@@ -80,6 +84,7 @@ _Maximum Length_: **2147483647**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -88,6 +93,7 @@ _Supports Order By_: ****
 The relative Url of the site. This is the text after the first slash after the protocol and host name. The text should not include the protocol and host name. null means that the site will be hosted as the root site in the speicified web host.
 
 _Type_: **string (254) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -97,6 +103,7 @@ _Maximum Length_: **254**
 The type of web site - Api, Client Center, Id, etc. `Required` `Filter(multi eq)`
 
 _Type_: **[WebSiteType](Systems.Core.WebSites.md#websitetype)**  
+_Category_: **System**  
 Allowed values for the `WebSiteType`(Systems.Core.WebSites.md#websitetype) data attribute  
 _Allowed Values (Systems.Core.WebSitesRepository.WebSiteType Enum Members)_  
 
@@ -125,6 +132,7 @@ _Supports Order By_: **False**
 The enterprise company, for which is the site. null means, that the web site should not be enterprise company specific. `Filter(multi eq)`
 
 _Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### TrustedApplication
@@ -132,6 +140,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The trusted application related to this web site. `Filter(multi eq)` `Introduced in version 20.1`
 
 _Type_: **[TrustedApplications](Systems.Security.TrustedApplications.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### WebHost
@@ -140,6 +149,7 @@ The web host in which to host the site. `Filter(multi eq)`
 
 _Type_: **[WebHosts](Systems.Core.WebHosts.md) (nullable)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

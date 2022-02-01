@@ -161,32 +161,38 @@ Name Data Member:<br>
 <h3 id="displaytext">DisplayText</h3>
 <p>Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.</p>
 <p><em>Type</em>: <strong>string</strong><br>
+<em>Category</em>: <strong>Calculated Attributes</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: ****</p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
+<em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="name">Name</h3>
 <p>The name of this WorkSchedule. <code>Required</code> <code>Filter(like)</code></p>
 <p><em>Type</em>: <strong>string (64)</strong><br>
+<em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>64</strong></p>
 <h3 id="numberofdays">NumberOfDays</h3>
 <p>Number of days in a recurring period. Valid only when Recurrence_Type=D.</p>
 <p><em>Type</em>: <strong>int16 <strong>nullable</strong></strong><br>
+<em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="objectversion">ObjectVersion</h3>
 <p>The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.</p>
 <p><em>Type</em>: <strong>int32</strong><br>
+<em>Category</em>: <strong>Extensible Data Object</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: ****</p>
 <h3 id="recurrencetype">RecurrenceType</h3>
 <p>D=recurring each X days; W=recurring each week; M=recurring each month. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.Resources.WorkSchedules.html#recurrencetype">RecurrenceType</a></strong><br>
+<em>Category</em>: <strong>System</strong><br>
 Allowed values for the <code>RecurrenceType</code>(General.Resources.WorkSchedules.md#recurrencetype) data attribute<br>
 <em>Allowed Values (General.Resources.WorkSchedulesRepository.RecurrenceType Enum Members)</em></p>
 <table>

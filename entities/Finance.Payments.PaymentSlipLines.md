@@ -48,6 +48,7 @@ Aggregate Root:
 The part of the total amount in the payment slip amount, that is distributed to the specified payment order. `Currency: PaymentSlipAmount.PaymentSlip.DocumentCurrency` `Required` `Default(0)`
 
 _Type_: **[Amount (10, 2)](../data-types.md#amount)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -59,6 +60,7 @@ _Front-End Recalc Expressions:_
 The part of the original payment order amount, that is covered by this payment slip line. `Currency: PaymentOrder.TotalAmountCurrency` `Required` `Default(0)`
 
 _Type_: **[Amount (10, 2)](../data-types.md#amount)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -70,6 +72,7 @@ _Front-End Recalc Expressions:_
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -77,6 +80,7 @@ _Supports Order By_: ****
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -85,6 +89,7 @@ _Default Value_: **NewGuid**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -97,6 +102,7 @@ The payment order, that is covered by this payment slip line. `Required` `Filter
 
 _Type_: **[PaymentOrders](Finance.Payments.PaymentOrders.md)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PaymentSlipAmount
@@ -105,6 +111,7 @@ The <see cref="PaymentSlipAmount"/> to which this PaymentSlipLine belongs. `Requ
 
 _Type_: **[PaymentSlipAmounts](Finance.Payments.PaymentSlipAmounts.md)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
 

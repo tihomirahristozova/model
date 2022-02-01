@@ -178,11 +178,13 @@ Name Data Member:<br>
 <h3 id="displaytext">DisplayText</h3>
 <p>Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.</p>
 <p><em>Type</em>: <strong>string</strong><br>
+<em>Category</em>: <strong>Calculated Attributes</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: ****</p>
 <h3 id="entrytype">EntryType</h3>
 <p>Type of the VAT entries, which are made for this deal type. S=Sales, P=Purchases. <code>Required</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong><a href="Finance.Vat.DealTypes.html#entrytype">EntryType</a></strong><br>
+<em>Category</em>: <strong>System</strong><br>
 Allowed values for the <code>EntryType</code>(Finance.Vat.DealTypes.md#entrytype) data attribute<br>
 <em>Allowed Values (Finance.Vat.DealTypesRepository.EntryType Enum Members)</em></p>
 <table>
@@ -208,29 +210,34 @@ Allowed values for the <code>EntryType</code>(Finance.Vat.DealTypes.md#entrytype
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
+<em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="issystem">IsSystem</h3>
 <p>Is_System is True for those deal types that are managed by the system via update procedures and cannot be edited by the user. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>
+<em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
 <h3 id="name">Name</h3>
 <p>Description of the deal type. <code>Required</code> <code>Filter(eq;like)</code></p>
 <p><em>Type</em>: <strong>string (254)</strong><br>
+<em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>254</strong></p>
 <h3 id="objectversion">ObjectVersion</h3>
 <p>The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.</p>
 <p><em>Type</em>: <strong>int32</strong><br>
+<em>Category</em>: <strong>Extensible Data Object</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: ****</p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="country">Country</h3>
 <p>The country for which this deal type applies. The country is matched against the country of the enterprise company. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.Geography.Countries.html">Countries</a></strong><br>
+<em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="api-methods">API Methods</h2>
 <p>Methods that can be invoked in public APIs.</p>

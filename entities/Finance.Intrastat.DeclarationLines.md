@@ -59,6 +59,7 @@ Aggregate Root:
 Delivery terms - classification according to Intrastat (which uses the common abbreviations). `Required`
 
 _Type_: **[DeliveryTerms](Finance.Intrastat.DeclarationLines.md#deliveryterms)**  
+_Category_: **System**  
 Allowed values for the `DeliveryTerms`(Finance.Intrastat.DeclarationLines.md#deliveryterms) data attribute  
 _Allowed Values (Finance.Intrastat.DeclarationLinesRepository.DeliveryTerms Enum Members)_  
 
@@ -85,6 +86,7 @@ _Supports Order By_: **False**
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -92,6 +94,7 @@ _Supports Order By_: ****
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -100,6 +103,7 @@ _Default Value_: **NewGuid**
 Invoiced value of the goods in the base currency. `Currency: IntrastatDeclaration.EnterpriseCompany.BaseCurrency` `Required`
 
 _Type_: **[Amount (10, 0)](../data-types.md#amount)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -108,6 +112,7 @@ _Supports Order By_: **False**
 Line action - 'NEW' = New, 'EDN' = Edited-New, 'EDO' = Edited-Old, 'DEL' = Deleted. `Required` `Default("NEW")`
 
 _Type_: **[LineAction](Finance.Intrastat.DeclarationLines.md#lineaction)**  
+_Category_: **System**  
 Allowed values for the `LineAction`(Finance.Intrastat.DeclarationLines.md#lineaction) data attribute  
 _Allowed Values (Finance.Intrastat.DeclarationLinesRepository.LineAction Enum Members)_  
 
@@ -127,6 +132,7 @@ _Default Value_: **New**
 Consequtive line number within the intrastat declaration. `Required` `Filter(eq)`
 
 _Type_: **int32**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 
@@ -140,6 +146,7 @@ _Front-End Recalc Expressions:_
 Net mass of the goods in kg. `Required` `Filter(multi eq)`
 
 _Type_: **decimal (14, 3)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Supports Order By_: **False**  
 
@@ -148,6 +155,7 @@ _Supports Order By_: **False**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -156,6 +164,7 @@ _Supports Order By_: ****
 Quantity of the goods in the supplementary unit. null when no supplementary unit is specified.
 
 _Type_: **decimal (10, 0) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -164,6 +173,7 @@ _Supports Order By_: **False**
 Statistical value of the goods in the base currency. `Currency: IntrastatDeclaration.EnterpriseCompany.BaseCurrency`
 
 _Type_: **[Amount (10, 0)](../data-types.md#amount) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -172,6 +182,7 @@ _Supports Order By_: **False**
 Transaction nature, according to the Intrastat classification. `Required`
 
 _Type_: **[TransactionNature](Finance.Intrastat.DeclarationLines.md#transactionnature)**  
+_Category_: **System**  
 Allowed values for the `TransactionNature`(Finance.Intrastat.DeclarationLines.md#transactionnature) data attribute  
 _Allowed Values (Finance.Intrastat.DeclarationLinesRepository.TransactionNature Enum Members)_  
 
@@ -205,6 +216,7 @@ _Supports Order By_: **False**
 Transportation mode - type of transportation used. `Required`
 
 _Type_: **[TransportMode](Finance.Intrastat.DeclarationLines.md#transportmode)**  
+_Category_: **System**  
 Allowed values for the `TransportMode`(Finance.Intrastat.DeclarationLines.md#transportmode) data attribute  
 _Allowed Values (Finance.Intrastat.DeclarationLinesRepository.TransportMode Enum Members)_  
 
@@ -230,6 +242,7 @@ _Supports Order By_: **False**
 Administrative region of the enterprise company at the time of the declaration. `Required` `Filter(multi eq)`
 
 _Type_: **[AdministrativeRegions](General.Geography.AdministrativeRegions.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### IntrastatCommodityCode
@@ -237,6 +250,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The commodity code of the goods, according to the Intrastat commodity classification. `Required` `Filter(multi eq)`
 
 _Type_: **[CommodityCodes](Finance.Intrastat.CommodityCodes.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### IntrastatDeclaration
@@ -244,6 +258,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The intrastat declaration, to which this line belongs. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[Declarations](Finance.Intrastat.Declarations.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
 
@@ -252,6 +267,7 @@ _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-reference
 The country of origin of the goods. null for outbound declarations. `Filter(multi eq)`
 
 _Type_: **[Countries](General.Geography.Countries.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PartyCountry
@@ -259,6 +275,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The country of the partner. `Required` `Filter(multi eq)`
 
 _Type_: **[Countries](General.Geography.Countries.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### TransportCountry
@@ -266,6 +283,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The country of the transportation company. `Required` `Filter(multi eq)`
 
 _Type_: **[Countries](General.Geography.Countries.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

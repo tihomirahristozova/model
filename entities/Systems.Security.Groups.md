@@ -54,6 +54,7 @@ Aggregate Tree
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -62,6 +63,7 @@ _Supports Order By_: ****
 The number of days before which the documents can not be corrected, released or voided.
 
 _Type_: **int32 __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -70,6 +72,7 @@ _Supports Order By_: **False**
 Group type. G=Normal user-definable group; U=System group for 1 user; A=Admin; E=Everybody. `Required` `Default("G")` `ReadOnly`
 
 _Type_: **[GroupType](Systems.Security.Groups.md#grouptype)**  
+_Category_: **System**  
 Allowed values for the `GroupType`(Systems.Security.Groups.md#grouptype) data attribute  
 _Allowed Values (Systems.Security.GroupsRepository.GroupType Enum Members)_  
 
@@ -88,6 +91,7 @@ _Default Value_: **NormalUserDefinableGroup**
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -96,6 +100,7 @@ _Default Value_: **NewGuid**
 The name of this Group. `Required` `Filter(like)` `ORD`
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
+_Category_: **System**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **True**  
 
@@ -104,6 +109,7 @@ _Supports Order By_: **True**
 Notes for this Group.
 
 _Type_: **string (254) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -113,6 +119,7 @@ _Maximum Length_: **254**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -125,6 +132,7 @@ When Group_Type=U, contains the user for which the group is defined, null otherw
 
 _Type_: **[Users](Systems.Security.Users.md) (nullable)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

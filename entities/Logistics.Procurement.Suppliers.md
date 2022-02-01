@@ -62,6 +62,7 @@ Aggregate Tree
 Date and time when the Supplier was created. `Filter(ge;le)` `ReadOnly`
 
 _Type_: **datetime __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -70,6 +71,7 @@ _Supports Order By_: **False**
 Login name of the user, who created the Supplier. `Filter(like)` `ReadOnly`
 
 _Type_: **string (64) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  
@@ -79,6 +81,7 @@ _Maximum Length_: **64**
 Default term in days for goods delivery, starting at the day of sending the purchase order. `Required` `Default(0)`
 
 _Type_: **int32**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  
@@ -88,6 +91,7 @@ _Default Value_: **0**
 Default number of days until the payment becomes executable. 0 means that the payment is executable at all times. `Required` `Default(0)`
 
 _Type_: **int32**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  
@@ -97,6 +101,7 @@ _Default Value_: **0**
 Default payment term in days, starting from the date of receiving the invoice. `Required` `Default(0)`
 
 _Type_: **int32**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  
@@ -106,6 +111,7 @@ _Default Value_: **0**
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -114,6 +120,7 @@ _Supports Order By_: ****
 The date on which this party became a supplier or the date, when the supplier contract was signed. `Filter(ge;le)`
 
 _Type_: **datetime __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -121,6 +128,7 @@ _Supports Order By_: **False**
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -129,6 +137,7 @@ _Default Value_: **NewGuid**
 Indicates whether the current supplier is active. `Required` `Default(true)` `Filter(eq)`
 
 _Type_: **boolean**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **True**  
@@ -139,6 +148,7 @@ The unique supplier number. `Filter(eq)` `ORD`
 
 _Type_: **string (16) __nullable__**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **True**  
 _Maximum Length_: **16**  
@@ -148,6 +158,7 @@ _Maximum Length_: **16**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -156,6 +167,7 @@ _Supports Order By_: ****
 The date (inclusive) on which this party ceased to be a supplier. `Filter(ge;le)`
 
 _Type_: **datetime __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -164,6 +176,7 @@ _Supports Order By_: **False**
 Date and time when the Supplier was last updated. `Filter(ge;le)` `ReadOnly`
 
 _Type_: **datetime __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -172,6 +185,7 @@ _Supports Order By_: **False**
 Login name of the user, who last updated the Supplier. `Filter(like)` `ReadOnly`
 
 _Type_: **string (64) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  
@@ -184,6 +198,7 @@ _Maximum Length_: **64**
 The default currency for purchases from this supplier. null means there is no default. `Filter(multi eq)`
 
 _Type_: **[Currencies](General.Currencies.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### DefaultPaymentAccount
@@ -191,6 +206,7 @@ _Supported Filters_: **Equals, EqualsIn**
 When not null, specifies the default payment account which should be used for new purchase document for this supplier. `Filter(multi eq)`
 
 _Type_: **[PaymentAccounts](Finance.Payments.PaymentAccounts.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### DefaultPaymentType
@@ -198,6 +214,7 @@ _Supported Filters_: **Equals, EqualsIn**
 When not null, specifies the default payment type which should be used for new purchase document for this supplier. `Filter(multi eq)`
 
 _Type_: **[PaymentTypes](Finance.Payments.PaymentTypes.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### DefaultPurchasePriceList
@@ -205,6 +222,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The default purchase price list, which shall be used for new purchase documents for this supplier. `Filter(multi eq)`
 
 _Type_: **[PurchasePriceLists](Logistics.Procurement.PurchasePriceLists.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### EnterpriseCompany
@@ -212,12 +230,14 @@ _Supported Filters_: **Equals, EqualsIn**
 The Enterprise Company to which this Supplier applies, or null if it is for all enterprise companies. `Filter(multi eq)`
 
 _Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Party
 
 _Type_: **[Parties](General.Contacts.Parties.md)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
 
@@ -226,6 +246,7 @@ _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-reference
 When not null, specifies the type of this supplier. The type is primarily used for security access differentiation of the supplier records. `Filter(multi eq)`
 
 _Type_: **[SupplierTypes](Logistics.Procurement.SupplierTypes.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

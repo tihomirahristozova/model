@@ -80,6 +80,7 @@ Aggregate Tree
 General condition if the bonus is active. The other conditions are verified only for active bonus programs. `Default(true)` `Filter(eq)`
 
 _Type_: **boolean __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **True**  
@@ -89,6 +90,7 @@ _Default Value_: **True**
 Bonus action: P-Add product to the order, A-Add amount, D-Give discount. `Required` `Default("D")` `Filter(multi eq)`
 
 _Type_: **[BonusAction](Crm.Marketing.BonusPrograms.md#bonusaction)**  
+_Category_: **System**  
 Allowed values for the `BonusAction`(Crm.Marketing.BonusPrograms.md#bonusaction) data attribute  
 _Allowed Values (Crm.Marketing.BonusProgramsRepository.BonusAction Enum Members)_  
 
@@ -106,6 +108,7 @@ _Default Value_: **Discount**
 The percent of the document amount that is rewarded. Should be null if and only if the bonus document amount is null.
 
 _Type_: **decimal (7, 6) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -114,6 +117,7 @@ _Supports Order By_: **False**
 The percent discount to be applied to bonus lines. Used only for bonus programs with Action = D (Discount). `Required` `Default(0)`
 
 _Type_: **decimal (7, 6)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  
@@ -123,6 +127,7 @@ _Default Value_: **0**
 The quantity rewarded of the bonus product. Should be not null if and only when the bonus product is not null. `Unit: BonusProductQuantityUnit`
 
 _Type_: **[Quantity (12, 3)](../data-types.md#quantity) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -131,6 +136,7 @@ _Supports Order By_: **False**
 When not null, specifies that the bonus quantity should be multiplied for each of the specified lot size. Can be non-null only when condition product is specified. `Unit: ConditionProduct.BaseMeasurementCategory.BaseUnit`
 
 _Type_: **[Quantity (12, 3)](../data-types.md#quantity) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -139,6 +145,7 @@ _Supports Order By_: **False**
 When not null, specifies that the bonus should be applied only to customers who meet the specified criteria. The criteria could include custom properties.
 
 _Type_: **dataaccessfilter __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -147,6 +154,7 @@ _Supports Order By_: **False**
 When not null, specifies that the bonus should be applied only when the distribution channel of the sales order has the specified characteristics.
 
 _Type_: **dataaccessfilter __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -155,6 +163,7 @@ _Supports Order By_: **False**
 Starting date of the bonus. null means that there is no starting date restriction. `Filter(eq;ge;le)`
 
 _Type_: **datetime __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -163,6 +172,7 @@ _Supports Order By_: **False**
 If not null specifies the maximal amount for which the bonus is valid. null means that there is no maximal amount condition for the bonus. `Currency: ConditionDocumentCurrency` `Filter(eq;ge;le)`
 
 _Type_: **[Amount (12, 2)](../data-types.md#amount) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -171,6 +181,7 @@ _Supports Order By_: **False**
 When not null, specifies condition for the bonus - maximal quantity of the condition product. If the condition product is null, this cannot be specified. `Unit: ConditionProduct.BaseMeasurementCategory.BaseUnit` `Filter(eq;ge;le)`
 
 _Type_: **[Quantity (12, 3)](../data-types.md#quantity) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -179,6 +190,7 @@ _Supports Order By_: **False**
 If not null specifies the minimal amount for which the bonus is valid. null means that there is no minimal amount condition for the bonus. `Currency: ConditionDocumentCurrency` `Filter(eq;ge;le)`
 
 _Type_: **[Amount (12, 2)](../data-types.md#amount) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -187,6 +199,7 @@ _Supports Order By_: **False**
 When not null, specifies condition for the bonus - minimal quantity of the condition product. If the condition product is null, this cannot be specified. `Unit: ConditionProduct.BaseMeasurementCategory.BaseUnit` `Filter(eq;ge;le)`
 
 _Type_: **[Quantity (12, 3)](../data-types.md#quantity) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -195,6 +208,7 @@ _Supports Order By_: **False**
 When not null, specifies that the bonus should be applied only when shipping to customer with the specified characteristics.
 
 _Type_: **dataaccessfilter __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -203,6 +217,7 @@ _Supports Order By_: **False**
 Ending date (inclusive) of the bonus. null means that there is no ending date restriction. `Filter(eq;ge;le)`
 
 _Type_: **datetime __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -211,6 +226,7 @@ _Supports Order By_: **False**
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -218,6 +234,7 @@ _Supports Order By_: ****
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -226,6 +243,7 @@ _Default Value_: **NewGuid**
 The name of the bonus program. `Required` `Filter(eq;like)`
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 
@@ -234,6 +252,7 @@ _Supports Order By_: **False**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -242,6 +261,7 @@ _Supports Order By_: ****
 Priority (1-5) of the bonus program comparative to the other bonus programs. 1 is the lowest priority. `Required` `Default(2)` `Filter(multi eq)`
 
 _Type_: **[Priority](Crm.Marketing.BonusPrograms.md#priority)**  
+_Category_: **System**  
 Allowed values for the `Priority`(Crm.Marketing.BonusPrograms.md#priority) data attribute  
 _Allowed Values (Crm.Marketing.BonusProgramsRepository.Priority Enum Members)_  
 
@@ -265,6 +285,7 @@ _Default Value_: **2**
 When not null specifies that a document amount should be added to the order when the bonus conditions are met. null means that the bonus reward is not a document amount. `Filter(multi eq)`
 
 _Type_: **[DocumentAmountTypes](General.DocumentAmountTypes.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### BonusProduct
@@ -272,6 +293,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The product that is rewarded if the bonus conditions are met. null means that the bonus reward is not product. `Filter(multi eq)`
 
 _Type_: **[Products](General.Products.Products.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### BonusProductQuantityUnit
@@ -279,6 +301,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The measurement unit of the quantity rewarded of the bonus product. Should be not null if and only when the bonus product is not null. `Filter(multi eq)`
 
 _Type_: **[MeasurementUnits](General.MeasurementUnits.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Campaign
@@ -286,6 +309,7 @@ _Supported Filters_: **Equals, EqualsIn**
 Тhe marketing campaign to which the current definition belongs. `Filter(multi eq)` `Introduced in version 22.1.4.67`
 
 _Type_: **[Campaigns](Crm.Marketing.Campaigns.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### CompanyLocation
@@ -293,6 +317,7 @@ _Supported Filters_: **Equals, EqualsIn**
 When set, specifies that the sales document must be of the specified enterprise company location. `Filter(multi eq)`
 
 _Type_: **[CompanyLocations](General.Contacts.CompanyLocations.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ConditionCustomer
@@ -300,6 +325,7 @@ _Supported Filters_: **Equals, EqualsIn**
 When not null, specifies that the bonus should be applied only to the specified customer. `Filter(multi eq)`
 
 _Type_: **[Customers](Crm.Customers.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ConditionDistributionChannel
@@ -307,6 +333,7 @@ _Supported Filters_: **Equals, EqualsIn**
 When not null, specifies that the bonus should be applied only when the specified channel is used. `Filter(multi eq)`
 
 _Type_: **[DistributionChannels](Crm.Marketing.DistributionChannels.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ConditionDocumentCurrency
@@ -314,6 +341,7 @@ _Supported Filters_: **Equals, EqualsIn**
 Condition for the document amount. Should be not null if any of the amount conditions are not null. `Filter(multi eq)`
 
 _Type_: **[Currencies](General.Currencies.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ConditionPriceList
@@ -321,6 +349,7 @@ _Supported Filters_: **Equals, EqualsIn**
 When not null, specifies that the bonus should be applied only when the sales order is based on the speicfied price list. `Filter(multi eq)`
 
 _Type_: **[PriceLists](Crm.PriceLists.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ConditionProduct
@@ -329,6 +358,7 @@ When not null, specifies a conditional product, which is required to exist in th
 
 _Type_: **[Products](General.Products.Products.md) (nullable)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ConditionProductGroup
@@ -336,6 +366,7 @@ _Supported Filters_: **Equals, EqualsIn**
 When not null, specifies that the bonus should be applied only to products from the specified product group or its subgroups. `Filter(multi eq)`
 
 _Type_: **[ProductGroups](General.Products.ProductGroups.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ConditionShipToCustomer
@@ -343,6 +374,7 @@ _Supported Filters_: **Equals, EqualsIn**
 When not null, specifies that the bonus should be applied only when shipping to the specified customer. `Filter(multi eq)`
 
 _Type_: **[Customers](Crm.Customers.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ConditionTargetGroup
@@ -350,6 +382,7 @@ _Supported Filters_: **Equals, EqualsIn**
 When not null, specifies that the bonus should be applied only to the specified target customer group. `Filter(multi eq)`
 
 _Type_: **[TargetGroups](Crm.Marketing.TargetGroups.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### EnterpriseCompany
@@ -357,6 +390,7 @@ _Supported Filters_: **Equals, EqualsIn**
 When set, specifies that the sales document must be of the specified enterprise company. `Filter(multi eq)`
 
 _Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

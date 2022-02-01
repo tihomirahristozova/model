@@ -202,21 +202,25 @@ Aggregate Root:<br>
 <h3 id="amount">Amount</h3>
 <p>Amount to be payed. <code>Currency: SalesOrder.DocumentCurrency</code> <code>Required</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount (14, 2)</a></strong><br>
+<em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="amountpercent">AmountPercent</h3>
 <p>Percent of the sales order amount to be payed.</p>
 <p><em>Type</em>: <strong>decimal (7, 6) <strong>nullable</strong></strong><br>
+<em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="displaytext">DisplayText</h3>
 <p>Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.</p>
 <p><em>Type</em>: <strong>string</strong><br>
+<em>Category</em>: <strong>Calculated Attributes</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: ****</p>
 <h3 id="duedateformmethod">DueDateFormMethod</h3>
 <p>Method to determine the payment due date. SLS = Use sales order date, INV = Use invoice date, EXP = Specify the date explicitly, SDD = Sales order due date, IDD = Invoice due date. <code>Required</code></p>
 <p><em>Type</em>: <strong><a href="Crm.Sales.SalesOrderPaymentPlans.html#duedateformmethod">PaymentPlanDueDateSource</a></strong><br>
+<em>Category</em>: <strong>System</strong><br>
 Generic enum type for PaymentPlanDueDateSource properties<br>
 <em>Allowed Values (Crm.PaymentPlanDueDateSource Enum Members)</em></p>
 <table>
@@ -254,6 +258,7 @@ Generic enum type for PaymentPlanDueDateSource properties<br>
 <h3 id="explicitpaymentduedate">ExplicitPaymentDueDate</h3>
 <p>Explicitly specified payment due date. Must be filled if and only if Due_Date_Form_Method = 'EXP'.</p>
 <p><em>Type</em>: <strong>datetime <strong>nullable</strong></strong><br>
+<em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
@@ -261,6 +266,7 @@ Generic enum type for PaymentPlanDueDateSource properties<br>
 <h3 id="explicitpaymentduestartdate">ExplicitPaymentDueStartDate</h3>
 <p>Explicitly specified date on which the payment becomes executable. Can be specified only when date formation method is 'Set explicit date'.</p>
 <p><em>Type</em>: <strong>date <strong>nullable</strong></strong><br>
+<em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
@@ -268,11 +274,13 @@ Generic enum type for PaymentPlanDueDateSource properties<br>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
+<em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="installmentnumber">InstallmentNumber</h3>
 <p>Consequtive installment number. Used for identifying different payments generated according this payment plan. <code>Required</code></p>
 <p><em>Type</em>: <strong>int32</strong><br>
+<em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Back-End Default Expression:</em><br>
@@ -282,23 +290,27 @@ Generic enum type for PaymentPlanDueDateSource properties<br>
 <h3 id="notes">Notes</h3>
 <p>Notes for this SalesOrderPaymentPlan.</p>
 <p><em>Type</em>: <strong>string (254) <strong>nullable</strong></strong><br>
+<em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>254</strong></p>
 <h3 id="objectversion">ObjectVersion</h3>
 <p>The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.</p>
 <p><em>Type</em>: <strong>int32</strong><br>
+<em>Category</em>: <strong>Extensible Data Object</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: ****</p>
 <h3 id="paymentstartdays">PaymentStartDays</h3>
 <p>Number of days until the payment becomes executable. The days are counted, starting with the date, specified by due date formation method. <code>Required</code> <code>Default(0)</code></p>
 <p><em>Type</em>: <strong>int32</strong><br>
+<em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>0</strong></p>
 <h3 id="paymenttermdays">PaymentTermDays</h3>
 <p>Payment term in days, which are to be added to form the payment due date. 0 means that the date determined by Due_Date_Form_Method and Explicit_Payment_Due_Date is taken as due date. <code>Required</code> <code>Default(0)</code></p>
 <p><em>Type</em>: <strong>int32</strong><br>
+<em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>0</strong></p>
@@ -309,6 +321,7 @@ Generic enum type for PaymentPlanDueDateSource properties<br>
 <h3 id="remainder">Remainder</h3>
 <p>Indicates wheather this amount is the remainder of the document. Amount = Total amount of the sales order - explicitly specified amounts in the plan (by Amount_Percent or Amount). <code>Required</code> <code>Default(false)</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>
+<em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
@@ -320,6 +333,7 @@ Generic enum type for PaymentPlanDueDateSource properties<br>
 <h3 id="paymentaccount">PaymentAccount</h3>
 <p>Specifies the payment account towards which the payment is expected. null means that there is no expectation for payment account. For POS implementations, this can be used to denote the payment account in which the payment actually occurred. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Finance.Payments.PaymentAccounts.html">PaymentAccounts</a> (nullable)</strong><br>
+<em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <p><em>Back-End Default Expression:</em><br>
 <code>obj.SalesOrder.PaymentAccount</code></p>
@@ -329,6 +343,7 @@ Generic enum type for PaymentPlanDueDateSource properties<br>
 <h3 id="paymenttype">PaymentType</h3>
 <p>Specifies the expected payment type. null means that there is no expected payment type. For POS implementations, this can be used to denote the payment type which actually occurred. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Finance.Payments.PaymentTypes.html">PaymentTypes</a> (nullable)</strong><br>
+<em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <p><em>Back-End Default Expression:</em><br>
 <code>obj.SalesOrder.PaymentType</code></p>
@@ -338,6 +353,7 @@ Generic enum type for PaymentPlanDueDateSource properties<br>
 <p>The <see cref="SalesOrder"></see> to which this SalesOrderPaymentPlan belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="Crm.Sales.SalesOrders.html">SalesOrders</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
+<em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em><a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a></em>: <strong>True</strong></p>
 <h2 id="api-methods">API Methods</h2>

@@ -67,6 +67,7 @@ Aggregate Root:
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -74,6 +75,7 @@ _Supports Order By_: ****
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -82,6 +84,7 @@ _Default Value_: **NewGuid**
 True if the asset is currently active and may be used in new documents. Deactivated assets are used only in reports. `Required` `Default(true)` `Filter(eq)`
 
 _Type_: **boolean**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **True**  
@@ -91,6 +94,7 @@ _Default Value_: **True**
 Notes for this Asset.
 
 _Type_: **string (max) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
@@ -100,6 +104,7 @@ _Maximum Length_: **2147483647**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -109,6 +114,7 @@ Unique rental asset code. `Required` `Filter(eq;like)` `ORD`
 
 _Type_: **string (20)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
 _Maximum Length_: **20**  
@@ -118,6 +124,7 @@ _Maximum Length_: **20**
 The name of the rental asset. `Required` `Filter(like)`
 
 _Type_: **string (254)**  
+_Category_: **System**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -127,6 +134,7 @@ _Maximum Length_: **254**
 Standard default amount of the guarantee that is set for this asset when leased. `Currency: StandardGuaranteeAmountCurrency` `Filter(multi eq)`
 
 _Type_: **[Amount (14, 2)](../data-types.md#amount) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Supports Order By_: **False**  
 
@@ -135,6 +143,7 @@ _Supports Order By_: **False**
 Specifies the unit by which the periods of renting of this asset are measured. Possible values are: 'by days' or 'by months'. `Filter(multi eq)`
 
 _Type_: **[TimePeriodType](Applications.Rental.Assets.md#timeperiodtype) __nullable__**  
+_Category_: **System**  
 Allowed values for the `TimePeriodType`(Applications.Rental.Assets.md#timeperiodtype) data attribute  
 _Allowed Values (Applications.Rental.AssetsRepository.TimePeriodType Enum Members)_  
 
@@ -154,6 +163,7 @@ _Supports Order By_: **False**
 When not null identifies the corresponding accounting asset. `Filter(multi eq)`
 
 _Type_: **[Assets](Finance.Assets.Assets.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### EnterpriseCompany
@@ -161,6 +171,7 @@ _Supported Filters_: **Equals, EqualsIn**
 When not null, specifies that the asset is specific to a given enterprise company and may be used only in documents from this enterprise company. If null, the asset can be used in all enterprise companies. `Filter(multi eq)`
 
 _Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Product
@@ -168,6 +179,7 @@ _Supported Filters_: **Equals, EqualsIn**
 Product which is used in the store transactions for this asset. `Filter(multi eq)`
 
 _Type_: **[Products](General.Products.Products.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Front-End Recalc Expressions:_  
@@ -177,6 +189,7 @@ _Front-End Recalc Expressions:_
 The logical group of the rental asset. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[AssetGroups](Applications.Rental.AssetGroups.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
 
@@ -185,6 +198,7 @@ _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-reference
 The type of the asset. `Required` `Filter(multi eq)`
 
 _Type_: **[AssetTypes](Applications.Rental.AssetTypes.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### SalesProduct
@@ -192,6 +206,7 @@ _Supported Filters_: **Equals, EqualsIn**
 Product which is used in the creation of Sales Orders to form the price of the service of renting this asset. `Filter(multi eq)`
 
 _Type_: **[Products](General.Products.Products.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### SerialNumber
@@ -199,6 +214,7 @@ _Supported Filters_: **Equals, EqualsIn**
 Serial number which in conjunction with the product for store operations allows for more accurate identification of the asset. `Filter(multi eq)`
 
 _Type_: **[SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Front-End Recalc Expressions:_  
@@ -208,6 +224,7 @@ _Front-End Recalc Expressions:_
 Currency of the standard guarantee amount. `Filter(multi eq)`
 
 _Type_: **[Currencies](General.Currencies.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### WorkSchedule
@@ -215,6 +232,7 @@ _Supported Filters_: **Equals, EqualsIn**
 Work schedule, which is used to calculate how many days this assets has been rented for (used only when the asset's lease by mode is by days). `Filter(multi eq)`
 
 _Type_: **[WorkSchedules](General.Resources.WorkSchedules.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

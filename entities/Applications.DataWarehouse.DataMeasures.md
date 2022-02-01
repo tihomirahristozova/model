@@ -52,6 +52,7 @@ Unique measure code. `Required` `Filter(eq;like)` `ORD`
 
 _Type_: **string (16)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
 _Maximum Length_: **16**  
@@ -61,6 +62,7 @@ _Maximum Length_: **16**
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -69,6 +71,7 @@ _Supports Order By_: ****
 The plus or minus percent, by which the goal can be missed, but still considered achieved. `Required` `Default(0.2)` `Filter(eq)`
 
 _Type_: **decimal (3, 2)**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **0.2**  
@@ -78,6 +81,7 @@ _Default Value_: **0.2**
 The change in percents, which is considered neutral. Higher positive/negative changes are considered positive/negative trends. `Required` `Default(0.01)` `Filter(eq)`
 
 _Type_: **decimal (3, 2)**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **0.01**  
@@ -86,6 +90,7 @@ _Default Value_: **0.01**
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -94,6 +99,7 @@ _Default Value_: **NewGuid**
 The name of the measure (multilanguage). `Required` `Filter(eq;like)`
 
 _Type_: **string (254)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -103,6 +109,7 @@ _Maximum Length_: **254**
 Notes for this DataMeasure.
 
 _Type_: **string (max) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
@@ -112,6 +119,7 @@ _Maximum Length_: **2147483647**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -120,6 +128,7 @@ _Supports Order By_: ****
 The period for which the data is collected. D=Day, M=Month, Q=Quarter, Y=Year. `Required` `Default("Q")` `Filter(eq)`
 
 _Type_: **[Period](Applications.DataWarehouse.DataMeasures.md#period)**  
+_Category_: **System**  
 Allowed values for the `Period`(Applications.DataWarehouse.DataMeasures.md#period) data attribute  
 _Allowed Values (Applications.DataWarehouse.DataMeasuresRepository.Period Enum Members)_  
 
@@ -142,6 +151,7 @@ _Default Value_: **Quarter**
 The group to which this measure belongs. `Required` `Filter(multi eq)`
 
 _Type_: **[DataMeasureGroups](Applications.DataWarehouse.DataMeasureGroups.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

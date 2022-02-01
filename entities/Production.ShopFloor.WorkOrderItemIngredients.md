@@ -62,6 +62,7 @@ Aggregate Root:
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -70,6 +71,7 @@ _Supports Order By_: ****
 Distribution method in case the materials from the line are distributed amongst all work order items. Should be NOT null iif Work_Order_Item_Id is null. MC=Measurement, SP=Standard_Price.
 
 _Type_: **[DistributeBy](Production.ShopFloor.WorkOrderItemIngredients.md#distributeby) __nullable__**  
+_Category_: **System**  
 Allowed values for the `DistributeBy`(Production.ShopFloor.WorkOrderItemIngredients.md#distributeby) data attribute  
 _Allowed Values (Production.ShopFloor.WorkOrderItemIngredientsRepository.DistributeBy Enum Members)_  
 
@@ -89,6 +91,7 @@ _Front-End Recalc Expressions:_
 The quantity of the material, which will be used for setup. `Unit: UsedQuantityUnit` `Required` `Default(0)`
 
 _Type_: **[Quantity (18, 3)](../data-types.md#quantity)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -97,6 +100,7 @@ _Default Value_: **Constant**
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -105,6 +109,7 @@ _Default Value_: **NewGuid**
 The order of the line within the item. `Required` `Filter(eq;like)`
 
 _Type_: **int32**  
+_Category_: **System**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 
@@ -118,6 +123,7 @@ _Front-End Recalc Expressions:_
 Notes for this WorkOrderItemIngredient.
 
 _Type_: **string (254) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -127,6 +133,7 @@ _Maximum Length_: **254**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -135,6 +142,7 @@ _Supports Order By_: ****
 The quantity of the material consumed in the operation. `Unit: UsedQuantityUnit` `Required` `Default(1)`
 
 _Type_: **[Quantity (18, 3)](../data-types.md#quantity)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -144,6 +152,7 @@ _Default Value_: **Constant**
 The equivalence of Used Quantity in the base measurement category of the material. `Unit: Material.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly`
 
 _Type_: **[Quantity (18, 3)](../data-types.md#quantity)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -157,6 +166,7 @@ _Front-End Recalc Expressions:_
 The theoretical quantity in base measurement unit according to the current measurement dimensions of the product. Used to measure the execution. null means to take the value from Used Quantity Base. `Unit: Material.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` `Introduced in version 18.2`
 
 _Type_: **[Quantity (18, 3)](../data-types.md#quantity)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -173,6 +183,7 @@ _Front-End Recalc Expressions:_
 Measurement category by which the materials from the line are distributed amongst all work order items in case Distribute_By = MC. Should be NOT null iif Distribute_By = MC. `Filter(multi eq)`
 
 _Type_: **[MeasurementCategories](General.MeasurementCategories.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Front-End Recalc Expressions:_  
@@ -183,6 +194,7 @@ The <see cref="WorkOrder"/> to which this WorkOrderItemIngredient belongs. `Requ
 
 _Type_: **[WorkOrders](Production.ShopFloor.WorkOrders.md)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Lot
@@ -190,6 +202,7 @@ _Supported Filters_: **Equals, EqualsIn**
 Lot from which to get the material. When null, any lot can be used. `Filter(multi eq)`
 
 _Type_: **[Lots](Logistics.Inventory.Lots.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Material
@@ -197,6 +210,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The Id of the consumed material (Gen_Products_Table). `Required` `Filter(multi eq)`
 
 _Type_: **[Products](General.Products.Products.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Back-End Default Expression:_  
@@ -209,6 +223,7 @@ _Front-End Recalc Expressions:_
 Specifies for which operation this ingredient is used. `Filter(multi eq)`
 
 _Type_: **[Operations](Production.Resources.Operations.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PrincipalRecipeIngredient
@@ -216,6 +231,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The principal recipe ingredient on which this record is based. `Filter(multi eq)`
 
 _Type_: **[PrincipalRecipeIngredients](Production.Technologies.PrincipalRecipeIngredients.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ProductCode
@@ -223,6 +239,7 @@ _Supported Filters_: **Equals, EqualsIn**
 Selects the product thru some of the product codes. `Filter(multi eq)`
 
 _Type_: **[ProductCodes](General.Products.ProductCodes.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Front-End Recalc Expressions:_  
@@ -232,6 +249,7 @@ _Front-End Recalc Expressions:_
 If not null, specifies the serial number of the ingredient. `Filter(multi eq)`
 
 _Type_: **[SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Store
@@ -239,6 +257,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The store from which to retrieve the material. `Filter(multi eq)`
 
 _Type_: **[Stores](Logistics.Inventory.Stores.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Back-End Default Expression:_  
@@ -251,6 +270,7 @@ _Front-End Recalc Expressions:_
 The store bin from which to take the ingredients. `Filter(multi eq)`
 
 _Type_: **[StoreBins](Logistics.Inventory.StoreBins.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### UsedQuantityUnit
@@ -258,6 +278,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The measurement unit of the quantity of the material consumed in the operation. `Required` `Filter(multi eq)`
 
 _Type_: **[MeasurementUnits](General.MeasurementUnits.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Back-End Default Expression:_  
@@ -271,6 +292,7 @@ The <see cref="WorkOrder"/> to which this WorkOrderItemIngredient belongs. `Requ
 
 _Type_: **[WorkOrders](Production.ShopFloor.WorkOrders.md)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
 
@@ -280,6 +302,7 @@ The work order item for which the materials in this line are used. If null means
 
 _Type_: **[WorkOrderItems](Production.ShopFloor.WorkOrderItems.md) (nullable)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Front-End Recalc Expressions:_  

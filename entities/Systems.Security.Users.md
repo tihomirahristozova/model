@@ -78,6 +78,7 @@ Aggregate Tree
 Indicates how many times the user has failed to login. May be used for locking out the user. `Required` `Default(0)` `Filter(eq;ge;le)` `Introduced in version 18.2`
 
 _Type_: **int32**  
+_Category_: **System**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  
@@ -87,6 +88,7 @@ _Default Value_: **0**
 True when the login is currently active and the user can log in. `Required` `Default(true)` `Filter(eq)`
 
 _Type_: **boolean**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **True**  
@@ -96,6 +98,7 @@ _Default Value_: **True**
 The date and time (in UTC), when the user was created. `Required` `Default(Now)` `ReadOnly` `Introduced in version 18.2`
 
 _Type_: **datetime**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **CurrentDateTime**  
@@ -105,6 +108,7 @@ _Default Value_: **CurrentDateTime**
 The preferred default culture of the user for UI, notifications, etc. null means "en-US". `Introduced in version 20.1`
 
 _Type_: **string (15) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **15**  
@@ -114,6 +118,7 @@ _Maximum Length_: **15**
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -123,6 +128,7 @@ Unique email of the user. Can be null because there may be login providers that 
 
 _Type_: **string (254) __nullable__**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, Like, EqualsIn**  
 _Supports Order By_: **True**  
 _Maximum Length_: **254**  
@@ -132,6 +138,7 @@ _Maximum Length_: **254**
 Indicates whether the email address for the specified user has been verified. `Required` `Default(false)` `Filter(eq)` `Introduced in version 18.2`
 
 _Type_: **boolean**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **False**  
@@ -140,6 +147,7 @@ _Default Value_: **False**
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -148,6 +156,7 @@ _Default Value_: **NewGuid**
 True if the user is administrator, otherwise false. `Required` `Default(false)` `Filter(eq)`
 
 _Type_: **boolean**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **False**  
@@ -157,6 +166,7 @@ _Default Value_: **False**
 Contains the date and time (in UTC) until the user is locked. null when the user is not locked. `Filter(eq;ge;le;like)` `Introduced in version 18.2`
 
 _Type_: **datetime __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan, Like**  
 _Supports Order By_: **False**  
 
@@ -166,6 +176,7 @@ The login name of the user, which is usually the email. `Required` `Filter(multi
 
 _Type_: **string (64)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, Like, EqualsIn**  
 _Supports Order By_: **True**  
 _Maximum Length_: **64**  
@@ -175,6 +186,7 @@ _Maximum Length_: **64**
 The full name of the user. `Required` `Filter(like)`
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
+_Category_: **System**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 
@@ -183,6 +195,7 @@ _Supports Order By_: **False**
 Notes for this User.
 
 _Type_: **string (254) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -192,6 +205,7 @@ _Maximum Length_: **254**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -200,6 +214,7 @@ _Supports Order By_: ****
 The password hash of the user, stored in the format, specified in Password Format.
 
 _Type_: **string (64) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  
@@ -209,6 +224,7 @@ _Maximum Length_: **64**
 The format of the Password. MD5=MD5 format; AN3 = ASP.NET Core Identity v3. `Required` `Default("MD5")` `Filter(eq)` `Introduced in version 18.2`
 
 _Type_: **[PasswordFormat](Systems.Security.Users.md#passwordformat)**  
+_Category_: **System**  
 Allowed values for the `PasswordFormat`(Systems.Security.Users.md#passwordformat) data attribute  
 _Allowed Values (Systems.Security.UsersRepository.PasswordFormat Enum Members)_  
 
@@ -226,6 +242,7 @@ _Default Value_: **MD5**
 Used only for two-factor authentication. null when phone-based two-factor is not used. `Filter(eq;like)` `Introduced in version 18.2`
 
 _Type_: **string (64) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  
@@ -235,6 +252,7 @@ _Maximum Length_: **64**
 Indicates whether the Phone Number has been verified. `Required` `Default(false)` `Filter(eq)` `Introduced in version 18.2`
 
 _Type_: **boolean**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **False**  
@@ -244,6 +262,7 @@ _Default Value_: **False**
 Indicates whether two-factor authentication has been enabled. `Required` `Default(false)` `Filter(eq)` `Introduced in version 18.2`
 
 _Type_: **boolean**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **False**  
@@ -253,6 +272,7 @@ _Default Value_: **False**
 Specifies the user type. INT=Internal; EXT=External (community); VIR=Virtual (No login); SYS=System; APP=Application. `Required` `Default("INT")` `Filter(multi eq)` `Introduced in version 18.2`
 
 _Type_: **[UserType](Systems.Security.Users.md#usertype)**  
+_Category_: **System**  
 Allowed values for the `UserType`(Systems.Security.Users.md#usertype) data attribute  
 _Allowed Values (Systems.Security.UsersRepository.UserType Enum Members)_  
 
@@ -273,6 +293,7 @@ _Default Value_: **InternalUser**
 Comma separated list of internal extension numbers of the voice telephones of the user. Used for VOIP integration.
 
 _Type_: **string (254) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -282,6 +303,7 @@ _Maximum Length_: **254**
 The Windows (Active Directory) user, to which this login is bound. The user will be allowed to login only when the client machine is logged in Active Directory with the specified user.
 
 _Type_: **string (128) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **128**  
@@ -294,6 +316,7 @@ _Maximum Length_: **128**
 The domain, to which the user belongs. `Filter(multi eq)` `Introduced in version 20.1`
 
 _Type_: **[Domains](Systems.Security.Domains.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Person
@@ -301,6 +324,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The person from within the system, which is authenticated with this login. null means that this user is not associated with a person record in the database. `Filter(multi eq)`
 
 _Type_: **[Persons](General.Contacts.Persons.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

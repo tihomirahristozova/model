@@ -49,6 +49,7 @@ Aggregate Tree
 The customs office to which the warehouse is headed. `Filter(like)` `Introduced in version 22.1.4.93`
 
 _Type_: **string (32) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **32**  
@@ -58,6 +59,7 @@ _Maximum Length_: **32**
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -65,6 +67,7 @@ _Supports Order By_: ****
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -73,6 +76,7 @@ _Default Value_: **NewGuid**
 Tax Warehouse Name (Multilanguage). `Required` `Filter(like)` `Introduced in version 21.1.3.93`
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
+_Category_: **System**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 
@@ -81,6 +85,7 @@ _Supports Order By_: **False**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -89,6 +94,7 @@ _Supports Order By_: ****
 The excise identification number of the tax warehouse, issued by the competent authorities. `Required` `Default("-")` `Introduced in version 21.1.3.87`
 
 _Type_: **string (32)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **32**  
@@ -99,6 +105,7 @@ _Default Value_: **-**
 The excise identification number of the owner of the Tax Warehouse. `Required` `Default("-")` `Introduced in version 21.1.3.87`
 
 _Type_: **string (32)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **32**  
@@ -112,6 +119,7 @@ _Default Value_: **-**
 The Enterprise company to which the tax warehouse belongs. `Required` `Filter(multi eq)` `Introduced in version 21.1.3.91`
 
 _Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

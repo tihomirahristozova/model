@@ -68,6 +68,7 @@ Aggregate Tree
 True means that the amount will be charged to the primary customer of the document. `Required` `Default(true)`
 
 _Type_: **boolean**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **True**  
@@ -77,6 +78,7 @@ _Default Value_: **True**
 True means that the resulting amount will be added to the amount of each respective line. `Required` `Default(true)`
 
 _Type_: **boolean**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **True**  
@@ -86,6 +88,7 @@ _Default Value_: **True**
 Specifies condition for the sign of the allowed values for input percent or amount ​​that can be set in the documents. `Default(0)`
 
 _Type_: **[AllowedDirections](General.DocumentAmountTypes.md#alloweddirections) __nullable__**  
+_Category_: **System**  
 Allowed values for the `AllowedDirections`(General.DocumentAmountTypes.md#alloweddirections) data attribute  
 _Allowed Values (General.DocumentAmountTypesRepository.AllowedDirections Enum Members)_  
 
@@ -104,6 +107,7 @@ _Default Value_: **0**
 True when the user is allowed to input fixed amount for distribution. `Required` `Default(false)` `Filter(eq)`
 
 _Type_: **boolean**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **False**  
@@ -114,6 +118,7 @@ A code that can be used to uniquely identify the additional amount. Can also be 
 
 _Type_: **string (16)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Supports Order By_: **True**  
 _Maximum Length_: **16**  
@@ -124,6 +129,7 @@ The name of the amount type. `Required` `Filter(like)` `ORD`
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **True**  
 
@@ -132,6 +138,7 @@ _Supports Order By_: **True**
 True means that the percentages will be applied over lines plus dependant amounts; false means only dependant amounts. `Required` `Default(true)`
 
 _Type_: **boolean**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **True**  
@@ -141,6 +148,7 @@ _Default Value_: **True**
 Default percent for amounts for which percent input is allowed; null otherwise.
 
 _Type_: **decimal (7, 6) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -151,6 +159,7 @@ _Front-End Recalc Expressions:_
 The description of this DocumentAmountType.
 
 _Type_: **string (254) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -160,6 +169,7 @@ _Maximum Length_: **254**
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -168,6 +178,7 @@ _Supports Order By_: ****
 Specifies how the amount will be distributed among the document lines. Valid values are: ('AMOUNT','MEASUREMENT','PRODUCT DEFINITION','DEAL TYPE'). `Required` `Default("AMOUNT")` `Filter(eq)`
 
 _Type_: **[DistributeBy](General.DocumentAmountTypes.md#distributeby)**  
+_Category_: **System**  
 Allowed values for the `DistributeBy`(General.DocumentAmountTypes.md#distributeby) data attribute  
 _Allowed Values (General.DocumentAmountTypesRepository.DistributeBy Enum Members)_  
 
@@ -186,6 +197,7 @@ _Default Value_: **Amount**
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -194,6 +206,7 @@ _Default Value_: **NewGuid**
 True when the amount type is active for new records; false - otherwise. `Required` `Default(true)` `Filter(eq)`
 
 _Type_: **boolean**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **True**  
@@ -203,6 +216,7 @@ _Default Value_: **True**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -211,6 +225,7 @@ _Supports Order By_: ****
 True when the user is allowed to input percent of total for distribution. `Required` `Default(true)` `Filter(eq)`
 
 _Type_: **boolean**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **True**  
@@ -220,6 +235,7 @@ _Default Value_: **True**
 The amounts should be rounded with the specified number of digits after the decimal point. null means to use the currency default.
 
 _Type_: **int32 __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -228,6 +244,7 @@ _Supports Order By_: **False**
 Specifies whether the user is allowed to input fixed unit amount for the calculation of the amount. `Required` `Default(false)` `Filter(eq)`
 
 _Type_: **boolean**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **False**  
@@ -240,6 +257,7 @@ _Default Value_: **False**
 Specifies the measurement category to be used for distribution, when the Distribute_By = 'MEASUREMENT'. `Filter(multi eq)`
 
 _Type_: **[MeasurementCategories](General.MeasurementCategories.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Front-End Recalc Expressions:_  

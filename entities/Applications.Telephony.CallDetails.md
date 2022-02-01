@@ -52,6 +52,7 @@ Aggregate Tree
 The voice number of the party, which received the call. `Required` `Filter(eq;like)`
 
 _Type_: **string (80)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **80**  
@@ -61,6 +62,7 @@ _Maximum Length_: **80**
 The voice number of the originating party of the call. `Required` `Filter(eq;like)`
 
 _Type_: **string (80)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **80**  
@@ -70,6 +72,7 @@ _Maximum Length_: **80**
 P=Phone; V=Video; M=Message/SMS. `Required` `Default("P")` `Filter(eq)`
 
 _Type_: **[CallType](Applications.Telephony.CallDetails.md#calltype)**  
+_Category_: **System**  
 Allowed values for the `CallType`(Applications.Telephony.CallDetails.md#calltype) data attribute  
 _Allowed Values (Applications.Telephony.CallDetailsRepository.CallType Enum Members)_  
 
@@ -88,6 +91,7 @@ _Default Value_: **Phone**
 The unique id of the call, as reported by the telephone central. null when the central did not report unique Id. Used for integration purposes.
 
 _Type_: **string (32) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **32**  
@@ -97,6 +101,7 @@ _Maximum Length_: **32**
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -105,6 +110,7 @@ _Supports Order By_: ****
 The duration of the call (in seconds). `Required` `Default(0)` `Filter(ge;le)`
 
 _Type_: **int32**  
+_Category_: **System**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  
@@ -113,6 +119,7 @@ _Default Value_: **0**
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -121,6 +128,7 @@ _Default Value_: **NewGuid**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -129,6 +137,7 @@ _Supports Order By_: ****
 The starting date and time of the call. `Required` `Filter(ge;le)`
 
 _Type_: **datetime**  
+_Category_: **System**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -140,6 +149,7 @@ _Supports Order By_: **False**
 The party, which received the call. null when the party was not determined successfully. `Filter(multi eq)`
 
 _Type_: **[Parties](General.Contacts.Parties.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### CallingParty
@@ -147,6 +157,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The party, which originated the call.  null when the party was not determined successfully. `Filter(multi eq)`
 
 _Type_: **[Parties](General.Contacts.Parties.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ExternalCompany
@@ -154,6 +165,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The company of the external party. It can be the party itself, or the parent party, whichever is company. null when the company cannot be determined. `Filter(multi eq)`
 
 _Type_: **[Companies](General.Contacts.Companies.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ExternalParty
@@ -161,6 +173,7 @@ _Supported Filters_: **Equals, EqualsIn**
 It is either the From or the To party - depending of the direction of the call. Only calls with at least one external party participating are usually logged. null when the respective party was null, or when no external party participated in the call. `Filter(multi eq)`
 
 _Type_: **[Parties](General.Contacts.Parties.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

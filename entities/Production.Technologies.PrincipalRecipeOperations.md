@@ -63,6 +63,7 @@ Aggregate Root:
 The desired description of the Conditional Property. .
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -71,6 +72,7 @@ _Supports Order By_: **False**
 The desired value of the Conditional Property. .
 
 _Type_: **string (254) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -80,6 +82,7 @@ _Maximum Length_: **254**
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -87,6 +90,7 @@ _Supports Order By_: ****
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -95,6 +99,7 @@ _Default Value_: **NewGuid**
 Consecutive line number within the principal recipe. `Required`
 
 _Type_: **int32**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -108,6 +113,7 @@ _Front-End Recalc Expressions:_
 How many minutes after the start of the previous operation can this operation start. null means that this operation should wait the previous operation to finish before starting.
 
 _Type_: **int32 __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -116,6 +122,7 @@ _Supports Order By_: **False**
 Time to move the lot to the next operation in minutes. `Required` `Default(0)` `Filter(ge;le)`
 
 _Type_: **int32**  
+_Category_: **System**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  
@@ -127,6 +134,7 @@ _Front-End Recalc Expressions:_
 Notes for this PrincipalRecipeOperation.
 
 _Type_: **string (254) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -136,6 +144,7 @@ _Maximum Length_: **254**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -144,6 +153,7 @@ _Supports Order By_: ****
 The description of the operation. Initially copied from the generic operation definition.
 
 _Type_: **string (max) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
@@ -155,6 +165,7 @@ _Front-End Recalc Expressions:_
 Duration of the operation for one piece in the standard measurement unit of the product. `Required` `Default(0)` `Filter(ge;le)`
 
 _Type_: **int32**  
+_Category_: **System**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  
@@ -166,6 +177,7 @@ _Front-End Recalc Expressions:_
 Standard rate of scrap during the operation. `Required` `Default(0)`
 
 _Type_: **decimal (7, 6)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  
@@ -175,6 +187,7 @@ _Default Value_: **0**
 Time needed to setup the equipment. `Required` `Default(0)` `Filter(ge;le)`
 
 _Type_: **int32**  
+_Category_: **System**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  
@@ -186,6 +199,7 @@ _Front-End Recalc Expressions:_
 The tools needed for the routing step.
 
 _Type_: **string (254) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -195,6 +209,7 @@ _Maximum Length_: **254**
 Quantity of the workgroup resource that should be allocated for the operation. `Unit: UseQuantityUnit` `Required` `Default(1)` `Filter(ge;le)`
 
 _Type_: **[Quantity (9, 3)](../data-types.md#quantity)**  
+_Category_: **System**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -206,6 +221,7 @@ _Front-End Recalc Expressions:_
 Wait time (drying, cooling, etc.) after the operation in minutes. `Required` `Default(0)` `Filter(ge;le)`
 
 _Type_: **int32**  
+_Category_: **System**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  
@@ -220,6 +236,7 @@ _Front-End Recalc Expressions:_
 When not null, specifies that, when creating recipe, the operation will be added only if this property is set for the main product. `Filter(multi eq)`
 
 _Type_: **[CustomProperties](General.CustomProperties.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Operation
@@ -227,6 +244,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The generic operation definition. The data is copied locally and can be modified for this specific record. `Filter(multi eq)`
 
 _Type_: **[Operations](Production.Resources.Operations.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### OperationInstruction
@@ -234,6 +252,7 @@ _Supported Filters_: **Equals, EqualsIn**
 Link to additional data, containing instructions in external format. `Filter(multi eq)`
 
 _Type_: **[OperationInstructions](Production.Resources.OperationInstructions.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PrincipalRecipe
@@ -241,6 +260,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The <see cref="PrincipalRecipe"/> to which this PrincipalRecipeOperation belongs. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[PrincipalRecipes](Production.Technologies.PrincipalRecipes.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
 
@@ -249,6 +269,7 @@ _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-reference
 The measurement unit of Use_Quantity. `Required` `Filter(multi eq)`
 
 _Type_: **[MeasurementUnits](General.MeasurementUnits.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Front-End Recalc Expressions:_  
@@ -258,6 +279,7 @@ _Front-End Recalc Expressions:_
 Required workgroup resource for the operation. null means that no resource is required or the resource will be specified later. `Required` `Filter(multi eq)`
 
 _Type_: **[WorkgroupResources](Production.Resources.WorkgroupResources.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Front-End Recalc Expressions:_  

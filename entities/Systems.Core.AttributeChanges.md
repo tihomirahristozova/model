@@ -40,6 +40,7 @@ Aggregate Root:
 ### AttributeName
 
 _Type_: **string (64)**  
+_Category_: **System**  
 _Inherited From_: **Sys_Attribute_Changes_Table.Attribute_Name**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
@@ -48,6 +49,7 @@ _Maximum Length_: **64**
 ### NewValue
 
 _Type_: **string (max) __nullable__**  
+_Category_: **System**  
 _Inherited From_: **Sys_Attribute_Changes_Table.New_Value**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
@@ -61,6 +63,7 @@ _Maximum Length_: **2147483647**
 The <see cref="ObjectChange"/> to which this AttributeChange belongs. `Required` `Filter(multi eq)` `Inherited from Sys_Attribute_Changes_Table.Object_Change_Id` `Owner`
 
 _Type_: **[ObjectChanges](Systems.Core.ObjectChanges.md)**  
+_Category_: **System**  
 _Inherited From_: **Sys_Attribute_Changes_Table.Object_Change_Id**  
 _Supported Filters_: **Equals, EqualsIn**  
 _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  

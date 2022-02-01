@@ -57,6 +57,7 @@ Aggregate Tree
 The description of the discount that is shown to the operator when he/she should choose between different discounts. `Filter(like)`
 
 _Type_: **string (50) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **50**  
@@ -66,6 +67,7 @@ _Maximum Length_: **50**
 The discount percent that should be applied if all the matching criteria are met. `Required` `Default(0)` `Filter(ge;le)`
 
 _Type_: **decimal (7, 6)**  
+_Category_: **System**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  
@@ -75,6 +77,7 @@ _Default Value_: **0**
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -83,6 +86,7 @@ _Supports Order By_: ****
 Starting date of validity of the discount. null means no from date restriction. `Filter(eq;ge;le)`
 
 _Type_: **datetime __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -90,6 +94,7 @@ _Supports Order By_: **False**
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -98,6 +103,7 @@ _Default Value_: **NewGuid**
 Apply the discount only if the quantity sold is equal to or less than the specified here. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Filter(eq;ge;le)`
 
 _Type_: **[Quantity (18, 3)](../data-types.md#quantity) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -106,6 +112,7 @@ _Supports Order By_: **False**
 Apply the discount only if the quantity sold is equal to or more than the specified here. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Filter(eq;ge;le)`
 
 _Type_: **[Quantity (18, 3)](../data-types.md#quantity) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -114,6 +121,7 @@ _Supports Order By_: **False**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -122,6 +130,7 @@ _Supports Order By_: ****
 The priority of this discount policy. When selecting a discount for a sales document line, only the highest priority policy, matching the criteria is applied. `Required` `Default(3)`
 
 _Type_: **[Priority](Crm.LineDiscounts.md#priority)**  
+_Category_: **System**  
 Generic enum type for Priority properties  
 _Allowed Values (General.Priority Enum Members)_  
 
@@ -142,6 +151,7 @@ _Default Value_: **3**
 Ending date (inclusive) of validity of the discount. If null, the discount is valid forever. `Filter(eq;ge;le)`
 
 _Type_: **datetime __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -153,6 +163,7 @@ _Supports Order By_: **False**
 Тhe marketing campaign to which the current definition belongs. `Filter(multi eq)` `Introduced in version 22.1.4.67`
 
 _Type_: **[Campaigns](Crm.Marketing.Campaigns.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Customer
@@ -161,6 +172,7 @@ Apply the discount only if this is the customer. `Filter(multi eq)`
 
 _Type_: **[Customers](Crm.Customers.md) (nullable)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### CustomerType
@@ -168,6 +180,7 @@ _Supported Filters_: **Equals, EqualsIn**
 Apply the discount only if the customer is of this customer type. `Filter(multi eq)`
 
 _Type_: **[CustomerTypes](Crm.CustomerTypes.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### DistributionChannel
@@ -176,6 +189,7 @@ Apply the discount only when the sales document is on the specified channel. `Fi
 
 _Type_: **[DistributionChannels](Crm.Marketing.DistributionChannels.md) (nullable)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### EnterpriseCompany
@@ -183,6 +197,7 @@ _Supported Filters_: **Equals, EqualsIn**
 When not null, the policy is applied only for documents of the specified enterprise company . `Filter(multi eq)`
 
 _Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### EnterpriseCompanyLocation
@@ -190,6 +205,7 @@ _Supported Filters_: **Equals, EqualsIn**
 When set, the policy is applied only for documents of the specified enterprise company location. `Filter(multi eq)`
 
 _Type_: **[CompanyLocations](General.Contacts.CompanyLocations.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Front-End Recalc Expressions:_  
@@ -199,6 +215,7 @@ _Front-End Recalc Expressions:_
 Apply the discount only if this price list is used. `Filter(multi eq)`
 
 _Type_: **[PriceLists](Crm.PriceLists.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Product
@@ -207,6 +224,7 @@ Apply the discount only when this specific product is sold. `Filter(multi eq)`
 
 _Type_: **[Products](General.Products.Products.md) (nullable)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ProductGroup
@@ -214,6 +232,7 @@ _Supported Filters_: **Equals, EqualsIn**
 Apply the discount only if the product sold is contained in this product group or any of its sub-groups. `Filter(multi eq)`
 
 _Type_: **[ProductGroups](General.Products.ProductGroups.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### TargetGroup
@@ -221,6 +240,7 @@ _Supported Filters_: **Equals, EqualsIn**
 Apply the discount only if the customer is included in this target group. `Filter(multi eq)`
 
 _Type_: **[TargetGroups](Crm.Marketing.TargetGroups.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

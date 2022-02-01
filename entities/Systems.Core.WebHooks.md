@@ -47,6 +47,7 @@ Aggregate Tree
 The body of the POST request (interpolated string).
 
 _Type_: **string (max) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
@@ -57,6 +58,7 @@ The unique code of the WebHook. `Required` `Filter(eq;like)` `ORD`
 
 _Type_: **string (32)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
 _Maximum Length_: **32**  
@@ -66,6 +68,7 @@ _Maximum Length_: **32**
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -74,6 +77,7 @@ _Supports Order By_: ****
 Optional headers for the request (interpolated string). Each header is specified on a separate line.
 
 _Type_: **string (max) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
@@ -82,6 +86,7 @@ _Maximum Length_: **2147483647**
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -90,6 +95,7 @@ _Default Value_: **NewGuid**
 Webhook name (multi-language). `Required` `Filter(like)`
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
+_Category_: **System**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 
@@ -98,6 +104,7 @@ _Supports Order By_: **False**
 Notes for this WebHook.
 
 _Type_: **string (max) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
@@ -107,6 +114,7 @@ _Maximum Length_: **2147483647**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -115,6 +123,7 @@ _Supports Order By_: ****
 The name of the repository for which the webhook is setup. All interpolated strings will be evaluated in the context of entities of the specified type. `Required` `Filter(eq;like)`
 
 _Type_: **string (128)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **128**  
@@ -124,6 +133,7 @@ _Maximum Length_: **128**
 0=Don't retry (default); 3=Retry up to 3 times. `Required` `Default("0")`
 
 _Type_: **[RetryLogic](Systems.Core.WebHooks.md#retrylogic)**  
+_Category_: **System**  
 Allowed values for the `RetryLogic`(Systems.Core.WebHooks.md#retrylogic) data attribute  
 _Allowed Values (Systems.Core.WebHooksRepository.RetryLogic Enum Members)_  
 
@@ -141,6 +151,7 @@ _Default Value_: **NoRetry**
 The destination URL, which should be called by the webhook (interpolated string). `Required`
 
 _Type_: **string (2000)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2000**  

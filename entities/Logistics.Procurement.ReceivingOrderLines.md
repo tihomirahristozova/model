@@ -66,6 +66,7 @@ Aggregate Root:
 The final confirmed received quantity, after adjustments. It is used in all calculations for the order. Usually changed with adjustments to the receivemnt order, in regard to the warehouse receipt or the invoice. When null, its value is equal to Quantity. `Unit: QuantityUnit`
 
 _Type_: **[Quantity (18, 3)](../data-types.md#quantity) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -74,6 +75,7 @@ _Supports Order By_: **False**
 The theoretical equivalence of Confirmed Quantity in base measurement unit according to the current measurement dimensions of the product. `Unit: Product.BaseMeasurementCategory.BaseUnit`
 
 _Type_: **[Quantity (18, 3)](../data-types.md#quantity) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -84,6 +86,7 @@ _Front-End Recalc Expressions:_
 The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. null means to convert the value from Confirmed Quantity using the measurement ratios. `Unit: Product.BaseMeasurementCategory.BaseUnit` `ReadOnly` `Introduced in version 18.2`
 
 _Type_: **[Quantity (18, 3)](../data-types.md#quantity) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -94,6 +97,7 @@ _Front-End Recalc Expressions:_
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -102,6 +106,7 @@ _Supports Order By_: ****
 When true, denotes that this is the last receivement for this purchase order line and further receivements are not expected. `Required` `Default(false)`
 
 _Type_: **boolean**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **False**  
@@ -110,6 +115,7 @@ _Default Value_: **False**
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -118,6 +124,7 @@ _Default Value_: **NewGuid**
 The total amount for the line. Equals to Quantity * Price_Per_Unit. `Currency: ReceivingOrder.DocumentCurrency` `Required` `Default(0)`
 
 _Type_: **[Amount (14, 2)](../data-types.md#amount)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -132,6 +139,7 @@ _Front-End Recalc Expressions:_
 Line number, unique within the ReceivingOrder. Usually is increasing number like 10, 20, 30, ... when initially entering the ReceivingOrder (in order to allow insertions with adjustment documents). `Required`
 
 _Type_: **int32**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -145,6 +153,7 @@ _Front-End Recalc Expressions:_
 Notes for this ReceivingOrderLine.
 
 _Type_: **string (254) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -154,6 +163,7 @@ _Maximum Length_: **254**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -162,6 +172,7 @@ _Supports Order By_: ****
 The unit price of the received products, in the documents currency. `Currency: ReceivingOrder.DocumentCurrency` `Required` `Default(0)`
 
 _Type_: **[Amount (14, 5)](../data-types.md#amount)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -173,6 +184,7 @@ _Front-End Recalc Expressions:_
 The name of the received product, initially copied from the name in the product definition. The field can be edited by the user. `Required`
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -186,6 +198,7 @@ _Front-End Recalc Expressions:_
 The received quantity. `Unit: QuantityUnit` `Required` `Default(1)` `Filter(ge;le)`
 
 _Type_: **[Quantity (18, 3)](../data-types.md#quantity)**  
+_Category_: **System**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -195,6 +208,7 @@ _Default Value_: **Constant**
 The equivalence of Quantity, in the base measurement category of the product. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required`
 
 _Type_: **[Quantity (18, 3)](../data-types.md#quantity)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -208,6 +222,7 @@ _Front-End Recalc Expressions:_
 The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` `Introduced in version 18.2`
 
 _Type_: **[Quantity (18, 3)](../data-types.md#quantity)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -225,6 +240,7 @@ The <see cref="ReceivingOrder"/> to which this ReceivingOrderLine belongs. `Requ
 
 _Type_: **[ReceivingOrders](Logistics.Procurement.ReceivingOrders.md)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### LineStore
@@ -232,6 +248,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The store in which the goods are received. `Filter(multi eq)`
 
 _Type_: **[Stores](Logistics.Inventory.Stores.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Back-End Default Expression:_  
@@ -244,6 +261,7 @@ _Front-End Recalc Expressions:_
 The lot of the received goods. `Filter(multi eq)`
 
 _Type_: **[Lots](Logistics.Inventory.Lots.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Product
@@ -252,6 +270,7 @@ The received product. `Required` `Filter(multi eq)`
 
 _Type_: **[Products](General.Products.Products.md)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ProductCode
@@ -259,6 +278,7 @@ _Supported Filters_: **Equals, EqualsIn**
 When not null, specifies that the product was selected using the specified product code record. `Filter(multi eq)`
 
 _Type_: **[ProductCodes](General.Products.ProductCodes.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ProductVariant
@@ -266,6 +286,7 @@ _Supported Filters_: **Equals, EqualsIn**
 If specified determines which product variant of the current product in this line is used. `Filter(multi eq)`
 
 _Type_: **[ProductVariants](General.ProductVariants.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PurchaseOrderLine
@@ -274,6 +295,7 @@ The purchase order line for which we are receiving quantity. `Filter(multi eq)`
 
 _Type_: **[PurchaseOrderLines](Logistics.Procurement.PurchaseOrderLines.md) (nullable)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PurchaseProductPrice
@@ -281,6 +303,7 @@ _Supported Filters_: **Equals, EqualsIn**
 When not null, specifies that the purchase unit price is loaded automatically from the specified purchase price record. `Filter(multi eq)`
 
 _Type_: **[PurchaseProductPrices](Logistics.Procurement.PurchaseProductPrices.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Front-End Recalc Expressions:_  
@@ -290,6 +313,7 @@ _Front-End Recalc Expressions:_
 The measurement unit of Quantity. Initially copied from the Default Measurement Unit of the Product. `Required` `Filter(multi eq)`
 
 _Type_: **[MeasurementUnits](General.MeasurementUnits.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Back-End Default Expression:_  
@@ -303,6 +327,7 @@ The <see cref="ReceivingOrder"/> to which this ReceivingOrderLine belongs. `Requ
 
 _Type_: **[ReceivingOrders](Logistics.Procurement.ReceivingOrders.md)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
 
@@ -311,6 +336,7 @@ _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-reference
 Which serial number to receive/issue. null means that serial number is unknown or not applicable. `Filter(multi eq)`
 
 _Type_: **[SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### StoreBin
@@ -318,6 +344,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The store bin in which to receive the goods. `Filter(multi eq)`
 
 _Type_: **[StoreBins](Logistics.Inventory.StoreBins.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

@@ -45,6 +45,7 @@ Aggregate Tree
 Accumulates actual value for the measure. `Required` `Default(0)` `Filter(eq)`
 
 _Type_: **decimal (17, 5)**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  
@@ -54,6 +55,7 @@ _Default Value_: **0**
 The date for which the measure is recorded. All records with dates within each period are summed. `Required` `Filter(eq;ge;le)`
 
 _Type_: **date**  
+_Category_: **System**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -62,6 +64,7 @@ _Supports Order By_: **False**
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -69,6 +72,7 @@ _Supports Order By_: ****
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -77,6 +81,7 @@ _Default Value_: **NewGuid**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -85,6 +90,7 @@ _Supports Order By_: ****
 Accumulates target value for the measure. `Required` `Default(0)` `Filter(eq)`
 
 _Type_: **decimal (17, 5)**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  
@@ -97,6 +103,7 @@ _Default Value_: **0**
 The measure for which the data is recorded. `Required` `Filter(multi eq)`
 
 _Type_: **[DataMeasures](Applications.DataWarehouse.DataMeasures.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### EnterpriseCompany
@@ -104,6 +111,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The Enterprise Company for which the data is recorded. `Required` `Filter(multi eq)`
 
 _Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

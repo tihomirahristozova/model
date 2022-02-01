@@ -51,6 +51,7 @@ Aggregate Root:
 Comments for this ProductPicture.
 
 _Type_: **string (254) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -60,6 +61,7 @@ _Maximum Length_: **254**
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -67,6 +69,7 @@ _Supports Order By_: ****
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -75,6 +78,7 @@ _Default Value_: **NewGuid**
 True=This is the default picture for the product and the size class; false=otherwise. `Required` `Default(false)` `Filter(eq)`
 
 _Type_: **boolean**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **False**  
@@ -86,6 +90,7 @@ _Front-End Recalc Expressions:_
 The exact server time, when the picture was last updated. Set automatically. `Filter(ge;le)` `ReadOnly`
 
 _Type_: **datetime __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -94,6 +99,7 @@ _Supports Order By_: **False**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -102,6 +108,7 @@ _Supports Order By_: ****
 The actual product picture. Can be null if we insert only some comments.
 
 _Type_: **byte[] __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -110,6 +117,7 @@ _Supports Order By_: **False**
 Unique picture number within the product. Also used for sorting. `Required` `Filter(eq;like)`
 
 _Type_: **int32**  
+_Category_: **System**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 
@@ -123,6 +131,7 @@ _Front-End Recalc Expressions:_
 Specifies the relative picture size and usage. S=Small picture (thumbnail), L=Large picture (full size), null=unspecified.
 
 _Type_: **[PictureSizeClass](General.Products.ProductPictures.md#picturesizeclass) __nullable__**  
+_Category_: **System**  
 Allowed values for the `PictureSizeClass`(General.Products.ProductPictures.md#picturesizeclass) data attribute  
 _Allowed Values (General.Products.ProductPicturesRepository.PictureSizeClass Enum Members)_  
 
@@ -142,6 +151,7 @@ _Supports Order By_: **False**
 The <see cref="Product"/> to which this ProductPicture belongs. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[Products](General.Products.Products.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
 

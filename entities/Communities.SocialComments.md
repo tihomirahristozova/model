@@ -45,6 +45,7 @@ Aggregate Tree
 The comment contents in clear text. `Required`
 
 _Type_: **string (max)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
@@ -55,6 +56,7 @@ The exact server time (in UTC), when the comment was created. `Required` `ORD`
 
 _Type_: **datetime**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **True**  
 
@@ -63,6 +65,7 @@ _Supports Order By_: **True**
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -70,6 +73,7 @@ _Supports Order By_: ****
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -78,6 +82,7 @@ _Default Value_: **NewGuid**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -89,6 +94,7 @@ _Supports Order By_: ****
 The root data object (post, marketplace product, document, etc), for which the comment is made. `Required` `Filter(multi eq)`
 
 _Type_: **[ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ReplyToComment
@@ -96,6 +102,7 @@ _Supported Filters_: **Equals, EqualsIn**
 When not null, means that the comment is a reply to the specified comment. The comment and the reply should be for the same data object. `Filter(multi eq)`
 
 _Type_: **[SocialComments](Communities.SocialComments.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### User
@@ -103,6 +110,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The user, who made the comment. `Required` `Filter(multi eq)`
 
 _Type_: **[Users](Systems.Security.Users.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

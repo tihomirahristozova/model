@@ -52,6 +52,7 @@ Aggregate Root:
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -60,6 +61,7 @@ _Supports Order By_: ****
 Compressed representation of the document data. Valid when Document Data Format = D (deflate compressed). `ReadOnly`
 
 _Type_: **byte[] __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -68,6 +70,7 @@ _Supports Order By_: **False**
 The format of the saved document data. 'U' - uncompressed and stored in Document Data XML; 'D' - Deflate compressed and stored in Document Data. `Required` `Default("U")` `ReadOnly`
 
 _Type_: **string (1)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **1**  
@@ -78,6 +81,7 @@ _Default Value_: **U**
 The uncompressed XML representation of the document data, including the document row, the header row and all types of lines. Valid when Document Data Format = U (uncompressed). `ReadOnly`
 
 _Type_: **string (max) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
@@ -86,6 +90,7 @@ _Maximum Length_: **2147483647**
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -94,6 +99,7 @@ _Default Value_: **NewGuid**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -102,6 +108,7 @@ _Supports Order By_: ****
 The state of the document by the time it was saved. `Required` `Default(0)` `Filter(multi eq)` `ReadOnly`
 
 _Type_: **[State](General.DocumentVersions.md#state)**  
+_Category_: **System**  
 Allowed values for the `State`(General.DocumentVersions.md#state) data attribute  
 _Allowed Values (General.DocumentVersionsRepository.State Enum Members)_  
 
@@ -125,6 +132,7 @@ The date and time when this version was saved. `Required` `Default(Now)` `Filter
 
 _Type_: **datetime**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **True**  
 _Default Value_: **CurrentDateTime**  
@@ -134,6 +142,7 @@ _Default Value_: **CurrentDateTime**
 The login name of the user that saved this version. `Required` `Filter(eq;like)` `ReadOnly`
 
 _Type_: **string (64)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  
@@ -143,6 +152,7 @@ _Maximum Length_: **64**
 The version number that is stored in this row. `Required` `Filter(eq;ge;le)` `ReadOnly`
 
 _Type_: **int32**  
+_Category_: **System**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -155,6 +165,7 @@ The document whoose version is stored in this row. `Required` `Filter(multi eq)`
 
 _Type_: **[Documents](General.Documents.md)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
 

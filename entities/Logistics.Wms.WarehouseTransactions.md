@@ -58,12 +58,14 @@ Aggregate Tree
 Catch (measured) quantity for the transaction. Positive values indicate transactions. Negative values are used for adjustments. null when catch measurement is not configured for the product. `Filter(eq;ge;le)`
 
 _Type_: **decimal (12, 3) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
 ### CreationTimeUtc
 
 _Type_: **datetime**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **CurrentDateTimeUtc**  
@@ -73,6 +75,7 @@ _Default Value_: **CurrentDateTimeUtc**
 Direction of the transaction - I=IN, O=OUT. `Required` `Default("I")` `Filter(eq)`
 
 _Type_: **[Direction](Logistics.Wms.WarehouseTransactions.md#direction)**  
+_Category_: **System**  
 Allowed values for the `Direction`(Logistics.Wms.WarehouseTransactions.md#direction) data attribute  
 _Allowed Values (Logistics.Wms.WarehouseTransactionsRepository.Direction Enum Members)_  
 
@@ -90,6 +93,7 @@ _Default Value_: **IN**
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -97,6 +101,7 @@ _Supports Order By_: ****
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -105,6 +110,7 @@ _Default Value_: **NewGuid**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -113,6 +119,7 @@ _Supports Order By_: ****
 The transacted net change in quantity. Positive values indicate transactions. Negative values are used for adjustments. `Required` `Default(0)` `Filter(multi eq;ge;le)`
 
 _Type_: **decimal (12, 3)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan, EqualsIn**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  
@@ -122,6 +129,7 @@ _Default Value_: **0**
 Quantity in the base measurement unit of the product. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Introduced in version 22.1.5.9`
 
 _Type_: **[Quantity (12, 3)](../data-types.md#quantity)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -130,6 +138,7 @@ _Supports Order By_: **False**
 The theoretical quantity according to the current measurement dimensions of the product. Used to measure the execution. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Introduced in version 22.1.5.9`
 
 _Type_: **[Quantity (12, 3)](../data-types.md#quantity)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -141,11 +150,13 @@ _Supports Order By_: **False**
 The measurement unit of the catch quantity. null when catch measurement is not configured for the product. `Filter(multi eq)`
 
 _Type_: **[MeasurementUnits](General.MeasurementUnits.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### CreationUser
 
 _Type_: **[Users](Systems.Security.Users.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### LogisticUnit
@@ -154,6 +165,7 @@ Logistic unit, which was transacted. null when the transaction was not for a log
 
 _Type_: **[LogisticUnits](Logistics.LogisticUnits.md) (nullable)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Lot
@@ -162,6 +174,7 @@ The lot which was transacted. null when the transaction was not for a specific l
 
 _Type_: **[Lots](Logistics.Inventory.Lots.md) (nullable)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Product
@@ -170,6 +183,7 @@ The product, which was transacted. `Required` `Filter(multi eq)`
 
 _Type_: **[Products](General.Products.Products.md)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ProductVariant
@@ -178,6 +192,7 @@ The product variant, which was transacted. null when the transaction was not for
 
 _Type_: **[ProductVariants](General.ProductVariants.md) (nullable)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### QuantityUnit
@@ -185,6 +200,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The measurement unit of quantity. `Required` `Filter(multi eq)`
 
 _Type_: **[MeasurementUnits](General.MeasurementUnits.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### SerialNumber
@@ -193,6 +209,7 @@ The serial number which was transacted. null when the transaction was not for a 
 
 _Type_: **[SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Warehouse
@@ -200,6 +217,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The warehouse in which the transaction occurred. `Required` `Filter(multi eq)`
 
 _Type_: **[Warehouses](Logistics.Wms.Warehouses.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### WarehouseLocation
@@ -208,6 +226,7 @@ The warehouse location, where the transaction occurred. `Required` `Filter(multi
 
 _Type_: **[WarehouseLocations](Logistics.Wms.WarehouseLocations.md)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### WarehouseOrder
@@ -215,6 +234,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The order which created this transaction. null when this transaction was not based on order. `Filter(multi eq)`
 
 _Type_: **[WarehouseOrders](Logistics.Wms.WarehouseOrders.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### WarehouseOrderLine
@@ -223,6 +243,7 @@ The order line which created this transaction. null when this transaction was no
 
 _Type_: **[WarehouseOrderLines](Logistics.Wms.WarehouseOrderLines.md) (nullable)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

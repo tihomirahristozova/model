@@ -53,6 +53,7 @@ Aggregate Root:
 Textual description of the cargo contents. `Required`
 
 _Type_: **string (128)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **128**  
@@ -62,6 +63,7 @@ _Maximum Length_: **128**
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -69,6 +71,7 @@ _Supports Order By_: ****
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -77,6 +80,7 @@ _Default Value_: **NewGuid**
 Line number, unique within the TransportationOrder. Usually is increasing number like 10, 20, 30, ... when initially entering the TransportationOrder (in order to allow insertions with adjustment documents). `Required` `Filter(eq)`
 
 _Type_: **int32**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 
@@ -90,6 +94,7 @@ _Front-End Recalc Expressions:_
 Notes for this TransportationOrderLine. `Introduced in version 18.2`
 
 _Type_: **string (max) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
@@ -99,6 +104,7 @@ _Maximum Length_: **2147483647**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -107,6 +113,7 @@ _Supports Order By_: ****
 Number of palettes comprising the cargo. null when it is unknown.
 
 _Type_: **int32 __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -115,6 +122,7 @@ _Supports Order By_: **False**
 The number of the line within the parent document, which the current line executes. null when the current line does not execute parent line. `Filter(eq)`
 
 _Type_: **int32 __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 
@@ -123,6 +131,7 @@ _Supports Order By_: **False**
 The volume of the cargo, in CBM (cubic meters). null when it is unknown.
 
 _Type_: **int32 __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -131,6 +140,7 @@ _Supports Order By_: **False**
 The weight of the cargo, in KG (kilogramms). null when it is unknown.
 
 _Type_: **int32 __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -142,6 +152,7 @@ _Supports Order By_: **False**
 The type of the transported cargo. `Required` `Filter(multi eq)`
 
 _Type_: **[CargoTypes](Logistics.Shipment.CargoTypes.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Document
@@ -150,6 +161,7 @@ The <see cref="TransportationOrder"/> to which this TransportationOrderLine belo
 
 _Type_: **[TransportationOrders](Logistics.Shipment.TransportationOrders.md)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ParentDocument
@@ -157,6 +169,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The document, which the current line executes. null when the current line does not execute another line. `Filter(multi eq)`
 
 _Type_: **[Documents](General.Documents.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### TransportationOrder
@@ -165,6 +178,7 @@ The <see cref="TransportationOrder"/> to which this TransportationOrderLine belo
 
 _Type_: **[TransportationOrders](Logistics.Shipment.TransportationOrders.md)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
 

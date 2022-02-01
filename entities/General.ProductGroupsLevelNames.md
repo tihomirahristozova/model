@@ -34,6 +34,7 @@ Aggregate Tree
 ### L1Name
 
 _Type_: **string (180)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **180**  
@@ -41,6 +42,7 @@ _Maximum Length_: **180**
 ### L2Name
 
 _Type_: **string (180)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **180**  
@@ -48,6 +50,7 @@ _Maximum Length_: **180**
 ### L3Name
 
 _Type_: **string (180)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **180**  
@@ -55,6 +58,7 @@ _Maximum Length_: **180**
 ### L4Name
 
 _Type_: **string (180)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **180**  
@@ -62,6 +66,7 @@ _Maximum Length_: **180**
 ### L5Name
 
 _Type_: **string (180)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **180**  
@@ -69,6 +74,7 @@ _Maximum Length_: **180**
 ### L6Name
 
 _Type_: **string (180)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **180**  

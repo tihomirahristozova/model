@@ -54,6 +54,7 @@ The unique code of the PaymentAccount. `Required` `Filter(eq;like)` `ORD`
 
 _Type_: **string (16)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
 _Maximum Length_: **16**  
@@ -63,6 +64,7 @@ _Maximum Length_: **16**
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -70,6 +72,7 @@ _Supports Order By_: ****
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -78,6 +81,7 @@ _Default Value_: **NewGuid**
 Indicates wheather the payment account is currently used (active). `Required` `Default(true)` `Filter(eq)`
 
 _Type_: **boolean**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **True**  
@@ -87,6 +91,7 @@ _Default Value_: **True**
 The name of this PaymentAccount. `Required` `Filter(like)`
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
+_Category_: **System**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 
@@ -95,6 +100,7 @@ _Supports Order By_: **False**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -106,6 +112,7 @@ _Supports Order By_: ****
 The access key, containing the user permissions for this PaymentAccount. Null means that all users have unlimited permissions. `Filter(multi eq)`
 
 _Type_: **[AccessKeys](Systems.Security.AccessKeys.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### BankAccount
@@ -113,6 +120,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The bank account, which is represented by this payment account. `Filter(multi eq)`
 
 _Type_: **[PartyBankAccounts](General.Contacts.PartyBankAccounts.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Currency
@@ -120,6 +128,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The currency in which the movements for this payment account will be recorded. `Required` `Filter(multi eq)`
 
 _Type_: **[Currencies](General.Currencies.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### EnterpriseCompany
@@ -127,6 +136,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The Enterprise Company to which this PaymentAccount applies, or null if it is for all enterprise companies. `Filter(multi eq)`
 
 _Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### EnterpriseCompanyLocation
@@ -134,6 +144,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The Enterprise Company Location to which this PaymentAccount applies, or null if it is for all enterprise company locations. `Filter(multi eq)`
 
 _Type_: **[CompanyLocations](General.Contacts.CompanyLocations.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PaymentType
@@ -141,6 +152,7 @@ _Supported Filters_: **Equals, EqualsIn**
 Specifies the payment type used to pay, when using this payment account. null when the payment type is unknown or unspecified. `Filter(multi eq)`
 
 _Type_: **[PaymentTypes](Finance.Payments.PaymentTypes.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

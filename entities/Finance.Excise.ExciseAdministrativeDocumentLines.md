@@ -60,6 +60,7 @@ Aggregate Root:
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -68,6 +69,7 @@ _Supports Order By_: ****
 The alcoholic strength, which will be used for Excise reporting purposes. null  if the product is not subject to alcoholic Excise reporting. `Introduced in version 21.1.3.97`
 
 _Type_: **decimal (5, 2) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -76,6 +78,7 @@ _Front-End Recalc Expressions:_
 ### ExciseAmount
 
 _Type_: **[Amount (14, 2)](../data-types.md#amount)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -85,6 +88,7 @@ _Front-End Recalc Expressions:_
 ### ExciseAmountBase
 
 _Type_: **decimal (14, 2)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  
@@ -96,6 +100,7 @@ _Front-End Recalc Expressions:_
 The rate which should be applied for the specified product and purpose. null means not assigned yet. `Introduced in version 21.1.3.97`
 
 _Type_: **decimal (10, 6) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -105,6 +110,7 @@ _Front-End Recalc Expressions:_
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -113,6 +119,7 @@ _Default Value_: **NewGuid**
 Consecutive line number within the document. `Required` `Filter(multi eq)`
 
 _Type_: **int32**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Supports Order By_: **False**  
 
@@ -126,6 +133,7 @@ _Front-End Recalc Expressions:_
 Notes for this ExciseAdministrativeDocumentLine.
 
 _Type_: **string (max) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
@@ -135,6 +143,7 @@ _Maximum Length_: **2147483647**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -143,6 +152,7 @@ _Supports Order By_: ****
 The number of the line within the parent document, which the current line executes. Null when the current line does not execute line. `Filter(multi eq)` `Introduced in version 22.1.4.9`
 
 _Type_: **int32 __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Supports Order By_: **False**  
 
@@ -151,6 +161,7 @@ _Supports Order By_: **False**
 The quantity being sold, in the measurement unit, specified in Quantity Unit. `Unit: QuantityUnit` `Required` `Default(1)`
 
 _Type_: **[Quantity (12, 3)](../data-types.md#quantity)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -160,6 +171,7 @@ _Default Value_: **Constant**
 The quantity in base measurement category for the product. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required`
 
 _Type_: **[Quantity (12, 3)](../data-types.md#quantity)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -173,6 +185,7 @@ _Front-End Recalc Expressions:_
 The <see cref="ExciseAdministrativeDocument"/> to which this ExciseAdministrativeDocumentLine belongs. `Required` `Filter(multi eq)`
 
 _Type_: **[ExciseAdministrativeDocuments](Finance.Excise.ExciseAdministrativeDocuments.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ExciseAdministrativeDocument
@@ -180,6 +193,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The <see cref="ExciseAdministrativeDocument"/> to which this ExciseAdministrativeDocumentLine belongs. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[ExciseAdministrativeDocuments](Finance.Excise.ExciseAdministrativeDocuments.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
 
@@ -188,6 +202,7 @@ _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-reference
 The Duty rate specified by the taxation and customs authorities. `Filter(multi eq)` `Introduced in version 21.1.3.97`
 
 _Type_: **[ExciseDutyRates](Finance.Excise.ExciseDutyRates.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Front-End Recalc Expressions:_  
@@ -197,6 +212,7 @@ _Front-End Recalc Expressions:_
 The Excise product code defined by the taxation and customs authorities. `Filter(multi eq)` `Introduced in version 21.1.3.97`
 
 _Type_: **[ExciseProducts](Finance.Excise.ExciseProducts.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Front-End Recalc Expressions:_  
@@ -206,6 +222,7 @@ _Front-End Recalc Expressions:_
 The Purpose codes specify the different purposes recognized by the authorities for determining the excise rate. `Filter(multi eq)` `Introduced in version 21.1.3.97`
 
 _Type_: **[ExcisePurposeCodes](Finance.Excise.ExcisePurposeCodes.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Front-End Recalc Expressions:_  
@@ -215,6 +232,7 @@ _Front-End Recalc Expressions:_
 Transaction of product input or output, measured with specialized measuring device for excise purposes. `Filter(multi eq)` `Introduced in version 21.1.3.87`
 
 _Type_: **[MeasuringTransactions](Finance.Excise.MeasuringTransactions.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ParentDocument
@@ -223,6 +241,7 @@ The document, which the current line executes. Null when the current line does n
 
 _Type_: **[Documents](General.Documents.md) (nullable)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Product
@@ -230,6 +249,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The product being sold. `Required` `Filter(multi eq)`
 
 _Type_: **[Products](General.Products.Products.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### QuantityUnit
@@ -237,6 +257,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The measurement unit of Quantity. `Required` `Filter(multi eq)`
 
 _Type_: **[MeasurementUnits](General.MeasurementUnits.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Front-End Recalc Expressions:_  

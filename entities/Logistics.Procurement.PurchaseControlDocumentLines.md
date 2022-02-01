@@ -65,6 +65,7 @@ Aggregate Root:
 The amount (in base currency) of the ordered items, confirmed by the supplier (usually with Purchase Confirmation). Null when the logged operation did not involve confirming ordered items.
 
 _Type_: **decimal (14, 2) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -73,6 +74,7 @@ _Supports Order By_: **False**
 The standard quantity of the ordered items, confirmed by the supplier (usually with Purchase Confirmation) in base measurement unit. Null when the logged operation did not involve confirming ordered items.
 
 _Type_: **decimal (12, 3) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -81,6 +83,7 @@ _Supports Order By_: **False**
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -88,6 +91,7 @@ _Supports Order By_: ****
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -96,6 +100,7 @@ _Default Value_: **NewGuid**
 The amount (in base currency) of the invoiced items (usually with Purchase Invoice). Null when the logged operation did not involve invoicing items.
 
 _Type_: **decimal (14, 2) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -104,6 +109,7 @@ _Supports Order By_: **False**
 The standard quantity of the invoiced items (usually with Purchase Invoice) in base measurement unit. Null when the logged operation did not involve invoicing items.
 
 _Type_: **decimal (12, 3) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -112,6 +118,7 @@ _Supports Order By_: **False**
 The consecutive line number within the control document. `Required`
 
 _Type_: **int32**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -120,6 +127,7 @@ _Supports Order By_: **False**
 Notes for this PurchaseControlDocumentLine.
 
 _Type_: **string (max) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
@@ -129,6 +137,7 @@ _Maximum Length_: **2147483647**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -137,6 +146,7 @@ _Supports Order By_: ****
 The amount (in base currency) of the ordered items (usually with Purchase Order). Null when the logged operation did not involve ordering items.
 
 _Type_: **decimal (14, 2) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -145,6 +155,7 @@ _Supports Order By_: **False**
 The standard quantity of the ordered items (usually with Purchase Order) in base measurement unit. Null when the logged operation did not involve ordering items.
 
 _Type_: **decimal (12, 3) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -153,6 +164,7 @@ _Supports Order By_: **False**
 The amount (in base currency) of the received items (usually with Receiving Order). Null when the logged operation did not involve receiving items.
 
 _Type_: **decimal (14, 2) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -161,6 +173,7 @@ _Supports Order By_: **False**
 The standard quantity of the received items (usually with Receiving Order) in base measurement unit. Null when the logged operation did not involve receiving items.
 
 _Type_: **decimal (12, 3) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -169,6 +182,7 @@ _Supports Order By_: **False**
 The amount (in base currency) of the requested items (usually with Purchase Requisition). Null when the logged operation did not involve requesting items.
 
 _Type_: **decimal (14, 2) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -177,6 +191,7 @@ _Supports Order By_: **False**
 The standard quantity of the requested items (usually with Purchase Requisition) in base measurement unit. Null when the logged operation did not involve requesting items.
 
 _Type_: **decimal (12, 3) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -189,6 +204,7 @@ The <see cref="PurchaseControlDocument"/> to which this PurchaseControlDocumentL
 
 _Type_: **[PurchaseControlDocuments](Logistics.Procurement.PurchaseControlDocuments.md)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PurchaseControlDocument
@@ -197,6 +213,7 @@ The <see cref="PurchaseControlDocument"/> to which this PurchaseControlDocumentL
 
 _Type_: **[PurchaseControlDocuments](Logistics.Procurement.PurchaseControlDocuments.md)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
 
@@ -205,6 +222,7 @@ _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-reference
 The purchase invoice which is to be or was executed. Null when the data is unknown. `Filter(multi eq)`
 
 _Type_: **[PurchaseInvoices](Logistics.Procurement.PurchaseInvoices.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PurchaseInvoiceLine
@@ -212,6 +230,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The purchase invoice line which is to be or was executed. Null when the data is unknown. `Filter(multi eq)`
 
 _Type_: **[PurchaseInvoiceLines](Logistics.Procurement.PurchaseInvoiceLines.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PurchaseOperationType
@@ -219,6 +238,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The user-defined operation type, which is being recorded by the current line. Used for better grouping of the control entries. null when the operation type was not specified by the user. `Filter(multi eq)`
 
 _Type_: **[PurchaseOperationTypes](Logistics.Procurement.PurchaseOperationTypes.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PurchaseOrder
@@ -226,6 +246,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The purchase order which is to be or was executed. Null when the data is unknown. `Filter(multi eq)`
 
 _Type_: **[PurchaseOrders](Logistics.Procurement.PurchaseOrders.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PurchaseOrderLine
@@ -233,6 +254,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The purchase order line which is to be or was executed. Null when the data is unknown. `Filter(multi eq)`
 
 _Type_: **[PurchaseOrderLines](Logistics.Procurement.PurchaseOrderLines.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PurchaseRequisition
@@ -240,6 +262,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The purchase requisition which is to be or was executed. Null when the data is unknown. `Filter(multi eq)`
 
 _Type_: **[Requisitions](Logistics.Procurement.Requisitions.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PurchaseRequisitionLine
@@ -247,6 +270,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The purchase requisition line which is to be or was executed. Null when the data is unknown. `Filter(multi eq)`
 
 _Type_: **[RequisitionLines](Logistics.Procurement.RequisitionLines.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ReceivingOrder
@@ -254,6 +278,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The receiving order which is to be or was executed. Null when the data is unknown. `Filter(multi eq)`
 
 _Type_: **[ReceivingOrders](Logistics.Procurement.ReceivingOrders.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ReceivingOrderLine
@@ -261,6 +286,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The receiving order line which is to be or was executed. Null when the data is unknown. `Filter(multi eq)`
 
 _Type_: **[ReceivingOrderLines](Logistics.Procurement.ReceivingOrderLines.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

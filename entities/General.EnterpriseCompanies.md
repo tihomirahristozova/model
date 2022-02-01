@@ -76,6 +76,7 @@ Aggregate Tree
 Defines the period for which BI extracts data. BI includes documents with "Document Date" greater than or equal to "BI Start Date". `Filter(eq)` `Introduced in version 18.2`
 
 _Type_: **datetime __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 
@@ -84,6 +85,7 @@ _Supports Order By_: **False**
 Default method for cost evaluation (if not specified in the product). Currently supported: EXP - Explicit lot specifying; AVG - Average cost. `Required` `Default("AVG")`
 
 _Type_: **[DefaultCostingMethod](General.EnterpriseCompanies.md#defaultcostingmethod)**  
+_Category_: **System**  
 Allowed values for the `DefaultCostingMethod`(General.EnterpriseCompanies.md#defaultcostingmethod) data attribute  
 _Allowed Values (General.EnterpriseCompaniesRepository.DefaultCostingMethod Enum Members)_  
 
@@ -102,6 +104,7 @@ _Default Value_: **AverageCost**
 Customer credit limit, which is used by default when creating new customers. It is specified in the base currency of the enterprise company. `Currency: BaseCurrency` `Filter(eq;like)`
 
 _Type_: **[Amount (18, 2)](../data-types.md#amount) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 
@@ -110,6 +113,7 @@ _Supports Order By_: **False**
 The default language for multi-language names in the definitions (like Customer_Name, Product_Name, ...). `Default("en")`
 
 _Type_: **[DefaultLanguage](General.EnterpriseCompanies.md#defaultlanguage) __nullable__**  
+_Category_: **System**  
 Allowed values for the `DefaultLanguage`(General.EnterpriseCompanies.md#defaultlanguage) data attribute  
 _Allowed Values (General.EnterpriseCompaniesRepository.DefaultLanguage Enum Members)_  
 
@@ -127,6 +131,7 @@ _Default Value_: **English**
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -135,6 +140,7 @@ _Supports Order By_: ****
 Start date of the priod when the documents can be edited.
 
 _Type_: **datetime __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -142,6 +148,7 @@ _Supports Order By_: **False**
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -150,6 +157,7 @@ _Default Value_: **NewGuid**
 Indicates whether the current Enterprise company  is active. `Required` `Default(true)` `Filter(multi eq)` `Introduced in version 20.1`
 
 _Type_: **boolean**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Supports Order By_: **False**  
 _Default Value_: **True**  
@@ -159,6 +167,7 @@ _Default Value_: **True**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -167,6 +176,7 @@ _Supports Order By_: ****
 A period of months for which the printed images of the documents will be kept. `Required` `Default(60)` `Filter(multi eq;ge;le)` `Introduced in version 20.1`
 
 _Type_: **int32**  
+_Category_: **System**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan, EqualsIn**  
 _Supports Order By_: **False**  
 _Default Value_: **60**  
@@ -176,6 +186,7 @@ _Default Value_: **60**
 When not null, specifies the background color to use for visualization of the UI when the current enterprise company is selected. The color is in RGBA color format. `Introduced in version 18.2`
 
 _Type_: **int32 __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -187,6 +198,7 @@ _Supports Order By_: **False**
 The access key, containing the user permissions for this EnterpriseCompany. Null means that all users have unlimited permissions. `Filter(multi eq)`
 
 _Type_: **[AccessKeys](Systems.Security.AccessKeys.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### AdvanceProduct
@@ -194,6 +206,7 @@ _Supported Filters_: **Equals, EqualsIn**
 Product that is used for handling advances in trade documents. `Filter(multi eq)`
 
 _Type_: **[Products](General.Products.Products.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### BaseCurrency
@@ -201,6 +214,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The base currency for summary reporting for this company. `Required` `Filter(multi eq)`
 
 _Type_: **[Currencies](General.Currencies.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Company
@@ -209,6 +223,7 @@ Contains the base company data on which this enterprise company is based. `Requi
 
 _Type_: **[Companies](General.Contacts.Companies.md)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ExchangeDifferenceCreditAccount
@@ -216,6 +231,7 @@ _Supported Filters_: **Equals, EqualsIn**
 Account for balancing accounting vouchers with credit difference due to currency exchanges. `Filter(multi eq)`
 
 _Type_: **[Accounts](Finance.Accounting.Accounts.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ExchangeDifferenceDebitAccount
@@ -223,6 +239,7 @@ _Supported Filters_: **Equals, EqualsIn**
 Account for balancing accounting vouchers with debit difference due to currency exchanges. `Filter(multi eq)`
 
 _Type_: **[Accounts](Finance.Accounting.Accounts.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### VATDocumentAmountType
@@ -230,6 +247,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The document amount that is used to determine the amount of the VAT entries when they are generated. `Filter(multi eq)`
 
 _Type_: **[DocumentAmountTypes](General.DocumentAmountTypes.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

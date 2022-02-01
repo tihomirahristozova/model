@@ -50,6 +50,7 @@ Aggregate Root:
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -58,12 +59,14 @@ _Supports Order By_: ****
 The line for which the distribution pattern is specified. `Required` `Filter(multi eq)`
 
 _Type_: **guid**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Id
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -72,6 +75,7 @@ _Default Value_: **NewGuid**
 The percent of the additional amount which should be distributed over the current line. `Required` `Default(0)`
 
 _Type_: **decimal (14, 6)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  
@@ -81,6 +85,7 @@ _Default Value_: **0**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -93,6 +98,7 @@ The <see cref="Document"/> to which this DocumentLineAmount belongs. `Required` 
 
 _Type_: **[Documents](General.Documents.md)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
 
@@ -101,6 +107,7 @@ _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-reference
 The type of amount for which the distribution pattern is specified. `Required` `Filter(multi eq)`
 
 _Type_: **[DocumentAmountTypes](General.DocumentAmountTypes.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Product
@@ -108,6 +115,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The product for which the distribution is specified. It is also the product, specified in the document line, but is duplicated here for integrity purposes. `Required` `Filter(multi eq)`
 
 _Type_: **[Products](General.Products.Products.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ReferencedDocument
@@ -116,6 +124,7 @@ When not null, specifies that this distribution is specified for a referenced do
 
 _Type_: **[Documents](General.Documents.md) (nullable)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

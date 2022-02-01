@@ -48,6 +48,7 @@ Aggregate Root:
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -55,6 +56,7 @@ _Supports Order By_: ****
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -63,6 +65,7 @@ _Default Value_: **NewGuid**
 Notes for this ProjectParticipant.
 
 _Type_: **string (254) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -72,6 +75,7 @@ _Maximum Length_: **254**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -83,6 +87,7 @@ _Supports Order By_: ****
 The party Id of the participant. `Required` `Filter(multi eq)`
 
 _Type_: **[Parties](General.Contacts.Parties.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Project
@@ -90,6 +95,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The project in which the participant will participate. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[Projects](Projects.Projects.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
 
@@ -98,6 +104,7 @@ _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-reference
 The role which the participant will play in the project. null means that the role is undefined. `Filter(multi eq)`
 
 _Type_: **[TypeRoles](Projects.TypeRoles.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

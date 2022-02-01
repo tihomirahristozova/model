@@ -67,6 +67,7 @@ Aggregate Tree
 About me text, written by the user.
 
 _Type_: **string (1024) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **1024**  
@@ -76,6 +77,7 @@ _Maximum Length_: **1024**
 The primary address of the user. Can be specified with latin or local characters. `Filter(like)`
 
 _Type_: **string (128) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **128**  
@@ -85,6 +87,7 @@ _Maximum Length_: **128**
 Alternate email of the user. Can be used for backup email for password restore. `Filter(like)`
 
 _Type_: **string (64) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  
@@ -94,6 +97,7 @@ _Maximum Length_: **64**
 The state of residence of the user. Can be specified with latin or local letters. `Filter(like)`
 
 _Type_: **string (64) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  
@@ -103,6 +107,7 @@ _Maximum Length_: **64**
 The name of the company, for which the user works, as specified by the user. `Filter(like)`
 
 _Type_: **string (64) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  
@@ -112,6 +117,7 @@ _Maximum Length_: **64**
 The country of residence of the user, with latin letters. `Filter(like)`
 
 _Type_: **string (64) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  
@@ -121,6 +127,7 @@ _Maximum Length_: **64**
 The date and time when the user was created. `Default(Now)`
 
 _Type_: **datetime __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **CurrentDateTime**  
@@ -130,6 +137,7 @@ _Default Value_: **CurrentDateTime**
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -138,6 +146,7 @@ _Supports Order By_: ****
 The primary email of the user. Used for notifications and password restore. `Required` `Filter(like)`
 
 _Type_: **string (64)**  
+_Category_: **System**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  
@@ -147,6 +156,7 @@ _Maximum Length_: **64**
 First name of the user. `Required` `Filter(like)`
 
 _Type_: **string (64)**  
+_Category_: **System**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  
@@ -155,6 +165,7 @@ _Maximum Length_: **64**
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -163,6 +174,7 @@ _Default Value_: **NewGuid**
 Specifies whether the user account is active and access should be allowed. `Required` `Default(true)` `Filter(eq)`
 
 _Type_: **boolean**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **True**  
@@ -172,6 +184,7 @@ _Default Value_: **True**
 Last name of the user. `Required` `Filter(like)`
 
 _Type_: **string (64)**  
+_Category_: **System**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  
@@ -181,6 +194,7 @@ _Maximum Length_: **64**
 Notes for this PublicUser.
 
 _Type_: **string (max) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
@@ -190,6 +204,7 @@ _Maximum Length_: **2147483647**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -198,6 +213,7 @@ _Supports Order By_: ****
 Uniquely specifies the password storage algorithm among some system recognized algorithms. Usually specifies the hashing and the stretching functions. For example, 'PBKDF2-SHA1'. `Required` `Filter(like)`
 
 _Type_: **string (16)**  
+_Category_: **System**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **16**  
@@ -207,6 +223,7 @@ _Maximum Length_: **16**
 Actual password storage. The format of the contents is determined by Password Algorithm. `Required` `Filter(like)`
 
 _Type_: **string (128)**  
+_Category_: **System**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **128**  
@@ -216,6 +233,7 @@ _Maximum Length_: **128**
 Automatically generated unique code for the last password recovery attempt. `Filter(multi eq)` `ReadOnly`
 
 _Type_: **guid __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PasswordRecoveryCreationTime
@@ -223,6 +241,7 @@ _Supported Filters_: **Equals, EqualsIn**
 Date and time when the last password recovery code was created. `ReadOnly`
 
 _Type_: **datetime __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -231,6 +250,7 @@ _Supports Order By_: **False**
 The primary phone number of the user. `Filter(like)`
 
 _Type_: **string (16) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **16**  
@@ -240,6 +260,7 @@ _Maximum Length_: **16**
 The postal code of the default address of the user. `Filter(like)`
 
 _Type_: **string (16) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **16**  
@@ -249,6 +270,7 @@ _Maximum Length_: **16**
 Profile picture of the user.
 
 _Type_: **byte[] __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -257,6 +279,7 @@ _Supports Order By_: **False**
 The state of residence of the user within the country. Can be specified with latin or local characters. `Filter(like)`
 
 _Type_: **string (64) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  
@@ -269,6 +292,7 @@ _Maximum Length_: **64**
 Link to an internal company record, specified by internal employee. `Filter(multi eq)`
 
 _Type_: **[Companies](General.Contacts.Companies.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Person
@@ -276,6 +300,7 @@ _Supported Filters_: **Equals, EqualsIn**
 Link to an internal person record. Usually specified by internal employee, but can also be an automated process. `Filter(multi eq)`
 
 _Type_: **[Persons](General.Contacts.Persons.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PublicUserList
@@ -283,6 +308,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The list in which the user account is saved. `Required` `Filter(multi eq)`
 
 _Type_: **[PublicUserLists](Systems.External.PublicUserLists.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

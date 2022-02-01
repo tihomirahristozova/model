@@ -60,6 +60,7 @@ Aggregate Tree
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -68,6 +69,7 @@ _Supports Order By_: ****
 Starting date of validity of the price. `Filter(eq;ge;le)`
 
 _Type_: **date __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -75,6 +77,7 @@ _Supports Order By_: **False**
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -83,6 +86,7 @@ _Default Value_: **NewGuid**
 Maximum quantity for which this price is valid in the Price_Quantity_Measurement_Unit. `Unit: PriceQuantityMeasurementUnit` `Filter(eq;ge;le)`
 
 _Type_: **[Quantity (18, 3)](../data-types.md#quantity) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -91,6 +95,7 @@ _Supports Order By_: **False**
 Minimal quantity required to use this price (in the Price_Quantity_Measurement_Unit). `Unit: PriceQuantityMeasurementUnit` `Filter(eq;ge;le)`
 
 _Type_: **[Quantity (18, 3)](../data-types.md#quantity) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -99,6 +104,7 @@ _Supports Order By_: **False**
 Notes for this ProductPrice. `Filter(like)`
 
 _Type_: **string (254) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -108,6 +114,7 @@ _Maximum Length_: **254**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -116,6 +123,7 @@ _Supports Order By_: ****
 Price in the specified currency and for the specified quantity. `Currency: Currency` `Required` `Default(0)` `Filter(eq;ge;le)`
 
 _Type_: **[Amount (13, 5)](../data-types.md#amount)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -125,6 +133,7 @@ _Default Value_: **Constant**
 The quantity of the product for which the price is specified. `Unit: PriceQuantityMeasurementUnit` `Required` `Default(1)` `Filter(ge;le)`
 
 _Type_: **[Quantity (10, 3)](../data-types.md#quantity)**  
+_Category_: **System**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -134,6 +143,7 @@ _Default Value_: **Constant**
 Priority of the price comparative to other prices. Only the highest priority price is applied. `Required` `Default(2)` `Filter(multi eq)`
 
 _Type_: **[Priority](Crm.ProductPrices.md#priority)**  
+_Category_: **System**  
 Generic enum type for Priority properties  
 _Allowed Values (General.Priority Enum Members)_  
 
@@ -154,6 +164,7 @@ _Default Value_: **2**
 Ending date (inclusive) of the validity of the price. `Filter(eq;ge;le)`
 
 _Type_: **date __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -165,6 +176,7 @@ _Supports Order By_: **False**
 Тhe marketing campaign to which the current definition belongs. `Filter(multi eq)` `Introduced in version 22.1.4.67`
 
 _Type_: **[Campaigns](Crm.Marketing.Campaigns.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Currency
@@ -172,6 +184,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The currency of the price. `Required` `Filter(multi eq)`
 
 _Type_: **[Currencies](General.Currencies.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Customer
@@ -179,6 +192,7 @@ _Supported Filters_: **Equals, EqualsIn**
 When not null, specifies that the customer of the sales document must be the specified customer. `Filter(multi eq)`
 
 _Type_: **[Customers](Crm.Customers.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### DistributionChannel
@@ -186,6 +200,7 @@ _Supported Filters_: **Equals, EqualsIn**
 Use the price only when selling through the specified channel. `Filter(multi eq)`
 
 _Type_: **[DistributionChannels](Crm.Marketing.DistributionChannels.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### EnterpriseCompany
@@ -193,6 +208,7 @@ _Supported Filters_: **Equals, EqualsIn**
 When not null, specifies that the sales document must be in the specified enterprise company. `Filter(multi eq)`
 
 _Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### EnterpriseCompanyLocation
@@ -200,6 +216,7 @@ _Supported Filters_: **Equals, EqualsIn**
 When set, specifies that the sales document must be of the specified enterprise company location. `Filter(multi eq)`
 
 _Type_: **[CompanyLocations](General.Contacts.CompanyLocations.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Front-End Recalc Expressions:_  
@@ -210,6 +227,7 @@ When not null, specifies that the sales document must have the specified price l
 
 _Type_: **[PriceLists](Crm.PriceLists.md) (nullable)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PriceQuantityMeasurementUnit
@@ -217,6 +235,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The measurement unit of Price_Quantity. `Required` `Filter(multi eq)`
 
 _Type_: **[MeasurementUnits](General.MeasurementUnits.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Front-End Recalc Expressions:_  
@@ -226,6 +245,7 @@ _Front-End Recalc Expressions:_
 Price type of the current product price. The price types are used to set additional priority condition for the prices. `Filter(multi eq)`
 
 _Type_: **[PriceTypes](Crm.PriceTypes.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Product
@@ -234,6 +254,7 @@ The product for which a price will be defined. `Required` `Filter(multi eq)`
 
 _Type_: **[Products](General.Products.Products.md)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ShipToCustomer
@@ -241,6 +262,7 @@ _Supported Filters_: **Equals, EqualsIn**
 When not null, specifies that the price will be applied only when the sales document has the specified Ship-To-Customer. `Filter(multi eq)`
 
 _Type_: **[Customers](Crm.Customers.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Front-End Recalc Expressions:_  
@@ -250,6 +272,7 @@ _Front-End Recalc Expressions:_
 When not null, specifies a criteria, which is matched only when the customer of the sales document is included in the group. `Filter(multi eq)`
 
 _Type_: **[TargetGroups](Crm.Marketing.TargetGroups.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

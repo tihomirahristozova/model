@@ -59,6 +59,7 @@ Aggregate Root:
 The cost of the specified quantity of the ingredient. `Currency: Recipe.Product.CostingCurrency` `Required` `Default(0)` `Filter(ge;le)`
 
 _Type_: **[Amount (18, 4)](../data-types.md#amount)**  
+_Category_: **System**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -68,6 +69,7 @@ _Default Value_: **Constant**
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -76,6 +78,7 @@ _Supports Order By_: ****
 Fixed scrap quantity of the material, needed for setup. `Unit: UsageUnit` `Required` `Default(0)`
 
 _Type_: **[Quantity (18, 3)](../data-types.md#quantity)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -84,6 +87,7 @@ _Default Value_: **Constant**
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -92,6 +96,7 @@ _Default Value_: **NewGuid**
 The order of this line in the recipe. `Required`
 
 _Type_: **int32**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -105,6 +110,7 @@ _Front-End Recalc Expressions:_
 Notes for this RecipeIngredient.
 
 _Type_: **string (254) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -114,6 +120,7 @@ _Maximum Length_: **254**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -122,6 +129,7 @@ _Supports Order By_: ****
 Total price of the ingredient. `Currency: Recipe.Product.CostingCurrency` `Required` `Default(0)` `Filter(ge;le)`
 
 _Type_: **[Amount (18, 4)](../data-types.md#amount)**  
+_Category_: **System**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -131,6 +139,7 @@ _Default Value_: **Constant**
 The usual percentage (0..1) of scrap of the raw material; inflates the requirements of this material for this recipe. `Required` `Default(0)`
 
 _Type_: **decimal (7, 6)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  
@@ -140,6 +149,7 @@ _Default Value_: **0**
 Cost of 1 of Usage_Unit_Id. `Currency: Recipe.Product.CostingCurrency` `Required` `Default(0)` `Filter(ge;le)`
 
 _Type_: **[Amount (18, 6)](../data-types.md#amount)**  
+_Category_: **System**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -149,6 +159,7 @@ _Default Value_: **Constant**
 Price for 1 of Usage_Unit_Id. `Currency: Recipe.Product.CostingCurrency` `Required` `Default(0)` `Filter(ge;le)`
 
 _Type_: **[Amount (18, 6)](../data-types.md#amount)**  
+_Category_: **System**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -158,6 +169,7 @@ _Default Value_: **Constant**
 Quantity of the material, consumed in the operation. The measurement unit is the primary unit of Material_Item_Id. `Unit: UsageUnit` `Default(1.000)` `Filter(ge;le)`
 
 _Type_: **[Quantity (18, 6)](../data-types.md#quantity) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -171,6 +183,7 @@ The Id of the consumed material (Gen_Products_Table). `Required` `Filter(multi e
 
 _Type_: **[Products](General.Products.Products.md)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Operation
@@ -178,6 +191,7 @@ _Supported Filters_: **Equals, EqualsIn**
 Specifies for which operation this ingredient will be used. `Filter(multi eq)`
 
 _Type_: **[Operations](Production.Resources.Operations.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PrincipalRecipeIngredient
@@ -185,6 +199,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The principal recipe ingredient which was used to create this recipe ingredient. null means that this ingredient is standalone, not created with principal recipe ingredient. `Filter(multi eq)`
 
 _Type_: **[PrincipalRecipeIngredients](Production.Technologies.PrincipalRecipeIngredients.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Recipe
@@ -193,6 +208,7 @@ The <see cref="Recipe"/> to which this RecipeIngredient belongs. `Required` `Fil
 
 _Type_: **[Recipes](Production.Technologies.Recipes.md)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
 
@@ -201,6 +217,7 @@ _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-reference
 The store from which to retrieve the material. `Filter(multi eq)`
 
 _Type_: **[Stores](Logistics.Inventory.Stores.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### UsageUnit
@@ -208,6 +225,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The measurement unit of Usage_Quantity. The selected item must support the specified unit. `Required` `Filter(multi eq)`
 
 _Type_: **[MeasurementUnits](General.MeasurementUnits.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

@@ -52,6 +52,7 @@ Aggregate Tree
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -60,6 +61,7 @@ _Supports Order By_: ****
 Specifies the documents, whose state will be changed. `Required`
 
 _Type_: **dataaccessfilter**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -67,6 +69,7 @@ _Supports Order By_: **False**
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -75,6 +78,7 @@ _Default Value_: **NewGuid**
 Specifies whether the job is active and ready for running. `Required` `Default(true)` `Filter(eq)` (Inherited from [Jobs](Systems.Core.Jobs.md))
 
 _Type_: **boolean**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **True**  
@@ -84,6 +88,7 @@ _Default Value_: **True**
 The system type of the job. DOC=Document Change State, POS=Run Postponed Events, DNT=Delete Old Notifications. `Required` `Filter(multi eq)` (Inherited from [Jobs](Systems.Core.Jobs.md))
 
 _Type_: **[JobType](General.DocumentJobs.md#jobtype)**  
+_Category_: **System**  
 Allowed values for the `JobType`(Systems.Core.Jobs.md#jobtype) data attribute  
 _Allowed Values (Systems.Core.JobsRepository.JobType Enum Members)_  
 
@@ -103,6 +108,7 @@ The name of the job. `Required` `Filter(eq;like)` `ORD` (Inherited from [Jobs](S
 
 _Type_: **string (254)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
 _Maximum Length_: **254**  
@@ -112,6 +118,7 @@ _Maximum Length_: **254**
 Specifies the state, which should be set to the documents, matching the filter. `Required`
 
 _Type_: **[DocumentState](General.DocumentJobs.md#newstate)**  
+_Category_: **System**  
 Enumeration of document system states  
 _Allowed Values (General.DocumentState Enum Members)_  
 
@@ -133,6 +140,7 @@ _Supports Order By_: **False**
 Notes for this Job. (Inherited from [Jobs](Systems.Core.Jobs.md))
 
 _Type_: **string (max) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
@@ -142,6 +150,7 @@ _Maximum Length_: **2147483647**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -150,6 +159,7 @@ _Supports Order By_: ****
 Specifies whether to automatically run the job when the server is idle. `Required` `Default(true)` `Filter(eq)` (Inherited from [Jobs](Systems.Core.Jobs.md))
 
 _Type_: **boolean**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **True**  
@@ -162,6 +172,7 @@ _Default Value_: **True**
 The type of the document, whose state will be changed. `Required` `Filter(multi eq)`
 
 _Type_: **[DocumentTypes](General.DocumentTypes.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### NewUserStatus
@@ -169,6 +180,7 @@ _Supported Filters_: **Equals, EqualsIn**
 Specifies the user status, which should be set to the documents, matching the filter. The user statuses are defined for the selected document type. `Filter(multi eq)`
 
 _Type_: **[DocumentTypeUserStatuses](General.DocumentTypeUserStatuses.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

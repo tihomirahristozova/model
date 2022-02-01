@@ -53,6 +53,7 @@ Unique code of the maintenance type. `Required` `Filter(eq;like)` `ORD`
 
 _Type_: **string (16)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
 _Maximum Length_: **16**  
@@ -62,6 +63,7 @@ _Maximum Length_: **16**
 Default positive change of the tracked parameter between two maintenances. null means, that maintenances are not scheduled based on parameter change.
 
 _Type_: **int32 __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -70,6 +72,7 @@ _Supports Order By_: **False**
 Specifies the maximum number of days between two maintenances (in addition to the number of months specified in Default Schedule Months). null means that there is no default schedule in days.
 
 _Type_: **int32 __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -78,6 +81,7 @@ _Supports Order By_: **False**
 Specifies the maximum number of months between two maintenances. null means that there is no default schedule in months.
 
 _Type_: **int32 __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -86,6 +90,7 @@ _Supports Order By_: **False**
 Detailed description of the maintenance (multilanguage).
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -94,6 +99,7 @@ _Supports Order By_: **False**
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -101,6 +107,7 @@ _Supports Order By_: ****
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -109,6 +116,7 @@ _Default Value_: **NewGuid**
 Multilanguage name of the maintenance type. `Required` `Filter(eq;like)`
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 
@@ -117,6 +125,7 @@ _Supports Order By_: **False**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -129,6 +138,7 @@ The group, to which this maintenance type belongs. `Required` `Filter(multi eq)`
 
 _Type_: **[MaintenanceTypeGroups](Applications.AssetManagement.MaintenanceTypeGroups.md)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### TrackedParameter
@@ -136,6 +146,7 @@ _Supported Filters_: **Equals, EqualsIn**
 Specifies the parameter, on which the next scheduled maintenance will be based. null means that there is no default schedule, based on parameter. `Filter(multi eq)`
 
 _Type_: **[TrackedParameters](Applications.AssetManagement.TrackedParameters.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

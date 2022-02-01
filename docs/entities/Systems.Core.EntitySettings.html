@@ -182,46 +182,54 @@ Name Data Member:<br>
 <h3 id="displaytext">DisplayText</h3>
 <p>Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.</p>
 <p><em>Type</em>: <strong>string</strong><br>
+<em>Category</em>: <strong>Calculated Attributes</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: ****</p>
 <h3 id="displaytextformat">DisplayTextFormat</h3>
 <p>Interpolated string, containing the default format for displaying values of the entity. null means to use the system-wide default. <code>Introduced in version 22.1.4.18</code></p>
 <p><em>Type</em>: <strong>string (64) <strong>nullable</strong></strong><br>
+<em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>64</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
+<em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="logcreate">LogCreate</h3>
 <p>Specifies whether to log every insert for this entity. <code>Required</code> <code>Default(false)</code> <code>Introduced in version 18.2</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>
+<em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
 <h3 id="logdelete">LogDelete</h3>
 <p>Specifies whether to log every delete for this entity. <code>Required</code> <code>Default(false)</code> <code>Introduced in version 18.2</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>
+<em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
 <h3 id="logreadbyid">LogReadById</h3>
 <p>Specifies whether to log every load by Id for this entity. <code>Required</code> <code>Default(false)</code> <code>Introduced in version 18.2</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>
+<em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
 <h3 id="logreadmany">LogReadMany</h3>
 <p>Specifies whether to log every load of many records for this entity. <code>Required</code> <code>Default(false)</code> <code>Introduced in version 18.2</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>
+<em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
 <h3 id="logupdate">LogUpdate</h3>
 <p>Specifies whether to log every update for this entity. <code>Required</code> <code>Default(false)</code> <code>Introduced in version 18.2</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>
+<em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
@@ -229,17 +237,20 @@ Name Data Member:<br>
 <p>The system name of the entity, which is being secured. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></p>
 <p><em>Type</em>: <strong>string (64)</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
+<em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>True</strong><br>
 <em>Maximum Length</em>: <strong>64</strong></p>
 <h3 id="objectversion">ObjectVersion</h3>
 <p>The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.</p>
 <p><em>Type</em>: <strong>int32</strong><br>
+<em>Category</em>: <strong>Extensible Data Object</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: ****</p>
 <h3 id="trackchangeslevel">TrackChangesLevel</h3>
 <p>The track changes level for the entity. <code>Required</code> <code>Default(0)</code> <code>Filter(multi eq)</code> <code>Introduced in version 19.1</code></p>
 <p><em>Type</em>: <strong><a href="Systems.Core.EntitySettings.html#trackchangeslevel">TrackChangesLevel</a></strong><br>
+<em>Category</em>: <strong>System</strong><br>
 Represents the different levels of tracking changes for a specific entity.<br>
 <em>Allowed Values (Systems.Core.TrackChangesLevel Enum Members)</em></p>
 <table>
@@ -279,6 +290,7 @@ Represents the different levels of tracking changes for a specific entity.<br>
 <h3 id="accesskey">AccessKey</h3>
 <p>The access key, required to access the secured entity. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Systems.Security.AccessKeys.html">AccessKeys</a> (nullable)</strong><br>
+<em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="api-methods">API Methods</h2>
 <p>Methods that can be invoked in public APIs.</p>

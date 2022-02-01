@@ -51,6 +51,7 @@ Aggregate Tree
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -59,6 +60,7 @@ _Supports Order By_: ****
 Interpolated string, containing the default format for displaying values of the entity. null means to use the system-wide default. `Introduced in version 22.1.4.18`
 
 _Type_: **string (64) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  
@@ -67,6 +69,7 @@ _Maximum Length_: **64**
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -75,6 +78,7 @@ _Default Value_: **NewGuid**
 Specifies whether to log every insert for this entity. `Required` `Default(false)` `Introduced in version 18.2`
 
 _Type_: **boolean**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **False**  
@@ -84,6 +88,7 @@ _Default Value_: **False**
 Specifies whether to log every delete for this entity. `Required` `Default(false)` `Introduced in version 18.2`
 
 _Type_: **boolean**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **False**  
@@ -93,6 +98,7 @@ _Default Value_: **False**
 Specifies whether to log every load by Id for this entity. `Required` `Default(false)` `Introduced in version 18.2`
 
 _Type_: **boolean**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **False**  
@@ -102,6 +108,7 @@ _Default Value_: **False**
 Specifies whether to log every load of many records for this entity. `Required` `Default(false)` `Introduced in version 18.2`
 
 _Type_: **boolean**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **False**  
@@ -111,6 +118,7 @@ _Default Value_: **False**
 Specifies whether to log every update for this entity. `Required` `Default(false)` `Introduced in version 18.2`
 
 _Type_: **boolean**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **False**  
@@ -121,6 +129,7 @@ The system name of the entity, which is being secured. `Required` `Filter(eq;lik
 
 _Type_: **string (64)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
 _Maximum Length_: **64**  
@@ -130,6 +139,7 @@ _Maximum Length_: **64**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -138,6 +148,7 @@ _Supports Order By_: ****
 The track changes level for the entity. `Required` `Default(0)` `Filter(multi eq)` `Introduced in version 19.1`
 
 _Type_: **[TrackChangesLevel](Systems.Core.EntitySettings.md#trackchangeslevel)**  
+_Category_: **System**  
 Represents the different levels of tracking changes for a specific entity.  
 _Allowed Values (Systems.Core.TrackChangesLevel Enum Members)_  
 
@@ -161,6 +172,7 @@ _Default Value_: **0**
 The access key, required to access the secured entity. `Filter(multi eq)`
 
 _Type_: **[AccessKeys](Systems.Security.AccessKeys.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

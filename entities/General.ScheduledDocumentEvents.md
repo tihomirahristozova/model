@@ -49,6 +49,7 @@ Aggregate Tree
 When true, specifies that this document event has been cancelled (either manually or in respect to another event) and will not be executed. `Required` `Default(false)` `Filter(eq)`
 
 _Type_: **boolean**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **False**  
@@ -58,6 +59,7 @@ _Default Value_: **False**
 Date and time when the ScheduledDocumentEvent was created. `Required` `Default(Now)` `ReadOnly`
 
 _Type_: **datetime**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **CurrentDateTime**  
@@ -67,6 +69,7 @@ _Default Value_: **CurrentDateTime**
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -75,6 +78,7 @@ _Supports Order By_: ****
 The type of the document event that is scheduled to be processed. `Required` `ReadOnly`
 
 _Type_: **string (254)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -83,6 +87,7 @@ _Maximum Length_: **254**
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -91,6 +96,7 @@ _Default Value_: **NewGuid**
 Status/information of the last attemp to process the event. Usually shows the cause in case of failure. `ReadOnly`
 
 _Type_: **string (max) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
@@ -100,6 +106,7 @@ _Maximum Length_: **2147483647**
 The time of the last attempt to process the event. `ReadOnly`
 
 _Type_: **datetime __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -108,6 +115,7 @@ _Supports Order By_: **False**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -116,6 +124,7 @@ _Supports Order By_: ****
 Indicates wheather the event is already processed or not. `Required` `Default(false)` `Filter(eq)` `ReadOnly`
 
 _Type_: **boolean**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **False**  
@@ -125,6 +134,7 @@ _Default Value_: **False**
 The state of the document for which the event will be processed. `Required` `ReadOnly`
 
 _Type_: **[State](General.ScheduledDocumentEvents.md#state)**  
+_Category_: **System**  
 Allowed values for the `State`(General.ScheduledDocumentEvents.md#state) data attribute  
 _Allowed Values (General.ScheduledDocumentEventsRepository.State Enum Members)_  
 
@@ -149,6 +159,7 @@ _Supports Order By_: **False**
 The document for which the event will be processed. `Required` `Filter(multi eq)` `ReadOnly`
 
 _Type_: **[Documents](General.Documents.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### SourceDocument
@@ -156,6 +167,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The document that has caused this event to be scheduled. `Required` `Filter(multi eq)` `ReadOnly`
 
 _Type_: **[Documents](General.Documents.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

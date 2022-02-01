@@ -68,6 +68,7 @@ Aggregate Tree
 Date and time when the Recipe was created. `Filter(ge;le)` `ReadOnly`
 
 _Type_: **datetime __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -76,6 +77,7 @@ _Supports Order By_: **False**
 Login name of the user, who created the Recipe. `Filter(like)` `ReadOnly`
 
 _Type_: **string (64) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  
@@ -85,6 +87,7 @@ _Maximum Length_: **64**
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -93,6 +96,7 @@ _Supports Order By_: ****
 The last date, when the recipe should be used. null means that the recipe might still be in use. `Filter(ge;le)`
 
 _Type_: **datetime __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -100,6 +104,7 @@ _Supports Order By_: **False**
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -108,6 +113,7 @@ _Default Value_: **NewGuid**
 Default for period: Release_Date - Expiry_Date. `Required` `Default(false)` `Filter(eq)`
 
 _Type_: **boolean**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **False**  
@@ -117,6 +123,7 @@ _Default Value_: **False**
 The name of the recipe. When there is only 1 recipe, it is often equal to the product name. However, when there are multiple recipes for one product, the name is used for diferentiation. `Required` `Filter(like)`
 
 _Type_: **string (64)**  
+_Category_: **System**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  
@@ -126,6 +133,7 @@ _Maximum Length_: **64**
 User comments for the recipe.
 
 _Type_: **string (254) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -135,6 +143,7 @@ _Maximum Length_: **254**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -143,6 +152,7 @@ _Supports Order By_: ****
 The price for the specified Produce_Quantity. `Currency: Product.CostingCurrency` `Required` `Default(0)`
 
 _Type_: **[Amount (18, 4)](../data-types.md#amount)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -152,6 +162,7 @@ _Default Value_: **Constant**
 Price for one lot of the product (according to Lot_Size_Quantity_Base). `Currency: Product.CostingCurrency` `Required` `Default(0)`
 
 _Type_: **[Amount (18, 4)](../data-types.md#amount)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -161,6 +172,7 @@ _Default Value_: **Constant**
 Lot size. This is the produced quantity in one production run. The quantity is measured in the primary unit of Product_Id. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Default(1)`
 
 _Type_: **[Quantity (18, 3)](../data-types.md#quantity)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -170,6 +182,7 @@ _Default Value_: **Constant**
 The date, when the recipe was released to production. `Required` `Default(Today)` `Filter(ge;le)`
 
 _Type_: **datetime**  
+_Category_: **System**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **CurrentDate**  
@@ -179,6 +192,7 @@ _Default Value_: **CurrentDate**
 The percentage (0..1) of scrap usually occurring during the operation. Specifying this leads to inflated requirements of all raw materials for this recipe. `Required` `Default(0)`
 
 _Type_: **decimal (7, 6)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  
@@ -188,6 +202,7 @@ _Default Value_: **0**
 Date and time when the Recipe was last updated. `Filter(ge;le)` `ReadOnly`
 
 _Type_: **datetime __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -196,6 +211,7 @@ _Supports Order By_: **False**
 Login name of the user, who last updated the Recipe. `Filter(like)` `ReadOnly`
 
 _Type_: **string (64) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  
@@ -208,6 +224,7 @@ _Maximum Length_: **64**
 Currency directory, which is used to convert the costs and prices of materials, operations and resources into the currency of the product. `Filter(multi eq)`
 
 _Type_: **[CurrencyDirectories](General.CurrencyDirectories.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PrincipalRecipe
@@ -215,6 +232,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The prinicipal recipe, used to create this recipe. null means that this recipe was created without the help of principal recipe. `Filter(multi eq)`
 
 _Type_: **[PrincipalRecipes](Production.Technologies.PrincipalRecipes.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Product
@@ -223,6 +241,7 @@ The Id of the produced product. `Filter(multi eq)`
 
 _Type_: **[Products](General.Products.Products.md) (nullable)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Store
@@ -230,6 +249,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The store for which this technology is valid. The store is matched with the output store specified in the production order. When null, the technology is valid for all stores. `Filter(multi eq)`
 
 _Type_: **[Stores](Logistics.Inventory.Stores.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

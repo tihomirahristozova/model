@@ -67,6 +67,7 @@ Aggregate Tree
 When not null, specifies that the allowed values are retrieved from the specified entity. `Filter(eq)`
 
 _Type_: **string (64) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  
@@ -76,6 +77,7 @@ _Maximum Length_: **64**
 When not null specifies the filter to apply when extracting allowed values from entity.
 
 _Type_: **dataaccessfilter __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -85,6 +87,7 @@ Unique property code. `Required` `Filter(multi eq;like)` `ORD`
 
 _Type_: **string (40)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, Like, EqualsIn**  
 _Supports Order By_: **True**  
 _Maximum Length_: **40**  
@@ -94,6 +97,7 @@ _Maximum Length_: **40**
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -103,6 +107,7 @@ The entity for which the property is applicable. `Required` `Filter(eq)` `ORD`
 
 _Type_: **string (64)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **True**  
 _Maximum Length_: **64**  
@@ -112,6 +117,7 @@ _Maximum Length_: **64**
 The hint, which is displayed alongside the property. `Filter(multi eq;like)` `Introduced in version 20.1`
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals, Like, EqualsIn**  
 _Supports Order By_: **False**  
 
@@ -119,6 +125,7 @@ _Supports Order By_: **False**
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -127,6 +134,7 @@ _Default Value_: **NewGuid**
 When not null, indicates, that the property is a key property and contains the property consequtive position withing the entity. Used for BI and other analysis.
 
 _Type_: **byte __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -135,6 +143,7 @@ _Supports Order By_: **False**
 When true, allows the property to be set only to allowed value. When false, the property can have any value. `Required` `Default(false)` `Filter(eq)`
 
 _Type_: **boolean**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **False**  
@@ -144,6 +153,7 @@ _Default Value_: **False**
 Limits te length of the property value to the specified number of characters. Null means no limitation.
 
 _Type_: **int16 __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -153,6 +163,7 @@ The name of this CustomProperty. `Required` `Filter(like)` `ORD`
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **True**  
 
@@ -161,6 +172,7 @@ _Supports Order By_: **True**
 Notes for this CustomProperty. `Introduced in version 20.1`
 
 _Type_: **string (max) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
@@ -170,6 +182,7 @@ _Maximum Length_: **2147483647**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -178,6 +191,7 @@ _Supports Order By_: ****
 Type of property values. 'T' - text; 'P' - picture; 'N' - number; 'D' - date. `Required` `Default("T")`
 
 _Type_: **[PropertyType](General.CustomProperties.md#propertytype)**  
+_Category_: **System**  
 Allowed values for the `PropertyType`(General.CustomProperties.md#propertytype) data attribute  
 _Allowed Values (General.CustomPropertiesRepository.PropertyType Enum Members)_  
 
@@ -200,6 +214,7 @@ _Default Value_: **Text**
 Specifies the user defined property, which is used for filtering the allowed values by value of the parent property. `Filter(multi eq)`
 
 _Type_: **[CustomProperties](General.CustomProperties.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### AllowedValuesProperty
@@ -207,6 +222,7 @@ _Supported Filters_: **Equals, EqualsIn**
 When not null, specifies that the current property can have the same allowed values as the specified property. Also, this makes the current and the specified property copy-compatible. `Filter(multi eq)`
 
 _Type_: **[CustomProperties](General.CustomProperties.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PropertiesCategory
@@ -214,6 +230,7 @@ _Supported Filters_: **Equals, EqualsIn**
 When not null, categorizes the property under a category. `Filter(multi eq)`
 
 _Type_: **[PropertiesCategories](General.PropertiesCategories.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

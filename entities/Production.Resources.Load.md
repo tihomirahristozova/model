@@ -53,6 +53,7 @@ Aggregate Root:
 Date of the scheduled load. This is date only. Start_Time and End_Time specify time of day. `Required` `Filter(ge;le)`
 
 _Type_: **datetime**  
+_Category_: **System**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -61,6 +62,7 @@ _Supports Order By_: **False**
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -68,6 +70,7 @@ _Supports Order By_: ****
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -76,6 +79,7 @@ _Default Value_: **NewGuid**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -84,6 +88,7 @@ _Supports Order By_: ****
 Priority of the allocation. 1=Lowest ... 5=Highest. `Required` `Default(3)`
 
 _Type_: **[Priority](Production.Resources.Load.md#priority)**  
+_Category_: **System**  
 Allowed values for the `Priority`(Production.Resources.Load.md#priority) data attribute  
 _Allowed Values (Production.Resources.LoadRepository.Priority Enum Members)_  
 
@@ -104,6 +109,7 @@ _Default Value_: **3**
 S=Setup; R=Run; W=Wait; M=Move. `Required` `Default("R")`
 
 _Type_: **[TimeType](Production.Resources.Load.md#timetype)**  
+_Category_: **System**  
 Allowed values for the `TimeType`(Production.Resources.Load.md#timetype) data attribute  
 _Allowed Values (Production.Resources.LoadRepository.TimeType Enum Members)_  
 
@@ -123,6 +129,7 @@ _Default Value_: **Run**
 The ending time of the planned usage. `Required` `Filter(ge;le)`
 
 _Type_: **datetime**  
+_Category_: **System**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -131,6 +138,7 @@ _Supports Order By_: **False**
 Quantity of the resource, which will be used for production. `Unit: WorkgroupResource.Resource.PrimaryUnit` `Required` `Default(1)` `Filter(ge;le)`
 
 _Type_: **[Quantity (9, 0)](../data-types.md#quantity)**  
+_Category_: **System**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -140,6 +148,7 @@ _Default Value_: **Constant**
 The starting time of the planned usage. `Required` `Filter(ge;le)`
 
 _Type_: **datetime**  
+_Category_: **System**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -148,6 +157,7 @@ _Supports Order By_: **False**
 Time allocated for the operation in minutes. `Required` `Default(0)` `Filter(ge;le)`
 
 _Type_: **int32**  
+_Category_: **System**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  
@@ -160,6 +170,7 @@ _Default Value_: **0**
 The exact resource being utilised. `Required` `Filter(multi eq)`
 
 _Type_: **[WorkgroupResources](Production.Resources.WorkgroupResources.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### WorkOrderItemOperation
@@ -167,6 +178,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The <see cref="Production.ShopFloor.WorkOrderItemOperation"/> to which this Load belongs. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[WorkOrderItemOperations](Production.ShopFloor.WorkOrderItemOperations.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
 

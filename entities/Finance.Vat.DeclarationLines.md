@@ -48,6 +48,7 @@ Aggregate Root:
 Declared value in base currency. `Required` `Default(0)` `Filter(eq;ge;le)`
 
 _Type_: **decimal (14, 2)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  
@@ -57,6 +58,7 @@ _Default Value_: **0**
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -64,6 +66,7 @@ _Supports Order By_: ****
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -72,6 +75,7 @@ _Default Value_: **NewGuid**
 Consecutive line number within the document. `Required`
 
 _Type_: **int32**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -85,6 +89,7 @@ _Front-End Recalc Expressions:_
 Notes for this DeclarationLine.
 
 _Type_: **string (max) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
@@ -94,6 +99,7 @@ _Maximum Length_: **2147483647**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -105,6 +111,7 @@ _Supports Order By_: ****
 Type of box in VAT declaration. . `Required` `Filter(multi eq)`
 
 _Type_: **[BoxTypes](Finance.Vat.BoxTypes.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Declaration
@@ -113,6 +120,7 @@ The <see cref="Declaration"/> to which this DeclarationLine belongs. `Required` 
 
 _Type_: **[Declarations](Finance.Vat.Declarations.md)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
 
@@ -122,6 +130,7 @@ The <see cref="Declaration"/> to which this DeclarationLine belongs. `Required` 
 
 _Type_: **[Declarations](Finance.Vat.Declarations.md)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

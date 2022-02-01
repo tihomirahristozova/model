@@ -55,6 +55,7 @@ Aggregate Root:
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -63,6 +64,7 @@ _Supports Order By_: ****
 The date when the operation was executed. `Required`
 
 _Type_: **date**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -76,6 +78,7 @@ _Front-End Recalc Expressions:_
 The time when the operation was executed. `Required`
 
 _Type_: **time**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -88,6 +91,7 @@ _Front-End Recalc Expressions:_
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -96,6 +100,7 @@ _Default Value_: **NewGuid**
 Consecutive line number within this execution. `Required`
 
 _Type_: **int32**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -109,6 +114,7 @@ _Front-End Recalc Expressions:_
 Notes for this TransportationExecutionLine.
 
 _Type_: **string (max) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
@@ -118,6 +124,7 @@ _Maximum Length_: **2147483647**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -126,6 +133,7 @@ _Supports Order By_: ****
 The type of operation being executed. L=Loading; U=Unloading; O=Other. `Required`
 
 _Type_: **[OperationType](Logistics.Shipment.TransportationExecutionLines.md#operationtype)**  
+_Category_: **System**  
 Allowed values for the `OperationType`(Logistics.Shipment.TransportationExecutionLines.md#operationtype) data attribute  
 _Allowed Values (Logistics.Shipment.TransportationExecutionLinesRepository.OperationType Enum Members)_  
 
@@ -143,6 +151,7 @@ _Supports Order By_: **False**
 Pallet number, when applicable. null when unknown or not applicable.
 
 _Type_: **string (32) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **32**  
@@ -152,6 +161,7 @@ _Maximum Length_: **32**
 Number of pallets affected by this operation. null when unknown or N/A.
 
 _Type_: **int32 __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -160,6 +170,7 @@ _Supports Order By_: **False**
 Cargo volume in cubic meters, affected by this operation. null when unknown or N/A.
 
 _Type_: **int32 __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -168,6 +179,7 @@ _Supports Order By_: **False**
 Cargo weight in kg, affected by this operation. null when unknown or N/A.
 
 _Type_: **int32 __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -180,6 +192,7 @@ The <see cref="TransportationExecution"/> to which this TransportationExecutionL
 
 _Type_: **[TransportationExecutions](Logistics.Shipment.TransportationExecutions.md)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ExecutionOfTransportationOrderLine
@@ -187,6 +200,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The transportation order line, which is executed. `Required` `Filter(multi eq)`
 
 _Type_: **[TransportationOrderLines](Logistics.Shipment.TransportationOrderLines.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### GeoPoint
@@ -194,6 +208,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The geographic point, where the operation is executed. `Required` `Filter(multi eq)`
 
 _Type_: **[GeoPoints](General.Geography.GeoPoints.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Back-End Default Expression:_  
@@ -207,6 +222,7 @@ The <see cref="TransportationExecution"/> to which this TransportationExecutionL
 
 _Type_: **[TransportationExecutions](Logistics.Shipment.TransportationExecutions.md)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
 

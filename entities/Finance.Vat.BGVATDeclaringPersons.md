@@ -52,6 +52,7 @@ Aggregate Root:
 Type of the declaring person. A=Attorney, R=Representative. `Required` `Filter(eq)`
 
 _Type_: **[DeclarerType](Finance.Vat.BGVATDeclaringPersons.md#declarertype)**  
+_Category_: **System**  
 Allowed values for the `DeclarerType`(Finance.Vat.BGVATDeclaringPersons.md#declarertype) data attribute  
 _Allowed Values (Finance.Vat.BGVATDeclaringPersonsRepository.DeclarerType Enum Members)_  
 
@@ -68,6 +69,7 @@ _Supports Order By_: **False**
 Address for correspondation of the declaring person. `Required`
 
 _Type_: **string (150)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **150**  
@@ -79,6 +81,7 @@ _Front-End Recalc Expressions:_
 City from the address for correspondation of the declaring person. `Required`
 
 _Type_: **string (50)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **50**  
@@ -88,6 +91,7 @@ _Maximum Length_: **50**
 Position of the declaring person in the enterprise company.
 
 _Type_: **string (50) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **50**  
@@ -97,6 +101,7 @@ _Maximum Length_: **50**
 Postcode from the address for correspondation of the declaring person. `Required`
 
 _Type_: **string (4)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **4**  
@@ -106,6 +111,7 @@ _Maximum Length_: **4**
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -113,6 +119,7 @@ _Supports Order By_: ****
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -121,6 +128,7 @@ _Default Value_: **NewGuid**
 True if this is the default person, which issues VAT declarations for this Enterprise Company. `Required` `Default(true)`
 
 _Type_: **boolean**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **True**  
@@ -130,6 +138,7 @@ _Default Value_: **True**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -142,6 +151,7 @@ The enterprise company for which the person is presenting the declaration. `Requ
 
 _Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
 
@@ -150,6 +160,7 @@ _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-reference
 The person that is presenting the declaration. `Required` `Filter(multi eq)`
 
 _Type_: **[Persons](General.Contacts.Persons.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

@@ -62,6 +62,7 @@ Aggregate Root:
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -69,6 +70,7 @@ _Supports Order By_: ****
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -77,6 +79,7 @@ _Default Value_: **NewGuid**
 Order of the operation within the recipe. `Required`
 
 _Type_: **int32**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -90,6 +93,7 @@ _Front-End Recalc Expressions:_
 How many minutes after the start of this operation can the next operation start. null means that the next operation should wait this operation to finish before starting.
 
 _Type_: **int32 __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -98,6 +102,7 @@ _Supports Order By_: **False**
 Time to move the lot to the next operation in minutes. `Required` `Default(0)`
 
 _Type_: **int32**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  
@@ -107,6 +112,7 @@ _Default Value_: **0**
 Notes for this RecipeOperation.
 
 _Type_: **string (254) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -116,6 +122,7 @@ _Maximum Length_: **254**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -124,6 +131,7 @@ _Supports Order By_: ****
 The description of the operation.
 
 _Type_: **string (max) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
@@ -133,6 +141,7 @@ _Maximum Length_: **2147483647**
 Duration of the operation for standard lot of the product. `Required` `Default(0)`
 
 _Type_: **int32**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  
@@ -142,6 +151,7 @@ _Default Value_: **0**
 Standard rate of scrap during the operation. `Required` `Default(0)`
 
 _Type_: **decimal (7, 6)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  
@@ -151,6 +161,7 @@ _Default Value_: **0**
 Time needed to setup the equipment. `Required` `Default(0)`
 
 _Type_: **int32**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  
@@ -160,6 +171,7 @@ _Default Value_: **0**
 Standard cost per hour for this operation. It participates in the calculation of standard cost for production for the whole recipe. `Currency: Recipe.Product.CostingCurrency`
 
 _Type_: **[Amount (18, 6)](../data-types.md#amount) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -168,6 +180,7 @@ _Supports Order By_: **False**
 Standard price for 1 hour work. `Currency: Recipe.Product.CostingCurrency` `Required` `Default(0)`
 
 _Type_: **[Amount (18, 6)](../data-types.md#amount)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -177,6 +190,7 @@ _Default Value_: **Constant**
 The tools needed for the routing step.
 
 _Type_: **string (max) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
@@ -186,6 +200,7 @@ _Maximum Length_: **2147483647**
 Quantity of the workgroup resource that should be allocated for the operation. `Unit: UseQuantityUnit` `Required` `Default(1)`
 
 _Type_: **[Quantity (9, 3)](../data-types.md#quantity)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -195,6 +210,7 @@ _Default Value_: **Constant**
 Wait time (drying, cooling, etc.) after the operation in minutes. `Required` `Default(0)`
 
 _Type_: **int32**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  
@@ -207,6 +223,7 @@ _Default Value_: **0**
 Standard operation Id. If not null used to load the details. If null the details (times, scrap rates, etc.) must be entered manually. `Filter(multi eq)`
 
 _Type_: **[Operations](Production.Resources.Operations.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### OperationInstruction
@@ -214,6 +231,7 @@ _Supported Filters_: **Equals, EqualsIn**
 Link to additional data, containing instructions in external format. `Filter(multi eq)`
 
 _Type_: **[OperationInstructions](Production.Resources.OperationInstructions.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Recipe
@@ -222,6 +240,7 @@ The <see cref="Recipe"/> to which this RecipeOperation belongs. `Required` `Filt
 
 _Type_: **[Recipes](Production.Technologies.Recipes.md)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
 
@@ -230,6 +249,7 @@ _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-reference
 The measurement unit of Use_Quantity. `Required` `Filter(multi eq)`
 
 _Type_: **[MeasurementUnits](General.MeasurementUnits.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### WorkgroupResource
@@ -237,6 +257,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The exact workgroup resource that is engaged in the operation. null means that no resource is needed or it will be specfied at a later stage. `Required` `Filter(multi eq)`
 
 _Type_: **[WorkgroupResources](Production.Resources.WorkgroupResources.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

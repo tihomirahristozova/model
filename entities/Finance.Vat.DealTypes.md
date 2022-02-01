@@ -53,6 +53,7 @@ Aggregate Tree
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -61,6 +62,7 @@ _Supports Order By_: ****
 Type of the VAT entries, which are made for this deal type. S=Sales, P=Purchases. `Required` `Filter(eq)`
 
 _Type_: **[EntryType](Finance.Vat.DealTypes.md#entrytype)**  
+_Category_: **System**  
 Allowed values for the `EntryType`(Finance.Vat.DealTypes.md#entrytype) data attribute  
 _Allowed Values (Finance.Vat.DealTypesRepository.EntryType Enum Members)_  
 
@@ -76,6 +78,7 @@ _Supports Order By_: **False**
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -84,6 +87,7 @@ _Default Value_: **NewGuid**
 Is_System is True for those deal types that are managed by the system via update procedures and cannot be edited by the user. `Required` `Default(false)` `Filter(eq)` `ReadOnly`
 
 _Type_: **boolean**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **False**  
@@ -93,6 +97,7 @@ _Default Value_: **False**
 Description of the deal type. `Required` `Filter(eq;like)`
 
 _Type_: **string (254)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -102,6 +107,7 @@ _Maximum Length_: **254**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -113,6 +119,7 @@ _Supports Order By_: ****
 The country for which this deal type applies. The country is matched against the country of the enterprise company. `Required` `Filter(multi eq)`
 
 _Type_: **[Countries](General.Geography.Countries.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

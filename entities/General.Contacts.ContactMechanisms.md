@@ -46,6 +46,7 @@ Aggregate Tree
 A=Address; E=e-mail; T=Telephone. `Required` `Default("A")` `Filter(multi eq)`
 
 _Type_: **[ContactMechanismType](General.Contacts.ContactMechanisms.md#contactmechanismtype)**  
+_Category_: **System**  
 Allowed values for the `ContactMechanismType`(General.Contacts.ContactMechanisms.md#contactmechanismtype) data attribute  
 _Allowed Values (General.Contacts.ContactMechanismsRepository.ContactMechanismType Enum Members)_  
 
@@ -70,6 +71,7 @@ _Default Value_: **Address**
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -77,6 +79,7 @@ _Supports Order By_: ****
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -85,6 +88,7 @@ _Default Value_: **NewGuid**
 Contact mechanism description. `Required` `Filter(eq;like)`
 
 _Type_: **string (254)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -94,6 +98,7 @@ _Maximum Length_: **254**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -105,6 +110,7 @@ _Supports Order By_: ****
 The administrative region, where the contact mechanism is situated. Null if this is unknown or N/A. `Filter(multi eq)` `Introduced in version 18.2`
 
 _Type_: **[AdministrativeRegions](General.Geography.AdministrativeRegions.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### GeoPoint
@@ -112,6 +118,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The geographical point, where the contact mechanism is situated. Null if this is unknown or N/A. `Filter(multi eq)` `Introduced in version 18.2`
 
 _Type_: **[GeoPoints](General.Geography.GeoPoints.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

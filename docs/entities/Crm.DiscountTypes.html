@@ -162,6 +162,7 @@ Name Data Member:<br>
 <h3 id="actiontype">ActionType</h3>
 <p>Specifies the way the discount is applied over the previous discounts. <code>Required</code> <code>Default(&quot;A&quot;)</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Crm.DiscountTypes.html#actiontype">ActionType</a></strong><br>
+<em>Category</em>: <strong>System</strong><br>
 Allowed values for the <code>ActionType</code>(Crm.DiscountTypes.md#actiontype) data attribute<br>
 <em>Allowed Values (Crm.DiscountTypesRepository.ActionType Enum Members)</em></p>
 <table>
@@ -192,6 +193,7 @@ Allowed values for the <code>ActionType</code>(Crm.DiscountTypes.md#actiontype) 
 <h3 id="calculationmethod">CalculationMethod</h3>
 <p>Specifies whether the calculation method of the discount is based on a standard discount, promotional package, bonus program, etc. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Crm.DiscountTypes.html#calculationmethod">CalculationMethod</a></strong><br>
+<em>Category</em>: <strong>System</strong><br>
 Allowed values for the <code>CalculationMethod</code>(Crm.DiscountTypes.md#calculationmethod) data attribute<br>
 <em>Allowed Values (Crm.DiscountTypesRepository.CalculationMethod Enum Members)</em></p>
 <table>
@@ -221,45 +223,53 @@ Allowed values for the <code>CalculationMethod</code>(Crm.DiscountTypes.md#calcu
 <h3 id="code">Code</h3>
 <p>The unique code of the DiscountType. <code>Required</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong>string (32)</strong><br>
+<em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>32</strong></p>
 <h3 id="displaytext">DisplayText</h3>
 <p>Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.</p>
 <p><em>Type</em>: <strong>string</strong><br>
+<em>Category</em>: <strong>Calculated Attributes</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: ****</p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
+<em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="issystem">IsSystem</h3>
 <p>Specifies whether this discount type is created and managed by the system. <code>Required</code> <code>Default(false)</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>
+<em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
 <h3 id="name">Name</h3>
 <p>The name of this DiscountType. <code>Required</code> <code>Filter(like)</code></p>
 <p><em>Type</em>: <strong>string (254)</strong><br>
+<em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>254</strong></p>
 <h3 id="notes">Notes</h3>
 <p>Notes for this DiscountType.</p>
 <p><em>Type</em>: <strong>string (max) <strong>nullable</strong></strong><br>
+<em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>2147483647</strong></p>
 <h3 id="objectversion">ObjectVersion</h3>
 <p>The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.</p>
 <p><em>Type</em>: <strong>int32</strong><br>
+<em>Category</em>: <strong>Extensible Data Object</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: ****</p>
 <h3 id="ord">Ord</h3>
 <p>Determines the order in which the discounts are applied. The discounts with smaller Ord are applied first. <code>Required</code> <code>Default(1)</code> <code>Filter(ge;le)</code></p>
 <p><em>Type</em>: <strong>int32</strong><br>
+<em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>1</strong></p>

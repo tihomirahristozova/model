@@ -63,6 +63,7 @@ Aggregate Root:
 The body of the message.
 
 _Type_: **string (max) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
@@ -72,6 +73,7 @@ _Maximum Length_: **2147483647**
 Semicolon-separated list of Cc email addresses. `Filter(like)`
 
 _Type_: **string (2048) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2048**  
@@ -81,6 +83,7 @@ _Maximum Length_: **2048**
 Date and time when the message was created. `Required` `Default(Now)` `Filter(ge;le)`
 
 _Type_: **datetime**  
+_Category_: **System**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **CurrentDateTime**  
@@ -90,6 +93,7 @@ _Default Value_: **CurrentDateTime**
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -98,6 +102,7 @@ _Supports Order By_: ****
 Sending email address. `Required` `Filter(like)`
 
 _Type_: **string (512)**  
+_Category_: **System**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **512**  
@@ -106,6 +111,7 @@ _Maximum Length_: **512**
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -114,6 +120,7 @@ _Default Value_: **NewGuid**
 True when the message is stored in encrypted format. `Required` `Default(false)` `Filter(eq)`
 
 _Type_: **boolean**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **False**  
@@ -123,6 +130,7 @@ _Default Value_: **False**
 True when the message was read by the user. `Required` `Default(false)` `Filter(eq)`
 
 _Type_: **boolean**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **False**  
@@ -132,6 +140,7 @@ _Default Value_: **False**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -140,6 +149,7 @@ _Supports Order By_: ****
 Date and time when the message was received. `Filter(ge;le)`
 
 _Type_: **datetime __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -148,6 +158,7 @@ _Supports Order By_: **False**
 Date and time when the message was sent. `Filter(ge;le)`
 
 _Type_: **datetime __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -157,6 +168,7 @@ Message ID as it appears on the mail server. `Filter(eq)` `ORD`
 
 _Type_: **string (256) __nullable__**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **True**  
 _Maximum Length_: **256**  
@@ -166,6 +178,7 @@ _Maximum Length_: **256**
 The message subject. `Filter(like)`
 
 _Type_: **string (1024) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **1024**  
@@ -175,6 +188,7 @@ _Maximum Length_: **1024**
 Semicolon-separated list of receiving email addresses. `Filter(like)`
 
 _Type_: **string (2048) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2048**  
@@ -188,6 +202,7 @@ The <see cref="BoxFolder"/> to which this Message belongs. `Required` `Filter(mu
 
 _Type_: **[BoxFolders](Applications.Mail.BoxFolders.md)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
 
@@ -196,6 +211,7 @@ _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-reference
 The party id of the external participating (sender/receiver) party (customer, supplier, etc.) in this mail. null means that the email is still not related to any specific party. `Filter(multi eq)`
 
 _Type_: **[Parties](General.Contacts.Parties.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

@@ -40,6 +40,7 @@ Aggregate Tree
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -48,6 +49,7 @@ _Supports Order By_: ****
 Obsolete. Not used. `Required` `Filter(multi eq)`
 
 _Type_: **guid**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### DocumentId
@@ -55,6 +57,7 @@ _Supported Filters_: **Equals, EqualsIn**
 Obsolete. Not used. `Required` `Filter(multi eq)`
 
 _Type_: **guid**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### DocumentLineId
@@ -62,12 +65,14 @@ _Supported Filters_: **Equals, EqualsIn**
 Obsolete. Not used. `Required` `Filter(multi eq)`
 
 _Type_: **guid**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Id
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### LinePercent
@@ -75,6 +80,7 @@ _Supported Filters_: **Equals, EqualsIn**
 Obsolete. Not used. `Required`
 
 _Type_: **decimal (7, 6)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -83,6 +89,7 @@ _Supports Order By_: **False**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -91,6 +98,7 @@ _Supports Order By_: ****
 Obsolete. Not used. `Required` `Filter(multi eq)`
 
 _Type_: **guid**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

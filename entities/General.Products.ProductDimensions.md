@@ -52,6 +52,7 @@ Aggregate Root:
 This was intended to be the divisor, but due to a historical bug actually contains the multiplier of the convertion ratio from the non-base measurement category to the base measurement category. This should be automatically calculated by the system. `Required`
 
 _Type_: **decimal (9, 3)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -65,6 +66,7 @@ _Front-End Recalc Expressions:_
 This was intended to be the multiplier, but due to a historical bug actually contains the divisor of the convertion ratio from the non-base measurement category to the base measurement category. This should be automatically calculated by the system. `Required`
 
 _Type_: **decimal (9, 3)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -78,6 +80,7 @@ _Front-End Recalc Expressions:_
 Quantity in some of the base units, that equals Source_Quantity. `Unit: DestQuantityUnit` `Required` `Default(1)`
 
 _Type_: **[Quantity (9, 3)](../data-types.md#quantity)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -87,6 +90,7 @@ _Default Value_: **Constant**
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -94,6 +98,7 @@ _Supports Order By_: ****
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -102,6 +107,7 @@ _Default Value_: **NewGuid**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -110,6 +116,7 @@ _Supports Order By_: ****
 The quantity in the non-base unit. `Unit: SourceQuantityUnit` `Required` `Default(1)`
 
 _Type_: **[Quantity (9, 3)](../data-types.md#quantity)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -122,6 +129,7 @@ _Default Value_: **Constant**
 The measurement unit of Dest_Quantity. Should be one of the units of the base measurement category of the product. `Required` `Filter(multi eq)`
 
 _Type_: **[MeasurementUnits](General.MeasurementUnits.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### MeasurementCategory
@@ -129,6 +137,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The measurement category of Source Quantity Unit. For each product, only one conversion ratio can be specified for a measurement category. `Required` `Filter(multi eq)` `ReadOnly`
 
 _Type_: **[MeasurementCategories](General.MeasurementCategories.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Back-End Default Expression:_  
@@ -142,6 +151,7 @@ The product for which we specify conversion ratios. `Required` `Filter(multi eq)
 
 _Type_: **[Products](General.Products.Products.md)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
 
@@ -150,6 +160,7 @@ _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-reference
 The non-base measurement unit for which we specify convertion ratio. `Required` `Filter(multi eq)`
 
 _Type_: **[MeasurementUnits](General.MeasurementUnits.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

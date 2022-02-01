@@ -55,6 +55,7 @@ Aggregate Root:
 The consumed quantity of the material for the operation. `Unit: QuantityUnit` `Required` `Default(0)`
 
 _Type_: **[Quantity (18, 3)](../data-types.md#quantity)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -64,6 +65,7 @@ _Default Value_: **Constant**
 The scrapped quantity of the material for this operation. `Unit: QuantityUnit` `Required` `Default(0)`
 
 _Type_: **[Quantity (18, 3)](../data-types.md#quantity)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -73,6 +75,7 @@ _Default Value_: **Constant**
 The consumed quantity of the material while setting up the operation. `Unit: QuantityUnit` `Required` `Default(0)`
 
 _Type_: **[Quantity (18, 3)](../data-types.md#quantity)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -82,6 +85,7 @@ _Default Value_: **Constant**
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -89,6 +93,7 @@ _Supports Order By_: ****
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -97,6 +102,7 @@ _Default Value_: **NewGuid**
 Line number, unique within the OutputOrder. Usually is increasing number like 10, 20, 30, ... when initially entering the OutputOrder (in order to allow insertions with adjustment documents). `Required`
 
 _Type_: **int32**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -110,6 +116,7 @@ _Front-End Recalc Expressions:_
 Notes for this OutputOrderConsumptionLine.
 
 _Type_: **string (max) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
@@ -119,6 +126,7 @@ _Maximum Length_: **2147483647**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -131,6 +139,7 @@ The <see cref="OutputOrder"/> to which this OutputOrderConsumptionLine belongs. 
 
 _Type_: **[OutputOrders](Production.ShopFloor.OutputOrders.md)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### LineWorkOrder
@@ -138,6 +147,7 @@ _Supported Filters_: **Equals, EqualsIn**
 Work order for the line. Initially copied from the header (if there work order is not null). `Required` `Filter(multi eq)`
 
 _Type_: **[WorkOrders](Production.ShopFloor.WorkOrders.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Front-End Recalc Expressions:_  
@@ -147,6 +157,7 @@ _Front-End Recalc Expressions:_
 The consumed material. `Required` `Filter(multi eq)`
 
 _Type_: **[Products](General.Products.Products.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### OutputOrder
@@ -155,6 +166,7 @@ The <see cref="OutputOrder"/> to which this OutputOrderConsumptionLine belongs. 
 
 _Type_: **[OutputOrders](Production.ShopFloor.OutputOrders.md)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
 
@@ -163,6 +175,7 @@ _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-reference
 The measurement unit for the consumed quantity for setup, run and scrap. `Required` `Filter(multi eq)`
 
 _Type_: **[MeasurementUnits](General.MeasurementUnits.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Front-End Recalc Expressions:_  
@@ -172,6 +185,7 @@ _Front-End Recalc Expressions:_
 When Consumed_Quantity_For_Scrap &lt;&gt; 0 denotes the reason for the scrap. `Filter(multi eq)`
 
 _Type_: **[ScrapTypes](Logistics.Inventory.ScrapTypes.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### WorkOrderItem
@@ -179,6 +193,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The work order item, for which the consumption is recorded. `Required` `Filter(multi eq)`
 
 _Type_: **[WorkOrderItems](Production.ShopFloor.WorkOrderItems.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### WorkOrderItemOperation
@@ -186,6 +201,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The operation in which the material was consumed. null = unknown. `Filter(multi eq)`
 
 _Type_: **[WorkOrderItemOperations](Production.ShopFloor.WorkOrderItemOperations.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

@@ -46,6 +46,7 @@ Aggregate Tree
 Specifies the way the discount is applied over the previous discounts. `Required` `Default("A")` `Filter(multi eq)`
 
 _Type_: **[ActionType](Crm.DiscountTypes.md#actiontype)**  
+_Category_: **System**  
 Allowed values for the `ActionType`(Crm.DiscountTypes.md#actiontype) data attribute  
 _Allowed Values (Crm.DiscountTypesRepository.ActionType Enum Members)_  
 
@@ -64,6 +65,7 @@ _Default Value_: **Add**
 Specifies whether the calculation method of the discount is based on a standard discount, promotional package, bonus program, etc. `Required` `Filter(multi eq)`
 
 _Type_: **[CalculationMethod](Crm.DiscountTypes.md#calculationmethod)**  
+_Category_: **System**  
 Allowed values for the `CalculationMethod`(Crm.DiscountTypes.md#calculationmethod) data attribute  
 _Allowed Values (Crm.DiscountTypesRepository.CalculationMethod Enum Members)_  
 
@@ -81,6 +83,7 @@ _Supports Order By_: **False**
 The unique code of the DiscountType. `Required` `Filter(eq)`
 
 _Type_: **string (32)**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Maximum Length_: **32**  
@@ -90,6 +93,7 @@ _Maximum Length_: **32**
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -97,6 +101,7 @@ _Supports Order By_: ****
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -105,6 +110,7 @@ _Default Value_: **NewGuid**
 Specifies whether this discount type is created and managed by the system. `Required` `Default(false)` `Filter(multi eq)`
 
 _Type_: **boolean**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Supports Order By_: **False**  
 _Default Value_: **False**  
@@ -114,6 +120,7 @@ _Default Value_: **False**
 The name of this DiscountType. `Required` `Filter(like)`
 
 _Type_: **string (254)**  
+_Category_: **System**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -123,6 +130,7 @@ _Maximum Length_: **254**
 Notes for this DiscountType.
 
 _Type_: **string (max) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
@@ -132,6 +140,7 @@ _Maximum Length_: **2147483647**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -140,6 +149,7 @@ _Supports Order By_: ****
 Determines the order in which the discounts are applied. The discounts with smaller Ord are applied first. `Required` `Default(1)` `Filter(ge;le)`
 
 _Type_: **int32**  
+_Category_: **System**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **1**  

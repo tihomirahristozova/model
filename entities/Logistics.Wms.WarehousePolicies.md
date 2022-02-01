@@ -55,6 +55,7 @@ Aggregate Root:
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -63,6 +64,7 @@ _Supports Order By_: ****
 When set, specifies the activation date of the policy. `Filter(eq;ge;le)`
 
 _Type_: **date __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -70,6 +72,7 @@ _Supports Order By_: **False**
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -78,6 +81,7 @@ _Default Value_: **NewGuid**
 The importance of the policy, relative to other applicable policies. Higher numbers indicate higher importance. `Required` `Default(0)` `Filter(eq;ge;le)`
 
 _Type_: **int32**  
+_Category_: **System**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  
@@ -85,6 +89,7 @@ _Default Value_: **0**
 ### Note
 
 _Type_: **string (max) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
@@ -94,6 +99,7 @@ _Maximum Length_: **2147483647**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -102,6 +108,7 @@ _Supports Order By_: ****
 The kind of policy, which is being applied. `Required` `Filter(multi eq)`
 
 _Type_: **[PolicyKind](Logistics.Wms.WarehousePolicies.md#policykind)**  
+_Category_: **System**  
 Allowed values for the `PolicyKind`(Logistics.Wms.WarehousePolicies.md#policykind) data attribute  
 _Allowed Values (Logistics.Wms.WarehousePoliciesRepository.PolicyKind Enum Members)_  
 
@@ -123,6 +130,7 @@ _Supports Order By_: **False**
 When set, specifies the de-activation date of the policy. `Filter(eq;ge;le)`
 
 _Type_: **date __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -131,6 +139,7 @@ _Supports Order By_: **False**
 The value specified for the policy. For boolean policies, allowed values are "true" and "false". `Required` `Filter(eq;ge;le)`
 
 _Type_: **string (64)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  
@@ -143,6 +152,7 @@ _Maximum Length_: **64**
 When set, specifies that the policy will apply to the specified product only. `Filter(multi eq)`
 
 _Type_: **[Products](General.Products.Products.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ProductGroup
@@ -150,6 +160,7 @@ _Supported Filters_: **Equals, EqualsIn**
 When set, specifies that the policy will apply to the specified product group only. `Filter(multi eq)` `Introduced in version 22.1.4.36`
 
 _Type_: **[ProductGroups](General.Products.ProductGroups.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ProductType
@@ -157,6 +168,7 @@ _Supported Filters_: **Equals, EqualsIn**
 When set, specifies that the policy will apply to the specified product type only. `Filter(multi eq)`
 
 _Type_: **[ProductTypes](General.Products.ProductTypes.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Warehouse
@@ -164,6 +176,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The warehouse for which the policy is defined. . `Required` `Filter(multi eq)` `ReadOnly` `Owner`
 
 _Type_: **[Warehouses](Logistics.Wms.Warehouses.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
 
@@ -172,6 +185,7 @@ _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-reference
 When set, specifies that the policy will apply to the specified zone and its sub-zones. `Filter(multi eq)`
 
 _Type_: **[WarehouseZones](Logistics.Wms.WarehouseZones.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

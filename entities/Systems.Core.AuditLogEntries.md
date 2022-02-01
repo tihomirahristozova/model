@@ -52,6 +52,7 @@ Aggregate Tree
 The client application that triggered the event. Null when unknown or N/A. `Filter(eq;like)`
 
 _Type_: **string (64) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  
@@ -61,6 +62,7 @@ _Maximum Length_: **64**
 Detailed contents of the event. Contents depend on the Event Type and Event Name.
 
 _Type_: **string (max) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
@@ -70,6 +72,7 @@ _Maximum Length_: **2147483647**
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -78,6 +81,7 @@ _Supports Order By_: ****
 The Id of the record, which is referenced by the event. Null when unknown or N/A. `Filter(multi eq)`
 
 _Type_: **guid __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### EntityName
@@ -85,6 +89,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The entity, which is being referenced by the event. Null when unknown or N/A. `Filter(eq;like)`
 
 _Type_: **string (64) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  
@@ -94,6 +99,7 @@ _Maximum Length_: **64**
 The event primary classification, which shows the source of the event. E=Entity methods; A=Auth events; S=Server events. `Required` `Filter(multi eq)`
 
 _Type_: **[EventClass](Systems.Core.AuditLogEntries.md#eventclass)**  
+_Category_: **System**  
 Allowed values for the `EventClass`(Systems.Core.AuditLogEntries.md#eventclass) data attribute  
 _Allowed Values (Systems.Core.AuditLogEntriesRepository.EventClass Enum Members)_  
 
@@ -111,6 +117,7 @@ _Supports Order By_: **False**
 Specific event or method name. Contents depend on the Event Type. Null when N/A. `Filter(eq;like)`
 
 _Type_: **string (128) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **128**  
@@ -121,6 +128,7 @@ The exact date and time (in Utc) when the event occurred. `Required` `Default(No
 
 _Type_: **datetime**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **True**  
 _Default Value_: **CurrentDateTime**  
@@ -130,6 +138,7 @@ _Default Value_: **CurrentDateTime**
 Detailed action type. EID=Read one record by Id; ELD=Load many records; EUP=Update data; EDE=Delete record; EMT=Call method; ETH=Other entity event; AIN=Login; AOU=Log out; AUP=Sign Up; AFL=Login failed; APW=Change password; ATH=Other auth event; STH=Other server event. `Required` `Filter(multi eq)`
 
 _Type_: **[EventType](Systems.Core.AuditLogEntries.md#eventtype)**  
+_Category_: **System**  
 Allowed values for the `EventType`(Systems.Core.AuditLogEntries.md#eventtype) data attribute  
 _Allowed Values (Systems.Core.AuditLogEntriesRepository.EventType Enum Members)_  
 
@@ -157,6 +166,7 @@ _Supports Order By_: **False**
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -165,6 +175,7 @@ _Default Value_: **NewGuid**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -176,6 +187,7 @@ _Supports Order By_: ****
 The personal data process, which was used to process the data, referenced by the event. Null when unknown or N/A. `Filter(multi eq)`
 
 _Type_: **[PersonalDataProcesses](Applications.PersonalData.PersonalDataProcesses.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### User
@@ -183,6 +195,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The user account under which the event has occurred. Null only for events which are not user-specific. `Filter(multi eq)`
 
 _Type_: **[Users](Systems.Security.Users.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

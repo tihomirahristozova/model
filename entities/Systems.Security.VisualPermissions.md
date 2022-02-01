@@ -48,6 +48,7 @@ Aggregate Tree
 The application for which the permission is specified. `Required` `Filter(eq)`
 
 _Type_: **string (64)**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  
@@ -57,6 +58,7 @@ _Maximum Length_: **64**
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -65,6 +67,7 @@ _Supports Order By_: ****
 Optionally, the element from the panel which will be secured. `Filter(eq)`
 
 _Type_: **string (4000) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Maximum Length_: **4000**  
@@ -74,6 +77,7 @@ _Maximum Length_: **4000**
 Optionally, the form which will be secured. `Filter(eq)`
 
 _Type_: **string (128) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Maximum Length_: **128**  
@@ -82,6 +86,7 @@ _Maximum Length_: **128**
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -90,6 +95,7 @@ _Default Value_: **NewGuid**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -98,6 +104,7 @@ _Supports Order By_: ****
 Optionally, the operation on the element which will be secured. `Filter(eq)`
 
 _Type_: **string (64) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  
@@ -107,6 +114,7 @@ _Maximum Length_: **64**
 Optionally, the panel from the form which will be secured. `Filter(eq)`
 
 _Type_: **string (128) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Maximum Length_: **128**  
@@ -119,6 +127,7 @@ _Maximum Length_: **128**
 The security access key which controls the access to the visual permission. `Filter(multi eq)`
 
 _Type_: **[AccessKeys](Systems.Security.AccessKeys.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

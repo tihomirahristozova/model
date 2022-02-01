@@ -73,6 +73,7 @@ Aggregate Tree
 Unique process code. `Required` `Filter(eq;like)`
 
 _Type_: **string (16)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **16**  
@@ -82,6 +83,7 @@ _Maximum Length_: **16**
 True if sensitive personal data is processed (racial, political, criminal, biometric, etc). `Required` `Filter(eq)`
 
 _Type_: **boolean**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 
@@ -90,6 +92,7 @@ _Supports Order By_: **False**
 The category of data subjects (persons), whose data is processed. EMP=Employees; JOB=Job Candidates; CON=Contractors; CUS=Customers; SUP=Suppliers; PAR=Partners; OTH=Other. `Required`
 
 _Type_: **[DataSubjectCategory](Applications.PersonalData.PersonalDataProcesses.md#datasubjectcategory)**  
+_Category_: **System**  
 Allowed values for the `DataSubjectCategory`(Applications.PersonalData.PersonalDataProcesses.md#datasubjectcategory) data attribute  
 _Allowed Values (Applications.PersonalData.PersonalDataProcessesRepository.DataSubjectCategory Enum Members)_  
 
@@ -111,6 +114,7 @@ _Supports Order By_: **False**
 Description of the process.
 
 _Type_: **string (max) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
@@ -120,6 +124,7 @@ _Maximum Length_: **2147483647**
 The date on which the process was discontinued. Null if the process is still active. `Filter(eq;ge;le)`
 
 _Type_: **date __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -128,6 +133,7 @@ _Supports Order By_: **False**
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -136,6 +142,7 @@ _Supports Order By_: ****
 The data on which the process was established and started functioning. `Required` `Default(Now)` `Filter(eq;ge;le)`
 
 _Type_: **date**  
+_Category_: **System**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **CurrentDateTime**  
@@ -144,6 +151,7 @@ _Default Value_: **CurrentDateTime**
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -152,6 +160,7 @@ _Default Value_: **NewGuid**
 The basis on which the data is processed. INT=Legitimate Interest; CST=Consent; CTR=Contract; LEG=Legal Compliance; VIT=Vital Interests; PUB=Public Interest;. `Required` `Filter(eq)`
 
 _Type_: **[LegalBasisForProcessing](Applications.PersonalData.PersonalDataProcesses.md#legalbasisforprocessing)**  
+_Category_: **System**  
 Allowed values for the `LegalBasisForProcessing`(Applications.PersonalData.PersonalDataProcesses.md#legalbasisforprocessing) data attribute  
 _Allowed Values (Applications.PersonalData.PersonalDataProcessesRepository.LegalBasisForProcessing Enum Members)_  
 
@@ -172,6 +181,7 @@ _Supports Order By_: **False**
 Comma-separated list of categories of personal data (both sensitive and non-sensitive) processed by this process. Common sensitive types of data include racial, political views, religion, trade union membership, sex life, criminal records, etc. `Required` `Filter(eq)`
 
 _Type_: **string (254)**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -181,6 +191,7 @@ _Maximum Length_: **254**
 Comma-separated list of types of data users. Usual categories include Staff, Public Authority, Contractor, etc. `Filter(eq;like)`
 
 _Type_: **string (254) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -190,6 +201,7 @@ _Maximum Length_: **254**
 Comma-separated list of processing purposes. Common purposes include Invoicing, Newsletter, Notifications, Repeatable Orders, etc. `Filter(eq;like)`
 
 _Type_: **string (254) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -199,6 +211,7 @@ _Maximum Length_: **254**
 Comma-separated list of technical measures taken to keep the data privacy. Common measures include Pseudonymisation, Encryption, Data Access Audit, etc. `Filter(eq)`
 
 _Type_: **string (254) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -208,6 +221,7 @@ _Maximum Length_: **254**
 Comma-separated list of third countries, to which data is sent. `Filter(eq;like)`
 
 _Type_: **string (254) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -217,6 +231,7 @@ _Maximum Length_: **254**
 Comma-separated list of the names of the software products used to process the data. `Filter(eq;like)`
 
 _Type_: **string (254) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -226,6 +241,7 @@ _Maximum Length_: **254**
 Name of the process (Multilanguage). `Required` `Filter(eq;like)`
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 
@@ -234,6 +250,7 @@ _Supports Order By_: **False**
 Notes for this PersonalDataProcess.
 
 _Type_: **string (max) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
@@ -243,6 +260,7 @@ _Maximum Length_: **2147483647**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -251,6 +269,7 @@ _Supports Order By_: ****
 The role of the enterprise company in the process - Controller or Processor. The controller owns the personal data process. The processor operates on behalf of the controller. C=Controller; P=Processor. . `Required` `Default("C")` `Filter(eq)`
 
 _Type_: **[ProcessingRole](Applications.PersonalData.PersonalDataProcesses.md#processingrole)**  
+_Category_: **System**  
 Allowed values for the `ProcessingRole`(Applications.PersonalData.PersonalDataProcesses.md#processingrole) data attribute  
 _Allowed Values (Applications.PersonalData.PersonalDataProcessesRepository.ProcessingRole Enum Members)_  
 
@@ -268,6 +287,7 @@ _Default Value_: **Controller**
 The period in months, for which the data is kept. Null when the period is unknown or N/A. `Filter(eq)`
 
 _Type_: **int32 __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 
@@ -276,6 +296,7 @@ _Supports Order By_: **False**
 Description of safeguards, taken to protect personal data in case of third country transfers. `Filter(eq;like)`
 
 _Type_: **string (254) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -288,6 +309,7 @@ _Maximum Length_: **254**
 The enterprise company, which owns the process. `Required` `Filter(multi eq)`
 
 _Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ProcessOwnerPerson
@@ -295,6 +317,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The owner and responsible person for the process. `Required` `Filter(multi eq)`
 
 _Type_: **[Persons](General.Contacts.Persons.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

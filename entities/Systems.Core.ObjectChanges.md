@@ -49,6 +49,7 @@ Aggregate Root:
 Type of change - Create, Update or Delete. `Required`
 
 _Type_: **[ChangeType](Systems.Core.ObjectChanges.md#changetype)**  
+_Category_: **System**  
 Allowed values for the `ChangeType`(Systems.Core.ObjectChanges.md#changetype) data attribute  
 _Allowed Values (Systems.Core.ObjectChangesRepository.ChangeType Enum Members)_  
 
@@ -66,6 +67,7 @@ _Supports Order By_: **False**
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -75,12 +77,14 @@ The id of the actual changed object, described by this change. This is different
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Id
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -89,6 +93,7 @@ _Default Value_: **NewGuid**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -97,6 +102,7 @@ _Supports Order By_: ****
 The repository of the actual changed object, described by this change. This is different than the aggregate root, which is pointed by Root Object. `Required` `Filter(multi eq;like)`
 
 _Type_: **string (64)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, Like, EqualsIn**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  
@@ -110,6 +116,7 @@ The changeset containing this change. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[ObjectChangesets](Systems.Core.ObjectChangesets.md)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
 
@@ -119,6 +126,7 @@ The root object in the aggregate of the object, which has been changed. Each cha
 
 _Type_: **[ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

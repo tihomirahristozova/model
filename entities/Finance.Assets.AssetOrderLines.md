@@ -52,6 +52,7 @@ Aggregate Root:
 Value of the acquired or retired asset. `Currency: AssetValueCurrency` `Required` `Default(0)`
 
 _Type_: **[Amount (14, 2)](../data-types.md#amount)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -61,6 +62,7 @@ _Default Value_: **Constant**
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -68,6 +70,7 @@ _Supports Order By_: ****
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -76,6 +79,7 @@ _Default Value_: **NewGuid**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -84,6 +88,7 @@ _Supports Order By_: ****
 The number of the line within the parent document, which the current line executes. null when the current line does not execute line. `Introduced in version 18.2`
 
 _Type_: **int32 __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -92,6 +97,7 @@ _Supports Order By_: **False**
 Indicates the nature of the current operation: 1 - the operation is applied, 0 - no change, -1 - the operation is cancelled. `Required` `Default(0)`
 
 _Type_: **int32**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  
@@ -104,6 +110,7 @@ _Default Value_: **0**
 The asset that is acquired or retired. `Required` `Filter(multi eq)`
 
 _Type_: **[Assets](Finance.Assets.Assets.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### AssetOrder
@@ -112,6 +119,7 @@ The <see cref="AssetOrder"/> to which this AssetOrderLine belongs. `Required` `F
 
 _Type_: **[AssetOrders](Finance.Assets.AssetOrders.md)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
 
@@ -120,6 +128,7 @@ _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-reference
 Currency of Asset Value. `Required` `Filter(multi eq)`
 
 _Type_: **[Currencies](General.Currencies.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Document
@@ -128,6 +137,7 @@ The <see cref="AssetOrder"/> to which this AssetOrderLine belongs. `Required` `F
 
 _Type_: **[AssetOrders](Finance.Assets.AssetOrders.md)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ParentDocument
@@ -135,6 +145,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The document, which the current line executes. null when the current line does not execute another line. `Filter(multi eq)` `Introduced in version 18.2`
 
 _Type_: **[Documents](General.Documents.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

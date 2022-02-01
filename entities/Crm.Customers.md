@@ -78,6 +78,7 @@ Aggregate Tree
 True if the customer is active, false - not to list in combo boxes for choosing in new documents. `Required` `Default(true)` `Filter(eq)`
 
 _Type_: **boolean**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **True**  
@@ -87,6 +88,7 @@ _Default Value_: **True**
 Specifies whether to allow the customer to be used as primary customer in a sales deal. `Required` `Default(false)` `Filter(eq)`
 
 _Type_: **boolean**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **False**  
@@ -96,6 +98,7 @@ _Default Value_: **False**
 True to allow the customer to be used as ship to customer in a sales deal. `Required` `Default(false)` `Filter(eq)`
 
 _Type_: **boolean**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **False**  
@@ -105,6 +108,7 @@ _Default Value_: **False**
 Date and time when the Customer was created. `Filter(ge;le)` `ReadOnly`
 
 _Type_: **datetime __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -113,6 +117,7 @@ _Supports Order By_: **False**
 Login name of the user, who created the Customer. `Filter(like)` `ReadOnly`
 
 _Type_: **string (64) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  
@@ -122,6 +127,7 @@ _Maximum Length_: **64**
 Total credit limit for the customer in the customers' default currency. null means there is no limit. `Currency: DefaultCurrency`
 
 _Type_: **[Amount (18, 2)](../data-types.md#amount) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -135,6 +141,7 @@ _Front-End Recalc Expressions:_
 Default term in days for goods delivery, starting at the day of sale. `Required` `Default(0)`
 
 _Type_: **int32**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  
@@ -144,6 +151,7 @@ _Default Value_: **0**
 Specifies the number of days after the sales order, when the payment becomes due. 0 means that the payment is due immediately. `Required` `Default(0)`
 
 _Type_: **int32**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  
@@ -153,6 +161,7 @@ _Default Value_: **0**
 Default payment term in days when issuing documents for this customer. `Required` `Default(0)`
 
 _Type_: **int32**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  
@@ -162,6 +171,7 @@ _Default Value_: **0**
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -170,6 +180,7 @@ _Supports Order By_: ****
 Start date of the customer relationship. `Default(Today)` `Filter(ge;le)`
 
 _Type_: **datetime __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **CurrentDate**  
@@ -179,6 +190,7 @@ _Default Value_: **CurrentDate**
 Number of days after the payment deadline, during which the system still allows new sales orders for the customer. `Required` `Default(0)`
 
 _Type_: **int32**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  
@@ -187,6 +199,7 @@ _Default Value_: **0**
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -196,6 +209,7 @@ Unique customer number. `Filter(eq;like)` `ORD`
 
 _Type_: **string (16) __nullable__**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
 _Maximum Length_: **16**  
@@ -205,6 +219,7 @@ _Maximum Length_: **16**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -213,6 +228,7 @@ _Supports Order By_: ****
 If checked, specifies that the lots set in the Sales orders for this customer, cannot be changed during the execution of the Store transactions for these Sales orders. `Required` `Default(false)` `Filter(eq)`
 
 _Type_: **boolean**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **False**  
@@ -222,6 +238,7 @@ _Default Value_: **False**
 The date of customer relationship termination. null for active customers. `Filter(ge;le)`
 
 _Type_: **datetime __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -230,6 +247,7 @@ _Supports Order By_: **False**
 Date and time when the Customer was last updated. `Filter(ge;le)` `ReadOnly`
 
 _Type_: **datetime __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -238,6 +256,7 @@ _Supports Order By_: **False**
 Login name of the user, who last updated the Customer. `Filter(like)` `ReadOnly`
 
 _Type_: **string (64) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  
@@ -250,6 +269,7 @@ _Maximum Length_: **64**
 The employee, who is responsible for the collections from the customer. `Filter(multi eq)`
 
 _Type_: **[CompanyEmployees](General.Contacts.CompanyEmployees.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### CustomerType
@@ -258,6 +278,7 @@ The user-defined type of this customer. null when there is no specific type. Rec
 
 _Type_: **[CustomerTypes](Crm.CustomerTypes.md) (nullable)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### DefaultCurrency
@@ -265,6 +286,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The primary currency for value calculations for this customer - for credit limit, due amounts, etc. `Filter(multi eq)`
 
 _Type_: **[Currencies](General.Currencies.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Front-End Recalc Expressions:_  
@@ -274,6 +296,7 @@ _Front-End Recalc Expressions:_
 The default distribution channel used when selling to the customer. `Filter(multi eq)`
 
 _Type_: **[DistributionChannels](Crm.Marketing.DistributionChannels.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### DefaultPaymentAccount
@@ -281,6 +304,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The default payment account to use when creating new documents for this customer. `Filter(multi eq)`
 
 _Type_: **[PaymentAccounts](Finance.Payments.PaymentAccounts.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Front-End Recalc Expressions:_  
@@ -290,6 +314,7 @@ _Front-End Recalc Expressions:_
 If not null, specifies default payment type for the sales, offers and invoices for this customer. `Filter(multi eq)`
 
 _Type_: **[PaymentTypes](Finance.Payments.PaymentTypes.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### DefaultPriceList
@@ -297,6 +322,7 @@ _Supported Filters_: **Equals, EqualsIn**
 If not null, specifies default price list when selling to this customer. `Filter(multi eq)`
 
 _Type_: **[PriceLists](Crm.PriceLists.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### EnterpriseCompany
@@ -305,6 +331,7 @@ The Enterprise Company for which this customer is recorded. The same external pa
 
 _Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Front-End Recalc Expressions:_  
@@ -315,6 +342,7 @@ Base party Id. `Required` `Filter(multi eq)` `FilterableReference`
 
 _Type_: **[Parties](General.Contacts.Parties.md)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
 
@@ -324,6 +352,7 @@ The default sales person for new sales documents for this customer. `Filter(mult
 
 _Type_: **[SalesPersons](Crm.SalesPersons.md) (nullable)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ServicedByEnterpriseCompanyLocation
@@ -331,6 +360,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The enterprise company location, which sells to this client by default. `Filter(multi eq)`
 
 _Type_: **[CompanyLocations](General.Contacts.CompanyLocations.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

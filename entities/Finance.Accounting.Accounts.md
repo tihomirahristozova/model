@@ -60,6 +60,7 @@ Aggregate Tree
 The full number of the account, unique among all accounts. It consists of the group number, concatenated with the account number. `Required` `Filter(like)` `ReadOnly`
 
 _Type_: **string (30)**  
+_Category_: **System**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **30**  
@@ -71,6 +72,7 @@ _Front-End Recalc Expressions:_
 Method for base currency valuation of non base currency amounts. ACB = Account_Current_Balance, DCD = Document_Currency_Directory, BRD=Balance_Reference_Document. `Required` `Default("ACB")`
 
 _Type_: **[CurrencyValuationMethod](Finance.Accounting.Accounts.md#currencyvaluationmethod)**  
+_Category_: **System**  
 Allowed values for the `CurrencyValuationMethod`(Finance.Accounting.Accounts.md#currencyvaluationmethod) data attribute  
 _Allowed Values (Finance.Accounting.AccountsRepository.CurrencyValuationMethod Enum Members)_  
 
@@ -89,6 +91,7 @@ _Default Value_: **AccountCurrentBalance**
 The description of this Account.
 
 _Type_: **string (254) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -98,6 +101,7 @@ _Maximum Length_: **254**
 True means that the account won't be used any more and should not appear in combo boxes. `Required` `Default(false)` `Filter(eq)`
 
 _Type_: **boolean**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **False**  
@@ -107,6 +111,7 @@ _Default Value_: **False**
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -114,6 +119,7 @@ _Supports Order By_: ****
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -122,6 +128,7 @@ _Default Value_: **NewGuid**
 The account name. `Required` `Filter(like)`
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
+_Category_: **System**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 
@@ -130,6 +137,7 @@ _Supports Order By_: **False**
 The number of the account, unique within the account group. `Required` `Filter(like)`
 
 _Type_: **string (30)**  
+_Category_: **System**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **30**  
@@ -139,6 +147,7 @@ _Maximum Length_: **30**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -150,6 +159,7 @@ _Supports Order By_: ****
 The account group to which this account belongs. `Required` `Filter(multi eq)`
 
 _Type_: **[AccountGroups](Finance.Accounting.AccountGroups.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Currency
@@ -157,6 +167,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The primary currency of the account. All movements on the account are stored in this currency. If there are movements on the account, the currency cannot be changed. `Filter(multi eq)`
 
 _Type_: **[Currencies](General.Currencies.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### EnterpriseCompany
@@ -164,6 +175,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The Enterprise Company to which this Account applies, or null if it is for all enterprise companies. `Filter(multi eq)`
 
 _Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

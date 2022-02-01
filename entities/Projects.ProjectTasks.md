@@ -69,6 +69,7 @@ Aggregate Tree
 Budgeted amount for the labor for the task in the currency of the project. The material is calculated separately. null means that budgeting for the item is not calculated. `Currency: Project.BudgetingCurrency`
 
 _Type_: **[Amount (12, 2)](../data-types.md#amount) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -79,6 +80,7 @@ _Front-End Recalc Expressions:_
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -87,6 +89,7 @@ _Supports Order By_: ****
 The date and time when the task is planned to finish. `Required` `Default(Now)` `Filter(eq;ge;le)`
 
 _Type_: **datetime**  
+_Category_: **System**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **CurrentDateTime**  
@@ -95,6 +98,7 @@ _Default Value_: **CurrentDateTime**
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -103,6 +107,7 @@ _Default Value_: **NewGuid**
 Notes for this ProjectTask.
 
 _Type_: **string (max) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
@@ -112,6 +117,7 @@ _Maximum Length_: **2147483647**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -120,6 +126,7 @@ _Supports Order By_: ****
 Planned duration of the task in hours. The hours are allocated in the time interval between Start Date Time and Finish Date Time. `Required` `Default(0)`
 
 _Type_: **decimal (8, 2)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  
@@ -129,6 +136,7 @@ _Default Value_: **0**
 Consecutive task number, unique within the project. `Required`
 
 _Type_: **int32**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -137,6 +145,7 @@ _Supports Order By_: **False**
 The date and time when the task is planned to start. `Required` `Default(Now)` `Filter(eq;ge;le)`
 
 _Type_: **datetime**  
+_Category_: **System**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **CurrentDateTime**  
@@ -146,6 +155,7 @@ _Default Value_: **CurrentDateTime**
 The short name of the task. It is best practice to contain the target of the task. `Required` `Filter(multi eq;like)`
 
 _Type_: **string (254)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, Like, EqualsIn**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -158,6 +168,7 @@ _Maximum Length_: **254**
 The Id of the Cm_Activity created for this task. null means that activity is still not created. `Filter(multi eq)`
 
 _Type_: **[Activities](General.Contacts.Activities.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Project
@@ -166,6 +177,7 @@ The project, to which this task belongs. `Required` `Filter(multi eq)`
 
 _Type_: **[Projects](Projects.Projects.md)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ProjectWorkElement
@@ -173,6 +185,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The work element under which the task is filed. `Required` `Filter(multi eq)`
 
 _Type_: **[ProjectWorkElements](Projects.ProjectWorkElements.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Resource
@@ -180,6 +193,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The resource, which is required for the task. null means - do not plan any resource. `Filter(multi eq)`
 
 _Type_: **[Resources](Projects.Resources.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ResponsibleParty
@@ -187,6 +201,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The responsible party. Usually a person and usually one of the project participants. null means that responsible is not yet determined. `Filter(multi eq)`
 
 _Type_: **[Parties](General.Contacts.Parties.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### TaskType
@@ -194,6 +209,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The type of the task. Determines the work type of the tasks, default billing rules, etc. `Required` `Filter(multi eq)`
 
 _Type_: **[TaskTypes](Projects.TaskTypes.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### WorkType
@@ -201,6 +217,7 @@ _Supported Filters_: **Equals, EqualsIn**
 Type of work to be done. null means that type of work is undetermined yet. `Filter(multi eq)`
 
 _Type_: **[TypeWorkTypes](Projects.TypeWorkTypes.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

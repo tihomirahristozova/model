@@ -48,6 +48,7 @@ Aggregate Root:
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -55,6 +56,7 @@ _Supports Order By_: ****
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -63,6 +65,7 @@ _Default Value_: **NewGuid**
 True if the maintenance plan is active for this profile. When a plan is not active, maintenance for it will not occur for the current profile. `Required` `Default(true)` `Introduced in version 18.2`
 
 _Type_: **boolean**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **True**  
@@ -72,6 +75,7 @@ _Default Value_: **True**
 Notes for this MaintenanceProfilePlan.
 
 _Type_: **string (max) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
@@ -81,6 +85,7 @@ _Maximum Length_: **2147483647**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -92,6 +97,7 @@ _Supports Order By_: ****
 The maintenance plan, which is included in the profile. `Required` `Filter(multi eq)`
 
 _Type_: **[MaintenancePlans](Applications.Fleet.MaintenancePlans.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### MaintenanceProfile
@@ -99,6 +105,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The maintenance profile, which includes the plan. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[MaintenanceProfiles](Applications.Fleet.MaintenanceProfiles.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
 

@@ -60,6 +60,7 @@ Aggregate Root:
 The user can print documents only with state equal or greater than Allow_Printing_On_State. `Required` `Default(0)`
 
 _Type_: **[AllowPrintingOnState](General.Printouts.md#allowprintingonstate)**  
+_Category_: **System**  
 Allowed values for the `AllowPrintingOnState`(General.Printouts.md#allowprintingonstate) data attribute  
 _Allowed Values (General.PrintoutsRepository.AllowPrintingOnState Enum Members)_  
 
@@ -81,6 +82,7 @@ _Default Value_: **0**
 The application which stored and uses the printout. `Required`
 
 _Type_: **string (64)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  
@@ -90,6 +92,7 @@ _Maximum Length_: **64**
 Obsolete. Not used. `Required` `Default(false)`
 
 _Type_: **boolean**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **False**  
@@ -99,6 +102,7 @@ _Default Value_: **False**
 Number of copies that should be printed when using direct printing. `Required` `Default(1)`
 
 _Type_: **int32**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **1**  
@@ -108,6 +112,7 @@ _Default Value_: **1**
 Obsolete. Not used.
 
 _Type_: **string (max) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
@@ -117,6 +122,7 @@ _Maximum Length_: **2147483647**
 Obsolete. Not used. `Default("default")`
 
 _Type_: **string (16) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **16**  
@@ -127,6 +133,7 @@ _Default Value_: **default**
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -134,6 +141,7 @@ _Supports Order By_: ****
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -142,6 +150,7 @@ _Default Value_: **NewGuid**
 True if this is the default printout for the application form. `Required` `Default(false)` `Filter(eq)`
 
 _Type_: **boolean**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **False**  
@@ -151,6 +160,7 @@ _Default Value_: **False**
 The name of the printout. Unique within the application form. `Required` `Filter(like)`
 
 _Type_: **string (64)**  
+_Category_: **System**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  
@@ -160,6 +170,7 @@ _Maximum Length_: **64**
 Notes for this Printout.
 
 _Type_: **string (512) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **512**  
@@ -169,6 +180,7 @@ _Maximum Length_: **512**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -177,6 +189,7 @@ _Supports Order By_: ****
 Order in the list of printouts when using direct printing. `Required` `Default(0)`
 
 _Type_: **int32**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  
@@ -186,6 +199,7 @@ _Default Value_: **0**
 The condition, required to be matched in order for the printout to be executed upon "Print All" command.
 
 _Type_: **dataaccessfilter __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -194,6 +208,7 @@ _Supports Order By_: **False**
 Ordinal position and priority of the printout, in regard to other printouts within the current document type. Used for sorting, when executing printouts with "Print All" command. `Default(0)`
 
 _Type_: **int32 __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  
@@ -207,6 +222,7 @@ The document type to which this printout layout is bound. `Required` `Filter(mul
 
 _Type_: **[DocumentTypes](General.DocumentTypes.md)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
 
@@ -215,6 +231,7 @@ _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-reference
 The Enterprise Company to which this Printout applies, or null if it is for all enterprise companies. `Filter(multi eq)`
 
 _Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PrintoutLayout
@@ -222,6 +239,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The printout layout, that is bound to the document type. `Required` `Filter(multi eq)`
 
 _Type_: **[PrintoutLayouts](General.PrintoutLayouts.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Report
@@ -229,6 +247,7 @@ _Supported Filters_: **Equals, EqualsIn**
 If not null points to a custom report that indicates which data will be loaded in the printout. `Filter(multi eq)`
 
 _Type_: **[DataSources](Systems.Reporting.DataSources.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

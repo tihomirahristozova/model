@@ -65,6 +65,7 @@ Aggregate Root:
 The name of the column within the amount rowset where the amount is located. `Required`
 
 _Type_: **string (64)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  
@@ -74,6 +75,7 @@ _Maximum Length_: **64**
 Condition for the amount. The line is accounted only when the condition is matched. The condition can be one of: null - no condition, the line should be accounted unconditionally; '+' - The amount should be positive; '-' - The amount should be negative. The amount is matched as returned from the source, before applying the Multiplier.
 
 _Type_: **[AmountCondition](Finance.Accounting.TemplateLines.md#amountcondition) __nullable__**  
+_Category_: **System**  
 Allowed values for the `AmountCondition`(Finance.Accounting.TemplateLines.md#amountcondition) data attribute  
 _Allowed Values (Finance.Accounting.TemplateLinesRepository.AmountCondition Enum Members)_  
 
@@ -90,6 +92,7 @@ _Supports Order By_: **False**
 The id of the row from the amount rowset where the amount is located. null means to account one by one for all rows within the rowset. `Filter(multi eq)`
 
 _Type_: **guid __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### AmountRowName
@@ -97,6 +100,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The name of definition, specified in Amount_Row_Id. null means that no Amount_Row_Id is specified or there is no name.
 
 _Type_: **string (254) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -106,6 +110,7 @@ _Maximum Length_: **254**
 Filter that further specifies which rows from the amount rowset determine the amount.
 
 _Type_: **dataaccessfilter __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -114,6 +119,7 @@ _Supports Order By_: **False**
 The source rowset for the amount. For example: DocLines, DocHeader, Additional Amounts, Stock Types, etc. `Required`
 
 _Type_: **string (64)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  
@@ -123,6 +129,7 @@ _Maximum Length_: **64**
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -131,6 +138,7 @@ _Supports Order By_: ****
 The line is accounted only when the filter is satisfied compared with the source document header.
 
 _Type_: **dataaccessfilter __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -138,6 +146,7 @@ _Supports Order By_: **False**
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -146,6 +155,7 @@ _Default Value_: **NewGuid**
 Consecutive number of the line within the template. Determines the order of execution of the template lines. `Required`
 
 _Type_: **int32**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -159,6 +169,7 @@ _Front-End Recalc Expressions:_
 Factor by which the amount from the source will be multiplied. `Required` `Default(1)`
 
 _Type_: **decimal (18, 6)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **1**  
@@ -168,6 +179,7 @@ _Default Value_: **1**
 Notes for this TemplateLine.
 
 _Type_: **string (254) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -177,6 +189,7 @@ _Maximum Length_: **254**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -185,6 +198,7 @@ _Supports Order By_: ****
 Start date from which the accounting template line is valid. `Filter(multi eq;ge;le)`
 
 _Type_: **datetime __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan, EqualsIn**  
 _Supports Order By_: **False**  
 
@@ -193,6 +207,7 @@ _Supports Order By_: **False**
 End date to which the accounting template line is valid. `Filter(multi eq;ge;le)`
 
 _Type_: **datetime __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan, EqualsIn**  
 _Supports Order By_: **False**  
 
@@ -204,6 +219,7 @@ _Supports Order By_: **False**
 The account which should be credited. `Required` `Filter(multi eq)`
 
 _Type_: **[Accounts](Finance.Accounting.Accounts.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### DebitAccount
@@ -211,6 +227,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The account which should be debited. `Required` `Filter(multi eq)`
 
 _Type_: **[Accounts](Finance.Accounting.Accounts.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Template
@@ -219,6 +236,7 @@ The <see cref="Template"/> to which this TemplateLine belongs. `Required` `Filte
 
 _Type_: **[Templates](Finance.Accounting.Templates.md)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
 

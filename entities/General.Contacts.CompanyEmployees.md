@@ -53,6 +53,7 @@ Aggregate Root:
 Contract number or code, unique within the company. One employee can have more than one contract. `Filter(eq)`
 
 _Type_: **string (16) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Maximum Length_: **16**  
@@ -62,6 +63,7 @@ _Maximum Length_: **16**
 End date of the employee contract, null if the contract is still valid. `Filter(ge;le)`
 
 _Type_: **datetime __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -70,6 +72,7 @@ _Supports Order By_: **False**
 Start date of the employee contract. Null if it is unkown. `Filter(ge;le)`
 
 _Type_: **datetime __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -78,6 +81,7 @@ _Supports Order By_: **False**
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -85,6 +89,7 @@ _Supports Order By_: ****
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -93,6 +98,7 @@ _Default Value_: **NewGuid**
 Notes for this CompanyEmployee.
 
 _Type_: **string (254) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -102,6 +108,7 @@ _Maximum Length_: **254**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -113,6 +120,7 @@ _Supports Order By_: ****
 The company for which this employee works. `Required` `Filter(multi eq)`
 
 _Type_: **[Companies](General.Contacts.Companies.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### CompanyDepartment
@@ -120,6 +128,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The department in which this employee is working. null means this information is unknown. `Filter(multi eq)`
 
 _Type_: **[CompanyDepartments](General.Contacts.CompanyDepartments.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Person
@@ -127,6 +136,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The personal data of the employee. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[Persons](General.Contacts.Persons.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
 

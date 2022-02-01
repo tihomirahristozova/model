@@ -62,6 +62,7 @@ Aggregate Root:
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -69,6 +70,7 @@ _Supports Order By_: ****
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -77,6 +79,7 @@ _Default Value_: **NewGuid**
 Unique consecutive line number within the order. `Required` `Filter(eq)`
 
 _Type_: **int32**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 
@@ -90,6 +93,7 @@ _Front-End Recalc Expressions:_
 Notes for this WarehouseOrderLine.
 
 _Type_: **string (max) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
@@ -99,6 +103,7 @@ _Maximum Length_: **2147483647**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -107,6 +112,7 @@ _Supports Order By_: ****
 The number of the line within the parent document, which the current line executes. null when the current line does not execute another line. `Filter(multi eq)` `Introduced in version 22.1.4.26`
 
 _Type_: **int32 __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Supports Order By_: **False**  
 
@@ -115,6 +121,7 @@ _Supports Order By_: **False**
 The quantity of the product, which should be processed. `Unit: QuantityUnit` `Required` `Default(0)` `Filter(eq;ge;le)`
 
 _Type_: **[Quantity (12, 3)](../data-types.md#quantity)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -124,6 +131,7 @@ _Default Value_: **Constant**
 Quantity in the base measurement unit of the product. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Filter(multi eq;ge;le)` `Introduced in version 22.1.4.41`
 
 _Type_: **[Quantity (12, 3)](../data-types.md#quantity)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan, EqualsIn**  
 _Supports Order By_: **False**  
 
@@ -137,6 +145,7 @@ _Front-End Recalc Expressions:_
 The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Introduced in version 22.1.4.42`
 
 _Type_: **[Quantity (12, 3)](../data-types.md#quantity)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -150,6 +159,7 @@ _Front-End Recalc Expressions:_
 The type of the task (operation), which should be performed. REC=Receive; DES=Despatch; MOV=Move; LBL=Label; INS=Inspect; PCK=Pack; UPK=Unpack; KIT=Assemble kit; RKT=Reverse kitting; CNT=Count; TSK=Task. `Required` `Filter(multi eq)`
 
 _Type_: **[TaskType](Logistics.Wms.WarehouseOrderLines.md#tasktype)**  
+_Category_: **System**  
 Allowed values for the `TaskType`(Logistics.Wms.WarehouseOrderLines.md#tasktype) data attribute  
 _Allowed Values (Logistics.Wms.WarehouseOrderLinesRepository.TaskType Enum Members)_  
 
@@ -179,6 +189,7 @@ The <see cref="WarehouseOrder"/> to which this WarehouseOrderLine belongs. `Requ
 
 _Type_: **[WarehouseOrders](Logistics.Wms.WarehouseOrders.md)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### LogisticUnit
@@ -186,6 +197,7 @@ _Supported Filters_: **Equals, EqualsIn**
 Logistic unit, which should be used in the operation. `Filter(multi eq)` `Introduced in version 21.1.1.18`
 
 _Type_: **[LogisticUnits](Logistics.LogisticUnits.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Lot
@@ -193,6 +205,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The lot of the product, which should be used. null for operations, which are not lot-specific, or when any lot can be used. `Filter(multi eq)`
 
 _Type_: **[Lots](Logistics.Inventory.Lots.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ParentDocument
@@ -200,6 +213,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The document, which the current line executes. null when the current line does not execute another line. `Filter(multi eq)` `Introduced in version 22.1.4.26`
 
 _Type_: **[WarehouseRequisitions](Logistics.Wms.WarehouseRequisitions.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Product
@@ -207,6 +221,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The product, which should be used for the operation. `Filter(multi eq)`
 
 _Type_: **[Products](General.Products.Products.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ProductVariant
@@ -214,6 +229,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The product variant, which should be used. `Filter(multi eq)` `Introduced in version 21.1.1.18`
 
 _Type_: **[ProductVariants](General.ProductVariants.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### QuantityUnit
@@ -221,6 +237,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The measurement unit of Quantity. null for operations, which are not quantity-related. `Filter(multi eq)`
 
 _Type_: **[MeasurementUnits](General.MeasurementUnits.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Front-End Recalc Expressions:_  
@@ -230,6 +247,7 @@ _Front-End Recalc Expressions:_
 The serial number of the product, which should be used. null for operations, which are not serial number-specific, or when any serial number can be used. `Filter(multi eq)`
 
 _Type_: **[SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ToWarehouseLocation
@@ -237,6 +255,7 @@ _Supported Filters_: **Equals, EqualsIn**
 Destination warehouse location. null for operations, which do not specify destination location. `Filter(multi eq)`
 
 _Type_: **[WarehouseLocations](Logistics.Wms.WarehouseLocations.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### WarehouseLocation
@@ -244,6 +263,7 @@ _Supported Filters_: **Equals, EqualsIn**
 Location, where the opeartion should be performed. null for operations, which do not require location. `Filter(multi eq)`
 
 _Type_: **[WarehouseLocations](Logistics.Wms.WarehouseLocations.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### WarehouseOrder
@@ -252,6 +272,7 @@ The <see cref="WarehouseOrder"/> to which this WarehouseOrderLine belongs. `Requ
 
 _Type_: **[WarehouseOrders](Logistics.Wms.WarehouseOrders.md)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
 
@@ -260,6 +281,7 @@ _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-reference
 Human or robot worker, which should execute the operation. null means that the line is shared among all workers, assigned to the order. `Filter(multi eq)`
 
 _Type_: **[WarehouseWorkers](Logistics.Wms.WarehouseWorkers.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Back-End Default Expression:_  
@@ -272,6 +294,7 @@ _Front-End Recalc Expressions:_
 The warehouse zone, in which the operation should be performed. null for operations which do not require specific zone. `Filter(multi eq)`
 
 _Type_: **[WarehouseZones](Logistics.Wms.WarehouseZones.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

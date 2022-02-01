@@ -45,6 +45,7 @@ Aggregate Tree
 True when the translation is verified and activated. `Required` `Default(true)` `Filter(eq)`
 
 _Type_: **boolean**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **True**  
@@ -57,6 +58,7 @@ The application, containing the resource. For base resource types (T,C,H), this 
 
 _Type_: **string (50) __nullable__**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **True**  
 _Maximum Length_: **50**  
@@ -66,6 +68,7 @@ _Maximum Length_: **50**
 Timestamp when the translation was first created. `Required` `Default(Now)` `Filter(ge;le)` `ReadOnly`
 
 _Type_: **datetime**  
+_Category_: **System**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **CurrentDateTime**  
@@ -75,6 +78,7 @@ _Default Value_: **CurrentDateTime**
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -82,6 +86,7 @@ _Supports Order By_: ****
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -90,6 +95,7 @@ _Default Value_: **NewGuid**
 The code of the language or language-culture pair. Standard Windows codes are used. English="en"; US English = "en-us". `Required` `Default("en")` `Filter(eq)`
 
 _Type_: **string (8)**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Maximum Length_: **8**  
@@ -100,6 +106,7 @@ _Default Value_: **en**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -108,6 +115,7 @@ _Supports Order By_: ****
 The unique identifier of the translated resource. Should use ASCII/English chars only. Shorter strings are suggested. Depending on Text_Type: T:TableName; C:ColumnName; H:TableName.ColumnName; E,M,S: Application specific code. `Required` `Filter(eq;like)`
 
 _Type_: **string (800)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **800**  
@@ -117,6 +125,7 @@ _Maximum Length_: **800**
 T=Table (entity) Name; C=Column Name; H=Column Hint; R=Meta Resource; E=Error; M=Message; S=Other application specific String. `Required` `Default("S")` `Filter(eq)`
 
 _Type_: **[ResourceType](Systems.Core.Translations.md#resourcetype)**  
+_Category_: **System**  
 Allowed values for the `ResourceType`(Systems.Core.Translations.md#resourcetype) data attribute  
 _Allowed Values (Systems.Core.TranslationsRepository.ResourceType Enum Members)_  
 
@@ -139,6 +148,7 @@ _Default Value_: **OtherApplicationSpecific**
 The translated text. `Required`
 
 _Type_: **string (max)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
@@ -148,6 +158,7 @@ _Maximum Length_: **2147483647**
 When the translation was last updated. `Required` `Default(Now)` `ReadOnly`
 
 _Type_: **datetime**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **CurrentDateTime**  

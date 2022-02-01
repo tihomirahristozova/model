@@ -59,6 +59,7 @@ Aggregate Tree
 The base url (address) of the web site. `Filter(like)`
 
 _Type_: **string (256) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **256**  
@@ -68,6 +69,7 @@ _Maximum Length_: **256**
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -75,6 +77,7 @@ _Supports Order By_: ****
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -83,6 +86,7 @@ _Default Value_: **NewGuid**
 Specifies whether the site is published for public Internet access. `Required` `Default(false)` `Filter(eq)`
 
 _Type_: **boolean**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **False**  
@@ -92,6 +96,7 @@ _Default Value_: **False**
 Multilanguage web site name. `Required` `Filter(like)`
 
 _Type_: **string (256)**  
+_Category_: **System**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **256**  
@@ -101,6 +106,7 @@ _Maximum Length_: **256**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -112,6 +118,7 @@ _Supports Order By_: ****
 The enterprise company to which this web site belongs. `Required` `Filter(multi eq)`
 
 _Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PublicUserList
@@ -119,6 +126,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The list of users used to authorize the users on the site. `Filter(multi eq)`
 
 _Type_: **[PublicUserLists](Systems.External.PublicUserLists.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

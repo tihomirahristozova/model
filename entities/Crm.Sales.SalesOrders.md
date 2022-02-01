@@ -149,6 +149,7 @@ Aggregate Tree
 Consecutive number of the correction that this document is applying to the adjusted document. `Required` `Default(0)` `ReadOnly` (Inherited from [Documents](General.Documents.md))
 
 _Type_: **int32**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  
@@ -158,6 +159,7 @@ _Default Value_: **0**
 Date/time when the document last has been adjusted by corrective document. `ReadOnly` (Inherited from [Documents](General.Documents.md))
 
 _Type_: **datetime __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -166,6 +168,7 @@ _Supports Order By_: **False**
 The user who adjusted the document. `ReadOnly` (Inherited from [Documents](General.Documents.md))
 
 _Type_: **string (64) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  
@@ -175,6 +178,7 @@ _Maximum Length_: **64**
 Date and time when the document was completed (State set to Completed). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md))
 
 _Type_: **datetime __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -183,6 +187,7 @@ _Supports Order By_: **False**
 Date/Time when the document was created. `Required` `Default(Now)` `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md))
 
 _Type_: **datetime**  
+_Category_: **System**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **CurrentDateTime**  
@@ -192,6 +197,7 @@ _Default Value_: **CurrentDateTime**
 The login name of the user, who created the document. `Required` `Filter(like)` `ReadOnly` (Inherited from [Documents](General.Documents.md))
 
 _Type_: **string (64)**  
+_Category_: **System**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  
@@ -201,6 +207,7 @@ _Maximum Length_: **64**
 Allows the sales order to be released even in the case of violations of credit limit or presence of overdue receivables. `Required` `Default(false)` `Filter(eq)`
 
 _Type_: **boolean**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **False**  
@@ -210,6 +217,7 @@ _Default Value_: **False**
 Issue date of the referent customer purchase order. `Filter(ge;le)`
 
 _Type_: **date __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -218,6 +226,7 @@ _Supports Order By_: **False**
 Reference number of the customer's purchase order. `Filter(eq;like)`
 
 _Type_: **string (20) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **20**  
@@ -227,6 +236,7 @@ _Maximum Length_: **20**
 Mode of delivery, like CIF, FOB, etc. Used also in Intrastat reporting.
 
 _Type_: **[DeliveryTerms](Crm.Sales.SalesOrders.md#deliverytermscode) __nullable__**  
+_Category_: **System**  
 Generic enum type for DeliveryTerms properties  
 _Allowed Values (Finance.Intrastat.DeliveryTerms Enum Members)_  
 
@@ -255,6 +265,7 @@ _Front-End Recalc Expressions:_
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -264,6 +275,7 @@ The date on which the document was issued. `Required` `Default(Today)` `Filter(e
 
 _Type_: **date**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **True**  
 _Default Value_: **CurrentDate**  
@@ -274,6 +286,7 @@ Document number, unique within Document_Type_Id. `Required` `Filter(eq;like)` `O
 
 _Type_: **string (20)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
 _Maximum Length_: **20**  
@@ -283,6 +296,7 @@ _Maximum Length_: **20**
 Notes for this Document. (Inherited from [Documents](General.Documents.md))
 
 _Type_: **string (max) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
@@ -292,6 +306,7 @@ _Maximum Length_: **2147483647**
 Consecutive version number, starting with 1. Each update produces a new version of the document. `Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md))
 
 _Type_: **int32**  
+_Category_: **System**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **1**  
@@ -302,6 +317,7 @@ The entity name of the document header. `Required` `Filter(eq)` `ORD` `ReadOnly`
 
 _Type_: **string (64)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **True**  
 _Maximum Length_: **64**  
@@ -311,6 +327,7 @@ _Maximum Length_: **64**
 Unique number of the sale, assigned for fiscal reporting purposes. The format is according to the applicable legislation. null means that there is no requirement for fiscal sales number for this document or it is unknown. `Filter(multi eq;like)` `ReadOnly` `Introduced in version 19.1`
 
 _Type_: **string (32) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals, Like, EqualsIn**  
 _Supports Order By_: **False**  
 _Maximum Length_: **32**  
@@ -320,6 +337,7 @@ _Maximum Length_: **32**
 When selling a service valid only for a period, denotes the beginning of the period. null means that it is unknown or N/A. `Introduced in version 20.1`
 
 _Type_: **date __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -329,6 +347,7 @@ _Front-End Recalc Expressions:_
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -337,6 +356,7 @@ _Default Value_: **NewGuid**
 Transaction nature; used for Intrastat reporting.
 
 _Type_: **[TransactionNature](Crm.Sales.SalesOrders.md#intrastattransactionnaturecode) __nullable__**  
+_Category_: **System**  
 Generic enum type for TransactionNature properties  
 _Allowed Values (Finance.Intrastat.TransactionNature Enum Members)_  
 
@@ -372,6 +392,7 @@ _Front-End Recalc Expressions:_
 Transport mode; used for Intrastat reporting.
 
 _Type_: **[TransportMode](Crm.Sales.SalesOrders.md#intrastattransportmodecode) __nullable__**  
+_Category_: **System**  
 Generic enum type for TransportMode properties  
 _Allowed Values (Finance.Intrastat.TransportMode Enum Members)_  
 
@@ -396,6 +417,7 @@ _Front-End Recalc Expressions:_
 Specifies whether the document is a single execution of its order document. `Required` `Default(false)` `Filter(eq)` `ReadOnly`
 
 _Type_: **boolean**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **False**  
@@ -405,6 +427,7 @@ _Default Value_: **False**
 True when the order is valid (e.g. released and not void). Used for internal processing. `Required` `Default(false)` `ReadOnly`
 
 _Type_: **boolean**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **False**  
@@ -414,6 +437,7 @@ _Default Value_: **False**
 Notes for this SalesOrder.
 
 _Type_: **string (254) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -423,6 +447,7 @@ _Maximum Length_: **254**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -431,6 +456,7 @@ _Supports Order By_: ****
 Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. `ReadOnly` (Inherited from [Documents](General.Documents.md))
 
 _Type_: **[ParentDocument<br />RelationshipType](Crm.Sales.SalesOrders.md#parentdocumentrelationshiptype) __nullable__**  
+_Category_: **System**  
 Relationship between parent and child documents  
 _Allowed Values (General.ParentDocumentRelationshipType Enum Members)_  
 
@@ -447,6 +473,7 @@ _Supports Order By_: **False**
 The last term for the payment of the sales order. `Filter(ge;le)`
 
 _Type_: **datetime __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -457,6 +484,7 @@ _Front-End Recalc Expressions:_
 The date when the payment becomes due for documents with one installment. null when the document is with multiple installments.
 
 _Type_: **datetime __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -467,6 +495,7 @@ _Front-End Recalc Expressions:_
 Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned). `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.md))
 
 _Type_: **boolean**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **False**  
@@ -476,6 +505,7 @@ _Default Value_: **False**
 True - the document is read only; false - the document is not read only. `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.md))
 
 _Type_: **boolean**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **False**  
@@ -485,6 +515,7 @@ _Default Value_: **False**
 The date to which this document refers, i.e. when the action really occurred. If null, Document_Date is taken. `Default(Today)` `Filter(ge;le)` (Inherited from [Documents](General.Documents.md))
 
 _Type_: **datetime __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **CurrentDate**  
@@ -494,6 +525,7 @@ _Default Value_: **CurrentDate**
 The number of the document (issued by the other party), which was the reason for the creation of the current document. The numebr should be unique within the party documents. `Filter(eq;like)` (Inherited from [Documents](General.Documents.md))
 
 _Type_: **string (20) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **20**  
@@ -503,6 +535,7 @@ _Maximum Length_: **20**
 Date and time when the document was released (State set to Released). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md))
 
 _Type_: **datetime __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -511,6 +544,7 @@ _Supports Order By_: **False**
 The required delivery date for all lines in the sales order. Initially calculated, based on either the Ship To Customer or Customer delivery term. `Filter(ge;le)`
 
 _Type_: **date __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -522,6 +556,7 @@ _Front-End Recalc Expressions:_
 The current system state of the document. Allowed values: 0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed. `Required` `Default(0)` `Filter(multi eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md))
 
 _Type_: **[DocumentState](Crm.Sales.SalesOrders.md#state)**  
+_Category_: **System**  
 Enumeration of document system states  
 _Allowed Values (General.DocumentState Enum Members)_  
 
@@ -544,6 +579,7 @@ _Default Value_: **0**
 When selling a service valid only for a period, denotes the end of the period. null means that it is unknown or N/A. `Introduced in version 20.1`
 
 _Type_: **date __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -555,6 +591,7 @@ True if the document is null and void. `Required` `Default(false)` `Filter(eq)` 
 
 _Type_: **boolean**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **False**  
@@ -564,6 +601,7 @@ _Default Value_: **False**
 Reason for voiding the document, entered by the user. `ReadOnly` (Inherited from [Documents](General.Documents.md))
 
 _Type_: **string (254) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -573,6 +611,7 @@ _Maximum Length_: **254**
 Date/time when the document has become void. `ReadOnly` (Inherited from [Documents](General.Documents.md))
 
 _Type_: **datetime __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -581,6 +620,7 @@ _Supports Order By_: **False**
 The user who voided the document. `ReadOnly` (Inherited from [Documents](General.Documents.md))
 
 _Type_: **string (64) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  
@@ -593,6 +633,7 @@ _Maximum Length_: **64**
 The access key, containing the user permissions for this document. null means that all users have unlimited permissions. `Filter(multi eq)` (Inherited from [Documents](General.Documents.md))
 
 _Type_: **[AccessKeys](Systems.Security.AccessKeys.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### AdjustedDocument
@@ -601,6 +642,7 @@ The primary document, which the current document adjusts. null when this is not 
 
 _Type_: **[Documents](General.Documents.md) (nullable)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### AssignedToUser
@@ -608,6 +650,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The user to which this document is assigned for handling. null means that the document is not assigned to specific user. `Filter(multi eq)` (Inherited from [Documents](General.Documents.md))
 
 _Type_: **[Users](Systems.Security.Users.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### CurrencyDirectory
@@ -615,6 +658,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The currency directory, containing all the convertion rates, used by the document. null means that the document does not need currency convertions. `Filter(multi eq)` (Inherited from [Documents](General.Documents.md))
 
 _Type_: **[CurrencyDirectories](General.CurrencyDirectories.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Customer
@@ -623,6 +667,7 @@ The primary customer, which placed the sales order. `Required` `Filter(multi eq)
 
 _Type_: **[Customers](Crm.Customers.md)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Deal
@@ -630,6 +675,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The opportunity (deal) on which this order is based. `Filter(multi eq)`
 
 _Type_: **[Deals](Crm.Presales.Deals.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Dealer
@@ -637,6 +683,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The external dealer, associated with the sales order. `Filter(multi eq)`
 
 _Type_: **[Dealers](Crm.Dealers.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### DealType
@@ -644,6 +691,7 @@ _Supported Filters_: **Equals, EqualsIn**
 Deal type to be passed to the invoice. If deal type in entered then the invoice creates VAT entry for this deal type. `Filter(multi eq)`
 
 _Type_: **[DealTypes](Finance.Vat.DealTypes.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Front-End Recalc Expressions:_  
@@ -653,6 +701,7 @@ _Front-End Recalc Expressions:_
 The distribution channel, that is used to deliver the products. `Filter(multi eq)`
 
 _Type_: **[DistributionChannels](Crm.Marketing.DistributionChannels.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Front-End Recalc Expressions:_  
@@ -662,6 +711,7 @@ _Front-End Recalc Expressions:_
 The currency of the document; e.g. the currency of the amounts in the document. `Required` `Filter(multi eq)`
 
 _Type_: **[Currencies](General.Currencies.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Back-End Default Expression:_  
@@ -675,6 +725,7 @@ The user defined type of the document. Determines document behaviour, properties
 
 _Type_: **[DocumentTypes](General.DocumentTypes.md)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### EndCustomerParty
@@ -682,6 +733,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The end customer is the customer of the dealer. It is stored for information purposes only. The end customer may not have customer definition; any party can be used. `Filter(multi eq)` `Introduced in version 20.1`
 
 _Type_: **[Parties](General.Contacts.Parties.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Front-End Recalc Expressions:_  
@@ -692,6 +744,7 @@ The enterprise company which issued the document. `Required` `Filter(multi eq)` 
 
 _Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### EnterpriseCompanyLocation
@@ -699,6 +752,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The enterprise company location which issued the document. null means that there is only one location within the enterprise company and locations are not used. `Filter(multi eq)` (Inherited from [Documents](General.Documents.md))
 
 _Type_: **[CompanyLocations](General.Contacts.CompanyLocations.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### FiscalPrinterPosDevice
@@ -706,6 +760,7 @@ _Supported Filters_: **Equals, EqualsIn**
 For POS sales, specifies the fiscal printer. null when the sales is not a POS sale. `Filter(multi eq)` `Introduced in version 19.1`
 
 _Type_: **[Devices](Crm.Pos.Devices.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### FromCompanyDivision
@@ -713,6 +768,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The division of the company, issuing the document. null when the document is not issued by any specific division. `Filter(multi eq)` (Inherited from [Documents](General.Documents.md))
 
 _Type_: **[CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### FromParty
@@ -720,6 +776,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The party which issued the document. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.md))
 
 _Type_: **[Parties](General.Contacts.Parties.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### IntrastatTransportCountry
@@ -727,6 +784,7 @@ _Supported Filters_: **Equals, EqualsIn**
 Country of origin of the transport company; used for Intrastat reporting. `Filter(multi eq)`
 
 _Type_: **[Countries](General.Geography.Countries.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Front-End Recalc Expressions:_  
@@ -737,6 +795,7 @@ In a multi-document tree, this is the root document, that created the whole tree
 
 _Type_: **[Documents](General.Documents.md)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Parent
@@ -745,6 +804,7 @@ In a multi-document tree, this is the direct parent document. If this is the roo
 
 _Type_: **[Documents](General.Documents.md) (nullable)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PaymentAccount
@@ -752,6 +812,7 @@ _Supported Filters_: **Equals, EqualsIn**
 When not null, the payment account, where the payment is expected. null=no expectation for account. `Filter(multi eq)`
 
 _Type_: **[PaymentAccounts](Finance.Payments.PaymentAccounts.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Front-End Recalc Expressions:_  
@@ -762,6 +823,7 @@ _Front-End Recalc Expressions:_
 When not null specifies the payment type for the sales order. `Filter(multi eq)`
 
 _Type_: **[PaymentTypes](Finance.Payments.PaymentTypes.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Front-End Recalc Expressions:_  
@@ -772,6 +834,7 @@ _Front-End Recalc Expressions:_
 For POS sales, specifies the POS location, in which the sale is performed. null when the sales is not a POS sale. `Filter(multi eq)` `Introduced in version 19.1`
 
 _Type_: **[Locations](Crm.Pos.Locations.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PosOperator
@@ -779,6 +842,7 @@ _Supported Filters_: **Equals, EqualsIn**
 For POS sales, specifies the POS operator, who created the sale. null when the sale is not a POS sale. `Filter(multi eq)` `Introduced in version 19.1`
 
 _Type_: **[Operators](Crm.Pos.Operators.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PosTerminal
@@ -786,6 +850,7 @@ _Supported Filters_: **Equals, EqualsIn**
 For POS sales, specifies the POS terminal, on which the sale is entered. null when the sales is not a POS sale. `Filter(multi eq)` `Introduced in version 19.1`
 
 _Type_: **[Terminals](Crm.Pos.Terminals.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PriceList
@@ -793,6 +858,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The price list to be used for determining product prices in the lines. `Filter(multi eq)`
 
 _Type_: **[PriceLists](Crm.PriceLists.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PrimeCauseDocument
@@ -801,6 +867,7 @@ The document that is the prime cause for creation of the current document. `Filt
 
 _Type_: **[Documents](General.Documents.md) (nullable)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ResponsiblePerson
@@ -808,6 +875,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc. `Filter(multi eq)` (Inherited from [Documents](General.Documents.md))
 
 _Type_: **[Persons](General.Contacts.Persons.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ReturnForInvoice
@@ -816,6 +884,7 @@ When specified indicates that some of the goods sold in the sales orders invoice
 
 _Type_: **[Invoices](Crm.Invoicing.Invoices.md) (nullable)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ReturnForSalesOrder
@@ -824,6 +893,7 @@ When specified indicates that some of the goods sold in Return_For_Sales_Order_I
 
 _Type_: **[SalesOrders](Crm.Sales.SalesOrders.md) (nullable)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, Like, EqualsIn**  
 
 ### ReverseOfDocument
@@ -831,6 +901,7 @@ _Supported Filters_: **Equals, Like, EqualsIn**
 The document which the current document is reverse of. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.md))
 
 _Type_: **[Documents](General.Documents.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### SalesPerson
@@ -839,6 +910,7 @@ Internal company sales person. `Filter(multi eq)`
 
 _Type_: **[SalesPersons](Crm.SalesPersons.md) (nullable)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Front-End Recalc Expressions:_  
@@ -848,6 +920,7 @@ _Front-End Recalc Expressions:_
 The sequence that will be used to give new numbers to the documents of this type. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.md))
 
 _Type_: **[Sequences](General.Sequences.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ShipToCustomer
@@ -855,6 +928,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The customer to whom to ship the sales order. Usually it is a customer entry for a sub-party of the primary customer. `Filter(multi eq)`
 
 _Type_: **[Customers](Crm.Customers.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Front-End Recalc Expressions:_  
@@ -864,6 +938,7 @@ _Front-End Recalc Expressions:_
 The contact mechanism (address) to whih to ship the sales order. `Filter(multi eq)`
 
 _Type_: **[PartyContactMechanisms](General.Contacts.PartyContactMechanisms.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Front-End Recalc Expressions:_  
@@ -873,6 +948,7 @@ _Front-End Recalc Expressions:_
 The store from which to issue the sales order. null means that there is no store associated with the sales order or there are different stores for some of the lines. `Filter(multi eq)`
 
 _Type_: **[Stores](Logistics.Inventory.Stores.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Front-End Recalc Expressions:_  
@@ -882,6 +958,7 @@ _Front-End Recalc Expressions:_
 The division of the company, receiving the document. null when the document is not received by any specific division. `Filter(multi eq)` (Inherited from [Documents](General.Documents.md))
 
 _Type_: **[CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ToParty
@@ -889,6 +966,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The party which should receive the document. `Filter(multi eq)` (Inherited from [Documents](General.Documents.md))
 
 _Type_: **[Parties](General.Contacts.Parties.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Back-End Default Expression:_  
@@ -899,6 +977,7 @@ _Back-End Default Expression:_
 The user status of this document if applicable for this document type. null means unknown or not yet set. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.md))
 
 _Type_: **[DocumentTypeUserStatuses](General.DocumentTypeUserStatuses.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

@@ -200,11 +200,13 @@ Aggregate Root:<br>
 <h3 id="displaytext">DisplayText</h3>
 <p>Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.</p>
 <p><em>Type</em>: <strong>string</strong><br>
+<em>Category</em>: <strong>Calculated Attributes</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: ****</p>
 <h3 id="executiondate">ExecutionDate</h3>
 <p>The date when the operation was executed. <code>Required</code></p>
 <p><em>Type</em>: <strong>date</strong><br>
+<em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Back-End Default Expression:</em><br>
@@ -214,6 +216,7 @@ Aggregate Root:<br>
 <h3 id="executiontime">ExecutionTime</h3>
 <p>The time when the operation was executed. <code>Required</code></p>
 <p><em>Type</em>: <strong>time</strong><br>
+<em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Back-End Default Expression:</em><br>
@@ -223,11 +226,13 @@ Aggregate Root:<br>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
+<em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="lineno">LineNo</h3>
 <p>Consecutive line number within this execution. <code>Required</code></p>
 <p><em>Type</em>: <strong>int32</strong><br>
+<em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Back-End Default Expression:</em><br>
@@ -237,17 +242,20 @@ Aggregate Root:<br>
 <h3 id="notes">Notes</h3>
 <p>Notes for this TransportationExecutionLine.</p>
 <p><em>Type</em>: <strong>string (max) <strong>nullable</strong></strong><br>
+<em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>2147483647</strong></p>
 <h3 id="objectversion">ObjectVersion</h3>
 <p>The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.</p>
 <p><em>Type</em>: <strong>int32</strong><br>
+<em>Category</em>: <strong>Extensible Data Object</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: ****</p>
 <h3 id="operationtype">OperationType</h3>
 <p>The type of operation being executed. L=Loading; U=Unloading; O=Other. <code>Required</code></p>
 <p><em>Type</em>: <strong><a href="Logistics.Shipment.TransportationExecutionLines.html#operationtype">OperationType</a></strong><br>
+<em>Category</em>: <strong>System</strong><br>
 Allowed values for the <code>OperationType</code>(Logistics.Shipment.TransportationExecutionLines.md#operationtype) data attribute<br>
 <em>Allowed Values (Logistics.Shipment.TransportationExecutionLinesRepository.OperationType Enum Members)</em></p>
 <table>
@@ -277,22 +285,26 @@ Allowed values for the <code>OperationType</code>(Logistics.Shipment.Transportat
 <h3 id="palletnumber">PalletNumber</h3>
 <p>Pallet number, when applicable. null when unknown or not applicable.</p>
 <p><em>Type</em>: <strong>string (32) <strong>nullable</strong></strong><br>
+<em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>32</strong></p>
 <h3 id="palletscount">PalletsCount</h3>
 <p>Number of pallets affected by this operation. null when unknown or N/A.</p>
 <p><em>Type</em>: <strong>int32 <strong>nullable</strong></strong><br>
+<em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="volumecbm">VolumeCbm</h3>
 <p>Cargo volume in cubic meters, affected by this operation. null when unknown or N/A.</p>
 <p><em>Type</em>: <strong>int32 <strong>nullable</strong></strong><br>
+<em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="weightkg">WeightKg</h3>
 <p>Cargo weight in kg, affected by this operation. null when unknown or N/A.</p>
 <p><em>Type</em>: <strong>int32 <strong>nullable</strong></strong><br>
+<em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
@@ -300,14 +312,17 @@ Allowed values for the <code>OperationType</code>(Logistics.Shipment.Transportat
 <p>The <see cref="TransportationExecution"></see> to which this TransportationExecutionLine belongs. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Logistics.Shipment.TransportationExecutions.html">TransportationExecutions</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
+<em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="executionoftransportationorderline">ExecutionOfTransportationOrderLine</h3>
 <p>The transportation order line, which is executed. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Logistics.Shipment.TransportationOrderLines.html">TransportationOrderLines</a></strong><br>
+<em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="geopoint">GeoPoint</h3>
 <p>The geographic point, where the operation is executed. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.Geography.GeoPoints.html">GeoPoints</a></strong><br>
+<em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <p><em>Back-End Default Expression:</em><br>
 <code>obj.TransportationExecution.GeoPoint</code></p>
@@ -317,6 +332,7 @@ Allowed values for the <code>OperationType</code>(Logistics.Shipment.Transportat
 <p>The <see cref="TransportationExecution"></see> to which this TransportationExecutionLine belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="Logistics.Shipment.TransportationExecutions.html">TransportationExecutions</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
+<em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em><a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a></em>: <strong>True</strong></p>
 <h2 id="api-methods">API Methods</h2>

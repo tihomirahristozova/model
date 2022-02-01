@@ -76,6 +76,7 @@ Aggregate Tree
 The code or name of the person, who is in charge for purchasing the product from external suppliers. It is used to group different products on purchase demand report. null when Procurement_Type is not buy.
 
 _Type_: **string (64) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  
@@ -85,6 +86,7 @@ _Maximum Length_: **64**
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -93,6 +95,7 @@ _Supports Order By_: ****
 Fixed order quantity under the FOQ &amp; EOQ replenishment system. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Default(0)`
 
 _Type_: **[Quantity (18, 3)](../data-types.md#quantity)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -101,6 +104,7 @@ _Default Value_: **Constant**
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -109,6 +113,7 @@ _Default Value_: **NewGuid**
 True if this product supply is active. `Required` `Default(true)` `Filter(eq)`
 
 _Type_: **boolean**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **True**  
@@ -118,6 +123,7 @@ _Default Value_: **True**
 Specifies whether this is the default supply rule. The planning system works using *only* the default supply rules. The other rules are for reference and user information. `Required` `Default(true)` `Filter(eq)`
 
 _Type_: **boolean**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **True**  
@@ -127,6 +133,7 @@ _Default Value_: **True**
 MTS=Make-To-Stock; MTO=Make-To-Order; ATO=Assemble-To-Order;ETO=Engineer-To-Order. `Required` `Default("MTS")`
 
 _Type_: **[ManufacturingPolicy](General.Products.ProductSupply.md#manufacturingpolicy)**  
+_Category_: **System**  
 Allowed values for the `ManufacturingPolicy`(General.Products.ProductSupply.md#manufacturingpolicy) data attribute  
 _Allowed Values (General.Products.ProductSupplyRepository.ManufacturingPolicy Enum Members)_  
 
@@ -146,6 +153,7 @@ _Default Value_: **MakeToStock**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -154,6 +162,7 @@ _Supports Order By_: ****
 The quantity of the product, normally ordered from the plant or supplier. The quantity is expressed in the base measurement unit. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Default(1)`
 
 _Type_: **[Quantity (18, 3)](../data-types.md#quantity)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -163,6 +172,7 @@ _Default Value_: **Constant**
 LFL=Lot for Lot; FOQ=Fixed order quantity; EOQ=Eqonomic Order Quantity; ROP=ReOrder Point; ROT=ReOrder point with Time planning; LFP = Lot For Period;. `Required` `Default("ROP")`
 
 _Type_: **[OrderLotSizingMethod](General.Products.ProductSupply.md#orderlotsizingmethod)**  
+_Category_: **System**  
 Allowed values for the `OrderLotSizingMethod`(General.Products.ProductSupply.md#orderlotsizingmethod) data attribute  
 _Allowed Values (General.Products.ProductSupplyRepository.OrderLotSizingMethod Enum Members)_  
 
@@ -184,6 +194,7 @@ _Default Value_: **ReorderPoint**
 Order maximum when buying or making. null means no maximum. `Unit: Product.BaseMeasurementCategory.BaseUnit`
 
 _Type_: **[Quantity (18, 3)](../data-types.md#quantity) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -192,6 +203,7 @@ _Supports Order By_: **False**
 Minimum order quantity both for buying and making. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Default(0)`
 
 _Type_: **[Quantity (18, 3)](../data-types.md#quantity)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -201,6 +213,7 @@ _Default Value_: **Constant**
 True if the order qty should be multiple of lot size when buying or making. `Required` `Default(false)`
 
 _Type_: **boolean**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **False**  
@@ -210,6 +223,7 @@ _Default Value_: **False**
 For how many days in the future should be planned - for fixed period replenishment system. null - not yet specified.
 
 _Type_: **int32 __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -218,6 +232,7 @@ _Supports Order By_: **False**
 Start date of the first period under fixed period replenishment system. null - not yet specified.
 
 _Type_: **datetime __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -226,6 +241,7 @@ _Supports Order By_: **False**
 Order point quantity under the OP replenishment system. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Default(0)`
 
 _Type_: **[Quantity (18, 3)](../data-types.md#quantity)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -235,6 +251,7 @@ _Default Value_: **Constant**
 Order policy/replenishment system. OPS=Order Point System; OPT=Order Point System with Time planning; PRS=Periodic Review System/Periods Of Supply; MRP = Material Requirements Planning. `Required` `Default("OPS")`
 
 _Type_: **[OrderPolicy](General.Products.ProductSupply.md#orderpolicy)**  
+_Category_: **System**  
 Allowed values for the `OrderPolicy`(General.Products.ProductSupply.md#orderpolicy) data attribute  
 _Allowed Values (General.Products.ProductSupplyRepository.OrderPolicy Enum Members)_  
 
@@ -254,6 +271,7 @@ _Default Value_: **OrderPointSystem**
 The expected carrying cost as percentage of inventory cost. null means unknown.
 
 _Type_: **decimal (5, 4) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -262,6 +280,7 @@ _Supports Order By_: **False**
 Average usage of the product for 1 year. NUL means unknown. `Unit: Product.BaseMeasurementCategory.BaseUnit`
 
 _Type_: **[Quantity (18, 3)](../data-types.md#quantity) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -270,6 +289,7 @@ _Supports Order By_: **False**
 Number of days in the future for which to plan the demand and supply. `Required` `Default(0)`
 
 _Type_: **int32**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  
@@ -279,6 +299,7 @@ _Default Value_: **0**
 The number of days required to supply or manufacture the product. The number is exclusive of the lead-time of lower-level components. `Required` `Default(0)`
 
 _Type_: **int32**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  
@@ -290,6 +311,7 @@ _Front-End Recalc Expressions:_
 Maximum inventory. null if N/A. `Unit: Product.BaseMeasurementCategory.BaseUnit`
 
 _Type_: **[Quantity (18, 3)](../data-types.md#quantity) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -298,6 +320,7 @@ _Supports Order By_: **False**
 Projected cost to place an order and set-up equipment. `Currency: EnterpriseCompany.BaseCurrency`
 
 _Type_: **[Amount (18, 3)](../data-types.md#amount) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -306,6 +329,7 @@ _Supports Order By_: **False**
 Number of days in one period under fixed period replenishment system. null - not yet specified.
 
 _Type_: **int32 __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -314,6 +338,7 @@ _Supports Order By_: **False**
 Planned lowest inventory level, protecting against unplanned demands. The quantity is expressed in the base measurement unit of the product. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Default(0)`
 
 _Type_: **[Quantity (18, 3)](../data-types.md#quantity)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -323,6 +348,7 @@ _Default Value_: **Constant**
 Period in the future inside of which changes to the MPS are carefully evaluated to prevent costly schedule disruption. Demand for the period between DTF and PTF is calculated as the bigger of customer orders and sales forecast. Abbr. - PTF. `Required` `Default(1)`
 
 _Type_: **int32**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **1**  
@@ -332,6 +358,7 @@ _Default Value_: **1**
 M=Make; B=Buy; T=Transfer.  Identifies whether the product is produced or externally bought. `Required` `Default("B")`
 
 _Type_: **[ProcurementType](General.Products.ProductSupply.md#procurementtype)**  
+_Category_: **System**  
 Allowed values for the `ProcurementType`(General.Products.ProductSupply.md#procurementtype) data attribute  
 _Allowed Values (General.Products.ProductSupplyRepository.ProcurementType Enum Members)_  
 
@@ -350,6 +377,7 @@ _Default Value_: **Buy**
 Standard cost for one lot of the product. `Currency: Product.CostingCurrency` `Required` `Default(0)`
 
 _Type_: **[Amount (18, 4)](../data-types.md#amount)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -359,6 +387,7 @@ _Default Value_: **Constant**
 The supply schema to use for the distribution of the product among warehouses. `Filter(multi eq)`
 
 _Type_: **guid __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 
@@ -369,6 +398,7 @@ _Supported Filters_: **Equals, EqualsIn**
 Default store bin for new deliveries using this supply scheme. `Filter(multi eq)`
 
 _Type_: **[StoreBins](Logistics.Inventory.StoreBins.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### EnterpriseCompany
@@ -376,6 +406,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The Enterprise Company to which this ProductSupply applies, or null if it is for all enterprise companies. `Filter(multi eq)`
 
 _Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### FromStore
@@ -383,6 +414,7 @@ _Supported Filters_: **Equals, EqualsIn**
 Used when the Procurement_Type is Transfer. `Filter(multi eq)`
 
 _Type_: **[Stores](Logistics.Inventory.Stores.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### GenerateDocumentType
@@ -390,6 +422,7 @@ _Supported Filters_: **Equals, EqualsIn**
 Specifies the type of the document which should be generated by the procurement planning system, when generating supply based on this rule. `Filter(multi eq)`
 
 _Type_: **[DocumentTypes](General.DocumentTypes.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PreferredSupplier
@@ -397,6 +430,7 @@ _Supported Filters_: **Equals, EqualsIn**
 Preferred supplier for the product. null if there is no preferred supplier. `Filter(multi eq)`
 
 _Type_: **[Suppliers](Logistics.Procurement.Suppliers.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Product
@@ -405,6 +439,7 @@ The <see cref="Product"/> to which this ProductSupply belongs. `Filter(multi eq)
 
 _Type_: **[Products](General.Products.Products.md) (nullable)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ProductGroup
@@ -412,6 +447,7 @@ _Supported Filters_: **Equals, EqualsIn**
 Not null when the method is a default method for a whole product group. In this case new products in the group inherit the settings. `Filter(multi eq)`
 
 _Type_: **[ProductGroups](General.Products.ProductGroups.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Store
@@ -419,6 +455,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The store for which this rule is defined. When null, the rule is valid for all stores. `Filter(multi eq)`
 
 _Type_: **[Stores](Logistics.Inventory.Stores.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

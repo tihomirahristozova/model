@@ -134,6 +134,7 @@ Aggregate Tree
 Consecutive number of the correction that this document is applying to the adjusted document. `Required` `Default(0)` `ReadOnly` (Inherited from [Documents](General.Documents.md))
 
 _Type_: **int32**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  
@@ -143,6 +144,7 @@ _Default Value_: **0**
 Date/time when the document last has been adjusted by corrective document. `ReadOnly` (Inherited from [Documents](General.Documents.md))
 
 _Type_: **datetime __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -151,6 +153,7 @@ _Supports Order By_: **False**
 The user who adjusted the document. `ReadOnly` (Inherited from [Documents](General.Documents.md))
 
 _Type_: **string (64) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  
@@ -160,6 +163,7 @@ _Maximum Length_: **64**
 True to allow closing of payment orders, that are not fully paid. `Required` `Default(false)` `Filter(eq)`
 
 _Type_: **boolean**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **False**  
@@ -169,6 +173,7 @@ _Default Value_: **False**
 If filled indicates which party is billed for the total amount. Possible values: 'C' = Company (means the Party_Id), 'L' = Company location (the Location_Party_Id), null = unidentified. `Filter(eq)`
 
 _Type_: **[BillTo](Finance.Payments.PaymentOrders.md#billto) __nullable__**  
+_Category_: **System**  
 Allowed values for the `BillTo`(Finance.Payments.PaymentOrders.md#billto) data attribute  
 _Allowed Values (Finance.Payments.PaymentOrdersRepository.BillTo Enum Members)_  
 
@@ -185,6 +190,7 @@ _Supports Order By_: **False**
 Date and time when the document was completed (State set to Completed). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md))
 
 _Type_: **datetime __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -193,6 +199,7 @@ _Supports Order By_: **False**
 Date/Time when the document was created. `Required` `Default(Now)` `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md))
 
 _Type_: **datetime**  
+_Category_: **System**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **CurrentDateTime**  
@@ -202,6 +209,7 @@ _Default Value_: **CurrentDateTime**
 The login name of the user, who created the document. `Required` `Filter(like)` `ReadOnly` (Inherited from [Documents](General.Documents.md))
 
 _Type_: **string (64)**  
+_Category_: **System**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  
@@ -211,6 +219,7 @@ _Maximum Length_: **64**
 I for Payment issue, R for payment receipt. `Required` `Default("I")` `Filter(eq)`
 
 _Type_: **[Direction](Finance.Payments.PaymentOrders.md#direction)**  
+_Category_: **System**  
 Allowed values for the `Direction`(Finance.Payments.PaymentOrders.md#direction) data attribute  
 _Allowed Values (Finance.Payments.PaymentOrdersRepository.Direction Enum Members)_  
 
@@ -228,6 +237,7 @@ _Default Value_: **Expense**
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -237,6 +247,7 @@ The date on which the document was issued. `Required` `Default(Today)` `Filter(e
 
 _Type_: **date**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **True**  
 _Default Value_: **CurrentDate**  
@@ -247,6 +258,7 @@ Document number, unique within Document_Type_Id. `Required` `Filter(eq;like)` `O
 
 _Type_: **string (20)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **True**  
 _Maximum Length_: **20**  
@@ -256,6 +268,7 @@ _Maximum Length_: **20**
 Notes for this Document. (Inherited from [Documents](General.Documents.md))
 
 _Type_: **string (max) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
@@ -265,6 +278,7 @@ _Maximum Length_: **2147483647**
 Consecutive version number, starting with 1. Each update produces a new version of the document. `Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md))
 
 _Type_: **int32**  
+_Category_: **System**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **1**  
@@ -274,6 +288,7 @@ _Default Value_: **1**
 The due date of the payment. null means there is no due date. `Filter(eq;ge;le)`
 
 _Type_: **datetime __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -283,6 +298,7 @@ The date at which the payment becomes executable. null means the payment is exec
 
 _Type_: **date __nullable__**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **True**  
 
@@ -292,6 +308,7 @@ The entity name of the document header. `Required` `Filter(eq)` `ORD` `ReadOnly`
 
 _Type_: **string (64)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **True**  
 _Maximum Length_: **64**  
@@ -300,6 +317,7 @@ _Maximum Length_: **64**
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -308,6 +326,7 @@ _Default Value_: **NewGuid**
 Consequtive installment number. Used for identifying the payment when using payment plans. null means that the payment is not part of a payment plan. `Filter(eq)`
 
 _Type_: **int32 __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 
@@ -316,6 +335,7 @@ _Supports Order By_: **False**
 The invoice amount that is specified in this payment order. (the invoice amount converted to the Total_Amount_Currency_Id must be equal to the Total_Amount). `Currency: InvoiceAmountCurrency`
 
 _Type_: **[Amount (18, 2)](../data-types.md#amount) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -324,6 +344,7 @@ _Supports Order By_: **False**
 Is_Amount_With_VAT=true if the requested amount includes VAT. `Required` `Default(true)` `Filter(eq)`
 
 _Type_: **boolean**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **True**  
@@ -333,6 +354,7 @@ _Default Value_: **True**
 Specifies whether the document is a single execution of its order document. `Required` `Default(false)` `Filter(eq)` `ReadOnly`
 
 _Type_: **boolean**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **False**  
@@ -342,6 +364,7 @@ _Default Value_: **False**
 Notes for this PaymentOrder.
 
 _Type_: **string (254) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -351,6 +374,7 @@ _Maximum Length_: **254**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -359,6 +383,7 @@ _Supports Order By_: ****
 Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. `ReadOnly` (Inherited from [Documents](General.Documents.md))
 
 _Type_: **[ParentDocument<br />RelationshipType](Finance.Payments.PaymentOrders.md#parentdocumentrelationshiptype) __nullable__**  
+_Category_: **System**  
 Relationship between parent and child documents  
 _Allowed Values (General.ParentDocumentRelationshipType Enum Members)_  
 
@@ -375,6 +400,7 @@ _Supports Order By_: **False**
 Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned). `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.md))
 
 _Type_: **boolean**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **False**  
@@ -384,6 +410,7 @@ _Default Value_: **False**
 True - the document is read only; false - the document is not read only. `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.md))
 
 _Type_: **boolean**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **False**  
@@ -393,6 +420,7 @@ _Default Value_: **False**
 The date of the original document. null means that it is unknown. `Filter(eq)`
 
 _Type_: **datetime __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 
@@ -406,6 +434,7 @@ _Front-End Recalc Expressions:_
 The number of the document which has created the payment order and is the basis for the payment. `Required` `Filter(eq)`
 
 _Type_: **string (20)**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Maximum Length_: **20**  
@@ -420,6 +449,7 @@ _Front-End Recalc Expressions:_
 The date to which this document refers, i.e. when the action really occurred. If null, Document_Date is taken. `Default(Today)` `Filter(ge;le)` (Inherited from [Documents](General.Documents.md))
 
 _Type_: **datetime __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **CurrentDate**  
@@ -429,6 +459,7 @@ _Default Value_: **CurrentDate**
 The number of the document (issued by the other party), which was the reason for the creation of the current document. The numebr should be unique within the party documents. `Filter(eq;like)` (Inherited from [Documents](General.Documents.md))
 
 _Type_: **string (20) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **20**  
@@ -438,6 +469,7 @@ _Maximum Length_: **20**
 The apply date of the related invoice. Not specified when the payment order isn't related to any invoice or the apply date is unknown. `Filter(eq;ge;le)`
 
 _Type_: **datetime __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -451,6 +483,7 @@ _Front-End Recalc Expressions:_
 The date of the related invoice. null means that the payment order isn't related to any invoice or the date is unknown. `Filter(eq;ge;le)`
 
 _Type_: **datetime __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -464,6 +497,7 @@ _Front-End Recalc Expressions:_
 The number of the invoice which has created or is related to the payment order and is the basis for the payment. null means that the payment order isn't created or related to any invoice. `Filter(eq)`
 
 _Type_: **string (20) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Maximum Length_: **20**  
@@ -478,6 +512,7 @@ _Front-End Recalc Expressions:_
 Date and time when the document was released (State set to Released). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md))
 
 _Type_: **datetime __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -486,6 +521,7 @@ _Supports Order By_: **False**
 The current system state of the document. Allowed values: 0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed. `Required` `Default(0)` `Filter(multi eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md))
 
 _Type_: **[DocumentState](Finance.Payments.PaymentOrders.md#state)**  
+_Category_: **System**  
 Enumeration of document system states  
 _Allowed Values (General.DocumentState Enum Members)_  
 
@@ -508,6 +544,7 @@ _Default Value_: **0**
 Total amount that should be payed. `Currency: TotalAmountCurrency` `Required` `Default(0)` `Filter(eq;ge;le)`
 
 _Type_: **[Amount (18, 2)](../data-types.md#amount)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
@@ -518,6 +555,7 @@ True if the document is null and void. `Required` `Default(false)` `Filter(eq)` 
 
 _Type_: **boolean**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **False**  
@@ -527,6 +565,7 @@ _Default Value_: **False**
 Reason for voiding the document, entered by the user. `ReadOnly` (Inherited from [Documents](General.Documents.md))
 
 _Type_: **string (254) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -536,6 +575,7 @@ _Maximum Length_: **254**
 Date/time when the document has become void. `ReadOnly` (Inherited from [Documents](General.Documents.md))
 
 _Type_: **datetime __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -544,6 +584,7 @@ _Supports Order By_: **False**
 The user who voided the document. `ReadOnly` (Inherited from [Documents](General.Documents.md))
 
 _Type_: **string (64) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  
@@ -556,6 +597,7 @@ _Maximum Length_: **64**
 The access key, containing the user permissions for this document. null means that all users have unlimited permissions. `Filter(multi eq)` (Inherited from [Documents](General.Documents.md))
 
 _Type_: **[AccessKeys](Systems.Security.AccessKeys.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### AdjustedDocument
@@ -564,6 +606,7 @@ The primary document, which the current document adjusts. null when this is not 
 
 _Type_: **[Documents](General.Documents.md) (nullable)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### AssignedToUser
@@ -571,6 +614,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The user to which this document is assigned for handling. null means that the document is not assigned to specific user. `Filter(multi eq)` (Inherited from [Documents](General.Documents.md))
 
 _Type_: **[Users](Systems.Security.Users.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### CurrencyDirectory
@@ -578,6 +622,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The currency directory, containing all the convertion rates, used by the document. null means that the document does not need currency convertions. `Filter(multi eq)` (Inherited from [Documents](General.Documents.md))
 
 _Type_: **[CurrencyDirectories](General.CurrencyDirectories.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### DocumentType
@@ -586,6 +631,7 @@ The user defined type of the document. Determines document behaviour, properties
 
 _Type_: **[DocumentTypes](General.DocumentTypes.md)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### EnterpriseCompany
@@ -594,6 +640,7 @@ The enterprise company which issued the document. `Required` `Filter(multi eq)` 
 
 _Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### EnterpriseCompanyLocation
@@ -601,6 +648,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The enterprise company location which issued the document. null means that there is only one location within the enterprise company and locations are not used. `Filter(multi eq)` (Inherited from [Documents](General.Documents.md))
 
 _Type_: **[CompanyLocations](General.Contacts.CompanyLocations.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### FiscalPrinterPosDevice
@@ -608,6 +656,7 @@ _Supported Filters_: **Equals, EqualsIn**
 When not null, contains suggested fiscal printer for printing fiscal notes upon payment. `Filter(multi eq)` `Introduced in version 19.1`
 
 _Type_: **[Devices](Crm.Pos.Devices.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### FromCompanyDivision
@@ -615,6 +664,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The division of the company, issuing the document. null when the document is not issued by any specific division. `Filter(multi eq)` (Inherited from [Documents](General.Documents.md))
 
 _Type_: **[CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### FromParty
@@ -622,6 +672,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The party which issued the document. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.md))
 
 _Type_: **[Parties](General.Contacts.Parties.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### InvoiceAmountCurrency
@@ -629,6 +680,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The currency of Invoice Amount. `Filter(multi eq)`
 
 _Type_: **[Currencies](General.Currencies.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### LocationParty
@@ -637,6 +689,7 @@ Location or sub-party of the Party_Id in the order. `Filter(multi eq)`
 
 _Type_: **[Parties](General.Contacts.Parties.md) (nullable)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### MasterDocument
@@ -645,6 +698,7 @@ In a multi-document tree, this is the root document, that created the whole tree
 
 _Type_: **[Documents](General.Documents.md)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Parent
@@ -653,6 +707,7 @@ In a multi-document tree, this is the direct parent document. If this is the roo
 
 _Type_: **[Documents](General.Documents.md) (nullable)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Party
@@ -661,6 +716,7 @@ The party which is to pay or receive the amount. `Required` `Filter(multi eq)`
 
 _Type_: **[Parties](General.Contacts.Parties.md)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Back-End Default Expression:_  
@@ -671,6 +727,7 @@ _Back-End Default Expression:_
 When not null, specifies the payment account that is expected or will be used by the payment transaction. `Filter(multi eq)`
 
 _Type_: **[PaymentAccounts](Finance.Payments.PaymentAccounts.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Front-End Recalc Expressions:_  
@@ -680,6 +737,7 @@ _Front-End Recalc Expressions:_
 Expected payment type. Null when there is no expectation. Can also specify default payment account. `Filter(multi eq)`
 
 _Type_: **[PaymentTypes](Finance.Payments.PaymentTypes.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### PrimeCauseDocument
@@ -688,6 +746,7 @@ The document that is the prime cause for creation of the current document. `Filt
 
 _Type_: **[Documents](General.Documents.md) (nullable)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### RefDocument
@@ -696,6 +755,7 @@ The document which has created the payment order and is the basis for the paymen
 
 _Type_: **[Documents](General.Documents.md) (nullable)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### RefDocumentType
@@ -704,6 +764,7 @@ The type of the document which has created the payment order and is the basis fo
 
 _Type_: **[DocumentTypes](General.DocumentTypes.md)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Back-End Default Expression:_  
@@ -717,6 +778,7 @@ The invoice document which has created or is related to the payment order and is
 
 _Type_: **[Documents](General.Documents.md) (nullable)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### RefInvoiceDocumentType
@@ -724,6 +786,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The document type of the invoice which has created or is related to the payment order and is the basis for the payment. null means that the payment order isn't created or related to any invoice. `Filter(multi eq)`
 
 _Type_: **[DocumentTypes](General.DocumentTypes.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Back-End Default Expression:_  
@@ -736,6 +799,7 @@ _Front-End Recalc Expressions:_
 The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc. `Filter(multi eq)` (Inherited from [Documents](General.Documents.md))
 
 _Type_: **[Persons](General.Contacts.Persons.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ReverseOfDocument
@@ -743,6 +807,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The document which the current document is reverse of. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.md))
 
 _Type_: **[Documents](General.Documents.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### Sequence
@@ -750,6 +815,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The sequence that will be used to give new numbers to the documents of this type. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.md))
 
 _Type_: **[Sequences](General.Sequences.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ToCompanyDivision
@@ -757,6 +823,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The division of the company, receiving the document. null when the document is not received by any specific division. `Filter(multi eq)` (Inherited from [Documents](General.Documents.md))
 
 _Type_: **[CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ToParty
@@ -764,6 +831,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The party which should receive the document. `Filter(multi eq)` (Inherited from [Documents](General.Documents.md))
 
 _Type_: **[Parties](General.Contacts.Parties.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Back-End Default Expression:_  
@@ -774,6 +842,7 @@ _Back-End Default Expression:_
 The currency of Total Amount. `Required` `Filter(multi eq)`
 
 _Type_: **[Currencies](General.Currencies.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Back-End Default Expression:_  
@@ -784,6 +853,7 @@ _Back-End Default Expression:_
 The user status of this document if applicable for this document type. null means unknown or not yet set. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.md))
 
 _Type_: **[DocumentTypeUserStatuses](General.DocumentTypeUserStatuses.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

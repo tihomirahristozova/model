@@ -81,6 +81,7 @@ Aggregate Tree
 The date and time, when the vehicle has been purchased or started to be managed. Null when the date and time are unknown. `Introduced in version 18.2`
 
 _Type_: **datetime __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -89,6 +90,7 @@ _Supports Order By_: **False**
 The date and time, when the vehicle has been sold or has stopped being managed. Null when the date and time are unknown. `Introduced in version 18.2`
 
 _Type_: **datetime __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -97,6 +99,7 @@ _Supports Order By_: **False**
 Maximum permissible laden mass, as determined by the registration authority.
 
 _Type_: **int32 __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -105,6 +108,7 @@ _Supports Order By_: **False**
 Crew members count. For road vehicles = 1; for trailers, coaches and wagons =0; air and water vehicles may have higher counts. `Default(1)` `Filter(eq;ge;le)`
 
 _Type_: **int32 __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **1**  
@@ -114,6 +118,7 @@ _Default Value_: **1**
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -122,6 +127,7 @@ _Supports Order By_: ****
 Engine identification number. `Filter(eq;like)`
 
 _Type_: **string (20) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **20**  
@@ -131,6 +137,7 @@ _Maximum Length_: **20**
 Engine output power in horse power. null means that the value is unknown or not applicable for this type of engine. `Filter(eq;ge;le)`
 
 _Type_: **int32 __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -139,6 +146,7 @@ _Supports Order By_: **False**
 Engine size in cubic centimeters (cm3). null means that the value is unknown or not applicable for this type of engine (e.g. electric motors). `Filter(eq;ge;le)`
 
 _Type_: **int32 __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -147,6 +155,7 @@ _Supports Order By_: **False**
 Maximum fuel capacity of the engine or the battery in the fuel measurement unit.
 
 _Type_: **int32 __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -155,6 +164,7 @@ _Supports Order By_: **False**
 Average fuel consumption in the fuel measurement unit for 1 operational unit.
 
 _Type_: **decimal (7, 1) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -163,6 +173,7 @@ _Supports Order By_: **False**
 Fuel type of the engine or the power source of the engine (Multilanguage) - e.g. diesel, benzine, electric, etc. `Filter(eq;like)`
 
 _Type_: **string (64) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  
@@ -171,6 +182,7 @@ _Maximum Length_: **64**
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -179,6 +191,7 @@ _Default Value_: **NewGuid**
 True if the vehicle is still owned and managed by the enterprise. `Required` `Default(true)` `Introduced in version 18.2`
 
 _Type_: **boolean**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **True**  
@@ -188,6 +201,7 @@ _Default Value_: **True**
 The country or state issuing the registration number. null (not recommended) means that the authority is unknown or not applicable. `Filter(eq;like)`
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 
@@ -196,6 +210,7 @@ _Supports Order By_: **False**
 The name of the manufacturer of the vehicle. null means that the value is unknown. `Filter(eq;like)`
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 
@@ -204,6 +219,7 @@ _Supports Order By_: **False**
 The year when the vehicle was manufactured or first registered - whichever is known. null means that the value is unknown. `Filter(eq;ge;le)`
 
 _Type_: **int32 __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -212,6 +228,7 @@ _Supports Order By_: **False**
 Maximum speed in km/h.
 
 _Type_: **int32 __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -220,6 +237,7 @@ _Supports Order By_: **False**
 The model of the vehicle. `Filter(eq;like)`
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 
@@ -228,6 +246,7 @@ _Supports Order By_: **False**
 Notes for this Vehicle.
 
 _Type_: **string (max) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
@@ -237,6 +256,7 @@ _Maximum Length_: **2147483647**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -245,6 +265,7 @@ _Supports Order By_: ****
 The primary color of the vehicle. null means that the value is unknown or not applicable. `Filter(eq;like)`
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 
@@ -253,6 +274,7 @@ _Supports Order By_: **False**
 Number of seating places, excluding driver. `Filter(eq;ge;le)`
 
 _Type_: **int32 __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -261,6 +283,7 @@ _Supports Order By_: **False**
 Number of standing places, if applicable.
 
 _Type_: **int32 __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -269,6 +292,7 @@ _Supports Order By_: **False**
 Maximum technically permissible laden mass in kg.
 
 _Type_: **int32 __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -277,6 +301,7 @@ _Supports Order By_: **False**
 Maximum permissible laden mass of a whole trainset, including the vehicle.
 
 _Type_: **int32 __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -285,6 +310,7 @@ _Supports Order By_: **False**
 VIN, aka Chassis number. `Filter(eq;like)`
 
 _Type_: **string (20) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **20**  
@@ -294,6 +320,7 @@ _Maximum Length_: **20**
 Vehicle own mass in kg.
 
 _Type_: **int32 __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -302,6 +329,7 @@ _Supports Order By_: **False**
 The registration plate number. Can be numeric or alphanumeric code. It should be unique within the Issuing_Authority. `Required` `Filter(eq;like)`
 
 _Type_: **string (16)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **16**  
@@ -311,6 +339,7 @@ _Maximum Length_: **16**
 Type of vehicle - e.g. automobile, bus, etc. null means the value is unknown. `Filter(eq;like)`
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 
@@ -322,6 +351,7 @@ _Supports Order By_: **False**
 The measurement unit in which the fuel is measured. E.g. liters for automobiles, Watt-hours for electrics, etc. null means unknown. `Filter(multi eq)`
 
 _Type_: **[MeasurementUnits](General.MeasurementUnits.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### MaintenanceProfile
@@ -329,6 +359,7 @@ _Supported Filters_: **Equals, EqualsIn**
 When not null, specifies, that the vehicle should be maintained according to the specified profile. Assigning a profile creates plan assignments for the vehicle. Ultimately, the specific plan assignments are taken into consideration, when planning vehicle maintenance. The profile is only for conveniently assigning multiple plans. `Filter(multi eq)`
 
 _Type_: **[MaintenanceProfiles](Applications.Fleet.MaintenanceProfiles.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### OperationalMeasurementUnit
@@ -336,6 +367,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The measurement unit in which the operation of the vehicle is measured. E.g. km for automobiles, hrs for airplanes, etc. null means that the unit is unknown. `Filter(multi eq)`
 
 _Type_: **[MeasurementUnits](General.MeasurementUnits.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### OwnerParty
@@ -343,6 +375,7 @@ _Supported Filters_: **Equals, EqualsIn**
 Vehicle owner. `Filter(multi eq)`
 
 _Type_: **[Parties](General.Contacts.Parties.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

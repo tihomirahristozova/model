@@ -57,6 +57,7 @@ Aggregate Root:
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -64,6 +65,7 @@ _Supports Order By_: ****
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -72,6 +74,7 @@ _Default Value_: **NewGuid**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -80,6 +83,7 @@ _Supports Order By_: ****
 Calculated date representation of the target period (used for grouping, filtering and other auxiliary purposes). `Required` `ReadOnly`
 
 _Type_: **datetime**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -88,6 +92,7 @@ _Supports Order By_: **False**
 Month of the period in which the target must be fulfilled (the period is determined by specifying a month and an year). `Required` `Filter(ge;le)`
 
 _Type_: **byte**  
+_Category_: **System**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -96,6 +101,7 @@ _Supports Order By_: **False**
 Year of the period in which the target must be fulfilled (the period is determined by specifying a month and an year). `Required` `Filter(ge;le)`
 
 _Type_: **int16**  
+_Category_: **System**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -104,6 +110,7 @@ _Supports Order By_: **False**
 Target amount to be fulfilled by the specified sales person. Deprecated - use Target_Value. `Currency: TargetAmountCurrency`
 
 _Type_: **[Amount (18, 2)](../data-types.md#amount) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -112,6 +119,7 @@ _Supports Order By_: **False**
 Type of target. Defines the meaning of Target_Value. SALES-sales amount, BONUS-count of bonus progs, PACK-count of promo packs. `Required` `Default("SALES")` `Filter(multi eq)`
 
 _Type_: **[TargetType](Crm.Distribution.SalesPersonTargetLines.md#targettype)**  
+_Category_: **System**  
 Allowed values for the `TargetType`(Crm.Distribution.SalesPersonTargetLines.md#targettype) data attribute  
 _Allowed Values (Crm.Distribution.SalesPersonTargetLinesRepository.TargetType Enum Members)_  
 
@@ -131,6 +139,7 @@ _Default Value_: **SalesAmount**
 Value of target. Meaning depends on target type. `Required` `Default(0)`
 
 _Type_: **decimal (9, 2)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  
@@ -140,6 +149,7 @@ _Default Value_: **0**
 Relative weight of target, comparatively to other targets. `Required` `Default(1)`
 
 _Type_: **decimal (5, 2)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **1**  
@@ -152,6 +162,7 @@ _Default Value_: **1**
 Bonus program Id when the target type is BONUS, null otherwise. `Filter(multi eq)`
 
 _Type_: **[BonusPrograms](Crm.Marketing.BonusPrograms.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ProductGroup
@@ -159,6 +170,7 @@ _Supported Filters_: **Equals, EqualsIn**
 Product group for which the target is defined. `Filter(multi eq)`
 
 _Type_: **[ProductGroups](General.Products.ProductGroups.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Back-End Default Expression:_  
@@ -171,6 +183,7 @@ _Front-End Recalc Expressions:_
 Promotional Package Id when the target type is PROMO, null otherwise. `Filter(multi eq)`
 
 _Type_: **[PromotionalPackages](Crm.PromotionalPackages.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### SalesPerson
@@ -178,6 +191,7 @@ _Supported Filters_: **Equals, EqualsIn**
 Sales person to whom the target is assigned. `Required` `Filter(multi eq)`
 
 _Type_: **[SalesPersons](Crm.SalesPersons.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Back-End Default Expression:_  
@@ -190,6 +204,7 @@ _Front-End Recalc Expressions:_
 The <see cref="SalesPersonTarget"/> to which this SalesPersonTargetLine belongs. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[SalesPersonTargets](Crm.Distribution.SalesPersonTargets.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
 
@@ -198,6 +213,7 @@ _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-reference
 Deprecated - use currency in document header. `Filter(multi eq)`
 
 _Type_: **[Currencies](General.Currencies.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Back-End Default Expression:_  

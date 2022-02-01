@@ -55,6 +55,7 @@ Aggregate Root:
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -62,6 +63,7 @@ _Supports Order By_: ****
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -70,6 +72,7 @@ _Default Value_: **NewGuid**
 The ending date and time of the agreement coverage for the current line. `Required` `Filter(ge;le)`
 
 _Type_: **datetime**  
+_Category_: **System**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -83,6 +86,7 @@ _Front-End Recalc Expressions:_
 Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc. `Required` `Filter(eq)`
 
 _Type_: **int32**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 
@@ -96,6 +100,7 @@ _Front-End Recalc Expressions:_
 The starting date and time of the agreement coverage for the current line. `Required` `Filter(ge;le)`
 
 _Type_: **datetime**  
+_Category_: **System**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
@@ -109,6 +114,7 @@ _Front-End Recalc Expressions:_
 Notes for this ServiceAgreementLine.
 
 _Type_: **string (254) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
@@ -118,6 +124,7 @@ _Maximum Length_: **254**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -126,6 +133,7 @@ _Supports Order By_: ****
 The number of the line within the parent document, which the current line executes. null when the current line does not execute another line. `Introduced in version 22.1.5.18`
 
 _Type_: **int32 __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -134,6 +142,7 @@ _Supports Order By_: **False**
 The quantity of the service object that is included in the agreement. `Required` `Default(1)` `Filter(ge;le)`
 
 _Type_: **decimal (14, 3)**  
+_Category_: **System**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **1**  
@@ -147,6 +156,7 @@ The <see cref="ServiceAgreement"/> to which this ServiceAgreementLine belongs. `
 
 _Type_: **[ServiceAgreements](Applications.Service.ServiceAgreements.md)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ParentDocument
@@ -154,6 +164,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The document, which the current line executes. null when the current line does not execute another line. `Filter(multi eq)`
 
 _Type_: **[Documents](General.Documents.md) (nullable)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ServiceAgreement
@@ -162,6 +173,7 @@ The <see cref="ServiceAgreement"/> to which this ServiceAgreementLine belongs. `
 
 _Type_: **[ServiceAgreements](Applications.Service.ServiceAgreements.md)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
 
@@ -170,6 +182,7 @@ _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-reference
 The service object, which is covered by the current agreement. `Required` `Filter(multi eq)`
 
 _Type_: **[ServiceObjects](Applications.Service.ServiceObjects.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ServiceType
@@ -177,6 +190,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The type (level) of service that is agreed. `Required` `Filter(multi eq)`
 
 _Type_: **[ServiceTypes](Applications.Service.ServiceTypes.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 

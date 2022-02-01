@@ -51,6 +51,7 @@ Aggregate Tree
 The multi-language caption, used to display the attribute. `Required`
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
@@ -59,6 +60,7 @@ _Supports Order By_: **False**
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -67,6 +69,7 @@ _Supports Order By_: ****
 The hint, which is displayed alongside the attribute. `Filter(multi eq;like)` `Introduced in version 21.1.3.53`
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals, Like, EqualsIn**  
 _Supports Order By_: **False**  
 
@@ -74,6 +77,7 @@ _Supports Order By_: **False**
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -82,6 +86,7 @@ _Default Value_: **NewGuid**
 True if the attribute is activated and added to the repository. `Required` `Default(false)`
 
 _Type_: **boolean**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **False**  
@@ -91,6 +96,7 @@ _Default Value_: **False**
 The unique name of the attribute within the repository. `Required` `Filter(eq;like)`
 
 _Type_: **string (128)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **128**  
@@ -100,6 +106,7 @@ _Maximum Length_: **128**
 Notes for this CalculatedAttribute.
 
 _Type_: **string (max) __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
@@ -109,6 +116,7 @@ _Maximum Length_: **2147483647**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -118,6 +126,7 @@ The repository, for which the attribute is defined. `Required` `Filter(multi eq)
 
 _Type_: **string (128)**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Supports Order By_: **True**  
 _Maximum Length_: **128**  
@@ -127,6 +136,7 @@ _Maximum Length_: **128**
 The expression, from which the calculation starts. The result of the expression gives the value of the calculated attribute. `Required` `Default(10)`
 
 _Type_: **int32**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **10**  

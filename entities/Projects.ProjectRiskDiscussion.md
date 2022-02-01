@@ -49,6 +49,7 @@ Aggregate Root:
 The time, when the message was contributed. `Required` `Default(Now)` `Filter(eq)` `ReadOnly`
 
 _Type_: **datetime**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **CurrentDateTime**  
@@ -58,6 +59,7 @@ _Default Value_: **CurrentDateTime**
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
 
 _Type_: **string**  
+_Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -65,6 +67,7 @@ _Supports Order By_: ****
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
@@ -73,6 +76,7 @@ _Default Value_: **NewGuid**
 Contains the last edit time of the message. null if the message was never edited. `Filter(eq)` `ReadOnly`
 
 _Type_: **datetime __nullable__**  
+_Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 
@@ -81,6 +85,7 @@ _Supports Order By_: **False**
 The contents of the message. `Required`
 
 _Type_: **string (max)**  
+_Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **2147483647**  
@@ -90,6 +95,7 @@ _Maximum Length_: **2147483647**
 The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
 
 _Type_: **int32**  
+_Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
 
@@ -101,6 +107,7 @@ _Supports Order By_: ****
 The user, who contributed (wrote) the message. `Required` `Filter(multi eq)` `ReadOnly`
 
 _Type_: **[Users](Systems.Security.Users.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### ProjectRisk
@@ -108,6 +115,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The <see cref="ProjectRisk"/> to which this ProjectRiskDiscussion belongs. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[ProjectRisks](Projects.ProjectRisks.md)**  
+_Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
 
