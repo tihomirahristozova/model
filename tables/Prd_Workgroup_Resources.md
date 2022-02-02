@@ -87,7 +87,7 @@ Indicates whether the current workgroup resource is active.
 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|`NULL`|no|no|
+|Equals|`True`|no|no|
 
 ### Available_Quantity
 

@@ -84,7 +84,7 @@ Indicates whether the current workgroup is active.
 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|`NULL`|no|no|
+|Equals|`True`|no|no|
 
 ### Cost_Currency
 

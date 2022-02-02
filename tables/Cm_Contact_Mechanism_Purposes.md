@@ -14,7 +14,7 @@ Contains user-defined purposes for processing contact mechanisms. Used for perso
 |[__Object_Version](#__object_version)|`int` ||
 |[Code](#code)|`nvarchar(16)` ||
 |[Contact_Mechanism_Purpose_Id](#contact_mechanism_purpose_id)|`uniqueidentifier` `PK`||
-|[Contact_Mechanism_Type](#contact_mechanism_type)|`nvarchar(1)` Allowed: `A`, `E`, `F`, `M`, `O`, `T`, `W`|When specified, allows the purpose to be specified only for contact mechanisms of the specified type.|
+|[Contact_Mechanism_Type](#contact_mechanism_type)|`nvarchar(1)` Allowed: `A`, `E`, `F`, `M`, `O`, `T`, `W`, `P`, `X`|When specified, allows the purpose to be specified only for contact mechanisms of the specified type.|
 |[Description](#description)|`nvarchar(max)` ||
 |[Name](#name)|`nvarchar(254)` `ML`|Name of the contact mechanism purpose (Multilanguage).|
 |[Row_Version](#row_version)|`timestamp` ||
@@ -122,7 +122,7 @@ When specified, allows the purpose to be specified only for contact mechanisms o
 
 | Property | Value |
 | - | - |
-|Allowed Values|`A`, `E`, `F`, `M`, `O`, `T`, `W`|
+|Allowed Values|`A`, `E`, `F`, `M`, `O`, `T`, `W`, `P`, `X`|
 |Auto Complete|no|
 |Data Filter|no|
 |Default Value|None|

@@ -93,7 +93,7 @@ Indicates whether the current resource is active.
 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|`NULL`|no|no|
+|Equals|`True`|no|no|
 
 ### Id
 
