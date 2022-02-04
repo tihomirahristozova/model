@@ -17,6 +17,7 @@ Represents the data, sent to the customs authorities for the movements of excise
 | - | - | --- |
 |[__Object_Version](#__object_version)|`int` ||
 |[Administrative_Reference_Code](#administrative_reference_code)|`nvarchar(16)` |The reference code, returned the customs authorities, when the document is exported to them. NULL means the document is not yet exported to the authorities.|
+|[Direction](#direction)|`nvarchar(1)` Allowed: `I`, `R`|Indicates whether the document is Receipt('R') or Issue('I') of the Tax Warehouse|
 |[Document_Currency_Id](#document_currency_id)|`uniqueidentifier` |Currency of the Excise deal.|
 |[Document_Id](#document_id)|`uniqueidentifier` ||
 |[Excise_Administrative_Document_Id](#excise_administrative_document_id)|`uniqueidentifier` `PK`||
@@ -86,6 +87,43 @@ The reference code, returned the customs authorities, when the document is expor
 |UI Width|Medium|
 |User Login|no|
 |Visible|yes|
+
+### Direction
+
+
+Indicates whether the document is Receipt('R') or Issue('I') of the Tax Warehouse
+
+| Property | Value |
+| - | - |
+|Allowed Values|`I`, `R`|
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|I|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|1|
+|Order|10|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|nvarchar(1)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Direction - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|no|no|
 
 ### Document_Currency_Id
 

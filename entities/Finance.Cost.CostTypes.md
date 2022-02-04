@@ -30,6 +30,7 @@ Aggregate Tree
 | [Code](Finance.Cost.CostTypes.md#code) | string (10) | Unique cost type code. Used for charting. `Required` `Filter(eq)` `ORD` 
 | [DisplayText](Finance.Cost.CostTypes.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [Id](Finance.Cost.CostTypes.md#id) | guid |  
+| [IsActive](Finance.Cost.CostTypes.md#isactive) | boolean | Indicates whether this cost type is active and usable for choosing in new documents. `Required` `Default(true)` `Filter(eq)` `Introduced in version 22.1.5.53` 
 | [Name](Finance.Cost.CostTypes.md#name) | string (254) | Multilanguage cost type name. `Required` `Filter(like)` 
 | [ObjectVersion](Finance.Cost.CostTypes.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 
@@ -63,6 +64,16 @@ _Indexed_: **True**
 _Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
+
+### IsActive
+
+Indicates whether this cost type is active and usable for choosing in new documents. `Required` `Default(true)` `Filter(eq)` `Introduced in version 22.1.5.53`
+
+_Type_: **boolean**  
+_Category_: **System**  
+_Supported Filters_: **Equals**  
+_Supports Order By_: **False**  
+_Default Value_: **True**  
 
 ### Name
 

@@ -13,6 +13,7 @@ Contains the serviceable objects. The service objects can be covered by service 
 | - | - | --- |
 |[__Object_Version](#__object_version)|`int` ||
 |[Enterprise_Company_Id](#enterprise_company_id)|`uniqueidentifier` ||
+|[Is_Active](#is_active)|`bit` |Indicates whether the current service object is active.|
 |[Notes](#notes)|`nvarchar(254)` ||
 |[Product_Id](#product_id)|`uniqueidentifier` |When not-NULL identifies the product, from which the service object was created|
 |[Row_Version](#row_version)|`timestamp` ||
@@ -63,7 +64,7 @@ Contains the serviceable objects. The service objects can be covered by service 
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|6|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -86,6 +87,42 @@ Contains the serviceable objects. The service objects can be covered by service 
 | - | - | - | - |
 |Equals|`NULL`|yes|no|
 
+### Is_Active
+
+
+Indicates whether the current service object is active.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|True|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|bit|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Is_Active - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`True`|no|no|
+
 ### Notes
 
 | Property | Value |
@@ -98,7 +135,7 @@ Contains the serviceable objects. The service objects can be covered by service 
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|254|
-|Order|2147483647|
+|Order|5|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -128,7 +165,7 @@ When not-NULL identifies the product, from which the service object was created
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|4|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -162,7 +199,7 @@ When not-NULL identifies the product, from which the service object was created
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|9|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -192,7 +229,7 @@ The serial number of the item, that is being serviced
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|32|
-|Order|2147483647|
+|Order|2|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -228,7 +265,7 @@ Serial number for the product, that corresponds to this service object. If there
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|7|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -262,7 +299,7 @@ Serial number for the product, that corresponds to this service object. If there
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|0|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -295,7 +332,7 @@ Serial number for the product, that corresponds to this service object. If there
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|254|
-|Order|2147483647|
+|Order|1|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -332,7 +369,7 @@ When not NULL specifies the type of the service object
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|3|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -369,7 +406,7 @@ The product, which is used to physically store the service object, when it is se
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|8|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|

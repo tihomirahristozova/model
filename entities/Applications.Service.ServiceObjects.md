@@ -29,6 +29,7 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [DisplayText](Applications.Service.ServiceObjects.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [Id](Applications.Service.ServiceObjects.md#id) | guid |  
+| [IsActive](Applications.Service.ServiceObjects.md#isactive) | boolean | Indicates whether the current service object is active. `Required` `Default(true)` `Filter(eq)` `Introduced in version 22.1.5.53` 
 | [Name](Applications.Service.ServiceObjects.md#name) | string (254) | The name of this ServiceObject. `Required` `Filter(eq;like)` 
 | [Notes](Applications.Service.ServiceObjects.md#notes) | string (254) __nullable__ | Notes for this ServiceObject. 
 | [ObjectVersion](Applications.Service.ServiceObjects.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
@@ -63,6 +64,16 @@ _Indexed_: **True**
 _Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
+
+### IsActive
+
+Indicates whether the current service object is active. `Required` `Default(true)` `Filter(eq)` `Introduced in version 22.1.5.53`
+
+_Type_: **boolean**  
+_Category_: **System**  
+_Supported Filters_: **Equals**  
+_Supports Order By_: **False**  
+_Default Value_: **True**  
 
 ### Name
 

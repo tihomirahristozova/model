@@ -9914,6 +9914,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "business-rules/R32908.md",
+      "output": {
+        ".html": {
+          "relative_path": "business-rules/R32908.html",
+          "hash": "LIBAXfu4acPNjMgUR4d1Pg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "data-types.md",
       "output": {
         ".html": {
@@ -10924,7 +10936,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Applications.Service.ServiceObjects.html",
-          "hash": "iowxXNvzxqmmDbwMmZXLcg=="
+          "hash": "GKI91m174h8zuTaItUmp9A=="
         }
       },
       "is_incremental": false,
@@ -12436,7 +12448,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Finance.Cost.CostTypes.html",
-          "hash": "BYmMc3QV2AvLRK+epGJDEg=="
+          "hash": "DR+AszvRK6py+YPLd7gDsA=="
         }
       },
       "is_incremental": false,
@@ -12556,7 +12568,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Finance.Excise.ExciseAdministrativeDocuments.html",
-          "hash": "bPP/m2fPvC40naU1VvHcFw=="
+          "hash": "IO+v5R78sBksEofIJm8PPQ=="
         }
       },
       "is_incremental": false,
@@ -13192,7 +13204,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/General.Contacts.ContactMechanismPurposes.html",
-          "hash": "Vps3dfmTnUdCTxE3815fHA=="
+          "hash": "KE4SMFmxxB93+eOZniqSEg=="
         }
       },
       "is_incremental": false,
@@ -15304,7 +15316,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Logistics.Wms.WarehouseTransactions.html",
-          "hash": "8JZad6pYfYx4TKGwDgXIXA=="
+          "hash": "oVKkt8TP94t7P440RjILow=="
         }
       },
       "is_incremental": false,
@@ -18978,7 +18990,7 @@
       "output": {
         ".html": {
           "relative_path": "tables/Cost_Types.html",
-          "hash": "GjYXtidVhxpY5j3orO+ptg=="
+          "hash": "l847I0OWaDwEl9NC64BcZA=="
         }
       },
       "is_incremental": false,
@@ -20046,7 +20058,7 @@
       "output": {
         ".html": {
           "relative_path": "tables/Exc_Excise_Administrative_Documents.html",
-          "hash": "ONQU7WcWgAlPEVpXo9wyhQ=="
+          "hash": "7DPFc6SI8kxEYvZjWau2Xw=="
         }
       },
       "is_incremental": false,
@@ -24390,7 +24402,7 @@
       "output": {
         ".html": {
           "relative_path": "tables/Srv_Service_Objects.html",
-          "hash": "1MgSf5G1J2g4DJ9SLjyAAw=="
+          "hash": "/CfZpM7O+cKeUfuhiBDh1Q=="
         }
       },
       "is_incremental": false,

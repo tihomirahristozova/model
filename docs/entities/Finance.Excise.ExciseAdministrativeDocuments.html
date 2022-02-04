@@ -158,6 +158,11 @@ Code Data Member:<br>
 <td>The login name of the user, who created the document. <code>Required</code> <code>Filter(like)</code> <code>ReadOnly</code> (Inherited from <a href="General.Documents.html">Documents</a>)</td>
 </tr>
 <tr>
+<td><a href="Finance.Excise.ExciseAdministrativeDocuments.html#direction">Direction</a></td>
+<td><a href="Finance.Excise.ExciseAdministrativeDocuments.html#direction">MovementType</a></td>
+<td>Indicates whether the document is Receipt('R') or Issue('I') of the Tax Warehouse. <code>Required</code> <code>Default(&quot;I&quot;)</code> <code>Filter(multi eq)</code> <code>Introduced in version 22.1.5.53</code></td>
+</tr>
+<tr>
 <td><a href="Finance.Excise.ExciseAdministrativeDocuments.html#displaytext">DisplayText</a></td>
 <td>string</td>
 <td>Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.</td>
@@ -501,6 +506,33 @@ Code Data Member:<br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>64</strong></p>
+<h3 id="direction">Direction</h3>
+<p>Indicates whether the document is Receipt('R') or Issue('I') of the Tax Warehouse. <code>Required</code> <code>Default(&quot;I&quot;)</code> <code>Filter(multi eq)</code> <code>Introduced in version 22.1.5.53</code></p>
+<p><em>Type</em>: <strong><a href="Finance.Excise.ExciseAdministrativeDocuments.html#direction">MovementType</a></strong><br>
+<em>Category</em>: <strong>System</strong><br>
+Specifies the movement type (direction) of a warehouse document.<br>
+<em>Allowed Values (Logistics.Inventory.MovementType Enum Members)</em></p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Issue</td>
+<td>Goods issue <br> <em>Database Value:</em> 'I' <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'Issue'</td>
+</tr>
+<tr>
+<td>Receipt</td>
+<td>Goods receive <br> <em>Database Value:</em> 'R' <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'Receipt'</td>
+</tr>
+</tbody>
+</table>
+<p><em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>Issue</strong></p>
 <h3 id="displaytext">DisplayText</h3>
 <p>Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.</p>
 <p><em>Type</em>: <strong>string</strong><br>

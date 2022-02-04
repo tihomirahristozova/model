@@ -44,6 +44,7 @@ Aggregate Tree
 | [CompleteTime](Finance.Excise.ExciseAdministrativeDocuments.md#completetime) | datetime __nullable__ | Date and time when the document was completed (State set to Completed). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [CreationTime](Finance.Excise.ExciseAdministrativeDocuments.md#creationtime) | datetime | Date/Time when the document was created. `Required` `Default(Now)` `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [CreationUser](Finance.Excise.ExciseAdministrativeDocuments.md#creationuser) | string (64) | The login name of the user, who created the document. `Required` `Filter(like)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
+| [Direction](Finance.Excise.ExciseAdministrativeDocuments.md#direction) | [MovementType](Finance.Excise.ExciseAdministrativeDocuments.md#direction) | Indicates whether the document is Receipt('R') or Issue('I') of the Tax Warehouse. `Required` `Default("I")` `Filter(multi eq)` `Introduced in version 22.1.5.53` 
 | [DisplayText](Finance.Excise.ExciseAdministrativeDocuments.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [DocumentDate](Finance.Excise.ExciseAdministrativeDocuments.md#documentdate) | date | The date on which the document was issued. `Required` `Default(Today)` `Filter(eq;ge;le)` `ORD` (Inherited from [Documents](General.Documents.md)) 
 | [DocumentNo](Finance.Excise.ExciseAdministrativeDocuments.md#documentno) | string (20) | Document number, unique within Document_Type_Id. `Required` `Filter(eq;like)` `ORD` (Inherited from [Documents](General.Documents.md)) 
@@ -179,6 +180,24 @@ _Category_: **System**
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  
+
+### Direction
+
+Indicates whether the document is Receipt('R') or Issue('I') of the Tax Warehouse. `Required` `Default("I")` `Filter(multi eq)` `Introduced in version 22.1.5.53`
+
+_Type_: **[MovementType](Finance.Excise.ExciseAdministrativeDocuments.md#direction)**  
+_Category_: **System**  
+Specifies the movement type (direction) of a warehouse document.  
+_Allowed Values (Logistics.Inventory.MovementType Enum Members)_  
+
+| Value | Description |
+| ---- | --- |
+| Issue | Goods issue <br /> _Database Value:_ 'I' <br /> _Model Value:_ 0 <br /> _Domain API Value:_ 'Issue' |
+| Receipt | Goods receive <br /> _Database Value:_ 'R' <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'Receipt' |
+
+_Supported Filters_: **Equals, EqualsIn**  
+_Supports Order By_: **False**  
+_Default Value_: **Issue**  
 
 ### DisplayText
 
