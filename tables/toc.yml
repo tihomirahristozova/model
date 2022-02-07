@@ -329,6 +329,10 @@
     href: Crm_Leads.md
   - name: Crm_Line_Discounts
     href: Crm_Line_Discounts.md
+  - name: Crm_Marketing_Activity_Line_Types
+    href: Crm_Marketing_Activity_Line_Types.md
+  - name: Crm_Marketing_Activity_Lines
+    href: Crm_Marketing_Activity_Lines.md
   - name: Crm_Marketing_Solutions
     href: Crm_Marketing_Solutions.md
   - name: Crm_Offer_Line_Property_Values

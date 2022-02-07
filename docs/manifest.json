@@ -990,7 +990,7 @@
       "output": {
         ".html": {
           "relative_path": "business-rules/R27067.html",
-          "hash": "gSf2RF3/ZiyJTReqlhlIdQ=="
+          "hash": "kF/X240vl2MuFJTmo4DE3A=="
         }
       },
       "is_incremental": false,
@@ -11484,6 +11484,30 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "entities/Crm.Marketing.MarketingActivityLineTypes.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Crm.Marketing.MarketingActivityLineTypes.html",
+          "hash": "K+Z6RBrh6g0560FV8BamNg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "entities/Crm.Marketing.MarketingActivityLines.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Crm.Marketing.MarketingActivityLines.html",
+          "hash": "aO4+XWvCQOjSliAa6IlQ6A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "entities/Crm.Marketing.MarketingSolutions.md",
       "output": {
         ".html": {
@@ -11536,7 +11560,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Crm.Marketing.html",
-          "hash": "UCTaCkY07q/vuDKS/5DoqA=="
+          "hash": "Z24MM9I76i032LYkcg7RhQ=="
         }
       },
       "is_incremental": false,
@@ -16924,7 +16948,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/toc.html",
-          "hash": "BHIM/Vkbxq4cYUyWMGiSPA=="
+          "hash": "JQcdpY4PsKAWPnkueinikg=="
         }
       },
       "is_incremental": false,
@@ -19002,7 +19026,7 @@
       "output": {
         ".html": {
           "relative_path": "tables/Crm.html",
-          "hash": "AENQu9iXJXTyk5ExjMlQKA=="
+          "hash": "C6KqDmuwWXETewAG042LzA=="
         }
       },
       "is_incremental": false,
@@ -19411,6 +19435,30 @@
         ".html": {
           "relative_path": "tables/Crm_Line_Discounts.html",
           "hash": "JTIS7fRTCM7K34hYMGESig=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tables/Crm_Marketing_Activity_Line_Types.md",
+      "output": {
+        ".html": {
+          "relative_path": "tables/Crm_Marketing_Activity_Line_Types.html",
+          "hash": "Zsv6qIXq8e7aB4ZeivouoQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tables/Crm_Marketing_Activity_Lines.md",
+      "output": {
+        ".html": {
+          "relative_path": "tables/Crm_Marketing_Activity_Lines.html",
+          "hash": "g5DfCpZ7+fwI5c2gWZMo5g=="
         }
       },
       "is_incremental": false,
@@ -25290,7 +25338,7 @@
       "output": {
         ".html": {
           "relative_path": "tables/index.html",
-          "hash": "B4DuRrnxZAwpqLkH1bqb8A=="
+          "hash": "zPyxFmajQP9ZdBE5hjrVrA=="
         }
       },
       "is_incremental": false,
@@ -25302,7 +25350,7 @@
       "output": {
         ".html": {
           "relative_path": "tables/toc.html",
-          "hash": "ONw2PfhoRPnklSTscbpeew=="
+          "hash": "mJA6KIQVSmZfjHo9v+WTrA=="
         }
       },
       "is_incremental": false,

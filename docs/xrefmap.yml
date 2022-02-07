@@ -394,6 +394,12 @@ references:
 - uid: Crm.Marketing.MarketingActivities
   name: Crm.Marketing.MarketingActivities Entity
   href: entities/Crm.Marketing.MarketingActivities.html
+- uid: Crm.Marketing.MarketingActivityLines
+  name: Crm.Marketing.MarketingActivityLines Entity
+  href: entities/Crm.Marketing.MarketingActivityLines.html
+- uid: Crm.Marketing.MarketingActivityLineTypes
+  name: Crm.Marketing.MarketingActivityLineTypes Entity
+  href: entities/Crm.Marketing.MarketingActivityLineTypes.html
 - uid: Crm.Marketing.MarketingSolutions
   name: Crm.Marketing.MarketingSolutions Entity
   href: entities/Crm.Marketing.MarketingSolutions.html

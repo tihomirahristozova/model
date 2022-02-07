@@ -269,6 +269,10 @@
       href: Crm.Marketing.Industries.md
     - name: MarketingActivities
       href: Crm.Marketing.MarketingActivities.md
+    - name: MarketingActivityLines
+      href: Crm.Marketing.MarketingActivityLines.md
+    - name: MarketingActivityLineTypes
+      href: Crm.Marketing.MarketingActivityLineTypes.md
     - name: MarketingSolutions
       href: Crm.Marketing.MarketingSolutions.md
     - name: ProductDistributionChannels

@@ -34,6 +34,8 @@
 * [Crm_Lead_User_Stages](Crm_Lead_User_Stages.md)
 * [Crm_Leads](Crm_Leads.md)
 * [Crm_Line_Discounts](Crm_Line_Discounts.md)
+* [Crm_Marketing_Activity_Line_Types](Crm_Marketing_Activity_Line_Types.md)
+* [Crm_Marketing_Activity_Lines](Crm_Marketing_Activity_Lines.md)
 * [Crm_Marketing_Solutions](Crm_Marketing_Solutions.md)
 * [Crm_Offer_Line_Property_Values](Crm_Offer_Line_Property_Values.md)
 * [Crm_Offer_Lines](Crm_Offer_Lines.md)
