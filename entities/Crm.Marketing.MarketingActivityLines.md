@@ -40,7 +40,7 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [Competitor](Crm.Marketing.MarketingActivityLines.md#competitor) | [Competitors](Crm.Marketing.Competitors.md) (nullable) | Competitor where marketing activity was held. `Filter(multi eq)` |
 | [MarketingActivity](Crm.Marketing.MarketingActivityLines.md#marketingactivity) | [MarketingActivities](Crm.Marketing.MarketingActivities.md) | Marketing activity. `Required` `Filter(multi eq)` |
-| [MarketingActivityLineType](Crm.Marketing.MarketingActivityLines.md#marketingactivitylinetype) | [MarketingActivityLineTypes](Crm.Marketing.MarketingActivityLineTypes.md) |  |
+| [MarketingActivityLineType](Crm.Marketing.MarketingActivityLines.md#marketingactivitylinetype) | [MarketingActivityLineTypes](Crm.Marketing.MarketingActivityLineTypes.md) | Describes what the purpose of the marketing activity is. `Required` `Filter(multi eq)` |
 | [OrderQuantityUnit](Crm.Marketing.MarketingActivityLines.md#orderquantityunit) | [MeasurementUnits](General.MeasurementUnits.md) (nullable) | The measurement unit of In_Store_Available_<br />Quantity and Order_Quantity. `Filter(multi eq)` |
 | [Product](Crm.Marketing.MarketingActivityLines.md#product) | [Products](General.Products.Products.md) | The specific product that was target of the marketing activity. `Required` `Filter(multi eq)` |
 
@@ -158,6 +158,8 @@ _Category_: **System**
 _Supported Filters_: **Equals, EqualsIn**  
 
 ### MarketingActivityLineType
+
+Describes what the purpose of the marketing activity is. `Required` `Filter(multi eq)`
 
 _Type_: **[MarketingActivityLineTypes](Crm.Marketing.MarketingActivityLineTypes.md)**  
 _Category_: **System**  

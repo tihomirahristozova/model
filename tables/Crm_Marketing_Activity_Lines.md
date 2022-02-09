@@ -20,7 +20,7 @@ Detail records (lines) of the marketing activities. Entity: Crm_Marketing_Activi
 |[Line_No](#line_no)|`int` |Consecutive line number, unique within the marketing activity. Usually is increasing in steps of 10, like in 10, 20, 30, etc.|
 |[Marketing_Activity_Id](#marketing_activity_id)|`uniqueidentifier` |Marketing activity|
 |[Marketing_Activity_Line_Id](#marketing_activity_line_id)|`uniqueidentifier` `PK`||
-|[Marketing_Activity_Line_Type_Id](#marketing_activity_line_type_id)|`uniqueidentifier` ||
+|[Marketing_Activity_Line_Type_Id](#marketing_activity_line_type_id)|`uniqueidentifier` |Describes what the purpose of the marketing activity is.|
 |[Notes](#notes)|`nvarchar(max)` ||
 |[Order_Quantity](#order_quantity)|`decimal(15, 3)` |Recommended quantity (in Quantity Unit) for  new order as a result of the marketing activity. NULL means that there is no specific recommendation.|
 |[Order_Quantity_Unit_Id](#order_quantity_unit_id)|`uniqueidentifier` |The measurement unit of In_Store_Available_Quantity and Order_Quantity.|
@@ -235,7 +235,6 @@ Consecutive line number, unique within the marketing activity. Usually is increa
 | Property | Value |
 | - | - |
 |Auto Complete|no|
-|Autoincrement|1|
 |Data Filter|no|
 |Default Value|None|
 |Enter Stop|yes|
@@ -335,6 +334,9 @@ Marketing activity
 |Equals|`NULL`|no|no|
 
 ### Marketing_Activity_Line_Type_Id
+
+
+Describes what the purpose of the marketing activity is.
 
 | Property | Value |
 | - | - |

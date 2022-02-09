@@ -6,7 +6,7 @@ uid: Crm.Marketing.MarketingActivities
 **Namespace:** [Crm.Marketing](Crm.Marketing.md)  
 **Inherited From:** [General.Contacts.Activities](General.Contacts.Activities.md)  
 
-Marketing activity, part of a marketing campaign. Entity: Crm_Activities
+Marketing activity, part of a marketing campaign. Entity: Crm_Activities (Introduced in version 22.1.5.60)
 
 ## Default Visualization
 Default Display Text Format:  

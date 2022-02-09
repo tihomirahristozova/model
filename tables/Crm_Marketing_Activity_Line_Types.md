@@ -14,7 +14,7 @@ Describes what the purpose of the marketing activity is. Entity: Crm_Marketing_A
 |[__Object_Version](#__object_version)|`int` ||
 |[Code](#code)|`nvarchar(32)` ||
 |[Marketing_Activity_Line_Type_Id](#marketing_activity_line_type_id)|`uniqueidentifier` `PK`||
-|[Name](#name)|`nvarchar(254)` |Multi-language field|
+|[Name](#name)|`nvarchar(254)` `ML`|Multi-language field|
 |[Notes](#notes)|`nvarchar(max)` ||
 |[Row_Version](#row_version)|`timestamp` ||
 
@@ -138,7 +138,7 @@ Multi-language field
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(254)|
+|Type|nvarchar(254) (MultiLanguage)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -154,6 +154,7 @@ Multi-language field
 
 | Property | Value |
 | - | - |
+|Attributes|IsLongString|
 |Auto Complete|no|
 |Data Filter|no|
 |Default Value|None|
