@@ -48,6 +48,7 @@ Aggregate Root:
 | [IntrastatCommodityCode](Finance.Intrastat.DeclarationLines.md#intrastatcommoditycode) | [CommodityCodes](Finance.Intrastat.CommodityCodes.md) | The commodity code of the goods, according to the Intrastat commodity classification. `Required` `Filter(multi eq)` |
 | [IntrastatDeclaration](Finance.Intrastat.DeclarationLines.md#intrastatdeclaration) | [Declarations](Finance.Intrastat.Declarations.md) | The intrastat declaration, to which this line belongs. `Required` `Filter(multi eq)` `Owner` |
 | [OriginCountry](Finance.Intrastat.DeclarationLines.md#origincountry) | [Countries](General.Geography.Countries.md) (nullable) | The country of origin of the goods. null for outbound declarations. `Filter(multi eq)` |
+| [Party](Finance.Intrastat.DeclarationLines.md#party) | [Parties](General.Contacts.Parties.md) (nullable) | Partner to whom the goods are dispatched, or partner from whom the goods are received. `Filter(multi eq)` `Introduced in version 22.1.5.58` |
 | [PartyCountry](Finance.Intrastat.DeclarationLines.md#partycountry) | [Countries](General.Geography.Countries.md) | The country of the partner. `Required` `Filter(multi eq)` |
 | [TransportCountry](Finance.Intrastat.DeclarationLines.md#transportcountry) | [Countries](General.Geography.Countries.md) | The country of the transportation company. `Required` `Filter(multi eq)` |
 
@@ -267,6 +268,14 @@ _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-reference
 The country of origin of the goods. null for outbound declarations. `Filter(multi eq)`
 
 _Type_: **[Countries](General.Geography.Countries.md) (nullable)**  
+_Category_: **System**  
+_Supported Filters_: **Equals, EqualsIn**  
+
+### Party
+
+Partner to whom the goods are dispatched, or partner from whom the goods are received. `Filter(multi eq)` `Introduced in version 22.1.5.58`
+
+_Type_: **[Parties](General.Contacts.Parties.md) (nullable)**  
 _Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 

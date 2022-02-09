@@ -197,6 +197,11 @@ Aggregate Root:<br>
 <td>The country of origin of the goods. null for outbound declarations. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
+<td><a href="Finance.Intrastat.DeclarationLines.html#party">Party</a></td>
+<td><a href="General.Contacts.Parties.html">Parties</a> (nullable)</td>
+<td>Partner to whom the goods are dispatched, or partner from whom the goods are received. <code>Filter(multi eq)</code> <code>Introduced in version 22.1.5.58</code></td>
+</tr>
+<tr>
 <td><a href="Finance.Intrastat.DeclarationLines.html#partycountry">PartyCountry</a></td>
 <td><a href="General.Geography.Countries.html">Countries</a></td>
 <td>The country of the partner. <code>Required</code> <code>Filter(multi eq)</code></td>
@@ -526,6 +531,11 @@ Allowed values for the <code>TransportMode</code>(Finance.Intrastat.DeclarationL
 <h3 id="origincountry">OriginCountry</h3>
 <p>The country of origin of the goods. null for outbound declarations. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.Geography.Countries.html">Countries</a> (nullable)</strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<h3 id="party">Party</h3>
+<p>Partner to whom the goods are dispatched, or partner from whom the goods are received. <code>Filter(multi eq)</code> <code>Introduced in version 22.1.5.58</code></p>
+<p><em>Type</em>: <strong><a href="General.Contacts.Parties.html">Parties</a> (nullable)</strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="partycountry">PartyCountry</h3>
