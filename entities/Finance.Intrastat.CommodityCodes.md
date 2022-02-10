@@ -9,7 +9,7 @@ Contains the approved Intrastat commodity codes for each period. Entity: Its_Com
 
 ## Default Visualization
 Default Display Text Format:  
-_{ExciseProductCode}_  
+_{CommodityCodeField}_  
 Default Search Members:  
 _ExciseProductCode_  
 Code Data Member:  
