@@ -37,6 +37,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [AccrueExciseDuty](Finance.Excise.ExciseAdministrativeDocuments.md#accrueexciseduty) | boolean | Accrue Excise Duty. `Required` `Default(false)` `Filter(eq)` `Introduced in version 22.1.5.62` 
 | [AdjustmentNumber](Finance.Excise.ExciseAdministrativeDocuments.md#adjustmentnumber) | int32 | Consecutive number of the correction that this document is applying to the adjusted document. `Required` `Default(0)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [AdjustmentTime](Finance.Excise.ExciseAdministrativeDocuments.md#adjustmenttime) | datetime __nullable__ | Date/time when the document last has been adjusted by corrective document. `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [AdjustmentUser](Finance.Excise.ExciseAdministrativeDocuments.md#adjustmentuser) | string (64) __nullable__ | The user who adjusted the document. `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
@@ -112,6 +113,16 @@ Aggregate Tree
 
 
 ## Attribute Details
+
+### AccrueExciseDuty
+
+Accrue Excise Duty. `Required` `Default(false)` `Filter(eq)` `Introduced in version 22.1.5.62`
+
+_Type_: **boolean**  
+_Category_: **System**  
+_Supported Filters_: **Equals**  
+_Supports Order By_: **False**  
+_Default Value_: **False**  
 
 ### AdjustmentNumber
 
