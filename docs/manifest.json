@@ -9930,7 +9930,19 @@
       "output": {
         ".html": {
           "relative_path": "business-rules/R32943.html",
-          "hash": "ym1uH3bPQ819alkGr5NokA=="
+          "hash": "S1yf6i6y67yxMVpKEKVO4g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "business-rules/R32946.md",
+      "output": {
+        ".html": {
+          "relative_path": "business-rules/R32946.html",
+          "hash": "I/zfWvGpY63mJx5sAgzs8w=="
         }
       },
       "is_incremental": false,
@@ -11080,7 +11092,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Communities.SocialComments.html",
-          "hash": "ftRnkQOPCZPweIswE3TCiA=="
+          "hash": "yZJcup5ceYiRPSZvAhGsng=="
         }
       },
       "is_incremental": false,
