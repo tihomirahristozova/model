@@ -152,7 +152,7 @@ Transaction.DocumentCurrency = StoreOrder.DocumentCurrency
 <thead>
 <tr>
 <th style="text-align: left;">Fulfilment Name</th>
-<th>StoreOrderLineToStoreTransactionLineByFulfillmentTable</th>
+<th>StoreOrderFulfillmentToStoreTransactionLine</th>
 </tr>
 </thead>
 <tbody>
@@ -161,42 +161,16 @@ Transaction.DocumentCurrency = StoreOrder.DocumentCurrency
 <td>Fulfilment Table</td>
 </tr>
 <tr>
-<td style="text-align: left;">Parent Entity</td>
-<td>StoreOrderLine</td>
+<td style="text-align: left;">Parent</td>
+<td>DocumentFulfillments(where 'DocumentLineId = StoreOrderLineId' AND 'FulfillmentType = Completed' AND 'DestinationEntityName = Wms_Warehouse_Requisition_Lines')</td>
 </tr>
 <tr>
-<td style="text-align: left;">Child Entity</td>
-<td>StoreTransactionLine</td>
+<td style="text-align: left;">Child</td>
+<td>DocumentFulfillments(where 'DocumentLineId = StoreOrderLineId' AND 'FulfillmentType = Planned' AND 'DestinationEntityName = Inv_Transaction_Lines')</td>
 </tr>
 <tr>
-<td style="text-align: left;">Parent Entity/ Fulfilment Table Relationship</td>
-<td>StoreOrderLineId = DocumentFulfillment.DocumentLineId</td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Fulfilment Name</th>
-<th>StoreOrderLineToStoreTransactionLineByParentDocument</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">Fulfilment Tracking Type</td>
-<td>Fulfilment Table</td>
-</tr>
-<tr>
-<td style="text-align: left;">Parent Entity</td>
-<td>StoreOrderLine</td>
-</tr>
-<tr>
-<td style="text-align: left;">Child Entity</td>
-<td>StoreTransactionLine</td>
-</tr>
-<tr>
-<td style="text-align: left;">Parent Entity/ Fulfilment Table Relationship</td>
-<td>StoreTransactionLine.ParentDocument = StoreOrder;StoreTransactionLine.ParentLineNo = StoreOrderLine.LineNo</td>
+<td style="text-align: left;">Parent / Child Relationship</td>
+<td>ChildDocumentFulfillment.ParentFulfillment = the Parent Document Fulfillment</td>
 </tr>
 </tbody>
 </table>
@@ -208,47 +182,40 @@ Transaction.DocumentCurrency = StoreOrder.DocumentCurrency
 <th style="text-align: center;">Metric Name</th>
 <th style="text-align: center;">Measurement Unit</th>
 <th style="text-align: left;">Parent Value</th>
-<th style="text-align: left;">Fulfilment Table Value</th>
+<th style="text-align: left;">Child Value</th>
 <th style="text-align: left;">New Record</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;">StoreOrderLineToStoreTransactionLineByFulfillmentTable</td>
+<td style="text-align: left;">StoreOrderFulfillmentToStoreTransactionLine</td>
 <td style="text-align: center;">MQuantityBase</td>
-<td style="text-align: center;">StoreOrderLine.Product.BaseMeasurementUnit</td>
-<td style="text-align: left;">DocumentFulfillments(where 'FulfillmentType = Completed' AND 'DestinationEntityName = Wms_Warehouse_Requisition_Lines').QuantityBase</td>
-<td style="text-align: left;">DocumentFulfillments(where 'FulfillmentType = Completed' AND 'DestinationEntityName = Inv_Transaction_Lines').QuantityBase</td>
+<td style="text-align: center;">ParentDocumentFulfillment.Product.BaseMeasurementUnit</td>
+<td style="text-align: left;">ParentDocumentFulfillment.QuantityBase</td>
+<td style="text-align: left;">ChildDocumentFulfillment.QuantityBase</td>
 <td style="text-align: left;">NO</td>
 </tr>
 <tr>
-<td style="text-align: left;">StoreOrderLineToStoreTransactionLineByFulfillmentTable</td>
+<td style="text-align: left;">StoreOrderFulfillmentToStoreTransactionLine</td>
 <td style="text-align: center;">MStandardQuantity</td>
-<td style="text-align: center;">StoreOrderLine.Product.BaseMeasurementUnit</td>
-<td style="text-align: left;">DocumentFulfillments(where 'FulfillmentType = Completed' AND 'DestinationEntityName = Wms_Warehouse_Requisition_Lines').StandardQuantity</td>
-<td style="text-align: left;">DocumentFulfillments(where 'FulfillmentType = Completed' AND 'DestinationEntityName = 'Inv_Transaction_Lines').StandardQuantity</td>
+<td style="text-align: center;">ParentDocumentFulfillment.Product.BaseMeasurementUnit</td>
+<td style="text-align: left;">ParentDocumentFulfillment.StandardQuantity</td>
+<td style="text-align: left;">ChildDocumentFulfillment.StandardQuantity</td>
 <td style="text-align: left;">YES</td>
-</tr>
-<tr>
-<td style="text-align: left;">StoreOrderLineToStoreTransactionLineByParentDocument</td>
-<td style="text-align: center;">MLineCost</td>
-<td style="text-align: center;">StoreOrder.DocumentCurrency</td>
-<td style="text-align: left;">StoreOrderLine.LineCost</td>
-<td style="text-align: left;">StoreTransactionLine.LineCost</td>
-<td style="text-align: left;">if (StoreOrder.MovementType== Receipt) {New Record = YES},else {New Record = NO}</td>
 </tr>
 </tbody>
 </table>
 <p><br><br>
-The lines of the new document are created based on the data of the Completed records in the Document Fulfillments table. The table contains information aboout the execution of the operations in the WMS module and the for the fulfilled part of quantities by the Store Transaction which have already been created (if any).</p>
-<p>A separate Store Transaction Lines is created for each record of Document Fulfillments which were created from the WMS module. This is necessary because it is possible that the different Document Fulfillments contain a breakdown of the executed lots, serial numbers, etc which have to be recorded into the Store Transaction as well.</p>
-<div class="NOTE">
-<h5>Note</h5>
-<p>Note that for the calculation are taken into account only the recods whoose Fulfillment Type is Completed AND DestinationEntityName is 'Wms_Warehouse_Requisition_Lines' OR 'Inv_Transaction_Lines'.</p>
-</div>
+The lines of the new document are created based on the data of the Document Fulfillments of the Lines of the Store Order. The table contains information about:</p>
+<ul>
+<li>the Completed execution of Store Order Line by the WMS module. For better understanding we will call these fulfillments Parent Document Fulfillments.
+<br>AND</li>
+<li>the Planned part of quantities by the Store Transactions which have already been created (if any). For better understanding we will call these fulfillments Child Document Fulfillments.</li>
+</ul>
+<p>A separate Store Transaction Lines is created for each Parent Document Fulfillment which was created from the WMS module. This is necessary because it is possible that the different Parent Document Fulfillments contain a breakdown of the executed lots, serial numbers, etc which have to be recorded into the Store Transaction as well.</p>
 <br>
 <p><strong>The new StoreTransactionLine is created as follows:</strong></p>
-<pre><code>StoreTransactionLine.LineNo = autonumber
+<pre><code>StoreTransactionLine.LineNo = autonumber (10, 20, 30...)
 
 StoreTransactionLine.ParentStoreOrderLine = StoreOrderLine
 
@@ -256,13 +223,13 @@ StoreTransactionLine.StoreBin = StoreOrderLine.StoreBin
 
 StoreTransactionLine.OriginalProduct = StoreOrderLine.Product
 
-StoreTransactionLine.Product = DocumentFulfillment.Product
+StoreTransactionLine.Product = ParentDocumentFulfillments.Product
 
-StoreTransactionLine.ProductVariant = DocumentFulfillment.ProductVariant
+StoreTransactionLine.ProductVariant = ParentDocumentFulfillments.ProductVariant
 
-StoreTransactionLine.Lot = DocumentFulfillment.Lot
+StoreTransactionLine.Lot = ParentDocumentFulfillments.Lot
 
-StoreTransactionLine.SerialNumber = DocumentFulfillment.SerialNumber
+StoreTransactionLine.SerialNumber = ParentDocumentFulfillments.SerialNumber
 
 StoreTransactionLine.QuantityUnit = StoreOrderLine.QuantityUnit  
 
@@ -274,7 +241,7 @@ StoreTransactionLine.StandardQuantityBase = REMAINING(MStandardQuantity)
 
 StoreTransactionLine.UnitCost = StoreOrderLine.UnitCost
 
-StoreTransactionLine.LineCost = if (StoreOrder.MovementType == Receipt) {StoreTransactionLine.LineCost = StoreOrderLine.REMAINING(MLineCost)}, else {StoreTransactionLine.LineCost = 0.00}
+StoreTransactionLine.LineCost = if (StoreOrder.MovementType == Receipt) {StoreTransactionLine.LineCost = (StoreOrderLine.LineCost/StoreOrderLine.StandardQuantityBase)* StoreTransactionLine.StandardQuantityBase}, else {StoreTransactionLine.LineCost = 0.00}
 
 StoreTransactionLine.GuaranteePeriodDays = StoreOrderLine.GuaranteePeriodDays
 
@@ -286,7 +253,7 @@ StoreTransactionLine.TransactionTimestamp = null
 
 StoreTransactionLine.Notes = StoreOrderLine.Notes
 </code></pre>
-<p><strong>The new Document Fulfillment is created as follows:</strong></p>
+<p><strong>The new (Child) Document Fulfillment is created as follows:</strong></p>
 <pre><code>DocumentFulfillment.Document = StoreOrder
 
 DocumentFulfillment.DocumentLineId = StoreOrderLineId
@@ -314,6 +281,8 @@ DocumentFulfillment.Lot = StoreTransactionLine.Lot
 DocumentFulfillment.SerialNumber = StoreTransactionLine.SerialNumber
 
 DocumentFulfillment.ProductVariant = StoreTransactionLine.ProductVariant
+
+DocumentFulfillment.ParentFulfillment = the Parent Document Fulfillment
 
 DocumentFulfillment.DestinationEntityName = Inv_Transaction_Lines
 
