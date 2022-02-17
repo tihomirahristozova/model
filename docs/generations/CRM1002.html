@@ -171,8 +171,8 @@ OfferLine.ProductCode = NULL
 OfferLine.ProductPrice = loaded by the determined Method: *Determine product price
 
 OfferLine.UnitPrice = If (OfferLine.ProductPrice != null) 
-                      , then OfferLine.ProductPrice.Price
-                      , else OfferLine.Product.StandardPricePerLot
+                      , then OfferLine.UnitPrice = OfferLine.ProductPrice.Price
+                      , else OfferLine.UnitPrice = OfferLine.Product.StandardPricePerLot
 
 OfferLine.Quantity = DealLine.Quantity
 
@@ -185,8 +185,8 @@ OfferLine.StandardQuantityBase = CONVERT(OfferLine.Quantity, OfferLine.Product.B
 OfferLine.LineDiscount = loaded by the determined Method: *Determine line discount
 
 OfferLine.LineStandardDiscountPercent = If (OfferLine.LineDiscount != null)
-                                        , then OfferLine.LineDiscount.DiscountPercent
-                                        , else 0.00 %   
+                                        , then LineStandardDiscountPercent = OfferLine.LineDiscount.DiscountPercent
+                                        , else LineStandardDiscountPercent = 0.00 %   
 
 OfferLine.LineCustomDiscountPercent = 0.00%
 
