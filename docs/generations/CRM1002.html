@@ -103,7 +103,7 @@
 </tr>
 <tr>
 <td style="text-align: left;">Status</td>
-<td><a class="xref" href="https://erpnetdocs.github.io/tech/advanced/documents/generation-procedures.html">NEW</a></td>
+<td><a class="xref" href="https://erpnetdocs.github.io/tech/advanced/documents/generation-procedures.html">ACTIVE</a></td>
 </tr>
 <tr>
 <td style="text-align: left;">Supports Transitional Documents</td>
@@ -133,27 +133,26 @@
 </table>
 <h2 id="business-logic">Business Logic</h2>
 <p>The current generation procedure is meant to create template offers from a Deal.</p>
-<p>To create an offer, the customer has to be specified. The customer is extracted from the party, selected in the Deal - Deal.Party - and the up to date customer definition of this party in the enterprise company of the offer - Offer.EnterpriseCompany(so Customer.Party = Deal.Party &amp;&amp; Customer.EnterpriseCompany == Offer.EnterpriseCompany). If no such customer is found, the generation procedure is stopped and an error is thrown. The error text is:</p>
-<blockquote>
-<p>Party '{Deal.Party.PartyName}' is not defined as customer for enterprise company '{Deal.EnterpriseCompany.Party.PartyName}'. In order to create an offer the party has to be defined as customer for enterprise company '{Deal.EnterpriseCompany.Party.PartyName}'.</p>
-</blockquote>
+<p>To create an offer, the customer has to be specified. The customer is extracted from the party, selected in the Deal - Deal.Party - and the up to date customer definition of this party in the enterprise company of the offer - Offer.EnterpriseCompany(so Customer.Party = Deal.Party &amp;&amp; Customer.EnterpriseCompany == Offer.EnterpriseCompany).
+If no such customer is found, the generation procedure is stopped and an error is thrown. The error text is:</p>
+<pre><code> Party '{Deal.Party.PartyName}' is not defined as customer for enterprise company '{Deal.EnterpriseCompany.Party.PartyName}'. 
+ In order to create an offer the party has to be defined as customer for enterprise company '{Deal.EnterpriseCompany.Party.PartyName}'.
+</code></pre>
 <p><strong>The rest of the fields in the Offer’s header are filled as follows:</strong></p>
-<pre><code>Offer.Customer = Customer 
+<pre><code>Offer.DocumentDate = Deal.DocumentDate
+Offer.Customer = the determined Customer for the Deal.Party
 Offer.DocumentCurrency = Offer.EnterpriseCompany.BaseCurrency 
 Offer.Deal = Deal 
 Offer.SalesPerson = Deal.LeadingSalesPerson
+Offer.RequiredDeliveryDate = DocumentDate + Customer.DefaultDeliveryTermDays
+Offer.PaymentDueDate = DocumentDate + Customer.DefaultPaymentTermDays
+Offer.PriceList = Customer.DefaultPriceList
+Offer.PaymentType = Customer.DefaultPaymentType
 </code></pre>
-<p>The offer attributes RequiredDeliveryDate and PaymentDueDate are calculated by the data in the customer definition compared to the DocumentDate as follows:</p>
-<ul>
-<li>RequiredDeliveryDate = DocumentDate + Customer.DefaultDeliveryTermDays</li>
-<li>PaymentDueDate = DocumentDate + Customer.DefaultPaymentTermDays</li>
-</ul>
-<p>The attributes PriceList and PaymentType are copied from the customer definition. If in the customer definition they are empty, they are empty in the offer too.</p>
-<p>The Document table attributes:</p>
-<pre><code>Offer.DocumentDate = Deal.DocumentDate
-* the attributes which are not specified here are filled in as described in Standard Document Attributes
-</code></pre>
-<p>The custom properties are copied to the offer only if they are defined in the offer document type.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>The attributes which are not specified here are filled in as described in <strong><a href="../reference/standard-document-attributes.html">Standard Document Attributes</a></strong></p>
+</div>
 <h2 id="fulfillments">Fulfillments</h2>
 <p>No fulfilments and metrics are used for the current generation procedure. Each time the procedure is started, it creates new sub-document no matter if there are documents already created from previous procedure executions.</p>
 <br>
@@ -168,7 +167,7 @@ OfferLine.GuaranteePeriodDays = OfferLine.Product.GuaranteePeriodDays
 
 OfferLine.ProductCode = NULL
 
-OfferLine.ProductPrice = loaded by the determined Method: *Determine product price
+OfferLine.ProductPrice = loaded by the 'Determine product price'* method
 
 OfferLine.UnitPrice = if (OfferLine.ProductPrice != null) 
                       , then OfferLine.UnitPrice = OfferLine.ProductPrice.Price
@@ -182,7 +181,7 @@ OfferLine.QuantityBase = CONVERT(OfferLine.Quantity, OfferLine.Product.BaseMeasu
 
 OfferLine.StandardQuantityBase = CONVERT(OfferLine.Quantity, OfferLine.Product.BaseMeasurementCategory.BaseUnit)
 
-OfferLine.LineDiscount = loaded by the determined Method: *Determine line discount
+OfferLine.LineDiscount = loaded by the 'Determine line discount'* method
 
 OfferLine.LineStandardDiscountPercent = if (OfferLine.LineDiscount != null)
                                         , then OfferLine.LineStandardDiscountPercent = OfferLine.LineDiscount.DiscountPercent
@@ -190,7 +189,7 @@ OfferLine.LineStandardDiscountPercent = if (OfferLine.LineDiscount != null)
 
 OfferLine.LineCustomDiscountPercent = 0.00%
 
-OfferLine.LineAmount = loaded by the determined Method: *Determine line amount in sales orders 
+OfferLine.LineAmount = loaded by the 'Determine line amount in sales orders'* method
 
 OfferLine.LineEndCustomerParty = NULL
 
@@ -206,11 +205,12 @@ OfferLine.Notes = DealLine.Notes
 
 OfferLine.IsSelected = true
 </code></pre>
-<p>*<a class="xref" href="https://erpnetdocs.github.io/tech/modules/crm/crm-common/crm-common-concepts/determine-product-price.html">Determine product price</a>
 <br>
-*<a class="xref" href="https://erpnetdocs.github.io/tech/modules/crm/crm-common/crm-common-concepts/determine-line-discount.html">Determine line discount</a>
+* [Determine product price](xref:determine-product-price)
 <br>
-*<a class="xref" href="https://erpnetdocs.github.io/tech/modules/crm/sales/sales-concepts/determine-line-amount-in-sales-orders.html">Determine line amount in sales orders</a></p>
+* [Determine line discount](xref:determine-line-discount)
+<br>
+* [Determine line amount in sales orders](xref:determine-line-amount-in-sales-orders)
 </article>
           </div>
           
