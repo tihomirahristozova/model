@@ -138,7 +138,7 @@ If no such customer is found, the generation procedure is stopped and an error i
 <pre><code> Party '{Deal.Party.PartyName}' is not defined as customer for enterprise company '{Deal.EnterpriseCompany.Party.PartyName}'. 
  In order to create an offer the party has to be defined as customer for enterprise company '{Deal.EnterpriseCompany.Party.PartyName}'.
 </code></pre>
-<p><strong>The rest of the fields in the Offer’s header are filled as follows:</strong></p>
+<p><strong>The fields in the Offer’s header are filled as follows:</strong></p>
 <pre><code>Offer.DocumentDate = Deal.DocumentDate
 Offer.Customer = the determined Customer for the Deal.Party
 Offer.DocumentCurrency = Offer.EnterpriseCompany.BaseCurrency 
