@@ -23,6 +23,7 @@ Fulfillment ledger for documents. Entity: Gen_Document_Fulfillments (Introduced 
 |[Line_No](#line_no)|`int` |Line number. Used for human-readability of the fulfillment. NULL if the lines do not support line numbers or the line number is unknown.|
 |[Line_Type](#line_type)|`nvarchar(1)` |Detail (line) type, for example materials, services, etc. L=Line. Other values are defined by the document entity type.|
 |[Lot_Id](#lot_id)|`uniqueidentifier` |The lot, which was fulfilled. NULL when the fulfillment was not for a specific lot.|
+|[Parent_Fulfillment_Id](#parent_fulfillment_id)|`uniqueidentifier` |The parent document fulfillment. Used when the information of the current fulfillment is inherited by another document fulfillment, usually created by another module.|
 |[Product_Id](#product_id)|`uniqueidentifier` |The product, which is fulfilled.|
 |[Product_Variant_Id](#product_variant_id)|`uniqueidentifier` |The product variant, which was fulfilled. NULL when the fulfillment was not for a product variant.|
 |[Quantity_Base](#quantity_base)|`decimal(12, 3)` |Fulfilled quantity in the base measurement unit of the product.|
@@ -453,6 +454,43 @@ The lot, which was fulfilled. NULL when the fulfillment was not for a specific l
 |Visible|yes|
 
 #### Lot_Id - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
+
+### Parent_Fulfillment_Id
+
+
+The parent document fulfillment. Used when the information of the current fulfillment is inherited by another document fulfillment, usually created by another module.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|Referenced Table|[Gen_Document_Fulfillments](Gen_Document_Fulfillments.md)|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Parent_Fulfillment_Id - Supported Filters
 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |

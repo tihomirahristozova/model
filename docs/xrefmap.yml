@@ -694,6 +694,9 @@ references:
 - uid: Finance.Excise.ExcisePurposeCodes
   name: Finance.Excise.ExcisePurposeCodes Entity
   href: entities/Finance.Excise.ExcisePurposeCodes.html
+- uid: Finance.Excise.ExciseStampOperationTypes
+  name: Finance.Excise.ExciseStampOperationTypes Entity
+  href: entities/Finance.Excise.ExciseStampOperationTypes.html
 - uid: Finance.Excise.MeasuringTransactions
   name: Finance.Excise.MeasuringTransactions Entity
   href: entities/Finance.Excise.MeasuringTransactions.html

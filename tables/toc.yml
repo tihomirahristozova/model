@@ -456,6 +456,10 @@
     href: Exc_Excise_Products.md
   - name: Exc_Excise_Purpose_Codes
     href: Exc_Excise_Purpose_Codes.md
+  - name: Exc_Excise_Stamp_Operation_Types
+    href: Exc_Excise_Stamp_Operation_Types.md
+  - name: Exc_Excise_Stamp_Types
+    href: Exc_Excise_Stamp_Types.md
   - name: Exc_Measuring_Transactions
     href: Exc_Measuring_Transactions.md
   - name: Exc_Tax_Warehouses

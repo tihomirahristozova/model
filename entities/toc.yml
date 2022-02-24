@@ -476,6 +476,8 @@
       href: Finance.Excise.ExciseProducts.md
     - name: ExcisePurposeCodes
       href: Finance.Excise.ExcisePurposeCodes.md
+    - name: ExciseStampOperationTypes
+      href: Finance.Excise.ExciseStampOperationTypes.md
     - name: MeasuringTransactions
       href: Finance.Excise.MeasuringTransactions.md
     - name: TaxWarehouses
