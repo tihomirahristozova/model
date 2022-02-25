@@ -116,7 +116,11 @@
 <td><strong>Action</strong></td>
 <td>if (Count(ExtensibleDataObject, where EntityItemId == current Folder) &gt; 0)
 <br><br>
-then FAIL</td>
+, then check:
+<br><br>
+if (Count(ObjectFiles, where ObjectId == ExtensibleDataObject.ObjectId) &gt; 0)
+<br><br>
+, then FAIL</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
