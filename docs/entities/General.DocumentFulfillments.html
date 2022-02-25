@@ -192,6 +192,11 @@ Name Data Member:<br>
 <td>The lot, which was fulfilled. null when the fulfillment was not for a specific lot. <code>Filter(multi eq)</code> <code>Introduced in version 22.1.4.52</code></td>
 </tr>
 <tr>
+<td><a href="General.DocumentFulfillments.html#parentfulfillment">ParentFulfillment</a></td>
+<td><a href="General.DocumentFulfillments.html">DocumentFulfillments</a> (nullable)</td>
+<td>The parent document fulfillment. Used when the information of the current fulfillment is inherited by another document fulfillment, usually created by another module. <code>Filter(multi eq)</code> <code>Introduced in version 22.1.5.85</code></td>
+</tr>
+<tr>
 <td><a href="General.DocumentFulfillments.html#product">Product</a></td>
 <td><a href="General.Products.Products.html">Products</a> (nullable)</td>
 <td>The product, which is fulfilled. <code>Filter(multi eq)</code> <code>Introduced in version 22.1.4.52</code></td>
@@ -321,6 +326,11 @@ Allowed values for the <code>FulfillmentType</code>(General.DocumentFulfillments
 <h3 id="lot">Lot</h3>
 <p>The lot, which was fulfilled. null when the fulfillment was not for a specific lot. <code>Filter(multi eq)</code> <code>Introduced in version 22.1.4.52</code></p>
 <p><em>Type</em>: <strong><a href="Logistics.Inventory.Lots.html">Lots</a> (nullable)</strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<h3 id="parentfulfillment">ParentFulfillment</h3>
+<p>The parent document fulfillment. Used when the information of the current fulfillment is inherited by another document fulfillment, usually created by another module. <code>Filter(multi eq)</code> <code>Introduced in version 22.1.5.85</code></p>
+<p><em>Type</em>: <strong><a href="General.DocumentFulfillments.html">DocumentFulfillments</a> (nullable)</strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="product">Product</h3>

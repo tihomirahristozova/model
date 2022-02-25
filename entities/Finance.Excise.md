@@ -13,6 +13,7 @@ uid: Finance.Excise
 - [ExciseProducts](Finance.Excise.ExciseProducts.md)  
 - [ExcisePurposeCodes](Finance.Excise.ExcisePurposeCodes.md)  
 - [ExciseStampOperationTypes](Finance.Excise.ExciseStampOperationTypes.md)  
+- [ExciseStampTypes](Finance.Excise.ExciseStampTypes.md)  
 - [MeasuringTransactions](Finance.Excise.MeasuringTransactions.md)  
 - [TaxWarehouses](Finance.Excise.TaxWarehouses.md)  
 

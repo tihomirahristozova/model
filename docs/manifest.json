@@ -12700,7 +12700,19 @@
       "output": {
         ".html": {
           "relative_path": "entities/Finance.Excise.ExciseStampOperationTypes.html",
-          "hash": "SlJcbihpNPwTLR3SCmO7jw=="
+          "hash": "61TXSSHmpPAa9NFjnx2D7Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "entities/Finance.Excise.ExciseStampTypes.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Finance.Excise.ExciseStampTypes.html",
+          "hash": "0RUwNgdOAYZNuRegIkkEeA=="
         }
       },
       "is_incremental": false,
@@ -12748,7 +12760,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Finance.Excise.html",
-          "hash": "3ohQvadvqNCtIP9wfhrjPQ=="
+          "hash": "S5FCCsZ/yadmKPx3c1CnKA=="
         }
       },
       "is_incremental": false,
@@ -13540,7 +13552,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/General.DocumentFulfillments.html",
-          "hash": "o7siCA7Z2Wg/u47okYywFQ=="
+          "hash": "v1Kqj/Df1QRQYsXEbSbDZw=="
         }
       },
       "is_incremental": false,
@@ -16984,7 +16996,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/toc.html",
-          "hash": "6OzRJ+8Qs4a6keZTpVDuDQ=="
+          "hash": "9Whi1e6yBoqLeUM9Bu4M6A=="
         }
       },
       "is_incremental": false,
@@ -20226,7 +20238,7 @@
       "output": {
         ".html": {
           "relative_path": "tables/Exc_Excise_Stamp_Operation_Types.html",
-          "hash": "TbgKVQXUGO/+mSB+J7YkWA=="
+          "hash": "ZfuQA6uUgW2pXwPhSbfckg=="
         }
       },
       "is_incremental": false,
@@ -20238,7 +20250,7 @@
       "output": {
         ".html": {
           "relative_path": "tables/Exc_Excise_Stamp_Types.html",
-          "hash": "o2e/EwYcHUoeS9stbgtxXw=="
+          "hash": "aMWRGq0vgoDhz0hqnZoVGw=="
         }
       },
       "is_incremental": false,

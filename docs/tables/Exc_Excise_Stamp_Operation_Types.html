@@ -99,18 +99,18 @@
 </tr>
 <tr>
 <td><a href="#box_1_effect">Box_1_Effect</a></td>
-<td><code>nvarchar(1)</code> Allowed: <code>Z</code>, <code>P</code>, <code>M</code></td>
-<td>Specifies how the operation changes the Excise Stamp availability of the correspondent Box. The boxes are used for availability reporting in reported locations according to the requirements of the state administration.</td>
+<td><code>nvarchar(1)</code> Allowed: <code>N</code>, <code>P</code>, <code>M</code></td>
+<td>Specifies how the operation changes the Excise Stamp availability in the correspondent Box. The boxes are used to report the availability of excise stamps in the relevant locations according to the requirements of the customs administration.</td>
 </tr>
 <tr>
 <td><a href="#box_2_effect">Box_2_Effect</a></td>
-<td><code>nvarchar(1)</code> Allowed: <code>Z</code>, <code>P</code>, <code>M</code></td>
-<td>Specifies how the operation changes the Excise Stamp availability of the correspondent Box. The boxes are used for availability reporting in reported locations according to the requirements of the state administration.</td>
+<td><code>nvarchar(1)</code> Allowed: <code>N</code>, <code>P</code>, <code>M</code></td>
+<td>Specifies how the operation changes the Excise Stamp availability in the correspondent Box. The boxes are used to report the availability of excise stamps in the relevant locations according to the requirements of the customs administration.</td>
 </tr>
 <tr>
 <td><a href="#box_3_effect">Box_3_Effect</a></td>
-<td><code>nvarchar(1)</code> Allowed: <code>Z</code>, <code>P</code>, <code>M</code></td>
-<td>Specifies how the operation changes the Excise Stamp availability of the correspondent Box. The boxes are used for availability reporting in reported locations according to the requirements of the state administration.</td>
+<td><code>nvarchar(1)</code> Allowed: <code>N</code>, <code>P</code>, <code>M</code></td>
+<td>Specifies how the operation changes the Excise Stamp availability in the correspondent Box. The boxes are used to report the availability of excise stamps in the relevant locations according to the requirements of the customs administration.</td>
 </tr>
 <tr>
 <td><a href="#code">Code</a></td>
@@ -124,8 +124,8 @@
 </tr>
 <tr>
 <td><a href="#name">Name</a></td>
-<td><code>nvarchar(254)</code></td>
-<td>Multi-language string.</td>
+<td><code>nvarchar(254)</code> <code>ML</code></td>
+<td>Name of operation (multi-language string).</td>
 </tr>
 <tr>
 <td><a href="#row_version">Row_Version</a></td>
@@ -235,7 +235,7 @@
 </tbody>
 </table>
 <h3 id="box_1_effect">Box_1_Effect</h3>
-<p>Specifies how the operation changes the Excise Stamp availability of the correspondent Box. The boxes are used for availability reporting in reported locations according to the requirements of the state administration.</p>
+<p>Specifies how the operation changes the Excise Stamp availability in the correspondent Box. The boxes are used to report the availability of excise stamps in the relevant locations according to the requirements of the customs administration.</p>
 <table>
 <thead>
 <tr>
@@ -246,7 +246,7 @@
 <tbody>
 <tr>
 <td>Allowed Values</td>
-<td><code>Z</code>, <code>P</code>, <code>M</code></td>
+<td><code>N</code>, <code>P</code>, <code>M</code></td>
 </tr>
 <tr>
 <td>Auto Complete</td>
@@ -258,7 +258,7 @@
 </tr>
 <tr>
 <td>Default Value</td>
-<td>Z</td>
+<td>N</td>
 </tr>
 <tr>
 <td>Enter Stop</td>
@@ -339,7 +339,7 @@
 </tbody>
 </table>
 <h3 id="box_2_effect">Box_2_Effect</h3>
-<p>Specifies how the operation changes the Excise Stamp availability of the correspondent Box. The boxes are used for availability reporting in reported locations according to the requirements of the state administration.</p>
+<p>Specifies how the operation changes the Excise Stamp availability in the correspondent Box. The boxes are used to report the availability of excise stamps in the relevant locations according to the requirements of the customs administration.</p>
 <table>
 <thead>
 <tr>
@@ -350,7 +350,7 @@
 <tbody>
 <tr>
 <td>Allowed Values</td>
-<td><code>Z</code>, <code>P</code>, <code>M</code></td>
+<td><code>N</code>, <code>P</code>, <code>M</code></td>
 </tr>
 <tr>
 <td>Auto Complete</td>
@@ -362,7 +362,7 @@
 </tr>
 <tr>
 <td>Default Value</td>
-<td>Z</td>
+<td>N</td>
 </tr>
 <tr>
 <td>Enter Stop</td>
@@ -443,7 +443,7 @@
 </tbody>
 </table>
 <h3 id="box_3_effect">Box_3_Effect</h3>
-<p>Specifies how the operation changes the Excise Stamp availability of the correspondent Box. The boxes are used for availability reporting in reported locations according to the requirements of the state administration.</p>
+<p>Specifies how the operation changes the Excise Stamp availability in the correspondent Box. The boxes are used to report the availability of excise stamps in the relevant locations according to the requirements of the customs administration.</p>
 <table>
 <thead>
 <tr>
@@ -454,7 +454,7 @@
 <tbody>
 <tr>
 <td>Allowed Values</td>
-<td><code>Z</code>, <code>P</code>, <code>M</code></td>
+<td><code>N</code>, <code>P</code>, <code>M</code></td>
 </tr>
 <tr>
 <td>Auto Complete</td>
@@ -466,7 +466,7 @@
 </tr>
 <tr>
 <td>Default Value</td>
-<td>Z</td>
+<td>N</td>
 </tr>
 <tr>
 <td>Enter Stop</td>
@@ -783,7 +783,7 @@
 </tbody>
 </table>
 <h3 id="name">Name</h3>
-<p>Multi-language string.</p>
+<p>Name of operation (multi-language string).</p>
 <table>
 <thead>
 <tr>
@@ -862,11 +862,11 @@
 </tr>
 <tr>
 <td>Type</td>
-<td>nvarchar(254)</td>
+<td>nvarchar(254) (MultiLanguage)</td>
 </tr>
 <tr>
 <td>UI Memo Editor</td>
-<td>no</td>
+<td>yes</td>
 </tr>
 <tr>
 <td>UI Width</td>

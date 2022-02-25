@@ -12,12 +12,12 @@ Specifies the type of the Excise Stamp operation. Entity: Exc_Excise_Stamp_Opera
 | Name | Type | Description |
 | - | - | --- |
 |[__Object_Version](#__object_version)|`int` ||
-|[Box_1_Effect](#box_1_effect)|`nvarchar(1)` Allowed: `Z`, `P`, `M`|Specifies how the operation changes the Excise Stamp availability of the correspondent Box. The boxes are used for availability reporting in reported locations according to the requirements of the state administration.|
-|[Box_2_Effect](#box_2_effect)|`nvarchar(1)` Allowed: `Z`, `P`, `M`|Specifies how the operation changes the Excise Stamp availability of the correspondent Box. The boxes are used for availability reporting in reported locations according to the requirements of the state administration.|
-|[Box_3_Effect](#box_3_effect)|`nvarchar(1)` Allowed: `Z`, `P`, `M`|Specifies how the operation changes the Excise Stamp availability of the correspondent Box. The boxes are used for availability reporting in reported locations according to the requirements of the state administration.|
+|[Box_1_Effect](#box_1_effect)|`nvarchar(1)` Allowed: `N`, `P`, `M`|Specifies how the operation changes the Excise Stamp availability in the correspondent Box. The boxes are used to report the availability of excise stamps in the relevant locations according to the requirements of the customs administration.|
+|[Box_2_Effect](#box_2_effect)|`nvarchar(1)` Allowed: `N`, `P`, `M`|Specifies how the operation changes the Excise Stamp availability in the correspondent Box. The boxes are used to report the availability of excise stamps in the relevant locations according to the requirements of the customs administration.|
+|[Box_3_Effect](#box_3_effect)|`nvarchar(1)` Allowed: `N`, `P`, `M`|Specifies how the operation changes the Excise Stamp availability in the correspondent Box. The boxes are used to report the availability of excise stamps in the relevant locations according to the requirements of the customs administration.|
 |[Code](#code)|`nvarchar(32)` ||
 |[Excise_Stamp_Operation_Type_Id](#excise_stamp_operation_type_id)|`uniqueidentifier` `PK`||
-|[Name](#name)|`nvarchar(254)` |Multi-language string.|
+|[Name](#name)|`nvarchar(254)` `ML`|Name of operation (multi-language string).|
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
@@ -52,14 +52,14 @@ Specifies the type of the Excise Stamp operation. Entity: Exc_Excise_Stamp_Opera
 ### Box_1_Effect
 
 
-Specifies how the operation changes the Excise Stamp availability of the correspondent Box. The boxes are used for availability reporting in reported locations according to the requirements of the state administration.
+Specifies how the operation changes the Excise Stamp availability in the correspondent Box. The boxes are used to report the availability of excise stamps in the relevant locations according to the requirements of the customs administration.
 
 | Property | Value |
 | - | - |
-|Allowed Values|`Z`, `P`, `M`|
+|Allowed Values|`N`, `P`, `M`|
 |Auto Complete|no|
 |Data Filter|no|
-|Default Value|Z|
+|Default Value|N|
 |Enter Stop|yes|
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
@@ -83,14 +83,14 @@ Specifies how the operation changes the Excise Stamp availability of the corresp
 ### Box_2_Effect
 
 
-Specifies how the operation changes the Excise Stamp availability of the correspondent Box. The boxes are used for availability reporting in reported locations according to the requirements of the state administration.
+Specifies how the operation changes the Excise Stamp availability in the correspondent Box. The boxes are used to report the availability of excise stamps in the relevant locations according to the requirements of the customs administration.
 
 | Property | Value |
 | - | - |
-|Allowed Values|`Z`, `P`, `M`|
+|Allowed Values|`N`, `P`, `M`|
 |Auto Complete|no|
 |Data Filter|no|
-|Default Value|Z|
+|Default Value|N|
 |Enter Stop|yes|
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
@@ -114,14 +114,14 @@ Specifies how the operation changes the Excise Stamp availability of the corresp
 ### Box_3_Effect
 
 
-Specifies how the operation changes the Excise Stamp availability of the correspondent Box. The boxes are used for availability reporting in reported locations according to the requirements of the state administration.
+Specifies how the operation changes the Excise Stamp availability in the correspondent Box. The boxes are used to report the availability of excise stamps in the relevant locations according to the requirements of the customs administration.
 
 | Property | Value |
 | - | - |
-|Allowed Values|`Z`, `P`, `M`|
+|Allowed Values|`N`, `P`, `M`|
 |Auto Complete|no|
 |Data Filter|no|
-|Default Value|Z|
+|Default Value|N|
 |Enter Stop|yes|
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
@@ -211,7 +211,7 @@ Specifies how the operation changes the Excise Stamp availability of the corresp
 ### Name
 
 
-Multi-language string.
+Name of operation (multi-language string).
 
 | Property | Value |
 | - | - |
@@ -232,8 +232,8 @@ Multi-language string.
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(254)|
-|UI Memo Editor|no|
+|Type|nvarchar(254) (MultiLanguage)|
+|UI Memo Editor|yes|
 |UI Width|Medium|
 |User Login|no|
 |Visible|yes|

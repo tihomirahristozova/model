@@ -1,6 +1,12 @@
 # Table Exc_Excise_Stamp_Types
 
 
+## Entity
+
+Entity: [Finance.Excise.ExciseStampTypes](~/entities/Finance.Excise.ExciseStampTypes.md)
+
+The different types of tax stamps (aka Excise Labels) which are applied to the excise products. Tax stamps denote paid or due excise. The types of tax stamps are differentiated by product, capacity, alcoholic strength and other criteria. Entity: Exc_Excise_Stamp_Types (Introduced in version 22.1.5.83)
+
 ## Summary
 
 | Name | Type | Description |
@@ -8,15 +14,15 @@
 |[__Object_Version](#__object_version)|`int` ||
 |[Alcoholic_Strength](#alcoholic_strength)|`decimal(5, 2)` |Percentage of pure alcohol used in excise duty reporting.|
 |[Capacity](#capacity)|`decimal(6, 4)` |Package capacity - number of cigarettes or volume of alcohol in liters.|
-|[Category](#category)|`nvarchar(2)` Allowed: `0`, `1`, `2`|Specifies the excise product category of the excise stamp - alcohol, tobacco, and others.|
+|[Category](#category)|`nvarchar(2)` Allowed: `TT`, `AA`, `DF`|Specifies the excise product category of the excise stamp - alcohol, tobacco, and others.|
 |[Code](#code)|`nvarchar(32)` ||
-|[Commodity_Code_Id](#commodity_code_id)|`uniqueidentifier` |Code from The Combined Nomenclature used within the European Union countries.|
+|[Commodity_Code_Id](#commodity_code_id)|`uniqueidentifier` |Harmonized commodity code of the products, as defined by EU and/or the applicable authority.|
 |[Excise_Amount_Per_Stamp](#excise_amount_per_stamp)|`decimal(5, 2)` |The excise duty, which is charged with one excise label.|
-|[Excise_Product_Id](#excise_product_id)|`uniqueidentifier` |Excise product according to the EU nomenclature for products subject to excise duty.|
+|[Excise_Product_Id](#excise_product_id)|`uniqueidentifier` |The excise product, defined by the taxation and customs authorities.|
 |[Excise_Stamp_Type_Id](#excise_stamp_type_id)|`uniqueidentifier` `PK`||
 |[Is_Active](#is_active)|`bit` |Indicates whether this excise stamp type is active and usable for choosing in new documents.|
 |[Measurement_Unit_Id](#measurement_unit_id)|`uniqueidentifier` |The unit of measure in which the product is reported.|
-|[Name](#name)|`nvarchar(254)` ||
+|[Name](#name)|`nvarchar(254)` `ML`||
 |[Notes](#notes)|`nvarchar(max)` ||
 |[Row_Version](#row_version)|`timestamp` ||
 
@@ -116,7 +122,7 @@ Specifies the excise product category of the excise stamp - alcohol, tobacco, an
 
 | Property | Value |
 | - | - |
-|Allowed Values|`0`, `1`, `2`|
+|Allowed Values|`TT`, `AA`, `DF`|
 |Auto Complete|no|
 |Data Filter|no|
 |Default Value|None|
@@ -160,17 +166,24 @@ Specifies the excise product category of the excise stamp - alcohol, tobacco, an
 |RTF|no|
 |Sortable|yes|
 |Summary Type|None|
-|Supports EQUALS_IN|no|
+|Supports EQUALS_IN|yes|
 |Type|nvarchar(32)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
 |Visible|yes|
 
+#### Code - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|no|no|
+|Like|None|no|no|
+
 ### Commodity_Code_Id
 
 
-Code from The Combined Nomenclature used within the European Union countries.
+Harmonized commodity code of the products, as defined by EU and/or the applicable authority.
 
 | Property | Value |
 | - | - |
@@ -237,7 +250,7 @@ The excise duty, which is charged with one excise label.
 ### Excise_Product_Id
 
 
-Excise product according to the EU nomenclature for products subject to excise duty.
+The excise product, defined by the taxation and customs authorities.
 
 | Property | Value |
 | - | - |
@@ -313,7 +326,7 @@ Indicates whether this excise stamp type is active and usable for choosing in ne
 | - | - |
 |Auto Complete|no|
 |Data Filter|no|
-|Default Value|None|
+|Default Value|True|
 |Enter Stop|yes|
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
@@ -392,16 +405,23 @@ The unit of measure in which the product is reported.
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(254)|
+|Type|nvarchar(254) (MultiLanguage)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
 |Visible|yes|
 
+#### Name - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Like|None|no|no|
+
 ### Notes
 
 | Property | Value |
 | - | - |
+|Attributes|IsLongString|
 |Auto Complete|no|
 |Data Filter|no|
 |Default Value|None|
