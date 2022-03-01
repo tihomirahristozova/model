@@ -9,9 +9,11 @@ External dealers. Entity: Crm_Dealers
 
 ## Default Visualization
 Default Display Text Format:  
-_{Id}: {PartyId}_  
+_{Party.PartyName:T}_  
 Default Search Members:  
-__  
+_Party.PartyName_  
+Name Data Member:  
+_Party.PartyName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

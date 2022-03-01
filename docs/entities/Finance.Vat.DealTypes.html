@@ -151,9 +151,24 @@ Name Data Member:<br>
 </thead>
 <tbody>
 <tr>
+<td><a href="Finance.Vat.DealTypes.html#baseamountboxtype">BaseAmountBoxType</a></td>
+<td><a href="Finance.Vat.BoxTypes.html">BoxTypes</a> (nullable)</td>
+<td>Determine the &quot;Box Type&quot; where the amounts from the &quot;Amount Base&quot; field of the &quot;VAT Entries&quot; to be accumulated for the current &quot;Deal Type&quot;. <code>Filter(multi eq)</code> <code>Introduced in version 22.1.5.90</code></td>
+</tr>
+<tr>
 <td><a href="Finance.Vat.DealTypes.html#country">Country</a></td>
 <td><a href="General.Geography.Countries.html">Countries</a></td>
 <td>The country for which this deal type applies. The country is matched against the country of the enterprise company. <code>Required</code> <code>Filter(multi eq)</code></td>
+</tr>
+<tr>
+<td><a href="Finance.Vat.DealTypes.html#totalamountboxtype">TotalAmountBoxType</a></td>
+<td><a href="Finance.Vat.BoxTypes.html">BoxTypes</a> (nullable)</td>
+<td>Determine the &quot;Box Type&quot; where the amounts from the (&quot;Amount Base&quot; + &quot;VAT Amount Base&quot;) fields of the &quot;VAT Entries&quot; to be accumulated for the current &quot;Deal Type&quot;. <code>Filter(multi eq)</code> <code>Introduced in version 22.1.5.90</code></td>
+</tr>
+<tr>
+<td><a href="Finance.Vat.DealTypes.html#vatamountboxtype">VATAmountBoxType</a></td>
+<td><a href="Finance.Vat.BoxTypes.html">BoxTypes</a> (nullable)</td>
+<td>Determine the &quot;Box Type&quot; where the amounts from the &quot;VAT Amount Base&quot; field of the &quot;VAT Entries&quot; to be accumulated for the current &quot;Deal Type&quot;. <code>Filter(multi eq)</code> <code>Introduced in version 22.1.5.90</code></td>
 </tr>
 </tbody>
 </table>
@@ -234,9 +249,24 @@ Allowed values for the <code>EntryType</code>(Finance.Vat.DealTypes.md#entrytype
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: ****</p>
 <h2 id="reference-details">Reference Details</h2>
+<h3 id="baseamountboxtype">BaseAmountBoxType</h3>
+<p>Determine the &quot;Box Type&quot; where the amounts from the &quot;Amount Base&quot; field of the &quot;VAT Entries&quot; to be accumulated for the current &quot;Deal Type&quot;. <code>Filter(multi eq)</code> <code>Introduced in version 22.1.5.90</code></p>
+<p><em>Type</em>: <strong><a href="Finance.Vat.BoxTypes.html">BoxTypes</a> (nullable)</strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="country">Country</h3>
 <p>The country for which this deal type applies. The country is matched against the country of the enterprise company. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.Geography.Countries.html">Countries</a></strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<h3 id="totalamountboxtype">TotalAmountBoxType</h3>
+<p>Determine the &quot;Box Type&quot; where the amounts from the (&quot;Amount Base&quot; + &quot;VAT Amount Base&quot;) fields of the &quot;VAT Entries&quot; to be accumulated for the current &quot;Deal Type&quot;. <code>Filter(multi eq)</code> <code>Introduced in version 22.1.5.90</code></p>
+<p><em>Type</em>: <strong><a href="Finance.Vat.BoxTypes.html">BoxTypes</a> (nullable)</strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<h3 id="vatamountboxtype">VATAmountBoxType</h3>
+<p>Determine the &quot;Box Type&quot; where the amounts from the &quot;VAT Amount Base&quot; field of the &quot;VAT Entries&quot; to be accumulated for the current &quot;Deal Type&quot;. <code>Filter(multi eq)</code> <code>Introduced in version 22.1.5.90</code></p>
+<p><em>Type</em>: <strong><a href="Finance.Vat.BoxTypes.html">BoxTypes</a> (nullable)</strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="api-methods">API Methods</h2>

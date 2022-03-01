@@ -27,6 +27,8 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [CalculatedAttributeName](Finance.Vat.BoxTypes.md#calculatedattributename) | string (128) __nullable__ | The name of the calculated attribute which will be used in the calculation of the amount of the current Box Type. Used when the value of the "Calculation Type" field is "Calculated Attribute". `Filter(eq;like)` `Introduced in version 22.1.5.90` 
+| [CalculationType](Finance.Vat.BoxTypes.md#calculationtype) | [CalculationType](Finance.Vat.BoxTypes.md#calculationtype) | Determines the source of amounts of the current Box Type. Sources can be the Vat Entries or the Calculated attribute from the VAT Declaration which is specified in the "Calculated Attribute Name" field. `Required` `Default("DT")` `Filter(multi eq)` `Introduced in version 22.1.5.90` 
 | [Code](Finance.Vat.BoxTypes.md#code) | string (32) | The unique code of the BoxType. `Required` `Filter(multi eq)` 
 | [DisplayText](Finance.Vat.BoxTypes.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [Id](Finance.Vat.BoxTypes.md#id) | guid |  
@@ -42,6 +44,34 @@ Aggregate Tree
 
 
 ## Attribute Details
+
+### CalculatedAttributeName
+
+The name of the calculated attribute which will be used in the calculation of the amount of the current Box Type. Used when the value of the "Calculation Type" field is "Calculated Attribute". `Filter(eq;like)` `Introduced in version 22.1.5.90`
+
+_Type_: **string (128) __nullable__**  
+_Category_: **System**  
+_Supported Filters_: **Equals, Like**  
+_Supports Order By_: **False**  
+_Maximum Length_: **128**  
+
+### CalculationType
+
+Determines the source of amounts of the current Box Type. Sources can be the Vat Entries or the Calculated attribute from the VAT Declaration which is specified in the "Calculated Attribute Name" field. `Required` `Default("DT")` `Filter(multi eq)` `Introduced in version 22.1.5.90`
+
+_Type_: **[CalculationType](Finance.Vat.BoxTypes.md#calculationtype)**  
+_Category_: **System**  
+Allowed values for the `CalculationType`(Finance.Vat.BoxTypes.md#calculationtype) data attribute  
+_Allowed Values (Finance.Vat.BoxTypesRepository.CalculationType Enum Members)_  
+
+| Value | Description |
+| ---- | --- |
+| DealTypes | Source of amounts are Vat Entries. Stored as 'DT'. <br /> _Database Value:_ 'DT' <br /> _Model Value:_ 0 <br /> _Domain API Value:_ 'DealTypes' |
+| CalculatedAttribute | Source of amounts is Calculated attribute from the VAT Declaration which is specified in the "Calculated Attribute Name" field. Stored as 'CA'. <br /> _Database Value:_ 'CA' <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'CalculatedAttribute' |
+
+_Supported Filters_: **Equals, EqualsIn**  
+_Supports Order By_: **False**  
+_Default Value_: **DealTypes**  
 
 ### Code
 

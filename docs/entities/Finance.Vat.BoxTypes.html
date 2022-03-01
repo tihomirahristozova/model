@@ -107,6 +107,16 @@ Name Data Member:<br>
 </thead>
 <tbody>
 <tr>
+<td><a href="Finance.Vat.BoxTypes.html#calculatedattributename">CalculatedAttributeName</a></td>
+<td>string (128) <strong>nullable</strong></td>
+<td>The name of the calculated attribute which will be used in the calculation of the amount of the current Box Type. Used when the value of the &quot;Calculation Type&quot; field is &quot;Calculated Attribute&quot;. <code>Filter(eq;like)</code> <code>Introduced in version 22.1.5.90</code></td>
+</tr>
+<tr>
+<td><a href="Finance.Vat.BoxTypes.html#calculationtype">CalculationType</a></td>
+<td><a href="Finance.Vat.BoxTypes.html#calculationtype">CalculationType</a></td>
+<td>Determines the source of amounts of the current Box Type. Sources can be the Vat Entries or the Calculated attribute from the VAT Declaration which is specified in the &quot;Calculated Attribute Name&quot; field. <code>Required</code> <code>Default(&quot;DT&quot;)</code> <code>Filter(multi eq)</code> <code>Introduced in version 22.1.5.90</code></td>
+</tr>
+<tr>
 <td><a href="Finance.Vat.BoxTypes.html#code">Code</a></td>
 <td>string (32)</td>
 <td>The unique code of the BoxType. <code>Required</code> <code>Filter(multi eq)</code></td>
@@ -156,6 +166,40 @@ Name Data Member:<br>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
+<h3 id="calculatedattributename">CalculatedAttributeName</h3>
+<p>The name of the calculated attribute which will be used in the calculation of the amount of the current Box Type. Used when the value of the &quot;Calculation Type&quot; field is &quot;Calculated Attribute&quot;. <code>Filter(eq;like)</code> <code>Introduced in version 22.1.5.90</code></p>
+<p><em>Type</em>: <strong>string (128) <strong>nullable</strong></strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>Equals, Like</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>128</strong></p>
+<h3 id="calculationtype">CalculationType</h3>
+<p>Determines the source of amounts of the current Box Type. Sources can be the Vat Entries or the Calculated attribute from the VAT Declaration which is specified in the &quot;Calculated Attribute Name&quot; field. <code>Required</code> <code>Default(&quot;DT&quot;)</code> <code>Filter(multi eq)</code> <code>Introduced in version 22.1.5.90</code></p>
+<p><em>Type</em>: <strong><a href="Finance.Vat.BoxTypes.html#calculationtype">CalculationType</a></strong><br>
+<em>Category</em>: <strong>System</strong><br>
+Allowed values for the <code>CalculationType</code>(Finance.Vat.BoxTypes.md#calculationtype) data attribute<br>
+<em>Allowed Values (Finance.Vat.BoxTypesRepository.CalculationType Enum Members)</em></p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DealTypes</td>
+<td>Source of amounts are Vat Entries. Stored as 'DT'. <br> <em>Database Value:</em> 'DT' <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'DealTypes'</td>
+</tr>
+<tr>
+<td>CalculatedAttribute</td>
+<td>Source of amounts is Calculated attribute from the VAT Declaration which is specified in the &quot;Calculated Attribute Name&quot; field. Stored as 'CA'. <br> <em>Database Value:</em> 'CA' <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'CalculatedAttribute'</td>
+</tr>
+</tbody>
+</table>
+<p><em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>DealTypes</strong></p>
 <h3 id="code">Code</h3>
 <p>The unique code of the BoxType. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong>string (32)</strong><br>

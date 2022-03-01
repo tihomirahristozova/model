@@ -37,7 +37,10 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [BaseAmountBoxType](Finance.Vat.DealTypes.md#baseamountboxtype) | [BoxTypes](Finance.Vat.BoxTypes.md) (nullable) | Determine the "Box Type" where the amounts from the "Amount Base" field of the "VAT Entries" to be accumulated for the current "Deal Type". `Filter(multi eq)` `Introduced in version 22.1.5.90` |
 | [Country](Finance.Vat.DealTypes.md#country) | [Countries](General.Geography.Countries.md) | The country for which this deal type applies. The country is matched against the country of the enterprise company. `Required` `Filter(multi eq)` |
+| [TotalAmountBoxType](Finance.Vat.DealTypes.md#totalamountboxtype) | [BoxTypes](Finance.Vat.BoxTypes.md) (nullable) | Determine the "Box Type" where the amounts from the ("Amount Base" + "VAT Amount Base") fields of the "VAT Entries" to be accumulated for the current "Deal Type". `Filter(multi eq)` `Introduced in version 22.1.5.90` |
+| [VATAmountBoxType](Finance.Vat.DealTypes.md#vatamountboxtype) | [BoxTypes](Finance.Vat.BoxTypes.md) (nullable) | Determine the "Box Type" where the amounts from the "VAT Amount Base" field of the "VAT Entries" to be accumulated for the current "Deal Type". `Filter(multi eq)` `Introduced in version 22.1.5.90` |
 
 ## Child Collections
 
@@ -114,11 +117,35 @@ _Supports Order By_: ****
 
 ## Reference Details
 
+### BaseAmountBoxType
+
+Determine the "Box Type" where the amounts from the "Amount Base" field of the "VAT Entries" to be accumulated for the current "Deal Type". `Filter(multi eq)` `Introduced in version 22.1.5.90`
+
+_Type_: **[BoxTypes](Finance.Vat.BoxTypes.md) (nullable)**  
+_Category_: **System**  
+_Supported Filters_: **Equals, EqualsIn**  
+
 ### Country
 
 The country for which this deal type applies. The country is matched against the country of the enterprise company. `Required` `Filter(multi eq)`
 
 _Type_: **[Countries](General.Geography.Countries.md)**  
+_Category_: **System**  
+_Supported Filters_: **Equals, EqualsIn**  
+
+### TotalAmountBoxType
+
+Determine the "Box Type" where the amounts from the ("Amount Base" + "VAT Amount Base") fields of the "VAT Entries" to be accumulated for the current "Deal Type". `Filter(multi eq)` `Introduced in version 22.1.5.90`
+
+_Type_: **[BoxTypes](Finance.Vat.BoxTypes.md) (nullable)**  
+_Category_: **System**  
+_Supported Filters_: **Equals, EqualsIn**  
+
+### VATAmountBoxType
+
+Determine the "Box Type" where the amounts from the "VAT Amount Base" field of the "VAT Entries" to be accumulated for the current "Deal Type". `Filter(multi eq)` `Introduced in version 22.1.5.90`
+
+_Type_: **[BoxTypes](Finance.Vat.BoxTypes.md) (nullable)**  
 _Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
