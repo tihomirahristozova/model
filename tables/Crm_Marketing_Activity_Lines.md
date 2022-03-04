@@ -7,6 +7,12 @@ Entity: [Crm.Marketing.MarketingActivityLines](~/entities/Crm.Marketing.Marketin
 
 Detail records (lines) of the marketing activities. Entity: Crm_Marketing_Activity_Lines (Introduced in version 22.1.5.56)
 
+## Owner Tables Hierarchy
+
+* [Crm_Activities](Crm_Activities.md)
+* [Cm_Activities](Cm_Activities.md)
+* [Gen_Documents](Gen_Documents.md)
+
 ## Summary
 
 | Name | Type | Description |
@@ -278,7 +284,7 @@ Marketing activity
 |Is Entity Name|no|
 |Max Length|-1|
 |Order|1|
-|Ownership Reference|no|
+|Ownership Reference|yes|
 |Pasword|no|
 |Picture|no|
 |Primary Key|no|

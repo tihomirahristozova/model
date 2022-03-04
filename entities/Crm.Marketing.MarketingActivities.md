@@ -21,6 +21,7 @@ An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a
 
 Aggregate Tree  
 * [Crm.Marketing.MarketingActivities](Crm.Marketing.MarketingActivities.md)  
+  * [Crm.Marketing.MarketingActivityLines](Crm.Marketing.MarketingActivityLines.md)  
   * [General.Contacts.ActivityParticipants](General.Contacts.ActivityParticipants.md)  
   * [General.Contacts.ActivityResources](General.Contacts.ActivityResources.md)  
   * [General.Contacts.Reminders](General.Contacts.Reminders.md)  
@@ -117,6 +118,7 @@ Aggregate Tree
 | DocumentAmounts | [DocumentAmounts](General.DocumentAmounts.md) | List of `DocumentAmount`(General.DocumentAmounts.md) child objects, based on the `General.DocumentAmount.Document`(General.DocumentAmounts.md#document) back reference (Inherited from [Documents](General.Documents.md)) 
 | FileAttachments | [DocumentFileAttachments](General.DocumentFileAttachments.md) | List of `DocumentFileAttachment`(General.DocumentFileAttachments.md) child objects, based on the `General.DocumentFileAttachment.Document`(General.DocumentFileAttachments.md#document) back reference (Inherited from [Documents](General.Documents.md)) 
 | LineAmounts | [DocumentLineAmounts](General.DocumentLineAmounts.md) | List of `DocumentLineAmount`(General.DocumentLineAmounts.md) child objects, based on the `General.DocumentLineAmount.Document`(General.DocumentLineAmounts.md#document) back reference (Inherited from [Documents](General.Documents.md)) 
+| Lines | [MarketingActivityLines](Crm.Marketing.MarketingActivityLines.md) | List of `MarketingActivityLine`(Crm.Marketing.MarketingActivityLines.md) child objects, based on the `Crm.Marketing.MarketingActivityLine.MarketingActivity`(Crm.Marketing.MarketingActivityLines.md#marketingactivity) back reference 
 | Participants | [ActivityParticipants](General.Contacts.ActivityParticipants.md) | List of `ActivityParticipant`(General.Contacts.ActivityParticipants.md) child objects, based on the `General.Contacts.ActivityParticipant.Activity`(General.Contacts.ActivityParticipants.md#activity) back reference (Inherited from [Activities](General.Contacts.Activities.md)) 
 | Parties | [DocumentParties](General.Documents.DocumentParties.md) | List of `DocumentParty`(General.Documents.DocumentParties.md) child objects, based on the `General.Documents.DocumentParty.Document`(General.Documents.DocumentParties.md#document) back reference (Inherited from [Documents](General.Documents.md)) 
 | Prints | [DocumentPrints](General.DocumentPrints.md) | List of `DocumentPrint`(General.DocumentPrints.md) child objects, based on the `General.DocumentPrint.Document`(General.DocumentPrints.md#document) back reference (Inherited from [Documents](General.Documents.md)) 

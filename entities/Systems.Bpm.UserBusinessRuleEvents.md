@@ -82,6 +82,7 @@ _Allowed Values (Systems.Bpm.UserBusinessRuleEventsRepository.EventType Enum Mem
 | STATECHANGED | Occurs when the document state is changed. The state is specified in the 'Event Parameter' field. Possible parameter values are 'PLANNED', 'FIRMPLANNED', 'RELEASED', 'COMPLETED' and 'CLOSED'.. Stored as 'STATECHANGED'. <br /> _Database Value:_ 'STATECHANGED' <br /> _Model Value:_ 5 <br /> _Domain API Value:_ 'STATECHANGED' |
 | STATECHANGING | Occurs during the document state change. The state is specified in the 'Event Parameter' field. Possible parameter values are 'PLANNING', 'FIRMPLANNING', 'RELEASING', 'COMPLETING' and 'CLOSING'.. Stored as 'STATECHANGING'. <br /> _Database Value:_ 'STATECHANGING' <br /> _Model Value:_ 6 <br /> _Domain API Value:_ 'STATECHANGING' |
 | VOIDING | Occurs during the voiding of a document.. Stored as 'VOIDING'. <br /> _Database Value:_ 'VOIDING' <br /> _Model Value:_ 7 <br /> _Domain API Value:_ 'VOIDING' |
+| CREATENEW | Occurs when a new object is created. Used to fill custom defaults.. Stored as 'CREATENEW'. <br /> _Database Value:_ 'CREATENEW' <br /> _Model Value:_ 8 <br /> _Domain API Value:_ 'CREATENEW' |
 
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  

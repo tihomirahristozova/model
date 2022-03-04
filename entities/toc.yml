@@ -197,6 +197,8 @@
     href: Communities.NotificationSettings.md
   - name: SocialComments
     href: Communities.SocialComments.md
+  - name: SocialFollows
+    href: Communities.SocialFollows.md
   - name: SocialGroupMembers
     href: Communities.SocialGroupMembers.md
   - name: SocialGroups

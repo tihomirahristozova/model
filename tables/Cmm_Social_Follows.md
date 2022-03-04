@@ -1,6 +1,12 @@
 # Table Cmm_Social_Follows
 
 
+## Entity
+
+Entity: [Communities.SocialFollows](~/entities/Communities.SocialFollows.md)
+
+Denotes a user following an object in the system. The user will be notified for events about the object. Entity: Cmm_Social_Follows
+
 ## Summary
 
 | Name | Type | Description |

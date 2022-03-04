@@ -137,7 +137,7 @@
 </table>
 <h2 id="business-logic">Business Logic</h2>
 <p>This generation is used to create Sales Orders from Deals.</p>
-<p>To create a sales order, the customer has to be specified. The customer is extracted from the party, selected in the Deal (Deal.Party) and the up-to-date, and active customer definition of this party in the enterprise company of the sales order (SalesOrder.EnterpriseCompany) or without enterprise company.
+<p>To create a sales order, the customer has to be specified. The customer is extracted from the party, selected in the Deal (Deal.Party) and the up-to-date, and active customer definition of this party in the enterprise company of the sales order (SalesOrder.EnterpriseCompany) or which is without enterprise company.
 (so Customer.Party = Deal.Party &amp;&amp; (Customer.EnterpriseCompany == SalesOrder.EnterpriseCompany || Customer.EnterpriseCompany == null) &amp;&amp; Customer.Active == true &amp;&amp; (Customer.FromDate &lt;= SalesOrder.DocumentDate || Customer.FromDate == null) &amp;&amp; (Customer.ThruDate &gt;= SalesOrder.DocumentDate || Customer.ThruDate == null).</p>
 <p>If no such customer is found, the generation procedure is stopped and an error is thrown. The error text is:</p>
 <pre><code> No valid client is found for '{Deal.Party.PartyName}' party. 
@@ -148,9 +148,10 @@
 
 SalesOrder.DocumentDate = Today
 
-SalesOrder.ShipToPartyContactMechanism = if (Count(PartyContactMechanisms, where Party == SalesOrder.Customer.Party &amp;&amp; IsDefault == true) == 1)
-                                         , then ShipToPartyContactMechanism = First(PartyContactMechanisms, where Party == SalesOrder.Customer.Party &amp;&amp; IsDefault == true).Name
-                                         , else SalesOrder.ShipToPartyContactMechanism = null
+SalesOrder.ShipToPartyContactMechanism = 
+    if (Count(PartyContactMechanisms, where Party == SalesOrder.Customer.Party &amp;&amp; IsDefault == true) == 1)
+    , then ShipToPartyContactMechanism = First(PartyContactMechanisms, where Party == SalesOrder.Customer.Party &amp;&amp; IsDefault == true).Name
+    , else SalesOrder.ShipToPartyContactMechanism = null
                                          
 SalesOrder.DocumentCurrency = SalesOrder.EnterpriseCompany.BaseCurrency
 
@@ -194,11 +195,9 @@ SalesOrder.PosTerminal = null
 
 SalesOrder.FiscalSalesNumber = null
 
+SalesOrder.FiscalPrinterPosDevice = null
+
 SalesOrder.EndCustomerParty = null
-
-SalesOrder.FiscalPrinterPosDevice = null
-
-SalesOrder.FiscalPrinterPosDevice = null
 
 SalesOrder.DeliveryTermsCode = null
 
@@ -256,9 +255,10 @@ SalesOrderLine.StandardQuantityBase = CONVERT(SalesOrderLine.Quantity, SalesOrde
 
 SalesOrderLine.LineDiscount = loaded by the 'Determine line discount'* method
 
-SalesOrderLine.LineStandardDiscountPercent = if (SalesOrderLine.LineDiscount != null)
-                                             , then SalesOrderLine.LineStandardDiscountPercent = SalesOrderLine.LineDiscount.DiscountPercent
-                                             , else SalesOrderLine.LineStandardDiscountPercent = 0.00% 
+SalesOrderLine.LineStandardDiscountPercent = 
+    if (SalesOrderLine.LineDiscount != null)
+    , then SalesOrderLine.LineStandardDiscountPercent = SalesOrderLine.LineDiscount.DiscountPercent
+    , else SalesOrderLine.LineStandardDiscountPercent = 0.00% 
                                              
 SalesOrderLine.LineCustomDiscountPercent = 0.00%
 

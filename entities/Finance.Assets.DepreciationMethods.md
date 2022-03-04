@@ -31,7 +31,7 @@ Aggregate Tree
 | [Id](Finance.Assets.DepreciationMethods.md#id) | guid |  
 | [IsSystem](Finance.Assets.DepreciationMethods.md#issystem) | boolean | Is_System is True for those depreciation methods that are managed by the system via update procedures and cannot be edited by the user. `Required` `Default(false)` `Filter(eq)` `ReadOnly` 
 | [MonthsInAPeriod](Finance.Assets.DepreciationMethods.md#monthsinaperiod) | int32 | Number of equal valued months calculated with single application of the function. `Required` `Default(12)` 
-| [Name](Finance.Assets.DepreciationMethods.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | The name of this DepreciationMethod(Multilanguage string).. `Required` `Filter(like)` 
+| [Name](Finance.Assets.DepreciationMethods.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Multilanguage string. `Required` `Filter(like)` 
 | [ObjectVersion](Finance.Assets.DepreciationMethods.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 | [PeriodDeterminationMethod](Finance.Assets.DepreciationMethods.md#perioddeterminationmethod) | [PeriodDeterminationMethod](Finance.Assets.DepreciationMethods.md#perioddeterminationmethod) | Determines when the depreciation starts and when it ends. NM=Next_Month, CM=Current_Month, BD=By_Days. `Required` 
 | [StartFromNextMonth](Finance.Assets.DepreciationMethods.md#startfromnextmonth) | boolean | When true, denotes that the depreciation starts from the month, following the month of deployment. When false, the depreciation starts from the same month. `Required` `Default(true)` `ReadOnly` 
@@ -108,7 +108,7 @@ _Default Value_: **12**
 
 ### Name
 
-The name of this DepreciationMethod(Multilanguage string).. `Required` `Filter(like)`
+Multilanguage string. `Required` `Filter(like)`
 
 _Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
 _Category_: **System**  

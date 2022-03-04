@@ -9,15 +9,19 @@ Detail records (lines) of the marketing activities. Entity: Crm_Marketing_Activi
 
 ## Default Visualization
 Default Display Text Format:  
-_{Id}: {MarketingActivityId}_  
+_{MarketingActivity.EntityName}_  
 Default Search Members:  
-__  
+_MarketingActivity.EntityName_  
+Name Data Member:  
+_MarketingActivity.EntityName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
 
-Aggregate Tree  
-* [Crm.Marketing.MarketingActivityLines](Crm.Marketing.MarketingActivityLines.md)  
+Aggregate Parent:  
+[Crm.Marketing.MarketingActivities](Crm.Marketing.MarketingActivities.md)  
+Aggregate Root:  
+[Crm.Marketing.MarketingActivities](Crm.Marketing.MarketingActivities.md)  
 
 ## Attributes
 
@@ -39,7 +43,7 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Competitor](Crm.Marketing.MarketingActivityLines.md#competitor) | [Competitors](Crm.Marketing.Competitors.md) (nullable) | Competitor where marketing activity was held. `Filter(multi eq)` |
-| [MarketingActivity](Crm.Marketing.MarketingActivityLines.md#marketingactivity) | [MarketingActivities](Crm.Marketing.MarketingActivities.md) | Marketing activity. `Required` `Filter(multi eq)` |
+| [MarketingActivity](Crm.Marketing.MarketingActivityLines.md#marketingactivity) | [MarketingActivities](Crm.Marketing.MarketingActivities.md) | Marketing activity. `Required` `Filter(multi eq)` `Owner` |
 | [MarketingActivityLineType](Crm.Marketing.MarketingActivityLines.md#marketingactivitylinetype) | [MarketingActivityLineTypes](Crm.Marketing.MarketingActivityLineTypes.md) | Describes what the purpose of the marketing activity is. `Required` `Filter(multi eq)` |
 | [OrderQuantityUnit](Crm.Marketing.MarketingActivityLines.md#orderquantityunit) | [MeasurementUnits](General.MeasurementUnits.md) (nullable) | The measurement unit of In_Store_Available_<br />Quantity and Order_Quantity. `Filter(multi eq)` |
 | [Product](Crm.Marketing.MarketingActivityLines.md#product) | [Products](General.Products.Products.md) | The specific product that was target of the marketing activity. `Required` `Filter(multi eq)` |
@@ -151,11 +155,12 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### MarketingActivity
 
-Marketing activity. `Required` `Filter(multi eq)`
+Marketing activity. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[MarketingActivities](Crm.Marketing.MarketingActivities.md)**  
 _Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
+_[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
 
 ### MarketingActivityLineType
 

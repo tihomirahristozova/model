@@ -61,8 +61,8 @@ Delivery terms - classification according to Intrastat (which uses the common ab
 
 _Type_: **[DeliveryTerms](Finance.Intrastat.DeclarationLines.md#deliveryterms)**  
 _Category_: **System**  
-Allowed values for the `DeliveryTerms`(Finance.Intrastat.DeclarationLines.md#deliveryterms) data attribute  
-_Allowed Values (Finance.Intrastat.DeclarationLinesRepository.DeliveryTerms Enum Members)_  
+Generic enum type for DeliveryTerms properties  
+_Allowed Values (Finance.Intrastat.DeliveryTerms Enum Members)_  
 
 | Value | Description |
 | ---- | --- |
@@ -184,8 +184,8 @@ Transaction nature, according to the Intrastat classification. `Required`
 
 _Type_: **[TransactionNature](Finance.Intrastat.DeclarationLines.md#transactionnature)**  
 _Category_: **System**  
-Allowed values for the `TransactionNature`(Finance.Intrastat.DeclarationLines.md#transactionnature) data attribute  
-_Allowed Values (Finance.Intrastat.DeclarationLinesRepository.TransactionNature Enum Members)_  
+Generic enum type for TransactionNature properties  
+_Allowed Values (Finance.Intrastat.TransactionNature Enum Members)_  
 
 | Value | Description |
 | ---- | --- |
@@ -218,8 +218,8 @@ Transportation mode - type of transportation used. `Required`
 
 _Type_: **[TransportMode](Finance.Intrastat.DeclarationLines.md#transportmode)**  
 _Category_: **System**  
-Allowed values for the `TransportMode`(Finance.Intrastat.DeclarationLines.md#transportmode) data attribute  
-_Allowed Values (Finance.Intrastat.DeclarationLinesRepository.TransportMode Enum Members)_  
+Generic enum type for TransportMode properties  
+_Allowed Values (Finance.Intrastat.TransportMode Enum Members)_  
 
 | Value | Description |
 | ---- | --- |
