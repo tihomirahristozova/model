@@ -11704,7 +11704,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Crm.Presales.Deals.html",
-          "hash": "Xki25p4bJy/rCDn25TZ4kg=="
+          "hash": "Pn7pl+m15r3J2C82xJ2oxA=="
         }
       },
       "is_incremental": false,
@@ -17177,6 +17177,18 @@
         ".html": {
           "relative_path": "generations/CRM1002.html",
           "hash": "p/u0vPe0LrMVFUaYLWzJ9g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "generations/CRM1003.md",
+      "output": {
+        ".html": {
+          "relative_path": "generations/CRM1003.html",
+          "hash": "kHK5zC/Xbz7RUz8qZULT0A=="
         }
       },
       "is_incremental": false,
