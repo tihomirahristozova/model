@@ -31,7 +31,7 @@ Aggregate Tree
 | [DisplayText](Finance.Payments.PaymentAccounts.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [Id](Finance.Payments.PaymentAccounts.md#id) | guid |  
 | [IsActive](Finance.Payments.PaymentAccounts.md#isactive) | boolean | Indicates wheather the payment account is currently used (active). `Required` `Default(true)` `Filter(eq)` 
-| [Name](Finance.Payments.PaymentAccounts.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | The name of this PaymentAccount. `Required` `Filter(like)` 
+| [Name](Finance.Payments.PaymentAccounts.md#name) | [MultilanguageString (50)](../data-types.md#multilanguagestring) | The name of this PaymentAccount. `Required` `Filter(like)` 
 | [ObjectVersion](Finance.Payments.PaymentAccounts.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 
 ## References
@@ -90,7 +90,7 @@ _Default Value_: **True**
 
 The name of this PaymentAccount. `Required` `Filter(like)`
 
-_Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
+_Type_: **[MultilanguageString (50)](../data-types.md#multilanguagestring)**  
 _Category_: **System**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  

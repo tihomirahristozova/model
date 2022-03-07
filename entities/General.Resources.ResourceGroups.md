@@ -31,7 +31,7 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [DisplayText](General.Resources.ResourceGroups.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [Id](General.Resources.ResourceGroups.md#id) | guid |  
-| [Name](General.Resources.ResourceGroups.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Resource group name. Unique within its parent. `Required` `Filter(eq;like)` 
+| [Name](General.Resources.ResourceGroups.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Resource group name. Unique within its parent. `Required` `Filter(eq;like)` 
 | [ObjectVersion](General.Resources.ResourceGroups.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 
 ## References
@@ -71,7 +71,7 @@ _Default Value_: **NewGuid**
 
 Resource group name. Unique within its parent. `Required` `Filter(eq;like)`
 
-_Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
+_Type_: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 _Category_: **System**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  

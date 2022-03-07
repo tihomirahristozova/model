@@ -31,7 +31,7 @@ Aggregate Tree
 | [DisplayText](General.Geography.Areas.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [FullPath](General.Geography.Areas.md#fullpath) | string (254) __nullable__ | Full path to the area, starting with '/' and containing the area codes of all parent areas using '/' as separator and terminator. For example root area with code 'BG' would have full path = '/BG/'. `Filter(eq;like)` `ReadOnly` 
 | [Id](General.Geography.Areas.md#id) | guid |  
-| [Name](General.Geography.Areas.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Obsolete. Not used. `Required` `Filter(eq;like)` `ORD` 
+| [Name](General.Geography.Areas.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Obsolete. Not used. `Required` `Filter(eq;like)` `ORD` 
 | [ObjectVersion](General.Geography.Areas.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 
 ## References
@@ -85,7 +85,7 @@ _Default Value_: **NewGuid**
 
 Obsolete. Not used. `Required` `Filter(eq;like)` `ORD`
 
-_Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
+_Type_: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 _Indexed_: **True**  
 _Category_: **System**  
 _Supported Filters_: **Equals, Like**  

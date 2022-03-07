@@ -31,10 +31,10 @@ Aggregate Tree
 | [DefaultParameterChange](Applications.AssetManagement.MaintenanceTypes.md#defaultparameterchange) | int32 __nullable__ | Default positive change of the tracked parameter between two maintenances. null means, that maintenances are not scheduled based on parameter change. 
 | [DefaultScheduleDays](Applications.AssetManagement.MaintenanceTypes.md#defaultscheduledays) | int32 __nullable__ | Specifies the maximum number of days between two maintenances (in addition to the number of months specified in Default Schedule Months). null means that there is no default schedule in days. 
 | [DefaultScheduleMonths](Applications.AssetManagement.MaintenanceTypes.md#defaultschedulemonths) | int32 __nullable__ | Specifies the maximum number of months between two maintenances. null means that there is no default schedule in months. 
-| [Description](Applications.AssetManagement.MaintenanceTypes.md#description) | [MultilanguageString](../data-types.md#multilanguagestring) __nullable__ | Detailed description of the maintenance (multilanguage). 
+| [Description](Applications.AssetManagement.MaintenanceTypes.md#description) | [MultilanguageString (2147483647)](../data-types.md#multilanguagestring) __nullable__ | Detailed description of the maintenance (multilanguage). 
 | [DisplayText](Applications.AssetManagement.MaintenanceTypes.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [Id](Applications.AssetManagement.MaintenanceTypes.md#id) | guid |  
-| [Name](Applications.AssetManagement.MaintenanceTypes.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Multilanguage name of the maintenance type. `Required` `Filter(eq;like)` 
+| [Name](Applications.AssetManagement.MaintenanceTypes.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Multilanguage name of the maintenance type. `Required` `Filter(eq;like)` 
 | [ObjectVersion](Applications.AssetManagement.MaintenanceTypes.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 
 ## References
@@ -89,7 +89,7 @@ _Supports Order By_: **False**
 
 Detailed description of the maintenance (multilanguage).
 
-_Type_: **[MultilanguageString](../data-types.md#multilanguagestring) __nullable__**  
+_Type_: **[MultilanguageString (2147483647)](../data-types.md#multilanguagestring) __nullable__**  
 _Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
@@ -115,7 +115,7 @@ _Default Value_: **NewGuid**
 
 Multilanguage name of the maintenance type. `Required` `Filter(eq;like)`
 
-_Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
+_Type_: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 _Category_: **System**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  

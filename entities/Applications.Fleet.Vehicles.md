@@ -40,14 +40,14 @@ Aggregate Tree
 | [FuelType](Applications.Fleet.Vehicles.md#fueltype) | string (64) __nullable__ | Fuel type of the engine or the power source of the engine (Multilanguage) - e.g. diesel, benzine, electric, etc. `Filter(eq;like)` 
 | [Id](Applications.Fleet.Vehicles.md#id) | guid |  
 | [IsActive](Applications.Fleet.Vehicles.md#isactive) | boolean | True if the vehicle is still owned and managed by the enterprise. `Required` `Default(true)` `Introduced in version 18.2` 
-| [IssuingAuthority](Applications.Fleet.Vehicles.md#issuingauthority) | [MultilanguageString](../data-types.md#multilanguagestring) __nullable__ | The country or state issuing the registration number. null (not recommended) means that the authority is unknown or not applicable. `Filter(eq;like)` 
-| [Make](Applications.Fleet.Vehicles.md#make) | [MultilanguageString](../data-types.md#multilanguagestring) __nullable__ | The name of the manufacturer of the vehicle. null means that the value is unknown. `Filter(eq;like)` 
+| [IssuingAuthority](Applications.Fleet.Vehicles.md#issuingauthority) | [MultilanguageString (64)](../data-types.md#multilanguagestring) __nullable__ | The country or state issuing the registration number. null (not recommended) means that the authority is unknown or not applicable. `Filter(eq;like)` 
+| [Make](Applications.Fleet.Vehicles.md#make) | [MultilanguageString (64)](../data-types.md#multilanguagestring) __nullable__ | The name of the manufacturer of the vehicle. null means that the value is unknown. `Filter(eq;like)` 
 | [ManufactureYear](Applications.Fleet.Vehicles.md#manufactureyear) | int32 __nullable__ | The year when the vehicle was manufactured or first registered - whichever is known. null means that the value is unknown. `Filter(eq;ge;le)` 
 | [MaximumSpeedKmH](Applications.Fleet.Vehicles.md#maximumspeedkmh) | int32 __nullable__ | Maximum speed in km/h. 
-| [Model](Applications.Fleet.Vehicles.md#model) | [MultilanguageString](../data-types.md#multilanguagestring) __nullable__ | The model of the vehicle. `Filter(eq;like)` 
+| [Model](Applications.Fleet.Vehicles.md#model) | [MultilanguageString (64)](../data-types.md#multilanguagestring) __nullable__ | The model of the vehicle. `Filter(eq;like)` 
 | [Notes](Applications.Fleet.Vehicles.md#notes) | string (max) __nullable__ | Notes for this Vehicle. 
 | [ObjectVersion](Applications.Fleet.Vehicles.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [PrimaryColor](Applications.Fleet.Vehicles.md#primarycolor) | [MultilanguageString](../data-types.md#multilanguagestring) __nullable__ | The primary color of the vehicle. null means that the value is unknown or not applicable. `Filter(eq;like)` 
+| [PrimaryColor](Applications.Fleet.Vehicles.md#primarycolor) | [MultilanguageString (64)](../data-types.md#multilanguagestring) __nullable__ | The primary color of the vehicle. null means that the value is unknown or not applicable. `Filter(eq;like)` 
 | [SeatingPlacesCount](Applications.Fleet.Vehicles.md#seatingplacescount) | int32 __nullable__ | Number of seating places, excluding driver. `Filter(eq;ge;le)` 
 | [StandingPlacesCount](Applications.Fleet.Vehicles.md#standingplacescount) | int32 __nullable__ | Number of standing places, if applicable. 
 | [TechnicalMaximum<br />LadenMassKg](Applications.Fleet.Vehicles.md#technicalmaximumladenmasskg) | int32 __nullable__ | Maximum technically permissible laden mass in kg. 
@@ -55,7 +55,7 @@ Aggregate Tree
 | [VehicleIdentification<br />Number](Applications.Fleet.Vehicles.md#vehicleidentificationnumber) | string (20) __nullable__ | VIN, aka Chassis number. `Filter(eq;like)` 
 | [VehicleMassKg](Applications.Fleet.Vehicles.md#vehiclemasskg) | int32 __nullable__ | Vehicle own mass in kg. 
 | [VehicleRegistrationNumber](Applications.Fleet.Vehicles.md#vehicleregistrationnumber) | string (16) | The registration plate number. Can be numeric or alphanumeric code. It should be unique within the Issuing_Authority. `Required` `Filter(eq;like)` 
-| [VehicleType](Applications.Fleet.Vehicles.md#vehicletype) | [MultilanguageString](../data-types.md#multilanguagestring) __nullable__ | Type of vehicle - e.g. automobile, bus, etc. null means the value is unknown. `Filter(eq;like)` 
+| [VehicleType](Applications.Fleet.Vehicles.md#vehicletype) | [MultilanguageString (64)](../data-types.md#multilanguagestring) __nullable__ | Type of vehicle - e.g. automobile, bus, etc. null means the value is unknown. `Filter(eq;like)` 
 
 ## References
 
@@ -200,7 +200,7 @@ _Default Value_: **True**
 
 The country or state issuing the registration number. null (not recommended) means that the authority is unknown or not applicable. `Filter(eq;like)`
 
-_Type_: **[MultilanguageString](../data-types.md#multilanguagestring) __nullable__**  
+_Type_: **[MultilanguageString (64)](../data-types.md#multilanguagestring) __nullable__**  
 _Category_: **System**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
@@ -209,7 +209,7 @@ _Supports Order By_: **False**
 
 The name of the manufacturer of the vehicle. null means that the value is unknown. `Filter(eq;like)`
 
-_Type_: **[MultilanguageString](../data-types.md#multilanguagestring) __nullable__**  
+_Type_: **[MultilanguageString (64)](../data-types.md#multilanguagestring) __nullable__**  
 _Category_: **System**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
@@ -236,7 +236,7 @@ _Supports Order By_: **False**
 
 The model of the vehicle. `Filter(eq;like)`
 
-_Type_: **[MultilanguageString](../data-types.md#multilanguagestring) __nullable__**  
+_Type_: **[MultilanguageString (64)](../data-types.md#multilanguagestring) __nullable__**  
 _Category_: **System**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
@@ -264,7 +264,7 @@ _Supports Order By_: ****
 
 The primary color of the vehicle. null means that the value is unknown or not applicable. `Filter(eq;like)`
 
-_Type_: **[MultilanguageString](../data-types.md#multilanguagestring) __nullable__**  
+_Type_: **[MultilanguageString (64)](../data-types.md#multilanguagestring) __nullable__**  
 _Category_: **System**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
@@ -338,7 +338,7 @@ _Maximum Length_: **16**
 
 Type of vehicle - e.g. automobile, bus, etc. null means the value is unknown. `Filter(eq;like)`
 
-_Type_: **[MultilanguageString](../data-types.md#multilanguagestring) __nullable__**  
+_Type_: **[MultilanguageString (64)](../data-types.md#multilanguagestring) __nullable__**  
 _Category_: **System**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  

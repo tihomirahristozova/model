@@ -36,7 +36,7 @@ Aggregate Tree
 | [Id](Systems.Bpm.UserBusinessRules.md#id) | guid |  
 | [IsActive](Systems.Bpm.UserBusinessRules.md#isactive) | boolean | Specifies whether the rule is activated. `Required` `Default(false)` `Filter(eq)` 
 | [Layer](Systems.Bpm.UserBusinessRules.md#layer) | [Layer](Systems.Bpm.UserBusinessRules.md#layer) | Specifies in which layers the rule will be available. The available events and actions depend on the chosen layer.  Allowed values: FTE=Front-End, BKE=BackEnd, COM=Common (both). `Required` `Default("BKE")` `Filter(multi eq)` 
-| [Name](Systems.Bpm.UserBusinessRules.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | The name of this UserBusinessRule. `Required` `Filter(like)` 
+| [Name](Systems.Bpm.UserBusinessRules.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | The name of this UserBusinessRule. `Required` `Filter(like)` 
 | [Notes](Systems.Bpm.UserBusinessRules.md#notes) | string (max) __nullable__ | Notes for this UserBusinessRule. 
 | [ObjectVersion](Systems.Bpm.UserBusinessRules.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 | [RepositoryName](Systems.Bpm.UserBusinessRules.md#repositoryname) | string (128) | The name of the repository, for which this business rule is defined. `Required` `Filter(eq;like)` 
@@ -125,7 +125,7 @@ _Default Value_: **BackEnd**
 
 The name of this UserBusinessRule. `Required` `Filter(like)`
 
-_Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
+_Type_: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 _Category_: **System**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  

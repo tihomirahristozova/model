@@ -44,7 +44,7 @@ Aggregate Tree
 | [ListOfTechnicalMeasures](Applications.PersonalData.PersonalDataProcesses.md#listoftechnicalmeasures) | string (254) __nullable__ | Comma-separated list of technical measures taken to keep the data privacy. Common measures include Pseudonymisation, Encryption, Data Access Audit, etc. `Filter(eq)` 
 | [ListOfTransfers<br />ToThirdCountries](Applications.PersonalData.PersonalDataProcesses.md#listoftransferstothirdcountries) | string (254) __nullable__ | Comma-separated list of third countries, to which data is sent. `Filter(eq;like)` 
 | [ListOfUsedSoftware](Applications.PersonalData.PersonalDataProcesses.md#listofusedsoftware) | string (254) __nullable__ | Comma-separated list of the names of the software products used to process the data. `Filter(eq;like)` 
-| [Name](Applications.PersonalData.PersonalDataProcesses.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Name of the process (Multilanguage). `Required` `Filter(eq;like)` 
+| [Name](Applications.PersonalData.PersonalDataProcesses.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Name of the process (Multilanguage). `Required` `Filter(eq;like)` 
 | [Notes](Applications.PersonalData.PersonalDataProcesses.md#notes) | string (max) __nullable__ | Notes for this PersonalDataProcess. 
 | [ObjectVersion](Applications.PersonalData.PersonalDataProcesses.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 | [ProcessingRole](Applications.PersonalData.PersonalDataProcesses.md#processingrole) | [ProcessingRole](Applications.PersonalData.PersonalDataProcesses.md#processingrole) | The role of the enterprise company in the process - Controller or Processor. The controller owns the personal data process. The processor operates on behalf of the controller. C=Controller; P=Processor. . `Required` `Default("C")` `Filter(eq)` 
@@ -240,7 +240,7 @@ _Maximum Length_: **254**
 
 Name of the process (Multilanguage). `Required` `Filter(eq;like)`
 
-_Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
+_Type_: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 _Category_: **System**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  

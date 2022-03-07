@@ -30,7 +30,7 @@ Aggregate Tree
 | [Code](Logistics.Procurement.PurchaseOperationTypes.md#code) | string (16) | Unique code of the purchase operation type. `Required` `Filter(multi eq;like)` 
 | [DisplayText](Logistics.Procurement.PurchaseOperationTypes.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [Id](Logistics.Procurement.PurchaseOperationTypes.md#id) | guid |  
-| [Name](Logistics.Procurement.PurchaseOperationTypes.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Name of the purchase operation type (multilanguage). `Required` `Filter(multi eq;like)` 
+| [Name](Logistics.Procurement.PurchaseOperationTypes.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Name of the purchase operation type (multilanguage). `Required` `Filter(multi eq;like)` 
 | [Notes](Logistics.Procurement.PurchaseOperationTypes.md#notes) | string (max) __nullable__ | Notes for this PurchaseOperationType. `Filter(eq;like)` 
 | [ObjectVersion](Logistics.Procurement.PurchaseOperationTypes.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 
@@ -68,7 +68,7 @@ _Default Value_: **NewGuid**
 
 Name of the purchase operation type (multilanguage). `Required` `Filter(multi eq;like)`
 
-_Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
+_Type_: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 _Category_: **System**  
 _Supported Filters_: **Equals, Like, EqualsIn**  
 _Supports Order By_: **False**  

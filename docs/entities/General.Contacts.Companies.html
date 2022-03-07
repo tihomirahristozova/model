@@ -125,7 +125,7 @@ Name Data Member:<br>
 </tr>
 <tr>
 <td><a href="General.Contacts.Companies.html#city">City</a></td>
-<td><a href="../data-types.html#multilanguagestring">MultilanguageString</a> <strong>nullable</strong></td>
+<td><a href="../data-types.html#multilanguagestring">MultilanguageString (64)</a> <strong>nullable</strong></td>
 <td>The city in which the company is registered. <code>Filter(like)</code></td>
 </tr>
 <tr>
@@ -170,7 +170,7 @@ Name Data Member:<br>
 </tr>
 <tr>
 <td><a href="General.Contacts.Companies.html#name">Name</a></td>
-<td><a href="../data-types.html#multilanguagestring">MultilanguageString</a> <strong>nullable</strong></td>
+<td><a href="../data-types.html#multilanguagestring">MultilanguageString (254)</a> <strong>nullable</strong></td>
 <td>The name of this Company. <code>Filter(eq;like)</code> <code>ORD</code></td>
 </tr>
 <tr>
@@ -195,7 +195,7 @@ Name Data Member:<br>
 </tr>
 <tr>
 <td><a href="General.Contacts.Companies.html#partyname">PartyName</a></td>
-<td><a href="../data-types.html#multilanguagestring">MultilanguageString</a></td>
+<td><a href="../data-types.html#multilanguagestring">MultilanguageString (254)</a></td>
 <td>The name of the party. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code> (Inherited from <a href="General.Contacts.Parties.html">Parties</a>)</td>
 </tr>
 <tr>
@@ -230,12 +230,12 @@ Name Data Member:<br>
 </tr>
 <tr>
 <td><a href="General.Contacts.Companies.html#registrationprimaryaddress">RegistrationPrimaryAddress</a></td>
-<td><a href="../data-types.html#multilanguagestring">MultilanguageString</a> <strong>nullable</strong></td>
+<td><a href="../data-types.html#multilanguagestring">MultilanguageString (254)</a> <strong>nullable</strong></td>
 <td>The primary registration address of the company. <code>Filter(like)</code></td>
 </tr>
 <tr>
 <td><a href="General.Contacts.Companies.html#registrationtype">RegistrationType</a></td>
-<td><a href="../data-types.html#multilanguagestring">MultilanguageString</a> <strong>nullable</strong></td>
+<td><a href="../data-types.html#multilanguagestring">MultilanguageString (16)</a> <strong>nullable</strong></td>
 <td>Legal registration type - like LTD., PLC, etc. null means unknown. <code>Filter(eq)</code></td>
 </tr>
 <tr>
@@ -245,7 +245,7 @@ Name Data Member:<br>
 </tr>
 <tr>
 <td><a href="General.Contacts.Companies.html#responsiblepersonname">ResponsiblePersonName</a></td>
-<td><a href="../data-types.html#multilanguagestring">MultilanguageString</a> <strong>nullable</strong></td>
+<td><a href="../data-types.html#multilanguagestring">MultilanguageString (64)</a> <strong>nullable</strong></td>
 <td>Primary responsible person of the company. null means unknown. <code>Filter(like)</code></td>
 </tr>
 <tr>
@@ -364,7 +364,7 @@ Name Data Member:<br>
 <em>Default Value</em>: <strong>0</strong></p>
 <h3 id="city">City</h3>
 <p>The city in which the company is registered. <code>Filter(like)</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a> <strong>nullable</strong></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString (64)</a> <strong>nullable</strong></strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -424,7 +424,7 @@ Name Data Member:<br>
 <em>Default Value</em>: <strong>False</strong></p>
 <h3 id="name">Name</h3>
 <p>The name of this Company. <code>Filter(eq;like)</code> <code>ORD</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a> <strong>nullable</strong></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString (254)</a> <strong>nullable</strong></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
@@ -458,7 +458,7 @@ Name Data Member:<br>
 <em>Maximum Length</em>: <strong>64</strong></p>
 <h3 id="partyname">PartyName</h3>
 <p>The name of the party. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code> (Inherited from <a href="General.Contacts.Parties.html">Parties</a>)</p>
-<p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString (254)</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
@@ -539,13 +539,13 @@ Allowed values for the PartyType data attribute<br>
 <em>Maximum Length</em>: <strong>16</strong></p>
 <h3 id="registrationprimaryaddress">RegistrationPrimaryAddress</h3>
 <p>The primary registration address of the company. <code>Filter(like)</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a> <strong>nullable</strong></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString (254)</a> <strong>nullable</strong></strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="registrationtype">RegistrationType</h3>
 <p>Legal registration type - like LTD., PLC, etc. null means unknown. <code>Filter(eq)</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a> <strong>nullable</strong></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString (16)</a> <strong>nullable</strong></strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -559,7 +559,7 @@ Allowed values for the PartyType data attribute<br>
 <em>Maximum Length</em>: <strong>16</strong></p>
 <h3 id="responsiblepersonname">ResponsiblePersonName</h3>
 <p>Primary responsible person of the company. null means unknown. <code>Filter(like)</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a> <strong>nullable</strong></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString (64)</a> <strong>nullable</strong></strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>

@@ -33,7 +33,7 @@ Aggregate Tree
 | [DisplayText](Applications.AssetManagement.ManagedAssetTypes.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [Id](Applications.AssetManagement.ManagedAssetTypes.md#id) | guid |  
 | [IsActive](Applications.AssetManagement.ManagedAssetTypes.md#isactive) | boolean | Specifies whether the asset type is active for choosing in drop-down choices. `Required` `Default(true)` 
-| [Name](Applications.AssetManagement.ManagedAssetTypes.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Multilanguage name of the asset type. `Required` `Filter(multi eq;like)` 
+| [Name](Applications.AssetManagement.ManagedAssetTypes.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Multilanguage name of the asset type. `Required` `Filter(multi eq;like)` 
 | [Notes](Applications.AssetManagement.ManagedAssetTypes.md#notes) | string (max) __nullable__ | Notes for this ManagedAssetType. 
 | [ObjectVersion](Applications.AssetManagement.ManagedAssetTypes.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 
@@ -89,7 +89,7 @@ _Default Value_: **True**
 
 Multilanguage name of the asset type. `Required` `Filter(multi eq;like)`
 
-_Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
+_Type_: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 _Category_: **System**  
 _Supported Filters_: **Equals, Like, EqualsIn**  
 _Supports Order By_: **False**  

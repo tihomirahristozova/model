@@ -32,7 +32,7 @@ Aggregate Tree
 | [DisplayText](Systems.Core.WebHooks.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [Headers](Systems.Core.WebHooks.md#headers) | string (max) __nullable__ | Optional headers for the request (interpolated string). Each header is specified on a separate line. 
 | [Id](Systems.Core.WebHooks.md#id) | guid |  
-| [Name](Systems.Core.WebHooks.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Webhook name (multi-language). `Required` `Filter(like)` 
+| [Name](Systems.Core.WebHooks.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Webhook name (multi-language). `Required` `Filter(like)` 
 | [Notes](Systems.Core.WebHooks.md#notes) | string (max) __nullable__ | Notes for this WebHook. 
 | [ObjectVersion](Systems.Core.WebHooks.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 | [RepositoryName](Systems.Core.WebHooks.md#repositoryname) | string (128) | The name of the repository for which the webhook is setup. All interpolated strings will be evaluated in the context of entities of the specified type. `Required` `Filter(eq;like)` 
@@ -94,7 +94,7 @@ _Default Value_: **NewGuid**
 
 Webhook name (multi-language). `Required` `Filter(like)`
 
-_Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
+_Type_: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 _Category_: **System**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  

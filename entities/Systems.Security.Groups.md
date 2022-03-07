@@ -30,7 +30,7 @@ Aggregate Tree
 | [EditPeriodDays](Systems.Security.Groups.md#editperioddays) | int32 __nullable__ | The number of days before which the documents can not be corrected, released or voided. 
 | [GroupType](Systems.Security.Groups.md#grouptype) | [GroupType](Systems.Security.Groups.md#grouptype) | Group type. G=Normal user-definable group; U=System group for 1 user; A=Admin; E=Everybody. `Required` `Default("G")` `ReadOnly` 
 | [Id](Systems.Security.Groups.md#id) | guid |  
-| [Name](Systems.Security.Groups.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | The name of this Group. `Required` `Filter(like)` `ORD` 
+| [Name](Systems.Security.Groups.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | The name of this Group. `Required` `Filter(like)` `ORD` 
 | [Notes](Systems.Security.Groups.md#notes) | string (254) __nullable__ | Notes for this Group. 
 | [ObjectVersion](Systems.Security.Groups.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 
@@ -99,7 +99,7 @@ _Default Value_: **NewGuid**
 
 The name of this Group. `Required` `Filter(like)` `ORD`
 
-_Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
+_Type_: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 _Category_: **System**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **True**  

@@ -126,7 +126,7 @@ Name Data Member:<br>
 </tr>
 <tr>
 <td><a href="General.Contacts.Persons.html#city">City</a></td>
-<td><a href="../data-types.html#multilanguagestring">MultilanguageString</a> <strong>nullable</strong></td>
+<td><a href="../data-types.html#multilanguagestring">MultilanguageString (64)</a> <strong>nullable</strong></td>
 <td>City from the legal registration address for the person. <code>Filter(like)</code></td>
 </tr>
 <tr>
@@ -146,7 +146,7 @@ Name Data Member:<br>
 </tr>
 <tr>
 <td><a href="General.Contacts.Persons.html#firstname">FirstName</a></td>
-<td><a href="../data-types.html#multilanguagestring">MultilanguageString</a> <strong>nullable</strong></td>
+<td><a href="../data-types.html#multilanguagestring">MultilanguageString (64)</a> <strong>nullable</strong></td>
 <td>First name of the person. <code>Filter(eq;like)</code></td>
 </tr>
 <tr>
@@ -171,12 +171,12 @@ Name Data Member:<br>
 </tr>
 <tr>
 <td><a href="General.Contacts.Persons.html#lastname">LastName</a></td>
-<td><a href="../data-types.html#multilanguagestring">MultilanguageString</a> <strong>nullable</strong></td>
+<td><a href="../data-types.html#multilanguagestring">MultilanguageString (64)</a> <strong>nullable</strong></td>
 <td>Last name of the person. <code>Filter(eq;like)</code></td>
 </tr>
 <tr>
 <td><a href="General.Contacts.Persons.html#middlename">MiddleName</a></td>
-<td><a href="../data-types.html#multilanguagestring">MultilanguageString</a> <strong>nullable</strong></td>
+<td><a href="../data-types.html#multilanguagestring">MultilanguageString (64)</a> <strong>nullable</strong></td>
 <td>Middle name of the person. <code>Filter(eq;like)</code></td>
 </tr>
 <tr>
@@ -211,7 +211,7 @@ Name Data Member:<br>
 </tr>
 <tr>
 <td><a href="General.Contacts.Persons.html#partyname">PartyName</a></td>
-<td><a href="../data-types.html#multilanguagestring">MultilanguageString</a></td>
+<td><a href="../data-types.html#multilanguagestring">MultilanguageString (254)</a></td>
 <td>The name of the party. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code> (Inherited from <a href="General.Contacts.Parties.html">Parties</a>)</td>
 </tr>
 <tr>
@@ -251,7 +251,7 @@ Name Data Member:<br>
 </tr>
 <tr>
 <td><a href="General.Contacts.Persons.html#title">Title</a></td>
-<td><a href="../data-types.html#multilanguagestring">MultilanguageString</a> <strong>nullable</strong></td>
+<td><a href="../data-types.html#multilanguagestring">MultilanguageString (32)</a> <strong>nullable</strong></td>
 <td>The persons title. It may be one of the standard titles - Mr., Mrs., etc., but it can also contains professional or academic qualification.</td>
 </tr>
 <tr>
@@ -369,7 +369,7 @@ Name Data Member:<br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="city">City</h3>
 <p>City from the legal registration address for the person. <code>Filter(like)</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a> <strong>nullable</strong></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString (64)</a> <strong>nullable</strong></strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -394,7 +394,7 @@ Name Data Member:<br>
 <em>Supports Order By</em>: ****</p>
 <h3 id="firstname">FirstName</h3>
 <p>First name of the person. <code>Filter(eq;like)</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a> <strong>nullable</strong></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString (64)</a> <strong>nullable</strong></strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -447,13 +447,13 @@ Allowed values for the <code>Gender</code>(General.Contacts.Persons.md#gender) d
 <em>Default Value</em>: <strong>True</strong></p>
 <h3 id="lastname">LastName</h3>
 <p>Last name of the person. <code>Filter(eq;like)</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a> <strong>nullable</strong></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString (64)</a> <strong>nullable</strong></strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="middlename">MiddleName</h3>
 <p>Middle name of the person. <code>Filter(eq;like)</code></p>
-<p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a> <strong>nullable</strong></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString (64)</a> <strong>nullable</strong></strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -500,7 +500,7 @@ Allowed values for the <code>Gender</code>(General.Contacts.Persons.md#gender) d
 <em>Maximum Length</em>: <strong>64</strong></p>
 <h3 id="partyname">PartyName</h3>
 <p>The name of the party. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code> (Inherited from <a href="General.Contacts.Parties.html">Parties</a>)</p>
-<p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString (254)</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
@@ -586,7 +586,7 @@ Allowed values for the PartyType data attribute<br>
 <em>Maximum Length</em>: <strong>14</strong></p>
 <h3 id="title">Title</h3>
 <p>The persons title. It may be one of the standard titles - Mr., Mrs., etc., but it can also contains professional or academic qualification.</p>
-<p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString</a> <strong>nullable</strong></strong><br>
+<p><em>Type</em>: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString (32)</a> <strong>nullable</strong></strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>

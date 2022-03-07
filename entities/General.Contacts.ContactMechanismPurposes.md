@@ -32,7 +32,7 @@ Aggregate Tree
 | [Description](General.Contacts.ContactMechanismPurposes.md#description) | string (max) __nullable__ | The description of this ContactMechanismPurpos. `Filter(like)` 
 | [DisplayText](General.Contacts.ContactMechanismPurposes.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [Id](General.Contacts.ContactMechanismPurposes.md#id) | guid |  
-| [Name](General.Contacts.ContactMechanismPurposes.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Name of the contact mechanism purpose (Multilanguage). `Required` `Filter(like)` 
+| [Name](General.Contacts.ContactMechanismPurposes.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Name of the contact mechanism purpose (Multilanguage). `Required` `Filter(like)` 
 | [ObjectVersion](General.Contacts.ContactMechanismPurposes.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 
 
@@ -104,7 +104,7 @@ _Default Value_: **NewGuid**
 
 Name of the contact mechanism purpose (Multilanguage). `Required` `Filter(like)`
 
-_Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
+_Type_: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 _Category_: **System**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  

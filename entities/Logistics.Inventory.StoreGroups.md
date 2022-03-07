@@ -31,7 +31,7 @@ Aggregate Tree
 | [DisplayText](Logistics.Inventory.StoreGroups.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [FullPath](Logistics.Inventory.StoreGroups.md#fullpath) | string (25) __nullable__ | The full path to the store group in a dot separated, non-leading dot format. For example: 001.005.008. `Filter(eq;like)` `ORD` `ReadOnly` 
 | [Id](Logistics.Inventory.StoreGroups.md#id) | guid |  
-| [Name](Logistics.Inventory.StoreGroups.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | The name of this StoreGroup. `Required` `Filter(like)` 
+| [Name](Logistics.Inventory.StoreGroups.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | The name of this StoreGroup. `Required` `Filter(like)` 
 | [ObjectVersion](Logistics.Inventory.StoreGroups.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 | [ParentFullPath](Logistics.Inventory.StoreGroups.md#parentfullpath) | string (25) __nullable__ | The full path to the parent store group. It is stored in a dot separated, non-leading dot format. For example: 001.005. `Filter(eq;like)` 
 
@@ -87,7 +87,7 @@ _Default Value_: **NewGuid**
 
 The name of this StoreGroup. `Required` `Filter(like)`
 
-_Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
+_Type_: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 _Category_: **System**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  

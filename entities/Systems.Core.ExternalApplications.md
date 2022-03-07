@@ -32,7 +32,7 @@ Aggregate Tree
 | [ExecuteForAllObjects](Systems.Core.ExternalApplications.md#executeforallobjects) | boolean | Whether to execute the application for all selected objects at once or to execute the application for each object, one by one. `Required` `Default(true)` `Filter(eq)` 
 | [Id](Systems.Core.ExternalApplications.md#id) | guid |  
 | [IsActive](Systems.Core.ExternalApplications.md#isactive) | boolean __nullable__ | Specifies whether the external application is currently used. `Default(true)` `Filter(eq)` 
-| [Name](Systems.Core.ExternalApplications.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | The name of the external application. `Required` `Filter(eq;like)` 
+| [Name](Systems.Core.ExternalApplications.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | The name of the external application. `Required` `Filter(eq;like)` 
 | [Notes](Systems.Core.ExternalApplications.md#notes) | string (max) __nullable__ | Notes for this ExternalApplication. 
 | [ObjectVersion](Systems.Core.ExternalApplications.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 | [Platform](Systems.Core.ExternalApplications.md#platform) | [Platform](Systems.Core.ExternalApplications.md#platform) | The execution platform of the application. `Required` `Filter(eq)` 
@@ -129,7 +129,7 @@ _Default Value_: **True**
 
 The name of the external application. `Required` `Filter(eq;like)`
 
-_Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
+_Type_: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 _Category_: **System**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  

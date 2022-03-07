@@ -30,7 +30,7 @@ Aggregate Root:
 | [Active](Applications.Fleet.VehicleSets.md#active) | boolean | True if the vehicle set is active for choosing; false - otherwise. `Required` `Default(true)` `Filter(eq)` 
 | [DisplayText](Applications.Fleet.VehicleSets.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [Id](Applications.Fleet.VehicleSets.md#id) | guid |  
-| [Name](Applications.Fleet.VehicleSets.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Name of the vehicle set (Multilanguage). `Required` `Filter(eq;like)` 
+| [Name](Applications.Fleet.VehicleSets.md#name) | [MultilanguageString (128)](../data-types.md#multilanguagestring) | Name of the vehicle set (Multilanguage). `Required` `Filter(eq;like)` 
 | [ObjectVersion](Applications.Fleet.VehicleSets.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 
 ## References
@@ -79,7 +79,7 @@ _Default Value_: **NewGuid**
 
 Name of the vehicle set (Multilanguage). `Required` `Filter(eq;like)`
 
-_Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
+_Type_: **[MultilanguageString (128)](../data-types.md#multilanguagestring)**  
 _Category_: **System**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  

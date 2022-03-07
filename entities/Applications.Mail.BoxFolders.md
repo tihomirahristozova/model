@@ -28,7 +28,7 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [DisplayText](Applications.Mail.BoxFolders.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
-| [FolderName](Applications.Mail.BoxFolders.md#foldername) | [MultilanguageString](../data-types.md#multilanguagestring) | Multi-language folder name. `Required` `Filter(eq;like)` 
+| [FolderName](Applications.Mail.BoxFolders.md#foldername) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Multi-language folder name. `Required` `Filter(eq;like)` 
 | [Id](Applications.Mail.BoxFolders.md#id) | guid |  
 | [ObjectVersion](Applications.Mail.BoxFolders.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 | [ServerFolderID](Applications.Mail.BoxFolders.md#serverfolderid) | string (256) __nullable__ | ID of the folder on the mail server in the format of the mail server. `Filter(eq)` 
@@ -64,7 +64,7 @@ _Supports Order By_: ****
 
 Multi-language folder name. `Required` `Filter(eq;like)`
 
-_Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
+_Type_: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 _Category_: **System**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  

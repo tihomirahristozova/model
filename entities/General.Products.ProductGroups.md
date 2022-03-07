@@ -39,7 +39,7 @@ Aggregate Tree
 | [DisplayText](General.Products.ProductGroups.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [FullPath](General.Products.ProductGroups.md#fullpath) | string (254) | Full tree path in the form /parent/.../leaf/. Contains the group names. `Required` `Default("")` `Filter(eq;like)` `ORD` 
 | [Id](General.Products.ProductGroups.md#id) | guid |  
-| [Name](General.Products.ProductGroups.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Group name should be unique among the other groups within the same parent. `Required` `Filter(eq;like)` 
+| [Name](General.Products.ProductGroups.md#name) | [MultilanguageString (180)](../data-types.md#multilanguagestring) | Group name should be unique among the other groups within the same parent. `Required` `Filter(eq;like)` 
 | [NextPartNumber](General.Products.ProductGroups.md#nextpartnumber) | string (16) __nullable__ | Contains the next part number to be auto-assigned to parts, created in the group or sub-groups. 
 | [NextSerialNumber](General.Products.ProductGroups.md#nextserialnumber) | string (40) __nullable__ | When not null, specifies the next serial number, that should be assigned to new produced items. `Filter(eq;like)` 
 | [Notes](General.Products.ProductGroups.md#notes) | string (254) __nullable__ | User notes for the item group. 
@@ -47,8 +47,8 @@ Aggregate Tree
 | [Parent](General.Products.ProductGroups.md#parent) | string (254) | Full tree path of the parent group in the form /parent/.../leaf/. Contains the group names. `Required` `Default("/")` `Filter(eq)` `ORD` 
 | [Picture](General.Products.ProductGroups.md#picture) | byte[] __nullable__ | The picture of the product group. 
 | [PictureLastUpdateTime](General.Products.ProductGroups.md#picturelastupdatetime) | datetime __nullable__ | Last update time of the Picture. `Filter(ge;le)` `ReadOnly` 
-| [ProductDescriptionMask](General.Products.ProductGroups.md#productdescriptionmask) | [MultilanguageString](../data-types.md#multilanguagestring) __nullable__ | When not null specifies mask for new product descriptions for this group and its sub-groups. The mask substitutes {0}..{n} with the appropriate custom attributes. 
-| [ProductNameMask](General.Products.ProductGroups.md#productnamemask) | [MultilanguageString](../data-types.md#multilanguagestring) __nullable__ | When not null specifies mask for new product names for this group and its sub-groups. The mask substitutes {0}..{n} with the appropriate custom attributes. 
+| [ProductDescriptionMask](General.Products.ProductGroups.md#productdescriptionmask) | [MultilanguageString (1000)](../data-types.md#multilanguagestring) __nullable__ | When not null specifies mask for new product descriptions for this group and its sub-groups. The mask substitutes {0}..{n} with the appropriate custom attributes. 
+| [ProductNameMask](General.Products.ProductGroups.md#productnamemask) | [MultilanguageString (1000)](../data-types.md#multilanguagestring) __nullable__ | When not null specifies mask for new product names for this group and its sub-groups. The mask substitutes {0}..{n} with the appropriate custom attributes. 
 | [UseLots](General.Products.ProductGroups.md#uselots) | [UseLots](General.Products.ProductGroups.md#uselots) __nullable__ | Specifies whether for the products from this group and its sub-groups the use of lots in store documents is required or is unallowed or is allowed while not required. 
 
 ## References
@@ -154,7 +154,7 @@ _Default Value_: **NewGuid**
 
 Group name should be unique among the other groups within the same parent. `Required` `Filter(eq;like)`
 
-_Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
+_Type_: **[MultilanguageString (180)](../data-types.md#multilanguagestring)**  
 _Category_: **System**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
@@ -232,7 +232,7 @@ _Supports Order By_: **False**
 
 When not null specifies mask for new product descriptions for this group and its sub-groups. The mask substitutes {0}..{n} with the appropriate custom attributes.
 
-_Type_: **[MultilanguageString](../data-types.md#multilanguagestring) __nullable__**  
+_Type_: **[MultilanguageString (1000)](../data-types.md#multilanguagestring) __nullable__**  
 _Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
@@ -241,7 +241,7 @@ _Supports Order By_: **False**
 
 When not null specifies mask for new product names for this group and its sub-groups. The mask substitutes {0}..{n} with the appropriate custom attributes.
 
-_Type_: **[MultilanguageString](../data-types.md#multilanguagestring) __nullable__**  
+_Type_: **[MultilanguageString (1000)](../data-types.md#multilanguagestring) __nullable__**  
 _Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  

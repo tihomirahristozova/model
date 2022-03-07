@@ -43,7 +43,7 @@ Aggregate Tree
 | [ConditionToDate](Crm.Marketing.BonusPrograms.md#conditiontodate) | datetime __nullable__ | Ending date (inclusive) of the bonus. null means that there is no ending date restriction. `Filter(eq;ge;le)` 
 | [DisplayText](Crm.Marketing.BonusPrograms.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [Id](Crm.Marketing.BonusPrograms.md#id) | guid |  
-| [Name](Crm.Marketing.BonusPrograms.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | The name of the bonus program. `Required` `Filter(eq;like)` 
+| [Name](Crm.Marketing.BonusPrograms.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | The name of the bonus program. `Required` `Filter(eq;like)` 
 | [ObjectVersion](Crm.Marketing.BonusPrograms.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 | [Priority](Crm.Marketing.BonusPrograms.md#priority) | [Priority](Crm.Marketing.BonusPrograms.md#priority) | Priority (1-5) of the bonus program comparative to the other bonus programs. 1 is the lowest priority. `Required` `Default(2)` `Filter(multi eq)` 
 
@@ -242,7 +242,7 @@ _Default Value_: **NewGuid**
 
 The name of the bonus program. `Required` `Filter(eq;like)`
 
-_Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
+_Type_: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 _Category_: **System**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  

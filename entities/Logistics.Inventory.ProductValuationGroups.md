@@ -32,7 +32,7 @@ Aggregate Tree
 | [Id](Logistics.Inventory.ProductValuationGroups.md#id) | guid |  
 | [ObjectVersion](Logistics.Inventory.ProductValuationGroups.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 | [ValuationGroupCode](Logistics.Inventory.ProductValuationGroups.md#valuationgroupcode) | string (64) | The unique code of the product valuation group. `Required` `Filter(eq;like)` `ORD` 
-| [ValuationGroupName](Logistics.Inventory.ProductValuationGroups.md#valuationgroupname) | [MultilanguageString](../data-types.md#multilanguagestring) | The name of the product valuation group. `Required` `Filter(eq;like)` 
+| [ValuationGroupName](Logistics.Inventory.ProductValuationGroups.md#valuationgroupname) | [MultilanguageString (128)](../data-types.md#multilanguagestring) | The name of the product valuation group. `Required` `Filter(eq;like)` 
 
 
 ## Attribute Details
@@ -88,7 +88,7 @@ _Maximum Length_: **64**
 
 The name of the product valuation group. `Required` `Filter(eq;like)`
 
-_Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
+_Type_: **[MultilanguageString (128)](../data-types.md#multilanguagestring)**  
 _Category_: **System**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  

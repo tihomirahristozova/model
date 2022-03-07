@@ -31,7 +31,7 @@ Aggregate Tree
 | [Code](Finance.Excise.ExciseProductCategories.md#code) | string (32) | For EU, the product category code is a single character - B,E,I,S,T or W. `Required` `Filter(multi eq;like)` 
 | [DisplayText](Finance.Excise.ExciseProductCategories.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [Id](Finance.Excise.ExciseProductCategories.md#id) | guid |  
-| [Name](Finance.Excise.ExciseProductCategories.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Multilanguage String. `Required` `Filter(like)` 
+| [Name](Finance.Excise.ExciseProductCategories.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Multilanguage String. `Required` `Filter(like)` 
 | [ObjectVersion](Finance.Excise.ExciseProductCategories.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 
 
@@ -88,7 +88,7 @@ _Default Value_: **NewGuid**
 
 Multilanguage String. `Required` `Filter(like)`
 
-_Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
+_Type_: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 _Category_: **System**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  

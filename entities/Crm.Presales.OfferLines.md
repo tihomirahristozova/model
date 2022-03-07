@@ -37,7 +37,7 @@ Aggregate Root:
 | [LineStandardDiscount<br />Percent](Crm.Presales.OfferLines.md#linestandarddiscountpercent) | decimal (7, 6) | The discount percentage, applied through the standard discount policy. `Required` `Default(0)` 
 | [Notes](Crm.Presales.OfferLines.md#notes) | string (max) __nullable__ | Notes for this OfferLine. 
 | [ObjectVersion](Crm.Presales.OfferLines.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [ProductDescription](Crm.Presales.OfferLines.md#productdescription) | [MultilanguageString](../data-types.md#multilanguagestring) | The description of the offered product. Initially copied from the name of the offered product. `Required` `Filter(like)` 
+| [ProductDescription](Crm.Presales.OfferLines.md#productdescription) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | The description of the offered product. Initially copied from the name of the offered product. `Required` `Filter(like)` 
 | [Quantity](Crm.Presales.OfferLines.md#quantity) | [Quantity (12, 3)](../data-types.md#quantity) | Quantity offered. `Unit: QuantityUnit` `Required` `Default(1)` 
 | [QuantityBase](Crm.Presales.OfferLines.md#quantitybase) | [Quantity (12, 3)](../data-types.md#quantity) | The equivalent of Quantity in the base measurement unit of the Product. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` 
 | [RequiredDeliveryDate](Crm.Presales.OfferLines.md#requireddeliverydate) | date __nullable__ | Date, when the delivery is required. Alternative to Delivery Term Days. When null, Delivery Term Days is used. 
@@ -196,7 +196,7 @@ _Supports Order By_: ****
 
 The description of the offered product. Initially copied from the name of the offered product. `Required` `Filter(like)`
 
-_Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
+_Type_: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 _Category_: **System**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  

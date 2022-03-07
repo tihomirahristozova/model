@@ -29,7 +29,7 @@ Aggregate Tree
 | [Id](Finance.Payments.PaymentReasons.md#id) | guid |  
 | [IsActive](Finance.Payments.PaymentReasons.md#isactive) | boolean | Specifies whether the payment reason is active and usable for choosing in new documents. `Required` `Default(true)` `Filter(eq)` 
 | [IsSystem](Finance.Payments.PaymentReasons.md#issystem) | boolean | Specifies whether the payment reason is defined by the system. The system defined records are created by the system and are read-only for the user. `Required` `Default(false)` `Filter(eq)` `ReadOnly` 
-| [Name](Finance.Payments.PaymentReasons.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | The name of this PaymentReason. `Required` `Filter(eq;like)` `ORD` 
+| [Name](Finance.Payments.PaymentReasons.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | The name of this PaymentReason. `Required` `Filter(eq;like)` `ORD` 
 | [ObjectVersion](Finance.Payments.PaymentReasons.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 
 
@@ -76,7 +76,7 @@ _Default Value_: **False**
 
 The name of this PaymentReason. `Required` `Filter(eq;like)` `ORD`
 
-_Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
+_Type_: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 _Indexed_: **True**  
 _Category_: **System**  
 _Supported Filters_: **Equals, Like**  

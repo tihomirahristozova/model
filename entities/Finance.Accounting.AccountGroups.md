@@ -27,12 +27,12 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Description](Finance.Accounting.AccountGroups.md#description) | [MultilanguageString](../data-types.md#multilanguagestring) __nullable__ | The description of this AccountGroup. 
+| [Description](Finance.Accounting.AccountGroups.md#description) | [MultilanguageString (254)](../data-types.md#multilanguagestring) __nullable__ | The description of this AccountGroup. 
 | [Discontinued](Finance.Accounting.AccountGroups.md#discontinued) | boolean | True means that the account group won't be used any more and should not appear in combo boxes. `Required` `Default(false)` `Filter(eq)` 
 | [DisplayText](Finance.Accounting.AccountGroups.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [FullPath](Finance.Accounting.AccountGroups.md#fullpath) | string (256) __nullable__ | Full path to the group. Contains delimited list of group numbers of parent groups. `Filter(like)` 
 | [Id](Finance.Accounting.AccountGroups.md#id) | guid |  
-| [Name](Finance.Accounting.AccountGroups.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Account group name, required. Must be unique within the parent group. `Required` `Filter(like)` 
+| [Name](Finance.Accounting.AccountGroups.md#name) | [MultilanguageString (160)](../data-types.md#multilanguagestring) | Account group name, required. Must be unique within the parent group. `Required` `Filter(like)` 
 | [Number](Finance.Accounting.AccountGroups.md#number) | string (30) | Unique account group number. May contain characters, if required. `Required` `Filter(like)` `ORD` 
 | [ObjectVersion](Finance.Accounting.AccountGroups.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 
@@ -49,7 +49,7 @@ Aggregate Tree
 
 The description of this AccountGroup.
 
-_Type_: **[MultilanguageString](../data-types.md#multilanguagestring) __nullable__**  
+_Type_: **[MultilanguageString (254)](../data-types.md#multilanguagestring) __nullable__**  
 _Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
@@ -95,7 +95,7 @@ _Default Value_: **NewGuid**
 
 Account group name, required. Must be unique within the parent group. `Required` `Filter(like)`
 
-_Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
+_Type_: **[MultilanguageString (160)](../data-types.md#multilanguagestring)**  
 _Category_: **System**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  

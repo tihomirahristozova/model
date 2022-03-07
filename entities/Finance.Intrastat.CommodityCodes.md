@@ -26,7 +26,7 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [CommodityCodeField](Finance.Intrastat.CommodityCodes.md#commoditycodefield) | string (8) | Product code from the Intrastat Combined nomenclature. `Required` `Filter(eq;like)` `ORD` 
-| [Description](Finance.Intrastat.CommodityCodes.md#description) | [MultilanguageString](../data-types.md#multilanguagestring) | Description of the product code from the Intrastat Combined nomenclature. `Required` `Filter(like)` 
+| [Description](Finance.Intrastat.CommodityCodes.md#description) | [MultilanguageString (4000)](../data-types.md#multilanguagestring) | Description of the product code from the Intrastat Combined nomenclature. `Required` `Filter(like)` 
 | [DisplayText](Finance.Intrastat.CommodityCodes.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [ExciseAlcoholicStrength](Finance.Intrastat.CommodityCodes.md#excisealcoholicstrength) | decimal (5, 2) __nullable__ | Specifies the alcoholic strength for excise products (if applicable). `Introduced in version 21.1.3.44` 
 | [ExciseProductCode](Finance.Intrastat.CommodityCodes.md#exciseproductcode) | string (20) __nullable__ | The code of the product for excise purposes (if applicable). A.k.a. APCode. `Introduced in version 21.1.3.44` 
@@ -54,7 +54,7 @@ _Maximum Length_: **8**
 
 Description of the product code from the Intrastat Combined nomenclature. `Required` `Filter(like)`
 
-_Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
+_Type_: **[MultilanguageString (4000)](../data-types.md#multilanguagestring)**  
 _Category_: **System**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  

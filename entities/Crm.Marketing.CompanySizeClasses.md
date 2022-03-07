@@ -32,7 +32,7 @@ Aggregate Tree
 | [FromEmployees](Crm.Marketing.CompanySizeClasses.md#fromemployees) | int32 __nullable__ | Minimal number of employees for this size class. null if this is not relevant to this size class. `Filter(eq)` 
 | [FromRevenue](Crm.Marketing.CompanySizeClasses.md#fromrevenue) | decimal (15, 0) __nullable__ | Minimal revenue for this size class. Currency is Revenue Currency. null if this is not relevant to this size class. `Filter(eq)` 
 | [Id](Crm.Marketing.CompanySizeClasses.md#id) | guid |  
-| [Name](Crm.Marketing.CompanySizeClasses.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Company size class name (multi-language). `Required` `Filter(eq;like)` 
+| [Name](Crm.Marketing.CompanySizeClasses.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Company size class name (multi-language). `Required` `Filter(eq;like)` 
 | [Notes](Crm.Marketing.CompanySizeClasses.md#notes) | string (max) __nullable__ | Notes for this CompanySizeClass. 
 | [ObjectVersion](Crm.Marketing.CompanySizeClasses.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 | [ToEmployees](Crm.Marketing.CompanySizeClasses.md#toemployees) | int32 __nullable__ | Maximum number of employees for this size class. null if this is not relevant to this size class. `Filter(eq)` 
@@ -97,7 +97,7 @@ _Default Value_: **NewGuid**
 
 Company size class name (multi-language). `Required` `Filter(eq;like)`
 
-_Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
+_Type_: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 _Category_: **System**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  

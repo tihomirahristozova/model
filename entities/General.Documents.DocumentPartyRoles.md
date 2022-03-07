@@ -30,7 +30,7 @@ Aggregate Tree
 | [Code](General.Documents.DocumentPartyRoles.md#code) | string (32) | Code. `Required` `Filter(eq;like)` `ORD` 
 | [DisplayText](General.Documents.DocumentPartyRoles.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [Id](General.Documents.DocumentPartyRoles.md#id) | guid |  
-| [Name](General.Documents.DocumentPartyRoles.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Party role name (multi-language). `Required` `Filter(eq;like)` 
+| [Name](General.Documents.DocumentPartyRoles.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Party role name (multi-language). `Required` `Filter(eq;like)` 
 | [Notes](General.Documents.DocumentPartyRoles.md#notes) | string (max) __nullable__ | Notes for this DocumentPartyRole. 
 | [ObjectVersion](General.Documents.DocumentPartyRoles.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 
@@ -69,7 +69,7 @@ _Default Value_: **NewGuid**
 
 Party role name (multi-language). `Required` `Filter(eq;like)`
 
-_Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
+_Type_: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 _Category_: **System**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  

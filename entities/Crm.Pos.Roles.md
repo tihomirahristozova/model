@@ -33,7 +33,7 @@ Aggregate Tree
 | [Id](Crm.Pos.Roles.md#id) | guid |  
 | [ObjectVersion](Crm.Pos.Roles.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 | [PosRoleCode](Crm.Pos.Roles.md#posrolecode) | string (16) | Unique role code. `Required` `Filter(multi eq;like)` `ORD` 
-| [PosRoleName](Crm.Pos.Roles.md#posrolename) | [MultilanguageString](../data-types.md#multilanguagestring) | Multi-language name of the POS role. `Required` `Filter(multi eq;like)` 
+| [PosRoleName](Crm.Pos.Roles.md#posrolename) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Multi-language name of the POS role. `Required` `Filter(multi eq;like)` 
 
 
 ## Attribute Details
@@ -99,7 +99,7 @@ _Maximum Length_: **16**
 
 Multi-language name of the POS role. `Required` `Filter(multi eq;like)`
 
-_Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
+_Type_: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 _Category_: **System**  
 _Supported Filters_: **Equals, Like, EqualsIn**  
 _Supports Order By_: **False**  

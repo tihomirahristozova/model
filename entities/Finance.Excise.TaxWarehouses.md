@@ -30,7 +30,7 @@ Aggregate Tree
 | [CustomsOffice](Finance.Excise.TaxWarehouses.md#customsoffice) | string (32) __nullable__ | The customs office to which the warehouse is headed. `Filter(like)` `Introduced in version 22.1.4.93` 
 | [DisplayText](Finance.Excise.TaxWarehouses.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [Id](Finance.Excise.TaxWarehouses.md#id) | guid |  
-| [Name](Finance.Excise.TaxWarehouses.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Tax Warehouse Name (Multilanguage). `Required` `Filter(like)` `Introduced in version 21.1.3.93` 
+| [Name](Finance.Excise.TaxWarehouses.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Tax Warehouse Name (Multilanguage). `Required` `Filter(like)` `Introduced in version 21.1.3.93` 
 | [ObjectVersion](Finance.Excise.TaxWarehouses.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 | [TaxWarehouseExciseNumber](Finance.Excise.TaxWarehouses.md#taxwarehouseexcisenumber) | string (32) | The excise identification number of the tax warehouse, issued by the competent authorities. `Required` `Default("-")` `Introduced in version 21.1.3.87` 
 | [TraderExciseNumber](Finance.Excise.TaxWarehouses.md#traderexcisenumber) | string (32) | The excise identification number of the owner of the Tax Warehouse. `Required` `Default("-")` `Introduced in version 21.1.3.87` 
@@ -75,7 +75,7 @@ _Default Value_: **NewGuid**
 
 Tax Warehouse Name (Multilanguage). `Required` `Filter(like)` `Introduced in version 21.1.3.93`
 
-_Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
+_Type_: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 _Category_: **System**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  

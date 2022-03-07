@@ -29,7 +29,7 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [ClientID](Systems.Security.DomainProviders.md#clientid) | string (254) __nullable__ | This is the Client_ID of our registration within the provider. 
 | [ClientSecret](Systems.Security.DomainProviders.md#clientsecret) | string (254) __nullable__ | This is the password, which we, as a client app, use to access the authentication provider. 
-| [DisplayName](Systems.Security.DomainProviders.md#displayname) | [MultilanguageString](../data-types.md#multilanguagestring) __nullable__ | Specifies the (multi-language) display name of the button in the login form. Especially useful for multi-tenant providers. 
+| [DisplayName](Systems.Security.DomainProviders.md#displayname) | [MultilanguageString (254)](../data-types.md#multilanguagestring) __nullable__ | Specifies the (multi-language) display name of the button in the login form. Especially useful for multi-tenant providers. 
 | [DisplayText](Systems.Security.DomainProviders.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [Id](Systems.Security.DomainProviders.md#id) | guid |  
 | [IsActive](Systems.Security.DomainProviders.md#isactive) | boolean | Specifies whether the provider is currently active for the domain. `Required` `Default(true)` `Filter(eq)` 
@@ -71,7 +71,7 @@ _Maximum Length_: **254**
 
 Specifies the (multi-language) display name of the button in the login form. Especially useful for multi-tenant providers.
 
-_Type_: **[MultilanguageString](../data-types.md#multilanguagestring) __nullable__**  
+_Type_: **[MultilanguageString (254)](../data-types.md#multilanguagestring) __nullable__**  
 _Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  

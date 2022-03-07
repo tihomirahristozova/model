@@ -33,7 +33,7 @@ Aggregate Root:
 | [DisplayText](Finance.Accounting.FinancialStatementNodes.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [FullPath](Finance.Accounting.FinancialStatementNodes.md#fullpath) | string (25) __nullable__ | Full identification path of the financial statement node. `Filter(like)` `ReadOnly` 
 | [Id](Finance.Accounting.FinancialStatementNodes.md#id) | guid |  
-| [Name](Finance.Accounting.FinancialStatementNodes.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Name of the financial statement node. `Required` `Filter(like)` 
+| [Name](Finance.Accounting.FinancialStatementNodes.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Name of the financial statement node. `Required` `Filter(like)` 
 | [ObjectVersion](Finance.Accounting.FinancialStatementNodes.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 | [ParentFullPath](Finance.Accounting.FinancialStatementNodes.md#parentfullpath) | string (25) __nullable__ | Parent financial statement node specified through its full identification path. `Filter(like)` 
 
@@ -93,7 +93,7 @@ _Default Value_: **NewGuid**
 
 Name of the financial statement node. `Required` `Filter(like)`
 
-_Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
+_Type_: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 _Category_: **System**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  

@@ -30,7 +30,7 @@ Aggregate Tree
 | [DisplayText](Systems.Workflow.Processes.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [Id](Systems.Workflow.Processes.md#id) | guid |  
 | [IsLandscape](Systems.Workflow.Processes.md#islandscape) | boolean | Specifies whether the process diagram is intended to be viewed in landscape mode. `Required` `Default(true)` 
-| [Name](Systems.Workflow.Processes.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | The name of this Process. `Required` `Filter(eq;like)` 
+| [Name](Systems.Workflow.Processes.md#name) | [MultilanguageString (128)](../data-types.md#multilanguagestring) | The name of this Process. `Required` `Filter(eq;like)` 
 | [Notes](Systems.Workflow.Processes.md#notes) | string (2000) __nullable__ | Notes for this Process. 
 | [ObjectVersion](Systems.Workflow.Processes.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 | [SchemaFormat](Systems.Workflow.Processes.md#schemaformat) | string (1) | Application specific format of the Schema Layout. `Required` `Default("D")` 
@@ -94,7 +94,7 @@ _Default Value_: **True**
 
 The name of this Process. `Required` `Filter(eq;like)`
 
-_Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
+_Type_: **[MultilanguageString (128)](../data-types.md#multilanguagestring)**  
 _Category_: **System**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  

@@ -25,7 +25,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Description](Logistics.Inventory.Lots.md#description) | [MultilanguageString](../data-types.md#multilanguagestring) __nullable__ | The description of this Lot. 
+| [Description](Logistics.Inventory.Lots.md#description) | [MultilanguageString (254)](../data-types.md#multilanguagestring) __nullable__ | The description of this Lot. 
 | [DisplayText](Logistics.Inventory.Lots.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [ExpiryDate](Logistics.Inventory.Lots.md#expirydate) | datetime __nullable__ | Expiry date for this lot. 
 | [Id](Logistics.Inventory.Lots.md#id) | guid |  
@@ -55,7 +55,7 @@ Aggregate Tree
 
 The description of this Lot.
 
-_Type_: **[MultilanguageString](../data-types.md#multilanguagestring) __nullable__**  
+_Type_: **[MultilanguageString (254)](../data-types.md#multilanguagestring) __nullable__**  
 _Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  

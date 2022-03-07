@@ -32,7 +32,7 @@ Aggregate Tree
 | [Code](Finance.Vat.BoxTypes.md#code) | string (32) | The unique code of the BoxType. `Required` `Filter(multi eq)` 
 | [DisplayText](Finance.Vat.BoxTypes.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [Id](Finance.Vat.BoxTypes.md#id) | guid |  
-| [Name](Finance.Vat.BoxTypes.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | The name for this box type. (Miltilanguage string). `Required` `Filter(like)` 
+| [Name](Finance.Vat.BoxTypes.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | The name for this box type. (Miltilanguage string). `Required` `Filter(like)` 
 | [Notes](Finance.Vat.BoxTypes.md#notes) | string (max) __nullable__ | Notes for this BoxType. 
 | [ObjectVersion](Finance.Vat.BoxTypes.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 
@@ -104,7 +104,7 @@ _Default Value_: **NewGuid**
 
 The name for this box type. (Miltilanguage string). `Required` `Filter(like)`
 
-_Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
+_Type_: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 _Category_: **System**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  

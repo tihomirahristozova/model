@@ -32,7 +32,7 @@ Aggregate Tree
 | [Code](Finance.Accounting.FinancialStatements.md#code) | string (3) | Unique identifying code of the financial statement. `Required` `Filter(eq;like)` `ORD` 
 | [DisplayText](Finance.Accounting.FinancialStatements.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [Id](Finance.Accounting.FinancialStatements.md#id) | guid |  
-| [Name](Finance.Accounting.FinancialStatements.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Name of the financial statement. `Required` `Filter(eq;like)` 
+| [Name](Finance.Accounting.FinancialStatements.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Name of the financial statement. `Required` `Filter(eq;like)` 
 | [ObjectVersion](Finance.Accounting.FinancialStatements.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 
 ## Child Collections
@@ -76,7 +76,7 @@ _Default Value_: **NewGuid**
 
 Name of the financial statement. `Required` `Filter(eq;like)`
 
-_Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
+_Type_: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 _Category_: **System**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  

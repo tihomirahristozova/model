@@ -33,7 +33,7 @@ Aggregate Tree
 | [Code](Finance.Excise.ExciseStampOperationTypes.md#code) | string (32) | The unique code of the ExciseStampOperationType. `Required` `Filter(multi eq)` 
 | [DisplayText](Finance.Excise.ExciseStampOperationTypes.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [Id](Finance.Excise.ExciseStampOperationTypes.md#id) | guid |  
-| [Name](Finance.Excise.ExciseStampOperationTypes.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Name of operation (multi-language string). `Required` `Filter(like)` 
+| [Name](Finance.Excise.ExciseStampOperationTypes.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Name of operation (multi-language string). `Required` `Filter(like)` 
 | [ObjectVersion](Finance.Excise.ExciseStampOperationTypes.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 
 
@@ -127,7 +127,7 @@ _Default Value_: **NewGuid**
 
 Name of operation (multi-language string). `Required` `Filter(like)`
 
-_Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
+_Type_: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 _Category_: **System**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  

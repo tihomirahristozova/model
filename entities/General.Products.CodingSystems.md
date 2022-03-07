@@ -29,7 +29,7 @@ Aggregate Tree
 | [DisplayText](General.Products.CodingSystems.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [Id](General.Products.CodingSystems.md#id) | guid |  
 | [IsUnique](General.Products.CodingSystems.md#isunique) | boolean | True when the coding system can contain only unique product codes. false - duplicate product codes are allowed. `Required` `Default(true)` `Filter(eq)` 
-| [Name](General.Products.CodingSystems.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | The name of this CodingSystem. `Required` `Filter(eq;like)` 
+| [Name](General.Products.CodingSystems.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | The name of this CodingSystem. `Required` `Filter(eq;like)` 
 | [ObjectVersion](General.Products.CodingSystems.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 
 ## References
@@ -82,7 +82,7 @@ _Default Value_: **True**
 
 The name of this CodingSystem. `Required` `Filter(eq;like)`
 
-_Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
+_Type_: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 _Category_: **System**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  

@@ -35,7 +35,7 @@ Aggregate Tree
 | [ExciseAmountPerStamp](Finance.Excise.ExciseStampTypes.md#exciseamountperstamp) | decimal (5, 2) __nullable__ | The excise duty, which is charged with one excise label. `Default(0)` 
 | [Id](Finance.Excise.ExciseStampTypes.md#id) | guid |  
 | [IsActive](Finance.Excise.ExciseStampTypes.md#isactive) | boolean | Indicates whether this excise stamp type is active and usable for choosing in new documents. `Required` `Default(true)` 
-| [Name](Finance.Excise.ExciseStampTypes.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | The name of this ExciseStampType. `Required` `Filter(like)` 
+| [Name](Finance.Excise.ExciseStampTypes.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | The name of this ExciseStampType. `Required` `Filter(like)` 
 | [Notes](Finance.Excise.ExciseStampTypes.md#notes) | string (max) __nullable__ | Notes for this ExciseStampType. 
 | [ObjectVersion](Finance.Excise.ExciseStampTypes.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 
@@ -140,7 +140,7 @@ _Default Value_: **True**
 
 The name of this ExciseStampType. `Required` `Filter(like)`
 
-_Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
+_Type_: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 _Category_: **System**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  

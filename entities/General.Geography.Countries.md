@@ -31,7 +31,7 @@ Aggregate Tree
 | [DisplayText](General.Geography.Countries.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [Id](General.Geography.Countries.md#id) | guid |  
 | [IntrastatCode](General.Geography.Countries.md#intrastatcode) | string (2) __nullable__ | This code is used when creating the Intrastat Declaration. If the field is empty, then the value from the 'Code' field is used. `Introduced in version 20.1` 
-| [Name](General.Geography.Countries.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Name of the country. `Required` `Filter(like)` 
+| [Name](General.Geography.Countries.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Name of the country. `Required` `Filter(like)` 
 | [ObjectVersion](General.Geography.Countries.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 
 
@@ -79,7 +79,7 @@ _Maximum Length_: **2**
 
 Name of the country. `Required` `Filter(like)`
 
-_Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
+_Type_: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 _Category_: **System**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  

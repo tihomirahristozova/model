@@ -30,7 +30,7 @@ Aggregate Tree
 | [Code](General.Products.VariantColors.md#code) | string (8) | Unique code of the color. Used to generate parts of bar-codes and in other coding schemes. `Required` `Filter(eq;like)` `ORD` 
 | [DisplayText](General.Products.VariantColors.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [Id](General.Products.VariantColors.md#id) | guid |  
-| [Name](General.Products.VariantColors.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | The name of this VariantColor. `Required` `Filter(eq;like)` `ORD` 
+| [Name](General.Products.VariantColors.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | The name of this VariantColor. `Required` `Filter(eq;like)` `ORD` 
 | [ObjectVersion](General.Products.VariantColors.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 
 
@@ -68,7 +68,7 @@ _Default Value_: **NewGuid**
 
 The name of this VariantColor. `Required` `Filter(eq;like)` `ORD`
 
-_Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
+_Type_: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 _Indexed_: **True**  
 _Category_: **System**  
 _Supported Filters_: **Equals, Like**  

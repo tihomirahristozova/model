@@ -27,7 +27,7 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [AllowLocalAccounts](Systems.Security.Domains.md#allowlocalaccounts) | boolean | Specifies whether users can have local accounts with locally stored passwords in the DB (not recommended). `Required` `Default(true)` 
-| [Description](Systems.Security.Domains.md#description) | [MultilanguageString](../data-types.md#multilanguagestring) __nullable__ | Multi-language description of the domain. 
+| [Description](Systems.Security.Domains.md#description) | [MultilanguageString (256)](../data-types.md#multilanguagestring) __nullable__ | Multi-language description of the domain. 
 | [DisplayText](Systems.Security.Domains.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [Id](Systems.Security.Domains.md#id) | guid |  
 | [IsDefault](Systems.Security.Domains.md#isdefault) | boolean | Specifies whether this is the default domain for the database. `Required` `Default(true)` `Filter(eq)` 
@@ -57,7 +57,7 @@ _Default Value_: **True**
 
 Multi-language description of the domain.
 
-_Type_: **[MultilanguageString](../data-types.md#multilanguagestring) __nullable__**  
+_Type_: **[MultilanguageString (256)](../data-types.md#multilanguagestring) __nullable__**  
 _Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  

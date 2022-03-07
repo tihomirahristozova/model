@@ -30,7 +30,7 @@ Aggregate Tree
 | [Code](Applications.AssetManagement.ManagedAssetGroups.md#code) | string (16) | Unique (within all groups) code of the asset group. `Required` `Filter(multi eq;like)` `ORD` 
 | [DisplayText](Applications.AssetManagement.ManagedAssetGroups.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [Id](Applications.AssetManagement.ManagedAssetGroups.md#id) | guid |  
-| [Name](Applications.AssetManagement.ManagedAssetGroups.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Name of the asset group (multi-language). `Required` `Filter(eq;like)` 
+| [Name](Applications.AssetManagement.ManagedAssetGroups.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Name of the asset group (multi-language). `Required` `Filter(eq;like)` 
 | [Notes](Applications.AssetManagement.ManagedAssetGroups.md#notes) | string (max) __nullable__ | Notes for this ManagedAssetGroup. 
 | [ObjectVersion](Applications.AssetManagement.ManagedAssetGroups.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 
@@ -75,7 +75,7 @@ _Default Value_: **NewGuid**
 
 Name of the asset group (multi-language). `Required` `Filter(eq;like)`
 
-_Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
+_Type_: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 _Category_: **System**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  

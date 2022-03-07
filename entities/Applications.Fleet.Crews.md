@@ -30,7 +30,7 @@ Aggregate Root:
 | [Active](Applications.Fleet.Crews.md#active) | boolean | Is the crew active? true-active for choosing; false-otherwise. `Required` `Default(true)` `Filter(eq)` 
 | [DisplayText](Applications.Fleet.Crews.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [Id](Applications.Fleet.Crews.md#id) | guid |  
-| [Name](Applications.Fleet.Crews.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | The name of the crew (multilanguage). `Required` `Filter(eq;like)` 
+| [Name](Applications.Fleet.Crews.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | The name of the crew (multilanguage). `Required` `Filter(eq;like)` 
 | [ObjectVersion](Applications.Fleet.Crews.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 
 ## References
@@ -79,7 +79,7 @@ _Default Value_: **NewGuid**
 
 The name of the crew (multilanguage). `Required` `Filter(eq;like)`
 
-_Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
+_Type_: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 _Category_: **System**  
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  

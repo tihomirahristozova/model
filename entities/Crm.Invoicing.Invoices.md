@@ -64,7 +64,7 @@ Aggregate Tree
 | [ParentDocument<br />RelationshipType](Crm.Invoicing.Invoices.md#parentdocumentrelationshiptype) | [ParentDocument<br />RelationshipType](Crm.Invoicing.Invoices.md#parentdocumentrelationshiptype) __nullable__ | Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [PaymentDueDate](Crm.Invoicing.Invoices.md#paymentduedate) | datetime __nullable__ | When not null specifies due date for the payment. 
 | [PaymentDueStartDate](Crm.Invoicing.Invoices.md#paymentduestartdate) | datetime __nullable__ | The date when the payment becomes due for documents with one installment. 
-| [PaymentTypeDescription](Crm.Invoicing.Invoices.md#paymenttypedescription) | [MultilanguageString](../data-types.md#multilanguagestring) | Description of the payment type. Initially copied from the name of the Payment Type. `Required` 
+| [PaymentTypeDescription](Crm.Invoicing.Invoices.md#paymenttypedescription) | [MultilanguageString (20)](../data-types.md#multilanguagestring) | Description of the payment type. Initially copied from the name of the Payment Type. `Required` 
 | [PlanningOnly](Crm.Invoicing.Invoices.md#planningonly) | boolean | Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned). `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [ReadOnly](Crm.Invoicing.Invoices.md#readonly) | boolean | True - the document is read only; false - the document is not read only. `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [ReferenceDate](Crm.Invoicing.Invoices.md#referencedate) | datetime __nullable__ | The date to which this document refers, i.e. when the action really occurred. If null, Document_Date is taken. `Default(Today)` `Filter(ge;le)` (Inherited from [Documents](General.Documents.md)) 
@@ -467,7 +467,7 @@ _Front-End Recalc Expressions:_
 
 Description of the payment type. Initially copied from the name of the Payment Type. `Required`
 
-_Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
+_Type_: **[MultilanguageString (20)](../data-types.md#multilanguagestring)**  
 _Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  

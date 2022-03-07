@@ -32,7 +32,7 @@ Aggregate Tree
 | [DisplayText](Finance.Assets.Assets.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [Id](Finance.Assets.Assets.md#id) | guid |  
 | [IsActive](Finance.Assets.Assets.md#isactive) | boolean | Checked if the assets is active and can be used in documents. The inactive assets can be used only for reports. `Required` `Default(true)` `Filter(eq)` 
-| [Name](Finance.Assets.Assets.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | The name of this Asset. `Required` `Filter(like)` 
+| [Name](Finance.Assets.Assets.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | The name of this Asset. `Required` `Filter(like)` 
 | [Notes](Finance.Assets.Assets.md#notes) | string (254) __nullable__ | Notes for this Asset. 
 | [ObjectVersion](Finance.Assets.Assets.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 | [PurchaseDate](Finance.Assets.Assets.md#purchasedate) | datetime | Original purchase date of the asset. `Required` 
@@ -102,7 +102,7 @@ _Default Value_: **True**
 
 The name of this Asset. `Required` `Filter(like)`
 
-_Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
+_Type_: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 _Category_: **System**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  

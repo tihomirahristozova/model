@@ -28,7 +28,7 @@ Aggregate Tree
 | [DisplayText](Finance.Assets.ValuationModels.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [Id](Finance.Assets.ValuationModels.md#id) | guid |  
 | [IsSystem](Finance.Assets.ValuationModels.md#issystem) | boolean | Is_System is True for those valuation models that are managed by the system via update procedures and cannot be edited by the user. `Required` `Default(false)` `Filter(eq)` `ReadOnly` 
-| [Name](Finance.Assets.ValuationModels.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | The name of this ValuationModel. `Required` `Filter(like)` 
+| [Name](Finance.Assets.ValuationModels.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | The name of this ValuationModel. `Required` `Filter(like)` 
 | [ObjectVersion](Finance.Assets.ValuationModels.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 
 ## References
@@ -71,7 +71,7 @@ _Default Value_: **False**
 
 The name of this ValuationModel. `Required` `Filter(like)`
 
-_Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
+_Type_: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 _Category_: **System**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  

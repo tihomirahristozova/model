@@ -31,7 +31,7 @@ Aggregate Tree
 | [DisplayText](General.Geography.AdministrativeRegions.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [FullPath](General.Geography.AdministrativeRegions.md#fullpath) | string (254) __nullable__ | Full identification path of the current country territorial subdivision. `Filter(eq;like)` 
 | [Id](General.Geography.AdministrativeRegions.md#id) | guid |  
-| [Name](General.Geography.AdministrativeRegions.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Name of country territorial subdivision. `Required` `Filter(like)` 
+| [Name](General.Geography.AdministrativeRegions.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Name of country territorial subdivision. `Required` `Filter(like)` 
 | [ObjectVersion](General.Geography.AdministrativeRegions.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 | [ParentFullPath](General.Geography.AdministrativeRegions.md#parentfullpath) | string (254) __nullable__ | Parent region of the current territorial subdivision. `Filter(eq;like)` 
 | [ValidFrom](General.Geography.AdministrativeRegions.md#validfrom) | date __nullable__ | Start date of validity of this administrative division. null when the starting date is unknown in the past. `Filter(ge;le)` 
@@ -87,7 +87,7 @@ _Default Value_: **NewGuid**
 
 Name of country territorial subdivision. `Required` `Filter(like)`
 
-_Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
+_Type_: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 _Category_: **System**  
 _Supported Filters_: **Like**  
 _Supports Order By_: **False**  

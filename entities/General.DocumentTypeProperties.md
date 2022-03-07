@@ -28,7 +28,7 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [DefaultPropertyValue](General.DocumentTypeProperties.md#defaultpropertyvalue) | string (254) __nullable__ | The default value of the property when creating new documents. 
-| [DefaultProperty<br />ValueDescription](General.DocumentTypeProperties.md#defaultpropertyvaluedescription) | [MultilanguageString](../data-types.md#multilanguagestring) __nullable__ | Default description value of the property when creating new documents. 
+| [DefaultProperty<br />ValueDescription](General.DocumentTypeProperties.md#defaultpropertyvaluedescription) | [MultilanguageString (254)](../data-types.md#multilanguagestring) __nullable__ | Default description value of the property when creating new documents. 
 | [DefaultValueId](General.DocumentTypeProperties.md#defaultvalueid) | guid __nullable__ | Internal Id of the default value of the property. `Filter(multi eq)` 
 | [DisplayText](General.DocumentTypeProperties.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [Id](General.DocumentTypeProperties.md#id) | guid |  
@@ -63,7 +63,7 @@ _Maximum Length_: **254**
 
 Default description value of the property when creating new documents.
 
-_Type_: **[MultilanguageString](../data-types.md#multilanguagestring) __nullable__**  
+_Type_: **[MultilanguageString (254)](../data-types.md#multilanguagestring) __nullable__**  
 _Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  

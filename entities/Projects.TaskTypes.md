@@ -25,12 +25,12 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Description](Projects.TaskTypes.md#description) | [MultilanguageString](../data-types.md#multilanguagestring) __nullable__ | Multilanguage description of the task type. 
+| [Description](Projects.TaskTypes.md#description) | [MultilanguageString (2147483647)](../data-types.md#multilanguagestring) __nullable__ | Multilanguage description of the task type. 
 | [DisplayOrder](Projects.TaskTypes.md#displayorder) | int32 | Display order position of the task. Lowest numbers are shown first (on top). `Required` `Default(1)` 
 | [DisplayText](Projects.TaskTypes.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [Icon](Projects.TaskTypes.md#icon) | byte[] __nullable__ | Icon representing the task type. Preferrably 32x32 pixels. 
 | [Id](Projects.TaskTypes.md#id) | guid |  
-| [Name](Projects.TaskTypes.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | The multilanguage task type name. `Required` `Filter(multi eq;like)` 
+| [Name](Projects.TaskTypes.md#name) | [MultilanguageString (2147483647)](../data-types.md#multilanguagestring) | The multilanguage task type name. `Required` `Filter(multi eq;like)` 
 | [ObjectVersion](Projects.TaskTypes.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 
 ## References
@@ -46,7 +46,7 @@ Aggregate Tree
 
 Multilanguage description of the task type.
 
-_Type_: **[MultilanguageString](../data-types.md#multilanguagestring) __nullable__**  
+_Type_: **[MultilanguageString (2147483647)](../data-types.md#multilanguagestring) __nullable__**  
 _Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
@@ -91,7 +91,7 @@ _Default Value_: **NewGuid**
 
 The multilanguage task type name. `Required` `Filter(multi eq;like)`
 
-_Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
+_Type_: **[MultilanguageString (2147483647)](../data-types.md#multilanguagestring)**  
 _Category_: **System**  
 _Supported Filters_: **Equals, Like, EqualsIn**  
 _Supports Order By_: **False**  

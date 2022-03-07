@@ -38,7 +38,7 @@ Aggregate Tree
 | [HeaderHtml](General.ProductCatalogs.md#headerhtml) | string (max) __nullable__ | The header of the catalog in HTML format. Primarily used for web visualizations of the catalog. null specifies that there shouldn't be any user-defined header. 
 | [Id](General.ProductCatalogs.md#id) | guid |  
 | [Logo](General.ProductCatalogs.md#logo) | byte[] __nullable__ | The logo of the product catalog. Used for web and other visualization of the catalog. 
-| [Name](General.ProductCatalogs.md#name) | [MultilanguageString](../data-types.md#multilanguagestring) | Product catalog name (multilanguage). `Required` 
+| [Name](General.ProductCatalogs.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Product catalog name (multilanguage). `Required` 
 | [Notes](General.ProductCatalogs.md#notes) | string (max) __nullable__ | Notes for this ProductCatalog. 
 | [ObjectVersion](General.ProductCatalogs.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 
@@ -188,7 +188,7 @@ _Supports Order By_: **False**
 
 Product catalog name (multilanguage). `Required`
 
-_Type_: **[MultilanguageString](../data-types.md#multilanguagestring)**  
+_Type_: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 _Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
