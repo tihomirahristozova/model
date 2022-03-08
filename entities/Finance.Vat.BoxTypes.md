@@ -27,7 +27,6 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CalculatedAttributeName](Finance.Vat.BoxTypes.md#calculatedattributename) | string (128) __nullable__ | The name of the calculated attribute which will be used in the calculation of the amount of the current Box Type. Used when the value of the "Calculation Type" field is "Calculated Attribute". `Filter(eq;like)` `Introduced in version 22.1.5.90` 
 | [CalculationType](Finance.Vat.BoxTypes.md#calculationtype) | [CalculationType](Finance.Vat.BoxTypes.md#calculationtype) | Determines the source of amounts of the current Box Type. Sources can be the Vat Entries or the Calculated attribute from the VAT Declaration which is specified in the "Calculated Attribute Name" field. `Required` `Default("DT")` `Filter(multi eq)` `Introduced in version 22.1.5.90` 
 | [Code](Finance.Vat.BoxTypes.md#code) | string (32) | The unique code of the BoxType. `Required` `Filter(multi eq)` 
 | [DisplayText](Finance.Vat.BoxTypes.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
@@ -40,20 +39,11 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [CalculatedAttribute](Finance.Vat.BoxTypes.md#calculatedattribute) | [CalculatedAttributes](Systems.Bpm.CalculatedAttributes.md) (nullable) | The calculated attribute which will be used in the calculation of the amount of the current Box Type. Used when the value of the "Calculation Type" field is "Calculated Attribute". `Filter(multi eq)` `Introduced in version 22.1.5.97` |
 | [Country](Finance.Vat.BoxTypes.md#country) | [Countries](General.Geography.Countries.md) | The Country for which this type of box is declared. `Required` `Filter(multi eq)` |
 
 
 ## Attribute Details
-
-### CalculatedAttributeName
-
-The name of the calculated attribute which will be used in the calculation of the amount of the current Box Type. Used when the value of the "Calculation Type" field is "Calculated Attribute". `Filter(eq;like)` `Introduced in version 22.1.5.90`
-
-_Type_: **string (128) __nullable__**  
-_Category_: **System**  
-_Supported Filters_: **Equals, Like**  
-_Supports Order By_: **False**  
-_Maximum Length_: **128**  
 
 ### CalculationType
 
@@ -130,6 +120,14 @@ _Supports Order By_: ****
 
 
 ## Reference Details
+
+### CalculatedAttribute
+
+The calculated attribute which will be used in the calculation of the amount of the current Box Type. Used when the value of the "Calculation Type" field is "Calculated Attribute". `Filter(multi eq)` `Introduced in version 22.1.5.97`
+
+_Type_: **[CalculatedAttributes](Systems.Bpm.CalculatedAttributes.md) (nullable)**  
+_Category_: **System**  
+_Supported Filters_: **Equals, EqualsIn**  
 
 ### Country
 

@@ -103,9 +103,9 @@
 <td>The type of box in a VAT declaration.</td>
 </tr>
 <tr>
-<td><a href="#calculated_attribute_name">Calculated_Attribute_Name</a></td>
-<td><code>nvarchar(128)</code></td>
-<td>The name of the calculated attribute which will be used in the calculation of the amount of the current Box Type. Used when the value of the &quot;Calculation Type&quot; field is &quot;Calculated Attribute&quot;.</td>
+<td><a href="#calculated_attribute_id">Calculated_Attribute_Id</a></td>
+<td><code>uniqueidentifier</code></td>
+<td>The calculated attribute which will be used in the calculation of the amount of the current Box Type. Used when the value of the &quot;Calculation Type&quot; field is &quot;Calculated Attribute&quot;.</td>
 </tr>
 <tr>
 <td><a href="#calculation_type">Calculation_Type</a></td>
@@ -358,8 +358,8 @@
 </tr>
 </tbody>
 </table>
-<h3 id="calculated_attribute_name">Calculated_Attribute_Name</h3>
-<p>The name of the calculated attribute which will be used in the calculation of the amount of the current Box Type. Used when the value of the &quot;Calculation Type&quot; field is &quot;Calculated Attribute&quot;.</p>
+<h3 id="calculated_attribute_id">Calculated_Attribute_Id</h3>
+<p>The calculated attribute which will be used in the calculation of the amount of the current Box Type. Used when the value of the &quot;Calculation Type&quot; field is &quot;Calculated Attribute&quot;.</p>
 <table>
 <thead>
 <tr>
@@ -394,7 +394,7 @@
 </tr>
 <tr>
 <td>Max Length</td>
-<td>128</td>
+<td>-1</td>
 </tr>
 <tr>
 <td>Order</td>
@@ -421,6 +421,10 @@
 <td>no</td>
 </tr>
 <tr>
+<td>Referenced Table</td>
+<td><a href="Sys_Calculated_Attributes.html">Sys_Calculated_Attributes</a></td>
+</tr>
+<tr>
 <td>RTF</td>
 <td>no</td>
 </tr>
@@ -434,11 +438,11 @@
 </tr>
 <tr>
 <td>Supports EQUALS_IN</td>
-<td>no</td>
+<td>yes</td>
 </tr>
 <tr>
 <td>Type</td>
-<td>nvarchar(128) (Allows NULL)</td>
+<td>uniqueidentifier (Allows NULL)</td>
 </tr>
 <tr>
 <td>UI Memo Editor</td>
@@ -458,7 +462,7 @@
 </tr>
 </tbody>
 </table>
-<h4 id="calculated_attribute_name---supported-filters">Calculated_Attribute_Name - Supported Filters</h4>
+<h4 id="calculated_attribute_id---supported-filters">Calculated_Attribute_Id - Supported Filters</h4>
 <table>
 <thead>
 <tr>
@@ -473,12 +477,6 @@
 <td>Equals</td>
 <td><code>NULL</code></td>
 <td>yes</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Like</td>
-<td>None</td>
-<td>no</td>
 <td>no</td>
 </tr>
 </tbody>

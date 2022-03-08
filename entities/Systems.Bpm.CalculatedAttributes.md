@@ -30,7 +30,7 @@ Aggregate Tree
 | [DisplayText](Systems.Bpm.CalculatedAttributes.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [Hint](Systems.Bpm.CalculatedAttributes.md#hint) | [MultilanguageString (2147483647)](../data-types.md#multilanguagestring) __nullable__ | The hint, which is displayed alongside the attribute. `Filter(multi eq;like)` `Introduced in version 21.1.3.53` 
 | [Id](Systems.Bpm.CalculatedAttributes.md#id) | guid |  
-| [IsActive](Systems.Bpm.CalculatedAttributes.md#isactive) | boolean | True if the attribute is activated and added to the repository. `Required` `Default(false)` 
+| [IsActive](Systems.Bpm.CalculatedAttributes.md#isactive) | boolean | True if the attribute is activated and added to the repository. `Required` `Default(false)` `Filter(eq)` 
 | [Name](Systems.Bpm.CalculatedAttributes.md#name) | string (128) | The unique name of the attribute within the repository. `Required` `Filter(eq;like)` 
 | [Notes](Systems.Bpm.CalculatedAttributes.md#notes) | string (max) __nullable__ | Notes for this CalculatedAttribute. 
 | [ObjectVersion](Systems.Bpm.CalculatedAttributes.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
@@ -83,11 +83,11 @@ _Default Value_: **NewGuid**
 
 ### IsActive
 
-True if the attribute is activated and added to the repository. `Required` `Default(false)`
+True if the attribute is activated and added to the repository. `Required` `Default(false)` `Filter(eq)`
 
 _Type_: **boolean**  
 _Category_: **System**  
-_Supported Filters_: **NotFilterable**  
+_Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **False**  
 

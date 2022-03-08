@@ -107,11 +107,6 @@ Name Data Member:<br>
 </thead>
 <tbody>
 <tr>
-<td><a href="Finance.Vat.BoxTypes.html#calculatedattributename">CalculatedAttributeName</a></td>
-<td>string (128) <strong>nullable</strong></td>
-<td>The name of the calculated attribute which will be used in the calculation of the amount of the current Box Type. Used when the value of the &quot;Calculation Type&quot; field is &quot;Calculated Attribute&quot;. <code>Filter(eq;like)</code> <code>Introduced in version 22.1.5.90</code></td>
-</tr>
-<tr>
 <td><a href="Finance.Vat.BoxTypes.html#calculationtype">CalculationType</a></td>
 <td><a href="Finance.Vat.BoxTypes.html#calculationtype">CalculationType</a></td>
 <td>Determines the source of amounts of the current Box Type. Sources can be the Vat Entries or the Calculated attribute from the VAT Declaration which is specified in the &quot;Calculated Attribute Name&quot; field. <code>Required</code> <code>Default(&quot;DT&quot;)</code> <code>Filter(multi eq)</code> <code>Introduced in version 22.1.5.90</code></td>
@@ -159,6 +154,11 @@ Name Data Member:<br>
 </thead>
 <tbody>
 <tr>
+<td><a href="Finance.Vat.BoxTypes.html#calculatedattribute">CalculatedAttribute</a></td>
+<td><a href="Systems.Bpm.CalculatedAttributes.html">CalculatedAttributes</a> (nullable)</td>
+<td>The calculated attribute which will be used in the calculation of the amount of the current Box Type. Used when the value of the &quot;Calculation Type&quot; field is &quot;Calculated Attribute&quot;. <code>Filter(multi eq)</code> <code>Introduced in version 22.1.5.97</code></td>
+</tr>
+<tr>
 <td><a href="Finance.Vat.BoxTypes.html#country">Country</a></td>
 <td><a href="General.Geography.Countries.html">Countries</a></td>
 <td>The Country for which this type of box is declared. <code>Required</code> <code>Filter(multi eq)</code></td>
@@ -166,13 +166,6 @@ Name Data Member:<br>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
-<h3 id="calculatedattributename">CalculatedAttributeName</h3>
-<p>The name of the calculated attribute which will be used in the calculation of the amount of the current Box Type. Used when the value of the &quot;Calculation Type&quot; field is &quot;Calculated Attribute&quot;. <code>Filter(eq;like)</code> <code>Introduced in version 22.1.5.90</code></p>
-<p><em>Type</em>: <strong>string (128) <strong>nullable</strong></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, Like</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Maximum Length</em>: <strong>128</strong></p>
 <h3 id="calculationtype">CalculationType</h3>
 <p>Determines the source of amounts of the current Box Type. Sources can be the Vat Entries or the Calculated attribute from the VAT Declaration which is specified in the &quot;Calculated Attribute Name&quot; field. <code>Required</code> <code>Default(&quot;DT&quot;)</code> <code>Filter(multi eq)</code> <code>Introduced in version 22.1.5.90</code></p>
 <p><em>Type</em>: <strong><a href="Finance.Vat.BoxTypes.html#calculationtype">CalculationType</a></strong><br>
@@ -239,6 +232,11 @@ Allowed values for the <code>CalculationType</code>(Finance.Vat.BoxTypes.md#calc
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: ****</p>
 <h2 id="reference-details">Reference Details</h2>
+<h3 id="calculatedattribute">CalculatedAttribute</h3>
+<p>The calculated attribute which will be used in the calculation of the amount of the current Box Type. Used when the value of the &quot;Calculation Type&quot; field is &quot;Calculated Attribute&quot;. <code>Filter(multi eq)</code> <code>Introduced in version 22.1.5.97</code></p>
+<p><em>Type</em>: <strong><a href="Systems.Bpm.CalculatedAttributes.html">CalculatedAttributes</a> (nullable)</strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="country">Country</h3>
 <p>The Country for which this type of box is declared. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.Geography.Countries.html">Countries</a></strong><br>

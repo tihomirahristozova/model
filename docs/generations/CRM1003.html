@@ -149,9 +149,9 @@
 SalesOrder.DocumentDate = Today
 
 SalesOrder.ShipToPartyContactMechanism = 
-    if (Count(PartyContactMechanisms, where Party == SalesOrder.Customer.Party &amp;&amp; IsDefault == true) == 1)
-    , then ShipToPartyContactMechanism = First(PartyContactMechanisms, where Party == SalesOrder.Customer.Party &amp;&amp; IsDefault == true)
-    , else SalesOrder.ShipToPartyContactMechanism = null
+if (Count(PartyContactMechanisms, where Party == SalesOrder.Customer.Party &amp;&amp; IsDefault == true) == 1)
+, then ShipToPartyContactMechanism = First(PartyContactMechanisms, where Party == SalesOrder.Customer.Party &amp;&amp; IsDefault == true)
+, else SalesOrder.ShipToPartyContactMechanism = null
                                          
 SalesOrder.DocumentCurrency = SalesOrder.EnterpriseCompany.BaseCurrency
 
