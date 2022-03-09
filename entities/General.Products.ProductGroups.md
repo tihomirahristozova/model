@@ -58,6 +58,7 @@ Aggregate Tree
 | [DefaultMeasurementUnit](General.Products.ProductGroups.md#defaultmeasurementunit) | [MeasurementUnits](General.MeasurementUnits.md) (nullable) | When not null, specifies default measurement unit, which should be assigned to new products in the group. `Filter(multi eq)` |
 | [DefaultProductType](General.Products.ProductGroups.md#defaultproducttype) | [ProductTypes](General.Products.ProductTypes.md) (nullable) | When not null, specifies default product type, which should be assigned to new products in the group. `Filter(multi eq)` |
 | [EnterpriseCompany](General.Products.ProductGroups.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | When not null, specifies that the product group, its sub-groups and products are specific to a given enterprise company and may be used only in documents from this enterprise company. `Filter(multi eq)` |
+| [ParentGroup](General.Products.ProductGroups.md#parentgroup) | [ProductGroups](General.Products.ProductGroups.md) (nullable) | Parent product group. null if this is root group. `Filter(multi eq)` `Introduced in version 22.1.5.98` |
 | [PricingModel](General.Products.ProductGroups.md#pricingmodel) | [PricingModels](Crm.Pricing.PricingModels.md) (nullable) | When not null, specifies the pricing model, for the products in this product group. The model is by default valid also for sub-groups, unless they have other models. `Filter(multi eq)` |
 
 ## Child Collections
@@ -288,6 +289,14 @@ _Supported Filters_: **Equals, EqualsIn**
 When not null, specifies that the product group, its sub-groups and products are specific to a given enterprise company and may be used only in documents from this enterprise company. `Filter(multi eq)`
 
 _Type_: **[EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable)**  
+_Category_: **System**  
+_Supported Filters_: **Equals, EqualsIn**  
+
+### ParentGroup
+
+Parent product group. null if this is root group. `Filter(multi eq)` `Introduced in version 22.1.5.98`
+
+_Type_: **[ProductGroups](General.Products.ProductGroups.md) (nullable)**  
 _Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 

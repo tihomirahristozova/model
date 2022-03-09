@@ -30,6 +30,7 @@ Aggregate Tree
   * [General.DocumentComments](General.DocumentComments.md)  
   * [General.DocumentDistributedAmounts](General.DocumentDistributedAmounts.md)  
   * [General.DocumentFileAttachments](General.DocumentFileAttachments.md)  
+  * [General.DocumentFulfillments](General.DocumentFulfillments.md)  
   * [General.DocumentLineAmounts](General.DocumentLineAmounts.md)  
   * [General.DocumentPrints](General.DocumentPrints.md)  
   * [General.DocumentStateChanges](General.DocumentStateChanges.md)  
@@ -107,6 +108,7 @@ Aggregate Tree
 | DistributedAmounts | [DocumentDistributedAmounts](General.DocumentDistributedAmounts.md) | List of `DocumentDistributed<br />Amount`(General.DocumentDistributedAmounts.md) child objects, based on the `General.DocumentDistributedAmount.Document`(General.DocumentDistributedAmounts.md#document) back reference (Inherited from [Documents](General.Documents.md)) 
 | DocumentAmounts | [DocumentAmounts](General.DocumentAmounts.md) | List of `DocumentAmount`(General.DocumentAmounts.md) child objects, based on the `General.DocumentAmount.Document`(General.DocumentAmounts.md#document) back reference (Inherited from [Documents](General.Documents.md)) 
 | FileAttachments | [DocumentFileAttachments](General.DocumentFileAttachments.md) | List of `DocumentFileAttachment`(General.DocumentFileAttachments.md) child objects, based on the `General.DocumentFileAttachment.Document`(General.DocumentFileAttachments.md#document) back reference (Inherited from [Documents](General.Documents.md)) 
+| Fulfillments | [DocumentFulfillments](General.DocumentFulfillments.md) | List of `DocumentFulfillment`(General.DocumentFulfillments.md) child objects, based on the `General.DocumentFulfillment.Document`(General.DocumentFulfillments.md#document) back reference (Inherited from [Documents](General.Documents.md)) 
 | ItemIngredients | [WorkOrderItemIngredients](Production.ShopFloor.WorkOrderItemIngredients.md) | List of `WorkOrderItemIngredient`(Production.ShopFloor.WorkOrderItemIngredients.md) child objects, based on the `Production.ShopFloor.WorkOrderItemIngredient.WorkOrder`(Production.ShopFloor.WorkOrderItemIngredients.md#workorder) back reference 
 | Items | [WorkOrderItems](Production.ShopFloor.WorkOrderItems.md) | List of `WorkOrderItem`(Production.ShopFloor.WorkOrderItems.md) child objects, based on the `Production.ShopFloor.WorkOrderItem.WorkOrder`(Production.ShopFloor.WorkOrderItems.md#workorder) back reference 
 | LineAmounts | [DocumentLineAmounts](General.DocumentLineAmounts.md) | List of `DocumentLineAmount`(General.DocumentLineAmounts.md) child objects, based on the `General.DocumentLineAmount.Document`(General.DocumentLineAmounts.md#document) back reference (Inherited from [Documents](General.Documents.md)) 

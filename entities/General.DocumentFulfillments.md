@@ -18,8 +18,10 @@ _DestinationEntityName_
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
 
-Aggregate Tree  
-* [General.DocumentFulfillments](General.DocumentFulfillments.md)  
+Aggregate Parent:  
+[General.Documents](General.Documents.md)  
+Aggregate Root:  
+[General.Documents](General.Documents.md)  
 
 ## Attributes
 
@@ -43,7 +45,7 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [CreationUser](General.DocumentFulfillments.md#creationuser) | [Users](Systems.Security.Users.md) | The user, who created the record. `Required` `Filter(multi eq)` |
-| [Document](General.DocumentFulfillments.md#document) | [Documents](General.Documents.md) | The Document, which is fulfilled. `Required` `Filter(multi eq)` `Introduced in version 21.1.1.26` |
+| [Document](General.DocumentFulfillments.md#document) | [Documents](General.Documents.md) | The Document, which is fulfilled. `Required` `Filter(multi eq)` `ReadOnly` `Introduced in version 21.1.1.26` `Owner` |
 | [Lot](General.DocumentFulfillments.md#lot) | [Lots](Logistics.Inventory.Lots.md) (nullable) | The lot, which was fulfilled. null when the fulfillment was not for a specific lot. `Filter(multi eq)` `Introduced in version 22.1.4.52` |
 | [ParentFulfillment](General.DocumentFulfillments.md#parentfulfillment) | [DocumentFulfillments](General.DocumentFulfillments.md) (nullable) | The parent document fulfillment. Used when the information of the current fulfillment is inherited by another document fulfillment, usually created by another module. `Filter(multi eq)` `Introduced in version 22.1.5.85` |
 | [Product](General.DocumentFulfillments.md#product) | [Products](General.Products.Products.md) (nullable) | The product, which is fulfilled. `Filter(multi eq)` `Introduced in version 22.1.4.52` |
@@ -186,12 +188,13 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### Document
 
-The Document, which is fulfilled. `Required` `Filter(multi eq)` `Introduced in version 21.1.1.26`
+The Document, which is fulfilled. `Required` `Filter(multi eq)` `ReadOnly` `Introduced in version 21.1.1.26` `Owner`
 
 _Type_: **[Documents](General.Documents.md)**  
 _Indexed_: **True**  
 _Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
+_[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
 
 ### Lot
 

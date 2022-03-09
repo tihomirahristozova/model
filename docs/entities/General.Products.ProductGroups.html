@@ -235,6 +235,11 @@ Name Data Member:<br>
 <td>When not null, specifies that the product group, its sub-groups and products are specific to a given enterprise company and may be used only in documents from this enterprise company. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
+<td><a href="General.Products.ProductGroups.html#parentgroup">ParentGroup</a></td>
+<td><a href="General.Products.ProductGroups.html">ProductGroups</a> (nullable)</td>
+<td>Parent product group. null if this is root group. <code>Filter(multi eq)</code> <code>Introduced in version 22.1.5.98</code></td>
+</tr>
+<tr>
 <td><a href="General.Products.ProductGroups.html#pricingmodel">PricingModel</a></td>
 <td><a href="Crm.Pricing.PricingModels.html">PricingModels</a> (nullable)</td>
 <td>When not null, specifies the pricing model, for the products in this product group. The model is by default valid also for sub-groups, unless they have other models. <code>Filter(multi eq)</code></td>
@@ -453,6 +458,11 @@ Allowed values for the <code>UseLots</code>(General.Products.ProductGroups.md#us
 <h3 id="enterprisecompany">EnterpriseCompany</h3>
 <p>When not null, specifies that the product group, its sub-groups and products are specific to a given enterprise company and may be used only in documents from this enterprise company. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a> (nullable)</strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<h3 id="parentgroup">ParentGroup</h3>
+<p>Parent product group. null if this is root group. <code>Filter(multi eq)</code> <code>Introduced in version 22.1.5.98</code></p>
+<p><em>Type</em>: <strong><a href="General.Products.ProductGroups.html">ProductGroups</a> (nullable)</strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="pricingmodel">PricingModel</h3>

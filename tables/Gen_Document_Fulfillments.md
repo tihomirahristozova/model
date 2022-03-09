@@ -7,6 +7,10 @@ Entity: [General.DocumentFulfillments](~/entities/General.DocumentFulfillments.m
 
 Fulfillment ledger for documents. Entity: Gen_Document_Fulfillments (Introduced in version 20.1)
 
+## Owner Tables Hierarchy
+
+* [Gen_Documents](Gen_Documents.md)
+
 ## Summary
 
 | Name | Type | Description |
@@ -217,7 +221,7 @@ The Document, which is fulfilled.
 |Is Entity Name|no|
 |Max Length|-1|
 |Order|2147483647|
-|Ownership Reference|no|
+|Ownership Reference|yes|
 |Pasword|no|
 |Picture|no|
 |Primary Key|no|

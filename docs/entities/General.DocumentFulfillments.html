@@ -90,10 +90,10 @@ Name Data Member:<br>
 <em>DestinationEntityName</em></p>
 <h2 id="aggregate">Aggregate</h2>
 <p>An <a href="https://docs.erp.net/tech/advanced/concepts/aggregates.html">aggregate</a> is a cluster of domain objects that can be treated as a single unit.</p>
-<p>Aggregate Tree</p>
-<ul>
-<li><a href="General.DocumentFulfillments.html">General.DocumentFulfillments</a></li>
-</ul>
+<p>Aggregate Parent:<br>
+<a href="General.Documents.html">General.Documents</a><br>
+Aggregate Root:<br>
+<a href="General.Documents.html">General.Documents</a></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -184,7 +184,7 @@ Name Data Member:<br>
 <tr>
 <td><a href="General.DocumentFulfillments.html#document">Document</a></td>
 <td><a href="General.Documents.html">Documents</a></td>
-<td>The Document, which is fulfilled. <code>Required</code> <code>Filter(multi eq)</code> <code>Introduced in version 21.1.1.26</code></td>
+<td>The Document, which is fulfilled. <code>Required</code> <code>Filter(multi eq)</code> <code>ReadOnly</code> <code>Introduced in version 21.1.1.26</code> <code>Owner</code></td>
 </tr>
 <tr>
 <td><a href="General.DocumentFulfillments.html#lot">Lot</a></td>
@@ -318,11 +318,12 @@ Allowed values for the <code>FulfillmentType</code>(General.DocumentFulfillments
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="document">Document</h3>
-<p>The Document, which is fulfilled. <code>Required</code> <code>Filter(multi eq)</code> <code>Introduced in version 21.1.1.26</code></p>
+<p>The Document, which is fulfilled. <code>Required</code> <code>Filter(multi eq)</code> <code>ReadOnly</code> <code>Introduced in version 21.1.1.26</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="General.Documents.html">Documents</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em><a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a></em>: <strong>True</strong></p>
 <h3 id="lot">Lot</h3>
 <p>The lot, which was fulfilled. null when the fulfillment was not for a specific lot. <code>Filter(multi eq)</code> <code>Introduced in version 22.1.4.52</code></p>
 <p><em>Type</em>: <strong><a href="Logistics.Inventory.Lots.html">Lots</a> (nullable)</strong><br>
