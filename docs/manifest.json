@@ -11536,7 +11536,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Crm.Marketing.MarketingActivityLines.html",
-          "hash": "FIqn6leQpgF0v+uMUekA2A=="
+          "hash": "iVylBSZNcQsAvHyMKmBpAA=="
         }
       },
       "is_incremental": false,
@@ -11704,7 +11704,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Crm.Presales.DealLines.html",
-          "hash": "eUXfbS+myt2aj8eUAc1wwg=="
+          "hash": "LhsGXW5WkaLaVQkMU00Aeg=="
         }
       },
       "is_incremental": false,
@@ -11752,7 +11752,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Crm.Presales.OfferLines.html",
-          "hash": "ADpiVGVmw1eQcZ1PI2VYnw=="
+          "hash": "CXYBrLV9ed3cktduZVhZLA=="
         }
       },
       "is_incremental": false,
@@ -13056,6 +13056,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "entities/Finance.Vat.BoxTypeDealTypes.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Finance.Vat.BoxTypeDealTypes.html",
+          "hash": "ena4x0TVcTwx63OGXLGEvA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "entities/Finance.Vat.BoxTypes.md",
       "output": {
         ".html": {
@@ -13084,7 +13096,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Finance.Vat.DealTypes.html",
-          "hash": "NNReC+x32WfQ1sGeLZH+vg=="
+          "hash": "GimzAU2M1bTcVLCTfOoAjA=="
         }
       },
       "is_incremental": false,
@@ -13132,7 +13144,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Finance.Vat.html",
-          "hash": "ke6ggs7dkHKBuY4KJ3/PyQ=="
+          "hash": "+QnDfmJzmGvreIxxZrktzA=="
         }
       },
       "is_incremental": false,
@@ -17008,7 +17020,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/toc.html",
-          "hash": "QCyvtOvNTNv2n+/tB7JioA=="
+          "hash": "rQ+2f2Xs/AyYAAV+ZZgRDQ=="
         }
       },
       "is_incremental": false,
@@ -20826,7 +20838,7 @@
       "output": {
         ".html": {
           "relative_path": "tables/Gen_Document_Fulfillments.html",
-          "hash": "fSGY5tdf5bAbyRsLhiQqqA=="
+          "hash": "HfrhN89hLN4fApOG2KMxow=="
         }
       },
       "is_incremental": false,
@@ -25086,7 +25098,19 @@
       "output": {
         ".html": {
           "relative_path": "tables/VAT.html",
-          "hash": "67w1kdkqhcz4DGJaeuVpeg=="
+          "hash": "D2M374Qb1+vXvKY7EvMLrA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tables/VAT_Box_Type_Deal_Types.md",
+      "output": {
+        ".html": {
+          "relative_path": "tables/VAT_Box_Type_Deal_Types.html",
+          "hash": "C55SZ2v/qqW/cfjKFEJiOA=="
         }
       },
       "is_incremental": false,
@@ -25122,7 +25146,7 @@
       "output": {
         ".html": {
           "relative_path": "tables/VAT_Deal_Types.html",
-          "hash": "zdXbyVjeB6m7OX3tVohKdw=="
+          "hash": "JmQHBQkXTfFO2ke8l4uDtg=="
         }
       },
       "is_incremental": false,
@@ -25434,7 +25458,7 @@
       "output": {
         ".html": {
           "relative_path": "tables/index.html",
-          "hash": "sL+LA5dkWLykjcuZqBgMuQ=="
+          "hash": "tdYXSPYMmnIbL8NliDnSTg=="
         }
       },
       "is_incremental": false,
@@ -25446,7 +25470,7 @@
       "output": {
         ".html": {
           "relative_path": "tables/toc.html",
-          "hash": "fI/cvW0AYd5Es97PvDaMlA=="
+          "hash": "GQpbKmnOMPQOFz3T64rkVg=="
         }
       },
       "is_incremental": false,

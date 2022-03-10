@@ -537,6 +537,8 @@
       href: Finance.Vat.BGVATDeclaringPersons.md
     - name: BGVATDocumentTypeVATCodes
       href: Finance.Vat.BGVATDocumentTypeVATCodes.md
+    - name: BoxTypeDealTypes
+      href: Finance.Vat.BoxTypeDealTypes.md
     - name: BoxTypes
       href: Finance.Vat.BoxTypes.md
     - name: DealTypeDocumentAmounts

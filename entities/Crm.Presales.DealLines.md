@@ -9,11 +9,9 @@ Detail records (lines) of the deals. Entity: Crm_Deal_Lines (Introduced in versi
 
 ## Default Visualization
 Default Display Text Format:  
-_{Deal.EntityName}_  
+_{LineNo}. {Deal.DocumentNo} {Deal.DocumentType.TypeName:T}_  
 Default Search Members:  
-_Deal.EntityName_  
-Name Data Member:  
-_Deal.EntityName_  
+_Deal.DocumentNo_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -39,6 +37,7 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Deal](Crm.Presales.DealLines.md#deal) | [Deals](Crm.Presales.Deals.md) | Deal. `Required` `Filter(multi eq)` `Owner` |
+| [Document](Crm.Presales.DealLines.md#document) | [Deals](Crm.Presales.Deals.md) | Deal. `Required` `Filter(multi eq)` |
 | [Product](Crm.Presales.DealLines.md#product) | [Products](General.Products.Products.md) | The product, to which the client has interest. `Required` `Filter(multi eq)` |
 | [QuantityUnit](Crm.Presales.DealLines.md#quantityunit) | [MeasurementUnits](General.MeasurementUnits.md) | The measurement unit of Quantity. `Required` `Filter(multi eq)` |
 
@@ -116,6 +115,15 @@ _Indexed_: **True**
 _Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
+
+### Document
+
+Deal. `Required` `Filter(multi eq)`
+
+_Type_: **[Deals](Crm.Presales.Deals.md)**  
+_Indexed_: **True**  
+_Category_: **System**  
+_Supported Filters_: **Equals, EqualsIn**  
 
 ### Product
 

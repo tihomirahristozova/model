@@ -33,7 +33,7 @@ Aggregate Root:
 | [IsSelected](Crm.Presales.OfferLines.md#isselected) | boolean | True when the line is selected for further processing (ordering), false otherwise. `Required` `Default(true)` 
 | [LineAmount](Crm.Presales.OfferLines.md#lineamount) | [Amount (14, 2)](../data-types.md#amount) | Amount for the line in the currency of the parent document. Usually equals Quantity * Unit_Price. When Quantity = 0, Unit Price is undefined and this contains the total line amount. `Currency: Offer.DocumentCurrency` `Required` `Default(0)` 
 | [LineCustomDiscountPercent](Crm.Presales.OfferLines.md#linecustomdiscountpercent) | decimal (7, 6) | Operator defined discount percentage, specified for this line. `Required` `Default(0)` 
-| [LineNo](Crm.Presales.OfferLines.md#lineno) | int32 | Line number, unique within the Offer. Usually is increasing number like 10, 20, 30, ... when initially entering the Offer (in order to allow insertions with adjustment documents). `Required` 
+| [LineNo](Crm.Presales.OfferLines.md#lineno) | int32 | Line number, unique within the Offer. Usually is increasing number like 10, 20, 30, ... when initially entering the Offer (in order to allow insertions with adjustment documents). `Required` `Filter(eq)` 
 | [LineStandardDiscount<br />Percent](Crm.Presales.OfferLines.md#linestandarddiscountpercent) | decimal (7, 6) | The discount percentage, applied through the standard discount policy. `Required` `Default(0)` 
 | [Notes](Crm.Presales.OfferLines.md#notes) | string (max) __nullable__ | Notes for this OfferLine. 
 | [ObjectVersion](Crm.Presales.OfferLines.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
@@ -146,11 +146,11 @@ _Default Value_: **0**
 
 ### LineNo
 
-Line number, unique within the Offer. Usually is increasing number like 10, 20, 30, ... when initially entering the Offer (in order to allow insertions with adjustment documents). `Required`
+Line number, unique within the Offer. Usually is increasing number like 10, 20, 30, ... when initially entering the Offer (in order to allow insertions with adjustment documents). `Required` `Filter(eq)`
 
 _Type_: **int32**  
 _Category_: **System**  
-_Supported Filters_: **NotFilterable**  
+_Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 
 _Back-End Default Expression:_  

@@ -83,11 +83,9 @@
 <p>Detail records (lines) of the deals. Entity: Crm_Deal_Lines (Introduced in version 22.1.4.53)</p>
 <h2 id="default-visualization">Default Visualization</h2>
 <p>Default Display Text Format:<br>
-<em>{Deal.EntityName}</em><br>
+<em>{LineNo}. {Deal.DocumentNo} {Deal.DocumentType.TypeName:T}</em><br>
 Default Search Members:<br>
-<em>Deal.EntityName</em><br>
-Name Data Member:<br>
-<em>Deal.EntityName</em></p>
+<em>Deal.DocumentNo</em></p>
 <h2 id="aggregate">Aggregate</h2>
 <p>An <a href="https://docs.erp.net/tech/advanced/concepts/aggregates.html">aggregate</a> is a cluster of domain objects that can be treated as a single unit.</p>
 <p>Aggregate Parent:<br>
@@ -152,6 +150,11 @@ Aggregate Root:<br>
 <td>Deal. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 <tr>
+<td><a href="Crm.Presales.DealLines.html#document">Document</a></td>
+<td><a href="Crm.Presales.Deals.html">Deals</a></td>
+<td>Deal. <code>Required</code> <code>Filter(multi eq)</code></td>
+</tr>
+<tr>
 <td><a href="Crm.Presales.DealLines.html#product">Product</a></td>
 <td><a href="General.Products.Products.html">Products</a></td>
 <td>The product, to which the client has interest. <code>Required</code> <code>Filter(multi eq)</code></td>
@@ -213,6 +216,12 @@ Aggregate Root:<br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em><a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a></em>: <strong>True</strong></p>
+<h3 id="document">Document</h3>
+<p>Deal. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p><em>Type</em>: <strong><a href="Crm.Presales.Deals.html">Deals</a></strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="product">Product</h3>
 <p>The product, to which the client has interest. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.Products.Products.html">Products</a></strong><br>

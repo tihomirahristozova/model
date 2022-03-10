@@ -691,6 +691,7 @@
 
 ## [VAT](VAT.md)
 
+* [VAT_Box_Type_Deal_Types](VAT_Box_Type_Deal_Types.md)
 * [VAT_Box_Types](VAT_Box_Types.md)
 * [VAT_Deal_Type_Document_Amounts](VAT_Deal_Type_Document_Amounts.md)
 * [VAT_Deal_Types](VAT_Deal_Types.md)

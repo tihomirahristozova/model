@@ -1282,6 +1282,8 @@
 - name: VAT
   href: VAT.md
   items:
+  - name: VAT_Box_Type_Deal_Types
+    href: VAT_Box_Type_Deal_Types.md
   - name: VAT_Box_Types
     href: VAT_Box_Types.md
   - name: VAT_Deal_Type_Document_Amounts

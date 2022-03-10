@@ -9,11 +9,9 @@ Detail records (lines) of the marketing activities. Entity: Crm_Marketing_Activi
 
 ## Default Visualization
 Default Display Text Format:  
-_{MarketingActivity.EntityName}_  
+_{LineNo}. {MarketingActivity.DocumentNo} {MarketingActivity.DocumentType.TypeName:T}_  
 Default Search Members:  
-_MarketingActivity.EntityName_  
-Name Data Member:  
-_MarketingActivity.EntityName_  
+_MarketingActivity.DocumentNo_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -43,6 +41,7 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Competitor](Crm.Marketing.MarketingActivityLines.md#competitor) | [Competitors](Crm.Marketing.Competitors.md) (nullable) | Competitor where marketing activity was held. `Filter(multi eq)` |
+| [Document](Crm.Marketing.MarketingActivityLines.md#document) | [MarketingActivities](Crm.Marketing.MarketingActivities.md) | Marketing activity. `Required` `Filter(multi eq)` |
 | [MarketingActivity](Crm.Marketing.MarketingActivityLines.md#marketingactivity) | [MarketingActivities](Crm.Marketing.MarketingActivities.md) | Marketing activity. `Required` `Filter(multi eq)` `Owner` |
 | [MarketingActivityLineType](Crm.Marketing.MarketingActivityLines.md#marketingactivitylinetype) | [MarketingActivityLineTypes](Crm.Marketing.MarketingActivityLineTypes.md) | Describes what the purpose of the marketing activity is. `Required` `Filter(multi eq)` |
 | [OrderQuantityUnit](Crm.Marketing.MarketingActivityLines.md#orderquantityunit) | [MeasurementUnits](General.MeasurementUnits.md) (nullable) | The measurement unit of In_Store_Available_<br />Quantity and Order_Quantity. `Filter(multi eq)` |
@@ -155,6 +154,14 @@ _Supports Order By_: **False**
 Competitor where marketing activity was held. `Filter(multi eq)`
 
 _Type_: **[Competitors](Crm.Marketing.Competitors.md) (nullable)**  
+_Category_: **System**  
+_Supported Filters_: **Equals, EqualsIn**  
+
+### Document
+
+Marketing activity. `Required` `Filter(multi eq)`
+
+_Type_: **[MarketingActivities](Crm.Marketing.MarketingActivities.md)**  
 _Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 

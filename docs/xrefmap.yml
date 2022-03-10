@@ -784,6 +784,9 @@ references:
 - uid: Finance.Vat.BGVATDocumentTypeVATCodes
   name: Finance.Vat.BGVATDocumentTypeVATCodes Entity
   href: entities/Finance.Vat.BGVATDocumentTypeVATCodes.html
+- uid: Finance.Vat.BoxTypeDealTypes
+  name: Finance.Vat.BoxTypeDealTypes Entity
+  href: entities/Finance.Vat.BoxTypeDealTypes.html
 - uid: Finance.Vat.BoxTypes
   name: Finance.Vat.BoxTypes Entity
   href: entities/Finance.Vat.BoxTypes.html
