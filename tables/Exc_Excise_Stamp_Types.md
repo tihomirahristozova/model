@@ -309,7 +309,7 @@ The excise product, defined by the taxation and customs authorities.
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
-|Visible|yes|
+|Visible|no|
 
 #### Excise_Stamp_Type_Id - Supported Filters
 
