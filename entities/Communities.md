@@ -7,6 +7,7 @@ uid: Communities
 - [Notifications](Communities.Notifications.md)  
 - [NotificationSettings](Communities.NotificationSettings.md)  
 - [SocialComments](Communities.SocialComments.md)  
+- [SocialFollowedEntities](Communities.SocialFollowedEntities.md)  
 - [SocialFollows](Communities.SocialFollows.md)  
 - [SocialGroupMembers](Communities.SocialGroupMembers.md)  
 - [SocialGroups](Communities.SocialGroups.md)  

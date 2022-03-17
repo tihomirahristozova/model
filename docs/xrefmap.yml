@@ -289,6 +289,9 @@ references:
 - uid: Communities.SocialComments
   name: Communities.SocialComments Entity
   href: entities/Communities.SocialComments.html
+- uid: Communities.SocialFollowedEntities
+  name: Communities.SocialFollowedEntities View
+  href: entities/Communities.SocialFollowedEntities.html
 - uid: Communities.SocialFollows
   name: Communities.SocialFollows Entity
   href: entities/Communities.SocialFollows.html
