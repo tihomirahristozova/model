@@ -9,7 +9,7 @@ Optimized view returning social followed entities by users. Entity: Cmm_Social_F
 
 ## Default Visualization
 Default Display Text Format:  
-_{UserId}: {EntityType}_  
+_{UserId}: {DataObjectId}_  
 Default Search Members:  
 __  
 
@@ -24,12 +24,13 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [EntityItemId](Communities.SocialFollowedEntities.md#entityitemid) | guid | The followed entity item. `Required` `Filter(multi eq)` 
-| [EntityType](Communities.SocialFollowedEntities.md#entitytype) | string (64) | The followed entity type. `Required` `Filter(eq)` 
+| [EntityType](Communities.SocialFollowedEntities.md#entitytype) | string (64) | The followed entity type. `Required` `Filter(multi eq)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [DataObject](Communities.SocialFollowedEntities.md#dataobject) | [ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md) | The data object subject to the social follow. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Sys_Objects_Table.Object_Id` `Introduced in version 22.1.6.8` |
 | [User](Communities.SocialFollowedEntities.md#user) | [Users](Systems.Security.Users.md) | The user which follows the entity. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Sec_Users_Table.User_Id` |
 
 
@@ -45,16 +46,26 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### EntityType
 
-The followed entity type. `Required` `Filter(eq)`
+The followed entity type. `Required` `Filter(multi eq)`
 
 _Type_: **string (64)**  
 _Category_: **System**  
-_Supported Filters_: **Equals**  
+_Supported Filters_: **Equals, EqualsIn**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  
 
 
 ## Reference Details
+
+### DataObject
+
+The data object subject to the social follow. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Sys_Objects_Table.Object_Id` `Introduced in version 22.1.6.8`
+
+_Type_: **[ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md)**  
+_Category_: **System**  
+_Inherited From_: **Sys_Objects_Table.Object_Id**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
 
 ### User
 

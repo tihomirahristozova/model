@@ -9,7 +9,7 @@ Contains the services, which were actually performed during the service activity
 
 ## Default Visualization
 Default Display Text Format:  
-_{LineNo}. {ServiceActivity.DocumentNo} {ServiceActivity.DocumentType.TypeName:T}_  
+_{LineNo}. {ServiceActivity.DocumentNo} {Service}_  
 Default Search Members:  
 _ServiceActivity.DocumentNo_  
 
