@@ -31,7 +31,7 @@ Aggregate Tree
 | [DefaultParameterChange](Applications.AssetManagement.MaintenanceTypes.md#defaultparameterchange) | int32 __nullable__ | Default positive change of the tracked parameter between two maintenances. null means, that maintenances are not scheduled based on parameter change. 
 | [DefaultScheduleDays](Applications.AssetManagement.MaintenanceTypes.md#defaultscheduledays) | int32 __nullable__ | Specifies the maximum number of days between two maintenances (in addition to the number of months specified in Default Schedule Months). null means that there is no default schedule in days. 
 | [DefaultScheduleMonths](Applications.AssetManagement.MaintenanceTypes.md#defaultschedulemonths) | int32 __nullable__ | Specifies the maximum number of months between two maintenances. null means that there is no default schedule in months. 
-| [Description](Applications.AssetManagement.MaintenanceTypes.md#description) | [MultilanguageString (2147483647)](../data-types.md#multilanguagestring) __nullable__ | Detailed description of the maintenance (multilanguage). 
+| [Description](Applications.AssetManagement.MaintenanceTypes.md#description) | [MultilanguageString (max)](../data-types.md#multilanguagestring) __nullable__ | Detailed description of the maintenance (multilanguage). 
 | [DisplayText](Applications.AssetManagement.MaintenanceTypes.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [Id](Applications.AssetManagement.MaintenanceTypes.md#id) | guid |  
 | [Name](Applications.AssetManagement.MaintenanceTypes.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Multilanguage name of the maintenance type. `Required` `Filter(eq;like)` 
@@ -89,7 +89,7 @@ _Supports Order By_: **False**
 
 Detailed description of the maintenance (multilanguage).
 
-_Type_: **[MultilanguageString (2147483647)](../data-types.md#multilanguagestring) __nullable__**  
+_Type_: **[MultilanguageString (max)](../data-types.md#multilanguagestring) __nullable__**  
 _Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
