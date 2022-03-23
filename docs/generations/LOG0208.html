@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>LOG0206 Create Excise Administrative Documents | ERP.net Domain Model </title>
+    <title>LOG0206 Create Excise Stamp Operations | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="LOG0206 Create Excise Administrative Documents | ERP.net Domain Model ">
+    <meta name="title" content="LOG0206 Create Excise Stamp Operations | ERP.net Domain Model ">
     <meta name="generator" content="docfx 2.56.9.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
@@ -70,7 +70,7 @@
         <div class="article row grid">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="log0206-create-excise-administrative-documents">LOG0206 Create Excise Administrative Documents</h1>
+<h1 id="log0206-create-excise-stamp-operations">LOG0206 Create Excise Stamp Operations</h1>
 
 <h2 id="basic-information">Basic Information</h2>
 <table>
@@ -83,7 +83,7 @@
 <tbody>
 <tr>
 <td style="text-align: left;">Code</td>
-<td>LOG0206</td>
+<td>LOG0208</td>
 </tr>
 <tr>
 <td style="text-align: left;">Parent Document</td>
@@ -91,15 +91,15 @@
 </tr>
 <tr>
 <td style="text-align: left;">Sub-document</td>
-<td>ExciseAdministrativeDocument</td>
+<td>ExciseStampOperation</td>
 </tr>
 <tr>
 <td style="text-align: left;">Full Name</td>
-<td>Create Excise Administrative Documents</td>
+<td>Create Excise Stamp Operations</td>
 </tr>
 <tr>
 <td style="text-align: left;">Status</td>
-<td><a class="xref" href="https://erpnetdocs.github.io/tech/advanced/documents/generation-procedures.html">NEW</a></td>
+<td><a class="xref" href="https://erpnetdocs.github.io/tech/advanced/documents/generation-procedures.html">PLANNED</a></td>
 </tr>
 <tr>
 <td style="text-align: left;">Deterministic</td>
@@ -132,15 +132,10 @@
 </tbody>
 </table>
 <h2 id="business-logic">Business Logic</h2>
-<p>This Generation is used to create Excise Administrative Documents from Store Transactions.</p>
-<p>The Excise Administrative Document's header is created based on the Store Transaction's header as follows:</p>
-<pre><code>ExciseAdministrativeDocument.TaxWarehouse = StoreTransaction.Store.TaxWarehouse
+<p>This Generation is used to create Excise Stamp Operation from Store Transactions.</p>
+<p>The Excise Stamp Operation's header is created based on the Store Transaction's header as follows:</p>
+<pre><code>ExciseStampOperation.DocumentDate = StoreOrder.DocumentDate
 
-ExciseAdministrativeDocument.OtherParty = StoreTransaction.ToParty
-
-ExciseAdministrativeDocument.DocumentCurrency = StoreTransaction.DocumentCurrency
-
-ExciseAdministrativeDocument.CurrencyDirectory = StoreTransaction.CurrencyDirectory
 </code></pre>
 <div class="NOTE">
 <h5>Note</h5>
@@ -148,14 +143,14 @@ ExciseAdministrativeDocument.CurrencyDirectory = StoreTransaction.CurrencyDirect
 </div>
 <div class="NOTE">
 <h5>Note</h5>
-<p>The new Excise Administrative Document is saved then and only when there is at least one line in it.</p>
+<p>The new Excise Stamp Operation is saved then and only when there is at least one line in it.</p>
 </div>
 <h2 id="fulfillments">Fulfillments</h2>
 <table>
 <thead>
 <tr>
 <th style="text-align: left;">Name</th>
-<th>StoreTransactionLineToExciseAdministrativeDocumentLine</th>
+<th>StoreTransactionLineToExciseStampOperationLine</th>
 </tr>
 </thead>
 <tbody>
@@ -165,11 +160,11 @@ ExciseAdministrativeDocument.CurrencyDirectory = StoreTransaction.CurrencyDirect
 </tr>
 <tr>
 <td style="text-align: left;">Child Entity</td>
-<td>ExciseAdministrativeDocumentLine</td>
+<td>ExciseStampOperationLine</td>
 </tr>
 <tr>
 <td style="text-align: left;">Parent / Child Relationship</td>
-<td>ExciseAdministrativeDocumentLine.ParentDocument = StoreTransaction; ExciseAdministrativeDocumentLineParentLineNo = StoreTransactionLine.LineNo</td>
+<td>ExciseStampOperationLine.ParentDocument = StoreTransaction; ExciseStampOperationLineParentLineNo = StoreTransactionLine.LineNo</td>
 </tr>
 </tbody>
 </table>
@@ -187,61 +182,30 @@ ExciseAdministrativeDocument.CurrencyDirectory = StoreTransaction.CurrencyDirect
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;">StoreTransactionLineToExciseAdministrativeDocumentLine</td>
-<td style="text-align: center;">MQuantityBase</td>
-<td style="text-align: center;">StoreTransactionLine.Product.BaseMeasurementUnit</td>
-<td style="text-align: left;">StoreTransactionLine.QuantityBase</td>
-<td style="text-align: left;">ExciseAdministrativeDocumentLine.QuantityBase</td>
-<td style="text-align: left;">YES</td>
-</tr>
-<tr>
-<td style="text-align: left;">StoreTransactionLineToExciseAdministrativeDocumentLine</td>
+<td style="text-align: left;">StoreTransactionLineToExciseStampOperationLine</td>
 <td style="text-align: center;">MQuantity</td>
 <td style="text-align: center;">StoreTransactionLine.QuantityUnit</td>
 <td style="text-align: left;">StoreTransactionLine.Quantity</td>
-<td style="text-align: left;">ExciseAdministrativeDocumentLine.Quantity</td>
-<td style="text-align: left;">NO</td>
+<td style="text-align: left;">ExciseStampOperation.Quantity</td>
+<td style="text-align: left;">YES</td>
 </tr>
 </tbody>
 </table>
-<p>The lines of the new document are created based on the data for the Fulfilled Part of quantities by ExciseAdministrativeDocument that are already created (for more information, see topic <a href="../reference/discrepancy-system.html">Discrepancy System</a>). The new ExciseAdministrativeDocument is created as follows:</p>
-<pre><code>ExciseAdministrativeDocumentLine.LineNo = Autonumber
+<p>The lines of the new document are created based on the data for the Fulfilled Part of quantities by ExciseStampOperation that are already created (for more information, see topic <a href="../reference/discrepancy-system.html">Discrepancy System</a>). The new ExciseStampOperation is created as follows:</p>
+<pre><code>ExciseStampOperationLine.LineNo = Autonumber
 
-ExciseAdministrativeDocumentLine.ParentLineNo = StoreTransactionLine.LineNo
+ExciseStampOperationLine.ParentLineNo = StoreTransactionLine.LineNo
 
-ExciseAdministrativeDocumentLine.ParentDocument = StoreTransactionLine.TransactionObj
+ExciseStampOperationLine.ParentDocument = StoreTransactionLine.TransactionObj
 
-ExciseAdministrativeDocumentLine.Product = StoreTransactionLine.Product
+ExciseStampOperationLine.Product = StoreTransactionLine.Product
 
-ExciseAdministrativeDocumentLine.Quantity = StoreTransactionLine.REMAINING(MQuantity)
+ExciseStampOperationLine.Quantity = StoreTransactionLine.REMAINING(MQuantity)
 
-ExciseAdministrativeDocumentLine.QuantityUnit = StoreTransactionLine.QuantityUnit
+ExciseStampOperationLineLine.ExciseStampType = StoreTransactionLine.Product.ExciseStampType
 
-ExciseAdministrativeDocumentLine.QuantityBase = StoreTransactionLine.REMAINING(MQuantityBase)
 
-ExciseAdministrativeDocumentLine.MeasuringTransaction = StoreTransactionLine.Lot.ExciseMeasuringTransaction
-
-ExciseAdministrativeDocumentLine.ExciseAlcoholicStrength = StoreTransactionLine.Product.ExciseAlcoholicStrength
-
-ExciseAdministrativeDocumentLine.ExciseProduct = StoreTransactionLine.Product.ExciseProduct
-
-ExciseAdministrativeDocumentLine.ExcisePurposeCode = DefaultExcisePurposeCode
-
-ExciseAdministrativeDocumentLine.ExciseDutyRate = DetermineExciseDutyRate(ExciseProduct, ExcisePurposeCode, Currency)
-
-ExciseAdministrativeDocumentLine.ExciseDutyRateValue = ExciseDutyRate.ExciseDutyRateField
-
-ExciseAdministrativeDocumentLine.ExciseAmountBase = CalculateExciseAmountBase(ExciseProduct, QuantityBase, ExciseAlcoholicStrength)
-
-ExciseAdministrativeDocumentLine.ExciseAmount = ExciseAmountBase * ExciseDutyRateValue
 </code></pre>
-<h6 id="functions">Functions:</h6>
-<p><strong>DefaultExcisePurposeCode</strong> - return this ExcisePurposeCode which has check &quot;Is Default&quot; in ExcisePurposeCodes table.</p>
-<p><a href="https://docs.erp.net/model/entities/Finance.Excise.ExcisePurposeCodes.html">https://docs.erp.net/model/entities/Finance.Excise.ExcisePurposeCodes.html</a></p>
-<p><strong>DetermineExciseDutyRate (ExciseProduct, ExcisePurposeCode, Currency)</strong> - return this ExciseDutyRate which has match with the two parameters ExciseProduct and ExcisePurposeCode in ExciseDutyRates table.</p>
-<p><a href="https://docs.erp.net/model/entities/Finance.Excise.ExciseDutyRates.html">https://docs.erp.net/model/entities/Finance.Excise.ExciseDutyRates.html</a></p>
-<p><strong>CalculateExciseAmountBase(ExciseProduct, QuantityBase, ExciseAlcoholicStrength)</strong> - calculate ExciseAmountBase with ExciseProduct.ExciseProductCategory.CalculationAlgorithm and parameters Quantity и ExciseAlcoholicStrength.</p>
-<p><a href="https://docs.erp.net/model/entities/Finance.Excise.ExciseProductCategories.html#calculationalgorithm">https://docs.erp.net/model/entities/Finance.Excise.ExciseProductCategories.html#calculationalgorithm</a></p>
 </article>
           </div>
           
@@ -250,7 +214,7 @@ ExciseAdministrativeDocumentLine.ExciseAmount = ExciseAmountBase * ExciseDutyRat
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/ErpNetDocs/model/blob/master/generations/LOG0206.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/ErpNetDocs/model/blob/master/generations/LOG0208.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
