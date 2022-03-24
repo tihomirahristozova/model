@@ -49,6 +49,7 @@ Aggregate Root:
 | [SerialNumber](Logistics.Inventory.ReconciliationLines.md#serialnumber) | [SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable) | Item serial number for serialized items. null for non-serializable items. `Filter(multi eq)` |
 | [Store](Logistics.Inventory.ReconciliationLines.md#store) | [Stores](Logistics.Inventory.Stores.md) | The store, containing the reconciled product. `Required` `Filter(multi eq)` |
 | [StoreBin](Logistics.Inventory.ReconciliationLines.md#storebin) | [StoreBins](Logistics.Inventory.StoreBins.md) (nullable) | The store bin, that was counted. `Filter(multi eq)` |
+| [WarehouseTransaction](Logistics.Inventory.ReconciliationLines.md#warehousetransaction) | [WarehouseTransactions](Logistics.Wms.WarehouseTransactions.md) (nullable) | The warehouse operation, whose result is reflected in the current line. Null when the reconciliation line is not a result of the counting warehouse operations in the Warehouse Management module. `Filter(multi eq)` `Introduced in version 22.1.6.13` |
 
 
 ## Attribute Details
@@ -248,6 +249,15 @@ _Supported Filters_: **Equals, EqualsIn**
 
 _Front-End Recalc Expressions:_  
 `obj.Reconciliation.DefaultStoreBin.IfNullThen( obj.StoreBin)`
+### WarehouseTransaction
+
+The warehouse operation, whose result is reflected in the current line. Null when the reconciliation line is not a result of the counting warehouse operations in the Warehouse Management module. `Filter(multi eq)` `Introduced in version 22.1.6.13`
+
+_Type_: **[WarehouseTransactions](Logistics.Wms.WarehouseTransactions.md) (nullable)**  
+_Indexed_: **True**  
+_Category_: **System**  
+_Supported Filters_: **Equals, EqualsIn**  
+
 
 ## API Methods
 

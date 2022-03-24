@@ -5,7 +5,7 @@
 
 Entity: [General.Contacts.Persons](~/entities/General.Contacts.Persons.md)
 
-Personal records. Requires related party record. Entity: Cm_Persons
+Personal records. Requires related party record. Entity: Cm_Persons (Introduced in version 22.1.6.13)
 
 ## Owner Tables Hierarchy
 

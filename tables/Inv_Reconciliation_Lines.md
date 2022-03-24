@@ -34,6 +34,7 @@ Store reconciliations (physical counting) detail lines. Each line contains the r
 |[Store_Bin_Id](#store_bin_id)|`uniqueidentifier` |The store bin, that was counted|
 |[Store_Id](#store_id)|`uniqueidentifier` |The store, containing the reconciled product|
 |[Transaction_Timestamp](#transaction_timestamp)|`datetime` |Exact time when the transaction occurred|
+|[Warehouse_Transaction_Id](#warehouse_transaction_id)|`uniqueidentifier` |The warehouse operation, whose result is reflected in the current line. Null when the reconciliation line is not a result of the counting warehouse operations in the Warehouse Management module.|
 
 ## Columns
 
@@ -642,5 +643,42 @@ Exact time when the transaction occurred
 |UI Width|Medium|
 |User Login|no|
 |Visible|no|
+
+### Warehouse_Transaction_Id
+
+
+The warehouse operation, whose result is reflected in the current line. Null when the reconciliation line is not a result of the counting warehouse operations in the Warehouse Management module.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|Referenced Table|[Wms_Warehouse_Transactions](Wms_Warehouse_Transactions.md)|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Warehouse_Transaction_Id - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
 
 

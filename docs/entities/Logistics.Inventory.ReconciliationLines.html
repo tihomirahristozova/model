@@ -209,6 +209,11 @@ Aggregate Root:<br>
 <td><a href="Logistics.Inventory.StoreBins.html">StoreBins</a> (nullable)</td>
 <td>The store bin, that was counted. <code>Filter(multi eq)</code></td>
 </tr>
+<tr>
+<td><a href="Logistics.Inventory.ReconciliationLines.html#warehousetransaction">WarehouseTransaction</a></td>
+<td><a href="Logistics.Wms.WarehouseTransactions.html">WarehouseTransactions</a> (nullable)</td>
+<td>The warehouse operation, whose result is reflected in the current line. Null when the reconciliation line is not a result of the counting warehouse operations in the Warehouse Management module. <code>Filter(multi eq)</code> <code>Introduced in version 22.1.6.13</code></td>
+</tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
@@ -346,6 +351,12 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>obj.Reconciliation.DefaultStoreBin.IfNullThen( obj.StoreBin)</code></p>
+<h3 id="warehousetransaction">WarehouseTransaction</h3>
+<p>The warehouse operation, whose result is reflected in the current line. Null when the reconciliation line is not a result of the counting warehouse operations in the Warehouse Management module. <code>Filter(multi eq)</code> <code>Introduced in version 22.1.6.13</code></p>
+<p><em>Type</em>: <strong><a href="Logistics.Wms.WarehouseTransactions.html">WarehouseTransactions</a> (nullable)</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="api-methods">API Methods</h2>
 <p>Methods that can be invoked in public APIs.</p>
 <h3 id="getallowedcustompropertyvalues">GetAllowedCustomPropertyValues</h3>

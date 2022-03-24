@@ -6,7 +6,7 @@ uid: General.Contacts.Persons
 **Namespace:** [General.Contacts](General.Contacts.md)  
 **Inherited From:** [General.Contacts.Parties](General.Contacts.Parties.md)  
 
-Personal records. Requires related party record. Entity: Cm_Persons
+Personal records. Requires related party record. Entity: Cm_Persons (Introduced in version 22.1.6.13)
 
 ## Default Visualization
 Default Display Text Format:  
