@@ -700,6 +700,9 @@ references:
 - uid: Finance.Excise.ExcisePurposeCodes
   name: Finance.Excise.ExcisePurposeCodes Entity
   href: entities/Finance.Excise.ExcisePurposeCodes.html
+- uid: Finance.Excise.ExciseStampLots
+  name: Finance.Excise.ExciseStampLots Entity
+  href: entities/Finance.Excise.ExciseStampLots.html
 - uid: Finance.Excise.ExciseStampOperationTypes
   name: Finance.Excise.ExciseStampOperationTypes Entity
   href: entities/Finance.Excise.ExciseStampOperationTypes.html

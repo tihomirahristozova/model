@@ -32,6 +32,7 @@ Aggregate Tree
 | [Quantity](Logistics.Wms.WarehouseTransactions.md#quantity) | decimal (12, 3) | The transacted net change in quantity. Positive values indicate transactions. Negative values are used for adjustments. `Required` `Default(0)` `Filter(multi eq;ge;le)` 
 | [QuantityBase](Logistics.Wms.WarehouseTransactions.md#quantitybase) | [Quantity (12, 3)](../data-types.md#quantity) | Quantity in the base measurement unit of the product. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Introduced in version 22.1.5.9` 
 | [StandardQuantity](Logistics.Wms.WarehouseTransactions.md#standardquantity) | [Quantity (12, 3)](../data-types.md#quantity) | The theoretical quantity according to the current measurement dimensions of the product. Used to measure the execution. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Introduced in version 22.1.5.9` 
+| [TaskType](Logistics.Wms.WarehouseTransactions.md#tasktype) | [TaskType](Logistics.Wms.WarehouseTransactions.md#tasktype) | The type of the task (operation), which was transacted. `Required` `Introduced in version 22.1.6.15` 
 
 ## References
 
@@ -139,6 +140,32 @@ The theoretical quantity according to the current measurement dimensions of the 
 
 _Type_: **[Quantity (12, 3)](../data-types.md#quantity)**  
 _Category_: **System**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+
+### TaskType
+
+The type of the task (operation), which was transacted. `Required` `Introduced in version 22.1.6.15`
+
+_Type_: **[TaskType](Logistics.Wms.WarehouseTransactions.md#tasktype)**  
+_Category_: **System**  
+Allowed values for the `TaskType`(Logistics.Wms.WarehouseOrderLines.md#tasktype) data attribute  
+_Allowed Values (Logistics.Wms.WarehouseOrderLinesRepository.TaskType Enum Members)_  
+
+| Value | Description |
+| ---- | --- |
+| Receive | Receive value. Stored as 'REC'. <br /> _Database Value:_ 'REC' <br /> _Model Value:_ 0 <br /> _Domain API Value:_ 'Receive' |
+| Despatch | Despatch value. Stored as 'DES'. <br /> _Database Value:_ 'DES' <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'Despatch' |
+| Move | Move value. Stored as 'MOV'. <br /> _Database Value:_ 'MOV' <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'Move' |
+| Label | Label value. Stored as 'LBL'. <br /> _Database Value:_ 'LBL' <br /> _Model Value:_ 3 <br /> _Domain API Value:_ 'Label' |
+| Inspect | Inspect value. Stored as 'INS'. <br /> _Database Value:_ 'INS' <br /> _Model Value:_ 4 <br /> _Domain API Value:_ 'Inspect' |
+| Pack | Pack value. Stored as 'PCK'. <br /> _Database Value:_ 'PCK' <br /> _Model Value:_ 5 <br /> _Domain API Value:_ 'Pack' |
+| Unpack | Unpack value. Stored as 'UPK'. <br /> _Database Value:_ 'UPK' <br /> _Model Value:_ 6 <br /> _Domain API Value:_ 'Unpack' |
+| AssembleKit | AssembleKit value. Stored as 'KIT'. <br /> _Database Value:_ 'KIT' <br /> _Model Value:_ 7 <br /> _Domain API Value:_ 'AssembleKit' |
+| ReverseKitting | ReverseKitting value. Stored as 'RKT'. <br /> _Database Value:_ 'RKT' <br /> _Model Value:_ 8 <br /> _Domain API Value:_ 'ReverseKitting' |
+| Count | Count value. Stored as 'CNT'. <br /> _Database Value:_ 'CNT' <br /> _Model Value:_ 9 <br /> _Domain API Value:_ 'Count' |
+| Task | Task value. Stored as 'TSK'. <br /> _Database Value:_ 'TSK' <br /> _Model Value:_ 10 <br /> _Domain API Value:_ 'Task' |
+
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 

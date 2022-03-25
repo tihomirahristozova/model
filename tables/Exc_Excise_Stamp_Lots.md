@@ -1,20 +1,26 @@
 # Table Exc_Excise_Stamp_Lots
 
 
+## Entity
+
+Entity: [Finance.Excise.ExciseStampLots](~/entities/Finance.Excise.ExciseStampLots.md)
+
+Sequence of excise stamps with same production batch and type, received with one delivery. Entity: Exc_Excise_Stamp_Lots (Introduced in version 22.1.6.13)
+
 ## Summary
 
 | Name | Type | Description |
 | - | - | --- |
 |[__Object_Version](#__object_version)|`int` ||
-|[Batch_Number](#batch_number)|`nvarchar(50)` |Production batch of the Excise Stamps.|
-|[End_Number](#end_number)|`nvarchar(30)` |End number of the lot.|
+|[Batch_Number](#batch_number)|`nvarchar(50)` |Production batch of the Excise Stamps|
+|[End_Number](#end_number)|`nvarchar(30)` |End number of the lot|
 |[Excise_Stamp_Lot_Id](#excise_stamp_lot_id)|`uniqueidentifier` `PK`||
-|[Excise_Stamp_Type_Id](#excise_stamp_type_id)|`uniqueidentifier` |Specifies the excise stamp type of the excise stamps in the lot.|
-|[Is_Active](#is_active)|`bit` ||
+|[Excise_Stamp_Type_Id](#excise_stamp_type_id)|`uniqueidentifier` |Specifies the excise stamp type of the excise stamps in the lot|
+|[Is_Active](#is_active)|`bit` |Is Active|
 |[Purchase_Lot_Number](#purchase_lot_number)|`nvarchar(30)` |Type and number of the document with which the excise stamps were received from the customs administration.|
-|[Quantity](#quantity)|`int` |Number of excise stamps in the lot.|
+|[Quantity](#quantity)|`int` |Number of excise stamps in the lot|
 |[Row_Version](#row_version)|`timestamp` ||
-|[Start_Number](#start_number)|`nvarchar(30)` |Start number of the lot.|
+|[Start_Number](#start_number)|`nvarchar(30)` |Start number of the lot|
 
 ## Columns
 
@@ -48,7 +54,7 @@
 ### Batch_Number
 
 
-Production batch of the Excise Stamps.
+Production batch of the Excise Stamps
 
 | Property | Value |
 | - | - |
@@ -75,10 +81,16 @@ Production batch of the Excise Stamps.
 |User Login|no|
 |Visible|yes|
 
+#### Batch_Number - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|no|no|
+
 ### End_Number
 
 
-End number of the lot.
+End number of the lot
 
 | Property | Value |
 | - | - |
@@ -141,7 +153,7 @@ End number of the lot.
 ### Excise_Stamp_Type_Id
 
 
-Specifies the excise stamp type of the excise stamps in the lot.
+Specifies the excise stamp type of the excise stamps in the lot
 
 | Property | Value |
 | - | - |
@@ -177,11 +189,14 @@ Specifies the excise stamp type of the excise stamps in the lot.
 
 ### Is_Active
 
+
+Is Active
+
 | Property | Value |
 | - | - |
 |Auto Complete|no|
 |Data Filter|no|
-|Default Value|None|
+|Default Value|True|
 |Enter Stop|yes|
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
@@ -201,6 +216,12 @@ Specifies the excise stamp type of the excise stamps in the lot.
 |UI Width|Medium|
 |User Login|no|
 |Visible|yes|
+
+#### Is_Active - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`True`|no|no|
 
 ### Purchase_Lot_Number
 
@@ -235,13 +256,13 @@ Type and number of the document with which the excise stamps were received from 
 ### Quantity
 
 
-Number of excise stamps in the lot.
+Number of excise stamps in the lot
 
 | Property | Value |
 | - | - |
 |Auto Complete|no|
 |Data Filter|no|
-|Default Value|None|
+|Default Value|0|
 |Enter Stop|yes|
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
@@ -292,7 +313,7 @@ Number of excise stamps in the lot.
 ### Start_Number
 
 
-Start number of the lot.
+Start number of the lot
 
 | Property | Value |
 | - | - |

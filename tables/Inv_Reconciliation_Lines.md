@@ -23,6 +23,7 @@ Store reconciliations (physical counting) detail lines. Each line contains the r
 |[Notes](#notes)|`nvarchar(254)` ||
 |[Product_Code_Id](#product_code_id)|`uniqueidentifier` |Selects the product thru some of the product codes.|
 |[Product_Id](#product_id)|`uniqueidentifier` |The id of the reconciled product|
+|[Product_Variant_Id](#product_variant_id)|`uniqueidentifier` |The product variant, which was reconciled.|
 |[Quantity](#quantity)|`decimal(18, 3)` |Quantity found at the reconciliation, |
 |[Quantity_Base](#quantity_base)|`decimal(18, 3)` |Quantity found at the reconciliation, expressed in base measurement units|
 |[Quantity_Unit_Id](#quantity_unit_id)|`uniqueidentifier` |The measurement unit of Quantity|
@@ -263,6 +264,44 @@ The id of the reconciled product
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+
+### Product_Variant_Id
+
+
+The product variant, which was reconciled.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Depends On|[Product_Id](#product_id)|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|Referenced Table|[Gen_Product_Variants](Gen_Product_Variants.md)|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Product_Variant_Id - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|yes|
 
 ### Quantity
 

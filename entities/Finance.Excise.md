@@ -12,6 +12,7 @@ uid: Finance.Excise
 - [ExciseProductCategories](Finance.Excise.ExciseProductCategories.md)  
 - [ExciseProducts](Finance.Excise.ExciseProducts.md)  
 - [ExcisePurposeCodes](Finance.Excise.ExcisePurposeCodes.md)  
+- [ExciseStampLots](Finance.Excise.ExciseStampLots.md)  
 - [ExciseStampOperationTypes](Finance.Excise.ExciseStampOperationTypes.md)  
 - [ExciseStampTypes](Finance.Excise.ExciseStampTypes.md)  
 - [MeasuringTransactions](Finance.Excise.MeasuringTransactions.md)  

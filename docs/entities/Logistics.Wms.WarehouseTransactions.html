@@ -147,6 +147,11 @@ __</p>
 <td><a href="../data-types.html#quantity">Quantity (12, 3)</a></td>
 <td>The theoretical quantity according to the current measurement dimensions of the product. Used to measure the execution. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>Introduced in version 22.1.5.9</code></td>
 </tr>
+<tr>
+<td><a href="Logistics.Wms.WarehouseTransactions.html#tasktype">TaskType</a></td>
+<td><a href="Logistics.Wms.WarehouseTransactions.html#tasktype">TaskType</a></td>
+<td>The type of the task (operation), which was transacted. <code>Required</code> <code>Introduced in version 22.1.6.15</code></td>
+</tr>
 </tbody>
 </table>
 <h2 id="references">References</h2>
@@ -297,6 +302,68 @@ Allowed values for the <code>Direction</code>(Logistics.Wms.WarehouseTransaction
 <p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity (12, 3)</a></strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="tasktype">TaskType</h3>
+<p>The type of the task (operation), which was transacted. <code>Required</code> <code>Introduced in version 22.1.6.15</code></p>
+<p><em>Type</em>: <strong><a href="Logistics.Wms.WarehouseTransactions.html#tasktype">TaskType</a></strong><br>
+<em>Category</em>: <strong>System</strong><br>
+Allowed values for the <code>TaskType</code>(Logistics.Wms.WarehouseOrderLines.md#tasktype) data attribute<br>
+<em>Allowed Values (Logistics.Wms.WarehouseOrderLinesRepository.TaskType Enum Members)</em></p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Receive</td>
+<td>Receive value. Stored as 'REC'. <br> <em>Database Value:</em> 'REC' <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'Receive'</td>
+</tr>
+<tr>
+<td>Despatch</td>
+<td>Despatch value. Stored as 'DES'. <br> <em>Database Value:</em> 'DES' <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'Despatch'</td>
+</tr>
+<tr>
+<td>Move</td>
+<td>Move value. Stored as 'MOV'. <br> <em>Database Value:</em> 'MOV' <br> <em>Model Value:</em> 2 <br> <em>Domain API Value:</em> 'Move'</td>
+</tr>
+<tr>
+<td>Label</td>
+<td>Label value. Stored as 'LBL'. <br> <em>Database Value:</em> 'LBL' <br> <em>Model Value:</em> 3 <br> <em>Domain API Value:</em> 'Label'</td>
+</tr>
+<tr>
+<td>Inspect</td>
+<td>Inspect value. Stored as 'INS'. <br> <em>Database Value:</em> 'INS' <br> <em>Model Value:</em> 4 <br> <em>Domain API Value:</em> 'Inspect'</td>
+</tr>
+<tr>
+<td>Pack</td>
+<td>Pack value. Stored as 'PCK'. <br> <em>Database Value:</em> 'PCK' <br> <em>Model Value:</em> 5 <br> <em>Domain API Value:</em> 'Pack'</td>
+</tr>
+<tr>
+<td>Unpack</td>
+<td>Unpack value. Stored as 'UPK'. <br> <em>Database Value:</em> 'UPK' <br> <em>Model Value:</em> 6 <br> <em>Domain API Value:</em> 'Unpack'</td>
+</tr>
+<tr>
+<td>AssembleKit</td>
+<td>AssembleKit value. Stored as 'KIT'. <br> <em>Database Value:</em> 'KIT' <br> <em>Model Value:</em> 7 <br> <em>Domain API Value:</em> 'AssembleKit'</td>
+</tr>
+<tr>
+<td>ReverseKitting</td>
+<td>ReverseKitting value. Stored as 'RKT'. <br> <em>Database Value:</em> 'RKT' <br> <em>Model Value:</em> 8 <br> <em>Domain API Value:</em> 'ReverseKitting'</td>
+</tr>
+<tr>
+<td>Count</td>
+<td>Count value. Stored as 'CNT'. <br> <em>Database Value:</em> 'CNT' <br> <em>Model Value:</em> 9 <br> <em>Domain API Value:</em> 'Count'</td>
+</tr>
+<tr>
+<td>Task</td>
+<td>Task value. Stored as 'TSK'. <br> <em>Database Value:</em> 'TSK' <br> <em>Model Value:</em> 10 <br> <em>Domain API Value:</em> 'Task'</td>
+</tr>
+</tbody>
+</table>
+<p><em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="catchquantityunit">CatchQuantityUnit</h3>

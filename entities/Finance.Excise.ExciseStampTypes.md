@@ -34,7 +34,7 @@ Aggregate Tree
 | [DisplayText](Finance.Excise.ExciseStampTypes.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [ExciseAmountPerStamp](Finance.Excise.ExciseStampTypes.md#exciseamountperstamp) | decimal (5, 2) __nullable__ | The excise duty, which is charged with one excise label. `Default(0)` 
 | [Id](Finance.Excise.ExciseStampTypes.md#id) | guid |  
-| [IsActive](Finance.Excise.ExciseStampTypes.md#isactive) | boolean | Indicates whether this excise stamp type is active and usable for choosing in new documents. `Required` `Default(true)` 
+| [IsActive](Finance.Excise.ExciseStampTypes.md#isactive) | boolean | Indicates whether this excise stamp type is active and usable for choosing in new documents. `Required` `Default(true)` `Filter(eq)` 
 | [Name](Finance.Excise.ExciseStampTypes.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | The name of this ExciseStampType. `Required` `Filter(like)` 
 | [Notes](Finance.Excise.ExciseStampTypes.md#notes) | string (max) __nullable__ | Notes for this ExciseStampType. 
 | [ObjectVersion](Finance.Excise.ExciseStampTypes.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
@@ -128,11 +128,11 @@ _Default Value_: **NewGuid**
 
 ### IsActive
 
-Indicates whether this excise stamp type is active and usable for choosing in new documents. `Required` `Default(true)`
+Indicates whether this excise stamp type is active and usable for choosing in new documents. `Required` `Default(true)` `Filter(eq)`
 
 _Type_: **boolean**  
 _Category_: **System**  
-_Supported Filters_: **NotFilterable**  
+_Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **True**  
 

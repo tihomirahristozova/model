@@ -79,6 +79,9 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="table-exc_excise_stamp_lots">Table Exc_Excise_Stamp_Lots</h1>
 
+<h2 id="entity">Entity</h2>
+<p>Entity: <a href="../entities/Finance.Excise.ExciseStampLots.html">Finance.Excise.ExciseStampLots</a></p>
+<p>Sequence of excise stamps with same production batch and type, received with one delivery. Entity: Exc_Excise_Stamp_Lots (Introduced in version 22.1.6.13)</p>
 <h2 id="summary">Summary</h2>
 <table>
 <thead>
@@ -97,12 +100,12 @@
 <tr>
 <td><a href="#batch_number">Batch_Number</a></td>
 <td><code>nvarchar(50)</code></td>
-<td>Production batch of the Excise Stamps.</td>
+<td>Production batch of the Excise Stamps</td>
 </tr>
 <tr>
 <td><a href="#end_number">End_Number</a></td>
 <td><code>nvarchar(30)</code></td>
-<td>End number of the lot.</td>
+<td>End number of the lot</td>
 </tr>
 <tr>
 <td><a href="#excise_stamp_lot_id">Excise_Stamp_Lot_Id</a></td>
@@ -112,12 +115,12 @@
 <tr>
 <td><a href="#excise_stamp_type_id">Excise_Stamp_Type_Id</a></td>
 <td><code>uniqueidentifier</code></td>
-<td>Specifies the excise stamp type of the excise stamps in the lot.</td>
+<td>Specifies the excise stamp type of the excise stamps in the lot</td>
 </tr>
 <tr>
 <td><a href="#is_active">Is_Active</a></td>
 <td><code>bit</code></td>
-<td></td>
+<td>Is Active</td>
 </tr>
 <tr>
 <td><a href="#purchase_lot_number">Purchase_Lot_Number</a></td>
@@ -127,7 +130,7 @@
 <tr>
 <td><a href="#quantity">Quantity</a></td>
 <td><code>int</code></td>
-<td>Number of excise stamps in the lot.</td>
+<td>Number of excise stamps in the lot</td>
 </tr>
 <tr>
 <td><a href="#row_version">Row_Version</a></td>
@@ -137,7 +140,7 @@
 <tr>
 <td><a href="#start_number">Start_Number</a></td>
 <td><code>nvarchar(30)</code></td>
-<td>Start number of the lot.</td>
+<td>Start number of the lot</td>
 </tr>
 </tbody>
 </table>
@@ -242,7 +245,7 @@
 </tbody>
 </table>
 <h3 id="batch_number">Batch_Number</h3>
-<p>Production batch of the Excise Stamps.</p>
+<p>Production batch of the Excise Stamps</p>
 <table>
 <thead>
 <tr>
@@ -341,8 +344,27 @@
 </tr>
 </tbody>
 </table>
+<h4 id="batch_number---supported-filters">Batch_Number - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>no</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
 <h3 id="end_number">End_Number</h3>
-<p>End number of the lot.</p>
+<p>End number of the lot</p>
 <table>
 <thead>
 <tr>
@@ -560,7 +582,7 @@
 </tbody>
 </table>
 <h3 id="excise_stamp_type_id">Excise_Stamp_Type_Id</h3>
-<p>Specifies the excise stamp type of the excise stamps in the lot.</p>
+<p>Specifies the excise stamp type of the excise stamps in the lot</p>
 <table>
 <thead>
 <tr>
@@ -683,6 +705,7 @@
 </tbody>
 </table>
 <h3 id="is_active">Is_Active</h3>
+<p>Is Active</p>
 <table>
 <thead>
 <tr>
@@ -701,7 +724,7 @@
 </tr>
 <tr>
 <td>Default Value</td>
-<td>None</td>
+<td>True</td>
 </tr>
 <tr>
 <td>Enter Stop</td>
@@ -778,6 +801,25 @@
 <tr>
 <td>Visible</td>
 <td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="is_active---supported-filters">Is_Active - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>True</code></td>
+<td>no</td>
+<td>no</td>
 </tr>
 </tbody>
 </table>
@@ -882,7 +924,7 @@
 </tbody>
 </table>
 <h3 id="quantity">Quantity</h3>
-<p>Number of excise stamps in the lot.</p>
+<p>Number of excise stamps in the lot</p>
 <table>
 <thead>
 <tr>
@@ -901,7 +943,7 @@
 </tr>
 <tr>
 <td>Default Value</td>
-<td>None</td>
+<td>0</td>
 </tr>
 <tr>
 <td>Enter Stop</td>
@@ -1081,7 +1123,7 @@
 </tbody>
 </table>
 <h3 id="start_number">Start_Number</h3>
-<p>Start number of the lot.</p>
+<p>Start number of the lot</p>
 <table>
 <thead>
 <tr>

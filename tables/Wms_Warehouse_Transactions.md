@@ -27,6 +27,7 @@ Represents increase or decrease in the quantity available in a warehouse locatio
 |[Row_Version](#row_version)|`timestamp` ||
 |[Serial_Number_Id](#serial_number_id)|`uniqueidentifier` |The serial number which was transacted. NULL when the transaction was not for a specific serial number.|
 |[Standard_Quantity](#standard_quantity)|`decimal(12, 3)` |The theoretical quantity according to the current measurement dimensions of the product. Used to measure the execution.|
+|[Task_Type](#task_type)|`nvarchar(3)` Allowed: `REC`, `DES`, `MOV`, `LBL`, `INS`, `PCK`, `UPK`, `KIT`, `RKT`, `CNT`, `TSK`|The type of the task (operation), which was transacted.|
 |[Warehouse_Id](#warehouse_id)|`uniqueidentifier` |The warehouse in which the transaction occurred.|
 |[Warehouse_Location_Id](#warehouse_location_id)|`uniqueidentifier` |The warehouse location, where the transaction occurred.|
 |[Warehouse_Order_Id](#warehouse_order_id)|`uniqueidentifier` |The order which created this transaction. NULL when this transaction was not based on order.|
@@ -575,6 +576,37 @@ The theoretical quantity according to the current measurement dimensions of the 
 |Summary Type|None|
 |Supports EQUALS_IN|no|
 |Type|decimal(12, 3)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+### Task_Type
+
+
+The type of the task (operation), which was transacted.
+
+| Property | Value |
+| - | - |
+|Allowed Values|`REC`, `DES`, `MOV`, `LBL`, `INS`, `PCK`, `UPK`, `KIT`, `RKT`, `CNT`, `TSK`|
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|3|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|nvarchar(3)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

@@ -347,6 +347,12 @@ Indicates whether this excise stamp type is active and usable for choosing in ne
 |User Login|no|
 |Visible|yes|
 
+#### Is_Active - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`True`|no|no|
+
 ### Measurement_Unit_Id
 
 

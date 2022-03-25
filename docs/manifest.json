@@ -12732,6 +12732,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "entities/Finance.Excise.ExciseStampLots.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Finance.Excise.ExciseStampLots.html",
+          "hash": "z3wclGsrfHACL3Oh4NaEtw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "entities/Finance.Excise.ExciseStampOperationTypes.md",
       "output": {
         ".html": {
@@ -12748,7 +12760,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Finance.Excise.ExciseStampTypes.html",
-          "hash": "brrUdbnbMfoYt+/4SSrgcA=="
+          "hash": "pop5fpBkAobqlpYvfbMx9Q=="
         }
       },
       "is_incremental": false,
@@ -12796,7 +12808,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Finance.Excise.html",
-          "hash": "S5FCCsZ/yadmKPx3c1CnKA=="
+          "hash": "QLLG4H/y3petqGTKOC/rOg=="
         }
       },
       "is_incremental": false,
@@ -14584,7 +14596,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Logistics.Inventory.ReconciliationLines.html",
-          "hash": "KLXF4X7IWZyhVWqU7ta0sA=="
+          "hash": "r+2c/aq9I8pupr7gmLRzWQ=="
         }
       },
       "is_incremental": false,
@@ -15436,7 +15448,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Logistics.Wms.WarehouseTransactions.html",
-          "hash": "a0yLqALLQciz7bdlcfuk8w=="
+          "hash": "TCo0wMN4yWDjqzu92gZrbw=="
         }
       },
       "is_incremental": false,
@@ -17044,7 +17056,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/toc.html",
-          "hash": "z4+7VHPiwIzwlZbczWP07A=="
+          "hash": "uYwJ0v9kMIhO8RyAoFCGmQ=="
         }
       },
       "is_incremental": false,
@@ -20214,7 +20226,7 @@
       "output": {
         ".html": {
           "relative_path": "tables/Exc.html",
-          "hash": "uOKv2aQmJGNHabU7H5fCYw=="
+          "hash": "HNLBe/oh01DpAYx4hq2Ieg=="
         }
       },
       "is_incremental": false,
@@ -20322,7 +20334,7 @@
       "output": {
         ".html": {
           "relative_path": "tables/Exc_Excise_Stamp_Lots.html",
-          "hash": "2mD7GPJ+e4MbT4lw9EBgVA=="
+          "hash": "rx66WyNZ3tROZz1+lsvvBA=="
         }
       },
       "is_incremental": false,
@@ -20342,11 +20354,23 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "tables/Exc_Excise_Stamp_Operations.md",
+      "output": {
+        ".html": {
+          "relative_path": "tables/Exc_Excise_Stamp_Operations.html",
+          "hash": "RBj5uQbVtxSX2U65NenUgg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "tables/Exc_Excise_Stamp_Types.md",
       "output": {
         ".html": {
           "relative_path": "tables/Exc_Excise_Stamp_Types.html",
-          "hash": "2jRDn2r1OpeKLVw7AqKaAw=="
+          "hash": "Pr6FWgx89ne12srOylBnKg=="
         }
       },
       "is_incremental": false,
@@ -22002,7 +22026,7 @@
       "output": {
         ".html": {
           "relative_path": "tables/Inv_Reconciliation_Lines.html",
-          "hash": "xuRxX7qZ4lb3v0JIIwpjxA=="
+          "hash": "Wx82KNp6+SFo8vYmHkrTzQ=="
         }
       },
       "is_incremental": false,
@@ -25470,7 +25494,7 @@
       "output": {
         ".html": {
           "relative_path": "tables/Wms_Warehouse_Transactions.html",
-          "hash": "gdCpkJT2RbzsqZ6wXjITgA=="
+          "hash": "QOVvhZz7+GqyoK3DXsFx+A=="
         }
       },
       "is_incremental": false,
@@ -25518,7 +25542,7 @@
       "output": {
         ".html": {
           "relative_path": "tables/index.html",
-          "hash": "7drCNXMU7x38IUgvuqE4Pg=="
+          "hash": "G6c9hGQBVsJpbYxnlQoPOw=="
         }
       },
       "is_incremental": false,
@@ -25530,7 +25554,7 @@
       "output": {
         ".html": {
           "relative_path": "tables/toc.html",
-          "hash": "njezAFQBecxKkTy9FZqlEg=="
+          "hash": "acqR0OkqGyl0YNYi7QBQ7A=="
         }
       },
       "is_incremental": false,
