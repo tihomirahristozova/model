@@ -20226,7 +20226,7 @@
       "output": {
         ".html": {
           "relative_path": "tables/Exc.html",
-          "hash": "HNLBe/oh01DpAYx4hq2Ieg=="
+          "hash": "0ZLU4nqNVNnRRSQ0RX/bvg=="
         }
       },
       "is_incremental": false,
@@ -20335,6 +20335,18 @@
         ".html": {
           "relative_path": "tables/Exc_Excise_Stamp_Lots.html",
           "hash": "rx66WyNZ3tROZz1+lsvvBA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tables/Exc_Excise_Stamp_Operation_Lines.md",
+      "output": {
+        ".html": {
+          "relative_path": "tables/Exc_Excise_Stamp_Operation_Lines.html",
+          "hash": "9fonbFHiSwx/BMJAl63fdg=="
         }
       },
       "is_incremental": false,
@@ -25542,7 +25554,7 @@
       "output": {
         ".html": {
           "relative_path": "tables/index.html",
-          "hash": "G6c9hGQBVsJpbYxnlQoPOw=="
+          "hash": "7yf/DtV6ggDjqwuuG2tYoA=="
         }
       },
       "is_incremental": false,
@@ -25554,7 +25566,7 @@
       "output": {
         ".html": {
           "relative_path": "tables/toc.html",
-          "hash": "acqR0OkqGyl0YNYi7QBQ7A=="
+          "hash": "EwKlIF/bKpKsaXQsmac+Yw=="
         }
       },
       "is_incremental": false,

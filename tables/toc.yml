@@ -460,6 +460,8 @@
     href: Exc_Excise_Purpose_Codes.md
   - name: Exc_Excise_Stamp_Lots
     href: Exc_Excise_Stamp_Lots.md
+  - name: Exc_Excise_Stamp_Operation_Lines
+    href: Exc_Excise_Stamp_Operation_Lines.md
   - name: Exc_Excise_Stamp_Operation_Types
     href: Exc_Excise_Stamp_Operation_Types.md
   - name: Exc_Excise_Stamp_Operations

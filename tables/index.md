@@ -247,6 +247,7 @@
 * [Exc_Excise_Products](Exc_Excise_Products.md)
 * [Exc_Excise_Purpose_Codes](Exc_Excise_Purpose_Codes.md)
 * [Exc_Excise_Stamp_Lots](Exc_Excise_Stamp_Lots.md)
+* [Exc_Excise_Stamp_Operation_Lines](Exc_Excise_Stamp_Operation_Lines.md)
 * [Exc_Excise_Stamp_Operation_Types](Exc_Excise_Stamp_Operation_Types.md)
 * [Exc_Excise_Stamp_Operations](Exc_Excise_Stamp_Operations.md)
 * [Exc_Excise_Stamp_Types](Exc_Excise_Stamp_Types.md)
