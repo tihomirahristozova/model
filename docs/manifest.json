@@ -9962,6 +9962,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "business-rules/R32981.md",
+      "output": {
+        ".html": {
+          "relative_path": "business-rules/R32981.html",
+          "hash": "UQCmDeRqXlCpgKaaPrf3bw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "data-types.md",
       "output": {
         ".html": {
@@ -17392,7 +17404,7 @@
       "output": {
         ".html": {
           "relative_path": "generations/LOG0207.html",
-          "hash": "nfEE9UiF1AtkoiShauGBMA=="
+          "hash": "XR5isCTpM9QQgOcmA79u7A=="
         }
       },
       "is_incremental": false,
@@ -17466,7 +17478,7 @@
       "output": {
         ".html": {
           "relative_path": "reference/common-business-rules/all-documents.html",
-          "hash": "76b1zDP7OsEpu8TUZj1fSQ=="
+          "hash": "TLqrAAcXsgF1Ri8MoUDlQA=="
         }
       },
       "is_incremental": false,
