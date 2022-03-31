@@ -1,13 +1,19 @@
 # Table Exc_Excise_Stamp_Operation_Lines
 
 
+## Owner Tables Hierarchy
+
+* [Exc_Excise_Stamp_Operations](Exc_Excise_Stamp_Operations.md)
+* [Gen_Documents](Gen_Documents.md)
+
 ## Summary
 
 | Name | Type | Description |
 | - | - | --- |
 |[__Object_Version](#__object_version)|`int` ||
 |[End_Number](#end_number)|`nvarchar(30)` |The end number of the sequence of excise stamps that are processed with the current operation.|
-|[Exc_Excise_Stamp_Lot_Id](#exc_excise_stamp_lot_id)|`uniqueidentifier` |The lot of the excise stamps.|
+|[Excise_Stamp_Lot_Id](#excise_stamp_lot_id)|`uniqueidentifier` |The lot of the excise stamps.|
+|[Excise_Stamp_Operation_Id](#excise_stamp_operation_id)|`uniqueidentifier` ||
 |[Excise_Stamp_Operation_Line_Id](#excise_stamp_operation_line_id)|`uniqueidentifier` `PK`||
 |[Excise_Stamp_Type_Id](#excise_stamp_type_id)|`uniqueidentifier` |Specifies the excise stamp type which is used in the current operation. Determine which excise stamp lots can be chosen.|
 |[Line_No](#line_no)|`int` |Consecutive number of the line within the excise stamp operation. Determines the order of execution of the excise stamp operation lines.|
@@ -60,7 +66,7 @@ The end number of the sequence of excise stamps that are processed with the curr
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|30|
-|Order|7|
+|Order|8|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -76,7 +82,7 @@ The end number of the sequence of excise stamps that are processed with the curr
 |User Login|no|
 |Visible|yes|
 
-### Exc_Excise_Stamp_Lot_Id
+### Excise_Stamp_Lot_Id
 
 
 The lot of the excise stamps.
@@ -90,7 +96,7 @@ The lot of the excise stamps.
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|4|
+|Order|5|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -107,11 +113,45 @@ The lot of the excise stamps.
 |User Login|no|
 |Visible|yes|
 
-#### Exc_Excise_Stamp_Lot_Id - Supported Filters
+#### Excise_Stamp_Lot_Id - Supported Filters
 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|yes|no|
+
+### Excise_Stamp_Operation_Id
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|1|
+|Ownership Reference|yes|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|Referenced Table|[Exc_Excise_Stamp_Operations](Exc_Excise_Stamp_Operations.md)|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Excise_Stamp_Operation_Id - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|no|no|
 
 ### Excise_Stamp_Operation_Line_Id
 
@@ -119,7 +159,7 @@ The lot of the excise stamps.
 | - | - |
 |Auto Complete|no|
 |Data Filter|no|
-|Default Value|None|
+|Default Value|NewGuid|
 |Enter Stop|yes|
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
@@ -160,7 +200,7 @@ Specifies the excise stamp type which is used in the current operation. Determin
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|3|
+|Order|4|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -197,7 +237,7 @@ Consecutive number of the line within the excise stamp operation. Determines the
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|1|
+|Order|2|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -217,6 +257,7 @@ Consecutive number of the line within the excise stamp operation. Determines the
 
 | Property | Value |
 | - | - |
+|Attributes|IsLongString|
 |Auto Complete|no|
 |Data Filter|no|
 |Default Value|None|
@@ -224,7 +265,7 @@ Consecutive number of the line within the excise stamp operation. Determines the
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|2147483647|
-|Order|8|
+|Order|9|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -254,13 +295,13 @@ The excise product for which the operation is applied.
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2|
+|Order|3|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
 |Primary Key|no|
 |Readonly|no|
-|Referenced Table|[Exc_Excise_Products](Exc_Excise_Products.md)|
+|Referenced Table|[Gen_Products](Gen_Products.md)|
 |RTF|no|
 |Sortable|no|
 |Summary Type|None|
@@ -291,7 +332,7 @@ The number of excise stamps that are processed with the current operation.
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|5|
+|Order|6|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -318,7 +359,7 @@ The number of excise stamps that are processed with the current operation.
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|9|
+|Order|10|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -348,7 +389,7 @@ The start number of the sequence of excise stamps that are processed with the cu
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|30|
-|Order|6|
+|Order|7|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|

@@ -130,7 +130,7 @@ The entity name of the document type e.g. Crm_Sales_Orders, Inv_Store_Orders etc
 |Default Value|None|
 |Enter Stop|yes|
 |Ignore for Insert Order|no|
-|Is Entity Name|no|
+|Is Entity Name|yes|
 |Max Length|64|
 |Order|2147483647|
 |Ownership Reference|no|

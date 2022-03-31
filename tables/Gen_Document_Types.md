@@ -264,7 +264,7 @@ System entity, which contains the documents
 |Default Value|None|
 |Enter Stop|yes|
 |Ignore for Insert Order|no|
-|Is Entity Name|no|
+|Is Entity Name|yes|
 |Max Length|64|
 |Order|2147483647|
 |Ownership Reference|no|
