@@ -150,7 +150,7 @@ __</p>
 <tr>
 <td><a href="Logistics.Wms.WarehouseTransactions.html#tasktype">TaskType</a></td>
 <td><a href="Logistics.Wms.WarehouseTransactions.html#tasktype">TaskType</a></td>
-<td>The type of the task (operation), which was transacted. <code>Required</code> <code>Introduced in version 22.1.6.15</code></td>
+<td>The type of the task (operation), which was transacted. <code>Required</code> <code>Filter(multi eq)</code> <code>Introduced in version 22.1.6.15</code></td>
 </tr>
 </tbody>
 </table>
@@ -236,7 +236,7 @@ __</p>
 <h3 id="creationtimeutc">CreationTimeUtc</h3>
 <p><em>Type</em>: <strong>datetime</strong><br>
 <em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>CurrentDateTimeUtc</strong></p>
 <h3 id="direction">Direction</h3>
@@ -304,7 +304,7 @@ Allowed values for the <code>Direction</code>(Logistics.Wms.WarehouseTransaction
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="tasktype">TaskType</h3>
-<p>The type of the task (operation), which was transacted. <code>Required</code> <code>Introduced in version 22.1.6.15</code></p>
+<p>The type of the task (operation), which was transacted. <code>Required</code> <code>Filter(multi eq)</code> <code>Introduced in version 22.1.6.15</code></p>
 <p><em>Type</em>: <strong><a href="Logistics.Wms.WarehouseTransactions.html#tasktype">TaskType</a></strong><br>
 <em>Category</em>: <strong>System</strong><br>
 Allowed values for the <code>TaskType</code>(Logistics.Wms.WarehouseOrderLines.md#tasktype) data attribute<br>
@@ -363,7 +363,7 @@ Allowed values for the <code>TaskType</code>(Logistics.Wms.WarehouseOrderLines.m
 </tr>
 </tbody>
 </table>
-<p><em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<p><em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="catchquantityunit">CatchQuantityUnit</h3>

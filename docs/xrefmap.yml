@@ -703,6 +703,12 @@ references:
 - uid: Finance.Excise.ExciseStampLots
   name: Finance.Excise.ExciseStampLots Entity
   href: entities/Finance.Excise.ExciseStampLots.html
+- uid: Finance.Excise.ExciseStampOperationLines
+  name: Finance.Excise.ExciseStampOperationLines Entity
+  href: entities/Finance.Excise.ExciseStampOperationLines.html
+- uid: Finance.Excise.ExciseStampOperations
+  name: Finance.Excise.ExciseStampOperations Entity
+  href: entities/Finance.Excise.ExciseStampOperations.html
 - uid: Finance.Excise.ExciseStampOperationTypes
   name: Finance.Excise.ExciseStampOperationTypes Entity
   href: entities/Finance.Excise.ExciseStampOperationTypes.html

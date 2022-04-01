@@ -25,7 +25,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [BatchNumber](Finance.Excise.ExciseStampLots.md#batchnumber) | string (50) | Production batch of the Excise Stamps. `Required` `Filter(eq)` `ORD` 
+| [BatchNumber](Finance.Excise.ExciseStampLots.md#batchnumber) | string (30) | Production batch of the Excise Stamps. `Required` `Filter(eq)` `ORD` 
 | [DisplayText](Finance.Excise.ExciseStampLots.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [EndNumber](Finance.Excise.ExciseStampLots.md#endnumber) | string (30) | End number of the lot. `Required` 
 | [Id](Finance.Excise.ExciseStampLots.md#id) | guid |  
@@ -33,7 +33,7 @@ Aggregate Tree
 | [ObjectVersion](Finance.Excise.ExciseStampLots.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 | [PurchaseLotNumber](Finance.Excise.ExciseStampLots.md#purchaselotnumber) | string (30) | Type and number of the document with which the excise stamps were received from the customs administration. `Required` 
 | [Quantity](Finance.Excise.ExciseStampLots.md#quantity) | int32 | Number of excise stamps in the lot. `Required` `Default(0)` 
-| [StartNumber](Finance.Excise.ExciseStampLots.md#startnumber) | string (30) | Start number of the lot. `Required` `ORD` 
+| [StartNumber](Finance.Excise.ExciseStampLots.md#startnumber) | string (30) | Start number of the lot. `Required` 
 
 ## References
 
@@ -48,12 +48,12 @@ Aggregate Tree
 
 Production batch of the Excise Stamps. `Required` `Filter(eq)` `ORD`
 
-_Type_: **string (50)**  
+_Type_: **string (30)**  
 _Indexed_: **True**  
 _Category_: **System**  
 _Supported Filters_: **Equals**  
 _Supports Order By_: **True**  
-_Maximum Length_: **50**  
+_Maximum Length_: **30**  
 
 ### DisplayText
 
@@ -123,13 +123,12 @@ _Default Value_: **0**
 
 ### StartNumber
 
-Start number of the lot. `Required` `ORD`
+Start number of the lot. `Required`
 
 _Type_: **string (30)**  
-_Indexed_: **True**  
 _Category_: **System**  
 _Supported Filters_: **NotFilterable**  
-_Supports Order By_: **True**  
+_Supports Order By_: **False**  
 _Maximum Length_: **30**  
 
 

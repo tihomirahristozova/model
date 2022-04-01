@@ -1,6 +1,12 @@
 # Table Exc_Excise_Stamp_Operation_Lines
 
 
+## Entity
+
+Entity: [Finance.Excise.ExciseStampOperationLines](~/entities/Finance.Excise.ExciseStampOperationLines.md)
+
+Excise Stamp Operation Lines. Entity: Exc_Excise_Stamp_Operation_Lines (Introduced in version 22.1.6.17)
+
 ## Owner Tables Hierarchy
 
 * [Exc_Excise_Stamp_Operations](Exc_Excise_Stamp_Operations.md)
@@ -145,7 +151,7 @@ The lot of the excise stamps.
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
-|Visible|yes|
+|Visible|no|
 
 #### Excise_Stamp_Operation_Id - Supported Filters
 

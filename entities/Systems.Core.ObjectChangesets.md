@@ -9,7 +9,7 @@ A set of changes, performed in one request. Entity: Sys_Object_Changesets (Intro
 
 ## Default Visualization
 Default Display Text Format:  
-_{ApplicationName}_  
+_{User} {TimeUtc}_  
 Default Search Members:  
 _ApplicationName_  
 Name Data Member:  

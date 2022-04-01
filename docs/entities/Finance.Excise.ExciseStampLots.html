@@ -106,7 +106,7 @@ Code Data Member:<br>
 <tbody>
 <tr>
 <td><a href="Finance.Excise.ExciseStampLots.html#batchnumber">BatchNumber</a></td>
-<td>string (50)</td>
+<td>string (30)</td>
 <td>Production batch of the Excise Stamps. <code>Required</code> <code>Filter(eq)</code> <code>ORD</code></td>
 </tr>
 <tr>
@@ -147,7 +147,7 @@ Code Data Member:<br>
 <tr>
 <td><a href="Finance.Excise.ExciseStampLots.html#startnumber">StartNumber</a></td>
 <td>string (30)</td>
-<td>Start number of the lot. <code>Required</code> <code>ORD</code></td>
+<td>Start number of the lot. <code>Required</code></td>
 </tr>
 </tbody>
 </table>
@@ -171,12 +171,12 @@ Code Data Member:<br>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="batchnumber">BatchNumber</h3>
 <p>Production batch of the Excise Stamps. <code>Required</code> <code>Filter(eq)</code> <code>ORD</code></p>
-<p><em>Type</em>: <strong>string (50)</strong><br>
+<p><em>Type</em>: <strong>string (30)</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>True</strong><br>
-<em>Maximum Length</em>: <strong>50</strong></p>
+<em>Maximum Length</em>: <strong>30</strong></p>
 <h3 id="displaytext">DisplayText</h3>
 <p>Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.</p>
 <p><em>Type</em>: <strong>string</strong><br>
@@ -224,12 +224,11 @@ Code Data Member:<br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>0</strong></p>
 <h3 id="startnumber">StartNumber</h3>
-<p>Start number of the lot. <code>Required</code> <code>ORD</code></p>
+<p>Start number of the lot. <code>Required</code></p>
 <p><em>Type</em>: <strong>string (30)</strong><br>
-<em>Indexed</em>: <strong>True</strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>True</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>30</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="excisestamptype">ExciseStampType</h3>

@@ -32,7 +32,7 @@ Aggregate Tree
 | [Quantity](Logistics.Wms.WarehouseTransactions.md#quantity) | decimal (12, 3) | The transacted net change in quantity. Positive values indicate transactions. Negative values are used for adjustments. `Required` `Default(0)` `Filter(multi eq;ge;le)` 
 | [QuantityBase](Logistics.Wms.WarehouseTransactions.md#quantitybase) | [Quantity (12, 3)](../data-types.md#quantity) | Quantity in the base measurement unit of the product. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Introduced in version 22.1.5.9` 
 | [StandardQuantity](Logistics.Wms.WarehouseTransactions.md#standardquantity) | [Quantity (12, 3)](../data-types.md#quantity) | The theoretical quantity according to the current measurement dimensions of the product. Used to measure the execution. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Introduced in version 22.1.5.9` 
-| [TaskType](Logistics.Wms.WarehouseTransactions.md#tasktype) | [TaskType](Logistics.Wms.WarehouseTransactions.md#tasktype) | The type of the task (operation), which was transacted. `Required` `Introduced in version 22.1.6.15` 
+| [TaskType](Logistics.Wms.WarehouseTransactions.md#tasktype) | [TaskType](Logistics.Wms.WarehouseTransactions.md#tasktype) | The type of the task (operation), which was transacted. `Required` `Filter(multi eq)` `Introduced in version 22.1.6.15` 
 
 ## References
 
@@ -67,7 +67,7 @@ _Supports Order By_: **False**
 
 _Type_: **datetime**  
 _Category_: **System**  
-_Supported Filters_: **NotFilterable**  
+_Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 _Default Value_: **CurrentDateTimeUtc**  
 
@@ -145,7 +145,7 @@ _Supports Order By_: **False**
 
 ### TaskType
 
-The type of the task (operation), which was transacted. `Required` `Introduced in version 22.1.6.15`
+The type of the task (operation), which was transacted. `Required` `Filter(multi eq)` `Introduced in version 22.1.6.15`
 
 _Type_: **[TaskType](Logistics.Wms.WarehouseTransactions.md#tasktype)**  
 _Category_: **System**  
@@ -166,7 +166,7 @@ _Allowed Values (Logistics.Wms.WarehouseOrderLinesRepository.TaskType Enum Membe
 | Count | Count value. Stored as 'CNT'. <br /> _Database Value:_ 'CNT' <br /> _Model Value:_ 9 <br /> _Domain API Value:_ 'Count' |
 | Task | Task value. Stored as 'TSK'. <br /> _Database Value:_ 'TSK' <br /> _Model Value:_ 10 <br /> _Domain API Value:_ 'Task' |
 
-_Supported Filters_: **NotFilterable**  
+_Supported Filters_: **Equals, EqualsIn**  
 _Supports Order By_: **False**  
 
 

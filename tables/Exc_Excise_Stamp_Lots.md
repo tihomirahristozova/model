@@ -12,15 +12,15 @@ Sequence of excise stamps with same production batch and type, received with one
 | Name | Type | Description |
 | - | - | --- |
 |[__Object_Version](#__object_version)|`int` ||
-|[Batch_Number](#batch_number)|`nvarchar(50)` |Production batch of the Excise Stamps|
-|[End_Number](#end_number)|`nvarchar(30)` |End number of the lot|
+|[Batch_Number](#batch_number)|`nvarchar(30)` |Production batch of the Excise Stamps.|
+|[End_Number](#end_number)|`nvarchar(30)` |End number of the lot.|
 |[Excise_Stamp_Lot_Id](#excise_stamp_lot_id)|`uniqueidentifier` `PK`||
-|[Excise_Stamp_Type_Id](#excise_stamp_type_id)|`uniqueidentifier` |Specifies the excise stamp type of the excise stamps in the lot|
+|[Excise_Stamp_Type_Id](#excise_stamp_type_id)|`uniqueidentifier` |Specifies the excise stamp type of the excise stamps in the lot.|
 |[Is_Active](#is_active)|`bit` |Is Active|
 |[Purchase_Lot_Number](#purchase_lot_number)|`nvarchar(30)` |Type and number of the document with which the excise stamps were received from the customs administration.|
-|[Quantity](#quantity)|`int` |Number of excise stamps in the lot|
+|[Quantity](#quantity)|`int` |Number of excise stamps in the lot.|
 |[Row_Version](#row_version)|`timestamp` ||
-|[Start_Number](#start_number)|`nvarchar(30)` |Start number of the lot|
+|[Start_Number](#start_number)|`nvarchar(30)` |Start number of the lot.|
 
 ## Columns
 
@@ -54,7 +54,7 @@ Sequence of excise stamps with same production batch and type, received with one
 ### Batch_Number
 
 
-Production batch of the Excise Stamps
+Production batch of the Excise Stamps.
 
 | Property | Value |
 | - | - |
@@ -64,7 +64,7 @@ Production batch of the Excise Stamps
 |Enter Stop|yes|
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
-|Max Length|50|
+|Max Length|30|
 |Order|1|
 |Ownership Reference|no|
 |Pasword|no|
@@ -75,7 +75,7 @@ Production batch of the Excise Stamps
 |Sortable|yes|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(50)|
+|Type|nvarchar(30)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -90,7 +90,7 @@ Production batch of the Excise Stamps
 ### End_Number
 
 
-End number of the lot
+End number of the lot.
 
 | Property | Value |
 | - | - |
@@ -153,7 +153,7 @@ End number of the lot
 ### Excise_Stamp_Type_Id
 
 
-Specifies the excise stamp type of the excise stamps in the lot
+Specifies the excise stamp type of the excise stamps in the lot.
 
 | Property | Value |
 | - | - |
@@ -256,7 +256,7 @@ Type and number of the document with which the excise stamps were received from 
 ### Quantity
 
 
-Number of excise stamps in the lot
+Number of excise stamps in the lot.
 
 | Property | Value |
 | - | - |
@@ -313,7 +313,7 @@ Number of excise stamps in the lot
 ### Start_Number
 
 
-Start number of the lot
+Start number of the lot.
 
 | Property | Value |
 | - | - |
@@ -331,7 +331,7 @@ Start number of the lot
 |Primary Key|no|
 |Readonly|no|
 |RTF|no|
-|Sortable|yes|
+|Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
 |Type|nvarchar(30)|
