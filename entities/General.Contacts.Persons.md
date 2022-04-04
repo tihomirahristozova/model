@@ -43,7 +43,7 @@ Aggregate Tree
 | [CreationUser](General.Contacts.Persons.md#creationuser) | string (64) __nullable__ | Login name of the user, who created the Person. `Filter(like)` `ReadOnly` 
 | [DisplayText](General.Contacts.Persons.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [FirstName](General.Contacts.Persons.md#firstname) | [MultilanguageString (64)](../data-types.md#multilanguagestring) __nullable__ | First name of the person. `Filter(eq;like)` 
-| [Gender](General.Contacts.Persons.md#gender) | [Gender](General.Contacts.Persons.md#gender) __nullable__ | Person gender. M=Male;F=Female;null=not known/not provided. `Filter(eq)` 
+| [Gender](General.Contacts.Persons.md#gender) | [Gender](General.Contacts.Persons.md#gender) __nullable__ | Person gender. M=Male;F=Female;O=Other;N=Prefer not to say;null=not known/not provided. `Filter(eq)` 
 | [GLN](General.Contacts.Persons.md#gln) | string (13) __nullable__ | Global Location Number used by EDI systems. `Filter(multi eq)` `ORD` (Inherited from [Parties](General.Contacts.Parties.md)) 
 | [Id](General.Contacts.Persons.md#id) | guid |  
 | [IsActive](General.Contacts.Persons.md#isactive) | boolean | Specifies whether the current party is active in the system or not. `Required` `Default(true)` `Filter(eq)` (Inherited from [Parties](General.Contacts.Parties.md)) 
@@ -151,7 +151,7 @@ _Supports Order By_: **False**
 
 ### Gender
 
-Person gender. M=Male;F=Female;null=not known/not provided. `Filter(eq)`
+Person gender. M=Male;F=Female;O=Other;N=Prefer not to say;null=not known/not provided. `Filter(eq)`
 
 _Type_: **[Gender](General.Contacts.Persons.md#gender) __nullable__**  
 _Category_: **System**  
@@ -162,6 +162,8 @@ _Allowed Values (General.Contacts.PersonsRepository.Gender Enum Members)_
 | ---- | --- |
 | Female | Female value. Stored as 'F'. <br /> _Database Value:_ 'F' <br /> _Model Value:_ 0 <br /> _Domain API Value:_ 'Female' |
 | Male | Male value. Stored as 'M'. <br /> _Database Value:_ 'M' <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'Male' |
+| Other | Other value. Stored as 'O'. <br /> _Database Value:_ 'O' <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'Other' |
+| PreferNotToSay | PreferNotToSay value. Stored as 'N'. <br /> _Database Value:_ 'N' <br /> _Model Value:_ 3 <br /> _Domain API Value:_ 'PreferNotToSay' |
 
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
