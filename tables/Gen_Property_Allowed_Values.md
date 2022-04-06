@@ -222,7 +222,7 @@ The value of the parent property, for which this allowed value is valid.
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
-|Visible|yes|
+|Visible|no|
 
 #### Parent_Allowed_Value_Id - Supported Filters
 

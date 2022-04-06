@@ -80,6 +80,7 @@ Aggregate Tree
 | [CostingCurrency](General.Products.Products.md#costingcurrency) | [Currencies](General.Currencies.md) (nullable) | Specifies the currency to use for cost calculations for the product. When null, the base currency for the enterprise company should be used. `Filter(multi eq)` |
 | [EnterpriseCompany](General.Products.Products.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | When not null, specifies that the product is specific to a given enterprise company and may be used only in documents from this enterprise company. `Filter(multi eq)` |
 | [ExciseProduct](General.Products.Products.md#exciseproduct) | [ExciseProducts](Finance.Excise.ExciseProducts.md) (nullable) | Specifies excise product code for this product. null means unspecified. `Filter(multi eq)` `Introduced in version 21.1.3.99` |
+| [ExciseStampType](General.Products.Products.md#excisestamptype) | [ExciseStampTypes](Finance.Excise.ExciseStampTypes.md) (nullable) | Specifies the basic excise attributes of the product. `Filter(multi eq)` `Introduced in version 22.1.6.25` |
 | [IntrastatCommodityCode](General.Products.Products.md#intrastatcommoditycode) | [CommodityCodes](Finance.Intrastat.CommodityCodes.md) (nullable) | Product code from the Intrastat Combined nomenclature. Used when creating Intrastat declarations. `Filter(multi eq)` |
 | [IntrastatSupplementaryUnit](General.Products.Products.md#intrastatsupplementaryunit) | [MeasurementUnits](General.MeasurementUnits.md) (nullable) | Additional measurement unit from the Intrastat Combined nomenclature. Used when creating Intrastat declarations. `Filter(multi eq)` |
 | [MeasurementUnit](General.Products.Products.md#measurementunit) | [MeasurementUnits](General.MeasurementUnits.md) | Default measurement unit, when creating new documents with this product. `Required` `Filter(multi eq)` |
@@ -539,6 +540,14 @@ _Front-End Recalc Expressions:_
 Specifies excise product code for this product. null means unspecified. `Filter(multi eq)` `Introduced in version 21.1.3.99`
 
 _Type_: **[ExciseProducts](Finance.Excise.ExciseProducts.md) (nullable)**  
+_Category_: **System**  
+_Supported Filters_: **Equals, EqualsIn**  
+
+### ExciseStampType
+
+Specifies the basic excise attributes of the product. `Filter(multi eq)` `Introduced in version 22.1.6.25`
+
+_Type_: **[ExciseStampTypes](Finance.Excise.ExciseStampTypes.md) (nullable)**  
 _Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
