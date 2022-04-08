@@ -114,14 +114,14 @@
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td>If (the created User.UserType == External(community) &amp;&amp; the created User.Person == null)
+<td>If <em>new record</em> (UserType == External(community) &amp;&amp; Person == null)
 , then create a new record in Notifications as follows:
 <br><br>
-- Notification.User = all admin users – Users(where IsAdmin == True &amp;&amp; Active == True)
-- Notification.CreationTimeUtc = NOW
-- Notification.DataObject = DataObjects(where EntityItemId == the created User.Id)
-- Notification.NotificationClass = NT_NEW_COMMUNITY_USER
-- Notification.Subject = New external (community) user '{Login}' is created.</td>
+- Notification.User = all admins - Users(where IsAdmin == True &amp;&amp; Active == True) <br>
+- Notification.CreationTimeUtc = NOW <br>
+- Notification.DataObject = DataObjects(where EntityItemId == the created User.Id) <br>
+- Notification.NotificationClass = NT_NEW_COMMUNITY_USER <br>
+- Notification.Subject = New external (community) user '{Login}' is created. <br></td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
@@ -134,7 +134,7 @@ then be sent to them by the <a class="xref" href="https://erpnetdocs.github.io/t
 </tr>
 <tr>
 <td><strong>Message</strong></td>
-<td>/-</td>
+<td>-</td>
 </tr>
 <tr>
 <td><strong>Version</strong></td>
