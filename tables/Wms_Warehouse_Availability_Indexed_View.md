@@ -298,6 +298,13 @@ The product variant, which was transacted. NULL when the transaction was not for
 |User Login|no|
 |Visible|yes|
 
+#### Quantity_Base_Available - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|no|
+
 ### Quantity_Unit_Id
 
 
