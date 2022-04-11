@@ -237,6 +237,7 @@ Consecutive number of the line within the excise stamp operation. Determines the
 | Property | Value |
 | - | - |
 |Auto Complete|no|
+|Autoincrement|1|
 |Data Filter|no|
 |Default Value|None|
 |Enter Stop|yes|
