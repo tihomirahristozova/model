@@ -133,6 +133,11 @@ Aggregate Root:<br>
 <td>The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.</td>
 </tr>
 <tr>
+<td><a href="Finance.Excise.ExciseStampOperationLines.html#parentlineno">ParentLineNo</a></td>
+<td>int32 <strong>nullable</strong></td>
+<td>The number of the line within the parent document, which the current line executes. null when the current line does not execute line. <code>Introduced in version 22.1.6.32</code></td>
+</tr>
+<tr>
 <td><a href="Finance.Excise.ExciseStampOperationLines.html#quantity">Quantity</a></td>
 <td>int32 <strong>nullable</strong></td>
 <td>The number of excise stamps that are processed with the current operation. <code>Default(0)</code></td>
@@ -175,6 +180,11 @@ Aggregate Root:<br>
 <td>Specifies the excise stamp type which is used in the current operation. Determine which excise stamp lots can be chosen. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
+<td><a href="Finance.Excise.ExciseStampOperationLines.html#parentdocument">ParentDocument</a></td>
+<td><a href="General.Documents.html">Documents</a> (nullable)</td>
+<td>The document, which the current line executes. null when the current line does not execute another line. <code>Filter(multi eq)</code> <code>Introduced in version 22.1.6.32</code></td>
+</tr>
+<tr>
 <td><a href="Finance.Excise.ExciseStampOperationLines.html#product">Product</a></td>
 <td><a href="General.Products.Products.html">Products</a></td>
 <td>The excise product for which the operation is applied. <code>Required</code> <code>Filter(multi eq)</code></td>
@@ -207,6 +217,10 @@ Aggregate Root:<br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
+<p><em>Back-End Default Expression:</em><br>
+<code>( obj.ExciseStampOperation.Lines.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
+<p><em>Front-End Recalc Expressions:</em><br>
+<code>( obj.ExciseStampOperation.Lines.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h3 id="notes">Notes</h3>
 <p>Notes for this ExciseStampOperationLine.</p>
 <p><em>Type</em>: <strong>string (max) <strong>nullable</strong></strong><br>
@@ -220,6 +234,12 @@ Aggregate Root:<br>
 <em>Category</em>: <strong>Extensible Data Object</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: ****</p>
+<h3 id="parentlineno">ParentLineNo</h3>
+<p>The number of the line within the parent document, which the current line executes. null when the current line does not execute line. <code>Introduced in version 22.1.6.32</code></p>
+<p><em>Type</em>: <strong>int32 <strong>nullable</strong></strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="quantity">Quantity</h3>
 <p>The number of excise stamps that are processed with the current operation. <code>Default(0)</code></p>
 <p><em>Type</em>: <strong>int32 <strong>nullable</strong></strong><br>
@@ -256,6 +276,11 @@ Aggregate Root:<br>
 <h3 id="excisestamptype">ExciseStampType</h3>
 <p>Specifies the excise stamp type which is used in the current operation. Determine which excise stamp lots can be chosen. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Finance.Excise.ExciseStampTypes.html">ExciseStampTypes</a> (nullable)</strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<h3 id="parentdocument">ParentDocument</h3>
+<p>The document, which the current line executes. null when the current line does not execute another line. <code>Filter(multi eq)</code> <code>Introduced in version 22.1.6.32</code></p>
+<p><em>Type</em>: <strong><a href="General.Documents.html">Documents</a> (nullable)</strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="product">Product</h3>

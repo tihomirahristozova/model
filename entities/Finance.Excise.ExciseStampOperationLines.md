@@ -31,6 +31,7 @@ Aggregate Root:
 | [LineNo](Finance.Excise.ExciseStampOperationLines.md#lineno) | int32 | Consecutive number of the line within the excise stamp operation. Determines the order of execution of the excise stamp operation lines. `Required` 
 | [Notes](Finance.Excise.ExciseStampOperationLines.md#notes) | string (max) __nullable__ | Notes for this ExciseStampOperationLine. 
 | [ObjectVersion](Finance.Excise.ExciseStampOperationLines.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
+| [ParentLineNo](Finance.Excise.ExciseStampOperationLines.md#parentlineno) | int32 __nullable__ | The number of the line within the parent document, which the current line executes. null when the current line does not execute line. `Introduced in version 22.1.6.32` 
 | [Quantity](Finance.Excise.ExciseStampOperationLines.md#quantity) | int32 __nullable__ | The number of excise stamps that are processed with the current operation. `Default(0)` 
 | [StartNumber](Finance.Excise.ExciseStampOperationLines.md#startnumber) | string (30) __nullable__ | The start number of the sequence of excise stamps that are processed with the current operation. 
 
@@ -42,6 +43,7 @@ Aggregate Root:
 | [ExciseStampLot](Finance.Excise.ExciseStampOperationLines.md#excisestamplot) | [ExciseStampLots](Finance.Excise.ExciseStampLots.md) (nullable) | The lot of the excise stamps. `Filter(multi eq)` |
 | [ExciseStampOperation](Finance.Excise.ExciseStampOperationLines.md#excisestampoperation) | [ExciseStampOperations](Finance.Excise.ExciseStampOperations.md) | The <see cref="ExciseStamp<br />Operation"/> to which this ExciseStampOperationLine belongs. `Required` `Filter(multi eq)` `Owner` |
 | [ExciseStampType](Finance.Excise.ExciseStampOperationLines.md#excisestamptype) | [ExciseStampTypes](Finance.Excise.ExciseStampTypes.md) (nullable) | Specifies the excise stamp type which is used in the current operation. Determine which excise stamp lots can be chosen. `Filter(multi eq)` |
+| [ParentDocument](Finance.Excise.ExciseStampOperationLines.md#parentdocument) | [Documents](General.Documents.md) (nullable) | The document, which the current line executes. null when the current line does not execute another line. `Filter(multi eq)` `Introduced in version 22.1.6.32` |
 | [Product](Finance.Excise.ExciseStampOperationLines.md#product) | [Products](General.Products.Products.md) | The excise product for which the operation is applied. `Required` `Filter(multi eq)` |
 
 
@@ -83,6 +85,11 @@ _Category_: **System**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
+_Back-End Default Expression:_  
+`( obj.ExciseStampOperation.Lines.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)`
+
+_Front-End Recalc Expressions:_  
+`( obj.ExciseStampOperation.Lines.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)`
 ### Notes
 
 Notes for this ExciseStampOperationLine.
@@ -101,6 +108,15 @@ _Type_: **int32**
 _Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
+
+### ParentLineNo
+
+The number of the line within the parent document, which the current line executes. null when the current line does not execute line. `Introduced in version 22.1.6.32`
+
+_Type_: **int32 __nullable__**  
+_Category_: **System**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 ### Quantity
 
@@ -157,6 +173,14 @@ _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-reference
 Specifies the excise stamp type which is used in the current operation. Determine which excise stamp lots can be chosen. `Filter(multi eq)`
 
 _Type_: **[ExciseStampTypes](Finance.Excise.ExciseStampTypes.md) (nullable)**  
+_Category_: **System**  
+_Supported Filters_: **Equals, EqualsIn**  
+
+### ParentDocument
+
+The document, which the current line executes. null when the current line does not execute another line. `Filter(multi eq)` `Introduced in version 22.1.6.32`
+
+_Type_: **[Documents](General.Documents.md) (nullable)**  
 _Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
