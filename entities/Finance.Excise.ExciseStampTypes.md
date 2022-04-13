@@ -9,7 +9,7 @@ The different types of tax stamps (aka Excise Labels) which are applied to the e
 
 ## Default Visualization
 Default Display Text Format:  
-_{Code}: {Name:T}_  
+_{Code}: {Name}_  
 Default Search Members:  
 _Code; Name_  
 Code Data Member:  

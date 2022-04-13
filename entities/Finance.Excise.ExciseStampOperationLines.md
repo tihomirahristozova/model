@@ -68,6 +68,8 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Maximum Length_: **30**  
 
+_Front-End Recalc Expressions:_  
+`Format( "{0}", Convert( ( Convert( Parse( obj.StartNumber), Nullable`1) + Convert( obj.Quantity, Nullable`1)), Object))`
 ### Id
 
 _Type_: **guid**  

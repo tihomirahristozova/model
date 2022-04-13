@@ -30,6 +30,7 @@ Aggregate Root:
 | [DisplayText](Crm.CustomerProducts.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [FromDate](Crm.CustomerProducts.md#fromdate) | date __nullable__ | The initial date of the listing. null when the initial date is unknown. `Filter(eq;ge;le)` 
 | [Id](Crm.CustomerProducts.md#id) | guid |  
+| [IsActive](Crm.CustomerProducts.md#isactive) | boolean |  
 | [Notes](Crm.CustomerProducts.md#notes) | string (254) __nullable__ | Notes for the listing. 
 | [ObjectVersion](Crm.CustomerProducts.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 | [ToDate](Crm.CustomerProducts.md#todate) | date __nullable__ | The final date of the listing. null when the final date is unknown. `Filter(eq;ge;le)` 
@@ -71,6 +72,14 @@ _Indexed_: **True**
 _Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
+
+### IsActive
+
+_Type_: **boolean**  
+_Category_: **System**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+_Default Value_: **True**  
 
 ### Notes
 
