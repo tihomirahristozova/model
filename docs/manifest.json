@@ -10034,6 +10034,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "business-rules/R33172.md",
+      "output": {
+        ".html": {
+          "relative_path": "business-rules/R33172.html",
+          "hash": "3CMmedUtpabmLvr6F+Im0g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "data-types.md",
       "output": {
         ".html": {
@@ -15484,7 +15496,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Logistics.Wms.WarehousePolicies.html",
-          "hash": "JVhkv6R/CezdA2ixE4geCw=="
+          "hash": "vgiw5oN/Wna/DNgcwdZ15w=="
         }
       },
       "is_incremental": false,
