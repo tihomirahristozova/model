@@ -81,7 +81,7 @@ Aggregate Tree
 | [EnterpriseCompany](General.Products.Products.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | When not null, specifies that the product is specific to a given enterprise company and may be used only in documents from this enterprise company. `Filter(multi eq)` |
 | [ExciseProduct](General.Products.Products.md#exciseproduct) | [ExciseProducts](Finance.Excise.ExciseProducts.md) (nullable) | Specifies excise product code for this product. null means unspecified. `Filter(multi eq)` `Introduced in version 21.1.3.99` |
 | [ExciseStampType](General.Products.Products.md#excisestamptype) | [ExciseStampTypes](Finance.Excise.ExciseStampTypes.md) (nullable) | Specifies the basic excise attributes of the product. `Filter(multi eq)` `Introduced in version 22.1.6.25` |
-| [IntrastatCommodityCode](General.Products.Products.md#intrastatcommoditycode) | [CommodityCodes](Finance.Intrastat.CommodityCodes.md) (nullable) | Product code from the Intrastat Combined nomenclature. Used when creating Intrastat declarations. `Filter(multi eq)` |
+| [IntrastatCommodityCode](General.Products.Products.md#intrastatcommoditycode) | [CommodityCodes](Finance.Intrastat.CommodityCodes.md) (nullable) | Code from The Combined Nomenclature used within the European Union countries. Used when reporting Intrastat and Excise. `Filter(multi eq)` |
 | [IntrastatSupplementaryUnit](General.Products.Products.md#intrastatsupplementaryunit) | [MeasurementUnits](General.MeasurementUnits.md) (nullable) | Additional measurement unit from the Intrastat Combined nomenclature. Used when creating Intrastat declarations. `Filter(multi eq)` |
 | [MeasurementUnit](General.Products.Products.md#measurementunit) | [MeasurementUnits](General.MeasurementUnits.md) | Default measurement unit, when creating new documents with this product. `Required` `Filter(multi eq)` |
 | [OriginCountry](General.Products.Products.md#origincountry) | [Countries](General.Geography.Countries.md) (nullable) | Country from which the product originates (in which the product is produced/cultivated ...). Primarily used for Intrastat reporting. `Filter(multi eq)` |
@@ -553,7 +553,7 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### IntrastatCommodityCode
 
-Product code from the Intrastat Combined nomenclature. Used when creating Intrastat declarations. `Filter(multi eq)`
+Code from The Combined Nomenclature used within the European Union countries. Used when reporting Intrastat and Excise. `Filter(multi eq)`
 
 _Type_: **[CommodityCodes](Finance.Intrastat.CommodityCodes.md) (nullable)**  
 _Category_: **System**  

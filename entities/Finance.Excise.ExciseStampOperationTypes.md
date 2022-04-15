@@ -9,7 +9,7 @@ Specifies the type of the Excise Stamp operation. Entity: Exc_Excise_Stamp_Opera
 
 ## Default Visualization
 Default Display Text Format:  
-_{Name:T}_  
+_{Code}: {Name}_  
 Default Search Members:  
 _Code; Name_  
 Code Data Member:  

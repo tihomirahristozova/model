@@ -5,7 +5,7 @@ uid: Finance.Intrastat.CommodityCodes
 
 **Namespace:** [Finance.Intrastat](Finance.Intrastat.md)  
 
-Contains the approved Intrastat commodity codes for each period. Entity: Its_Commodity_Codes
+Contains the approved commodity codes for each period from The Combined Nomenclature used within the European Union countries. They are used for reporting Intrastat and Excise. Entity: Its_Commodity_Codes
 
 ## Default Visualization
 Default Display Text Format:  

@@ -69,7 +69,7 @@ _Supports Order By_: **False**
 _Maximum Length_: **30**  
 
 _Front-End Recalc Expressions:_  
-`Format( "{0}", Convert( ( Convert( Parse( obj.StartNumber), Nullable`1) + Convert( obj.Quantity, Nullable`1)), Object))`
+`Format( "{0}", Convert( ( ( Convert( Parse( obj.StartNumber), Nullable`1) + Convert( obj.Quantity, Nullable`1)) - Convert( Convert( 1, Int64), Nullable`1)), Object)).PadLeft( obj.StartNumber.Trim( ).Length, 0)`
 ### Id
 
 _Type_: **guid**  

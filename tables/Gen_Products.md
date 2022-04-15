@@ -31,7 +31,7 @@ Products are the different items in the enterprise, which can be purchased, stor
 |[Flushing_Method](#flushing_method)|`nvarchar(1)` Allowed: `B`, `F`, `M`|Consumption method for work orders. M=Manual, using Consuption Journals, F=Forward (on release), B=Backward (on finish)|
 |[Guarantee_Period_Days](#guarantee_period_days)|`int` |Default guarantee period length in days. 0 means no guarantee. Should be non-NULL for serviced products and NULL for the others|
 |[Id](#id)|`uniqueidentifier` `PK`|Unique id of the item|
-|[Intrastat_Commodity_Code_Id](#intrastat_commodity_code_id)|`uniqueidentifier` ||
+|[Intrastat_Commodity_Code_Id](#intrastat_commodity_code_id)|`uniqueidentifier` |Code from The Combined Nomenclature used within the European Union countries. Used when reporting Intrastat and Excise.|
 |[Intrastat_Supplementary_Unit_Id](#intrastat_supplementary_unit_id)|`uniqueidentifier` ||
 |[Is_Featured](#is_featured)|`bit` ||
 |[Is_Serialized](#is_serialized)|`bit` |1 if the parts use/require serial numbers|
@@ -737,6 +737,9 @@ Unique id of the item
 |Equals|`NULL`|no|no|
 
 ### Intrastat_Commodity_Code_Id
+
+
+Code from The Combined Nomenclature used within the European Union countries. Used when reporting Intrastat and Excise.
 
 | Property | Value |
 | - | - |

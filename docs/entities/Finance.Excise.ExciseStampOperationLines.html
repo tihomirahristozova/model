@@ -206,7 +206,7 @@ Aggregate Root:<br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>30</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
-<code>Format( &quot;{0}&quot;, Convert( ( Convert( Parse( obj.StartNumber), Nullable</code>1) + Convert( obj.Quantity, Nullable<code>1)), Object))</code></p>
+<code>Format( &quot;{0}&quot;, Convert( ( ( Convert( Parse( obj.StartNumber), Nullable</code>1) + Convert( obj.Quantity, Nullable<code>1)) - Convert( Convert( 1, Int64), Nullable</code>1)), Object)).PadLeft( obj.StartNumber.Trim( ).Length, 0)`</p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>

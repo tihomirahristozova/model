@@ -115,7 +115,8 @@ Legislations</strong></td>
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td>Format(&quot;{0}&quot;, Convert((Convert(Parse(StartNumber), Nullable<code>1) + Convert(Quantity, Nullable</code>1)), Object))</td>
+<td>Format(&quot;{0}&quot;, Convert(((Convert(Parse(StartNumber), Nullable<code>1) + Convert(Quantity, Nullable</code>1)) - Convert(Convert(1, Int64), Nullable`1)), Object)).PadLeft(StartNumber.Trim().
+Length, 0)</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>

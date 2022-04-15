@@ -120,9 +120,24 @@ Aggregate Root:<br>
 <td></td>
 </tr>
 <tr>
+<td><a href="Crm.CustomerProducts.html#instorelocation">InStoreLocation</a></td>
+<td>string (32) <strong>nullable</strong></td>
+<td>Location in store, like row, stand, etc. <code>Introduced in version 22.1.6.33</code></td>
+</tr>
+<tr>
+<td><a href="Crm.CustomerProducts.html#instoremaxquantity">InStoreMaxQuantity</a></td>
+<td>decimal (10, 3) <strong>nullable</strong></td>
+<td>Maximum quantity maintained by the customer. Measurement unit is Product.MeasurementUnit. <code>Introduced in version 22.1.6.33</code></td>
+</tr>
+<tr>
+<td><a href="Crm.CustomerProducts.html#instoreminquantity">InStoreMinQuantity</a></td>
+<td>decimal (10, 3) <strong>nullable</strong></td>
+<td>Minimum quantity maintained by the customer. Measurement unit is Product.MeasurementUnit. <code>Introduced in version 22.1.6.33</code></td>
+</tr>
+<tr>
 <td><a href="Crm.CustomerProducts.html#isactive">IsActive</a></td>
 <td>boolean</td>
-<td></td>
+<td>Indicates whether this customer product definition is active. <code>Required</code> <code>Default(true)</code> <code>Introduced in version 22.1.6.33</code></td>
 </tr>
 <tr>
 <td><a href="Crm.CustomerProducts.html#notes">Notes</a></td>
@@ -133,6 +148,11 @@ Aggregate Root:<br>
 <td><a href="Crm.CustomerProducts.html#objectversion">ObjectVersion</a></td>
 <td>int32</td>
 <td>The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.</td>
+</tr>
+<tr>
+<td><a href="Crm.CustomerProducts.html#ordermultiple">OrderMultiple</a></td>
+<td>decimal (10, 3) <strong>nullable</strong></td>
+<td>Determines the step when the system offers a quantity to order. <code>Introduced in version 22.1.6.33</code></td>
 </tr>
 <tr>
 <td><a href="Crm.CustomerProducts.html#todate">ToDate</a></td>
@@ -192,7 +212,27 @@ Aggregate Root:<br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
+<h3 id="instorelocation">InStoreLocation</h3>
+<p>Location in store, like row, stand, etc. <code>Introduced in version 22.1.6.33</code></p>
+<p><em>Type</em>: <strong>string (32) <strong>nullable</strong></strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>32</strong></p>
+<h3 id="instoremaxquantity">InStoreMaxQuantity</h3>
+<p>Maximum quantity maintained by the customer. Measurement unit is Product.MeasurementUnit. <code>Introduced in version 22.1.6.33</code></p>
+<p><em>Type</em>: <strong>decimal (10, 3) <strong>nullable</strong></strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="instoreminquantity">InStoreMinQuantity</h3>
+<p>Minimum quantity maintained by the customer. Measurement unit is Product.MeasurementUnit. <code>Introduced in version 22.1.6.33</code></p>
+<p><em>Type</em>: <strong>decimal (10, 3) <strong>nullable</strong></strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="isactive">IsActive</h3>
+<p>Indicates whether this customer product definition is active. <code>Required</code> <code>Default(true)</code> <code>Introduced in version 22.1.6.33</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
@@ -211,6 +251,12 @@ Aggregate Root:<br>
 <em>Category</em>: <strong>Extensible Data Object</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: ****</p>
+<h3 id="ordermultiple">OrderMultiple</h3>
+<p>Determines the step when the system offers a quantity to order. <code>Introduced in version 22.1.6.33</code></p>
+<p><em>Type</em>: <strong>decimal (10, 3) <strong>nullable</strong></strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="todate">ToDate</h3>
 <p>The final date of the listing. null when the final date is unknown. <code>Filter(eq;ge;le)</code></p>
 <p><em>Type</em>: <strong>date <strong>nullable</strong></strong><br>

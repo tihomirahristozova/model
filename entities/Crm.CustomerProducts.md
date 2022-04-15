@@ -30,9 +30,13 @@ Aggregate Root:
 | [DisplayText](Crm.CustomerProducts.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [FromDate](Crm.CustomerProducts.md#fromdate) | date __nullable__ | The initial date of the listing. null when the initial date is unknown. `Filter(eq;ge;le)` 
 | [Id](Crm.CustomerProducts.md#id) | guid |  
-| [IsActive](Crm.CustomerProducts.md#isactive) | boolean |  
+| [InStoreLocation](Crm.CustomerProducts.md#instorelocation) | string (32) __nullable__ | Location in store, like row, stand, etc. `Introduced in version 22.1.6.33` 
+| [InStoreMaxQuantity](Crm.CustomerProducts.md#instoremaxquantity) | decimal (10, 3) __nullable__ | Maximum quantity maintained by the customer. Measurement unit is Product.MeasurementUnit. `Introduced in version 22.1.6.33` 
+| [InStoreMinQuantity](Crm.CustomerProducts.md#instoreminquantity) | decimal (10, 3) __nullable__ | Minimum quantity maintained by the customer. Measurement unit is Product.MeasurementUnit. `Introduced in version 22.1.6.33` 
+| [IsActive](Crm.CustomerProducts.md#isactive) | boolean | Indicates whether this customer product definition is active. `Required` `Default(true)` `Introduced in version 22.1.6.33` 
 | [Notes](Crm.CustomerProducts.md#notes) | string (254) __nullable__ | Notes for the listing. 
 | [ObjectVersion](Crm.CustomerProducts.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
+| [OrderMultiple](Crm.CustomerProducts.md#ordermultiple) | decimal (10, 3) __nullable__ | Determines the step when the system offers a quantity to order. `Introduced in version 22.1.6.33` 
 | [ToDate](Crm.CustomerProducts.md#todate) | date __nullable__ | The final date of the listing. null when the final date is unknown. `Filter(eq;ge;le)` 
 
 ## References
@@ -73,7 +77,37 @@ _Category_: **System**
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
+### InStoreLocation
+
+Location in store, like row, stand, etc. `Introduced in version 22.1.6.33`
+
+_Type_: **string (32) __nullable__**  
+_Category_: **System**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+_Maximum Length_: **32**  
+
+### InStoreMaxQuantity
+
+Maximum quantity maintained by the customer. Measurement unit is Product.MeasurementUnit. `Introduced in version 22.1.6.33`
+
+_Type_: **decimal (10, 3) __nullable__**  
+_Category_: **System**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+
+### InStoreMinQuantity
+
+Minimum quantity maintained by the customer. Measurement unit is Product.MeasurementUnit. `Introduced in version 22.1.6.33`
+
+_Type_: **decimal (10, 3) __nullable__**  
+_Category_: **System**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+
 ### IsActive
+
+Indicates whether this customer product definition is active. `Required` `Default(true)` `Introduced in version 22.1.6.33`
 
 _Type_: **boolean**  
 _Category_: **System**  
@@ -99,6 +133,15 @@ _Type_: **int32**
 _Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
+
+### OrderMultiple
+
+Determines the step when the system offers a quantity to order. `Introduced in version 22.1.6.33`
+
+_Type_: **decimal (10, 3) __nullable__**  
+_Category_: **System**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
 
 ### ToDate
 
