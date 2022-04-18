@@ -162,13 +162,14 @@ Set InStoreAvalableQuantity = 9  =&gt;  OrderQuantity = 12   <br>
 Set InStoreAvalabeQuantity = 7  =&gt;  OrderQuantity = 16  <br>
 Set InStoreAvalabeQuantity = 2  =&gt;  OrderQuantity = 8    <br>
 Set InStoreAvalabeQuantity = 7.999  =&gt;  OrderQuantity = 16  <br>
-Set InStoreAvalabeQuantity = 8.001  =&gt;  OrderQuantity = 12 <br>
+Set InStoreAvalabeQuantity = 8.001  =&gt;  OrderQuantity = 12
 <br><br></p>
 <p><strong>Example 3:</strong>  <br>
 CustomerProduct:   <br>
 InStoreMinQuantity = 10        <br>
 InStoreMaxQuantity = 11 <br>
 OrderMultiple = 0.5     <br>
+<br><br>
 MarketingActivityLines:  <br>
 Set InStoreAvalableQuantity = 9.000  =&gt;  OrderQuantity = 2 <br>
 Set InStoreAvalableQuantity = 9.499  =&gt;  OrderQuantity = 2<br>
@@ -188,7 +189,7 @@ After that the check if the following conditions are met:.
 - CustomerProduct.InStoreMinQuantity is not empty or 0     <br>
 - CustomerProduct.InStoreMaxQuantity is not empty   <br>
 - CustomerProduct.OrderMultiple is not empty or 0  <br>
-- MarketingActivityLine.InStoreAvailableQuantity is not empty    <br>
+- MarketingActivityLine.InStoreAvailableQuantity is not empty  or 0  <br>
 - MarketingActivityLine.InStoreAvailableQuantity &lt; CustomerProduct.InStoreMinQuantity
 <br><br>
 If all of them are met the OrderQuantity is calculated to supplement the New<br>
