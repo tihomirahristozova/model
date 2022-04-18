@@ -116,13 +116,9 @@ needed</a></td>
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p><strong>The rule workes as follows:</strong> <br>
-If (Customer != Null AND Product !=Null)
+<td><p>If (MarketingActivity.TargetParty != Null) AND                                                     |
 <br><br>
-<strong>Then:</strong>
-<br><br>
-1. Get Customer from MarketingActivity.TargetParty  <br>
-2. Count CustomerProducts                  <br>
+CustomerProducts                  <br>                                          |
 3. Filter CustomersProducts           <br>
 - Where Customer == CustomerProducts.Customer <br>
 - Where Product ==  CustomerProducts.Product  <br>
@@ -183,7 +179,7 @@ the rule takes the Customer from TargetParty of the MarketingActivity which is 
 the MarketingActivityLine. Then it search in CustomerProduct definitions to find
 CustomerProduct with the same Customer and  the same Product like these in the
 MarketingActivityLine. <br><br>
-After that the check if the following conditions are met:.
+After that is checked if the following conditions are met:.
 <br><br>
 - CustomerProduct.IsActive == True <br>
 - CustomerProduct.InStoreMinQuantity is not empty or 0     <br>

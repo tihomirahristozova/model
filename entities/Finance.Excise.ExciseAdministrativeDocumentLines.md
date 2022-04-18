@@ -74,7 +74,7 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 
 _Front-End Recalc Expressions:_  
-`obj.Product.ExciseAlcoholicStrength`
+`IIF( ( obj.Product.ExciseStampType != null), obj.Product.ExciseStampType.AlcoholicStrength, null)`
 ### ExciseAmount
 
 _Type_: **[Amount (14, 2)](../data-types.md#amount)**  
