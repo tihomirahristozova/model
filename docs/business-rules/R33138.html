@@ -124,8 +124,8 @@ If (Customer != Null AND Product !=Null)
 1. Get Customer from MarketingActivity.TargetParty  <br>
 2. Count CustomerProducts                  <br>
 3. Filter CustomersProducts           <br>
-Where Customer == CustomerProducts.Customer <br>
-Where Product ==  CustomerProducts.Product  <br>
+- Where Customer == CustomerProducts.Customer <br>
+- Where Product ==  CustomerProducts.Product  <br>
 4. Count Products Get First Where MarketingActivityLine.Product == CustomerProduct.Product
 <br><br>
 5. Then check if all of the following conditions are met:  <br>
@@ -152,15 +152,9 @@ OrderMultiple = 1    <br><br></p>
 Set InStoreAvalableQuantity = 0  =&gt;  OrderQuantity = 1
 <br><br>
 <strong>Example 2:</strong> <br>
-CustomerProduct:<br></p>
-</td>
-</tr>
-<tr>
-<td colspan="2">InStoreMinQuantity = 10<br>                                                                |</td>
-</tr>
-<tr>
-<td></td>
-<td><p>InStoreMaxQuantity = 20   <br>
+CustomerProduct:<br>
+InStoreMinQuantity = 10<br>
+InStoreMaxQuantity = 20   <br>
 OrderMultiple = 4  <br>
 <br><br>
 MarketingActivityLines:  <br>
@@ -197,17 +191,11 @@ After that the check if the following conditions are met:.
 - MarketingActivityLine.InStoreAvailableQuantity is not empty    <br>
 - MarketingActivityLine.InStoreAvailableQuantity &lt; CustomerProduct.InStoreMinQuantity
 <br><br>
-If all of them are met the OrderQuantity is calculated to supplement the New<br></td>
+If all of them are met the OrderQuantity is calculated to supplement the New<br>
+InStoreAvalableQuantity, which should be equal to InstoreMaxQuantity and if necessary for
+to round UP with OrderMultiple.
+You can see the previous examples in section Action</td>
 </tr>
-</tbody>
-</table>
-<p>InStoreAvalableQuantity, which should be equal to InstoreMaxQuantity and if necessary for    |
-|                       | to round UP with OrderMultiple.                                                              |
-|                       | You can see the previous examples in section Action                                          |</p>
-<table>
-<col style="width:19.66%">
-<col style="width:80.34%">
-<tbody>
 <tr>
 <td><strong>Message</strong></td>
 <td>-</td>
