@@ -129,7 +129,7 @@ Then Calculate MarketingActivityLine.OrderQuantity as follows:
 OrderQuantity = <br>
 if ((FIRST(applicableCustomerProducts*).InStoreMaxQuantity - InStoreAvalableQuantity) % OrderMultiple) == 0 <br>
 , then FIRST(applicableCustomerProducts*).InStoreMaxQuantity - InStoreAvalableQuantity <br>
-, else floor
+, else floor  <br>
 ((FIRST(applicableCustomerProducts*).InStoreMaxQuantity - InStoreAvalableQuantity)/OrderMultiple)*OrderMultiple + OrderMultiple
 <br><br>
 <em>applicableCustomerProducts are CustomerProducts where:<br></em>
@@ -161,6 +161,7 @@ InStoreMaxQuantity = 20     <br>
 OrderMultiple = 4
 <br><br>
 MarketingActivityLines:<br>
+Set InStoreAvalableQuantity = 0  =&gt;  OrderQuantity = 20   <br>
 Set InStoreAvalableQuantity = 4  =&gt;  OrderQuantity = 16   <br>
 Set InStoreAvalableQuantity = 9  =&gt;  OrderQuantity = 12       <br>
 Set InStoreAvalableQuantity = 7  =&gt;  OrderQuantity = 16           <br>
