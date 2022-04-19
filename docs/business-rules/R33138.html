@@ -73,8 +73,8 @@
 <h1 id="r33138-marketingactivitylines---set-order-quantity">R33138 MarketingActivityLines - Set Order Quantity</h1>
 
 <table>
-<col style="width:19.66%">
-<col style="width:80.34%">
+<col style="width:15.33%">
+<col style="width:84.67%">
 <tbody>
 <tr>
 <td><strong>Code</strong></td>
@@ -116,82 +116,65 @@ needed</a></td>
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td><p>If (MarketingActivity.TargetParty != Null) AND                                                     |
+<td><p><strong>!!!If any of the previous conditions is not fulfilled - Nothing happens!!!</strong>
 <br><br>
-CustomerProducts                  <br>                                          |
-3. Filter CustomersProducts           <br>
-- Where Customer == CustomerProducts.Customer <br>
-- Where Product ==  CustomerProducts.Product  <br>
-4. Count Products Get First Where MarketingActivityLine.Product == CustomerProduct.Product
+If (MarketingActivity.TargetParty != Null) <br>
+AND  <br>
+(InStoreAvailableQuantity != Null)<br>
+AND               <br>
+COUNT( applicableCustomerProducts* ) &gt; 0
 <br><br>
-5. Then check if all of the following conditions are met:  <br>
-- CustomerProduct.IsActive == True <br>
-- CustomerProduct.InStoreMinQuantity !=Null or 0     <br>
-- CustomerProduct.InStoreMaxQuantity !=Null or 0   <br>
-- CustomerProduct.OrderMultiple !=Null or 0  <br>
-- MarketingActivityLine.InStoreAvailableQuantity !=Null     <br>
-- MarketingActivityLine.InStoreAvailableQuantity &lt; CustomerProduct.InStoreMinQuantity
+Then Calculate MarketingActivityLine.OrderQuantity as follows:
 <br><br>
-<strong>Then Calculate MarketingActivityLine.OrderQuantity as follows:</strong>
+OrderQuantity = <br>
+if ((FIRST(applicableCustomerProducts*).InStoreMaxQuantity - InStoreAvalableQuantity) % OrderMultiple) == 0 <br>
+, then FIRST(applicableCustomerProducts*).InStoreMaxQuantity - InStoreAvalableQuantity <br>
+, else floor((FIRST(applicableCustomerProducts*).InStoreMaxQuantity - InStoreAvalableQuantity)/OrderMultiple) + OrderMultiple
 <br><br>
-OrderQuantity = (InStoreMaxQuantity - InStoreAvalableQuantity) + (N*OrderMultiple)<br>
-Where N is calculate to meet the following condition:   <br>
-NewInStoreAvalableQuantity &gt;= InStoreMaxQuantity  <br>
-<br><br>
-<strong>!!!If any of the previous conditions is not fulfilled - Nothing happens!!!</strong>
-<br><br>
-<strong>Example 1:</strong> <br>
-InStoreMinQuantity = 1    <br>
-InStoreMaxQuantity = 2   <br>
-OrderMultiple = 1    <br><br></p>
-<p>MarketingActivityLines:   <br>
-Set InStoreAvalableQuantity = 0  =&gt;  OrderQuantity = 1
-<br><br>
-<strong>Example 2:</strong> <br>
-CustomerProduct:<br>
-InStoreMinQuantity = 10<br>
-InStoreMaxQuantity = 20   <br>
-OrderMultiple = 4  <br>
-<br><br>
-MarketingActivityLines:  <br>
-Set InStoreAvalableQuantity = 9  =&gt;  OrderQuantity = 12   <br>
-Set InStoreAvalabeQuantity = 7  =&gt;  OrderQuantity = 16  <br>
-Set InStoreAvalabeQuantity = 2  =&gt;  OrderQuantity = 8    <br>
-Set InStoreAvalabeQuantity = 7.999  =&gt;  OrderQuantity = 16  <br>
-Set InStoreAvalabeQuantity = 8.001  =&gt;  OrderQuantity = 12
-<br><br></p>
-<p><strong>Example 3:</strong>  <br>
-CustomerProduct:   <br>
-InStoreMinQuantity = 10        <br>
-InStoreMaxQuantity = 11 <br>
-OrderMultiple = 0.5     <br>
-<br><br>
-MarketingActivityLines:  <br>
-Set InStoreAvalableQuantity = 9.000  =&gt;  OrderQuantity = 2 <br>
-Set InStoreAvalableQuantity = 9.499  =&gt;  OrderQuantity = 2<br>
-Set InStoreAvalableQuantity = 9.599  =&gt;  OrderQuantity = 1.5</p>
+<em>applicableCustomerProducts</em> are CustomerProducts where:<br>
+(<br></p>
+<ul>
+<li>Customer == MarketingActivity.TargetParty.Customer    <br></li>
+<li>Product ==  MarketingActivityLine.Product         <br></li>
+<li>IsActive == True    <br></li>
+<li>InStoreMinQuantity != Null AND != 0 AND &gt; MarketingActivityLine.InStoreAvailableQuantity  <br></li>
+<li>InStoreMaxQuantity != Null AND != 0              <br></li>
+<li>OrderMultiple != Null AND != 0 <br>
+) &gt; 0</li>
+</ul>
 </td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
-<td>If MarketingActivity and Product are fulfilled and set quantity in InStoreAvalableQuantity,
-the rule takes the Customer from TargetParty of the MarketingActivity which is selected in
-the MarketingActivityLine. Then it search in CustomerProduct definitions to find
-CustomerProduct with the same Customer and  the same Product like these in the
-MarketingActivityLine. <br><br>
-After that is checked if the following conditions are met:.
+<td>When InStoreAvailableQuantity is changed if the new value is not null and Target Party has a value, then <br>
+OrderQuantity is recalculated according the information set in the Customer Product <br>
+(if there is an active Customer Product for the current customer and product).
 <br><br>
-- CustomerProduct.IsActive == True <br>
-- CustomerProduct.InStoreMinQuantity is not empty or 0     <br>
-- CustomerProduct.InStoreMaxQuantity is not empty   <br>
-- CustomerProduct.OrderMultiple is not empty or 0  <br>
-- MarketingActivityLine.InStoreAvailableQuantity is not empty  or 0  <br>
-- MarketingActivityLine.InStoreAvailableQuantity &lt; CustomerProduct.InStoreMinQuantity
+The OrderQuantity is calculated to supplement the new InStoreAvalableQuantity, which should be equal to <br>
+InstoreMaxQuantity and if necessary for to round UP with OrderMultiple.
+<br><br><br><br>
+<strong>Example 1:</strong>     <br>
+CustomerProduct:   <br>
+InStoreMinQuantity = 10 <br>
+InStoreMaxQuantity = 20     <br>
+OrderMultiple = 4
 <br><br>
-If all of them are met the OrderQuantity is calculated to supplement the New<br>
-InStoreAvalableQuantity, which should be equal to InstoreMaxQuantity and if necessary for
-to round UP with OrderMultiple.
-You can see the previous examples in section Action</td>
+MarketingActivityLines:<br>
+Set InStoreAvalableQuantity = 4  =&gt;  OrderQuantity = 16   <br>
+Set InStoreAvalableQuantity = 9  =&gt;  OrderQuantity = 12       <br>
+Set InStoreAvalableQuantity = 7  =&gt;  OrderQuantity = 16           <br>
+Set InStoreAvalableQuantity = 7.9  =&gt;  OrderQuantity = 16             <br>
+Set InStoreAvalableQuantity = 8.1  =&gt;  OrderQuantity = 12
+<br><br><br><br>
+<strong>Example 2:</strong>                                                            <br>
+CustomerProduct:                                                              <br>
+InStoreMinQuantity = 10                                                           <br>
+InStoreMaxQuantity = 11                                                               <br>
+OrderMultiple = 0.5
+<br><br>
+MarketingActivityLines:                                           <br>
+Set InStoreAvalableQuantity = 9.400  =&gt;  OrderQuantity = 2            <br>
+Set InStoreAvalableQuantity = 9.600  =&gt;  OrderQuantity = 1.5</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>

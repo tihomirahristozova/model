@@ -119,7 +119,7 @@
 <br><br>
 - Notification.User = all admins - Users(where IsAdmin == True &amp;&amp; Active == True) <br>
 - Notification.CreationTimeUtc = NOW <br>
-- Notification.DataObject = DataObjects(where EntityItemId == the created User.Id) <br>
+- Notification.DataObject = User.GetOrCreateExtensibleDataObject() <br>
 - Notification.NotificationClass = NT_NEW_COMMUNITY_USER <br>
 - Notification.Subject = New external (community) user '{Login}' is created. <br></td>
 </tr>
