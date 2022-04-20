@@ -118,15 +118,15 @@
 </tr>
 <tr>
 <td>Action</td>
-<td>Validate that: <br> If (PolicyKind LIKE 'Zone %') <br>, then: <br> - Zone != null <br> - ProductType == null <br> - ProductGroup == null <br> - Product == null</td>
+<td>Validate that: <br> If (PolicyKind LIKE 'Zone%') <br>, then: <br> - Zone != null <br> - ProductType == null <br> - ProductGroup == null <br> - Product == null</td>
 </tr>
 <tr>
 <td>Description</td>
-<td>Policies whose kind starts with 'Zone ', such as 'Zone Type', aplly to a specific zone.  <br> For this reason, the rule makes sure that: <br> - there is a Zone specified in the policy <br> and <br> - the policy applies to the entire zone, therefore no other properties, such as Product, Product Type or Product group are set.</td>
+<td>Policies whose kind starts with 'Zone', such as 'Zone Type', aplly to a specific zone.  <br> For this reason, the rule makes sure that: <br> - there is a Zone specified in the policy <br> and <br> - the policy applies to the entire zone, therefore no other properties, such as Product, Product Type or Product group are set.</td>
 </tr>
 <tr>
 <td>Message</td>
-<td>Invalid information specified for '{PolicyKind}' policy kind. <br> Policies whose kind starts with 'Zone ' apply to a specific zone. <br> Please make sure that the 'Zone' field has a value and the 'Product', 'Product Group' and 'Product Type' fields are blank.</td>
+<td>Invalid information specified for '{PolicyKind}' policy kind. <br> Policies whose kind starts with 'Zone' apply to a specific zone. <br> Please make sure that the 'Zone' field has a value and the 'Product', 'Product Group' and 'Product Type' fields are blank.</td>
 </tr>
 <tr>
 <td>Introduced In Version</td>
