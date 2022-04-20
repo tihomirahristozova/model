@@ -217,6 +217,11 @@ Name Data Member:<br>
 <td>The enterprise company to which this lead belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Introduced in version 22.1.5.23</code></td>
 </tr>
 <tr>
+<td><a href="Crm.Presales.Leads.html#enterprisecompanylocation">EnterpriseCompanyLocation</a></td>
+<td><a href="General.Contacts.CompanyLocations.html">CompanyLocations</a> (nullable)</td>
+<td>The enterprise company location to which this lead belongs. <code>Filter(multi eq)</code> <code>Introduced in version 22.1.6.41</code></td>
+</tr>
+<tr>
 <td><a href="Crm.Presales.Leads.html#identifiedcompany">IdentifiedCompany</a></td>
 <td><a href="General.Contacts.Companies.html">Companies</a> (nullable)</td>
 <td>Filled when the company is identified within our database. <code>Filter(multi eq)</code></td>
@@ -419,6 +424,11 @@ Allowed values for the <code>SystemStage</code>(Crm.Presales.Leads.md#systemstag
 <h3 id="enterprisecompany">EnterpriseCompany</h3>
 <p>The enterprise company to which this lead belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Introduced in version 22.1.5.23</code></p>
 <p><em>Type</em>: <strong><a href="General.EnterpriseCompanies.html">EnterpriseCompanies</a></strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<h3 id="enterprisecompanylocation">EnterpriseCompanyLocation</h3>
+<p>The enterprise company location to which this lead belongs. <code>Filter(multi eq)</code> <code>Introduced in version 22.1.6.41</code></p>
+<p><em>Type</em>: <strong><a href="General.Contacts.CompanyLocations.html">CompanyLocations</a> (nullable)</strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="identifiedcompany">IdentifiedCompany</h3>

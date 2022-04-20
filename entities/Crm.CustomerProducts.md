@@ -9,11 +9,11 @@ Contains the products, that are contracted (listed) with a customer. Entity: Crm
 
 ## Default Visualization
 Default Display Text Format:  
-_{Customer}_  
+_{Customer.Party.PartyName:T}_  
 Default Search Members:  
-_Customer_  
+_Customer.Party.PartyName_  
 Name Data Member:  
-_Customer_  
+_Customer.Party.PartyName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -33,7 +33,7 @@ Aggregate Root:
 | [InStoreLocation](Crm.CustomerProducts.md#instorelocation) | string (32) __nullable__ | Location in store, like row, stand, etc. `Introduced in version 22.1.6.33` 
 | [InStoreMaxQuantity](Crm.CustomerProducts.md#instoremaxquantity) | decimal (10, 3) __nullable__ | Maximum quantity maintained by the customer. Measurement unit is Product.MeasurementUnit. `Introduced in version 22.1.6.33` 
 | [InStoreMinQuantity](Crm.CustomerProducts.md#instoreminquantity) | decimal (10, 3) __nullable__ | Minimum quantity maintained by the customer. Measurement unit is Product.MeasurementUnit. `Introduced in version 22.1.6.33` 
-| [IsActive](Crm.CustomerProducts.md#isactive) | boolean | Indicates whether this customer product definition is active. `Required` `Default(true)` `Introduced in version 22.1.6.33` 
+| [IsActive](Crm.CustomerProducts.md#isactive) | boolean | Indicates whether this customer product definition is active. `Required` `Default(true)` `Filter(eq)` `Introduced in version 22.1.6.33` 
 | [Notes](Crm.CustomerProducts.md#notes) | string (254) __nullable__ | Notes for the listing. 
 | [ObjectVersion](Crm.CustomerProducts.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 | [OrderMultiple](Crm.CustomerProducts.md#ordermultiple) | decimal (10, 3) __nullable__ | Determines the step when the system offers a quantity to order. `Introduced in version 22.1.6.33` 
@@ -107,11 +107,11 @@ _Supports Order By_: **False**
 
 ### IsActive
 
-Indicates whether this customer product definition is active. `Required` `Default(true)` `Introduced in version 22.1.6.33`
+Indicates whether this customer product definition is active. `Required` `Default(true)` `Filter(eq)` `Introduced in version 22.1.6.33`
 
 _Type_: **boolean**  
 _Category_: **System**  
-_Supported Filters_: **NotFilterable**  
+_Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Default Value_: **True**  
 

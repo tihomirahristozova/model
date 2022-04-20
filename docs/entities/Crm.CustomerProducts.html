@@ -83,11 +83,11 @@
 <p>Contains the products, that are contracted (listed) with a customer. Entity: Crm_Customer_Products</p>
 <h2 id="default-visualization">Default Visualization</h2>
 <p>Default Display Text Format:<br>
-<em>{Customer}</em><br>
+<em>{Customer.Party.PartyName:T}</em><br>
 Default Search Members:<br>
-<em>Customer</em><br>
+<em>Customer.Party.PartyName</em><br>
 Name Data Member:<br>
-<em>Customer</em></p>
+<em>Customer.Party.PartyName</em></p>
 <h2 id="aggregate">Aggregate</h2>
 <p>An <a href="https://docs.erp.net/tech/advanced/concepts/aggregates.html">aggregate</a> is a cluster of domain objects that can be treated as a single unit.</p>
 <p>Aggregate Parent:<br>
@@ -137,7 +137,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Crm.CustomerProducts.html#isactive">IsActive</a></td>
 <td>boolean</td>
-<td>Indicates whether this customer product definition is active. <code>Required</code> <code>Default(true)</code> <code>Introduced in version 22.1.6.33</code></td>
+<td>Indicates whether this customer product definition is active. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code> <code>Introduced in version 22.1.6.33</code></td>
 </tr>
 <tr>
 <td><a href="Crm.CustomerProducts.html#notes">Notes</a></td>
@@ -232,10 +232,10 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="isactive">IsActive</h3>
-<p>Indicates whether this customer product definition is active. <code>Required</code> <code>Default(true)</code> <code>Introduced in version 22.1.6.33</code></p>
+<p>Indicates whether this customer product definition is active. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code> <code>Introduced in version 22.1.6.33</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>
 <em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>True</strong></p>
 <h3 id="notes">Notes</h3>
