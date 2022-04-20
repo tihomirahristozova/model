@@ -121,6 +121,7 @@ _Allowed Values (Logistics.Wms.WarehousePoliciesRepository.PolicyKind Enum Membe
 | RequireSourceScan | Require scanning of the source location when moving/dispatching. Stored as 'RSS'. <br /> _Database Value:_ 'RSS' <br /> _Model Value:_ 4 <br /> _Domain API Value:_ 'RequireSourceScan' |
 | RequireDestinationScan | Require scanning of the destination location when moving/receiving. Stored as 'RDS'. <br /> _Database Value:_ 'RDS' <br /> _Model Value:_ 5 <br /> _Domain API Value:_ 'RequireDestinationScan' |
 | AllowLineSkip | Allow skipping of an order line when executing (allow quantity = 0). Stored as 'ALS'. <br /> _Database Value:_ 'ALS' <br /> _Model Value:_ 6 <br /> _Domain API Value:_ 'AllowLineSkip' |
+| ZoneType | Specifies the type of zone. Eg for receiving, shipping, packing, etc.. Stored as 'ZTY'. <br /> _Database Value:_ 'ZTY' <br /> _Model Value:_ 7 <br /> _Domain API Value:_ 'ZoneType' |
 
 _Supported Filters_: **Equals, EqualsIn**  
 _Supports Order By_: **False**  
@@ -176,6 +177,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The warehouse for which the policy is defined. . `Required` `Filter(multi eq)` `ReadOnly` `Owner`
 
 _Type_: **[Warehouses](Logistics.Wms.Warehouses.md)**  
+_Indexed_: **True**  
 _Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  

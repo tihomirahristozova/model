@@ -9,11 +9,11 @@ National data: Contains the persons, which are authorized to issue and sign VAT 
 
 ## Default Visualization
 Default Display Text Format:  
-_{EnterpriseCompany}_  
+_{EnterpriseCompany.Company.PartyName:T}_  
 Default Search Members:  
-_EnterpriseCompany_  
+_EnterpriseCompany.Company.PartyName_  
 Name Data Member:  
-_EnterpriseCompany_  
+_EnterpriseCompany.Company.PartyName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

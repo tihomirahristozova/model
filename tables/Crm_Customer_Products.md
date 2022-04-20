@@ -364,6 +364,12 @@ Indicates whether this customer product definition is active
 |User Login|no|
 |Visible|yes|
 
+#### Is_Active - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|no|no|
+
 ### Notes
 
 

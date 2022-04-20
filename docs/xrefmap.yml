@@ -121,6 +121,9 @@ references:
 - uid: Applications.Fleet.VehicleAlerts
   name: Applications.Fleet.VehicleAlerts Entity
   href: entities/Applications.Fleet.VehicleAlerts.html
+- uid: Applications.Fleet.VehicleEquipment
+  name: Applications.Fleet.VehicleEquipment Entity
+  href: entities/Applications.Fleet.VehicleEquipment.html
 - uid: Applications.Fleet.VehicleLocationHistoryRecords
   name: Applications.Fleet.VehicleLocationHistoryRecords Entity
   href: entities/Applications.Fleet.VehicleLocationHistoryRecords.html

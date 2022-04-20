@@ -9,13 +9,13 @@ Theoretical or actual content of a logistic unit. Entity: Log_Logistic_Unit_Cont
 
 ## Default Visualization
 Default Display Text Format:  
-_{LogisticUnit}_  
+_{LogisticUnit.SerialCode}_  
 Default Search Members:  
-_LotNumber; LogisticUnit_  
+_LotNumber; LogisticUnit.SerialCode_  
 Code Data Member:  
 _LotNumber_  
 Name Data Member:  
-_LogisticUnit_  
+_LogisticUnit.SerialCode_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  

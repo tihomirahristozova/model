@@ -9,13 +9,13 @@ A vehicle, which is used for transportation. One actual vehicle might be defined
 
 ## Default Visualization
 Default Display Text Format:  
-_{Vehicle}_  
+_{Vehicle.EngineIdentificationNumber}_  
 Default Search Members:  
-_Code; Vehicle_  
+_Code; Vehicle.EngineIdentificationNumber_  
 Code Data Member:  
 _Code_  
 Name Data Member:  
-_Vehicle_  
+_Vehicle.EngineIdentificationNumber_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
