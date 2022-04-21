@@ -489,7 +489,6 @@ When set, specifies that the policy will apply to the specified zone and its sub
 |Auto Complete|no|
 |Data Filter|no|
 |Default Value|None|
-|Depends On|[Warehouse_Id](#warehouse_id)|
 |Enter Stop|yes|
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
