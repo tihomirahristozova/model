@@ -15,7 +15,6 @@ The work elements of the work breakdown structure of each project type. Entity: 
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Full_Path](#full_path)|`nvarchar(25)` Readonly|The full path of the node in the format of dot-delimited, dot-terminated codes of the parents.|
 |[Notes](#notes)|`nvarchar(max)` ||
 |[Parent_Full_Path](#parent_full_path)|`nvarchar(25)` |The full path of the parent work element in this project type. NULL when this is root element.|
@@ -26,33 +25,6 @@ The work elements of the work breakdown structure of each project type. Entity: 
 |[Work_Element_Name](#work_element_name)|`nvarchar(254)` |The name of the work element, unique among the sibling elements within the parent work element.|
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Full_Path
 

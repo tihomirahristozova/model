@@ -11,7 +11,6 @@ The different types of tax stamps (aka Excise Labels) which are applied to the e
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Alcoholic_Strength](#alcoholic_strength)|`decimal(5, 2)` |Percentage of pure alcohol used in excise duty reporting.|
 |[Capacity](#capacity)|`decimal(6, 4)` |Package capacity - number of cigarettes or volume of alcohol in liters.|
 |[Category](#category)|`nvarchar(2)` Allowed: `TT`, `AA`, `DF`|Specifies the excise product category of the excise stamp - alcohol, tobacco, and others.|
@@ -27,33 +26,6 @@ The different types of tax stamps (aka Excise Labels) which are applied to the e
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Alcoholic_Strength
 

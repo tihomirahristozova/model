@@ -5,7 +5,6 @@
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Execution_State](#execution_state)|`int` |Shows where the execution of the step has reached. 0=Ready; 10=Active; 20=Executing; 30=Completing; 40=Failing; 50=Terminating; 60=Completed; 70=Failed; 80=Terminated.|
 |[Execution_Step_Id](#execution_step_id)|`uniqueidentifier` `PK`||
 |[Process_Element_Id](#process_element_id)|`uniqueidentifier` |The process element, which is being executed for the instance.|
@@ -14,33 +13,6 @@
 |[Start_Time](#start_time)|`datetime` |The date and time when the step execution started.|
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Execution_State
 

@@ -15,7 +15,6 @@ History of each saved version of each document. Entity: Gen_Document_Versions
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Document_Data](#document_data)|`varbinary` |Compressed representation of the document data. Valid when Document Data Format = D (deflate compressed).|
 |[Document_Data_Format](#document_data_format)|`nvarchar(1)` |The format of the saved document data. 'U' - uncompressed and stored in Document Data XML; 'D' - Deflate compressed and stored in Document Data.|
 |[Document_Data_XML](#document_data_xml)|`nvarchar(max)` |The uncompressed XML representation of the document data, including the document row, the header row and all types of lines. Valid when Document Data Format = U (uncompressed).|
@@ -28,33 +27,6 @@ History of each saved version of each document. Entity: Gen_Document_Versions
 |[Version](#version)|`int` Readonly|The version number that is stored in this row|
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Document_Data
 

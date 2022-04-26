@@ -15,7 +15,6 @@ Contains the resources, required by the project tasks. Entity: Prj_Project_Task_
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Billing_Price_Per_Hour](#billing_price_per_hour)|`decimal(12, 5)` |When not null, specifies the price per hour (in the currency of the Project) of resource usage which will be used for billing. NULL means that the item will be billed in another way. This way of billing is mutually exclusive with Fixed Total Price|
 |[Billing_Total_Amount](#billing_total_amount)|`decimal(14, 2)` |When not NULL, specifies that this item will be billed for the specified fixed total price (in the currency of the Project). NULL means that this item will be billed in another way. This way of billing is mutually exclusive with Billing Price Per Hour.|
 |[Cost_Per_Hour](#cost_per_hour)|`decimal(12, 5)` |Cost per hour for the resource usage for this task (in the currency of the project).|
@@ -31,33 +30,6 @@ Contains the resources, required by the project tasks. Entity: Prj_Project_Task_
 |[Task_Total_Cost](#task_total_cost)|`decimal(14, 2)` |Total cost for this task (in the currency of the project).|
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Billing_Price_Per_Hour
 

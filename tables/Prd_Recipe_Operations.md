@@ -15,7 +15,6 @@ Contains the routing (operation list) of the recipes. Entity: Prd_Recipe_Operati
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Id](#id)|`uniqueidentifier` `PK`||
 |[Line_Ord](#line_ord)|`int` |Order of the operation within the recipe|
 |[Minimum_Concurrent_Start_Time_Minutes](#minimum_concurrent_start_time_minutes)|`int` |How many minutes after the start of this operation can the next operation start. NULL means that the next operation should wait this operation to finish before starting|
@@ -39,33 +38,6 @@ Contains the routing (operation list) of the recipes. Entity: Prd_Recipe_Operati
 |[Workgroup_Resource_Id](#workgroup_resource_id)|`uniqueidentifier` |The exact workgroup resource that is engaged in the operation. NULL means that no resource is needed or it will be specfied at a later stage|
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Id
 

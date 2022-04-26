@@ -11,7 +11,6 @@ Parameters of assets, tracked for maintenance reasons, like car mileage, aircraf
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Is_Active](#is_active)|`bit` |Specifies whether the parameter is active for choosing in drop downs.|
 |[Notes](#notes)|`nvarchar(max)` ||
 |[Row_Version](#row_version)|`timestamp` ||
@@ -20,33 +19,6 @@ Parameters of assets, tracked for maintenance reasons, like car mileage, aircraf
 |[Tracked_Parameter_Name](#tracked_parameter_name)|`nvarchar(254)` `ML`|Multilanguage name of the asset parameter.|
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Is_Active
 

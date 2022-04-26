@@ -15,7 +15,6 @@ Stores company divisions structure. The divisions are parties and as such, can b
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Company_Division_Code](#company_division_code)|`nvarchar(10)` |Company division code, unique within the company|
 |[Company_Division_Id](#company_division_id)|`uniqueidentifier` `PK`|Company Division|
 |[Company_Division_Name](#company_division_name)|`nvarchar(254)` `ML`|Multi-language company divsion name|
@@ -24,33 +23,6 @@ Stores company divisions structure. The divisions are parties and as such, can b
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Company_Division_Code
 

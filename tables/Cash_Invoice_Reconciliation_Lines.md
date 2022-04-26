@@ -10,7 +10,6 @@
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Covered_Invoice_Amount](#covered_invoice_amount)|`decimal(14, 2)` |Amount from the invoice that is covered by the payment. The amount is in the currency of the invoice.|
 |[Invoice_Document_Id](#invoice_document_id)|`uniqueidentifier` |Obsolete. Not used.|
 |[Invoice_Reconciliation_Id](#invoice_reconciliation_id)|`uniqueidentifier` ||
@@ -19,33 +18,6 @@
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Covered_Invoice_Amount
 

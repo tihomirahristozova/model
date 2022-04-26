@@ -11,7 +11,6 @@ Leads are potential customers for your products. Because leads are usually proce
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Assigned_To_Sales_Person_Id](#assigned_to_sales_person_id)|`uniqueidentifier` |Sales rep to whom this lead is assigned for further processing. NULL - not yet assigned.|
 |[Campaign_Id](#campaign_id)|`uniqueidentifier` |The marketing campaign under which the lead was generated.|
 |[Company_Name](#company_name)|`nvarchar(64)` |The name of the company, which the person works for (in relation to the current lead).|
@@ -42,33 +41,6 @@ Leads are potential customers for your products. Because leads are usually proce
 |[System_Stage](#system_stage)|`nvarchar(3)` Allowed: `NEW`, `QUA`, `MQL`, `SQL`, `CLO`|The system stage of the lead - New, Qualifying, Marketing Qualified Lead, Sales Qualified Lead, Closed. (NEW, QUA, MQL, SQL, CLO)|
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Assigned_To_Sales_Person_Id
 

@@ -11,7 +11,6 @@ Promotional packages are packages of products, which are sold together at a spec
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Active](#active)|`bit` |Package status: 1 = the offer is available for new documents; 0 = otherwise|
 |[Campaign_Id](#campaign_id)|`uniqueidentifier` |Тhe marketing campaign to which the current definition belongs.|
 |[Enterprise_Company_Id](#enterprise_company_id)|`uniqueidentifier` |When not NULL, indicates that the package is valid only for the specified enterprise company.|
@@ -32,33 +31,6 @@ Promotional packages are packages of products, which are sold together at a spec
 |[Valid_To_Date](#valid_to_date)|`date` |When not NULL specifies the last date (inclusive) when the package is valid. The date is compared against the document date|
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Active
 

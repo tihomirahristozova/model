@@ -16,40 +16,12 @@ A web module, which presents a whole product catalog. Entity: Cms_Product_Catalo
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Product_Catalog_Id](#product_catalog_id)|`uniqueidentifier` |The product catalog, which is represented by this web module.|
 |[Product_Catalog_Web_Module_Id](#product_catalog_web_module_id)|`uniqueidentifier` `PK`||
 |[Row_Version](#row_version)|`timestamp` ||
 |[Web_Module_Id](#web_module_id)|`uniqueidentifier` |The base web module, which this module inherits.|
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Product_Catalog_Id
 

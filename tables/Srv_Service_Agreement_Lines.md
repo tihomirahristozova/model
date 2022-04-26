@@ -16,7 +16,6 @@ Service agreement lines represent the individual serviced objects that are cover
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Line_End_Date_Time](#line_end_date_time)|`datetime` |The ending date and time of the agreement coverage for the current line.|
 |[Line_No](#line_no)|`int` |Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc.|
 |[Line_Start_Date_Time](#line_start_date_time)|`datetime` |The starting date and time of the agreement coverage for the current line.|
@@ -31,33 +30,6 @@ Service agreement lines represent the individual serviced objects that are cover
 |[Service_Type_Id](#service_type_id)|`uniqueidentifier` |The type (level) of service that is agreed|
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Line_End_Date_Time
 

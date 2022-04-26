@@ -16,7 +16,6 @@ Detail lines of orders for material consumption. Entity: Prd_Consumption_Order_L
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Consumed_Quantity](#consumed_quantity)|`decimal(18, 3)` |Requested quantity of the material.|
 |[Consumed_Quantity_Base](#consumed_quantity_base)|`decimal(18, 3)` Readonly|The requested quantity equivalence in the base measurement category of the requested material.|
 |[Consumed_Quantity_Unit_Id](#consumed_quantity_unit_id)|`uniqueidentifier` |Measurement unit of the requested quantity.|
@@ -36,33 +35,6 @@ Detail lines of orders for material consumption. Entity: Prd_Consumption_Order_L
 |[Work_Order_Item_Ingredient_Id](#work_order_item_ingredient_id)|`uniqueidentifier` |The Work Order Item Ingredient for which we are ordering materials.|
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Consumed_Quantity
 

@@ -15,7 +15,6 @@ The solutions offered by a competitor. Entity: Crm_Competitor_Solutions (Introdu
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Company_Size_Class_Id](#company_size_class_id)|`uniqueidentifier` |When not null, specifies the company size, for which the solution is targeted.|
 |[Competitor_Id](#competitor_id)|`uniqueidentifier` |Competitor to our marketing solutions.|
 |[Competitor_Solution_Id](#competitor_solution_id)|`uniqueidentifier` `PK`|The solutions offered by a competitor.|
@@ -26,33 +25,6 @@ The solutions offered by a competitor. Entity: Crm_Competitor_Solutions (Introdu
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Company_Size_Class_Id
 

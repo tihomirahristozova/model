@@ -16,7 +16,6 @@ Represents detail lines of orders for shipment of sales orders to customers. Eac
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Box_Count](#box_count)|`int` |The count of boxes in which the goods are packaged. NULL means unknown|
 |[Finished](#finished)|`bit` |1 if this shipment should prohibit further shipments for the sales order line|
 |[Gross_Weight_kg](#gross_weight_kg)|`decimal(12, 3)` |The gross weight of the whole line in kilogramms. NULL means unknown|
@@ -45,33 +44,6 @@ Represents detail lines of orders for shipment of sales orders to customers. Eac
 |[Width_m](#width_m)|`decimal(12, 3)` |The width of the package in meters. NULL means unknown|
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Box_Count
 

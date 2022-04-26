@@ -11,7 +11,6 @@ Each record represents the occurrence of one logged event. Entity: Sys_Audit_Log
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Application_Name](#application_name)|`nvarchar(64)` |The client application that triggered the event. Null when unknown or N/A.|
 |[Audit_Log_Entry_Id](#audit_log_entry_id)|`uniqueidentifier` `PK`||
 |[Details](#details)|`nvarchar(max)` |Detailed contents of the event. Contents depend on the Event Type and Event Name.|
@@ -26,33 +25,6 @@ Each record represents the occurrence of one logged event. Entity: Sys_Audit_Log
 |[User_Id](#user_id)|`uniqueidentifier` |The user account under which the event has occurred. Null only for events which are not user-specific.|
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Application_Name
 

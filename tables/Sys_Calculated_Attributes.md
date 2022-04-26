@@ -11,7 +11,6 @@ User-defined read-only calculated attribute. Entity: Sys_Calculated_Attributes
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Calculated_Attribute_Id](#calculated_attribute_id)|`uniqueidentifier` `PK`||
 |[Caption](#caption)|`nvarchar(512)` `ML`|The multi-language caption, used to display the attribute.|
 |[Hint](#hint)|`nvarchar(max)` `ML`|The hint, which is displayed alongside the attribute.|
@@ -23,33 +22,6 @@ User-defined read-only calculated attribute. Entity: Sys_Calculated_Attributes
 |[Starting_Expression_No](#starting_expression_no)|`int` |The expression, from which the calculation starts. The result of the expression gives the value of the calculated attribute.|
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Calculated_Attribute_Id
 

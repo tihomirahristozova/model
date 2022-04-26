@@ -16,7 +16,6 @@ Contains cost rates for different periods for resources. Each record is valid un
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Enterprise_Company_Id](#enterprise_company_id)|`uniqueidentifier` |The enterprise company for which the cost is defined.|
 |[From_Date](#from_date)|`date` |Starting date of validity of the cost rate. The rate is valid until the next cost rate record with later date is defined.|
 |[Notes](#notes)|`nvarchar(max)` ||
@@ -28,33 +27,6 @@ Contains cost rates for different periods for resources. Each record is valid un
 |[Standard_Rate_Per_Hour](#standard_rate_per_hour)|`decimal(12, 4)` |The standard cost per hour of the resource in the resources costing currency. The standard cost is applied for resource usage during the normal working hours.|
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Enterprise_Company_Id
 

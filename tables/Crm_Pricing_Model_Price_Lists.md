@@ -15,7 +15,6 @@ The price lists, which are updated by the pricing model. Entity: Crm_Pricing_Mod
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Line_No](#line_no)|`int` |The consecutive number of this price list within the pricing model|
 |[Margin_Percent](#margin_percent)|`decimal(6, 5)` |Used, when the price will be automatically calculated as percentage difference from standard price. It is usually a negative value. NULL, when the price will not be automatically calculated in this way|
 |[Price_List_Id](#price_list_id)|`uniqueidentifier` |The price list, which is included in the pricing model|
@@ -24,33 +23,6 @@ The price lists, which are updated by the pricing model. Entity: Crm_Pricing_Mod
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Line_No
 

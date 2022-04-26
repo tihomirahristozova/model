@@ -15,7 +15,6 @@ Contains the work types, that can be performed in projects of this project type.
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Billed_With_Product_Id](#billed_with_product_id)|`uniqueidentifier` |The product, which is used for billing purposes for this work type. The price of the product is also used for project budgeting. NULL means that the work type cannot be billed|
 |[Is_Active](#is_active)|`bit` |True when the work type is currently active and selectable in new documents.|
 |[Project_Type_Id](#project_type_id)|`uniqueidentifier` ||
@@ -24,33 +23,6 @@ Contains the work types, that can be performed in projects of this project type.
 |[Work_Type_Name](#work_type_name)|`nvarchar(254)` |The name of the work type.|
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Billed_With_Product_Id
 

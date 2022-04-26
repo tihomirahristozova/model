@@ -16,7 +16,6 @@ Contains the output data for the specified period. This is the output on which c
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Cost_Distribution_Id](#cost_distribution_id)|`uniqueidentifier` ||
 |[Cost_Distribution_Output_Id](#cost_distribution_output_id)|`uniqueidentifier` `PK`||
 |[Line_No](#line_no)|`int` |Unique (within the document), consecutive line number of the output.|
@@ -24,33 +23,6 @@ Contains the output data for the specified period. This is the output on which c
 |[Weight_Coefficient](#weight_coefficient)|`decimal(12, 5)` |The weight coefficient for prorate distribution of cost over the current line.|
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Cost_Distribution_Id
 

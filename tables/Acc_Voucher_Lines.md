@@ -16,7 +16,6 @@ Contains one debit or credit posting within an accounting voucher. Entity: Acc_V
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Account_Id](#account_id)|`uniqueidentifier` |The account being debited or credited|
 |[Correspondance_No](#correspondance_no)|`int` |The number of the correspondance group within the accounting voucher. For each correspondance group, the debits are equal to the credits|
 |[Correspondant_Amount](#correspondant_amount)|`decimal(18, 2)` Readonly|The amount (in the currency of the correspondant line) to which the amount in this line is corresponding. This field has value only when the current line is corresponding to only one line (e.g. NULL means that the current line is corresponding to many lines).|
@@ -37,33 +36,6 @@ Contains one debit or credit posting within an accounting voucher. Entity: Acc_V
 |[Voucher_Line_Id](#voucher_line_id)|`uniqueidentifier` `PK`||
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Account_Id
 

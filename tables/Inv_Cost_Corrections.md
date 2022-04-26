@@ -15,7 +15,6 @@ Cost corrections provide a way to correct the cost of stock transactions after t
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Corrected_Transaction_Id](#corrected_transaction_id)|`uniqueidentifier` Readonly|Transaction that is corrected with this cost correction|
 |[Cost_Correction_Id](#cost_correction_id)|`uniqueidentifier` `PK`||
 |[Document_Id](#document_id)|`uniqueidentifier` ||
@@ -28,33 +27,6 @@ Cost corrections provide a way to correct the cost of stock transactions after t
 |[Thru_Date](#thru_date)|`datetime` |The date at which to stop looking for transactions, needing cost correction. It is used only when the source transaction is NULL.|
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Corrected_Transaction_Id
 

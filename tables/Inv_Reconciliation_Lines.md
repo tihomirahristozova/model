@@ -16,7 +16,6 @@ Store reconciliations (physical counting) detail lines. Each line contains the r
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Available_Quantity_Base](#available_quantity_base)|`decimal(18, 3)` Readonly|Quantity found at the reconciliation, in the base measurement category of the product.|
 |[Line_Ord](#line_ord)|`int` |The ordinal position of the line within the document. Duplicates are allowed, but not suggested|
 |[Lot_Id](#lot_id)|`uniqueidentifier` |The lot, which was reconciled.|
@@ -38,33 +37,6 @@ Store reconciliations (physical counting) detail lines. Each line contains the r
 |[Warehouse_Transaction_Id](#warehouse_transaction_id)|`uniqueidentifier` |The warehouse operation, whose result is reflected in the current line. Null when the reconciliation line is not a result of the counting warehouse operations in the Warehouse Management module.|
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Available_Quantity_Base
 

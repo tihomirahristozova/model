@@ -16,7 +16,6 @@ Excise Stamp Operation Lines. Entity: Exc_Excise_Stamp_Operation_Lines (Introduc
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[End_Number](#end_number)|`nvarchar(30)` |The end number of the sequence of excise stamps that are processed with the current operation.|
 |[Excise_Stamp_Lot_Id](#excise_stamp_lot_id)|`uniqueidentifier` |The lot of the excise stamps.|
 |[Excise_Stamp_Operation_Id](#excise_stamp_operation_id)|`uniqueidentifier` ||
@@ -32,33 +31,6 @@ Excise Stamp Operation Lines. Entity: Exc_Excise_Stamp_Operation_Lines (Introduc
 |[Start_Number](#start_number)|`nvarchar(30)` |The start number of the sequence of excise stamps that are processed with the current operation.|
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### End_Number
 

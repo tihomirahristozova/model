@@ -16,7 +16,6 @@ Cost correction detail lines. One line is created for each corrected transaction
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Base_Cost_Adjustment](#base_cost_adjustment)|`decimal(14, 2)` |The amount of correction (plus or minus) for the Base Cost field of the transaction line.|
 |[Cost_Correction_Amount](#cost_correction_amount)|`decimal(14, 2)` |The amount of correction (plus or minus) for the Amount field of the transaction line.|
 |[Cost_Correction_Id](#cost_correction_id)|`uniqueidentifier` ||
@@ -27,33 +26,6 @@ Cost correction detail lines. One line is created for each corrected transaction
 |[Transaction_Line_Id](#transaction_line_id)|`uniqueidentifier` |The transaction line, which is corrected.|
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Base_Cost_Adjustment
 

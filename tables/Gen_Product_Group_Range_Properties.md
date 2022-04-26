@@ -15,7 +15,6 @@ When specified for a product group, provides a way for automatical creation of n
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[From_Property_Value](#from_property_value)|`nvarchar(254)` |Starting value of the range of alternative values. Used only when Rage Type = R (range).|
 |[Product_Group_Id](#product_group_id)|`uniqueidentifier` ||
 |[Property_Id](#property_id)|`uniqueidentifier` |The property whose values will be altered.|
@@ -26,33 +25,6 @@ When specified for a product group, provides a way for automatical creation of n
 |[To_Property_Value](#to_property_value)|`nvarchar(254)` |Ending value of the range of alternative values. Used only when Rage Type = R (range).|
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### From_Property_Value
 

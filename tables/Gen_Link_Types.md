@@ -11,7 +11,6 @@ Obsolete. Not used. Entity: Gen_Link_Types
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Code](#code)|`nvarchar(16)` `PK`|Unique link type code|
 |[From_Doc_Type_Id](#from_doc_type_id)|`uniqueidentifier` |From which type of documents the link originates. NULL means that it might originate from any document type|
 |[Id](#id)|`uniqueidentifier` |Unique Id of the link type|
@@ -20,33 +19,6 @@ Obsolete. Not used. Entity: Gen_Link_Types
 |[To_Doc_Type_Id](#to_doc_type_id)|`uniqueidentifier` |To what type of documents the link points. NULL means that it might point to any document type|
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Code
 

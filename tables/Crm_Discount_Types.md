@@ -11,7 +11,6 @@ Contains the different types of discounts, which can be applied to sales lines. 
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Action_Type](#action_type)|`nvarchar(1)` Allowed: `A`, `R`, `M`|Specifies the way the discount is applied over the previous discounts.|
 |[Calculation_Method](#calculation_method)|`nvarchar(1)` Allowed: `S`, `P`, `B`|Specifies whether the calculation method of the discount is based on a standard discount, promotional package, bonus program, etc.|
 |[Discount_Type_Code](#discount_type_code)|`nvarchar(32)` ||
@@ -23,33 +22,6 @@ Contains the different types of discounts, which can be applied to sales lines. 
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Action_Type
 

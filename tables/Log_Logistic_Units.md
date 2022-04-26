@@ -11,7 +11,6 @@ Composition of products established for transport and/or storage which needs to 
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Cargo_Type_Id](#cargo_type_id)|`uniqueidentifier` |General type of the cargo of the logistic unit. NULL means unknown or N/A.|
 |[Expected_Weight](#expected_weight)|`decimal(12, 3)` |Expected weight in KG. Used for planning purposes. NULL means unknown.|
 |[Logistic_Unit_Id](#logistic_unit_id)|`uniqueidentifier` `PK`||
@@ -23,33 +22,6 @@ Composition of products established for transport and/or storage which needs to 
 |[Serial_Code](#serial_code)|`nvarchar(32)` |Unique serial code of the logistic unit. If GS1 coding is used, this is the SSCC.|
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Cargo_Type_Id
 

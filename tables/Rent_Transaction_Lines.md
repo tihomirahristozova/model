@@ -16,7 +16,6 @@ Contains all transactions of Record of Handover / Handing-Over Record lines. Ent
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Lease_Contract_Id](#lease_contract_id)|`uniqueidentifier` |Lease Contract|
 |[Lessee_Customer_Id](#lessee_customer_id)|`uniqueidentifier` |Lessee Customer|
 |[Notes](#notes)|`nvarchar(max)` |Notes|
@@ -28,33 +27,6 @@ Contains all transactions of Record of Handover / Handing-Over Record lines. Ent
 |[Transaction_Type](#transaction_type)|`nvarchar(1)` Allowed: `D`, `R`, `W`, `S`|Transaction Type|
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Lease_Contract_Id
 

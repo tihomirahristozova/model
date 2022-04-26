@@ -17,7 +17,6 @@ Detail records (lines) of the marketing activities. Entity: Crm_Marketing_Activi
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Competitor_Id](#competitor_id)|`uniqueidentifier` |Competitor where marketing activity was held.|
 |[Competitor_Price](#competitor_price)|`decimal(15, 5)` |Price of the competitor|
 |[In_Store_Available_Quantity](#in_store_available_quantity)|`decimal(10, 3)` |The quantity found in store (in Quantity Unit). NULL means that count was not performed.|
@@ -34,33 +33,6 @@ Detail records (lines) of the marketing activities. Entity: Crm_Marketing_Activi
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Competitor_Id
 

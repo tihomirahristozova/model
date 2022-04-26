@@ -244,6 +244,7 @@
 * [Exc_Excise_Duty_Rates](Exc_Excise_Duty_Rates.md)
 * [Exc_Excise_Operation_Types](Exc_Excise_Operation_Types.md)
 * [Exc_Excise_Product_Categories](Exc_Excise_Product_Categories.md)
+* [Exc_Excise_Product_Types](Exc_Excise_Product_Types.md)
 * [Exc_Excise_Products](Exc_Excise_Products.md)
 * [Exc_Excise_Purpose_Codes](Exc_Excise_Purpose_Codes.md)
 * [Exc_Excise_Stamp_Lots](Exc_Excise_Stamp_Lots.md)

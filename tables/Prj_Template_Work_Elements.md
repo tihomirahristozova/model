@@ -15,40 +15,12 @@ Contains project work elements, which shall be copied to projects, based on the 
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Project_Template_Id](#project_template_id)|`uniqueidentifier` ||
 |[Project_Template_Work_Element_Id](#project_template_work_element_id)|`uniqueidentifier` `PK`||
 |[Project_Type_Work_Element_Id](#project_type_work_element_id)|`uniqueidentifier` |The work element from the project type, which shall be copied as work element in new projects, based on this template.|
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Project_Template_Id
 

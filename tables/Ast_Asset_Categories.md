@@ -11,7 +11,6 @@ Categorization of the assets, which specifies their depreciation plans. Entity: 
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Asset_Category_Code](#asset_category_code)|`nvarchar(20)` ||
 |[Asset_Category_Id](#asset_category_id)|`uniqueidentifier` `PK`||
 |[Asset_Category_Name](#asset_category_name)|`nvarchar(254)` ||
@@ -19,33 +18,6 @@ Categorization of the assets, which specifies their depreciation plans. Entity: 
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Asset_Category_Code
 

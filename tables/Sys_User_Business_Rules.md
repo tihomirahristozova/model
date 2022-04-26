@@ -11,7 +11,6 @@ Represents user-defined business rule. Entity: Sys_User_Business_Rules
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Icon](#icon)|`varbinary` |Visual icon of the rule in .PNG format.|
 |[Is_Active](#is_active)|`bit` |Specifies whether the rule is activated.|
 |[Layer](#layer)|`nvarchar(3)` Allowed: `FTE`, `BKE`, `COM`|Specifies in which layers the rule will be available. The available events and actions depend on the chosen layer.  Allowed values: FTE=Front-End, BKE=BackEnd, COM=Common (both).|
@@ -26,33 +25,6 @@ Represents user-defined business rule. Entity: Sys_User_Business_Rules
 |[User_Startable](#user_startable)|`bit` |Specifies, that the rule can be manually started by the user.|
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Icon
 

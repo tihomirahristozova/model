@@ -15,7 +15,6 @@ Provides a way to apply different filtering of the property allowed values for t
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Enterprise_Company_Id](#enterprise_company_id)|`uniqueidentifier` |The enterprise company for which the current filter is specifed.|
 |[Filter_Xml](#filter_xml)|`nvarchar(max)` |When not null, specifies a filter for the allowed values of the property for the specified enterprise company.|
 |[Property_Enterprise_Company_Filter_Id](#property_enterprise_company_filter_id)|`uniqueidentifier` `PK`||
@@ -23,33 +22,6 @@ Provides a way to apply different filtering of the property allowed values for t
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Enterprise_Company_Id
 

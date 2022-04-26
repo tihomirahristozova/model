@@ -16,7 +16,6 @@ Asset purchase or sales order line for one asset. Entity: Ast_Asset_Order_Lines
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Asset_Id](#asset_id)|`uniqueidentifier` |The asset that is acquired or retired|
 |[Asset_Order_Id](#asset_order_id)|`uniqueidentifier` ||
 |[Asset_Order_Line_Id](#asset_order_line_id)|`uniqueidentifier` `PK`||
@@ -28,33 +27,6 @@ Asset purchase or sales order line for one asset. Entity: Ast_Asset_Order_Lines
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Asset_Id
 

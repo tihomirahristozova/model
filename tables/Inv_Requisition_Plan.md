@@ -11,7 +11,6 @@ The current requisition (MRP) plan. The data is deleted and re-created upon each
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Calendar_Date](#calendar_date)|`datetime` |The date for which we are planning. A record is created for each calendar date, on which there are events (orders, executions, planned events, etc.) for the product. Past events are stored on the current date of the planning.|
 |[Completion_Date](#completion_date)|`datetime` |The suggested by the program value equals Calendar_Date + Planning_Lead_Time_Days of the default product supply for this store; the completion date of the purchase orders to be generated|
 |[Confirm_Action](#confirm_action)|`bit` |1 - generate firm planned orders for the current row; 0- do not generate;|
@@ -36,33 +35,6 @@ The current requisition (MRP) plan. The data is deleted and re-created upon each
 |[Supplier_Id](#supplier_id)|`uniqueidentifier` |The default supplier in the default product supply for current store, if any|
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Calendar_Date
 

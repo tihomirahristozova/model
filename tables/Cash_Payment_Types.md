@@ -11,7 +11,6 @@ Describes the way of payment. For example: in cash, by bank transfer, with credi
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Default_Payment_Account_Id](#default_payment_account_id)|`uniqueidentifier` |When not NULL specifies the default payment account to use associated with this payment type|
 |[Enterprise_Company_Id](#enterprise_company_id)|`uniqueidentifier` ||
 |[Is_Active](#is_active)|`bit` |Indicates wheather the payment type is active and usable for choosing in new documents.|
@@ -22,33 +21,6 @@ Describes the way of payment. For example: in cash, by bank transfer, with credi
 |[System_Type](#system_type)|`nvarchar(2)` Allowed: `CH`, `CD`, `BT`, `TK`, `CK`, `U1`, `U2`, `U3`, `PK`, `IU`, `DG`, `OT`|Not NULL only when this is one of the system payment types. CS=Cash; CD=By Card; BT=Bank Transfer|
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Default_Payment_Account_Id
 

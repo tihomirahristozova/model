@@ -11,7 +11,6 @@ The actual values of the user-defined properties for each actual entity. Entity:
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Description](#description)|`nvarchar(254)` `ML`|The actual description value of the property for the specified entity (the entity with the specified Id).|
 |[Entity_Item_Id](#entity_item_id)|`uniqueidentifier` |The Id of the actual entity for which the value is specified.|
 |[Picture](#picture)|`varbinary` |The actual picture of the property for the specified entity (the entity with the specified Id).|
@@ -22,33 +21,6 @@ The actual values of the user-defined properties for each actual entity. Entity:
 |[Value_Id](#value_id)|`uniqueidentifier` |The internal Id of the value of the property for the specified entity (the entity with the specified Id). For choosable properties, this contains the id of the original "allowed value" row, from which the value was derived. NULL for non-choosable (free-text) properties, but also for old property values (before this id was available) or other unknown values.|
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Description
 

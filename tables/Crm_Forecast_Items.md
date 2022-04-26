@@ -11,7 +11,6 @@ Forecast items form demand in MRP calculations. Entity: Crm_Forecast_Items
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Country_Id](#country_id)|`uniqueidentifier` |The country for which the forecast is made. When NULL, the forecast is country neutral.|
 |[Customer_Id](#customer_id)|`uniqueidentifier` |The customer for which the forecast is made. When NULL, the forecast is not for any specfic customer.|
 |[Date](#date)|`datetime` |The date for which the sales is forecasted. When forecasting for a period, this contains the first date of the period|
@@ -24,33 +23,6 @@ Forecast items form demand in MRP calculations. Entity: Crm_Forecast_Items
 |[Store_Id](#store_id)|`uniqueidentifier` |The store which is expected to sell the products.|
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Country_Id
 

@@ -15,7 +15,6 @@ Contains the working shifts of the wrokgroups. Entity: Prd_Workgroup_Shifts
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Efficiency_Factor_Percent](#efficiency_factor_percent)|`decimal(3, 2)` |Efficiency factor of the routing steps for this shift, expressed as percentage|
 |[Establishment_Date](#establishment_date)|`datetime` |When the workgroup shift was established. Used as minimum date when generating calendar|
 |[Id](#id)|`uniqueidentifier` `PK`|Unique workgroup shift Id|
@@ -25,33 +24,6 @@ Contains the working shifts of the wrokgroups. Entity: Prd_Workgroup_Shifts
 |[Workgroup_Id](#workgroup_id)|`uniqueidentifier` ||
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Efficiency_Factor_Percent
 

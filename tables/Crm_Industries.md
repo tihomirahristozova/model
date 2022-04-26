@@ -11,7 +11,6 @@ The industries, for which we are offering solutions. Entity: Crm_Industries (Int
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Code](#code)|`nvarchar(32)` ||
 |[Industry_Id](#industry_id)|`uniqueidentifier` `PK`||
 |[Name](#name)|`nvarchar(254)` `ML`|Industry name (multi-language).|
@@ -19,33 +18,6 @@ The industries, for which we are offering solutions. Entity: Crm_Industries (Int
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Code
 

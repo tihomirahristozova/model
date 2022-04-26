@@ -216,7 +216,7 @@ _Category_: **System**
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Front-End Recalc Expressions:_  
-`obj.Product.ExciseProduct`
+`obj.Product.ExciseStampType.ExciseProduct`
 ### ExcisePurposeCode
 
 The Purpose codes specify the different purposes recognized by the authorities for determining the excise rate. `Filter(multi eq)` `Introduced in version 21.1.3.97`

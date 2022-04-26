@@ -11,7 +11,6 @@ Represents increase or decrease in the quantity available in a warehouse locatio
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Catch_Quantity](#catch_quantity)|`decimal(12, 3)` |Catch (measured) quantity for the transaction. Positive values indicate transactions. Negative values are used for adjustments. NULL when catch measurement is not configured for the product.|
 |[Catch_Quantity_Unit_Id](#catch_quantity_unit_id)|`uniqueidentifier` |The measurement unit of the catch quantity. NULL when catch measurement is not configured for the product.|
 |[Creation_Time_Utc](#creation_time_utc)|`datetime` ||
@@ -35,33 +34,6 @@ Represents increase or decrease in the quantity available in a warehouse locatio
 |[Warehouse_Transaction_Id](#warehouse_transaction_id)|`uniqueidentifier` `PK`||
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Catch_Quantity
 

@@ -15,7 +15,6 @@ Offers (quotes) for sales of products. Can contain variants and choice groups. T
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Accepted_On](#accepted_on)|`datetime` |The date on which the customer accepted the offer. NULL if the offer is not yet accepted or the date is unknown.|
 |[Customer_Id](#customer_id)|`uniqueidentifier` |The customer to which the products are offered.|
 |[Deal_Id](#deal_id)|`uniqueidentifier` |The opportunity (deal) on which this offer is based.|
@@ -38,33 +37,6 @@ Offers (quotes) for sales of products. Can contain variants and choice groups. T
 |[Valid_Till](#valid_till)|`datetime` |Last date when the offer is valid. NULL means the offer has no specific validity date|
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Accepted_On
 

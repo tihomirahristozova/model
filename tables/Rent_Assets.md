@@ -15,7 +15,6 @@ Contains the rentable assets. Entity: Rent_Assets
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Accounting_Asset_Id](#accounting_asset_id)|`uniqueidentifier` |When not NULL identifies the corresponding accounting asset|
 |[Enterprise_Company_Id](#enterprise_company_id)|`uniqueidentifier` ||
 |[Is_Active](#is_active)|`bit` ||
@@ -35,33 +34,6 @@ Contains the rentable assets. Entity: Rent_Assets
 |[Work_Schedule_Id](#work_schedule_id)|`uniqueidentifier` ||
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Accounting_Asset_Id
 

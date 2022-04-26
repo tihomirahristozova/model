@@ -11,7 +11,6 @@ Sequence of excise stamps with same production batch and type, received with one
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Batch_Number](#batch_number)|`nvarchar(30)` |Production batch of the Excise Stamps.|
 |[End_Number](#end_number)|`nvarchar(30)` |End number of the lot.|
 |[Excise_Stamp_Lot_Id](#excise_stamp_lot_id)|`uniqueidentifier` `PK`||
@@ -23,33 +22,6 @@ Sequence of excise stamps with same production batch and type, received with one
 |[Start_Number](#start_number)|`nvarchar(30)` |Start number of the lot.|
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Batch_Number
 

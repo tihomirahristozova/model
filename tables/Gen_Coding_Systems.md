@@ -11,7 +11,6 @@ Coding systems categorize additional product codes. Entity: Gen_Coding_Systems
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Coding_System_Id](#coding_system_id)|`uniqueidentifier` `PK`||
 |[Coding_System_Name](#coding_system_name)|`nvarchar(254)` `ML`||
 |[Default_Measurement_Unit_Id](#default_measurement_unit_id)|`uniqueidentifier` |When not NULL, specifies a measurement unit to be used as default, instead of the products default unit|
@@ -20,33 +19,6 @@ Coding systems categorize additional product codes. Entity: Gen_Coding_Systems
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Coding_System_Id
 

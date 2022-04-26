@@ -15,7 +15,6 @@ List of costs, associated with a pricing model. Entity: Crm_Pricing_Model_Costs
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Amount_Per_Unit](#amount_per_unit)|`decimal(9, 2)` |Used when the cost is calculated as amount per unit of the product. The unit is defined in Measurement_Unit_Id. NULL when the cost is calculated in a different way|
 |[Amount_Percent](#amount_percent)|`decimal(6, 5)` |Used when the cost is calculated as percent of the amount. NULL when the cost is calculated in a different way|
 |[Cost_Type_Id](#cost_type_id)|`uniqueidentifier` |The cost type, which is listed for the pricing model|
@@ -26,33 +25,6 @@ List of costs, associated with a pricing model. Entity: Crm_Pricing_Model_Costs
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Amount_Per_Unit
 

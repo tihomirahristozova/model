@@ -15,7 +15,6 @@ Contains a named set of currency exchange rates against a single currency for a 
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Currency_Directory_Id](#currency_directory_id)|`uniqueidentifier` `PK`||
 |[Currency_Directory_Name](#currency_directory_name)|`nvarchar(64)` |The name of the currency directory, used to distinguish it from the other directories on the same date|
 |[Document_Id](#document_id)|`uniqueidentifier` ||
@@ -27,33 +26,6 @@ Contains a named set of currency exchange rates against a single currency for a 
 |[To_Currency_Id](#to_currency_id)|`uniqueidentifier` |The destination currency for the conversions for this directory|
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Currency_Directory_Id
 

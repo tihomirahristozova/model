@@ -11,7 +11,6 @@ Specific prices of products. A price is applied after matching the specified cri
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Campaign_Id](#campaign_id)|`uniqueidentifier` |Тhe marketing campaign to which the current definition belongs.|
 |[Currency_Id](#currency_id)|`uniqueidentifier` |The currency of the price|
 |[Customer_Id](#customer_id)|`uniqueidentifier` |When not NULL, specifies that the customer of the sales document must be the specified customer.|
@@ -36,33 +35,6 @@ Specific prices of products. A price is applied after matching the specified cri
 |[Thru_Date](#thru_date)|`date` |Ending date (inclusive) of the validity of the price|
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Campaign_Id
 

@@ -11,7 +11,6 @@ Hierarchy of store groups. Entity: Inv_Store_Groups
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Enterprise_Company_Id](#enterprise_company_id)|`uniqueidentifier` ||
 |[Enterprise_Company_Location_Id](#enterprise_company_location_id)|`uniqueidentifier` ||
 |[Full_Path](#full_path)|`nvarchar(25)` Readonly|The full path to the store group in a dot separated, non-leading dot format. For example: 001.005.008.|
@@ -22,33 +21,6 @@ Hierarchy of store groups. Entity: Inv_Store_Groups
 |[Store_Group_Name](#store_group_name)|`nvarchar(254)` `ML`||
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Enterprise_Company_Id
 

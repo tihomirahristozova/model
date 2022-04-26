@@ -15,7 +15,6 @@ Represents the data, sent to the customs authorities for the movements of excise
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Accrue_Excise_Duty](#accrue_excise_duty)|`bit` |Accrue Excise Duty|
 |[Administrative_Reference_Code](#administrative_reference_code)|`nvarchar(16)` |The reference code, returned the customs authorities, when the document is exported to them. NULL means the document is not yet exported to the authorities.|
 |[Direction](#direction)|`nvarchar(1)` Allowed: `I`, `R`|Indicates whether the document is Receipt('R') or Issue('I') of the Tax Warehouse|
@@ -31,33 +30,6 @@ Represents the data, sent to the customs authorities for the movements of excise
 |[Transportation_Vehicle_Id](#transportation_vehicle_id)|`uniqueidentifier` |The vehicle, used for the transportation of the goods.|
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Accrue_Excise_Duty
 

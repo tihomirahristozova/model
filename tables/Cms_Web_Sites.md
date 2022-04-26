@@ -11,7 +11,6 @@ Contains the public web sites. Entity: Cms_Web_Sites
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Base_Url](#base_url)|`nvarchar(256)` |The base url (address) of the web site.|
 |[Enterprise_Company_Id](#enterprise_company_id)|`uniqueidentifier` |The enterprise company to which this web site belongs.|
 |[Is_Published](#is_published)|`bit` |Specifies whether the site is published for public Internet access.|
@@ -21,33 +20,6 @@ Contains the public web sites. Entity: Cms_Web_Sites
 |[Web_Site_Name](#web_site_name)|`nvarchar(256)` |Multilanguage web site name|
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Base_Url
 

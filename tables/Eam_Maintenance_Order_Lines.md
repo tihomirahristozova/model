@@ -17,7 +17,6 @@ Contains the types of maintenance and maintained assets in the maintenance order
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Line_No](#line_no)|`int` |Consecutive line number, unique within the maintenance order.|
 |[Maintenance_Order_Id](#maintenance_order_id)|`uniqueidentifier` ||
 |[Maintenance_Order_Line_Id](#maintenance_order_line_id)|`uniqueidentifier` `PK`||
@@ -28,33 +27,6 @@ Contains the types of maintenance and maintained assets in the maintenance order
 |[Notes](#notes)|`nvarchar(max)` ||
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Line_No
 

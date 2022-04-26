@@ -9,7 +9,6 @@
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Condition_Filter_Xml](#condition_filter_xml)|`nvarchar(max)` |When not NULL, specifies that the flow will be followed only if the condition is matched by the current values in the process instance.|
 |[Is_Default](#is_default)|`bit` |Denotes this flow as the default sequence flow. It is taken only when all other flows are not valid. For example, gateways usually are followed by several conditional flows and one default flow.|
 |[Process_Connection_Code](#process_connection_code)|`nvarchar(64)` |Connection code, unique within the process. Used as ID for XML serialization purposes.|
@@ -21,33 +20,6 @@
 |[Target_Process_Node_Id](#target_process_node_id)|`uniqueidentifier` |The element, at which the connection ends. The element should be in the same process as the connection.|
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Condition_Filter_Xml
 

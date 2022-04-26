@@ -5,7 +5,6 @@
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Domain_Id](#domain_id)|`uniqueidentifier` |Domain of allowed values for this property|
 |[Entity_Name](#entity_name)|`nvarchar(64)` `PK`|The system entity containing the objects|
 |[Multi_Valued](#multi_valued)|`bit` |1 - allow multiple values (with different Seq_No's in the values). 0 - allow single value only (Seq_No=1)|
@@ -14,33 +13,6 @@
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Domain_Id
 

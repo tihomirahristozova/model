@@ -11,7 +11,6 @@ Contains user requests for application of user rights. Entity: Pdm_Data_Subject_
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Completed_By_User_Id](#completed_by_user_id)|`uniqueidentifier` Readonly|The internal user account, which marked the request as implemented. Null when the request is still not implemented, or when the user is unknown.|
 |[Completed_On_Utc](#completed_on_utc)|`datetime` |Date and time (in UTC), when the requested right was implemented by the responsible entity. Null if the request is still not implemented.|
 |[Created_By_User_Id](#created_by_user_id)|`uniqueidentifier` Readonly|The user account, which was used to create the request. Null when the request was created internally, on behalf of the external person.|
@@ -25,33 +24,6 @@ Contains user requests for application of user rights. Entity: Pdm_Data_Subject_
 |[Status](#status)|`nvarchar(1)` Allowed: `1`, `2`, `3`, `4`, `5`|The status of the request. 1=Requested; 2=Reviewing; 3=Executing; 4=Implemented; 5=Denied.|
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Completed_By_User_Id
 

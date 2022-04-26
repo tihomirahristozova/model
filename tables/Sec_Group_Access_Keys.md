@@ -15,7 +15,6 @@ Specifies the access keys for which the user groups have permissions. The exista
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Access_Key_Id](#access_key_id)|`uniqueidentifier` |This access key, to which we are granting access permissions.|
 |[Can_Administer](#can_administer)|`bit` |When true, the group is granted with administrative permission (allowance to change access key) for the entity, protected by the access key.|
 |[Can_Delete](#can_delete)|`bit` |When true, the group is granted with delete permission for the entity, protected by the access key.|
@@ -35,33 +34,6 @@ Specifies the access keys for which the user groups have permissions. The exista
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Access_Key_Id
 

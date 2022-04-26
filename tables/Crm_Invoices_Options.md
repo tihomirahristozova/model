@@ -15,7 +15,6 @@ Default options for user document types for Invoices. Entity: Crm_Invoices_Optio
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Creates_VAT_Entries](#creates_vat_entries)|`bit` |Specifies whether the invoices of the current type create entries in the VAT ledges. If is used, for instance, to determine if null VAT entry should be automatically created when the invoice is voided.|
 |[Default_Deal_Type_Id](#default_deal_type_id)|`uniqueidentifier` |When not NULL, specifies default VAT deal type.|
 |[Document_Type_Id](#document_type_id)|`uniqueidentifier` |The document type for which the invoice option applies.|
@@ -26,33 +25,6 @@ Default options for user document types for Invoices. Entity: Crm_Invoices_Optio
 |[VAT_Deviation_Document_Amount_Type_Id](#vat_deviation_document_amount_type_id)|`uniqueidentifier` |Document amount that contains the difference between the total amount of the invoice formed by unit prices with VAT and the amount formed by unit prices without VAT|
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Creates_VAT_Entries
 

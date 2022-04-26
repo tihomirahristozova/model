@@ -15,7 +15,6 @@ Contains history of saved version of the managed objects. Entity: Sys_Object_Ver
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Object_Contents](#object_contents)|`varbinary` |The compressed contents of the object.|
 |[Object_Id](#object_id)|`uniqueidentifier` |The object, for which a version is stored.|
 |[Object_Version_Id](#object_version_id)|`uniqueidentifier` `PK`||
@@ -27,33 +26,6 @@ Contains history of saved version of the managed objects. Entity: Sys_Object_Ver
 |[Version_Type](#version_type)|`nvarchar(1)` Allowed: `C`, `U`|Specifies the action, which occurred on the actual object, referred by the system object.  'C' means that with this version the object was created. 'U' means that this is an update to an existing object.|
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Object_Contents
 

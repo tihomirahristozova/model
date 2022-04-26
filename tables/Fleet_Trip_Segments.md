@@ -16,7 +16,6 @@ Represents the segments which comprise the route of the trips. Entity: Fleet_Tri
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Ending_Map_Point_Id](#ending_map_point_id)|`uniqueidentifier` |The ending geographical point of the route segment|
 |[Ending_Timestamp](#ending_timestamp)|`datetime` |The ending date and time of the travel on the segment|
 |[Mileage](#mileage)|`decimal(9, 0)` |Mileage of the route segment. The mileage is measured in the operational units of the vehicle even when it is not miles or kilometers. NULL means unknown mileage|
@@ -28,33 +27,6 @@ Represents the segments which comprise the route of the trips. Entity: Fleet_Tri
 |[Trip_Segment_Id](#trip_segment_id)|`uniqueidentifier` `PK`|Unique trip segment id|
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Ending_Map_Point_Id
 

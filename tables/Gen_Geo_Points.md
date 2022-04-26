@@ -11,7 +11,6 @@ Geographical (geo) points are used as points of interest on the map. They are us
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Address](#address)|`nvarchar(128)` |The descriptive physical address, related to this geo point.|
 |[Enterprise_Company_Id](#enterprise_company_id)|`uniqueidentifier` |The enterprise company for which the name of the geo point has meaning. Null for geo points not related to specific enterprise company.|
 |[Geo_Point_Id](#geo_point_id)|`uniqueidentifier` `PK`||
@@ -21,33 +20,6 @@ Geographical (geo) points are used as points of interest on the map. They are us
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Address
 

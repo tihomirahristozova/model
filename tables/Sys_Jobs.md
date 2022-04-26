@@ -11,7 +11,6 @@ The jobs, which are configured in the system. Entity: Sys_Jobs (Introduced in ve
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Is_Active](#is_active)|`bit` |Specifies whether the job is active and ready for running.|
 |[Job_Id](#job_id)|`uniqueidentifier` `PK`||
 |[Job_Name](#job_name)|`nvarchar(254)` |The name of the job.|
@@ -21,33 +20,6 @@ The jobs, which are configured in the system. Entity: Sys_Jobs (Introduced in ve
 |[Run_On_Idle](#run_on_idle)|`bit` |Specifies whether to automatically run the job when the server is idle.|
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Is_Active
 

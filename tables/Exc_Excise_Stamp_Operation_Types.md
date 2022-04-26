@@ -11,7 +11,6 @@ Specifies the type of the Excise Stamp operation. Entity: Exc_Excise_Stamp_Opera
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Box_1_Effect](#box_1_effect)|`nvarchar(1)` Allowed: `N`, `P`, `M`|Specifies how the operation changes the Excise Stamp availability in the correspondent Box. The boxes are used to report the availability of excise stamps in the relevant locations according to the requirements of the customs administration.|
 |[Box_2_Effect](#box_2_effect)|`nvarchar(1)` Allowed: `N`, `P`, `M`|Specifies how the operation changes the Excise Stamp availability in the correspondent Box. The boxes are used to report the availability of excise stamps in the relevant locations according to the requirements of the customs administration.|
 |[Box_3_Effect](#box_3_effect)|`nvarchar(1)` Allowed: `N`, `P`, `M`|Specifies how the operation changes the Excise Stamp availability in the correspondent Box. The boxes are used to report the availability of excise stamps in the relevant locations according to the requirements of the customs administration.|
@@ -21,33 +20,6 @@ Specifies the type of the Excise Stamp operation. Entity: Exc_Excise_Stamp_Opera
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Box_1_Effect
 

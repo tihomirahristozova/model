@@ -11,7 +11,6 @@ Contains entities, which have secured access. Entity: Sys_Entities
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Access_Key_Id](#access_key_id)|`uniqueidentifier` |The access key, required to access the secured entity.|
 |[Display_Text_Format](#display_text_format)|`nvarchar(64)` |Interpolated string, containing the default format for displaying values of the entity. NULL means to use the system-wide default.|
 |[Entity_Id](#entity_id)|`uniqueidentifier` `PK`||
@@ -25,33 +24,6 @@ Contains entities, which have secured access. Entity: Sys_Entities
 |[Track_Changes_Level](#track_changes_level)|`tinyint` Allowed: `0`, `1`, `2`, `3`, `4`|The track changes level for the entity|
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Access_Key_Id
 

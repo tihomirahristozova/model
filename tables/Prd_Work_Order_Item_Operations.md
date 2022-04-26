@@ -17,7 +17,6 @@ The operations that are performed to produce the product. Entity: Prd_Work_Order
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Actual_End_Date_Time](#actual_end_date_time)|`datetime` |The date/time when the operation has completed. NULL means that the operation is not completed.|
 |[Actual_Start_Date_Time](#actual_start_date_time)|`datetime` |The date/time when the operation has started. NULL means that the has not started yet|
 |[Id](#id)|`uniqueidentifier` `PK`||
@@ -40,33 +39,6 @@ The operations that are performed to produce the product. Entity: Prd_Work_Order
 |[Workgroup_Resource_Id](#workgroup_resource_id)|`uniqueidentifier` |The resource that will be used for the operation. NULL means that no resource will be locked for the operation|
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Actual_End_Date_Time
 

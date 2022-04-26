@@ -11,7 +11,6 @@ Hierarchical categorization of the products. Entity: Gen_Product_Groups
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Active](#active)|`bit` |1 if the product group is active, 0 - not to list in combo boxes for choosing in new documents|
 |[Configurator_Creates_Recipe](#configurator_creates_recipe)|`bit` |Whether the product configurator should create one default recipe. 1=yes;0=no|
 |[Configurator_Status](#configurator_status)|`tinyint` Allowed: `0`, `1`, `2`|Usage of product configurator for new products. 0=Product configurator cannot be used to create products in this group;1=The configurator can be used;2=The configurator should be used and products cannot be created directly|
@@ -36,33 +35,6 @@ Hierarchical categorization of the products. Entity: Gen_Product_Groups
 |[Use_Lots](#use_lots)|`nvarchar(1)` Allowed: `A`, `N`, `R`|Specifies whether for the products from this group and its sub-groups the use of lots in store documents is required or is unallowed or is allowed while not required.|
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Active
 

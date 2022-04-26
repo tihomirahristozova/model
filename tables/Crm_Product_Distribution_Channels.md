@@ -15,7 +15,6 @@ Channel assignments (listing) for products. Entity: Crm_Product_Distribution_Cha
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Distribution_Channel_Id](#distribution_channel_id)|`uniqueidentifier` |The distribution channel in which the product is listed|
 |[From_Date](#from_date)|`date` |When the product was listed. NULL-the product was not yet listed. The data is for informational purposes only and does not affect the listing status of the product (Is_Active does)|
 |[Is_Active](#is_active)|`bit` |Is this product listing active? 1=Yes, 0=No|
@@ -27,33 +26,6 @@ Channel assignments (listing) for products. Entity: Crm_Product_Distribution_Cha
 |[To_Date](#to_date)|`date` |When the product was de-listed. NULL=unknown or the product was not de-listed. The data is for informational purposes only and does not affect the listing status of the product (Is_Active does)|
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Distribution_Channel_Id
 

@@ -11,7 +11,6 @@ Categorization of the products by their nature. Entity: Gen_Product_Types
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Is_Default](#is_default)|`bit` |When checked specifies that this type is set by default for new products unless another type is specified in the product groups.|
 |[Is_Fixed_Asset](#is_fixed_asset)|`bit` |1 when assets are acquired or retired when products from this type are purchased or sold|
 |[Is_Service_Activity_Service](#is_service_activity_service)|`bit` |1 when the product corresponds to service used in service documents (like service activities)|
@@ -25,33 +24,6 @@ Categorization of the products by their nature. Entity: Gen_Product_Types
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Is_Default
 

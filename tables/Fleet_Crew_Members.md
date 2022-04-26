@@ -16,7 +16,6 @@ Contains the memnbers of vehicle crews. Entity: Fleet_Crew_Members
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Crew_Id](#crew_id)|`uniqueidentifier` |The crew to which this member belongs|
 |[Crew_Member_Id](#crew_member_id)|`uniqueidentifier` `PK`|Id of the crew member|
 |[Notes](#notes)|`nvarchar(254)` ||
@@ -25,33 +24,6 @@ Contains the memnbers of vehicle crews. Entity: Fleet_Crew_Members
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Crew_Id
 

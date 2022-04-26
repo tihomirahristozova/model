@@ -11,7 +11,6 @@ Defines cost centers and their relation to profit centers. Entity: Acc_Cost_Cent
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Cost_Center_Id](#cost_center_id)|`uniqueidentifier` `PK`||
 |[Cost_Center_Name](#cost_center_name)|`nvarchar(254)` ||
 |[Notes](#notes)|`nvarchar(254)` ||
@@ -21,33 +20,6 @@ Defines cost centers and their relation to profit centers. Entity: Acc_Cost_Cent
 |[Transfer_Cost_To_Profit_Center_Id](#transfer_cost_to_profit_center_id)|`uniqueidentifier` |Points to the profit center to which to transfer the cost. Valid only for leaf cost centers|
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Cost_Center_Id
 

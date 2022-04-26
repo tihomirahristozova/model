@@ -11,7 +11,6 @@ Contains call detail records. Calls are phone calls, video calls and SMS message
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Call_Detail_Record_Id](#call_detail_record_id)|`uniqueidentifier` `PK`||
 |[Call_Type](#call_type)|`nvarchar(1)` Allowed: `P`, `V`, `M`|P=Phone; V=Video; M=Message/SMS|
 |[Call_Unique_Id](#call_unique_id)|`nvarchar(32)` |The unique id of the call, as reported by the telephone central. NULL when the central did not report unique Id. Used for integration purposes|
@@ -26,33 +25,6 @@ Contains call detail records. Calls are phone calls, video calls and SMS message
 |[Start_Time](#start_time)|`datetime` |The starting date and time of the call|
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Call_Detail_Record_Id
 

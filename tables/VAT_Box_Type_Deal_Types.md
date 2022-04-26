@@ -11,7 +11,6 @@ Determines the Amount Category which will be accumulated in the Box Type accordi
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Amount_Category](#amount_category)|`nvarchar(1)` Allowed: `V`, `B`, `T`|Specifies the amount type from the Vat Entry which will be accumulated|
 |[Box_Type_Deal_Type_Id](#box_type_deal_type_id)|`uniqueidentifier` `PK`||
 |[Box_Type_Id](#box_type_id)|`uniqueidentifier` |The type of box in a VAT declaration.|
@@ -20,33 +19,6 @@ Determines the Amount Category which will be accumulated in the Box Type accordi
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Amount_Category
 

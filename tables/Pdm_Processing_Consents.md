@@ -11,7 +11,6 @@ Consents of data subjects for processing of their personal data. Entity: Pdm_Pro
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Allow_Address](#allow_address)|`bit` |Allows the processing of the physical address.|
 |[Allow_Basic_Data](#allow_basic_data)|`bit` |Allows the processing of basic (usually public) data: Name, AgeGroup21+, public profile picture, etc.|
 |[Allow_Email](#allow_email)|`bit` |Allows the processing of the email address.|
@@ -35,33 +34,6 @@ Consents of data subjects for processing of their personal data. Entity: Pdm_Pro
 |[User_Id](#user_id)|`uniqueidentifier` |The login user, for which the consent is given. Null when a consent is entered for a natural person, not through online user.|
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Allow_Address
 

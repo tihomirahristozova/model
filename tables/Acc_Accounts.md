@@ -11,7 +11,6 @@ Contains the leaf level of the chart of accounts. Entity: Acc_Accounts
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Account_Full_Number](#account_full_number)|`nvarchar(30)` Readonly|The full number of the account, unique among all accounts. It consists of the group number, concatenated with the account number|
 |[Account_Group_Id](#account_group_id)|`uniqueidentifier` |The account group to which this account belongs|
 |[Account_Id](#account_id)|`uniqueidentifier` `PK`||
@@ -25,33 +24,6 @@ Contains the leaf level of the chart of accounts. Entity: Acc_Accounts
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Account_Full_Number
 

@@ -16,7 +16,6 @@ Contains detail lines of purchase orders. Entity: Scm_Purchase_Order_Lines
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Confirmed_Price_Per_Unit](#confirmed_price_per_unit)|`decimal(14, 5)` |The unit price that is confirmed by the supplier. NULL if there was no order confirmation.|
 |[Confirmed_Quantity](#confirmed_quantity)|`decimal(18, 3)` |The quantity that is confirmed by the supplier. NULL if there was no order confirmation.|
 |[Confirmed_Quantity_Base](#confirmed_quantity_base)|`decimal(18, 3)` Readonly|The theoretical equivalence of Confirmed Quantity in base measurement unit according to the current measurement dimensions of the product.|
@@ -43,33 +42,6 @@ Contains detail lines of purchase orders. Entity: Scm_Purchase_Order_Lines
 |[Standard_Quantity_Base](#standard_quantity_base)|`decimal(18, 3)` Readonly|The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution.|
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Confirmed_Price_Per_Unit
 

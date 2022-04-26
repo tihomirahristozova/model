@@ -15,7 +15,6 @@ The bank accounts of a party. Entity: Gen_Party_Bank_Accounts
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Bank_Account_Code](#bank_account_code)|`nvarchar(50)` |The code of the account, usually the IBAN code|
 |[Bank_Address](#bank_address)|`nvarchar(254)` `ML`|The address of the bank or the bank branch office. Required (not-null) only for own accounts for printing or exporting bank payments|
 |[Bank_Branch_Name](#bank_branch_name)|`nvarchar(100)` `ML`|The name of the branch office of the bank, where the account is located. Required (not-null) only for own accounts for printing or exporting bank payments|
@@ -28,33 +27,6 @@ The bank accounts of a party. Entity: Gen_Party_Bank_Accounts
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Bank_Account_Code
 

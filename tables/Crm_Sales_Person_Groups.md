@@ -11,7 +11,6 @@ Hierarchical sales person grouping. Entity: Crm_Sales_Person_Groups
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Full_Path](#full_path)|`nvarchar(4000)` Readonly|Full path to this item in the form /root/child1/../leaf/|
 |[Manager_Person_Id](#manager_person_id)|`uniqueidentifier` |The manager of the group. NULL when there is no manager.|
 |[Parent_Sales_Person_Group_Id](#parent_sales_person_group_id)|`uniqueidentifier` |The parent sales person group in the hierarchy.|
@@ -21,33 +20,6 @@ Hierarchical sales person grouping. Entity: Crm_Sales_Person_Groups
 |[Sales_Person_Group_Name](#sales_person_group_name)|`nvarchar(128)` ||
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Full_Path
 

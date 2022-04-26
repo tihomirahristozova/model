@@ -16,7 +16,6 @@ Detail records (lines) of targets for sales persons. Entity: Crm_Sales_Person_Ta
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Bonus_Program_Id](#bonus_program_id)|`uniqueidentifier` |Bonus program Id when the target type is BONUS, NULL otherwise|
 |[Period_Date](#period_date)|`datetime` Readonly|Calculated date representation of the target period (used for grouping, filtering and other auxiliary purposes)|
 |[Period_Month](#period_month)|`tinyint` |Month of the period in which the target must be fulfilled (the period is determined by specifying a month and an year)|
@@ -34,33 +33,6 @@ Detail records (lines) of targets for sales persons. Entity: Crm_Sales_Person_Ta
 |[Target_Weight](#target_weight)|`decimal(5, 2)` |Relative weight of target, comparatively to other targets|
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Bonus_Program_Id
 

@@ -11,7 +11,6 @@ Represents reasons for the payments. Contains both system and user-defined reaso
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Is_Active](#is_active)|`bit` |Specifies whether the payment reason is active and usable for choosing in new documents.|
 |[Is_System](#is_system)|`bit` Readonly|Specifies whether the payment reason is defined by the system. The system defined records are created by the system and are read-only for the user.|
 |[Payment_Reason_Id](#payment_reason_id)|`uniqueidentifier` `PK`||
@@ -19,33 +18,6 @@ Represents reasons for the payments. Contains both system and user-defined reaso
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Is_Active
 

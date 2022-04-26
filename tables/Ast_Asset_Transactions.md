@@ -15,7 +15,6 @@ Basic asset value transactions. The transactions can increase or decrease any of
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Asset_Transaction_Date](#asset_transaction_date)|`datetime` |Date (or end date of the period) on which the transaction takes action|
 |[Asset_Transaction_Id](#asset_transaction_id)|`uniqueidentifier` `PK`|Unique identification of the asset transaction.|
 |[Document_Id](#document_id)|`uniqueidentifier` ||
@@ -24,33 +23,6 @@ Basic asset value transactions. The transactions can increase or decrease any of
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Asset_Transaction_Date
 

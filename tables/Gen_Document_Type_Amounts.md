@@ -15,7 +15,6 @@ Specifies amount types, that should be automatically added to documents of a giv
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Default_Percent](#default_percent)|`decimal(7, 6)` |Default input percent. Valid only for amount types, supporting percent and takes precedence over Default_Percent in the definition of the amount type|
 |[Document_Amount_Type_Id](#document_amount_type_id)|`uniqueidentifier` |The amount type that should be automatically added to the documents of the specified type|
 |[Document_Type_Amount_Id](#document_type_amount_id)|`uniqueidentifier` `PK`||
@@ -26,33 +25,6 @@ Specifies amount types, that should be automatically added to documents of a giv
 |[User_Can_Change_Input](#user_can_change_input)|`bit` |1 if the user, entering the document is allowed to change the default input percent|
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Default_Percent
 

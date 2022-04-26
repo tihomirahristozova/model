@@ -16,7 +16,6 @@ Detail records (lines) of Offers. Entity: Crm_Offer_Lines
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Choice_Group_Name](#choice_group_name)|`nvarchar(60)` |Name of a group of alternative lines, only one of which can be selected for ordering. Lines are grouped based on the exact name of the Choice Group.|
 |[Delivery_Term_Days](#delivery_term_days)|`int` |Delivery term in days. When Required Delivery Date is specified (not NULL), it takes precedence and this is ignored.|
 |[Guarantee_Period_Days](#guarantee_period_days)|`int` |Guarantee period in days for the offered product. NULL for non-serviced products|
@@ -44,33 +43,6 @@ Detail records (lines) of Offers. Entity: Crm_Offer_Lines
 |[Variant](#variant)|`nvarchar(60)` |Name or number of variant of the whole offer. When multiple lines have the same variant, they are selected for ordering together.|
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Choice_Group_Name
 

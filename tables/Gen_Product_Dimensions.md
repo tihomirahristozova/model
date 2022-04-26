@@ -15,7 +15,6 @@ Contains convertion ratios between the supported measument categories for each p
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Convert_To_Base_Divisor](#convert_to_base_divisor)|`decimal(9, 3)` |This was intended to be the divisor, but due to a historical bug actually contains the multiplier of the convertion ratio from the non-base measurement category to the base measurement category. This should be automatically calculated by the system.|
 |[Convert_To_Base_Multiplier](#convert_to_base_multiplier)|`decimal(9, 3)` |This was intended to be the multiplier, but due to a historical bug actually contains the divisor of the convertion ratio from the non-base measurement category to the base measurement category. This should be automatically calculated by the system.|
 |[Dest_Quantity](#dest_quantity)|`decimal(9, 3)` |Quantity in some of the base units, that equals Source_Quantity|
@@ -28,33 +27,6 @@ Contains convertion ratios between the supported measument categories for each p
 |[Source_Quantity_Unit_Id](#source_quantity_unit_id)|`uniqueidentifier` |The non-base measurement unit for which we specify convertion ratio|
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Convert_To_Base_Divisor
 

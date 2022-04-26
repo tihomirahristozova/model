@@ -16,7 +16,6 @@ Contains the actual correspondance filters, which specify how each financial sta
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Account_Group_Id](#account_group_id)|`uniqueidentifier` |Main account group determining the correspondances for which the balances are summed|
 |[Correspondant_Account_Group_Id](#correspondant_account_group_id)|`uniqueidentifier` |Correspondant account group determining the correspondances for which the balances are summed. If NULL means that the balances of all correspondances for the main account group are summed.|
 |[Financial_Statement_Node_Correspondance_Id](#financial_statement_node_correspondance_id)|`uniqueidentifier` `PK`||
@@ -25,33 +24,6 @@ Contains the actual correspondance filters, which specify how each financial sta
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Account_Group_Id
 

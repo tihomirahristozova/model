@@ -11,7 +11,6 @@ Contains postponed events, which will be executed later. Usually these are large
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Cancelled](#cancelled)|`bit` |When true, specifies that this document event has been cancelled (either manually or in respect to another event) and will not be executed.|
 |[Creation_Time](#creation_time)|`datetime` Readonly||
 |[Document_Event](#document_event)|`nvarchar(254)` Readonly|The type of the document event that is scheduled to be processed|
@@ -25,33 +24,6 @@ Contains postponed events, which will be executed later. Usually these are large
 |[State](#state)|`smallint` Allowed: `0`, `5`, `10`, `20`, `30`, `40`, `50`, Readonly|The state of the document for which the event will be processed|
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Cancelled
 

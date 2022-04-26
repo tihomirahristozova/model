@@ -11,7 +11,6 @@ The types of boxes in a VAT declaration. . Entity: VAT_Box_Types (Introduced in 
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Box_Type_Id](#box_type_id)|`uniqueidentifier` `PK`|The type of box in a VAT declaration.|
 |[Calculated_Attribute_Id](#calculated_attribute_id)|`uniqueidentifier` |The calculated attribute which will be used in the calculation of the amount of the current Box Type. Used when the value of the "Calculation Type" field is "Calculated Attribute".|
 |[Calculation_Type](#calculation_type)|`nvarchar(2)` Allowed: `DT`, `CA`|Determines the source of amounts of the current Box Type. Sources can be the Vat Entries or the Calculated attribute from the VAT Declaration which is specified in the "Calculated Attribute Name" field.|
@@ -22,33 +21,6 @@ The types of boxes in a VAT declaration. . Entity: VAT_Box_Types (Introduced in 
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Box_Type_Id
 

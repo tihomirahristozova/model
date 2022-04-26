@@ -16,7 +16,6 @@ The details of the movement of each excise product for each excise document. Ent
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Excise_Administrative_Document_Id](#excise_administrative_document_id)|`uniqueidentifier` ||
 |[Excise_Administrative_Document_Line_Id](#excise_administrative_document_line_id)|`uniqueidentifier` `PK`||
 |[Excise_Alcoholic_Strength](#excise_alcoholic_strength)|`decimal(5, 2)` |The alcoholic strength, which will be used for Excise reporting purposes. NULL  if the product is not subject to alcoholic Excise reporting.|
@@ -38,33 +37,6 @@ The details of the movement of each excise product for each excise document. Ent
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Excise_Administrative_Document_Id
 

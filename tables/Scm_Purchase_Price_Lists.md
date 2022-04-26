@@ -11,7 +11,6 @@ Contains purchase price list headers. Entity: Scm_Purchase_Price_Lists
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[From_Date](#from_date)|`datetime` |Starting validity of the price list|
 |[Purchase_Price_List_Id](#purchase_price_list_id)|`uniqueidentifier` `PK`||
 |[Purchase_Price_List_Name](#purchase_price_list_name)|`nvarchar(50)` ||
@@ -19,33 +18,6 @@ Contains purchase price list headers. Entity: Scm_Purchase_Price_Lists
 |[Thru_Date](#thru_date)|`datetime` |Ending validity of the price list|
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### From_Date
 

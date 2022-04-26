@@ -11,7 +11,6 @@ Provides rules to conditionally secure new documents. Entity: Gen_Document_Type_
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Condition_Filter_Xml](#condition_filter_xml)|`nvarchar(max)` |Specifies the documents, for which the current rule is applicable. The XML filter is compared against new documents and the rule is applicable when they match.|
 |[Description](#description)|`nvarchar(254)` ||
 |[Document_Access_Key_Id](#document_access_key_id)|`uniqueidentifier` |The access key, which will be used to secure new documents, when this rule is selected.|
@@ -21,33 +20,6 @@ Provides rules to conditionally secure new documents. Entity: Gen_Document_Type_
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Condition_Filter_Xml
 

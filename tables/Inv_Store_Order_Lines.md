@@ -16,7 +16,6 @@ Detail lines of store orders. Each line represents one planned stock transaction
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[For_Ordering](#for_ordering)|`bit` |Specifies that the quantity of the product can be less than free to use quantity, because the product will be supplied |
 |[Guarantee_Period_Days](#guarantee_period_days)|`int` |Guarantee period in days for the offered product. NULL for non-serviced products|
 |[Line_Cost](#line_cost)|`decimal(14, 2)` |Total cost for the line in the currency of the document. Equals Quantity * Unit_Cost|
@@ -44,33 +43,6 @@ Detail lines of store orders. Each line represents one planned stock transaction
 |[Unit_Cost](#unit_cost)|`decimal(14, 5)` |Cost for 1 unit of measure in the currency of the document|
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### For_Ordering
 

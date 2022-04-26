@@ -15,7 +15,6 @@ Contains order for internal warehouse operation or plan for execution of warehou
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Document_Id](#document_id)|`uniqueidentifier` ||
 |[Row_Version](#row_version)|`timestamp` ||
 |[Warehouse_Id](#warehouse_id)|`uniqueidentifier` |The warehouse, where the order will be executed.|
@@ -23,33 +22,6 @@ Contains order for internal warehouse operation or plan for execution of warehou
 |[Warehouse_Worker_Id](#warehouse_worker_id)|`uniqueidentifier` |When set, denotes that the whole order is assigned to the specified worker.|
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Document_Id
 

@@ -15,7 +15,6 @@ Contains definitions of different variants of a product. The variants are differ
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Bar_Code](#bar_code)|`nvarchar(16)` |When specified, it contains a bar code which uniquely identifies the product variant.|
 |[Product_Id](#product_id)|`uniqueidentifier` |The product for which this variant is defined.|
 |[Product_Variant_Code](#product_variant_code)|`nvarchar(16)` Readonly|The code of the variant. The code is unique within the Product. It is the concatenation of the codes of the color, size and style.|
@@ -27,33 +26,6 @@ Contains definitions of different variants of a product. The variants are differ
 |[Variant_Style_Id](#variant_style_id)|`uniqueidentifier` |The style of the variant. NULL means that the variant does not have a specific style.|
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Bar_Code
 

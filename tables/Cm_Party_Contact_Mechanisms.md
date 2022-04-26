@@ -15,7 +15,6 @@ Specifies the contact mechanisms, which are attached to the parties. Currently e
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Contact_Mechanism_Id](#contact_mechanism_id)|`uniqueidentifier` |The contact mechanism of the party|
 |[Contact_Mechanism_Purpose_Id](#contact_mechanism_purpose_id)|`uniqueidentifier` |The purpose of this contact mechanism. Unique within the party. Can be used to seek for specific contact mechanisms.|
 |[From_Date](#from_date)|`datetime` |The first date when the contact mechanism was valid. NULL means unknown date|
@@ -31,33 +30,6 @@ Specifies the contact mechanisms, which are attached to the parties. Currently e
 |[Thru_Date](#thru_date)|`datetime` |The last date on which the contact mechanism was valid for the party. NULL if the contact mechanism is still valid|
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Contact_Mechanism_Id
 

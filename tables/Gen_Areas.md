@@ -11,7 +11,6 @@ Areas are user-defined division of the sales territories. Entity: Gen_Areas
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Area_Code](#area_code)|`nvarchar(16)` ||
 |[Area_Id](#area_id)|`uniqueidentifier` `PK`||
 |[Area_Name](#area_name)|`nvarchar(254)` `ML`||
@@ -20,33 +19,6 @@ Areas are user-defined division of the sales territories. Entity: Gen_Areas
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Area_Code
 

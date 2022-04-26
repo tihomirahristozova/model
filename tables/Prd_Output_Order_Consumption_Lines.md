@@ -16,7 +16,6 @@ The internal production consumption of materials. Used only for control purposes
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Consumed_Quantity_For_Run](#consumed_quantity_for_run)|`decimal(18, 3)` |The consumed quantity of the material for the operation.|
 |[Consumed_Quantity_For_Scrap](#consumed_quantity_for_scrap)|`decimal(18, 3)` |The scrapped quantity of the material for this operation.|
 |[Consumed_Quantity_For_Setup](#consumed_quantity_for_setup)|`decimal(18, 3)` |The consumed quantity of the material while setting up the operation.|
@@ -33,33 +32,6 @@ The internal production consumption of materials. Used only for control purposes
 |[Work_Order_Item_Operation_Id](#work_order_item_operation_id)|`uniqueidentifier` |The operation in which the material was consumed. NULL = unknown|
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Consumed_Quantity_For_Run
 

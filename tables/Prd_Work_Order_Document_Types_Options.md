@@ -11,40 +11,12 @@ Options for user-defined Work Order document types. Entity: Prd_Work_Order_Docum
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Completing_Output_Order_Document_Type_Id](#completing_output_order_document_type_id)|`uniqueidentifier` |User-defined Completing Output Order document type|
 |[Document_Type_Id](#document_type_id)|`uniqueidentifier` |User-defined Work Order document type|
 |[Row_Version](#row_version)|`timestamp` ||
 |[Work_Order_Document_Types_Option_Id](#work_order_document_types_option_id)|`uniqueidentifier` `PK`|Option for user-defined Work Order document type|
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Completing_Output_Order_Document_Type_Id
 

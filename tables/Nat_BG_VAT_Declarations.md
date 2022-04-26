@@ -15,7 +15,6 @@ National data: Contains the VAT declarations, issued by the enterprise company, 
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Coefficient_VATL_Article_73](#coefficient_vatl_article_73)|`decimal(3, 2)` |Field 01 - 33 from the declaration. Must be between 0.00 and 1.00.|
 |[Declaring_Person_Id](#declaring_person_id)|`uniqueidentifier` |Specific declaring person for this declaration. If the declaring person isn't specified then the default declaring person for the enterprise company is used|
 |[Deducted_VAT_Amount_Article_92_Paragraph_1](#deducted_vat_amount_article_92_paragraph_1)|`decimal(14, 2)` |Field 01 - 70 from the declaration. Amounts are in base currency. Must be greater than 0.00.|
@@ -34,33 +33,6 @@ National data: Contains the VAT declarations, issued by the enterprise company, 
 |[VAT_Period_Start](#vat_period_start)|`date` |Start date of the period fot which the VAT declaration is made.|
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Coefficient_VATL_Article_73
 

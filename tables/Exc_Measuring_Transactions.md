@@ -11,7 +11,6 @@ Transaction of product input or output, measured with specialized measuring devi
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Alcohol_Degree](#alcohol_degree)|`int` |For alcoholic products, contains the percentage of pure alcohol. NULL when the transaction is not for alcoholic products.|
 |[Alcohol_Density](#alcohol_density)|`int` |For alcoholic products, contains the average density for the whole transaction. The measurement unit is dependent on the applicable legislation. NULL for non-alcoholic products.|
 |[Alcohol_Temperature](#alcohol_temperature)|`int` |For alcoholic products, contains the temperature of the fluid, when Alcohol Degree was calculated. The measurement unit is dependent on the national regulation (usually Celsius). NULL for non-alcoholic products.|
@@ -29,33 +28,6 @@ Transaction of product input or output, measured with specialized measuring devi
 |[Transaction_Number](#transaction_number)|`nvarchar(32)` |Transaction number, unique for the measuring device.|
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Alcohol_Degree
 

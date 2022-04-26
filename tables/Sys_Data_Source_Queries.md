@@ -15,7 +15,6 @@ Represents a query within a data source. Entity: Sys_Data_Source_Queries
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Data_Source_Id](#data_source_id)|`uniqueidentifier` ||
 |[Data_Source_Query_Id](#data_source_query_id)|`uniqueidentifier` `PK`||
 |[Depends_On_Child_Rows](#depends_on_child_rows)|`tinyint` Allowed: `0`, `1`, `2`|Determines the visibility of rows in this table. 0 - allways visible; 1 - the row is visible if there is at least one child row; 2 - the row is visible if all sub-tables contain child rows|
@@ -28,33 +27,6 @@ Represents a query within a data source. Entity: Sys_Data_Source_Queries
 |[Unique_Name](#unique_name)|`nvarchar(64)` |The name of the data table in the printout datasource. If NULL the Reference_Path is used.|
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Data_Source_Id
 

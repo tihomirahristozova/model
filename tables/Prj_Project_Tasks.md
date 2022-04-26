@@ -11,7 +11,6 @@ Represents one task of a project. Entity: Prj_Project_Tasks
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Activity_Id](#activity_id)|`uniqueidentifier` |The Id of the Cm_Activity created for this task. NULL means that activity is still not created|
 |[Budget_Labor_Amount](#budget_labor_amount)|`decimal(12, 2)` |Budgeted amount for the labor for the task in the currency of the project. The material is calculated separately. NULL means that budgeting for the item is not calculated|
 |[Finish_Date_Time](#finish_date_time)|`datetime` |The date and time when the task is planned to finish.|
@@ -30,33 +29,6 @@ Represents one task of a project. Entity: Prj_Project_Tasks
 |[Work_Type_Id](#work_type_id)|`uniqueidentifier` |Type of work to be done. NULL means that type of work is undetermined yet.|
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Activity_Id
 

@@ -11,7 +11,6 @@ A single notification of a user. Entity: Cmm_Notifications (Introduced in versio
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Creation_Time_Utc](#creation_time_utc)|`datetime` Readonly|The exact server time (in UTC), when the notification was created.|
 |[Data_Object_Id](#data_object_id)|`uniqueidentifier` |The data object about which the notification is created. Null means that the notification is not about any specific data object.|
 |[Is_Read](#is_read)|`bit` |Specifies whether the user has read the notification. If the system changes the notification after first reading, the flag is reset to unread again.|
@@ -22,33 +21,6 @@ A single notification of a user. Entity: Cmm_Notifications (Introduced in versio
 |[User_Id](#user_id)|`uniqueidentifier` |The user, who is notified.|
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Creation_Time_Utc
 

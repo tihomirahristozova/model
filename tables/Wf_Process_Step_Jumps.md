@@ -5,7 +5,6 @@
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Condition_Property_Id](#condition_property_id)|`uniqueidentifier` ||
 |[Condition_Property_Value](#condition_property_value)|`nvarchar(255)` ||
 |[From_Process_Step_Id](#from_process_step_id)|`uniqueidentifier` ||
@@ -14,33 +13,6 @@
 |[To_Process_Step_Id](#to_process_step_id)|`uniqueidentifier` ||
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Condition_Property_Id
 

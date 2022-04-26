@@ -11,7 +11,6 @@ Contains the names and https certificates of the different host names used to ho
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Certificate_Contents](#certificate_contents)|`varbinary` |The contents of the web host certificate. NULL means to use the server system certificate.|
 |[Certificate_Expiry_Date](#certificate_expiry_date)|`date` |The expiry date of the certificate. Can be used to track the expiration of the web host certificates. When NULL, the expiry date was not provided by the user, when uploading the certificate.|
 |[Certificate_Original_Filename](#certificate_original_filename)|`nvarchar(254)` |The original name of the file, used to upload the certificate. Used only for reference purposes. When NULL, means that the user did not provide that information when uploading the certificate.|
@@ -23,33 +22,6 @@ Contains the names and https certificates of the different host names used to ho
 |[Web_Host_Name](#web_host_name)|`nvarchar(max)` |The unique Internet name of the host. Should NOT include protocol name and should NOT include any forward slashes. This is just the dot-separated host name.|
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Certificate_Contents
 

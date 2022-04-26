@@ -16,7 +16,6 @@ Contains detail records of Receiving Orders. Each line contains the receiving of
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Confirmed_Quantity](#confirmed_quantity)|`decimal(18, 3)` |The final confirmed received quantity, after adjustments. It is used in all calculations for the order. Usually changed with adjustments to the receivemnt order, in regard to the warehouse receipt or the invoice. When null, its value is equal to Quantity.|
 |[Confirmed_Quantity_Base](#confirmed_quantity_base)|`decimal(18, 3)` |The theoretical equivalence of Confirmed Quantity in base measurement unit according to the current measurement dimensions of the product.|
 |[Confirmed_Standard_Quantity_Base](#confirmed_standard_quantity_base)|`decimal(18, 3)` Readonly|The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. NULL means to convert the value from Confirmed Quantity using the measurement ratios.|
@@ -44,33 +43,6 @@ Contains detail records of Receiving Orders. Each line contains the receiving of
 |[Store_Bin_Id](#store_bin_id)|`uniqueidentifier` |The store bin in which to receive the goods.|
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Confirmed_Quantity
 

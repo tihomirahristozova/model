@@ -11,7 +11,6 @@ A set of changes, performed in one request. Entity: Sys_Object_Changesets (Intro
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Application_Name](#application_name)|`nvarchar(max)` |The application which requested the change. NULL when it is unknown.|
 |[Object_Changeset_Id](#object_changeset_id)|`uniqueidentifier` `PK`||
 |[Row_Version](#row_version)|`timestamp` ||
@@ -20,33 +19,6 @@ A set of changes, performed in one request. Entity: Sys_Object_Changesets (Intro
 |[User_Id](#user_id)|`uniqueidentifier` |The user which initiated the change. NULL when it is unknown.|
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Application_Name
 

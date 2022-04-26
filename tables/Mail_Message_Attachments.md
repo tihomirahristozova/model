@@ -17,7 +17,6 @@ Represents attachments to mail messages. Entity: Mail_Message_Attachments
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Attachment_Content](#attachment_content)|`varbinary` |The actual content of the attachment. NULL when the content is not downloaded or is unknown for some other reason|
 |[Content_Descriptors](#content_descriptors)|`nvarchar(4000)` |Content flags, like "Content-Type: text/plain; charset=utf-8"|
 |[Content_Downloaded](#content_downloaded)|`bit` |1 when the content is included, 0 when this is only an empty container. Content should be included when sending mail|
@@ -27,33 +26,6 @@ Represents attachments to mail messages. Entity: Mail_Message_Attachments
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Attachment_Content
 

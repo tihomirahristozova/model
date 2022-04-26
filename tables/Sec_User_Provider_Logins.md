@@ -15,7 +15,6 @@ External login providers. Entity: Sec_User_Provider_Logins (Introduced in versio
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Provider_Key](#provider_key)|`nvarchar(450)` |The key, which the provider provided for logging the user.|
 |[Provider_Name](#provider_name)|`nvarchar(50)` Allowed: `ERPNET`, `GOOGLE`, `FACEBOOK`|The system name of the authentication provider. It should be already registered for the domain.|
 |[Row_Version](#row_version)|`timestamp` ||
@@ -23,33 +22,6 @@ External login providers. Entity: Sec_User_Provider_Logins (Introduced in versio
 |[User_Provider_Login_Id](#user_provider_login_id)|`uniqueidentifier` `PK`||
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Provider_Key
 

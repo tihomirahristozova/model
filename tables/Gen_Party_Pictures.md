@@ -15,7 +15,6 @@ Party pictures - photos, logos, etc. Entity: Gen_Party_Pictures
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Comments](#comments)|`nvarchar(254)` |Notes for this party picture.|
 |[Is_Default](#is_default)|`bit` |1=This is the default picture for the party; 0=otherwise|
 |[Is_Logo](#is_logo)|`bit` ||
@@ -26,33 +25,6 @@ Party pictures - photos, logos, etc. Entity: Gen_Party_Pictures
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Comments
 

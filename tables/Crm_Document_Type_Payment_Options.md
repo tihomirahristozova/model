@@ -15,7 +15,6 @@ Contains payment options for user documnet types for sales orders. Entity: Crm_D
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Deferred_Payment_Minimal_Ammount](#deferred_payment_minimal_ammount)|`decimal(14, 2)` |The minimal order total amount, which an order must have in order to use deferred payment|
 |[Deferred_Payment_Minimal_Ammount_Currency_Id](#deferred_payment_minimal_ammount_currency_id)|`uniqueidentifier` |The currency of Deferred Payment Minimal Amount|
 |[Document_Type_Id](#document_type_id)|`uniqueidentifier` |The document type for which the payment option applies.|
@@ -24,33 +23,6 @@ Contains payment options for user documnet types for sales orders. Entity: Crm_D
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Deferred_Payment_Minimal_Ammount
 

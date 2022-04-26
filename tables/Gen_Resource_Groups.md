@@ -11,7 +11,6 @@ Resource groups categorize the resources. Entity: Gen_Resource_Groups
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Enterprise_Company_Id](#enterprise_company_id)|`uniqueidentifier` |The enterprise company to which this resource group belongs. NULL means that the group is valid for all companies. Can be NULL only if the parent group company is also NULL|
 |[Parent_Resource_Group_Id](#parent_resource_group_id)|`uniqueidentifier` |The parent resource group or NULL if this is root group|
 |[Resource_Group_Id](#resource_group_id)|`uniqueidentifier` `PK`|Resource Group Id|
@@ -19,33 +18,6 @@ Resource groups categorize the resources. Entity: Gen_Resource_Groups
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Enterprise_Company_Id
 

@@ -15,7 +15,6 @@ Theoretical or actual content of a logistic unit. Entity: Log_Logistic_Unit_Cont
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Base_Quantity](#base_quantity)|`decimal(12, 3)` |The quantity, expressed in the base measurement category of the product.|
 |[Expiration_Date](#expiration_date)|`date` |Expiration date of the goods. NULL means unknown or N/A.|
 |[Gross_Weight](#gross_weight)|`decimal(12, 3)` |Gross weight in kilograms (kg). NULL means unknown.|
@@ -31,33 +30,6 @@ Theoretical or actual content of a logistic unit. Entity: Log_Logistic_Unit_Cont
 |[Standard_Quantity](#standard_quantity)|`decimal(12, 3)` |The quantity, expessed in the standard measurement unit of the product.|
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Base_Quantity
 

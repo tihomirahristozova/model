@@ -15,7 +15,6 @@ Contains the data of a printout of a document as it was obtained from the data s
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Document_Print_Image_Id](#document_print_image_id)|`uniqueidentifier` `PK`||
 |[Print_Image](#print_image)|`varbinary` |The data of the printout, stored in the format, specified in Print Image Format.|
 |[Print_Image_Format](#print_image_format)|`nvarchar(3)` |The format, which is used to represent the print image. Currently, only 'CDS' = Compressed Data Set is supported.|
@@ -23,33 +22,6 @@ Contains the data of a printout of a document as it was obtained from the data s
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Document_Print_Image_Id
 

@@ -11,7 +11,6 @@ Contains user-defined data sources, which retrieve rows from multiple queries. E
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Base_Query_Name](#base_query_name)|`nvarchar(128)` |The name of the query or table that is used for root reference point of the loaded data.|
 |[Data_Source_Id](#data_source_id)|`uniqueidentifier` `PK`||
 |[Data_Source_Name](#data_source_name)|`nvarchar(64)` |The name of the data source.|
@@ -20,33 +19,6 @@ Contains user-defined data sources, which retrieve rows from multiple queries. E
 |[Show_Parent_Tables](#show_parent_tables)|`bit` |Indicates whether the parent nodes in the Reference_Path in Sys_Data_Source_Queries_Table are automaticaly included in the report or not.|
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Base_Query_Name
 

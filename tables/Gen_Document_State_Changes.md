@@ -15,7 +15,6 @@ History of document state changes. Entity: Gen_Document_State_Changes
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Document_Id](#document_id)|`uniqueidentifier` |The document which has changed state.|
 |[Document_State_Change_Id](#document_state_change_id)|`uniqueidentifier` `PK`||
 |[New_State](#new_state)|`smallint` Allowed: `0`, `10`, `20`, `30`, `40`, `50`, `5`|The new state after the change.|
@@ -27,33 +26,6 @@ History of document state changes. Entity: Gen_Document_State_Changes
 |[Void](#void)|`bit` |1 if the document is voided with this change|
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Document_Id
 

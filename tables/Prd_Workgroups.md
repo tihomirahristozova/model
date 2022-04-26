@@ -11,7 +11,6 @@ Production workgroups. Entity: Prd_Workgroups
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Active](#active)|`bit` |Indicates whether the current workgroup is active.|
 |[Cost_Currency](#cost_currency)|`nvarchar(3)` ||
 |[Full_Path](#full_path)|`nvarchar(254)` |The full path to the current node, represented with slash ('/') as leading, trailing and separator character. Example: '/rootnode/subnode/'.|
@@ -22,33 +21,6 @@ Production workgroups. Entity: Prd_Workgroups
 |[Workgroup_Name](#workgroup_name)|`nvarchar(64)` |Name of the workgroup|
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Active
 

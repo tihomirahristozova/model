@@ -15,7 +15,6 @@ Represents a party associated to a document. Entity: Gen_Document_Parties (Intro
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Document_Id](#document_id)|`uniqueidentifier` |The document in which the party plays a role.|
 |[Document_Party_Id](#document_party_id)|`uniqueidentifier` `PK`|Document Party|
 |[Notes](#notes)|`nvarchar(max)` ||
@@ -24,33 +23,6 @@ Represents a party associated to a document. Entity: Gen_Document_Parties (Intro
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Document_Id
 

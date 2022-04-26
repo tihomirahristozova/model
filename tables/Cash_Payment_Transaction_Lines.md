@@ -16,7 +16,6 @@ Contains the distibution of the payments' amounts among the source payment order
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Allow_Overpayment](#allow_overpayment)|`bit` |1-Allows overpayment for the payment order; 0=Does not allow (default)|
 |[Amount](#amount)|`decimal(10, 2)` |The part of the total payed amount by the transaction, that is distributed to the specified payment order|
 |[Covered_Order_Amount](#covered_order_amount)|`decimal(10, 2)` |The part of the original payment order amount, that is covered by this transaction line|
@@ -27,33 +26,6 @@ Contains the distibution of the payments' amounts among the source payment order
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Allow_Overpayment
 

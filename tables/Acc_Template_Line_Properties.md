@@ -18,7 +18,6 @@ Contains the way to obtain the values for each required property of both the deb
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Constant_Value_Id](#constant_value_id)|`uniqueidentifier` |The internal Id of a property value, selected as constant value. Applicable only when Property Value Source Type = Constant.|
 |[Is_Debit](#is_debit)|`bit` |If Is_Debit=1 then this property is for the debit account in the template line for which is this record. If Is_Debit=0 then the property is for the credit account.|
 |[Property_Description](#property_description)|`nvarchar(254)` `ML`|Description for the property value that should be used when the description can't be determined by the source (e.g. when the source type is constant)|
@@ -31,33 +30,6 @@ Contains the way to obtain the values for each required property of both the deb
 |[Template_Line_Property_Id](#template_line_property_id)|`uniqueidentifier` `PK`||
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Constant_Value_Id
 

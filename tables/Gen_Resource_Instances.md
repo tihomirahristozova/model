@@ -16,7 +16,6 @@ Represents concrete instances of resources. Entity: Gen_Resource_Instances
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Asset_Id](#asset_id)|`uniqueidentifier` |The asset, which is represented by this resource instance. NULL, when the resource instance is not an asset.|
 |[Notes](#notes)|`nvarchar(max)` ||
 |[Party_Id](#party_id)|`uniqueidentifier` |The party, which is represented by this resource instance. NULL, when the resource instance is not a party.|
@@ -27,33 +26,6 @@ Represents concrete instances of resources. Entity: Gen_Resource_Instances
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Asset_Id
 

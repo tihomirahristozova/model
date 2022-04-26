@@ -11,7 +11,6 @@ Contains the available valuation groups for products. They are used in reconcili
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Description](#description)|`nvarchar(254)` ||
 |[Row_Version](#row_version)|`timestamp` ||
 |[Valuation_Group_Code](#valuation_group_code)|`nvarchar(64)` |The unique code of the product valuation group.|
@@ -19,33 +18,6 @@ Contains the available valuation groups for products. They are used in reconcili
 |[Valuation_Group_Name](#valuation_group_name)|`nvarchar(128)` `ML`|The name of the product valuation group.|
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Description
 

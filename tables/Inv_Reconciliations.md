@@ -15,7 +15,6 @@ Store reconciliations (physical counting). Usefull for real-world reconciliation
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Default_Product_Group_Id](#default_product_group_id)|`uniqueidentifier` |When not null is used to filter the product chooser for the lines.|
 |[Default_Store_Bin_Id](#default_store_bin_id)|`uniqueidentifier` |The default store bin for the lines. When null, lines can specify different bins.|
 |[Default_Store_Id](#default_store_id)|`uniqueidentifier` |Default (but not mandatory) store for the lines. NULL means that the store should be choosed for each line.|
@@ -27,33 +26,6 @@ Store reconciliations (physical counting). Usefull for real-world reconciliation
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Default_Product_Group_Id
 

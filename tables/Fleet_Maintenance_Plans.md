@@ -11,7 +11,6 @@ Defines the periodic maintenance plans and the conditions for performing the nex
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Check_Days](#check_days)|`int` |When not null, specifies the number of days between maintenances.|
 |[Check_Months](#check_months)|`int` |When not null, specifies the number of months between maintenances.|
 |[Is_Active](#is_active)|`bit` |True if the plan is active and can be selected from drop-downs.|
@@ -23,33 +22,6 @@ Defines the periodic maintenance plans and the conditions for performing the nex
 |[Trip_Count](#trip_count)|`int` |When not null, specifies the number of trips that must be performed since the last maintenance, for the next maintenance to occur.|
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Check_Days
 

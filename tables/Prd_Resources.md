@@ -15,7 +15,6 @@ Resource types available to production. Entity: Prd_Resources
 
 | Name | Type | Description |
 | - | - | --- |
-|[__Object_Version](#__object_version)|`int` ||
 |[Active](#active)|`bit` |Indicates whether the current resource is active.|
 |[Id](#id)|`uniqueidentifier` `PK`|Unique resource id|
 |[Notes](#notes)|`nvarchar(254)` |User notes for the resource|
@@ -31,33 +30,6 @@ Resource types available to production. Entity: Prd_Resources
 |[Standard_Price_Per_Hour](#standard_price_per_hour)|`decimal(18, 6)` |Standard price per hour for this resource. It participates in the calculation of standard price for production recipes in which the current resource is used.|
 
 ## Columns
-
-### __Object_Version
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|no|
 
 ### Active
 
