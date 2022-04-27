@@ -80,6 +80,7 @@ Aggregate Tree
 | [CostingCurrency](General.Products.Products.md#costingcurrency) | [Currencies](General.Currencies.md) (nullable) | Specifies the currency to use for cost calculations for the product. When null, the base currency for the enterprise company should be used. `Filter(multi eq)` |
 | [EnterpriseCompany](General.Products.Products.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | When not null, specifies that the product is specific to a given enterprise company and may be used only in documents from this enterprise company. `Filter(multi eq)` |
 | [ExciseProduct](General.Products.Products.md#exciseproduct) | [ExciseProducts](Finance.Excise.ExciseProducts.md) (nullable) | Specifies excise product code for this product. null means unspecified. `Filter(multi eq)` `Introduced in version 21.1.3.99` |
+| [ExciseProductType](General.Products.Products.md#exciseproducttype) | [ExciseProductTypes](Finance.Excise.ExciseProductTypes.md) (nullable) | Specifies the basic excise attributes of the product. `Filter(multi eq)` `Introduced in version 22.1.6.45` |
 | [ExciseStampType](General.Products.Products.md#excisestamptype) | [ExciseStampTypes](Finance.Excise.ExciseStampTypes.md) (nullable) | Specifies the basic excise attributes of the product. `Filter(multi eq)` `Introduced in version 22.1.6.25` |
 | [IntrastatCommodityCode](General.Products.Products.md#intrastatcommoditycode) | [CommodityCodes](Finance.Intrastat.CommodityCodes.md) (nullable) | Code from The Combined Nomenclature used within the European Union countries. Used when reporting Intrastat and Excise. `Filter(multi eq)` |
 | [IntrastatSupplementaryUnit](General.Products.Products.md#intrastatsupplementaryunit) | [MeasurementUnits](General.MeasurementUnits.md) (nullable) | Additional measurement unit from the Intrastat Combined nomenclature. Used when creating Intrastat declarations. `Filter(multi eq)` |
@@ -540,6 +541,14 @@ _Front-End Recalc Expressions:_
 Specifies excise product code for this product. null means unspecified. `Filter(multi eq)` `Introduced in version 21.1.3.99`
 
 _Type_: **[ExciseProducts](Finance.Excise.ExciseProducts.md) (nullable)**  
+_Category_: **System**  
+_Supported Filters_: **Equals, EqualsIn**  
+
+### ExciseProductType
+
+Specifies the basic excise attributes of the product. `Filter(multi eq)` `Introduced in version 22.1.6.45`
+
+_Type_: **[ExciseProductTypes](Finance.Excise.ExciseProductTypes.md) (nullable)**  
 _Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 

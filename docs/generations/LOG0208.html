@@ -132,7 +132,7 @@
 </tbody>
 </table>
 <h2 id="business-logic">Business Logic</h2>
-<p>This Generation is used to create Excise Stamp Operation from Store Transactions.</p>
+<p>This Generation is used to create Excise Stamp Operation from Store Transactions for the products that have value in the field ExciseProductType.</p>
 <p>The Excise Stamp Operation's header is created based on the Store Transaction's header as follows:</p>
 <pre><code>ExciseStampOperation.DocumentDate = StoreOrder.DocumentDate
 ExciseStampOperation.TaxWarehouse = StoreTransaction.Store.TaxWarehouse
@@ -203,7 +203,7 @@ ExciseStampOperationLine.Product = StoreTransactionLine.Product
 
 ExciseStampOperationLine.Quantity = StoreTransactionLine.REMAINING(MQuantity)
 
-ExciseStampOperationLineLine.ExciseStampType = StoreTransactionLine.Product.ExciseStampType
+ExciseStampOperationLineLine.ExciseProductType = StoreTransactionLine.Product.ExciseProductType
 
 
 </code></pre>

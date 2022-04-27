@@ -5,7 +5,7 @@ uid: Crm.CustomerProducts
 
 **Namespace:** [Crm](Crm.md)  
 
-Contains the products, that are contracted (listed) with a customer. Entity: Crm_Customer_Products
+Contains the products, that are contracted (listed) with a customer. Entity: Crm_Customer_Products (Introduced in version 22.1.6.42)
 
 ## Default Visualization
 Default Display Text Format:  
@@ -30,13 +30,13 @@ Aggregate Root:
 | [DisplayText](Crm.CustomerProducts.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [FromDate](Crm.CustomerProducts.md#fromdate) | date __nullable__ | The initial date of the listing. null when the initial date is unknown. `Filter(eq;ge;le)` 
 | [Id](Crm.CustomerProducts.md#id) | guid |  
-| [InStoreLocation](Crm.CustomerProducts.md#instorelocation) | string (32) __nullable__ | Location in store, like row, stand, etc. `Introduced in version 22.1.6.33` 
-| [InStoreMaxQuantity](Crm.CustomerProducts.md#instoremaxquantity) | decimal (10, 3) __nullable__ | Maximum quantity maintained by the customer. Measurement unit is Product.MeasurementUnit. `Introduced in version 22.1.6.33` 
-| [InStoreMinQuantity](Crm.CustomerProducts.md#instoreminquantity) | decimal (10, 3) __nullable__ | Minimum quantity maintained by the customer. Measurement unit is Product.MeasurementUnit. `Introduced in version 22.1.6.33` 
-| [IsActive](Crm.CustomerProducts.md#isactive) | boolean | Indicates whether this customer product definition is active. `Required` `Default(true)` `Filter(eq)` `Introduced in version 22.1.6.33` 
+| [InStoreLocation](Crm.CustomerProducts.md#instorelocation) | string (32) __nullable__ | Location in store, like row, stand, etc. 
+| [InStoreMaxQuantity](Crm.CustomerProducts.md#instoremaxquantity) | [Quantity (10, 3)](../data-types.md#quantity) __nullable__ | Maximum quantity maintained by the customer. Measurement unit is Product.MeasurementUnit. `Unit: InStoreQuantityUnit` `Filter(eq;ge;le)` 
+| [InStoreMinQuantity](Crm.CustomerProducts.md#instoreminquantity) | [Quantity (10, 3)](../data-types.md#quantity) __nullable__ | Minimum quantity maintained by the customer. Measurement unit is Product.MeasurementUnit. `Unit: InStoreQuantityUnit` `Filter(eq;ge;le)` 
+| [IsActive](Crm.CustomerProducts.md#isactive) | boolean | Indicates whether this customer product definition is active. `Required` `Default(true)` `Filter(eq)` 
 | [Notes](Crm.CustomerProducts.md#notes) | string (254) __nullable__ | Notes for the listing. 
 | [ObjectVersion](Crm.CustomerProducts.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [OrderMultiple](Crm.CustomerProducts.md#ordermultiple) | decimal (10, 3) __nullable__ | Determines the step when the system offers a quantity to order. `Introduced in version 22.1.6.33` 
+| [OrderMultiple](Crm.CustomerProducts.md#ordermultiple) | [Quantity (10, 3)](../data-types.md#quantity) __nullable__ | Determines the step when the system offers a quantity to order. `Unit: InStoreQuantityUnit` `Filter(eq;ge;le)` 
 | [ToDate](Crm.CustomerProducts.md#todate) | date __nullable__ | The final date of the listing. null when the final date is unknown. `Filter(eq;ge;le)` 
 
 ## References
@@ -46,6 +46,7 @@ Aggregate Root:
 | [CompanyDivision](Crm.CustomerProducts.md#companydivision) | [CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable) | When the customer is a company, denotes the division for which the product is listed. null when the customer is not a company or when the listing is not division specific. `Filter(multi eq)` |
 | [CompanyLocation](Crm.CustomerProducts.md#companylocation) | [CompanyLocations](General.Contacts.CompanyLocations.md) (nullable) | When the customer is a company, denotes the location for which the product is listed. null when the customer is not a company or when the listing is not location specific. `Filter(multi eq)` |
 | [Customer](Crm.CustomerProducts.md#customer) | [Customers](Crm.Customers.md) | Customer, for which the product is listed. `Required` `Filter(multi eq)` `Owner` |
+| [InStoreQuantityUnit](Crm.CustomerProducts.md#instorequantityunit) | [MeasurementUnits](General.MeasurementUnits.md) (nullable) |  |
 | [Product](Crm.CustomerProducts.md#product) | [Products](General.Products.Products.md) | The product, which is listed for the customer. `Required` `Filter(multi eq)` |
 
 
@@ -79,7 +80,7 @@ _Default Value_: **NewGuid**
 
 ### InStoreLocation
 
-Location in store, like row, stand, etc. `Introduced in version 22.1.6.33`
+Location in store, like row, stand, etc.
 
 _Type_: **string (32) __nullable__**  
 _Category_: **System**  
@@ -89,25 +90,25 @@ _Maximum Length_: **32**
 
 ### InStoreMaxQuantity
 
-Maximum quantity maintained by the customer. Measurement unit is Product.MeasurementUnit. `Introduced in version 22.1.6.33`
+Maximum quantity maintained by the customer. Measurement unit is Product.MeasurementUnit. `Unit: InStoreQuantityUnit` `Filter(eq;ge;le)`
 
-_Type_: **decimal (10, 3) __nullable__**  
+_Type_: **[Quantity (10, 3)](../data-types.md#quantity) __nullable__**  
 _Category_: **System**  
-_Supported Filters_: **NotFilterable**  
+_Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
 ### InStoreMinQuantity
 
-Minimum quantity maintained by the customer. Measurement unit is Product.MeasurementUnit. `Introduced in version 22.1.6.33`
+Minimum quantity maintained by the customer. Measurement unit is Product.MeasurementUnit. `Unit: InStoreQuantityUnit` `Filter(eq;ge;le)`
 
-_Type_: **decimal (10, 3) __nullable__**  
+_Type_: **[Quantity (10, 3)](../data-types.md#quantity) __nullable__**  
 _Category_: **System**  
-_Supported Filters_: **NotFilterable**  
+_Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
 ### IsActive
 
-Indicates whether this customer product definition is active. `Required` `Default(true)` `Filter(eq)` `Introduced in version 22.1.6.33`
+Indicates whether this customer product definition is active. `Required` `Default(true)` `Filter(eq)`
 
 _Type_: **boolean**  
 _Category_: **System**  
@@ -136,11 +137,11 @@ _Supports Order By_: ****
 
 ### OrderMultiple
 
-Determines the step when the system offers a quantity to order. `Introduced in version 22.1.6.33`
+Determines the step when the system offers a quantity to order. `Unit: InStoreQuantityUnit` `Filter(eq;ge;le)`
 
-_Type_: **decimal (10, 3) __nullable__**  
+_Type_: **[Quantity (10, 3)](../data-types.md#quantity) __nullable__**  
 _Category_: **System**  
-_Supported Filters_: **NotFilterable**  
+_Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
 
 ### ToDate
@@ -181,6 +182,14 @@ _Category_: **System**
 _Supported Filters_: **Equals, EqualsIn**  
 _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
 
+### InStoreQuantityUnit
+
+_Type_: **[MeasurementUnits](General.MeasurementUnits.md) (nullable)**  
+_Category_: **System**  
+_Supported Filters_: **Equals, EqualsIn**  
+
+_Front-End Recalc Expressions:_  
+`obj.Product.MeasurementUnit`
 ### Product
 
 The product, which is listed for the customer. `Required` `Filter(multi eq)`

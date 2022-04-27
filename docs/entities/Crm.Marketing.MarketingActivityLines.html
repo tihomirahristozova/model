@@ -119,8 +119,8 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Crm.Marketing.MarketingActivityLines.html#instoreavailablequantity">InStoreAvailableQuantity</a></td>
-<td>decimal (10, 3) <strong>nullable</strong></td>
-<td>The quantity found in store (in Quantity Unit). null means that count was not performed. <code>Filter(eq;ge;le)</code></td>
+<td><a href="../data-types.html#quantity">Quantity (10, 3)</a> <strong>nullable</strong></td>
+<td>The quantity found in store (in Quantity Unit). null means that count was not performed. <code>Unit: OrderQuantityUnit</code> <code>Filter(eq;ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Marketing.MarketingActivityLines.html#instorelocation">InStoreLocation</a></td>
@@ -149,8 +149,8 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Crm.Marketing.MarketingActivityLines.html#orderquantity">OrderQuantity</a></td>
-<td>decimal (15, 3) <strong>nullable</strong></td>
-<td>Recommended quantity (in Quantity Unit) for  new order as a result of the marketing activity. null means that there is no specific recommendation.</td>
+<td><a href="../data-types.html#quantity">Quantity (15, 3)</a> <strong>nullable</strong></td>
+<td>Recommended quantity (in Quantity Unit) for  new order as a result of the marketing activity. null means that there is no specific recommendation. <code>Unit: OrderQuantityUnit</code> <code>Filter(eq;ge;le)</code></td>
 </tr>
 </tbody>
 </table>
@@ -216,8 +216,8 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="instoreavailablequantity">InStoreAvailableQuantity</h3>
-<p>The quantity found in store (in Quantity Unit). null means that count was not performed. <code>Filter(eq;ge;le)</code></p>
-<p><em>Type</em>: <strong>decimal (10, 3) <strong>nullable</strong></strong><br>
+<p>The quantity found in store (in Quantity Unit). null means that count was not performed. <code>Unit: OrderQuantityUnit</code> <code>Filter(eq;ge;le)</code></p>
+<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity (10, 3)</a> <strong>nullable</strong></strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
@@ -258,10 +258,10 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: ****</p>
 <h3 id="orderquantity">OrderQuantity</h3>
-<p>Recommended quantity (in Quantity Unit) for  new order as a result of the marketing activity. null means that there is no specific recommendation.</p>
-<p><em>Type</em>: <strong>decimal (15, 3) <strong>nullable</strong></strong><br>
+<p>Recommended quantity (in Quantity Unit) for  new order as a result of the marketing activity. null means that there is no specific recommendation. <code>Unit: OrderQuantityUnit</code> <code>Filter(eq;ge;le)</code></p>
+<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity (15, 3)</a> <strong>nullable</strong></strong><br>
 <em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="competitor">Competitor</h3>
@@ -290,6 +290,8 @@ Aggregate Root:<br>
 <p><em>Type</em>: <strong><a href="General.MeasurementUnits.html">MeasurementUnits</a> (nullable)</strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<p><em>Front-End Recalc Expressions:</em><br>
+<code>obj.Product.MeasurementUnit</code></p>
 <h3 id="product">Product</h3>
 <p>The specific product that was target of the marketing activity. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.Products.Products.html">Products</a></strong><br>

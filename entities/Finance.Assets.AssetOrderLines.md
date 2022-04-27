@@ -9,9 +9,9 @@ Asset purchase or sales order line for one asset. Entity: Ast_Asset_Order_Lines
 
 ## Default Visualization
 Default Display Text Format:  
-_{AssetOrder.EntityName}_  
+_{Id}. {AssetOrder.DocumentNo} {AssetOrder.DocumentType.TypeName:T}_  
 Default Search Members:  
-_AssetOrder.EntityName_  
+_AssetOrder.DocumentNo_  
 Name Data Member:  
 _AssetOrder.EntityName_  
 

@@ -478,6 +478,8 @@
       href: Finance.Excise.ExciseProductCategories.md
     - name: ExciseProducts
       href: Finance.Excise.ExciseProducts.md
+    - name: ExciseProductTypes
+      href: Finance.Excise.ExciseProductTypes.md
     - name: ExcisePurposeCodes
       href: Finance.Excise.ExcisePurposeCodes.md
     - name: ExciseStampLots

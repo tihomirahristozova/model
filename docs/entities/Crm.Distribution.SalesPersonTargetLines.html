@@ -83,9 +83,9 @@
 <p>Detail records (lines) of targets for sales persons. Entity: Crm_Sales_Person_Target_Lines</p>
 <h2 id="default-visualization">Default Visualization</h2>
 <p>Default Display Text Format:<br>
-<em>{SalesPersonTarget.EntityName}</em><br>
+<em>{PeriodYear}-{PeriodMonth} {TargetType}</em><br>
 Default Search Members:<br>
-<em>SalesPersonTarget.EntityName</em><br>
+<em>SalesPersonTarget.DocumentNo</em><br>
 Name Data Member:<br>
 <em>SalesPersonTarget.EntityName</em></p>
 <h2 id="aggregate">Aggregate</h2>
@@ -170,6 +170,11 @@ Aggregate Root:<br>
 <td><a href="Crm.Distribution.SalesPersonTargetLines.html#bonusprogram">BonusProgram</a></td>
 <td><a href="Crm.Marketing.BonusPrograms.html">BonusPrograms</a> (nullable)</td>
 <td>Bonus program Id when the target type is BONUS, null otherwise. <code>Filter(multi eq)</code></td>
+</tr>
+<tr>
+<td><a href="Crm.Distribution.SalesPersonTargetLines.html#document">Document</a></td>
+<td><a href="Crm.Distribution.SalesPersonTargets.html">SalesPersonTargets</a></td>
+<td>The <see cref="SalesPersonTarget"></see> to which this SalesPersonTargetLine belongs. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Distribution.SalesPersonTargetLines.html#productgroup">ProductGroup</a></td>
@@ -294,6 +299,11 @@ Allowed values for the <code>TargetType</code>(Crm.Distribution.SalesPersonTarge
 <h3 id="bonusprogram">BonusProgram</h3>
 <p>Bonus program Id when the target type is BONUS, null otherwise. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Crm.Marketing.BonusPrograms.html">BonusPrograms</a> (nullable)</strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<h3 id="document">Document</h3>
+<p>The <see cref="SalesPersonTarget"></see> to which this SalesPersonTargetLine belongs. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p><em>Type</em>: <strong><a href="Crm.Distribution.SalesPersonTargets.html">SalesPersonTargets</a></strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="productgroup">ProductGroup</h3>

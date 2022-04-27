@@ -136,7 +136,7 @@ The quantity found in store (in Quantity Unit). NULL means that count was not pe
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|yes|no|
-|GreaterThanOrLessThan|None|no|no|
+|GreaterThanOrLessThan|None|yes|no|
 
 ### In_Store_Location
 
@@ -406,6 +406,13 @@ Recommended quantity (in Quantity Unit) for  new order as a result of the market
 |UI Width|Medium|
 |User Login|no|
 |Visible|yes|
+
+#### Order_Quantity - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
+|GreaterThanOrLessThan|None|yes|no|
 
 ### Order_Quantity_Unit_Id
 

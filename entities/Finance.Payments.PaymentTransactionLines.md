@@ -9,9 +9,9 @@ Contains the distibution of the payments' amounts among the source payment order
 
 ## Default Visualization
 Default Display Text Format:  
-_{PaymentTransaction.EntityName}_  
+_{Id}. {PaymentTransaction.DocumentNo} {PaymentTransaction.DocumentType.TypeName:T}_  
 Default Search Members:  
-_PaymentTransaction.EntityName_  
+_PaymentTransaction.DocumentNo_  
 Name Data Member:  
 _PaymentTransaction.EntityName_  
 

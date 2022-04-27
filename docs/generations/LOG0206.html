@@ -132,8 +132,8 @@
 </tbody>
 </table>
 <h2 id="business-logic">Business Logic</h2>
-<p>This Generation is used to create Excise Administrative Documents from Store Transactions.</p>
-<p>The Excise Administrative Document's header is created based on the Store Transaction's header as follows:</p>
+<p>This Generation is used to create Excise Administrative Documents for the products of the current Store Transactions that have value for the field ExciseProductsType.
+The Excise Administrative Document's header is created based on the Store Transaction's header as follows:</p>
 <pre><code>ExciseAdministrativeDocument.TaxWarehouse = StoreTransaction.Store.TaxWarehouse
 
 ExciseAdministrativeDocument.OtherParty = StoreTransaction.ToParty
@@ -221,9 +221,9 @@ ExciseAdministrativeDocumentLine.QuantityBase = StoreTransactionLine.REMAINING(M
 
 ExciseAdministrativeDocumentLine.MeasuringTransaction = StoreTransactionLine.Lot.ExciseMeasuringTransaction
 
-ExciseAdministrativeDocumentLine.ExciseAlcoholicStrength = StoreTransactionLine.Product.ExciseAlcoholicStrength
+ExciseAdministrativeDocumentLine.ExciseAlcoholicStrength = StoreTransactionLine.Product.ExciseProductsType.ExciseAlcoholicStrength
 
-ExciseAdministrativeDocumentLine.ExciseProduct = StoreTransactionLine.Product.ExciseProduct
+ExciseAdministrativeDocumentLine.ExciseProduct = StoreTransactionLine.Product.ExciseProductsType.ExciseProduct
 
 ExciseAdministrativeDocumentLine.ExcisePurposeCode = DefaultExcisePurposeCode
 

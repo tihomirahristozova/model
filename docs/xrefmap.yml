@@ -697,6 +697,9 @@ references:
 - uid: Finance.Excise.ExciseProducts
   name: Finance.Excise.ExciseProducts Entity
   href: entities/Finance.Excise.ExciseProducts.html
+- uid: Finance.Excise.ExciseProductTypes
+  name: Finance.Excise.ExciseProductTypes Entity
+  href: entities/Finance.Excise.ExciseProductTypes.html
 - uid: Finance.Excise.ExcisePurposeCodes
   name: Finance.Excise.ExcisePurposeCodes Entity
   href: entities/Finance.Excise.ExcisePurposeCodes.html

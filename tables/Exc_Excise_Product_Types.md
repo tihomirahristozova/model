@@ -1,6 +1,12 @@
 # Table Exc_Excise_Product_Types
 
 
+## Entity
+
+Entity: [Finance.Excise.ExciseProductTypes](~/entities/Finance.Excise.ExciseProductTypes.md)
+
+The different types of excise products. Excise product types are differentiated by product, capacity, alcoholic strength and other criteria. Entity: Exc_Excise_Product_Types (Introduced in version 22.1.6.44)
+
 ## Summary
 
 | Name | Type | Description |

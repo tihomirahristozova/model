@@ -9,9 +9,9 @@ Service agreement lines represent the individual serviced objects that are cover
 
 ## Default Visualization
 Default Display Text Format:  
-_{ServiceAgreement.EntityName}_  
+_{Id}. {ServiceAgreement.DocumentNo} {ServiceAgreement.DocumentType.TypeName:T}_  
 Default Search Members:  
-_ServiceAgreement.EntityName_  
+_ServiceAgreement.DocumentNo_  
 Name Data Member:  
 _ServiceAgreement.EntityName_  
 

@@ -9,9 +9,9 @@ Detail records (lines) of targets for sales persons. Entity: Crm_Sales_Person_Ta
 
 ## Default Visualization
 Default Display Text Format:  
-_{SalesPersonTarget.EntityName}_  
+_{PeriodYear}-{PeriodMonth} {TargetType}_  
 Default Search Members:  
-_SalesPersonTarget.EntityName_  
+_SalesPersonTarget.DocumentNo_  
 Name Data Member:  
 _SalesPersonTarget.EntityName_  
 
@@ -43,6 +43,7 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [BonusProgram](Crm.Distribution.SalesPersonTargetLines.md#bonusprogram) | [BonusPrograms](Crm.Marketing.BonusPrograms.md) (nullable) | Bonus program Id when the target type is BONUS, null otherwise. `Filter(multi eq)` |
+| [Document](Crm.Distribution.SalesPersonTargetLines.md#document) | [SalesPersonTargets](Crm.Distribution.SalesPersonTargets.md) | The <see cref="SalesPersonTarget"/> to which this SalesPersonTargetLine belongs. `Required` `Filter(multi eq)` |
 | [ProductGroup](Crm.Distribution.SalesPersonTargetLines.md#productgroup) | [ProductGroups](General.Products.ProductGroups.md) (nullable) | Product group for which the target is defined. `Filter(multi eq)` |
 | [PromotionalPackage](Crm.Distribution.SalesPersonTargetLines.md#promotionalpackage) | [PromotionalPackages](Crm.PromotionalPackages.md) (nullable) | Promotional Package Id when the target type is PROMO, null otherwise. `Filter(multi eq)` |
 | [SalesPerson](Crm.Distribution.SalesPersonTargetLines.md#salesperson) | [SalesPersons](Crm.SalesPersons.md) | Sales person to whom the target is assigned. `Required` `Filter(multi eq)` |
@@ -162,6 +163,14 @@ _Default Value_: **1**
 Bonus program Id when the target type is BONUS, null otherwise. `Filter(multi eq)`
 
 _Type_: **[BonusPrograms](Crm.Marketing.BonusPrograms.md) (nullable)**  
+_Category_: **System**  
+_Supported Filters_: **Equals, EqualsIn**  
+
+### Document
+
+The <see cref="SalesPersonTarget"/> to which this SalesPersonTargetLine belongs. `Required` `Filter(multi eq)`
+
+_Type_: **[SalesPersonTargets](Crm.Distribution.SalesPersonTargets.md)**  
 _Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
