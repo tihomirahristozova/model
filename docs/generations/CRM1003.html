@@ -237,9 +237,7 @@ SalesOrderLine.ProductCode = null
 
 SalesOrderLine.ProductPrice = loaded by the 'Determine product price'* method
 
-SalesOrderLine.UnitPrice = if (SalesOrderLine.ProductPrice != null) 
-                           , then SalesOrderLine.UnitPrice = loaded by the 'Calculate Unit Price' method
-                           , else SalesOrderLine.UnitPrice = SalesOrderLine.Product.StandardPricePerLot
+SalesOrderLine.UnitPrice = loaded by the 'Calculate Unit Price' method
                       
 SalesOrderLine.StandardUnitPrice = loaded by the 'Get Standard Unit Price' method
 
