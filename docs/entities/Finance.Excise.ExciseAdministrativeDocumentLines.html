@@ -235,7 +235,7 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
-<code>IIF( ( obj.Product.ExciseStampType != null), obj.Product.ExciseStampType.AlcoholicStrength, null)</code></p>
+<code>IIF( ( obj.Product.ExciseProductType != null), Convert( obj.Product.ExciseProductType.AlcoholicStrength, Object), null)</code></p>
 <h3 id="exciseamount">ExciseAmount</h3>
 <p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount (14, 2)</a></strong><br>
 <em>Category</em>: <strong>System</strong><br>
@@ -335,7 +335,7 @@ Aggregate Root:<br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
-<code>obj.Product.ExciseStampType.ExciseProduct</code></p>
+<code>obj.Product.ExciseProductType.ExciseProduct</code></p>
 <h3 id="excisepurposecode">ExcisePurposeCode</h3>
 <p>The Purpose codes specify the different purposes recognized by the authorities for determining the excise rate. <code>Filter(multi eq)</code> <code>Introduced in version 21.1.3.97</code></p>
 <p><em>Type</em>: <strong><a href="Finance.Excise.ExcisePurposeCodes.html">ExcisePurposeCodes</a> (nullable)</strong><br>

@@ -115,12 +115,12 @@ Legislations</strong></td>
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td>Convert(IIF((Product.ExciseStampType != null), Product.ExciseStampType.AlcoholicStrength,
-null), Object)</td>
+<td>IIF((Product.ExciseProductType != null), Convert(Product.ExciseProductType.
+AlcoholicStrength, Object), null)</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
-<td>Sets a value for ExciseProduct based on ExciseStampType of Product.</td>
+<td>Sets a value for ExciseProduct based on ExciseProductType of Product.</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>

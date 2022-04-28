@@ -17,6 +17,7 @@ Excise Stamp Operation Lines. Entity: Exc_Excise_Stamp_Operation_Lines (Introduc
 | Name | Type | Description |
 | - | - | --- |
 |[End_Number](#end_number)|`nvarchar(30)` |The end number of the sequence of excise stamps that are processed with the current operation.|
+|[Excise_Product_Type_Id](#excise_product_type_id)|`uniqueidentifier` |Specifies the excise product type which is used in the current operation. Determine which excise stamp lots can be chosen.|
 |[Excise_Stamp_Lot_Id](#excise_stamp_lot_id)|`uniqueidentifier` |The lot of the excise stamps.|
 |[Excise_Stamp_Operation_Id](#excise_stamp_operation_id)|`uniqueidentifier` ||
 |[Excise_Stamp_Operation_Line_Id](#excise_stamp_operation_line_id)|`uniqueidentifier` `PK`||
@@ -61,6 +62,43 @@ The end number of the sequence of excise stamps that are processed with the curr
 |UI Width|Medium|
 |User Login|no|
 |Visible|yes|
+
+### Excise_Product_Type_Id
+
+
+Specifies the excise product type which is used in the current operation. Determine which excise stamp lots can be chosen.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|12|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|Referenced Table|[Exc_Excise_Product_Types](Exc_Excise_Product_Types.md)|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Excise_Product_Type_Id - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
 
 ### Excise_Stamp_Lot_Id
 

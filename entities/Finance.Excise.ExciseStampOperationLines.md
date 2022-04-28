@@ -40,6 +40,7 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Document](Finance.Excise.ExciseStampOperationLines.md#document) | [ExciseStampOperations](Finance.Excise.ExciseStampOperations.md) | The <see cref="ExciseStamp<br />Operation"/> to which this ExciseStampOperationLine belongs. `Required` `Filter(multi eq)` |
+| [ExciseProductType](Finance.Excise.ExciseStampOperationLines.md#exciseproducttype) | [ExciseProductTypes](Finance.Excise.ExciseProductTypes.md) (nullable) | Specifies the excise product type which is used in the current operation. Determine which excise stamp lots can be chosen. `Filter(multi eq)` `Introduced in version 22.1.6.46` |
 | [ExciseStampLot](Finance.Excise.ExciseStampOperationLines.md#excisestamplot) | [ExciseStampLots](Finance.Excise.ExciseStampLots.md) (nullable) | The lot of the excise stamps. `Filter(multi eq)` |
 | [ExciseStampOperation](Finance.Excise.ExciseStampOperationLines.md#excisestampoperation) | [ExciseStampOperations](Finance.Excise.ExciseStampOperations.md) | The <see cref="ExciseStamp<br />Operation"/> to which this ExciseStampOperationLine belongs. `Required` `Filter(multi eq)` `Owner` |
 | [ExciseStampType](Finance.Excise.ExciseStampOperationLines.md#excisestamptype) | [ExciseStampTypes](Finance.Excise.ExciseStampTypes.md) (nullable) | Specifies the excise stamp type which is used in the current operation. Determine which excise stamp lots can be chosen. `Filter(multi eq)` |
@@ -149,6 +150,14 @@ The <see cref="ExciseStampOperation"/> to which this ExciseStampOperationLine be
 
 _Type_: **[ExciseStampOperations](Finance.Excise.ExciseStampOperations.md)**  
 _Indexed_: **True**  
+_Category_: **System**  
+_Supported Filters_: **Equals, EqualsIn**  
+
+### ExciseProductType
+
+Specifies the excise product type which is used in the current operation. Determine which excise stamp lots can be chosen. `Filter(multi eq)` `Introduced in version 22.1.6.46`
+
+_Type_: **[ExciseProductTypes](Finance.Excise.ExciseProductTypes.md) (nullable)**  
 _Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 

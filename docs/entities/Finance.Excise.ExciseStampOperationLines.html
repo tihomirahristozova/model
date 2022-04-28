@@ -165,6 +165,11 @@ Aggregate Root:<br>
 <td>The <see cref="ExciseStamp<br />Operation"></see> to which this ExciseStampOperationLine belongs. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
+<td><a href="Finance.Excise.ExciseStampOperationLines.html#exciseproducttype">ExciseProductType</a></td>
+<td><a href="Finance.Excise.ExciseProductTypes.html">ExciseProductTypes</a> (nullable)</td>
+<td>Specifies the excise product type which is used in the current operation. Determine which excise stamp lots can be chosen. <code>Filter(multi eq)</code> <code>Introduced in version 22.1.6.46</code></td>
+</tr>
+<tr>
 <td><a href="Finance.Excise.ExciseStampOperationLines.html#excisestamplot">ExciseStampLot</a></td>
 <td><a href="Finance.Excise.ExciseStampLots.html">ExciseStampLots</a> (nullable)</td>
 <td>The lot of the excise stamps. <code>Filter(multi eq)</code></td>
@@ -261,6 +266,11 @@ Aggregate Root:<br>
 <p>The <see cref="ExciseStampOperation"></see> to which this ExciseStampOperationLine belongs. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Finance.Excise.ExciseStampOperations.html">ExciseStampOperations</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<h3 id="exciseproducttype">ExciseProductType</h3>
+<p>Specifies the excise product type which is used in the current operation. Determine which excise stamp lots can be chosen. <code>Filter(multi eq)</code> <code>Introduced in version 22.1.6.46</code></p>
+<p><em>Type</em>: <strong><a href="Finance.Excise.ExciseProductTypes.html">ExciseProductTypes</a> (nullable)</strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="excisestamplot">ExciseStampLot</h3>

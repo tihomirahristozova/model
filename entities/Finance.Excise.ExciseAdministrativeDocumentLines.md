@@ -74,7 +74,7 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 
 _Front-End Recalc Expressions:_  
-`IIF( ( obj.Product.ExciseStampType != null), obj.Product.ExciseStampType.AlcoholicStrength, null)`
+`IIF( ( obj.Product.ExciseProductType != null), Convert( obj.Product.ExciseProductType.AlcoholicStrength, Object), null)`
 ### ExciseAmount
 
 _Type_: **[Amount (14, 2)](../data-types.md#amount)**  
@@ -216,7 +216,7 @@ _Category_: **System**
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Front-End Recalc Expressions:_  
-`obj.Product.ExciseStampType.ExciseProduct`
+`obj.Product.ExciseProductType.ExciseProduct`
 ### ExcisePurposeCode
 
 The Purpose codes specify the different purposes recognized by the authorities for determining the excise rate. `Filter(multi eq)` `Introduced in version 21.1.3.97`
