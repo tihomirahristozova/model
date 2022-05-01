@@ -83,7 +83,7 @@ Aggregate Tree
 | [FromCompanyDivision](Finance.Excise.ExciseAdministrativeDocuments.md#fromcompanydivision) | [CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable) | The division of the company, issuing the document. null when the document is not issued by any specific division. `Filter(multi eq)` (Inherited from [Documents](General.Documents.md)) |
 | [FromParty](Finance.Excise.ExciseAdministrativeDocuments.md#fromparty) | [Parties](General.Contacts.Parties.md) | The party which issued the document. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.md)) |
 | [MasterDocument](Finance.Excise.ExciseAdministrativeDocuments.md#masterdocument) | [Documents](General.Documents.md) | In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.md)) |
-| [OtherParty](Finance.Excise.ExciseAdministrativeDocuments.md#otherparty) | [Parties](General.Contacts.Parties.md) | The other party, receiving the goods (Consignee). `Required` `Filter(multi eq)` |
+| [OtherParty](Finance.Excise.ExciseAdministrativeDocuments.md#otherparty) | [Parties](General.Contacts.Parties.md) | The other party, sending or receiving the goods. `Required` `Filter(multi eq)` |
 | [Parent](Finance.Excise.ExciseAdministrativeDocuments.md#parent) | [Documents](General.Documents.md) (nullable) | In a multi-document tree, this is the direct parent document. If this is the root it is null. `Filter(multi eq)` (Inherited from [Documents](General.Documents.md)) |
 | [PrimeCauseDocument](Finance.Excise.ExciseAdministrativeDocuments.md#primecausedocument) | [Documents](General.Documents.md) (nullable) | The document that is the prime cause for creation of the current document. `Filter(multi eq)` (Inherited from [Documents](General.Documents.md)) |
 | [ReportingPerson](Finance.Excise.ExciseAdministrativeDocuments.md#reportingperson) | [Persons](General.Contacts.Persons.md) (nullable) | This is the person submitting the declaration. `Filter(multi eq)` `Introduced in version 21.1.3.92` |
@@ -528,7 +528,7 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### OtherParty
 
-The other party, receiving the goods (Consignee). `Required` `Filter(multi eq)`
+The other party, sending or receiving the goods. `Required` `Filter(multi eq)`
 
 _Type_: **[Parties](General.Contacts.Parties.md)**  
 _Category_: **System**  

@@ -22,7 +22,7 @@ Represents the data, sent to the customs authorities for the movements of excise
 |[Document_Id](#document_id)|`uniqueidentifier` ||
 |[Excise_Administrative_Document_Id](#excise_administrative_document_id)|`uniqueidentifier` `PK`||
 |[Is_Deferred_Submission](#is_deferred_submission)|`bit` |Indicates whether the movement has begun under the cover of a paper administrative document.|
-|[Other_Party_Id](#other_party_id)|`uniqueidentifier` |The other party, receiving the goods (Consignee).|
+|[Other_Party_Id](#other_party_id)|`uniqueidentifier` |The other party, sending or receiving the goods.|
 |[Reporting_Person_Id](#reporting_person_id)|`uniqueidentifier` |This is the person submitting the declaration.|
 |[Row_Version](#row_version)|`timestamp` ||
 |[Tax_Warehouse_Id](#tax_warehouse_id)|`uniqueidentifier` |Our warehouse, dispatching the goods (Consignor).|
@@ -273,7 +273,7 @@ Indicates whether the movement has begun under the cover of a paper administrati
 ### Other_Party_Id
 
 
-The other party, receiving the goods (Consignee).
+The other party, sending or receiving the goods.
 
 | Property | Value |
 | - | - |
