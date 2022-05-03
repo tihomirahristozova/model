@@ -58,6 +58,7 @@ Production batch of the Excise Stamps.
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+|Like|None|no|no|
 
 ### End_Number
 
@@ -224,6 +225,13 @@ Type and number of the document with which the excise stamps were received from 
 |UI Width|Medium|
 |User Login|no|
 |Visible|yes|
+
+#### Purchase_Lot_Number - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|no|no|
+|Like|None|no|no|
 
 ### Quantity
 

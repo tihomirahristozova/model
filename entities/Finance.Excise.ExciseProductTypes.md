@@ -28,7 +28,7 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [AlcoholicStrength](Finance.Excise.ExciseProductTypes.md#alcoholicstrength) | decimal (5, 2) | Percentage of pure alcohol used in excise duty reporting. `Required` `Default(0)` 
-| [Capacity](Finance.Excise.ExciseProductTypes.md#capacity) | decimal (6, 4) | Package capacity - number of cigarettes or volume of alcohol in liters. `Required` `Default(0)` 
+| [Capacity](Finance.Excise.ExciseProductTypes.md#capacity) | decimal (6, 4) __nullable__ | Package capacity - number of cigarettes or volume of alcohol in liters. `Default(0)` 
 | [Category](Finance.Excise.ExciseProductTypes.md#category) | [Category](Finance.Excise.ExciseProductTypes.md#category) | Specifies the excise product category of the excise stamp - alcohol, tobacco, and others. `Required` 
 | [Code](Finance.Excise.ExciseProductTypes.md#code) | string (32) | The unique code of the ExciseProductType. `Required` `Filter(multi eq;like)` `ORD` 
 | [DisplayText](Finance.Excise.ExciseProductTypes.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
@@ -62,9 +62,9 @@ _Default Value_: **0**
 
 ### Capacity
 
-Package capacity - number of cigarettes or volume of alcohol in liters. `Required` `Default(0)`
+Package capacity - number of cigarettes or volume of alcohol in liters. `Default(0)`
 
-_Type_: **decimal (6, 4)**  
+_Type_: **decimal (6, 4) __nullable__**  
 _Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  

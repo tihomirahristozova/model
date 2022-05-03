@@ -24,7 +24,7 @@ Contains the products, that are contracted (listed) with a customer. Entity: Crm
 |[In_Store_Max_Quantity](#in_store_max_quantity)|`decimal(10, 3)` ||
 |[In_Store_Min_Quantity](#in_store_min_quantity)|`decimal(10, 3)` ||
 |[In_Store_Quantity_Unit_Id](#in_store_quantity_unit_id)|`uniqueidentifier` ||
-|[Is_Active](#is_active)|`bit` ||
+|[Is_Active](#is_active)|`bit` |Indicates whether this customer product definition is active|
 |[Notes](#notes)|`nvarchar(254)` |Notes for the listing|
 |[OrderMultiple](#ordermultiple)|`decimal(10, 3)` ||
 |[Product_Id](#product_id)|`uniqueidentifier` |The product, which is listed for the customer|
@@ -348,6 +348,9 @@ The initial date of the listing. NULL when the initial date is unknown
 
 ### Is_Active
 
+
+Indicates whether this customer product definition is active
+
 | Property | Value |
 | - | - |
 |Auto Complete|no|
@@ -377,7 +380,7 @@ The initial date of the listing. NULL when the initial date is unknown
 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|`NULL`|no|no|
+|Equals|`True`|no|no|
 
 ### Notes
 

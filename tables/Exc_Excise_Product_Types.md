@@ -81,7 +81,7 @@ Package capacity - number of cigarettes or volume of alcohol in liters.
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|decimal(6, 4)|
+|Type|decimal(6, 4) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

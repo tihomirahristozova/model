@@ -107,7 +107,7 @@ Code Data Member:<br>
 <tr>
 <td><a href="Finance.Excise.ExciseStampLots.html#batchnumber">BatchNumber</a></td>
 <td>string (30)</td>
-<td>Production batch of the Excise Stamps. <code>Required</code> <code>Filter(eq)</code> <code>ORD</code></td>
+<td>Production batch of the Excise Stamps. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Excise.ExciseStampLots.html#displaytext">DisplayText</a></td>
@@ -137,7 +137,7 @@ Code Data Member:<br>
 <tr>
 <td><a href="Finance.Excise.ExciseStampLots.html#purchaselotnumber">PurchaseLotNumber</a></td>
 <td>string (30)</td>
-<td>Type and number of the document with which the excise stamps were received from the customs administration. <code>Required</code></td>
+<td>Type and number of the document with which the excise stamps were received from the customs administration. <code>Required</code> <code>Filter(eq;like)</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Excise.ExciseStampLots.html#quantity">Quantity</a></td>
@@ -170,11 +170,11 @@ Code Data Member:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="batchnumber">BatchNumber</h3>
-<p>Production batch of the Excise Stamps. <code>Required</code> <code>Filter(eq)</code> <code>ORD</code></p>
+<p>Production batch of the Excise Stamps. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></p>
 <p><em>Type</em>: <strong>string (30)</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals</strong><br>
+<em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>True</strong><br>
 <em>Maximum Length</em>: <strong>30</strong></p>
 <h3 id="displaytext">DisplayText</h3>
@@ -210,10 +210,10 @@ Code Data Member:<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: ****</p>
 <h3 id="purchaselotnumber">PurchaseLotNumber</h3>
-<p>Type and number of the document with which the excise stamps were received from the customs administration. <code>Required</code></p>
+<p>Type and number of the document with which the excise stamps were received from the customs administration. <code>Required</code> <code>Filter(eq;like)</code></p>
 <p><em>Type</em>: <strong>string (30)</strong><br>
 <em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>30</strong></p>
 <h3 id="quantity">Quantity</h3>
