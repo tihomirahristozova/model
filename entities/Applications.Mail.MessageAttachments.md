@@ -21,7 +21,7 @@ An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a
 Aggregate Parent:  
 [Applications.Mail.Messages](Applications.Mail.Messages.md)  
 Aggregate Root:  
-[Applications.Mail.Boxes](Applications.Mail.Boxes.md)  
+[Applications.Mail.Messages](Applications.Mail.Messages.md)  
 
 ## Attributes
 

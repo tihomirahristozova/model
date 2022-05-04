@@ -7,11 +7,6 @@ Entity: [Applications.Mail.Messages](~/entities/Applications.Mail.Messages.md)
 
 Represents email messages. Entity: Mail_Messages
 
-## Owner Tables Hierarchy
-
-* [Mail_Box_Folders](Mail_Box_Folders.md)
-* [Mail_Boxes](Mail_Boxes.md)
-
 ## Summary
 
 | Name | Type | Description |
@@ -256,7 +251,7 @@ Sending email address
 |Is Entity Name|no|
 |Max Length|-1|
 |Order|2147483647|
-|Ownership Reference|yes|
+|Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
 |Primary Key|no|

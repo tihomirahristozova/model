@@ -42,12 +42,6 @@ Aggregate Root:
 | [MailBox](Applications.Mail.BoxFolders.md#mailbox) | [Boxes](Applications.Mail.Boxes.md) | The <see cref="Box"/> to which this BoxFolder belongs. `Required` `Filter(multi eq)` `ReadOnly` `Owner` |
 | [ParentFolder](Applications.Mail.BoxFolders.md#parentfolder) | [BoxFolders](Applications.Mail.BoxFolders.md) (nullable) | The parent folder in the folder hierarchy. Null when the folder is a root folder. `Filter(multi eq)` |
 
-## Child Collections
-
-| Name | Type | Description |
-| ---- | ---- | --- |
-| Messages | [Messages](Applications.Mail.Messages.md) | List of `Message`(Applications.Mail.Messages.md) child objects, based on the `Applications.Mail.Message.MailBoxFolder`(Applications.Mail.Messages.md#mailboxfolder) back reference 
-
 
 ## Attribute Details
 

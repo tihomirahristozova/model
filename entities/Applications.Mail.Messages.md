@@ -9,19 +9,16 @@ Represents email messages. Entity: Mail_Messages
 
 ## Default Visualization
 Default Display Text Format:  
-_{MailBoxFolder.FolderName:T}_  
+_{Id}: {MailBoxFolderId}_  
 Default Search Members:  
-_MailBoxFolder.FolderName_  
-Name Data Member:  
-_MailBoxFolder.FolderName_  
+__  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
 
-Aggregate Parent:  
-[Applications.Mail.BoxFolders](Applications.Mail.BoxFolders.md)  
-Aggregate Root:  
-[Applications.Mail.Boxes](Applications.Mail.Boxes.md)  
+Aggregate Tree  
+* [Applications.Mail.Messages](Applications.Mail.Messages.md)  
+  * [Applications.Mail.MessageAttachments](Applications.Mail.MessageAttachments.md)  
 
 ## Attributes
 
@@ -46,7 +43,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [MailBoxFolder](Applications.Mail.Messages.md#mailboxfolder) | [BoxFolders](Applications.Mail.BoxFolders.md) | The <see cref="BoxFolder"/> to which this Message belongs. `Required` `Filter(multi eq)` `Owner` |
+| [MailBoxFolder](Applications.Mail.Messages.md#mailboxfolder) | [BoxFolders](Applications.Mail.BoxFolders.md) |  |
 | [RelatedToParty](Applications.Mail.Messages.md#relatedtoparty) | [Parties](General.Contacts.Parties.md) (nullable) | The party id of the external participating (sender/receiver) party (customer, supplier, etc.) in this mail. null means that the email is still not related to any specific party. `Filter(multi eq)` |
 
 ## Child Collections
@@ -198,13 +195,10 @@ _Maximum Length_: **2048**
 
 ### MailBoxFolder
 
-The <see cref="BoxFolder"/> to which this Message belongs. `Required` `Filter(multi eq)` `Owner`
-
 _Type_: **[BoxFolders](Applications.Mail.BoxFolders.md)**  
 _Indexed_: **True**  
 _Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
-_[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
 
 ### RelatedToParty
 

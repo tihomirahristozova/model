@@ -83,17 +83,19 @@
 <p>Represents email messages. Entity: Mail_Messages</p>
 <h2 id="default-visualization">Default Visualization</h2>
 <p>Default Display Text Format:<br>
-<em>{MailBoxFolder.FolderName:T}</em><br>
+<em>{Id}: {MailBoxFolderId}</em><br>
 Default Search Members:<br>
-<em>MailBoxFolder.FolderName</em><br>
-Name Data Member:<br>
-<em>MailBoxFolder.FolderName</em></p>
+__</p>
 <h2 id="aggregate">Aggregate</h2>
 <p>An <a href="https://docs.erp.net/tech/advanced/concepts/aggregates.html">aggregate</a> is a cluster of domain objects that can be treated as a single unit.</p>
-<p>Aggregate Parent:<br>
-<a href="Applications.Mail.BoxFolders.html">Applications.Mail.BoxFolders</a><br>
-Aggregate Root:<br>
-<a href="Applications.Mail.Boxes.html">Applications.Mail.Boxes</a></p>
+<p>Aggregate Tree</p>
+<ul>
+<li><a href="Applications.Mail.Messages.html">Applications.Mail.Messages</a>
+<ul>
+<li><a href="Applications.Mail.MessageAttachments.html">Applications.Mail.MessageAttachments</a></li>
+</ul>
+</li>
+</ul>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -189,7 +191,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Applications.Mail.Messages.html#mailboxfolder">MailBoxFolder</a></td>
 <td><a href="Applications.Mail.BoxFolders.html">BoxFolders</a></td>
-<td>The <see cref="BoxFolder"></see> to which this Message belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
+<td></td>
 </tr>
 <tr>
 <td><a href="Applications.Mail.Messages.html#relatedtoparty">RelatedToParty</a></td>
@@ -312,12 +314,10 @@ Aggregate Root:<br>
 <em>Maximum Length</em>: <strong>2048</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="mailboxfolder">MailBoxFolder</h3>
-<p>The <see cref="BoxFolder"></see> to which this Message belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="Applications.Mail.BoxFolders.html">BoxFolders</a></strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em><a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a></em>: <strong>True</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="relatedtoparty">RelatedToParty</h3>
 <p>The party id of the external participating (sender/receiver) party (customer, supplier, etc.) in this mail. null means that the email is still not related to any specific party. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.Contacts.Parties.html">Parties</a> (nullable)</strong><br>
