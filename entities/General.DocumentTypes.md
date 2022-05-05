@@ -48,7 +48,7 @@ Aggregate Tree
 | [Code](General.DocumentTypes.md#code) | string (16) | Unique descriptive code of the document type. `Required` `Filter(eq;like)` `ORD` 
 | [CreateFulfillmentson<br />Completion](General.DocumentTypes.md#createfulfillmentsoncompletion) | boolean | When document state is changed to Completed, creates completed document fulfillments for the parent document. Used only for logistic documents. `Required` `Default(false)` `Introduced in version 22.1.4.88` 
 | [CreateManully](General.DocumentTypes.md#createmanully) | boolean | False if documents with this document type only can be generated; true - the user can create documents with this type. `Required` `Default(true)` `Filter(eq)` 
-| [Description](General.DocumentTypes.md#description) | string (max) __nullable__ | The description of this DocumentType. 
+| [Description](General.DocumentTypes.md#description) | [MultilanguageString (max)](../data-types.md#multilanguagestring) __nullable__ | The description of this DocumentType. 
 | [DisallowOpposite<br />ValuesGeneration](General.DocumentTypes.md#disallowoppositevaluesgeneration) | boolean | Disallow the generation of decreasing scalar values (values with opposite directions than the original values determined by the parent document) through this document type. `Required` `Default(false)` 
 | [DisplayText](General.DocumentTypes.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [EntityName](General.DocumentTypes.md#entityname) | string (64) | System entity, which contains the documents. `Required` `Filter(multi eq)` `ORD` 
@@ -125,11 +125,10 @@ _Front-End Recalc Expressions:_
 
 The description of this DocumentType.
 
-_Type_: **string (max) __nullable__**  
+_Type_: **[MultilanguageString (max)](../data-types.md#multilanguagestring) __nullable__**  
 _Category_: **System**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
-_Maximum Length_: **2147483647**  
 
 ### DisallowOppositeValuesGeneration
 

@@ -110,7 +110,6 @@ The lot of the excise stamps.
 |Auto Complete|no|
 |Data Filter|no|
 |Default Value|None|
-|Depends On|[Excise_Stamp_Type_Id](#excise_stamp_type_id)|
 |Enter Stop|yes|
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
