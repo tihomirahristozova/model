@@ -55,6 +55,7 @@ Aggregate Tree
 | [EndTime](General.Contacts.Activities.md#endtime) | datetime __nullable__ | Currently planned ending time of the task. `Filter(ge;le)` 
 | [EntityName](General.Contacts.Activities.md#entityname) | string (64) | The entity name of the document header. `Required` `Filter(eq)` `ORD` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [Id](General.Contacts.Activities.md#id) | guid |  
+| [<s>IsReleased</s>](General.Contacts.Activities.md#isreleased) | boolean | **DEPRECATED! Do not use!** True if the document is not void and its state is released or greater. Deprecated. `Obsolete` `Required` `Default(false)` `Filter(eq)` `ReadOnly` 
 | [IsSingleExecution](General.Contacts.Activities.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document. `Required` `Default(false)` `Filter(eq)` `ReadOnly` 
 | [Notes](General.Contacts.Activities.md#notes) | string (254) __nullable__ | Notes for this Activity. 
 | [ObjectVersion](General.Contacts.Activities.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
@@ -271,6 +272,16 @@ _Indexed_: **True**
 _Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
+
+### IsReleased
+
+**DEPRECATED! Do not use!** True if the document is not void and its state is released or greater. Deprecated. `Obsolete` `Required` `Default(false)` `Filter(eq)` `ReadOnly`
+
+_Type_: **boolean**  
+_Category_: **System**  
+_Supported Filters_: **Equals**  
+_Supports Order By_: **False**  
+_Default Value_: **False**  
 
 ### IsSingleExecution
 

@@ -195,6 +195,11 @@ Code Data Member:<br>
 <td></td>
 </tr>
 <tr>
+<td><a href="Logistics.Inventory.StoreTransactions.html#isreleased"><s>IsReleased</s></a></td>
+<td>boolean</td>
+<td><strong>DEPRECATED! Do not use!</strong> True if the document is not void and its state is released or greater. Deprecated. <code>Obsolete</code> <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code></td>
+</tr>
+<tr>
 <td><a href="Logistics.Inventory.StoreTransactions.html#isscrap">IsScrap</a></td>
 <td>boolean</td>
 <td>False=Non-scrap; true=Scrap operation. Only store issue operations can be scrap. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
@@ -592,6 +597,13 @@ Allowed values for the <code>CostSource</code>(Logistics.Inventory.StoreTransact
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
+<h3 id="isreleased">IsReleased</h3>
+<p><strong>DEPRECATED! Do not use!</strong> True if the document is not void and its state is released or greater. Deprecated. <code>Obsolete</code> <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code></p>
+<p><em>Type</em>: <strong>boolean</strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>Equals</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>False</strong></p>
 <h3 id="isscrap">IsScrap</h3>
 <p>False=Non-scrap; true=Scrap operation. Only store issue operations can be scrap. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>

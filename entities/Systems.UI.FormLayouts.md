@@ -32,6 +32,8 @@ Aggregate Tree
 | [Layout](Systems.UI.FormLayouts.md#layout) | byte[] __nullable__ | The byte storage of the layout. 
 | [LayoutFormat](Systems.UI.FormLayouts.md#layoutformat) | [LayoutFormat](Systems.UI.FormLayouts.md#layoutformat) | The format of the data in the Layout column. Values can be: 'U' - uncompressed; 'L' - LZO compressed; 'D' - Deflate compressed. `Required` `Default("U")` 
 | [LayoutName](Systems.UI.FormLayouts.md#layoutname) | string (64) | The name of a named layout. Standard layouts have empty string names. `Required` `Filter(eq;like)` 
+| [<s>LayoutXml</s>](Systems.UI.FormLayouts.md#layoutxml) | string (max) __nullable__ | **DEPRECATED! Do not use!**  
+| [<s>MachineName</s>](Systems.UI.FormLayouts.md#machinename) | string (128) __nullable__ | **DEPRECATED! Do not use!**  
 | [ObjectVersion](Systems.UI.FormLayouts.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 | [PanelName](Systems.UI.FormLayouts.md#panelname) | string (64) | The visual panel, for which the layout is applied. `Required` `Default("Form")` `Filter(eq)` 
 | [UserName](Systems.UI.FormLayouts.md#username) | string (64) __nullable__ | The user for which the layout is applied. null means that the layout is applied for all users. `Filter(eq;like)` 
@@ -121,6 +123,26 @@ _Category_: **System**
 _Supported Filters_: **Equals, Like**  
 _Supports Order By_: **False**  
 _Maximum Length_: **64**  
+
+### LayoutXml
+
+**DEPRECATED! Do not use!**
+
+_Type_: **string (max) __nullable__**  
+_Category_: **System**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+_Maximum Length_: **2147483647**  
+
+### MachineName
+
+**DEPRECATED! Do not use!**
+
+_Type_: **string (128) __nullable__**  
+_Category_: **System**  
+_Supported Filters_: **Equals, Like**  
+_Supports Order By_: **False**  
+_Maximum Length_: **128**  
 
 ### ObjectVersion
 

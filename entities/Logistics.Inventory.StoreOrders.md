@@ -53,6 +53,7 @@ Aggregate Tree
 | [DueDate](Logistics.Inventory.StoreOrders.md#duedate) | datetime | The final date, when the store transaction should occur. `Required` `Default(Today)` `Filter(ge;le)` `ORD` 
 | [EntityName](Logistics.Inventory.StoreOrders.md#entityname) | string (64) | The entity name of the document header. `Required` `Filter(eq)` `ORD` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [Id](Logistics.Inventory.StoreOrders.md#id) | guid |  
+| [<s>IsReleased</s>](Logistics.Inventory.StoreOrders.md#isreleased) | boolean | **DEPRECATED! Do not use!** True if the document is not void and its state is released or greater. Deprecated. `Obsolete` `Required` `Default(false)` `Filter(eq)` `ReadOnly` 
 | [IsSingleExecution](Logistics.Inventory.StoreOrders.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document. `Required` `Default(false)` `Filter(eq)` `ReadOnly` 
 | [MovementType](Logistics.Inventory.StoreOrders.md#movementtype) | [MovementType](Logistics.Inventory.StoreOrders.md#movementtype) | Store order movement type. R=RECEIPT, I=ISSUE. `Required` `Default("R")` `Filter(multi eq)` 
 | [ObjectVersion](Logistics.Inventory.StoreOrders.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
@@ -268,6 +269,16 @@ _Indexed_: **True**
 _Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
+
+### IsReleased
+
+**DEPRECATED! Do not use!** True if the document is not void and its state is released or greater. Deprecated. `Obsolete` `Required` `Default(false)` `Filter(eq)` `ReadOnly`
+
+_Type_: **boolean**  
+_Category_: **System**  
+_Supported Filters_: **Equals**  
+_Supports Order By_: **False**  
+_Default Value_: **False**  
 
 ### IsSingleExecution
 

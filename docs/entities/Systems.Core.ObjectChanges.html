@@ -130,6 +130,11 @@ Aggregate Root:<br>
 <td>The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.</td>
 </tr>
 <tr>
+<td><a href="Systems.Core.ObjectChanges.html#oldvaluesjson"><s>OldValuesJson</s></a></td>
+<td>string (max) <strong>nullable</strong></td>
+<td><strong>DEPRECATED! Do not use!</strong> Old values in a name-value Json format. Only changed data attributes are recorded. Old values are recorded for update and delete. <code>Obsolete</code></td>
+</tr>
+<tr>
 <td><a href="Systems.Core.ObjectChanges.html#repositoryname">RepositoryName</a></td>
 <td>string (64)</td>
 <td>The repository of the actual changed object, described by this change. This is different than the aggregate root, which is pointed by Root Object. <code>Required</code> <code>Filter(multi eq;like)</code></td>
@@ -213,6 +218,13 @@ Allowed values for the <code>ChangeType</code>(Systems.Core.ObjectChanges.md#cha
 <em>Category</em>: <strong>Extensible Data Object</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: ****</p>
+<h3 id="oldvaluesjson">OldValuesJson</h3>
+<p><strong>DEPRECATED! Do not use!</strong> Old values in a name-value Json format. Only changed data attributes are recorded. Old values are recorded for update and delete. <code>Obsolete</code></p>
+<p><em>Type</em>: <strong>string (max) <strong>nullable</strong></strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>2147483647</strong></p>
 <h3 id="repositoryname">RepositoryName</h3>
 <p>The repository of the actual changed object, described by this change. This is different than the aggregate root, which is pointed by Root Object. <code>Required</code> <code>Filter(multi eq;like)</code></p>
 <p><em>Type</em>: <strong>string (64)</strong><br>

@@ -45,6 +45,7 @@ Aggregate Root:
 | [ProcedureName](Systems.Workflow.Routes.md#procedurename) | string (254) | The system name of the generation procedure, which must be executed by the route. `Required` 
 | [ProcessEvent](Systems.Workflow.Routes.md#processevent) | string (254) | Event which triggers the route. Usually the event is change of state. Every document entity may define own custom events. `Required` 
 | [ReadOnly](Systems.Workflow.Routes.md#readonly) | boolean | Indicates wheather the destination document shoul be read only. true - the destination document is read only. `Required` `Default(false)` 
+| [<s>SchemaXML</s>](Systems.Workflow.Routes.md#schemaxml) | string (max) __nullable__ | **DEPRECATED! Do not use!**  
 
 ## References
 
@@ -293,6 +294,16 @@ _Category_: **System**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Default Value_: **False**  
+
+### SchemaXML
+
+**DEPRECATED! Do not use!**
+
+_Type_: **string (max) __nullable__**  
+_Category_: **System**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+_Maximum Length_: **2147483647**  
 
 
 ## Reference Details

@@ -194,6 +194,11 @@ Code Data Member:<br>
 <td></td>
 </tr>
 <tr>
+<td><a href="Production.ShopFloor.OutputOrders.html#isreleased"><s>IsReleased</s></a></td>
+<td>boolean</td>
+<td><strong>DEPRECATED! Do not use!</strong> True if the document is not void and its state is released or greater. Deprecated. <code>Obsolete</code> <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code></td>
+</tr>
+<tr>
 <td><a href="Production.ShopFloor.OutputOrders.html#issingleexecution">IsSingleExecution</a></td>
 <td>boolean</td>
 <td>Specifies whether the document is a single execution of its order document. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code></td>
@@ -237,6 +242,11 @@ Code Data Member:<br>
 <td><a href="Production.ShopFloor.OutputOrders.html#state">State</a></td>
 <td><a href="Production.ShopFloor.OutputOrders.html#state">DocumentState</a></td>
 <td>The current system state of the document. Allowed values: 0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed. <code>Required</code> <code>Default(0)</code> <code>Filter(multi eq;ge;le)</code> <code>ReadOnly</code> (Inherited from <a href="General.Documents.html">Documents</a>)</td>
+</tr>
+<tr>
+<td><a href="Production.ShopFloor.OutputOrders.html#status"><s>Status</s></a></td>
+<td>string (1)</td>
+<td><strong>DEPRECATED! Do not use!</strong> N=New,P=Planned, F=Firm planned, R=Released(WIP), C=Completed. <code>Obsolete</code> <code>Required</code> <code>Default(&quot;N&quot;)</code></td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.OutputOrders.html#void">Void</a></td>
@@ -530,6 +540,13 @@ Code Data Member:<br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
+<h3 id="isreleased">IsReleased</h3>
+<p><strong>DEPRECATED! Do not use!</strong> True if the document is not void and its state is released or greater. Deprecated. <code>Obsolete</code> <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code></p>
+<p><em>Type</em>: <strong>boolean</strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>Equals</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>False</strong></p>
 <h3 id="issingleexecution">IsSingleExecution</h3>
 <p>Specifies whether the document is a single execution of its order document. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>
@@ -654,6 +671,14 @@ Enumeration of document system states<br>
 <p><em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>0</strong></p>
+<h3 id="status">Status</h3>
+<p><strong>DEPRECATED! Do not use!</strong> N=New,P=Planned, F=Firm planned, R=Released(WIP), C=Completed. <code>Obsolete</code> <code>Required</code> <code>Default(&quot;N&quot;)</code></p>
+<p><em>Type</em>: <strong>string (1)</strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>1</strong><br>
+<em>Default Value</em>: <strong>N</strong></p>
 <h3 id="void">Void</h3>
 <p>True if the document is null and void. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code> (Inherited from <a href="General.Documents.html">Documents</a>)</p>
 <p><em>Type</em>: <strong>boolean</strong><br>

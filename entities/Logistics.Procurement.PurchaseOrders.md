@@ -52,6 +52,7 @@ Aggregate Tree
 | [EntityName](Logistics.Procurement.PurchaseOrders.md#entityname) | string (64) | The entity name of the document header. `Required` `Filter(eq)` `ORD` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [Id](Logistics.Procurement.PurchaseOrders.md#id) | guid |  
 | [InvoiceDocumentNo](Logistics.Procurement.PurchaseOrders.md#invoicedocumentno) | string (20) __nullable__ | Contains the purchase invoice number when it is known in advance, null otherwise. `Filter(eq)` 
+| [<s>IsReleased</s>](Logistics.Procurement.PurchaseOrders.md#isreleased) | boolean | **DEPRECATED! Do not use!** True if the document is not void and its state is released or greater. Deprecated. `Obsolete` `Required` `Default(false)` `Filter(eq)` `ReadOnly` 
 | [IsSingleExecution](Logistics.Procurement.PurchaseOrders.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document. `Required` `Default(false)` `Filter(eq)` `ReadOnly` 
 | [Notes](Logistics.Procurement.PurchaseOrders.md#notes) | string (max) __nullable__ | Notes for this PurchaseOrder. 
 | [ObjectVersion](Logistics.Procurement.PurchaseOrders.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
@@ -255,6 +256,16 @@ _Category_: **System**
 _Supported Filters_: **Equals**  
 _Supports Order By_: **False**  
 _Maximum Length_: **20**  
+
+### IsReleased
+
+**DEPRECATED! Do not use!** True if the document is not void and its state is released or greater. Deprecated. `Obsolete` `Required` `Default(false)` `Filter(eq)` `ReadOnly`
+
+_Type_: **boolean**  
+_Category_: **System**  
+_Supported Filters_: **Equals**  
+_Supports Order By_: **False**  
+_Default Value_: **False**  
 
 ### IsSingleExecution
 

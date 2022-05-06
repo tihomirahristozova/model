@@ -53,6 +53,7 @@ Aggregate Tree
 | [DocumentVersion](Production.ShopFloor.OutputOrders.md#documentversion) | int32 | Consecutive version number, starting with 1. Each update produces a new version of the document. `Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [EntityName](Production.ShopFloor.OutputOrders.md#entityname) | string (64) | The entity name of the document header. `Required` `Filter(eq)` `ORD` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [Id](Production.ShopFloor.OutputOrders.md#id) | guid |  
+| [<s>IsReleased</s>](Production.ShopFloor.OutputOrders.md#isreleased) | boolean | **DEPRECATED! Do not use!** True if the document is not void and its state is released or greater. Deprecated. `Obsolete` `Required` `Default(false)` `Filter(eq)` `ReadOnly` 
 | [IsSingleExecution](Production.ShopFloor.OutputOrders.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document. `Required` `Default(false)` `Filter(eq)` `ReadOnly` 
 | [ObjectVersion](Production.ShopFloor.OutputOrders.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 | [ParentDocument<br />RelationshipType](Production.ShopFloor.OutputOrders.md#parentdocumentrelationshiptype) | [ParentDocument<br />RelationshipType](Production.ShopFloor.OutputOrders.md#parentdocumentrelationshiptype) __nullable__ | Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
@@ -62,6 +63,7 @@ Aggregate Tree
 | [ReferenceDocumentNo](Production.ShopFloor.OutputOrders.md#referencedocumentno) | string (20) __nullable__ | The number of the document (issued by the other party), which was the reason for the creation of the current document. The numebr should be unique within the party documents. `Filter(eq;like)` (Inherited from [Documents](General.Documents.md)) 
 | [ReleaseTime](Production.ShopFloor.OutputOrders.md#releasetime) | datetime __nullable__ | Date and time when the document was released (State set to Released). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [State](Production.ShopFloor.OutputOrders.md#state) | [DocumentState](Production.ShopFloor.OutputOrders.md#state) | The current system state of the document. Allowed values: 0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed. `Required` `Default(0)` `Filter(multi eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
+| [<s>Status</s>](Production.ShopFloor.OutputOrders.md#status) | string (1) | **DEPRECATED! Do not use!** N=New,P=Planned, F=Firm planned, R=Released(WIP), C=Completed. `Obsolete` `Required` `Default("N")` 
 | [Void](Production.ShopFloor.OutputOrders.md#void) | boolean | True if the document is null and void. `Required` `Default(false)` `Filter(eq)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [VoidReason](Production.ShopFloor.OutputOrders.md#voidreason) | string (254) __nullable__ | Reason for voiding the document, entered by the user. `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [VoidTime](Production.ShopFloor.OutputOrders.md#voidtime) | datetime __nullable__ | Date/time when the document has become void. `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
@@ -239,6 +241,16 @@ _Category_: **System**
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
 
+### IsReleased
+
+**DEPRECATED! Do not use!** True if the document is not void and its state is released or greater. Deprecated. `Obsolete` `Required` `Default(false)` `Filter(eq)` `ReadOnly`
+
+_Type_: **boolean**  
+_Category_: **System**  
+_Supported Filters_: **Equals**  
+_Supports Order By_: **False**  
+_Default Value_: **False**  
+
 ### IsSingleExecution
 
 Specifies whether the document is a single execution of its order document. `Required` `Default(false)` `Filter(eq)` `ReadOnly`
@@ -347,6 +359,17 @@ _Allowed Values (General.DocumentState Enum Members)_
 _Supported Filters_: **Equals, GreaterThanOrLessThan, EqualsIn**  
 _Supports Order By_: **False**  
 _Default Value_: **0**  
+
+### Status
+
+**DEPRECATED! Do not use!** N=New,P=Planned, F=Firm planned, R=Released(WIP), C=Completed. `Obsolete` `Required` `Default("N")`
+
+_Type_: **string (1)**  
+_Category_: **System**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+_Maximum Length_: **1**  
+_Default Value_: **N**  
 
 ### Void
 

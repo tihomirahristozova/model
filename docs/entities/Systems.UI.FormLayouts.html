@@ -140,6 +140,16 @@ Name Data Member:<br>
 <td>The name of a named layout. Standard layouts have empty string names. <code>Required</code> <code>Filter(eq;like)</code></td>
 </tr>
 <tr>
+<td><a href="Systems.UI.FormLayouts.html#layoutxml"><s>LayoutXml</s></a></td>
+<td>string (max) <strong>nullable</strong></td>
+<td><strong>DEPRECATED! Do not use!</strong></td>
+</tr>
+<tr>
+<td><a href="Systems.UI.FormLayouts.html#machinename"><s>MachineName</s></a></td>
+<td>string (128) <strong>nullable</strong></td>
+<td><strong>DEPRECATED! Do not use!</strong></td>
+</tr>
+<tr>
 <td><a href="Systems.UI.FormLayouts.html#objectversion">ObjectVersion</a></td>
 <td>int32</td>
 <td>The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.</td>
@@ -250,6 +260,20 @@ Allowed values for the <code>LayoutFormat</code>(Systems.UI.FormLayouts.md#layou
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>64</strong></p>
+<h3 id="layoutxml">LayoutXml</h3>
+<p><strong>DEPRECATED! Do not use!</strong></p>
+<p><em>Type</em>: <strong>string (max) <strong>nullable</strong></strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>2147483647</strong></p>
+<h3 id="machinename">MachineName</h3>
+<p><strong>DEPRECATED! Do not use!</strong></p>
+<p><em>Type</em>: <strong>string (128) <strong>nullable</strong></strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>Equals, Like</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>128</strong></p>
 <h3 id="objectversion">ObjectVersion</h3>
 <p>The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.</p>
 <p><em>Type</em>: <strong>int32</strong><br>

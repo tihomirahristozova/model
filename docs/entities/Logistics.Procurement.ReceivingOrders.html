@@ -194,6 +194,11 @@ Code Data Member:<br>
 <td>Contains the purchase invoice number when it is known in advance, null otherwise. <code>Filter(eq)</code></td>
 </tr>
 <tr>
+<td><a href="Logistics.Procurement.ReceivingOrders.html#isreleased"><s>IsReleased</s></a></td>
+<td>boolean</td>
+<td><strong>DEPRECATED! Do not use!</strong> True if the document is not void and its state is released or greater. Deprecated. <code>Obsolete</code> <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code></td>
+</tr>
+<tr>
 <td><a href="Logistics.Procurement.ReceivingOrders.html#issingleexecution">IsSingleExecution</a></td>
 <td>boolean</td>
 <td>Specifies whether the document is a single execution of its order document. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code></td>
@@ -587,6 +592,13 @@ Code Data Member:<br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>20</strong></p>
+<h3 id="isreleased">IsReleased</h3>
+<p><strong>DEPRECATED! Do not use!</strong> True if the document is not void and its state is released or greater. Deprecated. <code>Obsolete</code> <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code></p>
+<p><em>Type</em>: <strong>boolean</strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>Equals</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>False</strong></p>
 <h3 id="issingleexecution">IsSingleExecution</h3>
 <p>Specifies whether the document is a single execution of its order document. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>

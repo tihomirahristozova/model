@@ -32,6 +32,7 @@ Aggregate Root:
 | [DisplayText](Production.Technologies.PrincipalRecipeIngredients.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [FixedScrapQuantity](Production.Technologies.PrincipalRecipeIngredients.md#fixedscrapquantity) | [Quantity (18, 3)](../data-types.md#quantity) | Fixed scrap quantity for setup. `Unit: UsageUnit` `Required` `Default(0)` 
 | [Id](Production.Technologies.PrincipalRecipeIngredients.md#id) | guid |  
+| [<s>IngredientId</s>](Production.Technologies.PrincipalRecipeIngredients.md#ingredientid) | guid | **DEPRECATED! Do not use!** The Id of the ingredient. When copying principal recipes, this Id remains the same for the new principal recipe to provide upgrade path for old recipes. `Obsolete` `Required` `Default(New Guid)` `Filter(multi eq)` 
 | [IngredientName](Production.Technologies.PrincipalRecipeIngredients.md#ingredientname) | string (254) | The principal name of the ingredient. `Required` `Filter(like)` 
 | [LineOrd](Production.Technologies.PrincipalRecipeIngredients.md#lineord) | int32 | The position of the line in the recipe model. `Required` 
 | [ObjectVersion](Production.Technologies.PrincipalRecipeIngredients.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
@@ -98,6 +99,15 @@ _Default Value_: **Constant**
 
 _Type_: **guid**  
 _Indexed_: **True**  
+_Category_: **System**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
+
+### IngredientId
+
+**DEPRECATED! Do not use!** The Id of the ingredient. When copying principal recipes, this Id remains the same for the new principal recipe to provide upgrade path for old recipes. `Obsolete` `Required` `Default(New Guid)` `Filter(multi eq)`
+
+_Type_: **guid**  
 _Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  

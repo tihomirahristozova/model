@@ -130,6 +130,11 @@ Aggregate Root:<br>
 <td></td>
 </tr>
 <tr>
+<td><a href="Production.Technologies.PrincipalRecipeIngredients.html#ingredientid"><s>IngredientId</s></a></td>
+<td>guid</td>
+<td><strong>DEPRECATED! Do not use!</strong> The Id of the ingredient. When copying principal recipes, this Id remains the same for the new principal recipe to provide upgrade path for old recipes. <code>Obsolete</code> <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code></td>
+</tr>
+<tr>
 <td><a href="Production.Technologies.PrincipalRecipeIngredients.html#ingredientname">IngredientName</a></td>
 <td>string (254)</td>
 <td>The principal name of the ingredient. <code>Required</code> <code>Filter(like)</code></td>
@@ -248,6 +253,12 @@ Aggregate Root:<br>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
+<h3 id="ingredientid">IngredientId</h3>
+<p><strong>DEPRECATED! Do not use!</strong> The Id of the ingredient. When copying principal recipes, this Id remains the same for the new principal recipe to provide upgrade path for old recipes. <code>Obsolete</code> <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code></p>
+<p><em>Type</em>: <strong>guid</strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
