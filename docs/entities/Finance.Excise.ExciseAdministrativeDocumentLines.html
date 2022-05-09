@@ -128,6 +128,11 @@ Aggregate Root:<br>
 <td>The rate which should be applied for the specified product and purpose. null means not assigned yet. <code>Introduced in version 21.1.3.97</code></td>
 </tr>
 <tr>
+<td><a href="Finance.Excise.ExciseAdministrativeDocumentLines.html#excisequantity">ExciseQuantity</a></td>
+<td><a href="../data-types.html#quantity">Quantity (12, 3)</a></td>
+<td>The quantity, converted, for reporting purposes, in the measurement unit of the excise product type. <code>Unit: ExciseQuantityUnit</code> <code>Required</code> <code>Introduced in version 22.1.6.58</code></td>
+</tr>
+<tr>
 <td><a href="Finance.Excise.ExciseAdministrativeDocumentLines.html#id">Id</a></td>
 <td>guid</td>
 <td></td>
@@ -200,6 +205,11 @@ Aggregate Root:<br>
 <td>The Purpose codes specify the different purposes recognized by the authorities for determining the excise rate. <code>Filter(multi eq)</code> <code>Introduced in version 21.1.3.97</code></td>
 </tr>
 <tr>
+<td><a href="Finance.Excise.ExciseAdministrativeDocumentLines.html#excisequantityunit">ExciseQuantityUnit</a></td>
+<td><a href="General.MeasurementUnits.html">MeasurementUnits</a></td>
+<td>The measurement unit of Excise Quantity. Copied from the excise product type. <code>Required</code> <code>Filter(multi eq)</code> <code>Introduced in version 22.1.6.58</code></td>
+</tr>
+<tr>
 <td><a href="Finance.Excise.ExciseAdministrativeDocumentLines.html#measuringtransaction">MeasuringTransaction</a></td>
 <td><a href="Finance.Excise.MeasuringTransactions.html">MeasuringTransactions</a> (nullable)</td>
 <td>Transaction of product input or output, measured with specialized measuring device for excise purposes. <code>Filter(multi eq)</code> <code>Introduced in version 21.1.3.87</code></td>
@@ -260,6 +270,12 @@ Aggregate Root:<br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>obj.ExciseDutyRate.ExciseDutyRateField</code></p>
+<h3 id="excisequantity">ExciseQuantity</h3>
+<p>The quantity, converted, for reporting purposes, in the measurement unit of the excise product type. <code>Unit: ExciseQuantityUnit</code> <code>Required</code> <code>Introduced in version 22.1.6.58</code></p>
+<p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity (12, 3)</a></strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
@@ -343,6 +359,11 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>IIF( ( obj.LineNo == obj.LineNo), obj.DefaultExcisePurposeCode( ), null)</code></p>
+<h3 id="excisequantityunit">ExciseQuantityUnit</h3>
+<p>The measurement unit of Excise Quantity. Copied from the excise product type. <code>Required</code> <code>Filter(multi eq)</code> <code>Introduced in version 22.1.6.58</code></p>
+<p><em>Type</em>: <strong><a href="General.MeasurementUnits.html">MeasurementUnits</a></strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="measuringtransaction">MeasuringTransaction</h3>
 <p>Transaction of product input or output, measured with specialized measuring device for excise purposes. <code>Filter(multi eq)</code> <code>Introduced in version 21.1.3.87</code></p>
 <p><em>Type</em>: <strong><a href="Finance.Excise.MeasuringTransactions.html">MeasuringTransactions</a> (nullable)</strong><br>

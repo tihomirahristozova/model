@@ -225,7 +225,10 @@ ExciseAdministrativeDocumentLine.ExciseQuantity = Convert(QuantityBase, ExciseQu
 
 ExciseAdministrativeDocumentLine.MeasuringTransaction = StoreTransactionLine.Lot.ExciseMeasuringTransaction
 
-ExciseAdministrativeDocumentLine.ExciseAlcoholicStrength = StoreTransactionLine.Product.ExciseProductsType.ExciseAlcoholicStrength
+
+ExciseAdministrativeDocumentLine.ExciseAlcoholicStrength = 
+IF MeasuringTransaction is not Null THEN MeasuringTransaction.AlcoholDegree
+IF MeasuringTransaction is Null THEN Product.ExciseProductType.AlcoholicStrength
 
 ExciseAdministrativeDocumentLine.ExciseProduct = StoreTransactionLine.Product.ExciseProductsType.ExciseProduct
 

@@ -18,7 +18,6 @@ Represents the data, sent to the customs authorities for the movements of excise
 |[Accrue_Excise_Duty](#accrue_excise_duty)|`bit` |Accrue Excise Duty|
 |[Administrative_Reference_Code](#administrative_reference_code)|`nvarchar(16)` |The reference code, returned the customs authorities, when the document is exported to them. NULL means the document is not yet exported to the authorities.|
 |[Direction](#direction)|`nvarchar(1)` Allowed: `I`, `R`|Indicates whether the document is Receipt('R') or Issue('I') of the Tax Warehouse|
-|[Document_Currency_Id](#document_currency_id)|`uniqueidentifier` |Currency of the Excise deal.|
 |[Document_Id](#document_id)|`uniqueidentifier` ||
 |[Excise_Administrative_Document_Id](#excise_administrative_document_id)|`uniqueidentifier` `PK`||
 |[Is_Deferred_Submission](#is_deferred_submission)|`bit` |Indicates whether the movement has begun under the cover of a paper administrative document.|
@@ -129,44 +128,6 @@ Indicates whether the document is Receipt('R') or Issue('I') of the Tax Warehous
 |Visible|yes|
 
 #### Direction - Supported Filters
-
-| Filter Type | Default | Include Nulls | Hidden by Default |
-| - | - | - | - |
-|Equals|`NULL`|no|no|
-
-### Document_Currency_Id
-
-
-Currency of the Excise deal.
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Base Table.Column|[Gen_Currencies](Gen_Currencies.md).[Currency_Id](Gen_Currencies.md#currency_id)|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|8|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|Referenced Table|[Gen_Currencies](Gen_Currencies.md)|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|yes|
-|Type|uniqueidentifier|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|yes|
-
-#### Document_Currency_Id - Supported Filters
 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
