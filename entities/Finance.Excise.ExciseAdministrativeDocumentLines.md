@@ -30,6 +30,7 @@ Aggregate Root:
 | [ExciseAmount](Finance.Excise.ExciseAdministrativeDocumentLines.md#exciseamount) | [Amount (14, 2)](../data-types.md#amount) |  
 | [ExciseAmountBase](Finance.Excise.ExciseAdministrativeDocumentLines.md#exciseamountbase) | decimal (14, 2) |  
 | [ExciseDutyRateValue](Finance.Excise.ExciseAdministrativeDocumentLines.md#excisedutyratevalue) | decimal (10, 6) __nullable__ | The rate which should be applied for the specified product and purpose. null means not assigned yet. `Introduced in version 21.1.3.97` 
+| [ExciseQuantity](Finance.Excise.ExciseAdministrativeDocumentLines.md#excisequantity) | [Quantity (12, 3)](../data-types.md#quantity) | The quantity, converted, for reporting purposes, in the measurement unit of the excise product type. `Unit: ExciseQuantityUnit` `Required` `Introduced in version 22.1.6.58` 
 | [Id](Finance.Excise.ExciseAdministrativeDocumentLines.md#id) | guid |  
 | [LineNo](Finance.Excise.ExciseAdministrativeDocumentLines.md#lineno) | int32 | Consecutive line number within the document. `Required` `Filter(multi eq)` 
 | [Notes](Finance.Excise.ExciseAdministrativeDocumentLines.md#notes) | string (max) __nullable__ | Notes for this ExciseAdministrative<br />DocumentLine. 
@@ -47,6 +48,7 @@ Aggregate Root:
 | [ExciseDutyRate](Finance.Excise.ExciseAdministrativeDocumentLines.md#excisedutyrate) | [ExciseDutyRates](Finance.Excise.ExciseDutyRates.md) (nullable) | The Duty rate specified by the taxation and customs authorities. `Filter(multi eq)` `Introduced in version 21.1.3.97` |
 | [ExciseProduct](Finance.Excise.ExciseAdministrativeDocumentLines.md#exciseproduct) | [ExciseProducts](Finance.Excise.ExciseProducts.md) (nullable) | The Excise product code defined by the taxation and customs authorities. `Filter(multi eq)` `Introduced in version 21.1.3.97` |
 | [ExcisePurposeCode](Finance.Excise.ExciseAdministrativeDocumentLines.md#excisepurposecode) | [ExcisePurposeCodes](Finance.Excise.ExcisePurposeCodes.md) (nullable) | The Purpose codes specify the different purposes recognized by the authorities for determining the excise rate. `Filter(multi eq)` `Introduced in version 21.1.3.97` |
+| [ExciseQuantityUnit](Finance.Excise.ExciseAdministrativeDocumentLines.md#excisequantityunit) | [MeasurementUnits](General.MeasurementUnits.md) | The measurement unit of Excise Quantity. Copied from the excise product type. `Required` `Filter(multi eq)` `Introduced in version 22.1.6.58` |
 | [MeasuringTransaction](Finance.Excise.ExciseAdministrativeDocumentLines.md#measuringtransaction) | [MeasuringTransactions](Finance.Excise.MeasuringTransactions.md) (nullable) | Transaction of product input or output, measured with specialized measuring device for excise purposes. `Filter(multi eq)` `Introduced in version 21.1.3.87` |
 | [ParentDocument](Finance.Excise.ExciseAdministrativeDocumentLines.md#parentdocument) | [Documents](General.Documents.md) (nullable) | The document, which the current line executes. Null when the current line does not execute another line. `Filter(multi eq)` `Introduced in version 22.1.4.9` |
 | [Product](Finance.Excise.ExciseAdministrativeDocumentLines.md#product) | [Products](General.Products.Products.md) | The product being sold. `Required` `Filter(multi eq)` |
@@ -106,6 +108,15 @@ _Supports Order By_: **False**
 
 _Front-End Recalc Expressions:_  
 `obj.ExciseDutyRate.ExciseDutyRateField`
+### ExciseQuantity
+
+The quantity, converted, for reporting purposes, in the measurement unit of the excise product type. `Unit: ExciseQuantityUnit` `Required` `Introduced in version 22.1.6.58`
+
+_Type_: **[Quantity (12, 3)](../data-types.md#quantity)**  
+_Category_: **System**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+
 ### Id
 
 _Type_: **guid**  
@@ -227,6 +238,14 @@ _Supported Filters_: **Equals, EqualsIn**
 
 _Front-End Recalc Expressions:_  
 `IIF( ( obj.LineNo == obj.LineNo), obj.DefaultExcisePurposeCode( ), null)`
+### ExciseQuantityUnit
+
+The measurement unit of Excise Quantity. Copied from the excise product type. `Required` `Filter(multi eq)` `Introduced in version 22.1.6.58`
+
+_Type_: **[MeasurementUnits](General.MeasurementUnits.md)**  
+_Category_: **System**  
+_Supported Filters_: **Equals, EqualsIn**  
+
 ### MeasuringTransaction
 
 Transaction of product input or output, measured with specialized measuring device for excise purposes. `Filter(multi eq)` `Introduced in version 21.1.3.87`
