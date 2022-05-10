@@ -107,7 +107,7 @@ Code Data Member:<br>
 <tr>
 <td><a href="Finance.Excise.ExciseStampLots.html#batchnumber">BatchNumber</a></td>
 <td>string (30)</td>
-<td>Production batch of the Excise Stamps. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></td>
+<td>Production batch of the Excise Stamps. <code>Required</code> <code>Filter(multi eq;like)</code> <code>ORD</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Excise.ExciseStampLots.html#displaytext">DisplayText</a></td>
@@ -175,11 +175,11 @@ Code Data Member:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="batchnumber">BatchNumber</h3>
-<p>Production batch of the Excise Stamps. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></p>
+<p>Production batch of the Excise Stamps. <code>Required</code> <code>Filter(multi eq;like)</code> <code>ORD</code></p>
 <p><em>Type</em>: <strong>string (30)</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, Like</strong><br>
+<em>Supported Filters</em>: <strong>Equals, Like, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>True</strong><br>
 <em>Maximum Length</em>: <strong>30</strong></p>
 <h3 id="displaytext">DisplayText</h3>

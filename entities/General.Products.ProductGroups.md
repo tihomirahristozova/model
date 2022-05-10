@@ -44,7 +44,7 @@ Aggregate Tree
 | [NextSerialNumber](General.Products.ProductGroups.md#nextserialnumber) | string (40) __nullable__ | When not null, specifies the next serial number, that should be assigned to new produced items. `Filter(eq;like)` 
 | [Notes](General.Products.ProductGroups.md#notes) | string (254) __nullable__ | User notes for the item group. 
 | [ObjectVersion](General.Products.ProductGroups.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [Parent](General.Products.ProductGroups.md#parent) | string (254) | Full tree path of the parent group in the form /parent/.../leaf/. Contains the group names. `Required` `Default("/")` `Filter(eq)` `ORD` 
+| [<s>Parent</s>](General.Products.ProductGroups.md#parent) | string (254) | **DEPRECATED! Do not use!** Full tree path of the parent group in the form /parent/.../leaf/. Contains the group names. `Obsolete` `Required` `Default("/")` `Filter(eq)` `ORD` 
 | [Picture](General.Products.ProductGroups.md#picture) | byte[] __nullable__ | The picture of the product group. 
 | [PictureLastUpdateTime](General.Products.ProductGroups.md#picturelastupdatetime) | datetime __nullable__ | Last update time of the Picture. `Filter(ge;le)` `ReadOnly` 
 | [ProductDescriptionMask](General.Products.ProductGroups.md#productdescriptionmask) | [MultilanguageString (1000)](../data-types.md#multilanguagestring) __nullable__ | When not null specifies mask for new product descriptions for this group and its sub-groups. The mask substitutes {0}..{n} with the appropriate custom attributes. 
@@ -201,7 +201,7 @@ _Supports Order By_: ****
 
 ### Parent
 
-Full tree path of the parent group in the form /parent/.../leaf/. Contains the group names. `Required` `Default("/")` `Filter(eq)` `ORD`
+**DEPRECATED! Do not use!** Full tree path of the parent group in the form /parent/.../leaf/. Contains the group names. `Obsolete` `Required` `Default("/")` `Filter(eq)` `ORD`
 
 _Type_: **string (254)**  
 _Indexed_: **True**  

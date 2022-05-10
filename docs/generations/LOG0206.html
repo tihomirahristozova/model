@@ -138,8 +138,6 @@ The Excise Administrative Document's header is created based on the Store Transa
 
 ExciseAdministrativeDocument.OtherParty = StoreTransaction.ToParty
 
-ExciseAdministrativeDocument.DocumentCurrency = StoreTransaction.DocumentCurrency
-
 ExciseAdministrativeDocument.CurrencyDirectory = StoreTransaction.CurrencyDirectory
 </code></pre>
 <div class="NOTE">
@@ -234,7 +232,7 @@ ExciseAdministrativeDocumentLine.ExciseProduct = StoreTransactionLine.Product.Ex
 
 ExciseAdministrativeDocumentLine.ExcisePurposeCode = DefaultExcisePurposeCode
 
-ExciseAdministrativeDocumentLine.ExciseDutyRate = DetermineExciseDutyRate(ExciseProduct, ExcisePurposeCode, Currency)
+ExciseAdministrativeDocumentLine.ExciseDutyRate = DetermineExciseDutyRate(ExciseProduct, ExcisePurposeCode, ExciseAdministrativeDocument.EnterpriseCompany.BaseCurrency)
 
 ExciseAdministrativeDocumentLine.ExciseDutyRateValue = ExciseDutyRate.ExciseDutyRateField
 

@@ -25,7 +25,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [BatchNumber](Finance.Excise.ExciseStampLots.md#batchnumber) | string (30) | Production batch of the Excise Stamps. `Required` `Filter(eq;like)` `ORD` 
+| [BatchNumber](Finance.Excise.ExciseStampLots.md#batchnumber) | string (30) | Production batch of the Excise Stamps. `Required` `Filter(multi eq;like)` `ORD` 
 | [DisplayText](Finance.Excise.ExciseStampLots.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [EndNumber](Finance.Excise.ExciseStampLots.md#endnumber) | string (30) | End number of the lot. `Required` 
 | [Id](Finance.Excise.ExciseStampLots.md#id) | guid |  
@@ -47,12 +47,12 @@ Aggregate Tree
 
 ### BatchNumber
 
-Production batch of the Excise Stamps. `Required` `Filter(eq;like)` `ORD`
+Production batch of the Excise Stamps. `Required` `Filter(multi eq;like)` `ORD`
 
 _Type_: **string (30)**  
 _Indexed_: **True**  
 _Category_: **System**  
-_Supported Filters_: **Equals, Like**  
+_Supported Filters_: **Equals, Like, EqualsIn**  
 _Supports Order By_: **True**  
 _Maximum Length_: **30**  
 

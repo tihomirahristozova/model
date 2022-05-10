@@ -47,7 +47,7 @@ Production batch of the Excise Stamps.
 |RTF|no|
 |Sortable|yes|
 |Summary Type|None|
-|Supports EQUALS_IN|no|
+|Supports EQUALS_IN|yes|
 |Type|nvarchar(30)|
 |UI Memo Editor|no|
 |UI Width|Medium|
@@ -59,7 +59,7 @@ Production batch of the Excise Stamps.
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
-|Like|None|no|no|
+|Like|None|no|yes|
 
 ### End_Number
 
@@ -268,7 +268,7 @@ Type and number of the document with which the excise stamps were received from 
 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|`NULL`|no|no|
+|Equals|`NULL`|no|yes|
 |Like|None|no|no|
 
 ### Quantity
