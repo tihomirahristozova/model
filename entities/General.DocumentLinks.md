@@ -7,6 +7,10 @@ uid: General.DocumentLinks
 
 Obsolete. Not used. Entity: Gen_Document_Links
 
+> [!NOTE]  
+> **OBSOLETE! Do not use!**   
+
+
 ## Default Visualization
 Default Display Text Format:  
 _{Id}_  

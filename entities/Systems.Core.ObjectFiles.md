@@ -11,10 +11,6 @@ Contains files attached to objects. Entity: Sys_Object_Files
 Default Display Text Format:  
 _{FileName}_  
 Default Search Members:  
-_PurposeCode; FileName_  
-Code Data Member:  
-_PurposeCode_  
-Name Data Member:  
 _FileName_  
 
 ## Aggregate

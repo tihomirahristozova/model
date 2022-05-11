@@ -7,6 +7,10 @@ uid: Logistics.Inventory.SupplySchemata
 
 Obsolete. Not used. Entity: Inv_Supply_Schemata
 
+> [!NOTE]  
+> **OBSOLETE! Do not use!**   
+
+
 ## Default Visualization
 Default Display Text Format:  
 _{Name}_  

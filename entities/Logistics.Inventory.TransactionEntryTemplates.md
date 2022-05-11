@@ -7,6 +7,10 @@ uid: Logistics.Inventory.TransactionEntryTemplates
 
 Obsolete. Not used. Entity: Inv_Transaction_Entry_Templates
 
+> [!NOTE]  
+> **OBSOLETE! Do not use!**   
+
+
 ## Default Visualization
 Default Display Text Format:  
 _{Id}: {RouteId}_  

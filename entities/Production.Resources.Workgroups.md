@@ -29,7 +29,7 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Active](Production.Resources.Workgroups.md#active) | boolean | Indicates whether the current workgroup is active. `Required` `Default(true)` `Filter(eq)` `Introduced in version 22.1.5.26` 
-| [<s>CostCurrency</s>](Production.Resources.Workgroups.md#costcurrency) | string (3) __nullable__ | **DEPRECATED! Do not use!**  
+| [<s>CostCurrency</s>](Production.Resources.Workgroups.md#costcurrency) | string (3) __nullable__ | **OBSOLETE! Do not use!**  
 | [DisplayText](Production.Resources.Workgroups.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [FullPath](Production.Resources.Workgroups.md#fullpath) | string (254) __nullable__ | The full path to the current node, represented with slash ('/') as leading, trailing and separator character. Example: '/rootnode/subnode/'. `Default("")` 
 | [Id](Production.Resources.Workgroups.md#id) | guid |  
@@ -60,7 +60,7 @@ _Default Value_: **True**
 
 ### CostCurrency
 
-**DEPRECATED! Do not use!**
+**OBSOLETE! Do not use!**
 
 _Type_: **string (3) __nullable__**  
 _Category_: **System**  

@@ -7,6 +7,10 @@ uid: General.DocumentManualDistributedAmounts
 
 Obsolete. Not used. Entity: Gen_Document_Manual_Distributed_Amounts
 
+> [!NOTE]  
+> **OBSOLETE! Do not use!**   
+
+
 ## Default Visualization
 Default Display Text Format:  
 _{Id}: {DocumentId}_  

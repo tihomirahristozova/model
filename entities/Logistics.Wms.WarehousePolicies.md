@@ -11,7 +11,9 @@ Warehouse Policies is a hierarchical system for applying policies to warehouse o
 Default Display Text Format:  
 _{Warehouse.Name:T}_  
 Default Search Members:  
-_Warehouse.Name_  
+_Code; Warehouse.Name_  
+Code Data Member:  
+_Code_  
 Name Data Member:  
 _Warehouse.Name_  
 
@@ -27,6 +29,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [Code](Logistics.Wms.WarehousePolicies.md#code) | string (16) | The unique code of the warehouse policy. `Required` `Introduced in version 22.1.6.60` 
 | [DisplayText](Logistics.Wms.WarehousePolicies.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [FromDate](Logistics.Wms.WarehousePolicies.md#fromdate) | date __nullable__ | When set, specifies the activation date of the policy. `Filter(eq;ge;le)` 
 | [Id](Logistics.Wms.WarehousePolicies.md#id) | guid |  
@@ -49,6 +52,16 @@ Aggregate Root:
 
 
 ## Attribute Details
+
+### Code
+
+The unique code of the warehouse policy. `Required` `Introduced in version 22.1.6.60`
+
+_Type_: **string (16)**  
+_Category_: **System**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **False**  
+_Maximum Length_: **16**  
 
 ### DisplayText
 

@@ -51,7 +51,7 @@ Aggregate Tree
 | [DocumentVersion](Finance.Assets.AssetOrders.md#documentversion) | int32 | Consecutive version number, starting with 1. Each update produces a new version of the document. `Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [EntityName](Finance.Assets.AssetOrders.md#entityname) | string (64) | The entity name of the document header. `Required` `Filter(eq)` `ORD` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [Id](Finance.Assets.AssetOrders.md#id) | guid |  
-| [<s>IsReleased</s>](Finance.Assets.AssetOrders.md#isreleased) | boolean | **DEPRECATED! Do not use!** True if the document is not void and its state is released or greater. Deprecated. `Obsolete` `Required` `Default(false)` `Filter(eq)` `ReadOnly` 
+| [<s>IsReleased</s>](Finance.Assets.AssetOrders.md#isreleased) | boolean | **OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated. `Obsolete` `Required` `Default(false)` `Filter(eq)` `ReadOnly` 
 | [IsSingleExecution](Finance.Assets.AssetOrders.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document. `Required` `Default(false)` `Filter(eq)` `ReadOnly` 
 | [ObjectVersion](Finance.Assets.AssetOrders.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 | [Operation](Finance.Assets.AssetOrders.md#operation) | [Operation](Finance.Assets.AssetOrders.md#operation) | Operation performed with this order: PUR = Purchase, SLS = Sale. `Required` `Filter(multi eq)` 
@@ -239,7 +239,7 @@ _Default Value_: **NewGuid**
 
 ### IsReleased
 
-**DEPRECATED! Do not use!** True if the document is not void and its state is released or greater. Deprecated. `Obsolete` `Required` `Default(false)` `Filter(eq)` `ReadOnly`
+**OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated. `Obsolete` `Required` `Default(false)` `Filter(eq)` `ReadOnly`
 
 _Type_: **boolean**  
 _Category_: **System**  

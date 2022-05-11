@@ -7,6 +7,10 @@ uid: Systems.Security.UserAccessKeys
 
 Obsolete. Not used. Entity: Sec_User_Access_Keys
 
+> [!NOTE]  
+> **OBSOLETE! Do not use!**   
+
+
 ## Default Visualization
 Default Display Text Format:  
 _{User.Name:T}_  

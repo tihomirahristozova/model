@@ -7,6 +7,10 @@ uid: Finance.Accounting.VoucherCorrespondances
 
 Obsolete. Not used. Entity: Acc_Voucher_Correspondances
 
+> [!NOTE]  
+> **OBSOLETE! Do not use!**   
+
+
 ## Default Visualization
 Default Display Text Format:  
 _{Voucher.EntityName}_  

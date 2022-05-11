@@ -7,6 +7,10 @@ uid: General.LinkTypes
 
 Obsolete. Not used. Entity: Gen_Link_Types
 
+> [!NOTE]  
+> **OBSOLETE! Do not use!**   
+
+
 ## Default Visualization
 Default Display Text Format:  
 _{Name}_  

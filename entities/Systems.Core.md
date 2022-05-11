@@ -18,7 +18,6 @@ uid: Systems.Core
 - [ObjectFiles](Systems.Core.ObjectFiles.md)  
 - [ObjectVersions](Systems.Core.ObjectVersions.md)  
 - [ResolvedConflicts](Systems.Core.ResolvedConflicts.md)  
-- [TextTranslations](Systems.Core.TextTranslations.md)  
 - [Translations](Systems.Core.Translations.md)  
 - [UpdateProcedureExecutes](Systems.Core.UpdateProcedureExecutes.md)  
 - [WebHooks](Systems.Core.WebHooks.md)  

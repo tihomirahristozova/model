@@ -178,9 +178,9 @@ Name Data Member:<br>
 <td>The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.</td>
 </tr>
 <tr>
-<td><a href="General.Products.ProductGroups.html#parent"><s>Parent</s></a></td>
+<td><a href="General.Products.ProductGroups.html#parent">Parent</a></td>
 <td>string (254)</td>
-<td><strong>DEPRECATED! Do not use!</strong> Full tree path of the parent group in the form /parent/.../leaf/. Contains the group names. <code>Obsolete</code> <code>Required</code> <code>Default(&quot;/&quot;)</code> <code>Filter(eq)</code> <code>ORD</code></td>
+<td>Full tree path of the parent group in the form /parent/.../leaf/. Contains the group names. <code>Required</code> <code>Default(&quot;/&quot;)</code> <code>Filter(eq)</code> <code>ORD</code></td>
 </tr>
 <tr>
 <td><a href="General.Products.ProductGroups.html#picture">Picture</a></td>
@@ -382,7 +382,7 @@ Allowed values for the <code>ConfiguratorStatus</code>(General.Products.ProductG
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: ****</p>
 <h3 id="parent">Parent</h3>
-<p><strong>DEPRECATED! Do not use!</strong> Full tree path of the parent group in the form /parent/.../leaf/. Contains the group names. <code>Obsolete</code> <code>Required</code> <code>Default(&quot;/&quot;)</code> <code>Filter(eq)</code> <code>ORD</code></p>
+<p>Full tree path of the parent group in the form /parent/.../leaf/. Contains the group names. <code>Required</code> <code>Default(&quot;/&quot;)</code> <code>Filter(eq)</code> <code>ORD</code></p>
 <p><em>Type</em>: <strong>string (254)</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
 <em>Category</em>: <strong>System</strong><br>
@@ -390,6 +390,10 @@ Allowed values for the <code>ConfiguratorStatus</code>(General.Products.ProductG
 <em>Supports Order By</em>: <strong>True</strong><br>
 <em>Maximum Length</em>: <strong>254</strong><br>
 <em>Default Value</em>: <strong>/</strong></p>
+<p><em>Back-End Default Expression:</em><br>
+<code>obj.ParentGroup.FullPath</code></p>
+<p><em>Front-End Recalc Expressions:</em><br>
+<code>obj.ParentGroup.FullPath</code></p>
 <h3 id="picture">Picture</h3>
 <p>The picture of the product group.</p>
 <p><em>Type</em>: <strong>byte[] <strong>nullable</strong></strong><br>
@@ -463,8 +467,11 @@ Allowed values for the <code>UseLots</code>(General.Products.ProductGroups.md#us
 <h3 id="parentgroup">ParentGroup</h3>
 <p>Parent product group. null if this is root group. <code>Filter(multi eq)</code> <code>Introduced in version 22.1.5.98</code></p>
 <p><em>Type</em>: <strong><a href="General.Products.ProductGroups.html">ProductGroups</a> (nullable)</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<p><em>Back-End Default Expression:</em><br>
+<code>obj.Transaction.Query( ).Where( pg =&gt; ( pg.FullPath == obj.Parent)).FirstOrDefault( )</code></p>
 <h3 id="pricingmodel">PricingModel</h3>
 <p>When not null, specifies the pricing model, for the products in this product group. The model is by default valid also for sub-groups, unless they have other models. <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="Crm.Pricing.PricingModels.html">PricingModels</a> (nullable)</strong><br>
@@ -526,7 +533,9 @@ The skip clause - default is 0<br>
 <li><a href="../business-rules/R20400-2.html">R20400-2 ProductGroup - Check Hierarchy For Deactivation</a></li>
 </ul>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>
-<p>None</p>
+<ul>
+<li><a href="../business-rules/R31948.html">R31948 Product Group - Set Parent (Recalc)</a></li>
+</ul>
 <h2 id="api">API</h2>
 <p>Domain API Query:
 <a href="https://demodb.my.erp.net/api/domain/odata/General_Products_ProductGroups?$top=10">https://demodb.my.erp.net/api/domain/odata/General_Products_ProductGroups?$top=10</a></p>

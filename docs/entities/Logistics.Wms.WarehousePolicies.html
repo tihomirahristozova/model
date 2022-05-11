@@ -85,7 +85,9 @@
 <p>Default Display Text Format:<br>
 <em>{Warehouse.Name:T}</em><br>
 Default Search Members:<br>
-<em>Warehouse.Name</em><br>
+<em>Code; Warehouse.Name</em><br>
+Code Data Member:<br>
+<em>Code</em><br>
 Name Data Member:<br>
 <em>Warehouse.Name</em></p>
 <h2 id="aggregate">Aggregate</h2>
@@ -104,6 +106,11 @@ Aggregate Root:<br>
 </tr>
 </thead>
 <tbody>
+<tr>
+<td><a href="Logistics.Wms.WarehousePolicies.html#code">Code</a></td>
+<td>string (16)</td>
+<td>The unique code of the warehouse policy. <code>Required</code> <code>Introduced in version 22.1.6.60</code></td>
+</tr>
 <tr>
 <td><a href="Logistics.Wms.WarehousePolicies.html#displaytext">DisplayText</a></td>
 <td>string</td>
@@ -189,6 +196,13 @@ Aggregate Root:<br>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
+<h3 id="code">Code</h3>
+<p>The unique code of the warehouse policy. <code>Required</code> <code>Introduced in version 22.1.6.60</code></p>
+<p><em>Type</em>: <strong>string (16)</strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>16</strong></p>
 <h3 id="displaytext">DisplayText</h3>
 <p>Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.</p>
 <p><em>Type</em>: <strong>string</strong><br>
