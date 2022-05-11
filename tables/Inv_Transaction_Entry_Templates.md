@@ -1,6 +1,10 @@
 # Table Inv_Transaction_Entry_Templates
 
 
+> [!NOTE]  
+> **OBSOLETE! Do not use!**  
+
+
 ## Entity
 
 Entity: [Logistics.Inventory.TransactionEntryTemplates](~/entities/Logistics.Inventory.TransactionEntryTemplates.md)

@@ -424,7 +424,7 @@ Full tree path of the parent group in the form /parent/.../leaf/. Contains the g
 |Auto Complete|no|
 |Data Filter|no|
 |Default Value|/|
-|Enter Stop|yes|
+|Enter Stop|no|
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|254|
@@ -440,9 +440,9 @@ Full tree path of the parent group in the form /parent/.../leaf/. Contains the g
 |Supports EQUALS_IN|no|
 |Type|nvarchar(254)|
 |UI Memo Editor|no|
-|UI Width|Medium|
+|UI Width|100|
 |User Login|no|
-|Visible|no|
+|Visible|yes|
 
 #### Parent - Supported Filters
 

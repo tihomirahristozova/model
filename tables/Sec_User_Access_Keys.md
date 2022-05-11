@@ -1,6 +1,10 @@
 # Table Sec_User_Access_Keys
 
 
+> [!NOTE]  
+> **OBSOLETE! Do not use!**  
+
+
 ## Entity
 
 Entity: [Systems.Security.UserAccessKeys](~/entities/Systems.Security.UserAccessKeys.md)

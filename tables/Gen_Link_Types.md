@@ -1,6 +1,10 @@
 # Table Gen_Link_Types
 
 
+> [!NOTE]  
+> **OBSOLETE! Do not use!**  
+
+
 ## Entity
 
 Entity: [General.LinkTypes](~/entities/General.LinkTypes.md)

@@ -1,6 +1,10 @@
 # Table Gen_Document_Manual_Distributed_Amounts
 
 
+> [!NOTE]  
+> **OBSOLETE! Do not use!**  
+
+
 ## Entity
 
 Entity: [General.DocumentManualDistributedAmounts](~/entities/General.DocumentManualDistributedAmounts.md)

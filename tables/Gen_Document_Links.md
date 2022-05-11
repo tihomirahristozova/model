@@ -1,6 +1,10 @@
 # Table Gen_Document_Links
 
 
+> [!NOTE]  
+> **OBSOLETE! Do not use!**  
+
+
 ## Entity
 
 Entity: [General.DocumentLinks](~/entities/General.DocumentLinks.md)

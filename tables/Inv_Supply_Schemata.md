@@ -1,6 +1,10 @@
 # Table Inv_Supply_Schemata
 
 
+> [!NOTE]  
+> **OBSOLETE! Do not use!**  
+
+
 ## Entity
 
 Entity: [Logistics.Inventory.SupplySchemata](~/entities/Logistics.Inventory.SupplySchemata.md)

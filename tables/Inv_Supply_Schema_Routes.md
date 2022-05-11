@@ -1,6 +1,10 @@
 # Table Inv_Supply_Schema_Routes
 
 
+> [!NOTE]  
+> **OBSOLETE! Do not use!**  
+
+
 ## Entity
 
 Entity: [Logistics.Inventory.SupplySchemaRoutes](~/entities/Logistics.Inventory.SupplySchemaRoutes.md)

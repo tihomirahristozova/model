@@ -1,6 +1,10 @@
 # Table Exc_Excise_Operation_Types
 
 
+> [!NOTE]  
+> **OBSOLETE! Do not use!**  
+
+
 ## Entity
 
 Entity: [Finance.Excise.ExciseOperationTypes](~/entities/Finance.Excise.ExciseOperationTypes.md)

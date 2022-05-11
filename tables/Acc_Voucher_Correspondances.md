@@ -1,6 +1,10 @@
 # Table Acc_Voucher_Correspondances
 
 
+> [!NOTE]  
+> **OBSOLETE! Do not use!**  
+
+
 ## Entity
 
 Entity: [Finance.Accounting.VoucherCorrespondances](~/entities/Finance.Accounting.VoucherCorrespondances.md)
