@@ -925,16 +925,12 @@
       href: Logistics.Wms.WarehouseAvailabilityView.md
     - name: WarehouseLocations
       href: Logistics.Wms.WarehouseLocations.md
-    - name: WarehouseOrderFulfillments
-      href: Logistics.Wms.WarehouseOrderFulfillments.md
     - name: WarehouseOrderLines
       href: Logistics.Wms.WarehouseOrderLines.md
     - name: WarehouseOrders
       href: Logistics.Wms.WarehouseOrders.md
     - name: WarehousePolicies
       href: Logistics.Wms.WarehousePolicies.md
-    - name: WarehouseRequisitionFulfillments
-      href: Logistics.Wms.WarehouseRequisitionFulfillments.md
     - name: WarehouseRequisitionLines
       href: Logistics.Wms.WarehouseRequisitionLines.md
     - name: WarehouseRequisitions

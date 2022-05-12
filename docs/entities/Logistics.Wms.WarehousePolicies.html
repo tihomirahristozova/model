@@ -83,7 +83,7 @@
 <p>Warehouse Policies is a hierarchical system for applying policies to warehouse operations. Entity: Wms_Warehouse_Policies (Introduced in version 22.1.4.23)</p>
 <h2 id="default-visualization">Default Visualization</h2>
 <p>Default Display Text Format:<br>
-<em>{Warehouse.Name:T}</em><br>
+<em>{Warehouse} {Code}</em><br>
 Default Search Members:<br>
 <em>Code; Warehouse.Name</em><br>
 Code Data Member:<br>
@@ -203,6 +203,8 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Maximum Length</em>: <strong>16</strong></p>
+<p><em>Back-End Default Expression:</em><br>
+<code>obj.GetNextDefaultCode( )</code></p>
 <h3 id="displaytext">DisplayText</h3>
 <p>Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.</p>
 <p><em>Type</em>: <strong>string</strong><br>

@@ -5,7 +5,7 @@ uid: General.LinkTypes
 
 **Namespace:** [General](General.md)  
 
-Obsolete. Not used. Entity: Gen_Link_Types
+Obsolete. Not used. Entity: Gen_Link_Types (Obsoleted in version 22.1.6.60)
 
 > [!NOTE]  
 > **OBSOLETE! Do not use!**   

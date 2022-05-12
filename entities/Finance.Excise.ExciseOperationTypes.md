@@ -5,7 +5,7 @@ uid: Finance.Excise.ExciseOperationTypes
 
 **Namespace:** [Finance.Excise](Finance.Excise.md)  
 
-Obsolete. Not used. (Types of excise operations. Used by general documents to specify the operation type according to the excise classifications.). Entity: Exc_Excise_Operation_Types (Introduced in version 21.1.1.59)
+Obsolete. Not used. (Types of excise operations. Used by general documents to specify the operation type according to the excise classifications.). Entity: Exc_Excise_Operation_Types (Introduced in version 21.1.1.59) (Obsoleted in version 22.1.6.60)
 
 > [!NOTE]  
 > **OBSOLETE! Do not use!**   

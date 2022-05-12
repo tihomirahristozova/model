@@ -5,7 +5,7 @@ uid: Logistics.Inventory.TransactionEntryTemplates
 
 **Namespace:** [Logistics.Inventory](Logistics.Inventory.md)  
 
-Obsolete. Not used. Entity: Inv_Transaction_Entry_Templates
+Obsolete. Not used. Entity: Inv_Transaction_Entry_Templates (Obsoleted in version 22.1.6.60)
 
 > [!NOTE]  
 > **OBSOLETE! Do not use!**   

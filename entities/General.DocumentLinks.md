@@ -5,7 +5,7 @@ uid: General.DocumentLinks
 
 **Namespace:** [General](General.md)  
 
-Obsolete. Not used. Entity: Gen_Document_Links
+Obsolete. Not used. Entity: Gen_Document_Links (Obsoleted in version 22.1.6.60)
 
 > [!NOTE]  
 > **OBSOLETE! Do not use!**   

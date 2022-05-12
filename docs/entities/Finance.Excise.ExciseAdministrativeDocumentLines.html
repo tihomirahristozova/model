@@ -261,7 +261,7 @@ Aggregate Root:<br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>0</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
-<code>IIF( ( obj.CalculateExciseAmountBase( obj.ExciseProduct, obj.QuantityBase, obj.ExciseAlcoholicStrength) == null), Convert( obj.ExciseAmountBase, Nullable</code>1), obj.CalculateExciseAmountBase( obj.ExciseProduct, obj.QuantityBase, obj.ExciseAlcoholicStrength))`</p>
+<code>IIF( ( obj.CalculateExciseAmountBase( obj.ExciseProduct, obj.ExciseQuantity, obj.ExciseAlcoholicStrength) == null), Convert( obj.ExciseAmountBase, Nullable</code>1), obj.CalculateExciseAmountBase( obj.ExciseProduct, obj.ExciseQuantity, obj.ExciseAlcoholicStrength))`</p>
 <h3 id="excisedutyratevalue">ExciseDutyRateValue</h3>
 <p>The rate which should be applied for the specified product and purpose. null means not assigned yet. <code>Introduced in version 21.1.3.97</code></p>
 <p><em>Type</em>: <strong>decimal (10, 6) <strong>nullable</strong></strong><br>
@@ -276,6 +276,8 @@ Aggregate Root:<br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
+<p><em>Front-End Recalc Expressions:</em><br>
+<code>obj.QuantityBase.ConvertTo( obj.ExciseQuantityUnit, obj.Product)</code></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
@@ -364,6 +366,8 @@ Aggregate Root:<br>
 <p><em>Type</em>: <strong><a href="General.MeasurementUnits.html">MeasurementUnits</a></strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<p><em>Front-End Recalc Expressions:</em><br>
+<code>obj.Product.ExciseProductType.MeasurementUnit</code></p>
 <h3 id="measuringtransaction">MeasuringTransaction</h3>
 <p>Transaction of product input or output, measured with specialized measuring device for excise purposes. <code>Filter(multi eq)</code> <code>Introduced in version 21.1.3.87</code></p>
 <p><em>Type</em>: <strong><a href="Finance.Excise.MeasuringTransactions.html">MeasuringTransactions</a> (nullable)</strong><br>
@@ -443,6 +447,8 @@ The skip clause - default is 0<br>
 <li><a href="../business-rules/R32442.html">R32442 Excise Administrative Document Line - Set Excise Alcoholic Strength (Recalc)</a></li>
 <li><a href="../business-rules/R32453.html">R32453 Excise Administrative Document Line - Set Excise Product (Recalc)</a></li>
 <li><a href="../business-rules/R32545.html">R32545 Excise Administrative Document Line - Set Excise Purpose Code (Recalc)</a></li>
+<li><a href="../business-rules/R33272.html">R33272 Excise Administrative Document Line - Set Excise Quantity Unit (Recalc)</a></li>
+<li><a href="../business-rules/R33274.html">R33274 Excise Administrative Document Line - Set Excise Quantity (Recalc)</a></li>
 </ul>
 <h2 id="api">API</h2>
 <p>Domain API Query:

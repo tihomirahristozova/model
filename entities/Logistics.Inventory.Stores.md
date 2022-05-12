@@ -37,7 +37,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [<s>Active</s>](Logistics.Inventory.Stores.md#active) | boolean __nullable__ | **OBSOLETE! Do not use!** Obsolete - Use Gen_Parties.Is_Active. `Obsolete` 
+| [<s>Active</s>](Logistics.Inventory.Stores.md#active) | boolean __nullable__ | **OBSOLETE! Do not use!** Obsolete - Use Gen_Parties.Is_Active. `Obsolete` `Obsoleted in version 22.1.6.61` 
 | [Code](Logistics.Inventory.Stores.md#code) | string (16) | The unique code of the Store. `Required` `Filter(eq;like)` `ORD` 
 | [CreationTime](Logistics.Inventory.Stores.md#creationtime) | datetime __nullable__ | Date and time when the Store was created. `Filter(ge;le)` `ReadOnly` 
 | [CreationUser](Logistics.Inventory.Stores.md#creationuser) | string (64) __nullable__ | Login name of the user, who created the Store. `Filter(like)` `ReadOnly` 
@@ -101,7 +101,7 @@ Aggregate Tree
 
 ### Active
 
-**OBSOLETE! Do not use!** Obsolete - Use Gen_Parties.Is_Active. `Obsolete`
+**OBSOLETE! Do not use!** Obsolete - Use Gen_Parties.Is_Active. `Obsolete` `Obsoleted in version 22.1.6.61`
 
 _Type_: **boolean __nullable__**  
 _Category_: **System**  

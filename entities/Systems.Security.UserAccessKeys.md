@@ -5,7 +5,7 @@ uid: Systems.Security.UserAccessKeys
 
 **Namespace:** [Systems.Security](Systems.Security.md)  
 
-Obsolete. Not used. Entity: Sec_User_Access_Keys
+Obsolete. Not used. Entity: Sec_User_Access_Keys (Obsoleted in version 22.1.6.60)
 
 > [!NOTE]  
 > **OBSOLETE! Do not use!**   

@@ -342,6 +342,8 @@ Allowed values for the <code>ConfiguratorStatus</code>(General.Products.ProductG
 <em>Supports Order By</em>: <strong>True</strong><br>
 <em>Maximum Length</em>: <strong>254</strong><br>
 <em>Default Value</em>: ****</p>
+<p><em>Front-End Recalc Expressions:</em><br>
+<code>Format( &quot;{0}{1}/&quot;, IIF( ( obj.ParentGroup != null), obj.ParentGroup.FullPath, &quot;/&quot;), obj.Code)</code></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>
@@ -391,9 +393,9 @@ Allowed values for the <code>ConfiguratorStatus</code>(General.Products.ProductG
 <em>Maximum Length</em>: <strong>254</strong><br>
 <em>Default Value</em>: <strong>/</strong></p>
 <p><em>Back-End Default Expression:</em><br>
-<code>obj.ParentGroup.FullPath</code></p>
+<code>IIF( ( obj.ParentGroup != null), obj.ParentGroup.FullPath, &quot;/&quot;)</code></p>
 <p><em>Front-End Recalc Expressions:</em><br>
-<code>obj.ParentGroup.FullPath</code></p>
+<code>IIF( ( obj.ParentGroup != null), obj.ParentGroup.FullPath, &quot;/&quot;)</code></p>
 <h3 id="picture">Picture</h3>
 <p>The picture of the product group.</p>
 <p><em>Type</em>: <strong>byte[] <strong>nullable</strong></strong><br>

@@ -9,7 +9,7 @@
 
 Entity: [Logistics.Inventory.SupplySchemata](~/entities/Logistics.Inventory.SupplySchemata.md)
 
-Obsolete. Not used. Entity: Inv_Supply_Schemata
+Obsolete. Not used. Entity: Inv_Supply_Schemata (Obsoleted in version 22.1.6.60)
 
 ## Summary
 

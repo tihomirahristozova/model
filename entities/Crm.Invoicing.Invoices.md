@@ -58,7 +58,7 @@ Aggregate Tree
 | [Id](Crm.Invoicing.Invoices.md#id) | guid |  
 | [IntrastatTransaction<br />NatureCode](Crm.Invoicing.Invoices.md#intrastattransactionnaturecode) | [TransactionNature](Crm.Invoicing.Invoices.md#intrastattransactionnaturecode) __nullable__ | Transaction nature; used for Intrastat reporting. 
 | [IntrastatTransportModeCode](Crm.Invoicing.Invoices.md#intrastattransportmodecode) | [TransportMode](Crm.Invoicing.Invoices.md#intrastattransportmodecode) __nullable__ | Transport mode; used for Intrastat reporting. 
-| [<s>IsReleased</s>](Crm.Invoicing.Invoices.md#isreleased) | boolean | **OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated. `Obsolete` `Required` `Default(false)` `Filter(eq)` `ReadOnly` 
+| [<s>IsReleased</s>](Crm.Invoicing.Invoices.md#isreleased) | boolean | **OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated. `Obsolete` `Required` `Default(false)` `Filter(eq)` `ReadOnly` `Obsoleted in version 22.1.6.61` 
 | [IsSingleExecution](Crm.Invoicing.Invoices.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document. `Required` `Default(false)` `Filter(eq)` `ReadOnly` 
 | [IsValidField](Crm.Invoicing.Invoices.md#isvalidfield) | boolean | Used for internal purposes. true when the invoice is valid (released and not void) for summing. `Required` `Default(false)` `ReadOnly` 
 | [Notes](Crm.Invoicing.Invoices.md#notes) | string (254) __nullable__ | Notes for this Invoice. 
@@ -389,7 +389,7 @@ _Front-End Recalc Expressions:_
 `obj.Lines.Select( c => InvoiceLinesRepository.IntrastatTransportModeCodeAttribute.GetUntypedValue( c, False)).Distinct( ).OnlyIfSingle( )`
 ### IsReleased
 
-**OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated. `Obsolete` `Required` `Default(false)` `Filter(eq)` `ReadOnly`
+**OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated. `Obsolete` `Required` `Default(false)` `Filter(eq)` `ReadOnly` `Obsoleted in version 22.1.6.61`
 
 _Type_: **boolean**  
 _Category_: **System**  

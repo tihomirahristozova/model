@@ -143,6 +143,8 @@ _Supports Order By_: **True**
 _Maximum Length_: **254**  
 _Default Value_: ****  
 
+_Front-End Recalc Expressions:_  
+`Format( "{0}{1}/", IIF( ( obj.ParentGroup != null), obj.ParentGroup.FullPath, "/"), obj.Code)`
 ### Id
 
 _Type_: **guid**  
@@ -212,10 +214,10 @@ _Maximum Length_: **254**
 _Default Value_: **/**  
 
 _Back-End Default Expression:_  
-`obj.ParentGroup.FullPath`
+`IIF( ( obj.ParentGroup != null), obj.ParentGroup.FullPath, "/")`
 
 _Front-End Recalc Expressions:_  
-`obj.ParentGroup.FullPath`
+`IIF( ( obj.ParentGroup != null), obj.ParentGroup.FullPath, "/")`
 ### Picture
 
 The picture of the product group.

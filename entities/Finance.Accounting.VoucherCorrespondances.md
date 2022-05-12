@@ -5,7 +5,7 @@ uid: Finance.Accounting.VoucherCorrespondances
 
 **Namespace:** [Finance.Accounting](Finance.Accounting.md)  
 
-Obsolete. Not used. Entity: Acc_Voucher_Correspondances
+Obsolete. Not used. Entity: Acc_Voucher_Correspondances (Obsoleted in version 22.1.6.60)
 
 > [!NOTE]  
 > **OBSOLETE! Do not use!**   

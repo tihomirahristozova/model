@@ -9,7 +9,7 @@
 
 Entity: [Logistics.Inventory.TransactionEntryTemplates](~/entities/Logistics.Inventory.TransactionEntryTemplates.md)
 
-Obsolete. Not used. Entity: Inv_Transaction_Entry_Templates
+Obsolete. Not used. Entity: Inv_Transaction_Entry_Templates (Obsoleted in version 22.1.6.60)
 
 ## Summary
 

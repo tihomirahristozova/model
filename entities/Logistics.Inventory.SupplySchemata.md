@@ -5,7 +5,7 @@ uid: Logistics.Inventory.SupplySchemata
 
 **Namespace:** [Logistics.Inventory](Logistics.Inventory.md)  
 
-Obsolete. Not used. Entity: Inv_Supply_Schemata
+Obsolete. Not used. Entity: Inv_Supply_Schemata (Obsoleted in version 22.1.6.60)
 
 > [!NOTE]  
 > **OBSOLETE! Do not use!**   

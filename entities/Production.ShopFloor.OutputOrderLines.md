@@ -25,7 +25,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [<s>BeginDateTime</s>](Production.ShopFloor.OutputOrderLines.md#begindatetime) | datetime __nullable__ | **OBSOLETE! Do not use!** Not used. `Obsolete` 
+| [<s>BeginDateTime</s>](Production.ShopFloor.OutputOrderLines.md#begindatetime) | datetime __nullable__ | **OBSOLETE! Do not use!** Not used. `Obsolete` `Obsoleted in version 22.1.6.61` 
 | [DisplayText](Production.ShopFloor.OutputOrderLines.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [EndTime](Production.ShopFloor.OutputOrderLines.md#endtime) | datetime | Date and time when the operation has ended. `Required` `Default(Now)` `Filter(ge;le)` 
 | [Finished](Production.ShopFloor.OutputOrderLines.md#finished) | boolean | True if this output entry completes the operation. false if there might be more entries. `Required` `Default(false)` `Filter(eq)` 
@@ -69,7 +69,7 @@ Aggregate Root:
 
 ### BeginDateTime
 
-**OBSOLETE! Do not use!** Not used. `Obsolete`
+**OBSOLETE! Do not use!** Not used. `Obsolete` `Obsoleted in version 22.1.6.61`
 
 _Type_: **datetime __nullable__**  
 _Category_: **System**  

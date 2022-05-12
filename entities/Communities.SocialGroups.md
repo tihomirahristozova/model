@@ -31,6 +31,7 @@ Aggregate Tree
 | [Code](Communities.SocialGroups.md#code) | string (32) | Unique code of the group. Also used as group slug for Internet URL purposes. `Required` `ORD` 
 | [DisplayText](Communities.SocialGroups.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [Id](Communities.SocialGroups.md#id) | guid |  
+| [LastInteractionTimeUtc](Communities.SocialGroups.md#lastinteractiontimeutc) | datetime __nullable__ | The time (in UTC) of the last interaction of any kind (comment, reaction, etc.) in the group. null means the group did not have any interactions yet. `ORD` 
 | [Name](Communities.SocialGroups.md#name) | string (256) | Multilanguage name of the group. `Required` 
 | [Notes](Communities.SocialGroups.md#notes) | string (max) __nullable__ | Notes for this SocialGroup. 
 | [ObjectVersion](Communities.SocialGroups.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
@@ -71,6 +72,16 @@ _Indexed_: **True**
 _Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
+
+### LastInteractionTimeUtc
+
+The time (in UTC) of the last interaction of any kind (comment, reaction, etc.) in the group. null means the group did not have any interactions yet. `ORD`
+
+_Type_: **datetime __nullable__**  
+_Indexed_: **True**  
+_Category_: **System**  
+_Supported Filters_: **NotFilterable**  
+_Supports Order By_: **True**  
 
 ### Name
 

@@ -51,7 +51,7 @@ Aggregate Tree
 | [DocumentVersion](Production.ShopFloor.ConsumptionOrders.md#documentversion) | int32 | Consecutive version number, starting with 1. Each update produces a new version of the document. `Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [EntityName](Production.ShopFloor.ConsumptionOrders.md#entityname) | string (64) | The entity name of the document header. `Required` `Filter(eq)` `ORD` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [Id](Production.ShopFloor.ConsumptionOrders.md#id) | guid |  
-| [<s>IsReleased</s>](Production.ShopFloor.ConsumptionOrders.md#isreleased) | boolean | **OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated. `Obsolete` `Required` `Default(false)` `Filter(eq)` `ReadOnly` 
+| [<s>IsReleased</s>](Production.ShopFloor.ConsumptionOrders.md#isreleased) | boolean | **OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated. `Obsolete` `Required` `Default(false)` `Filter(eq)` `ReadOnly` `Obsoleted in version 22.1.6.61` 
 | [IsSingleExecution](Production.ShopFloor.ConsumptionOrders.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document. `Required` `Default(false)` `Filter(eq)` `ReadOnly` 
 | [ObjectVersion](Production.ShopFloor.ConsumptionOrders.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 | [ParentDocument<br />RelationshipType](Production.ShopFloor.ConsumptionOrders.md#parentdocumentrelationshiptype) | [ParentDocument<br />RelationshipType](Production.ShopFloor.ConsumptionOrders.md#parentdocumentrelationshiptype) __nullable__ | Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
@@ -61,7 +61,7 @@ Aggregate Tree
 | [ReferenceDocumentNo](Production.ShopFloor.ConsumptionOrders.md#referencedocumentno) | string (20) __nullable__ | The number of the document (issued by the other party), which was the reason for the creation of the current document. The numebr should be unique within the party documents. `Filter(eq;like)` (Inherited from [Documents](General.Documents.md)) 
 | [ReleaseTime](Production.ShopFloor.ConsumptionOrders.md#releasetime) | datetime __nullable__ | Date and time when the document was released (State set to Released). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [State](Production.ShopFloor.ConsumptionOrders.md#state) | [DocumentState](Production.ShopFloor.ConsumptionOrders.md#state) | The current system state of the document. Allowed values: 0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed. `Required` `Default(0)` `Filter(multi eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
-| [<s>Status</s>](Production.ShopFloor.ConsumptionOrders.md#status) | string (1) | **OBSOLETE! Do not use!** N=New,P=Planned, F=Firm planned, R=Released(WIP), C=Completed. `Obsolete` `Required` `Default("N")` `Filter(eq)` 
+| [<s>Status</s>](Production.ShopFloor.ConsumptionOrders.md#status) | string (1) | **OBSOLETE! Do not use!** N=New,P=Planned, F=Firm planned, R=Released(WIP), C=Completed. `Obsolete` `Required` `Default("N")` `Filter(eq)` `Obsoleted in version 22.1.6.61` 
 | [Void](Production.ShopFloor.ConsumptionOrders.md#void) | boolean | True if the document is null and void. `Required` `Default(false)` `Filter(eq)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [VoidReason](Production.ShopFloor.ConsumptionOrders.md#voidreason) | string (254) __nullable__ | Reason for voiding the document, entered by the user. `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [VoidTime](Production.ShopFloor.ConsumptionOrders.md#voidtime) | datetime __nullable__ | Date/time when the document has become void. `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
@@ -242,7 +242,7 @@ _Default Value_: **NewGuid**
 
 ### IsReleased
 
-**OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated. `Obsolete` `Required` `Default(false)` `Filter(eq)` `ReadOnly`
+**OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated. `Obsolete` `Required` `Default(false)` `Filter(eq)` `ReadOnly` `Obsoleted in version 22.1.6.61`
 
 _Type_: **boolean**  
 _Category_: **System**  
@@ -361,7 +361,7 @@ _Default Value_: **0**
 
 ### Status
 
-**OBSOLETE! Do not use!** N=New,P=Planned, F=Firm planned, R=Released(WIP), C=Completed. `Obsolete` `Required` `Default("N")` `Filter(eq)`
+**OBSOLETE! Do not use!** N=New,P=Planned, F=Firm planned, R=Released(WIP), C=Completed. `Obsolete` `Required` `Default("N")` `Filter(eq)` `Obsoleted in version 22.1.6.61`
 
 _Type_: **string (1)**  
 _Category_: **System**  

@@ -96,7 +96,7 @@ _Supports Order By_: **False**
 _Default Value_: **0**  
 
 _Front-End Recalc Expressions:_  
-`IIF( ( obj.CalculateExciseAmountBase( obj.ExciseProduct, obj.QuantityBase, obj.ExciseAlcoholicStrength) == null), Convert( obj.ExciseAmountBase, Nullable`1), obj.CalculateExciseAmountBase( obj.ExciseProduct, obj.QuantityBase, obj.ExciseAlcoholicStrength))`
+`IIF( ( obj.CalculateExciseAmountBase( obj.ExciseProduct, obj.ExciseQuantity, obj.ExciseAlcoholicStrength) == null), Convert( obj.ExciseAmountBase, Nullable`1), obj.CalculateExciseAmountBase( obj.ExciseProduct, obj.ExciseQuantity, obj.ExciseAlcoholicStrength))`
 ### ExciseDutyRateValue
 
 The rate which should be applied for the specified product and purpose. null means not assigned yet. `Introduced in version 21.1.3.97`
@@ -117,6 +117,8 @@ _Category_: **System**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 
+_Front-End Recalc Expressions:_  
+`obj.QuantityBase.ConvertTo( obj.ExciseQuantityUnit, obj.Product)`
 ### Id
 
 _Type_: **guid**  
@@ -246,6 +248,8 @@ _Type_: **[MeasurementUnits](General.MeasurementUnits.md)**
 _Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
+_Front-End Recalc Expressions:_  
+`obj.Product.ExciseProductType.MeasurementUnit`
 ### MeasuringTransaction
 
 Transaction of product input or output, measured with specialized measuring device for excise purposes. `Filter(multi eq)` `Introduced in version 21.1.3.87`

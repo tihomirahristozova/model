@@ -32,7 +32,7 @@ Aggregate Root:
 | [EntityItemId](Systems.Core.ObjectChanges.md#entityitemid) | guid | The id of the actual changed object, described by this change. This is different than the aggregate root, which is pointed by Root Object. `Required` `Filter(multi eq)` 
 | [Id](Systems.Core.ObjectChanges.md#id) | guid |  
 | [ObjectVersion](Systems.Core.ObjectChanges.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [<s>OldValuesJson</s>](Systems.Core.ObjectChanges.md#oldvaluesjson) | string (max) __nullable__ | **OBSOLETE! Do not use!** Old values in a name-value Json format. Only changed data attributes are recorded. Old values are recorded for update and delete. `Obsolete` 
+| [<s>OldValuesJson</s>](Systems.Core.ObjectChanges.md#oldvaluesjson) | string (max) __nullable__ | **OBSOLETE! Do not use!** Old values in a name-value Json format. Only changed data attributes are recorded. Old values are recorded for update and delete. `Obsolete` `Obsoleted in version 22.1.6.61` 
 | [RepositoryName](Systems.Core.ObjectChanges.md#repositoryname) | string (64) | The repository of the actual changed object, described by this change. This is different than the aggregate root, which is pointed by Root Object. `Required` `Filter(multi eq;like)` 
 
 ## References
@@ -100,7 +100,7 @@ _Supports Order By_: ****
 
 ### OldValuesJson
 
-**OBSOLETE! Do not use!** Old values in a name-value Json format. Only changed data attributes are recorded. Old values are recorded for update and delete. `Obsolete`
+**OBSOLETE! Do not use!** Old values in a name-value Json format. Only changed data attributes are recorded. Old values are recorded for update and delete. `Obsolete` `Obsoleted in version 22.1.6.61`
 
 _Type_: **string (max) __nullable__**  
 _Category_: **System**  

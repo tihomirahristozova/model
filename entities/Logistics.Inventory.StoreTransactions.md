@@ -53,7 +53,7 @@ Aggregate Tree
 | [DocumentVersion](Logistics.Inventory.StoreTransactions.md#documentversion) | int32 | Consecutive version number, starting with 1. Each update produces a new version of the document. `Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [EntityName](Logistics.Inventory.StoreTransactions.md#entityname) | string (64) | The entity name of the document header. `Required` `Filter(eq)` `ORD` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [Id](Logistics.Inventory.StoreTransactions.md#id) | guid |  
-| [<s>IsReleased</s>](Logistics.Inventory.StoreTransactions.md#isreleased) | boolean | **OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated. `Obsolete` `Required` `Default(false)` `Filter(eq)` `ReadOnly` 
+| [<s>IsReleased</s>](Logistics.Inventory.StoreTransactions.md#isreleased) | boolean | **OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated. `Obsolete` `Required` `Default(false)` `Filter(eq)` `ReadOnly` `Obsoleted in version 22.1.6.61` 
 | [IsScrap](Logistics.Inventory.StoreTransactions.md#isscrap) | boolean | False=Non-scrap; true=Scrap operation. Only store issue operations can be scrap. `Required` `Default(false)` `Filter(eq)` 
 | [IsSingleExecution](Logistics.Inventory.StoreTransactions.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document. `Required` `Default(false)` `Filter(eq)` `ReadOnly` 
 | [IsValidField](Logistics.Inventory.StoreTransactions.md#isvalidfield) | boolean | Managed by the system and used only for integrity purposes. Do not use. `Required` `Default(false)` `ReadOnly` 
@@ -266,7 +266,7 @@ _Default Value_: **NewGuid**
 
 ### IsReleased
 
-**OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated. `Obsolete` `Required` `Default(false)` `Filter(eq)` `ReadOnly`
+**OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated. `Obsolete` `Required` `Default(false)` `Filter(eq)` `ReadOnly` `Obsoleted in version 22.1.6.61`
 
 _Type_: **boolean**  
 _Category_: **System**  

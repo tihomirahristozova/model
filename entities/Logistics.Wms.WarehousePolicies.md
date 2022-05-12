@@ -9,7 +9,7 @@ Warehouse Policies is a hierarchical system for applying policies to warehouse o
 
 ## Default Visualization
 Default Display Text Format:  
-_{Warehouse.Name:T}_  
+_{Warehouse} {Code}_  
 Default Search Members:  
 _Code; Warehouse.Name_  
 Code Data Member:  
@@ -62,6 +62,9 @@ _Category_: **System**
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: **False**  
 _Maximum Length_: **16**  
+
+_Back-End Default Expression:_  
+`obj.GetNextDefaultCode( )`
 
 ### DisplayText
 

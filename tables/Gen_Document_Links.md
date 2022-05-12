@@ -9,7 +9,7 @@
 
 Entity: [General.DocumentLinks](~/entities/General.DocumentLinks.md)
 
-Obsolete. Not used. Entity: Gen_Document_Links
+Obsolete. Not used. Entity: Gen_Document_Links (Obsoleted in version 22.1.6.60)
 
 ## Summary
 

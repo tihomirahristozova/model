@@ -5,7 +5,7 @@ uid: General.DocumentManualDistributedAmounts
 
 **Namespace:** [General](General.md)  
 
-Obsolete. Not used. Entity: Gen_Document_Manual_Distributed_Amounts
+Obsolete. Not used. Entity: Gen_Document_Manual_Distributed_Amounts (Obsoleted in version 22.1.6.60)
 
 > [!NOTE]  
 > **OBSOLETE! Do not use!**   

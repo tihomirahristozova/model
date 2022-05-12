@@ -52,7 +52,7 @@ Aggregate Tree
 | [EntityName](General.CurrencyDirectories.md#entityname) | string (64) | The entity name of the document header. `Required` `Filter(eq)` `ORD` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [Id](General.CurrencyDirectories.md#id) | guid |  
 | [IsDefault](General.CurrencyDirectories.md#isdefault) | boolean | Specifies that this currency directory is set by default in new documents. When there are more than one default directory, the last default directory is used. `Required` `Default(true)` `Filter(eq)` 
-| [<s>IsReleased</s>](General.CurrencyDirectories.md#isreleased) | boolean | **OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated. `Obsolete` `Required` `Default(false)` `Filter(eq)` `ReadOnly` 
+| [<s>IsReleased</s>](General.CurrencyDirectories.md#isreleased) | boolean | **OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated. `Obsolete` `Required` `Default(false)` `Filter(eq)` `ReadOnly` `Obsoleted in version 22.1.6.61` 
 | [IsSingleExecution](General.CurrencyDirectories.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document. `Required` `Default(false)` `Filter(eq)` `ReadOnly` 
 | [IsValidField](General.CurrencyDirectories.md#isvalidfield) | boolean | Shows if the current currency directory is valid to be used in documents. `Required` `Default(true)` `Filter(eq)` 
 | [Name](General.CurrencyDirectories.md#name) | string (64) | The name of the currency directory, used to distinguish it from the other directories on the same date. `Required` `Filter(like)` 
@@ -252,7 +252,7 @@ _Default Value_: **True**
 
 ### IsReleased
 
-**OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated. `Obsolete` `Required` `Default(false)` `Filter(eq)` `ReadOnly`
+**OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated. `Obsolete` `Required` `Default(false)` `Filter(eq)` `ReadOnly` `Obsoleted in version 22.1.6.61`
 
 _Type_: **boolean**  
 _Category_: **System**  
