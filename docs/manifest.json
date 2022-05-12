@@ -338,6 +338,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "business-rules/R20971-1.1.1.md",
+      "output": {
+        ".html": {
+          "relative_path": "business-rules/R20971-1.1.1.html",
+          "hash": "ItKQYZkwnKHGVMwELsKZPQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "business-rules/R20971-1.1.md",
       "output": {
         ".html": {
@@ -15184,7 +15196,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Logistics.Procurement.PurchaseOrderLines.html",
-          "hash": "a/6rX4Jb9jS++adjfs1zBg=="
+          "hash": "VtRFQmyHb1mGkUpPddWQjg=="
         }
       },
       "is_incremental": false,
