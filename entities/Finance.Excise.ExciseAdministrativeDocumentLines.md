@@ -76,7 +76,7 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 
 _Front-End Recalc Expressions:_  
-`IIF( ( obj.Product.ExciseProductType != null), Convert( obj.Product.ExciseProductType.AlcoholicStrength, Object), null)`
+`obj.GetNewAlcoholicStrength( obj.MeasuringTransaction, obj.Product)`
 ### ExciseAmount
 
 _Type_: **[Amount (14, 2)](../data-types.md#amount)**  

@@ -11,7 +11,7 @@ Represents a group of users, sharing interest in the group topic. Entity: Cmm_So
 
 | Name | Type | Description |
 | - | - | --- |
-|[Last_Interaction_Time_Utc](#last_interaction_time_utc)|`datetime` |The time (in UTC) of the last interaction of any kind (comment, reaction, etc.) in the group. NULL means the group did not have any interactions yet.|
+|[Last_Interaction_Time_Utc](#last_interaction_time_utc)|`datetime` Readonly|The time (in UTC) of the last interaction of any kind (comment, reaction, etc.) in the group. NULL means the group did not have any interactions yet.|
 |[Notes](#notes)|`nvarchar(max)` ||
 |[Row_Version](#row_version)|`timestamp` ||
 |[Social_Group_Code](#social_group_code)|`nvarchar(32)` |Unique code of the group. Also used as group slug for Internet URL purposes.|
@@ -39,7 +39,7 @@ The time (in UTC) of the last interaction of any kind (comment, reaction, etc.) 
 |Pasword|no|
 |Picture|no|
 |Primary Key|no|
-|Readonly|no|
+|Readonly|yes|
 |RTF|no|
 |Sortable|yes|
 |Summary Type|None|

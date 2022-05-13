@@ -245,7 +245,7 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
-<code>IIF( ( obj.Product.ExciseProductType != null), Convert( obj.Product.ExciseProductType.AlcoholicStrength, Object), null)</code></p>
+<code>obj.GetNewAlcoholicStrength( obj.MeasuringTransaction, obj.Product)</code></p>
 <h3 id="exciseamount">ExciseAmount</h3>
 <p><em>Type</em>: <strong><a href="../data-types.html#amount">Amount (14, 2)</a></strong><br>
 <em>Category</em>: <strong>System</strong><br>

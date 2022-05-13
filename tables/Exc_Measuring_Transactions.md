@@ -11,7 +11,7 @@ Transaction of product input or output, measured with specialized measuring devi
 
 | Name | Type | Description |
 | - | - | --- |
-|[Alcohol_Degree](#alcohol_degree)|`int` |For alcoholic products, contains the percentage of pure alcohol. NULL when the transaction is not for alcoholic products.|
+|[Alcohol_Degree](#alcohol_degree)|`decimal(5, 2)` |For alcoholic products, contains the percentage of pure alcohol. NULL when the transaction is not for alcoholic products.|
 |[Alcohol_Density](#alcohol_density)|`int` |For alcoholic products, contains the average density for the whole transaction. The measurement unit is dependent on the applicable legislation. NULL for non-alcoholic products.|
 |[Alcohol_Temperature](#alcohol_temperature)|`int` |For alcoholic products, contains the temperature of the fluid, when Alcohol Degree was calculated. The measurement unit is dependent on the national regulation (usually Celsius). NULL for non-alcoholic products.|
 |[Direction](#direction)|`nvarchar(1)` Allowed: `I`, `O`|The direction of the transaction - IN/OUT.|
@@ -53,7 +53,7 @@ For alcoholic products, contains the percentage of pure alcohol. NULL when the t
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|yes|
-|Type|int (Allows NULL)|
+|Type|decimal(5, 2) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

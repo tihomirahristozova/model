@@ -124,6 +124,11 @@ Name Data Member:<br>
 <td>True when the login is currently active and the user can log in. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
+<td><a href="Systems.Security.Users.html#companyname">CompanyName</a></td>
+<td>string (64) <strong>nullable</strong></td>
+<td>Name of the company in which the user claims they are working. <code>Introduced in version 22.1.6.61</code></td>
+</tr>
+<tr>
 <td><a href="Systems.Security.Users.html#creationtimeutc">CreationTimeUtc</a></td>
 <td>datetime</td>
 <td>The date and time (in UTC), when the user was created. <code>Required</code> <code>Default(Now)</code> <code>ReadOnly</code> <code>Introduced in version 18.2</code></td>
@@ -202,6 +207,11 @@ Name Data Member:<br>
 <td><a href="Systems.Security.Users.html#phonenumberconfirmed">PhoneNumberConfirmed</a></td>
 <td>boolean</td>
 <td>Indicates whether the Phone Number has been verified. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>Introduced in version 18.2</code></td>
+</tr>
+<tr>
+<td><a href="Systems.Security.Users.html#registrationmessage">RegistrationMessage</a></td>
+<td>string (254) <strong>nullable</strong></td>
+<td>Message from the user to the registration operator, regarding the desired permissions and assignment. <code>Introduced in version 22.1.6.61</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Security.Users.html#twofactorenabled">TwoFactorEnabled</a></td>
@@ -294,6 +304,13 @@ Name Data Member:<br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>True</strong></p>
+<h3 id="companyname">CompanyName</h3>
+<p>Name of the company in which the user claims they are working. <code>Introduced in version 22.1.6.61</code></p>
+<p><em>Type</em>: <strong>string (64) <strong>nullable</strong></strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>64</strong></p>
 <h3 id="creationtimeutc">CreationTimeUtc</h3>
 <p>The date and time (in UTC), when the user was created. <code>Required</code> <code>Default(Now)</code> <code>ReadOnly</code> <code>Introduced in version 18.2</code></p>
 <p><em>Type</em>: <strong>datetime</strong><br>
@@ -423,6 +440,13 @@ Allowed values for the <code>PasswordFormat</code>(Systems.Security.Users.md#pas
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>False</strong></p>
+<h3 id="registrationmessage">RegistrationMessage</h3>
+<p>Message from the user to the registration operator, regarding the desired permissions and assignment. <code>Introduced in version 22.1.6.61</code></p>
+<p><em>Type</em>: <strong>string (254) <strong>nullable</strong></strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Maximum Length</em>: <strong>254</strong></p>
 <h3 id="twofactorenabled">TwoFactorEnabled</h3>
 <p>Indicates whether two-factor authentication has been enabled. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>Introduced in version 18.2</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>
