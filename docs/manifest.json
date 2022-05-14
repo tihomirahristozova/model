@@ -9302,6 +9302,30 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "business-rules/R31948-1.md",
+      "output": {
+        ".html": {
+          "relative_path": "business-rules/R31948-1.html",
+          "hash": "C9AWHoRC3OPTc0YTllFOzw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "business-rules/R31948-2.md",
+      "output": {
+        ".html": {
+          "relative_path": "business-rules/R31948-2.html",
+          "hash": "/NQXN6AhSKntK+HOroihcw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "business-rules/R31948.md",
       "output": {
         ".html": {
@@ -14380,7 +14404,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/General.Products.ProductGroups.html",
-          "hash": "gr2Py/VJDwdkhd1HcnAehQ=="
+          "hash": "wD46c4cY4124WsxWeOtfXQ=="
         }
       },
       "is_incremental": false,
