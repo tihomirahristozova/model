@@ -21,7 +21,6 @@ Excise Stamp Operation Lines. Entity: Exc_Excise_Stamp_Operation_Lines (Introduc
 |[Excise_Stamp_Lot_Id](#excise_stamp_lot_id)|`uniqueidentifier` |The lot of the excise stamps.|
 |[Excise_Stamp_Operation_Id](#excise_stamp_operation_id)|`uniqueidentifier` ||
 |[Excise_Stamp_Operation_Line_Id](#excise_stamp_operation_line_id)|`uniqueidentifier` `PK`||
-|[Excise_Stamp_Type_Id](#excise_stamp_type_id)|`uniqueidentifier` |Specifies the excise stamp type which is used in the current operation. Determine which excise stamp lots can be chosen.|
 |[Line_No](#line_no)|`int` |Consecutive number of the line within the excise stamp operation. Determines the order of execution of the excise stamp operation lines.|
 |[Notes](#notes)|`nvarchar(max)` ||
 |[Parent_Document_Id](#parent_document_id)|`uniqueidentifier` |The document, which the current line executes. NULL when the current line does not execute another line.|
@@ -203,43 +202,6 @@ The lot of the excise stamps.
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
-
-### Excise_Stamp_Type_Id
-
-
-Specifies the excise stamp type which is used in the current operation. Determine which excise stamp lots can be chosen.
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|4|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|Referenced Table|[Exc_Excise_Stamp_Types](Exc_Excise_Stamp_Types.md)|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|yes|
-|Type|uniqueidentifier (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|yes|
-
-#### Excise_Stamp_Type_Id - Supported Filters
-
-| Filter Type | Default | Include Nulls | Hidden by Default |
-| - | - | - | - |
-|Equals|`NULL`|yes|no|
 
 ### Line_No
 

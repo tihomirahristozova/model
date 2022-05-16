@@ -180,11 +180,6 @@ Aggregate Root:<br>
 <td>The <see cref="ExciseStamp<br />Operation"></see> to which this ExciseStampOperationLine belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 <tr>
-<td><a href="Finance.Excise.ExciseStampOperationLines.html#excisestamptype">ExciseStampType</a></td>
-<td><a href="Finance.Excise.ExciseStampTypes.html">ExciseStampTypes</a> (nullable)</td>
-<td>Specifies the excise stamp type which is used in the current operation. Determine which excise stamp lots can be chosen. <code>Filter(multi eq)</code></td>
-</tr>
-<tr>
 <td><a href="Finance.Excise.ExciseStampOperationLines.html#parentdocument">ParentDocument</a></td>
 <td><a href="General.Documents.html">Documents</a> (nullable)</td>
 <td>The document, which the current line executes. null when the current line does not execute another line. <code>Filter(multi eq)</code> <code>Introduced in version 22.1.6.32</code></td>
@@ -285,11 +280,6 @@ Aggregate Root:<br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em><a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a></em>: <strong>True</strong></p>
-<h3 id="excisestamptype">ExciseStampType</h3>
-<p>Specifies the excise stamp type which is used in the current operation. Determine which excise stamp lots can be chosen. <code>Filter(multi eq)</code></p>
-<p><em>Type</em>: <strong><a href="Finance.Excise.ExciseStampTypes.html">ExciseStampTypes</a> (nullable)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="parentdocument">ParentDocument</h3>
 <p>The document, which the current line executes. null when the current line does not execute another line. <code>Filter(multi eq)</code> <code>Introduced in version 22.1.6.32</code></p>
 <p><em>Type</em>: <strong><a href="General.Documents.html">Documents</a> (nullable)</strong><br>

@@ -15,7 +15,6 @@ Sequence of excise stamps with same production batch and type, received with one
 |[End_Number](#end_number)|`nvarchar(30)` |End number of the lot.|
 |[Excise_Product_Type_Id](#excise_product_type_id)|`uniqueidentifier` |Specifies the Excise Product Type of the Excise Stamps in the lot.|
 |[Excise_Stamp_Lot_Id](#excise_stamp_lot_id)|`uniqueidentifier` `PK`||
-|[Excise_Stamp_Type_Id](#excise_stamp_type_id)|`uniqueidentifier` |Specifies the excise stamp type of the excise stamps in the lot.|
 |[Is_Active](#is_active)|`bit` |Is Active|
 |[Purchase_Lot_Number](#purchase_lot_number)|`nvarchar(30)` |Type and number of the document with which the excise stamps were received from the customs administration.|
 |[Quantity](#quantity)|`int` |Number of excise stamps in the lot.|
@@ -156,43 +155,6 @@ Specifies the Excise Product Type of the Excise Stamps in the lot.
 |Visible|no|
 
 #### Excise_Stamp_Lot_Id - Supported Filters
-
-| Filter Type | Default | Include Nulls | Hidden by Default |
-| - | - | - | - |
-|Equals|`NULL`|no|no|
-
-### Excise_Stamp_Type_Id
-
-
-Specifies the excise stamp type of the excise stamps in the lot.
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|6|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|Referenced Table|[Exc_Excise_Stamp_Types](Exc_Excise_Stamp_Types.md)|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|yes|
-|Type|uniqueidentifier|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|yes|
-
-#### Excise_Stamp_Type_Id - Supported Filters
 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |

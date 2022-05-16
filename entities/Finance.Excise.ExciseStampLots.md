@@ -40,7 +40,6 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [ExciseProductType](Finance.Excise.ExciseStampLots.md#exciseproducttype) | [ExciseProductTypes](Finance.Excise.ExciseProductTypes.md) (nullable) | Specifies the Excise Product Type of the Excise Stamps in the lot. `Filter(multi eq)` `Introduced in version 22.1.6.53` |
-| [ExciseStampType](Finance.Excise.ExciseStampLots.md#excisestamptype) | [ExciseStampTypes](Finance.Excise.ExciseStampTypes.md) | Specifies the excise stamp type of the excise stamps in the lot. `Required` `Filter(multi eq)` |
 
 
 ## Attribute Details
@@ -140,14 +139,6 @@ _Maximum Length_: **30**
 Specifies the Excise Product Type of the Excise Stamps in the lot. `Filter(multi eq)` `Introduced in version 22.1.6.53`
 
 _Type_: **[ExciseProductTypes](Finance.Excise.ExciseProductTypes.md) (nullable)**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-
-### ExciseStampType
-
-Specifies the excise stamp type of the excise stamps in the lot. `Required` `Filter(multi eq)`
-
-_Type_: **[ExciseStampTypes](Finance.Excise.ExciseStampTypes.md)**  
 _Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 

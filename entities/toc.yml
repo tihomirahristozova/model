@@ -490,8 +490,6 @@
       href: Finance.Excise.ExciseStampOperations.md
     - name: ExciseStampOperationTypes
       href: Finance.Excise.ExciseStampOperationTypes.md
-    - name: ExciseStampTypes
-      href: Finance.Excise.ExciseStampTypes.md
     - name: MeasuringTransactions
       href: Finance.Excise.MeasuringTransactions.md
     - name: TaxWarehouses

@@ -43,7 +43,6 @@ Aggregate Tree
 | [CreationUser](General.Products.Products.md#creationuser) | string (64) __nullable__ | Login name of the user, who created the Product. `Filter(like)` `ReadOnly` 
 | [Description](General.Products.Products.md#description) | [MultilanguageString (max)](../data-types.md#multilanguagestring) __nullable__ | The description of the product. 
 | [DisplayText](General.Products.Products.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
-| [ExciseAlcoholicStrength](General.Products.Products.md#excisealcoholicstrength) | decimal (5, 2) __nullable__ | The alcoholic strength, which will be used for Excise reporting purposes. null if the product is not subject to alcoholic Excise reporting. `Introduced in version 21.1.3.87` 
 | [ExpiryPeriodDays](General.Products.Products.md#expiryperioddays) | int32 __nullable__ | Total default expiry period for the product (in days) from the date of production to the date of expiry. 
 | [FlushingMethod](General.Products.Products.md#flushingmethod) | [FlushingMethod](General.Products.Products.md#flushingmethod) | Consumption method for work orders. M=Manual, using Consuption Journals, F=Forward (on release), B=Backward (on finish). `Required` `Default("M")` 
 | [GuaranteePeriodDays](General.Products.Products.md#guaranteeperioddays) | int32 __nullable__ | Default guarantee period length in days. 0 means no guarantee. Should be non-null for serviced products and null for the others. 
@@ -79,9 +78,7 @@ Aggregate Tree
 | [CargoType](General.Products.Products.md#cargotype) | [CargoTypes](Logistics.Shipment.CargoTypes.md) (nullable) | Specifies what type of cargo this product is. Required when generating transportation requisitions. null means unspecified. `Filter(multi eq)` |
 | [CostingCurrency](General.Products.Products.md#costingcurrency) | [Currencies](General.Currencies.md) (nullable) | Specifies the currency to use for cost calculations for the product. When null, the base currency for the enterprise company should be used. `Filter(multi eq)` |
 | [EnterpriseCompany](General.Products.Products.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) (nullable) | When not null, specifies that the product is specific to a given enterprise company and may be used only in documents from this enterprise company. `Filter(multi eq)` |
-| [ExciseProduct](General.Products.Products.md#exciseproduct) | [ExciseProducts](Finance.Excise.ExciseProducts.md) (nullable) | Specifies excise product code for this product. null means unspecified. `Filter(multi eq)` `Introduced in version 21.1.3.99` |
 | [ExciseProductType](General.Products.Products.md#exciseproducttype) | [ExciseProductTypes](Finance.Excise.ExciseProductTypes.md) (nullable) | Specifies the basic excise attributes of the product. `Filter(multi eq)` `Introduced in version 22.1.6.45` |
-| [ExciseStampType](General.Products.Products.md#excisestamptype) | [ExciseStampTypes](Finance.Excise.ExciseStampTypes.md) (nullable) | Specifies the basic excise attributes of the product. `Filter(multi eq)` `Introduced in version 22.1.6.25` |
 | [IntrastatCommodityCode](General.Products.Products.md#intrastatcommoditycode) | [CommodityCodes](Finance.Intrastat.CommodityCodes.md) (nullable) | Code from The Combined Nomenclature used within the European Union countries. Used when reporting Intrastat and Excise. `Filter(multi eq)` |
 | [IntrastatSupplementaryUnit](General.Products.Products.md#intrastatsupplementaryunit) | [MeasurementUnits](General.MeasurementUnits.md) (nullable) | Additional measurement unit from the Intrastat Combined nomenclature. Used when creating Intrastat declarations. `Filter(multi eq)` |
 | [MeasurementUnit](General.Products.Products.md#measurementunit) | [MeasurementUnits](General.MeasurementUnits.md) | Default measurement unit, when creating new documents with this product. `Required` `Filter(multi eq)` |
@@ -214,15 +211,6 @@ _Type_: **string**
 _Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
-
-### ExciseAlcoholicStrength
-
-The alcoholic strength, which will be used for Excise reporting purposes. null if the product is not subject to alcoholic Excise reporting. `Introduced in version 21.1.3.87`
-
-_Type_: **decimal (5, 2) __nullable__**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
 
 ### ExpiryPeriodDays
 
@@ -536,27 +524,11 @@ _Supported Filters_: **Equals, EqualsIn**
 
 _Front-End Recalc Expressions:_  
 `obj.ProductGroup.EnterpriseCompany`
-### ExciseProduct
-
-Specifies excise product code for this product. null means unspecified. `Filter(multi eq)` `Introduced in version 21.1.3.99`
-
-_Type_: **[ExciseProducts](Finance.Excise.ExciseProducts.md) (nullable)**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-
 ### ExciseProductType
 
 Specifies the basic excise attributes of the product. `Filter(multi eq)` `Introduced in version 22.1.6.45`
 
 _Type_: **[ExciseProductTypes](Finance.Excise.ExciseProductTypes.md) (nullable)**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-
-### ExciseStampType
-
-Specifies the basic excise attributes of the product. `Filter(multi eq)` `Introduced in version 22.1.6.25`
-
-_Type_: **[ExciseStampTypes](Finance.Excise.ExciseStampTypes.md) (nullable)**  
 _Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 

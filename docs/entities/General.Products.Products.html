@@ -162,11 +162,6 @@ Name Data Member:<br>
 <td>Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.</td>
 </tr>
 <tr>
-<td><a href="General.Products.Products.html#excisealcoholicstrength">ExciseAlcoholicStrength</a></td>
-<td>decimal (5, 2) <strong>nullable</strong></td>
-<td>The alcoholic strength, which will be used for Excise reporting purposes. null if the product is not subject to alcoholic Excise reporting. <code>Introduced in version 21.1.3.87</code></td>
-</tr>
-<tr>
 <td><a href="General.Products.Products.html#expiryperioddays">ExpiryPeriodDays</a></td>
 <td>int32 <strong>nullable</strong></td>
 <td>Total default expiry period for the product (in days) from the date of production to the date of expiry.</td>
@@ -329,19 +324,9 @@ Name Data Member:<br>
 <td>When not null, specifies that the product is specific to a given enterprise company and may be used only in documents from this enterprise company. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
-<td><a href="General.Products.Products.html#exciseproduct">ExciseProduct</a></td>
-<td><a href="Finance.Excise.ExciseProducts.html">ExciseProducts</a> (nullable)</td>
-<td>Specifies excise product code for this product. null means unspecified. <code>Filter(multi eq)</code> <code>Introduced in version 21.1.3.99</code></td>
-</tr>
-<tr>
 <td><a href="General.Products.Products.html#exciseproducttype">ExciseProductType</a></td>
 <td><a href="Finance.Excise.ExciseProductTypes.html">ExciseProductTypes</a> (nullable)</td>
 <td>Specifies the basic excise attributes of the product. <code>Filter(multi eq)</code> <code>Introduced in version 22.1.6.45</code></td>
-</tr>
-<tr>
-<td><a href="General.Products.Products.html#excisestamptype">ExciseStampType</a></td>
-<td><a href="Finance.Excise.ExciseStampTypes.html">ExciseStampTypes</a> (nullable)</td>
-<td>Specifies the basic excise attributes of the product. <code>Filter(multi eq)</code> <code>Introduced in version 22.1.6.25</code></td>
 </tr>
 <tr>
 <td><a href="General.Products.Products.html#intrastatcommoditycode">IntrastatCommodityCode</a></td>
@@ -565,12 +550,6 @@ Allowed values for the <code>CostingMethod</code>(General.Products.Products.md#c
 <em>Category</em>: <strong>Calculated Attributes</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: ****</p>
-<h3 id="excisealcoholicstrength">ExciseAlcoholicStrength</h3>
-<p>The alcoholic strength, which will be used for Excise reporting purposes. null if the product is not subject to alcoholic Excise reporting. <code>Introduced in version 21.1.3.87</code></p>
-<p><em>Type</em>: <strong>decimal (5, 2) <strong>nullable</strong></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
 <h3 id="expiryperioddays">ExpiryPeriodDays</h3>
 <p>Total default expiry period for the product (in days) from the date of production to the date of expiry.</p>
 <p><em>Type</em>: <strong>int32 <strong>nullable</strong></strong><br>
@@ -837,19 +816,9 @@ Allowed values for the <code>UseLots</code>(General.Products.Products.md#uselots
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
 <code>obj.ProductGroup.EnterpriseCompany</code></p>
-<h3 id="exciseproduct">ExciseProduct</h3>
-<p>Specifies excise product code for this product. null means unspecified. <code>Filter(multi eq)</code> <code>Introduced in version 21.1.3.99</code></p>
-<p><em>Type</em>: <strong><a href="Finance.Excise.ExciseProducts.html">ExciseProducts</a> (nullable)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="exciseproducttype">ExciseProductType</h3>
 <p>Specifies the basic excise attributes of the product. <code>Filter(multi eq)</code> <code>Introduced in version 22.1.6.45</code></p>
 <p><em>Type</em>: <strong><a href="Finance.Excise.ExciseProductTypes.html">ExciseProductTypes</a> (nullable)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
-<h3 id="excisestamptype">ExciseStampType</h3>
-<p>Specifies the basic excise attributes of the product. <code>Filter(multi eq)</code> <code>Introduced in version 22.1.6.25</code></p>
-<p><em>Type</em>: <strong><a href="Finance.Excise.ExciseStampTypes.html">ExciseStampTypes</a> (nullable)</strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="intrastatcommoditycode">IntrastatCommodityCode</h3>

@@ -99,6 +99,9 @@ _Supported Filters_: **Equals, Like, EqualsIn**
 _Supports Order By_: **True**  
 _Maximum Length_: **32**  
 
+_Back-End Default Expression:_  
+`obj.GetNextDefaultCode( )`
+
 ### DisplayText
 
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.

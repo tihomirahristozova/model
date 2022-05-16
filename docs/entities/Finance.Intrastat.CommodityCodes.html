@@ -85,9 +85,7 @@
 <p>Default Display Text Format:<br>
 <em>{CommodityCodeField}</em><br>
 Default Search Members:<br>
-<em>CommodityCodeField</em><br>
-Code Data Member:<br>
-<em>ExciseProductCode</em></p>
+<em>CommodityCodeField</em></p>
 <h2 id="aggregate">Aggregate</h2>
 <p>An <a href="https://docs.erp.net/tech/advanced/concepts/aggregates.html">aggregate</a> is a cluster of domain objects that can be treated as a single unit.</p>
 <p>Aggregate Tree</p>
@@ -118,16 +116,6 @@ Code Data Member:<br>
 <td><a href="Finance.Intrastat.CommodityCodes.html#displaytext">DisplayText</a></td>
 <td>string</td>
 <td>Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.</td>
-</tr>
-<tr>
-<td><a href="Finance.Intrastat.CommodityCodes.html#excisealcoholicstrength">ExciseAlcoholicStrength</a></td>
-<td>decimal (5, 2) <strong>nullable</strong></td>
-<td>Specifies the alcoholic strength for excise products (if applicable). <code>Introduced in version 21.1.3.44</code></td>
-</tr>
-<tr>
-<td><a href="Finance.Intrastat.CommodityCodes.html#exciseproductcode">ExciseProductCode</a></td>
-<td>string (20) <strong>nullable</strong></td>
-<td>The code of the product for excise purposes (if applicable). A.k.a. APCode. <code>Introduced in version 21.1.3.44</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Intrastat.CommodityCodes.html#id">Id</a></td>
@@ -177,19 +165,6 @@ Code Data Member:<br>
 <em>Category</em>: <strong>Calculated Attributes</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: ****</p>
-<h3 id="excisealcoholicstrength">ExciseAlcoholicStrength</h3>
-<p>Specifies the alcoholic strength for excise products (if applicable). <code>Introduced in version 21.1.3.44</code></p>
-<p><em>Type</em>: <strong>decimal (5, 2) <strong>nullable</strong></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
-<h3 id="exciseproductcode">ExciseProductCode</h3>
-<p>The code of the product for excise purposes (if applicable). A.k.a. APCode. <code>Introduced in version 21.1.3.44</code></p>
-<p><em>Type</em>: <strong>string (20) <strong>nullable</strong></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>NotFilterable</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Maximum Length</em>: <strong>20</strong></p>
 <h3 id="id">Id</h3>
 <p><em>Type</em>: <strong>guid</strong><br>
 <em>Indexed</em>: <strong>True</strong><br>

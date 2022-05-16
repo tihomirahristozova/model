@@ -12,8 +12,6 @@ Default Display Text Format:
 _{CommodityCodeField}_  
 Default Search Members:  
 _CommodityCodeField_  
-Code Data Member:  
-_ExciseProductCode_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
@@ -28,8 +26,6 @@ Aggregate Tree
 | [CommodityCodeField](Finance.Intrastat.CommodityCodes.md#commoditycodefield) | string (8) | Product code from the Intrastat Combined nomenclature. `Required` `Filter(eq;like)` `ORD` 
 | [Description](Finance.Intrastat.CommodityCodes.md#description) | [MultilanguageString (4000)](../data-types.md#multilanguagestring) | Description of the product code from the Intrastat Combined nomenclature. `Required` `Filter(like)` 
 | [DisplayText](Finance.Intrastat.CommodityCodes.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
-| [ExciseAlcoholicStrength](Finance.Intrastat.CommodityCodes.md#excisealcoholicstrength) | decimal (5, 2) __nullable__ | Specifies the alcoholic strength for excise products (if applicable). `Introduced in version 21.1.3.44` 
-| [ExciseProductCode](Finance.Intrastat.CommodityCodes.md#exciseproductcode) | string (20) __nullable__ | The code of the product for excise purposes (if applicable). A.k.a. APCode. `Introduced in version 21.1.3.44` 
 | [Id](Finance.Intrastat.CommodityCodes.md#id) | guid |  
 | [ObjectVersion](Finance.Intrastat.CommodityCodes.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 | [SupplementaryUnit](Finance.Intrastat.CommodityCodes.md#supplementaryunit) | string (16) | If not null, the related product should have additional measurement unit with the same code as specified in this field. The additional unit will be used for the purposes of the Intrastat declarations. `Required` 
@@ -67,25 +63,6 @@ _Type_: **string**
 _Category_: **Calculated Attributes**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
-
-### ExciseAlcoholicStrength
-
-Specifies the alcoholic strength for excise products (if applicable). `Introduced in version 21.1.3.44`
-
-_Type_: **decimal (5, 2) __nullable__**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-
-### ExciseProductCode
-
-The code of the product for excise purposes (if applicable). A.k.a. APCode. `Introduced in version 21.1.3.44`
-
-_Type_: **string (20) __nullable__**  
-_Category_: **System**  
-_Supported Filters_: **NotFilterable**  
-_Supports Order By_: **False**  
-_Maximum Length_: **20**  
 
 ### Id
 
