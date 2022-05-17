@@ -253,7 +253,7 @@ Aggregate Root:<br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
-<code>new Amount( ( ( Convert( obj.ExciseAmountBase, Nullable</code>1) * obj.ExciseDutyRateValue) ?? 0), Convert( obj.GetAggregateParent( ), ExciseAdministrativeDocument).DocumentCurrency)`</p>
+<code>new Amount( ( obj.ExciseAmountBase * ( obj.ExciseDutyRateValue ?? 0)), obj.Document.EnterpriseCompany.BaseCurrency)</code></p>
 <h3 id="exciseamountbase">ExciseAmountBase</h3>
 <p><em>Type</em>: <strong>decimal (14, 2)</strong><br>
 <em>Category</em>: <strong>System</strong><br>

@@ -86,7 +86,7 @@ _Supports Order By_: **False**
 _Default Value_: **Constant**  
 
 _Front-End Recalc Expressions:_  
-`new Amount( ( ( Convert( obj.ExciseAmountBase, Nullable`1) * obj.ExciseDutyRateValue) ?? 0), Convert( obj.GetAggregateParent( ), ExciseAdministrativeDocument).DocumentCurrency)`
+`new Amount( ( obj.ExciseAmountBase * ( obj.ExciseDutyRateValue ?? 0)), obj.Document.EnterpriseCompany.BaseCurrency)`
 ### ExciseAmountBase
 
 _Type_: **decimal (14, 2)**  
