@@ -653,6 +653,23 @@ _Domain API Request_: **POST**
 
 The process of changing the document state is very labor intensive and includes              validation, generation of sub-documents and some other document-specific tasks.                          The state changing process might be very time-consuming, usually ranging              from 500 to 5000 milliseconds.                          Document states usually can only be advanced to higher states, but there are              exceptions from this rule. Database settings and configuration options might affect             the allowed state changes.                          Numerous kinds of document-specific and generic exceptions can be thrown during the             process.
 
+### ProcessSingleRoute
+
+Processes the document route.               (Inherited from [Documents](General.Documents.md))  
+_Return Type_: **void**  
+_Declaring Type_: **[Documents](General.Documents.md)**  
+_Domain API Request_: **POST**  
+
+**Parameters**  
+  * **route**  
+      
+    _Type_: [Routes](Systems.Workflow.Routes.md)  
+
+  * **processForLowerDocumentStates**  
+      
+    _Type_: boolean  
+
+
 ### Complete
 
 Changes the document state to Completed with all Release-ed sub-documents              (Inherited from [Documents](General.Documents.md))  

@@ -1005,6 +1005,20 @@ The desired new user status of the document. Can be null.<br>
 </li>
 </ul>
 <p>The process of changing the document state is very labor intensive and includes              validation, generation of sub-documents and some other document-specific tasks.                          The state changing process might be very time-consuming, usually ranging              from 500 to 5000 milliseconds.                          Document states usually can only be advanced to higher states, but there are              exceptions from this rule. Database settings and configuration options might affect             the allowed state changes.                          Numerous kinds of document-specific and generic exceptions can be thrown during the             process.</p>
+<h3 id="processsingleroute">ProcessSingleRoute</h3>
+<p>Processes the document route.               (Inherited from <a href="General.Documents.html">Documents</a>)<br>
+<em>Return Type</em>: <strong>void</strong><br>
+<em>Declaring Type</em>: <strong><a href="General.Documents.html">Documents</a></strong><br>
+<em>Domain API Request</em>: <strong>POST</strong></p>
+<p><strong>Parameters</strong></p>
+<ul>
+<li><p><strong>route</strong></p>
+<p><em>Type</em>: <a href="Systems.Workflow.Routes.html">Routes</a></p>
+</li>
+<li><p><strong>processForLowerDocumentStates</strong></p>
+<p><em>Type</em>: boolean</p>
+</li>
+</ul>
 <h3 id="complete">Complete</h3>
 <p>Changes the document state to Completed with all Release-ed sub-documents              (Inherited from <a href="General.Documents.html">Documents</a>)<br>
 <em>Return Type</em>: <strong>void</strong><br>
