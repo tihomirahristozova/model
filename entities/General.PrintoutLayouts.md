@@ -119,7 +119,7 @@ _Supports Order By_: **True**
 _Maximum Length_: **64**  
 
 _Front-End Recalc Expressions:_  
-`obj.DocumentEntityName`
+`IIF( Not( IsNullOrEmpty( obj.DocumentEntityName)), obj.GetDefaultName( ), null)`
 ### Notes
 
 Notes for this PrintoutLayout.

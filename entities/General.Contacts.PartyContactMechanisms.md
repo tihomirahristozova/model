@@ -9,7 +9,7 @@ Specifies the contact mechanisms, which are attached to the parties. Currently e
 
 ## Default Visualization
 Default Display Text Format:  
-_{Party.PartyName:T}_  
+_{ContactMechanism}_  
 Default Search Members:  
 _Party.PartyName_  
 Name Data Member:  

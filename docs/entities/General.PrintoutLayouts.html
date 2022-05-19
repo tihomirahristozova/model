@@ -238,7 +238,7 @@ Name Data Member:<br>
 <em>Supports Order By</em>: <strong>True</strong><br>
 <em>Maximum Length</em>: <strong>64</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
-<code>obj.DocumentEntityName</code></p>
+<code>IIF( Not( IsNullOrEmpty( obj.DocumentEntityName)), obj.GetDefaultName( ), null)</code></p>
 <h3 id="notes">Notes</h3>
 <p>Notes for this PrintoutLayout.</p>
 <p><em>Type</em>: <strong>string (254) <strong>nullable</strong></strong><br>
