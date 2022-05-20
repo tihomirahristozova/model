@@ -10190,6 +10190,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "business-rules/R33319.md",
+      "output": {
+        ".html": {
+          "relative_path": "business-rules/R33319.html",
+          "hash": "VGjYw/D7UdVparSAuEO3FA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "data-types.md",
       "output": {
         ".html": {
@@ -15712,7 +15724,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Logistics.Wms.WarehouseTransactions.html",
-          "hash": "hg5y5GRpU7d7u5BvACk8Qg=="
+          "hash": "XiCRvB7YyOgrZYt+n+3pxw=="
         }
       },
       "is_incremental": false,
