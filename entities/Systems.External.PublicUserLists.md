@@ -5,7 +5,11 @@ uid: Systems.External.PublicUserLists
 
 **Namespace:** [Systems.External](Systems.External.md)  
 
-Each list represents a unique collection of public users. Entity: Ext_Public_User_Lists
+Each list represents a unique collection of public users. Entity: Ext_Public_User_Lists (Obsoleted in version 22.1.6.73)
+
+> [!NOTE]  
+> **OBSOLETE! Do not use!**   
+
 
 ## Default Visualization
 Default Display Text Format:  

@@ -5,7 +5,11 @@ uid: Logistics.Procurement.PurchaseOperationTypes
 
 **Namespace:** [Logistics.Procurement](Logistics.Procurement.md)  
 
-User-defined categorization of the purchase operations. Used to group the purchase control data. Entity: Scm_Purchase_Operation_Types (Introduced in version 18.2)
+User-defined categorization of the purchase operations. Used to group the purchase control data. Entity: Scm_Purchase_Operation_Types (Introduced in version 18.2) (Obsoleted in version 22.1.6.73)
+
+> [!NOTE]  
+> **OBSOLETE! Do not use!**   
+
 
 ## Default Visualization
 Default Display Text Format:  

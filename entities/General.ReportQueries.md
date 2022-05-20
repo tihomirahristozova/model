@@ -43,7 +43,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Report](General.ReportQueries.md#report) | [Reports](General.Reports.md) | The <see cref="Report"/> to which this ReportQuery belongs. `Required` `Filter(multi eq)` `Owner` |
+| [<s>Report</s>](General.ReportQueries.md#report) | [Reports](General.Reports.md) | **OBSOLETE! Do not use!** The <see cref="Report"/> to which this ReportQuery belongs. `Obsolete` `Required` `Filter(multi eq)` `Obsoleted in version 22.1.6.74` `Obsolete` `Owner` |
 
 
 ## Attribute Details
@@ -158,7 +158,7 @@ _Maximum Length_: **64**
 
 ### Report
 
-The <see cref="Report"/> to which this ReportQuery belongs. `Required` `Filter(multi eq)` `Owner`
+**OBSOLETE! Do not use!** The <see cref="Report"/> to which this ReportQuery belongs. `Obsolete` `Required` `Filter(multi eq)` `Obsoleted in version 22.1.6.74` `Obsolete` `Owner`
 
 _Type_: **[Reports](General.Reports.md)**  
 _Category_: **System**  

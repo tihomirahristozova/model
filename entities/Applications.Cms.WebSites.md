@@ -5,7 +5,11 @@ uid: Applications.Cms.WebSites
 
 **Namespace:** [Applications.Cms](Applications.Cms.md)  
 
-Contains the public web sites. Entity: Cms_Web_Sites
+Contains the public web sites. Entity: Cms_Web_Sites (Obsoleted in version 22.1.6.73)
+
+> [!NOTE]  
+> **OBSOLETE! Do not use!**   
+
 
 ## Default Visualization
 Default Display Text Format:  
@@ -42,7 +46,7 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [EnterpriseCompany](Applications.Cms.WebSites.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company to which this web site belongs. `Required` `Filter(multi eq)` |
-| [PublicUserList](Applications.Cms.WebSites.md#publicuserlist) | [PublicUserLists](Systems.External.PublicUserLists.md) (nullable) | The list of users used to authorize the users on the site. `Filter(multi eq)` |
+| [<s>PublicUserList</s>](Applications.Cms.WebSites.md#publicuserlist) | [PublicUserLists](Systems.External.PublicUserLists.md) (nullable) | **OBSOLETE! Do not use!** The list of users used to authorize the users on the site. `Obsolete` `Filter(multi eq)` `Obsoleted in version 22.1.6.74` `Obsolete` |
 
 ## Child Collections
 
@@ -123,7 +127,7 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### PublicUserList
 
-The list of users used to authorize the users on the site. `Filter(multi eq)`
+**OBSOLETE! Do not use!** The list of users used to authorize the users on the site. `Obsolete` `Filter(multi eq)` `Obsoleted in version 22.1.6.74` `Obsolete`
 
 _Type_: **[PublicUserLists](Systems.External.PublicUserLists.md) (nullable)**  
 _Category_: **System**  

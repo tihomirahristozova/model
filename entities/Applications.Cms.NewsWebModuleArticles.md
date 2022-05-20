@@ -5,7 +5,11 @@ uid: Applications.Cms.NewsWebModuleArticles
 
 **Namespace:** [Applications.Cms](Applications.Cms.md)  
 
-Represents an article in a news web module. Entity: Cms_News_Web_Module_Articles
+Represents an article in a news web module. Entity: Cms_News_Web_Module_Articles (Obsoleted in version 22.1.6.73)
+
+> [!NOTE]  
+> **OBSOLETE! Do not use!**   
+
 
 ## Default Visualization
 Default Display Text Format:  
@@ -37,8 +41,8 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AuthorPublicUser](Applications.Cms.NewsWebModuleArticles.md#authorpublicuser) | [PublicUsers](Systems.External.PublicUsers.md) | The author of the news article. `Required` `Filter(multi eq)` |
-| [NewsWebModule](Applications.Cms.NewsWebModuleArticles.md#newswebmodule) | [NewsWebModules](Applications.Cms.NewsWebModules.md) | The News Web Module, to which the current article is added. `Required` `Filter(multi eq)` |
+| [<s>AuthorPublicUser</s>](Applications.Cms.NewsWebModuleArticles.md#authorpublicuser) | [PublicUsers](Systems.External.PublicUsers.md) | **OBSOLETE! Do not use!** The author of the news article. `Obsolete` `Required` `Filter(multi eq)` `Obsoleted in version 22.1.6.74` `Obsolete` |
+| [<s>NewsWebModule</s>](Applications.Cms.NewsWebModuleArticles.md#newswebmodule) | [NewsWebModules](Applications.Cms.NewsWebModules.md) | **OBSOLETE! Do not use!** The News Web Module, to which the current article is added. `Obsolete` `Required` `Filter(multi eq)` `Obsoleted in version 22.1.6.74` `Obsolete` |
 
 
 ## Attribute Details
@@ -114,7 +118,7 @@ _Default Value_: **CurrentDateTime**
 
 ### AuthorPublicUser
 
-The author of the news article. `Required` `Filter(multi eq)`
+**OBSOLETE! Do not use!** The author of the news article. `Obsolete` `Required` `Filter(multi eq)` `Obsoleted in version 22.1.6.74` `Obsolete`
 
 _Type_: **[PublicUsers](Systems.External.PublicUsers.md)**  
 _Category_: **System**  
@@ -122,7 +126,7 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### NewsWebModule
 
-The News Web Module, to which the current article is added. `Required` `Filter(multi eq)`
+**OBSOLETE! Do not use!** The News Web Module, to which the current article is added. `Obsolete` `Required` `Filter(multi eq)` `Obsoleted in version 22.1.6.74` `Obsolete`
 
 _Type_: **[NewsWebModules](Applications.Cms.NewsWebModules.md)**  
 _Category_: **System**  

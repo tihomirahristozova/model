@@ -195,22 +195,25 @@
     href: Communities.Notifications.md
   - name: NotificationSettings
     href: Communities.NotificationSettings.md
-  - name: SocialComments
-    href: Communities.SocialComments.md
-  - name: SocialFollowedEntities
-    href: Communities.SocialFollowedEntities.md
-  - name: SocialFollows
-    href: Communities.SocialFollows.md
-  - name: SocialGroupMembers
-    href: Communities.SocialGroupMembers.md
-  - name: SocialGroups
-    href: Communities.SocialGroups.md
-  - name: SocialPosts
-    href: Communities.SocialPosts.md
-  - name: SocialReactions
-    href: Communities.SocialReactions.md
-  - name: SocialReactionsSummary
-    href: Communities.SocialReactionsSummary.md
+  - name: Social
+    href: Communities.Social.md
+    items:
+    - name: Comments
+      href: Communities.Social.Comments.md
+    - name: FollowedEntities
+      href: Communities.Social.FollowedEntities.md
+    - name: Follows
+      href: Communities.Social.Follows.md
+    - name: GroupMembers
+      href: Communities.Social.GroupMembers.md
+    - name: Groups
+      href: Communities.Social.Groups.md
+    - name: Posts
+      href: Communities.Social.Posts.md
+    - name: Reactions
+      href: Communities.Social.Reactions.md
+    - name: ReactionsSummary
+      href: Communities.Social.ReactionsSummary.md
 - name: Crm
   href: Crm.md
   items:

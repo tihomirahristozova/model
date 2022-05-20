@@ -3,7 +3,7 @@
 
 ## Entity
 
-Entity: [Communities.SocialFollowedEntities](~/entities/Communities.SocialFollowedEntities.md)
+Entity: [Communities.Social.FollowedEntities](~/entities/Communities.Social.FollowedEntities.md)
 
 Optimized view returning social followed entities by users. Entity: Cmm_Social_Followed_Entities_Indexed_View (Introduced in version 22.1.6.3)
 

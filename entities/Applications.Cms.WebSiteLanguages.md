@@ -5,7 +5,11 @@ uid: Applications.Cms.WebSiteLanguages
 
 **Namespace:** [Applications.Cms](Applications.Cms.md)  
 
-Specifies a language, supported by the web site. Entity: Cms_Web_Site_Languages
+Specifies a language, supported by the web site. Entity: Cms_Web_Site_Languages (Obsoleted in version 22.1.6.73)
+
+> [!NOTE]  
+> **OBSOLETE! Do not use!**   
+
 
 ## Default Visualization
 Default Display Text Format:  
@@ -40,7 +44,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [WebSite](Applications.Cms.WebSiteLanguages.md#website) | [WebSites](Applications.Cms.WebSites.md) | The web site, for which the language is specified. `Required` `Filter(multi eq)` `Owner` |
+| [<s>WebSite</s>](Applications.Cms.WebSiteLanguages.md#website) | [WebSites](Applications.Cms.WebSites.md) | **OBSOLETE! Do not use!** The web site, for which the language is specified. `Obsolete` `Required` `Filter(multi eq)` `Obsoleted in version 22.1.6.74` `Obsolete` `Owner` |
 
 
 ## Attribute Details
@@ -106,7 +110,7 @@ _Supports Order By_: ****
 
 ### WebSite
 
-The web site, for which the language is specified. `Required` `Filter(multi eq)` `Owner`
+**OBSOLETE! Do not use!** The web site, for which the language is specified. `Obsolete` `Required` `Filter(multi eq)` `Obsoleted in version 22.1.6.74` `Obsolete` `Owner`
 
 _Type_: **[WebSites](Applications.Cms.WebSites.md)**  
 _Category_: **System**  

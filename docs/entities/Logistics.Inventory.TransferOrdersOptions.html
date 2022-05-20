@@ -83,15 +83,17 @@
 <p>Options per document type for the transfer orders. Entity: Inv_Transfer_Orders_Options</p>
 <h2 id="default-visualization">Default Visualization</h2>
 <p>Default Display Text Format:<br>
-<em>{Id}: {DocumentTypeId}</em><br>
+<em>{DocumentType.EntityName}</em><br>
 Default Search Members:<br>
-__</p>
+<em>DocumentType.EntityName</em><br>
+Name Data Member:<br>
+<em>DocumentType.EntityName</em></p>
 <h2 id="aggregate">Aggregate</h2>
 <p>An <a href="https://docs.erp.net/tech/advanced/concepts/aggregates.html">aggregate</a> is a cluster of domain objects that can be treated as a single unit.</p>
-<p>Aggregate Tree</p>
-<ul>
-<li><a href="Logistics.Inventory.TransferOrdersOptions.html">Logistics.Inventory.TransferOrdersOptions</a></li>
-</ul>
+<p>Aggregate Parent:<br>
+<a href="General.DocumentTypes.html">General.DocumentTypes</a><br>
+Aggregate Root:<br>
+<a href="General.DocumentTypes.html">General.DocumentTypes</a></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -137,7 +139,7 @@ __</p>
 <tr>
 <td><a href="Logistics.Inventory.TransferOrdersOptions.html#documenttype">DocumentType</a></td>
 <td><a href="General.DocumentTypes.html">DocumentTypes</a></td>
-<td>The document type, for which these options apply. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>The document type, for which these options apply. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 </tbody>
 </table>
@@ -169,10 +171,11 @@ __</p>
 <em>Supports Order By</em>: ****</p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="documenttype">DocumentType</h3>
-<p>The document type, for which these options apply. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>The document type, for which these options apply. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="General.DocumentTypes.html">DocumentTypes</a></strong><br>
 <em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em><a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a></em>: <strong>True</strong></p>
 <h2 id="api-methods">API Methods</h2>
 <p>Methods that can be invoked in public APIs.</p>
 <h3 id="getallowedcustompropertyvalues">GetAllowedCustomPropertyValues</h3>

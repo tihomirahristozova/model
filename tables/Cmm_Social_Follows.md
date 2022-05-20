@@ -3,9 +3,9 @@
 
 ## Entity
 
-Entity: [Communities.SocialFollows](~/entities/Communities.SocialFollows.md)
+Entity: [Communities.Social.Follows](~/entities/Communities.Social.Follows.md)
 
-Denotes a user following an object in the system. The user will be notified for events about the object. Entity: Cmm_Social_Follows
+Denotes a user following an object in the system. The user will be notified for events about the object. Entity: Cmm_Social_Follows (Introduced in version 22.1.6.73)
 
 ## Summary
 

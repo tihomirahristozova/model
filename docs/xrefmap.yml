@@ -286,6 +286,33 @@ references:
 - uid: Communities.NotificationSettings
   name: Communities.NotificationSettings Entity
   href: entities/Communities.NotificationSettings.html
+- uid: Communities.Social
+  name: Communities.Social Namespace
+  href: entities/Communities.Social.html
+- uid: Communities.Social.Comments
+  name: Communities.Social.Comments Entity
+  href: entities/Communities.Social.Comments.html
+- uid: Communities.Social.FollowedEntities
+  name: Communities.Social.FollowedEntities View
+  href: entities/Communities.Social.FollowedEntities.html
+- uid: Communities.Social.Follows
+  name: Communities.Social.Follows Entity
+  href: entities/Communities.Social.Follows.html
+- uid: Communities.Social.GroupMembers
+  name: Communities.Social.GroupMembers Entity
+  href: entities/Communities.Social.GroupMembers.html
+- uid: Communities.Social.Groups
+  name: Communities.Social.Groups Entity
+  href: entities/Communities.Social.Groups.html
+- uid: Communities.Social.Posts
+  name: Communities.Social.Posts Entity
+  href: entities/Communities.Social.Posts.html
+- uid: Communities.Social.Reactions
+  name: Communities.Social.Reactions Entity
+  href: entities/Communities.Social.Reactions.html
+- uid: Communities.Social.ReactionsSummary
+  name: Communities.Social.ReactionsSummary View
+  href: entities/Communities.Social.ReactionsSummary.html
 - uid: Communities.SocialComments
   name: Communities.SocialComments Entity
   href: entities/Communities.SocialComments.html

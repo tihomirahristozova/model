@@ -9,15 +9,19 @@ Provides rules to conditionally secure new documents. Entity: Gen_Document_Type_
 
 ## Default Visualization
 Default Display Text Format:  
-_{Id}: {DocumentTypeId}_  
+_{DocumentType.EntityName}_  
 Default Search Members:  
-__  
+_DocumentType.EntityName_  
+Name Data Member:  
+_DocumentType.EntityName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
 
-Aggregate Tree  
-* [General.DocumentTypeSecurityConditions](General.DocumentTypeSecurityConditions.md)  
+Aggregate Parent:  
+[General.DocumentTypes](General.DocumentTypes.md)  
+Aggregate Root:  
+[General.DocumentTypes](General.DocumentTypes.md)  
 
 ## Attributes
 
@@ -35,7 +39,7 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [DocumentAccessKey](General.DocumentTypeSecurityConditions.md#documentaccesskey) | [AccessKeys](Systems.Security.AccessKeys.md) | The access key, which will be used to secure new documents, when this rule is selected. `Required` `Filter(multi eq)` |
-| [DocumentType](General.DocumentTypeSecurityConditions.md#documenttype) | [DocumentTypes](General.DocumentTypes.md) | The document type, whose documents will be secured by the current rule. `Required` `Filter(multi eq)` |
+| [DocumentType](General.DocumentTypeSecurityConditions.md#documenttype) | [DocumentTypes](General.DocumentTypes.md) | The document type, whose documents will be secured by the current rule. `Required` `Filter(multi eq)` `Owner` |
 
 
 ## Attribute Details
@@ -119,11 +123,12 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### DocumentType
 
-The document type, whose documents will be secured by the current rule. `Required` `Filter(multi eq)`
+The document type, whose documents will be secured by the current rule. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[DocumentTypes](General.DocumentTypes.md)**  
 _Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
+_[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
 
 
 ## API Methods

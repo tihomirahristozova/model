@@ -80,7 +80,11 @@
 <h1 id="systemsexternalpublicusers-entity">Systems.External.PublicUsers Entity</h1>
 
 <p><strong>Namespace:</strong> <a href="Systems.External.html">Systems.External</a></p>
-<p>/Users of the publicly offered services. This includes Internet, external and employee users. Entity: Ext_Public_Users</p>
+<p>/Users of the publicly offered services. This includes Internet, external and employee users. Entity: Ext_Public_Users (Obsoleted in version 22.1.6.73)</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p><strong>OBSOLETE! Do not use!</strong></p>
+</div>
 <h2 id="default-visualization">Default Visualization</h2>
 <p>Default Display Text Format:<br>
 <em>{CompanyName}</em><br>
@@ -244,9 +248,9 @@ Name Data Member:<br>
 <td>Link to an internal person record. Usually specified by internal employee, but can also be an automated process. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
-<td><a href="Systems.External.PublicUsers.html#publicuserlist">PublicUserList</a></td>
+<td><a href="Systems.External.PublicUsers.html#publicuserlist"><s>PublicUserList</s></a></td>
 <td><a href="Systems.External.PublicUserLists.html">PublicUserLists</a></td>
-<td>The list in which the user account is saved. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td><strong>OBSOLETE! Do not use!</strong> The list in which the user account is saved. <code>Obsolete</code> <code>Required</code> <code>Filter(multi eq)</code> <code>Obsoleted in version 22.1.6.74</code> <code>Obsolete</code></td>
 </tr>
 </tbody>
 </table>
@@ -417,7 +421,7 @@ Name Data Member:<br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="publicuserlist">PublicUserList</h3>
-<p>The list in which the user account is saved. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p><strong>OBSOLETE! Do not use!</strong> The list in which the user account is saved. <code>Obsolete</code> <code>Required</code> <code>Filter(multi eq)</code> <code>Obsoleted in version 22.1.6.74</code> <code>Obsolete</code></p>
 <p><em>Type</em>: <strong><a href="Systems.External.PublicUserLists.html">PublicUserLists</a></strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>

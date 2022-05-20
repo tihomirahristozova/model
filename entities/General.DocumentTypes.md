@@ -32,8 +32,12 @@ Aggregate Tree
   * [General.DocumentTypeEnterpriseCompanies](General.DocumentTypeEnterpriseCompanies.md)  
   * [General.DocumentTypeNotifications](General.DocumentTypeNotifications.md)  
   * [General.DocumentTypeProperties](General.DocumentTypeProperties.md)  
+  * [General.DocumentTypeSecurityConditions](General.DocumentTypeSecurityConditions.md)  
   * [General.DocumentTypeUserStatuses](General.DocumentTypeUserStatuses.md)  
   * [General.Printouts](General.Printouts.md)  
+  * [Logistics.Inventory.CostCorrectionsOptions](Logistics.Inventory.CostCorrectionsOptions.md)  
+  * [Logistics.Inventory.TransferOrdersOptions](Logistics.Inventory.TransferOrdersOptions.md)  
+  * [Logistics.Procurement.PurchaseInvoicesOptions](Logistics.Procurement.PurchaseInvoicesOptions.md)  
   * [Systems.Workflow.Routes](Systems.Workflow.Routes.md)  
     * [Finance.Accounting.TemplateRouteLinks](Finance.Accounting.TemplateRouteLinks.md)  
     * [Finance.Accounting.Templates](Finance.Accounting.Templates.md)  
@@ -72,6 +76,7 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | Amounts | [DocumentTypeAmounts](General.DocumentTypeAmounts.md) | List of `DocumentTypeAmount`(General.DocumentTypeAmounts.md) child objects, based on the `General.DocumentTypeAmount.DocumentType`(General.DocumentTypeAmounts.md#documenttype) back reference 
+| CostCorrectionsOptions | [CostCorrectionsOptions](Logistics.Inventory.CostCorrectionsOptions.md) | List of `CostCorrectionsOption`(Logistics.Inventory.CostCorrectionsOptions.md) child objects, based on the `Logistics.Inventory.CostCorrectionsOption.DocumentType`(Logistics.Inventory.CostCorrectionsOptions.md#documenttype) back reference 
 | DefaultSalesOrder<br />DocumentProperties | [DefaultSalesOrderDocumentProperties](Crm.Sales.DefaultSalesOrderDocumentProperties.md) | List of `DefaultSalesOrder<br />DocumentProperty`(Crm.Sales.DefaultSalesOrder<br />DocumentProperties.md) child objects, based on the `Crm.Sales.DefaultSalesOrder<br />DocumentProperty.DocumentType`(Crm.Sales.DefaultSalesOrder<br />DocumentProperties.md#documenttype) back reference 
 | DefaultSalesOrder<br />PaymentPlans | [DefaultSalesOrderPaymentPlans](Crm.Sales.DefaultSalesOrderPaymentPlans.md) | List of `DefaultSalesOrder<br />PaymentPlan`(Crm.Sales.DefaultSalesOrder<br />PaymentPlans.md) child objects, based on the `Crm.Sales.DefaultSalesOrder<br />PaymentPlan.DocumentType`(Crm.Sales.DefaultSalesOrder<br />PaymentPlans.md#documenttype) back reference 
 | DocumentTypeProperties | [DocumentTypeProperties](General.DocumentTypeProperties.md) | List of `DocumentTypeProperty`(General.DocumentTypeProperties.md) child objects, based on the `General.DocumentTypeProperty.DocumentType`(General.DocumentTypeProperties.md#documenttype) back reference 
@@ -81,8 +86,11 @@ Aggregate Tree
 | OffersOptions | [OffersOptions](Crm.Presales.OffersOptions.md) | List of `OffersOption`(Crm.Presales.OffersOptions.md) child objects, based on the `Crm.Presales.OffersOption.DocumentType`(Crm.Presales.OffersOptions.md#documenttype) back reference 
 | PaymentOptions | [DocumentTypePaymentOptions](Crm.Sales.DocumentTypePaymentOptions.md) | List of `DocumentTypePayment<br />Option`(Crm.Sales.DocumentTypePaymentOptions.md) child objects, based on the `Crm.Sales.DocumentTypePaymentOption.DocumentType`(Crm.Sales.DocumentTypePaymentOptions.md#documenttype) back reference 
 | Printouts | [Printouts](General.Printouts.md) | List of `Printout`(General.Printouts.md) child objects, based on the `General.Printout.DocumentType`(General.Printouts.md#documenttype) back reference 
+| PurchaseInvoicesOptions | [PurchaseInvoicesOptions](Logistics.Procurement.PurchaseInvoicesOptions.md) | List of `PurchaseInvoicesOption`(Logistics.Procurement.PurchaseInvoicesOptions.md) child objects, based on the `Logistics.Procurement.PurchaseInvoicesOption.DocumentType`(Logistics.Procurement.PurchaseInvoicesOptions.md#documenttype) back reference 
 | Routes | [Routes](Systems.Workflow.Routes.md) | List of `Route`(Systems.Workflow.Routes.md) child objects, based on the `Systems.Workflow.Route.DocumentType`(Systems.Workflow.Routes.md#documenttype) back reference 
 | SalesOrdersOptions | [SalesOrdersOptions](Crm.Sales.SalesOrdersOptions.md) | List of `SalesOrdersOption`(Crm.Sales.SalesOrdersOptions.md) child objects, based on the `Crm.Sales.SalesOrdersOption.DocumentType`(Crm.Sales.SalesOrdersOptions.md#documenttype) back reference 
+| SecurityConditions | [DocumentTypeSecurityConditions](General.DocumentTypeSecurityConditions.md) | List of `DocumentTypeSecurity<br />Condition`(General.DocumentTypeSecurity<br />Conditions.md) child objects, based on the `General.DocumentTypeSecurity<br />Condition.DocumentType`(General.DocumentTypeSecurity<br />Conditions.md#documenttype) back reference 
+| TransferOrdersOptions | [TransferOrdersOptions](Logistics.Inventory.TransferOrdersOptions.md) | List of `TransferOrdersOption`(Logistics.Inventory.TransferOrdersOptions.md) child objects, based on the `Logistics.Inventory.TransferOrdersOption.DocumentType`(Logistics.Inventory.TransferOrdersOptions.md#documenttype) back reference 
 | UserStatuses | [DocumentTypeUserStatuses](General.DocumentTypeUserStatuses.md) | List of `DocumentTypeUserStatus`(General.DocumentTypeUserStatuses.md) child objects, based on the `General.DocumentTypeUserStatus.DocumentType`(General.DocumentTypeUserStatuses.md#documenttype) back reference 
 
 

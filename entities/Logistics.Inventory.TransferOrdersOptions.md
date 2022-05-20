@@ -9,15 +9,19 @@ Options per document type for the transfer orders. Entity: Inv_Transfer_Orders_O
 
 ## Default Visualization
 Default Display Text Format:  
-_{Id}: {DocumentTypeId}_  
+_{DocumentType.EntityName}_  
 Default Search Members:  
-__  
+_DocumentType.EntityName_  
+Name Data Member:  
+_DocumentType.EntityName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
 
-Aggregate Tree  
-* [Logistics.Inventory.TransferOrdersOptions](Logistics.Inventory.TransferOrdersOptions.md)  
+Aggregate Parent:  
+[General.DocumentTypes](General.DocumentTypes.md)  
+Aggregate Root:  
+[General.DocumentTypes](General.DocumentTypes.md)  
 
 ## Attributes
 
@@ -32,7 +36,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DocumentType](Logistics.Inventory.TransferOrdersOptions.md#documenttype) | [DocumentTypes](General.DocumentTypes.md) | The document type, for which these options apply. `Required` `Filter(multi eq)` |
+| [DocumentType](Logistics.Inventory.TransferOrdersOptions.md#documenttype) | [DocumentTypes](General.DocumentTypes.md) | The document type, for which these options apply. `Required` `Filter(multi eq)` `Owner` |
 
 
 ## Attribute Details
@@ -78,11 +82,12 @@ _Supports Order By_: ****
 
 ### DocumentType
 
-The document type, for which these options apply. `Required` `Filter(multi eq)`
+The document type, for which these options apply. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[DocumentTypes](General.DocumentTypes.md)**  
 _Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
+_[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
 
 
 ## API Methods

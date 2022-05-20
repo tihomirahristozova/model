@@ -5,7 +5,11 @@ uid: Applications.Cms.WebModules
 
 **Namespace:** [Applications.Cms](Applications.Cms.md)  
 
-The abstract basic building block of web sites. Each module can render multiple web pages. Entity: Cms_Web_Modules
+The abstract basic building block of web sites. Each module can render multiple web pages. Entity: Cms_Web_Modules (Obsoleted in version 22.1.6.73)
+
+> [!NOTE]  
+> **OBSOLETE! Do not use!**   
+
 
 ## Default Visualization
 Default Display Text Format:  
@@ -40,8 +44,8 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Parent](Applications.Cms.WebModules.md#parent) | [WebModules](Applications.Cms.WebModules.md) (nullable) | The parent web Module. It can only be a module with Module Type = Category. Null means that the web Module is root web Module. `Filter(multi eq)` |
-| [WebSite](Applications.Cms.WebModules.md#website) | [WebSites](Applications.Cms.WebSites.md) | The web site to which the module belongs. `Required` `Filter(multi eq)` `Owner` |
+| [<s>Parent</s>](Applications.Cms.WebModules.md#parent) | [WebModules](Applications.Cms.WebModules.md) (nullable) | **OBSOLETE! Do not use!** The parent web Module. It can only be a module with Module Type = Category. Null means that the web Module is root web Module. `Obsolete` `Filter(multi eq)` `Obsoleted in version 22.1.6.74` `Obsolete` |
+| [<s>WebSite</s>](Applications.Cms.WebModules.md#website) | [WebSites](Applications.Cms.WebSites.md) | **OBSOLETE! Do not use!** The web site to which the module belongs. `Obsolete` `Required` `Filter(multi eq)` `Obsoleted in version 22.1.6.74` `Obsolete` `Owner` |
 
 
 ## Attribute Details
@@ -134,7 +138,7 @@ _Supports Order By_: ****
 
 ### Parent
 
-The parent web Module. It can only be a module with Module Type = Category. Null means that the web Module is root web Module. `Filter(multi eq)`
+**OBSOLETE! Do not use!** The parent web Module. It can only be a module with Module Type = Category. Null means that the web Module is root web Module. `Obsolete` `Filter(multi eq)` `Obsoleted in version 22.1.6.74` `Obsolete`
 
 _Type_: **[WebModules](Applications.Cms.WebModules.md) (nullable)**  
 _Category_: **System**  
@@ -142,7 +146,7 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### WebSite
 
-The web site to which the module belongs. `Required` `Filter(multi eq)` `Owner`
+**OBSOLETE! Do not use!** The web site to which the module belongs. `Obsolete` `Required` `Filter(multi eq)` `Obsoleted in version 22.1.6.74` `Obsolete` `Owner`
 
 _Type_: **[WebSites](Applications.Cms.WebSites.md)**  
 _Category_: **System**  
