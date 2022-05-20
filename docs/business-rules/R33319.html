@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>R33319 StoreTransaction - Line Fixed Measurement Ratios | ERP.net Domain Model </title>
+    <title>R33319 WarehouseTransaction - Line Fixed Measurement Ratios | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="R33319 StoreTransaction - Line Fixed Measurement Ratios | ERP.net Domain Model ">
+    <meta name="title" content="R33319 WarehouseTransaction - Line Fixed Measurement Ratios | ERP.net Domain Model ">
     <meta name="generator" content="docfx 2.56.9.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
@@ -70,7 +70,7 @@
         <div class="article row grid">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="r33319-storetransaction---line-fixed-measurement-ratios">R33319 StoreTransaction - Line Fixed Measurement Ratios</h1>
+<h1 id="r33319-warehousetransaction---line-fixed-measurement-ratios">R33319 WarehouseTransaction - Line Fixed Measurement Ratios</h1>
 
 <table>
 <col style="width:16.24%">
@@ -106,20 +106,16 @@
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td>If &quot;VariableMeasurementRatios = FALSE&quot; in the product's definition
-<br><br>
+<td>If Product.VariableMeasurementRatios = false
 , then validate that:
-<br><br>
-  &quot;Quantity Base = ROUND (Quantity,BaseMeasurementUnit), 3)&quot;
-<br><br>
+ &quot;Quantity Base = ROUND (Quantity,BaseMeasurementUnit), 3)&quot;
 OR 
-<br><br>
 &quot;Quantity = ROUND(CONVERT(QuantityBase, QuantityUnit), 3)&quot;.</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
 <td>Base quantity could be edited only for products that are allowed to use Variable Measurement
-Ratios. For more information about [Variable Measuremen Ratios](xref: VMR)
+Ratios. For more information about <a class="xref" href="https://erpnetdocs.github.io/tech/concepts/products/variable-dynamic-measurement-rations.html">Variable Measuremen Ratios</a>
 Otherwise if in the product definition is not set that it uses variable measurement ratios
 , then the product dimensions must be followed properly while recalculating base quantity.</td>
 </tr>
