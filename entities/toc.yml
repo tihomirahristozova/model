@@ -565,8 +565,6 @@
 - name: General
   href: General.md
   items:
-  - name: Config
-    href: General.Config.md
   - name: Contacts
     href: General.Contacts.md
     items:
@@ -1095,6 +1093,8 @@
       href: Systems.Core.AttributeChangesHistory.md
     - name: AuditLogEntries
       href: Systems.Core.AuditLogEntries.md
+    - name: Config
+      href: Systems.Core.Config.md
     - name: DataEntryDefaultValues
       href: Systems.Core.DataEntryDefaultValues.md
     - name: EntitySettings

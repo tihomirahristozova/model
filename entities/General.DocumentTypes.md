@@ -43,7 +43,9 @@ Aggregate Tree
     * [Finance.Accounting.Templates](Finance.Accounting.Templates.md)  
       * [Finance.Accounting.TemplateLines](Finance.Accounting.TemplateLines.md)  
         * [Finance.Accounting.TemplateLineProperties](Finance.Accounting.TemplateLineProperties.md)  
+    * [Finance.Payments.PaymentSlipPaymentTransactionsTemplates](Finance.Payments.PaymentSlipPaymentTransactionsTemplates.md)  
     * [Crm.Sales.SalesOrderPaymentOrdersTemplates](Crm.Sales.SalesOrderPaymentOrdersTemplates.md)  
+    * [Applications.Rental.TransactionTemplates](Applications.Rental.TransactionTemplates.md)  
 
 ## Attributes
 

@@ -1684,6 +1684,9 @@ references:
 - uid: Systems.Core.AuditLogEntries
   name: Systems.Core.AuditLogEntries Entity
   href: entities/Systems.Core.AuditLogEntries.html
+- uid: Systems.Core.Config
+  name: Systems.Core.Config Entity
+  href: entities/Systems.Core.Config.html
 - uid: Systems.Core.DataEntryDefaultValues
   name: Systems.Core.DataEntryDefaultValues Entity
   href: entities/Systems.Core.DataEntryDefaultValues.html

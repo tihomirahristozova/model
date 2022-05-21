@@ -7,6 +7,7 @@ uid: Systems.Core
 - [AttributeChanges](Systems.Core.AttributeChanges.md)  
 - [AttributeChangesHistory](Systems.Core.AttributeChangesHistory.md)  
 - [AuditLogEntries](Systems.Core.AuditLogEntries.md)  
+- [Config](Systems.Core.Config.md)  
 - [DataEntryDefaultValues](Systems.Core.DataEntryDefaultValues.md)  
 - [EntitySettings](Systems.Core.EntitySettings.md)  
 - [ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md)  

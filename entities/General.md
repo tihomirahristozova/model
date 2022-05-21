@@ -10,7 +10,6 @@ uid: General
 - [Resources](General.Resources.md)  
 
 ## Entities
-- [Config](General.Config.md)  
 - [Currencies](General.Currencies.md)  
 - [CurrencyDirectories](General.CurrencyDirectories.md)  
 - [CurrencyDirectoryLines](General.CurrencyDirectoryLines.md)  

@@ -9,15 +9,19 @@ Specifies additional options for document routes, generating Rental Transactions
 
 ## Default Visualization
 Default Display Text Format:  
-_{Id}: {RouteId}_  
+_{Route.ProcedureName}_  
 Default Search Members:  
-__  
+_Route.ProcedureName_  
+Name Data Member:  
+_Route.ProcedureName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
 
-Aggregate Tree  
-* [Applications.Rental.TransactionTemplates](Applications.Rental.TransactionTemplates.md)  
+Aggregate Parent:  
+[Systems.Workflow.Routes](Systems.Workflow.Routes.md)  
+Aggregate Root:  
+[General.DocumentTypes](General.DocumentTypes.md)  
 
 ## Attributes
 
@@ -32,7 +36,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Route](Applications.Rental.TransactionTemplates.md#route) | [Routes](Systems.Workflow.Routes.md) | The route for which the transaction template is defined. `Required` `Filter(multi eq)` |
+| [Route](Applications.Rental.TransactionTemplates.md#route) | [Routes](Systems.Workflow.Routes.md) | The route for which the transaction template is defined. `Required` `Filter(multi eq)` `Owner` |
 
 
 ## Attribute Details
@@ -87,11 +91,12 @@ _Supports Order By_: **False**
 
 ### Route
 
-The route for which the transaction template is defined. `Required` `Filter(multi eq)`
+The route for which the transaction template is defined. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[Routes](Systems.Workflow.Routes.md)**  
 _Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
+_[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
 
 
 ## API Methods

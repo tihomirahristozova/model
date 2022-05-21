@@ -11056,7 +11056,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Applications.Rental.TransactionTemplates.html",
-          "hash": "32j/nTlcafBBEs4BYr5f0Q=="
+          "hash": "L+teDYLCaa+Cr/CD5jn8PA=="
         }
       },
       "is_incremental": false,
@@ -13372,7 +13372,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Finance.Payments.PaymentSlipPaymentTransactionsTemplates.html",
-          "hash": "xWtRJ9B8PapMvG3hjj3wfg=="
+          "hash": "fENi+yvgFWH2D4IEKJEA5Q=="
         }
       },
       "is_incremental": false,
@@ -14200,7 +14200,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/General.DocumentTypes.html",
-          "hash": "gikV7CRK/WAOLsGJsyTqoA=="
+          "hash": "d23a7WQjllBjw2CphjZZ5w=="
         }
       },
       "is_incremental": false,
@@ -14860,7 +14860,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/General.html",
-          "hash": "qr9p/fbrjfd5Ddw7V58WHw=="
+          "hash": "dX3xoK5DmHg+JR3/OxKUZg=="
         }
       },
       "is_incremental": false,
@@ -16860,6 +16860,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "entities/Systems.Core.Config.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Systems.Core.Config.html",
+          "hash": "92KAi9iDoiRrKCvXKCpD+A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "entities/Systems.Core.DataEntryDefaultValues.md",
       "output": {
         ".html": {
@@ -17068,7 +17080,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Systems.Core.html",
-          "hash": "gMSIZOMO3Ltif7U5oIv6lg=="
+          "hash": "SmNJQJBQ+ua2T8gZYFAqAQ=="
         }
       },
       "is_incremental": false,
@@ -17404,7 +17416,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Systems.Workflow.Routes.html",
-          "hash": "OVpZc24LlAkqpGrIaXEBJQ=="
+          "hash": "2ujFzzt/MwPzNOK+ZRnEcQ=="
         }
       },
       "is_incremental": false,
@@ -17452,7 +17464,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/toc.html",
-          "hash": "WHFcCIpKC90wVb0Hxt+w0g=="
+          "hash": "6OadtXRJVIERFXsh/Ob5NA=="
         }
       },
       "is_incremental": false,
@@ -18714,7 +18726,7 @@
       "output": {
         ".html": {
           "relative_path": "tables/Cash_Payment_Slip_Payment_Transactions_Templates.html",
-          "hash": "uNb+pxxxEfQDsdk35x71dQ=="
+          "hash": "t0PxzpY2kCY8zHs2mZfSfQ=="
         }
       },
       "is_incremental": false,
@@ -20826,7 +20838,7 @@
       "output": {
         ".html": {
           "relative_path": "tables/Gen_Config.html",
-          "hash": "3aH62ZGQBo7rXE3b4yqWIA=="
+          "hash": "kB8f5dk7VNE733xbIP8U7g=="
         }
       },
       "is_incremental": false,
@@ -23730,7 +23742,7 @@
       "output": {
         ".html": {
           "relative_path": "tables/Rent_Transaction_Templates.html",
-          "hash": "b+ELgIQfbFFx2r92vqsvhw=="
+          "hash": "uPofUAz0awDzH+PYFkAlEw=="
         }
       },
       "is_incremental": false,

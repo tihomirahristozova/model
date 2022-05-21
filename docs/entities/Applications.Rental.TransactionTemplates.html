@@ -83,15 +83,17 @@
 <p>Specifies additional options for document routes, generating Rental Transactions. Entity: Rent_Transaction_Templates</p>
 <h2 id="default-visualization">Default Visualization</h2>
 <p>Default Display Text Format:<br>
-<em>{Id}: {RouteId}</em><br>
+<em>{Route.ProcedureName}</em><br>
 Default Search Members:<br>
-__</p>
+<em>Route.ProcedureName</em><br>
+Name Data Member:<br>
+<em>Route.ProcedureName</em></p>
 <h2 id="aggregate">Aggregate</h2>
 <p>An <a href="https://docs.erp.net/tech/advanced/concepts/aggregates.html">aggregate</a> is a cluster of domain objects that can be treated as a single unit.</p>
-<p>Aggregate Tree</p>
-<ul>
-<li><a href="Applications.Rental.TransactionTemplates.html">Applications.Rental.TransactionTemplates</a></li>
-</ul>
+<p>Aggregate Parent:<br>
+<a href="Systems.Workflow.Routes.html">Systems.Workflow.Routes</a><br>
+Aggregate Root:<br>
+<a href="General.DocumentTypes.html">General.DocumentTypes</a></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -137,7 +139,7 @@ __</p>
 <tr>
 <td><a href="Applications.Rental.TransactionTemplates.html#route">Route</a></td>
 <td><a href="Systems.Workflow.Routes.html">Routes</a></td>
-<td>The route for which the transaction template is defined. <code>Required</code> <code>Filter(multi eq)</code></td>
+<td>The route for which the transaction template is defined. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 </tbody>
 </table>
@@ -196,10 +198,11 @@ Allowed values for the <code>TransactionType</code>(Applications.Rental.Transact
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="route">Route</h3>
-<p>The route for which the transaction template is defined. <code>Required</code> <code>Filter(multi eq)</code></p>
+<p>The route for which the transaction template is defined. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
 <p><em>Type</em>: <strong><a href="Systems.Workflow.Routes.html">Routes</a></strong><br>
 <em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em><a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a></em>: <strong>True</strong></p>
 <h2 id="api-methods">API Methods</h2>
 <p>Methods that can be invoked in public APIs.</p>
 <h3 id="getallowedcustompropertyvalues">GetAllowedCustomPropertyValues</h3>
