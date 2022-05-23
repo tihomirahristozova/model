@@ -110,7 +110,7 @@ Aggregate Tree
 | [ResponsibleParty](Applications.Service.ServiceActivities.md#responsibleparty) | [Parties](General.Contacts.Parties.md) | Who is responsible for executing the task. Initially this is the owner of the task. `Required` `Filter(multi eq)` (Inherited from [Activities](General.Contacts.Activities.md)) |
 | [ResponsiblePerson](Applications.Service.ServiceActivities.md#responsibleperson) | [Persons](General.Contacts.Persons.md) (nullable) | The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc. `Filter(multi eq)` (Inherited from [Documents](General.Documents.md)) |
 | [ReverseOfDocument](Applications.Service.ServiceActivities.md#reverseofdocument) | [Documents](General.Documents.md) (nullable) | The document which the current document is reverse of. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) |
-| [Sequence](Applications.Service.ServiceActivities.md#sequence) | [Sequences](General.Sequences.md) (nullable) | The sequence that will be used to give new numbers to the documents of this type. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) |
+| [Sequence](Applications.Service.ServiceActivities.md#sequence) | [Sequences](Systems.Core.Sequences.md) (nullable) | The sequence that will be used to give new numbers to the documents of this type. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) |
 | [ServiceAgreement](Applications.Service.ServiceActivities.md#serviceagreement) | [ServiceAgreements](Applications.Service.ServiceAgreements.md) (nullable) | The service agreement under which the work was done. `Filter(multi eq)` |
 | [ShipToCustomer](Applications.Service.ServiceActivities.md#shiptocustomer) | [Customers](Crm.Customers.md) (nullable) | Specific customer location of the main customer that receives the work. `Filter(multi eq)` |
 | [Store](Applications.Service.ServiceActivities.md#store) | [Stores](Logistics.Inventory.Stores.md) (nullable) | The default store from which materials are taken. `Filter(multi eq)` |
@@ -765,7 +765,7 @@ _Supported Filters_: **Equals, EqualsIn**
 
 The sequence that will be used to give new numbers to the documents of this type. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.md))
 
-_Type_: **[Sequences](General.Sequences.md) (nullable)**  
+_Type_: **[Sequences](Systems.Core.Sequences.md) (nullable)**  
 _Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
@@ -938,6 +938,12 @@ _Domain API Request_: **POST**
 
      _Optional_: True  
     _Default Value_: VoidDocument  
+
+  * **resetParentState**  
+    Resets the parent state of document.  
+    _Type_: boolean  
+     _Optional_: True  
+    _Default Value_: True  
 
 
 ### GetPrintout

@@ -19,9 +19,9 @@ _Sequence.Name_
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
 
 Aggregate Parent:  
-[General.Sequences](General.Sequences.md)  
+[Systems.Core.Sequences](Systems.Core.Sequences.md)  
 Aggregate Root:  
-[General.Sequences](General.Sequences.md)  
+[Systems.Core.Sequences](Systems.Core.Sequences.md)  
 
 ## Attributes
 
@@ -41,7 +41,7 @@ Aggregate Root:
 | [EnterpriseCompany](General.SequenceGenerators.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The Enterprise Company to which this SequenceGenerator applies. `Required` `Filter(multi eq)` |
 | [EnterpriseCompanyLocation](General.SequenceGenerators.md#enterprisecompanylocation) | [CompanyLocations](General.Contacts.CompanyLocations.md) (nullable) | The Enterprise Company Location to which this SequenceGenerator applies, or null if it is for all enterprise company locations. `Filter(multi eq)` |
 | [ResponsiblePerson](General.SequenceGenerators.md#responsibleperson) | [Persons](General.Contacts.Persons.md) (nullable) | If specified then the generator is designated for use only in documents with that Responsible_Person_Id. `Filter(multi eq)` |
-| [Sequence](General.SequenceGenerators.md#sequence) | [Sequences](General.Sequences.md) | The <see cref="Sequence"/> to which this SequenceGenerator belongs. `Required` `Filter(multi eq)` `Owner` |
+| [Sequence](General.SequenceGenerators.md#sequence) | [Sequences](Systems.Core.Sequences.md) | The <see cref="Systems.Core.Sequence"/> to which this SequenceGenerator belongs. `Required` `Filter(multi eq)` `Owner` |
 
 
 ## Attribute Details
@@ -132,9 +132,9 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### Sequence
 
-The <see cref="Sequence"/> to which this SequenceGenerator belongs. `Required` `Filter(multi eq)` `Owner`
+The <see cref="Systems.Core.Sequence"/> to which this SequenceGenerator belongs. `Required` `Filter(multi eq)` `Owner`
 
-_Type_: **[Sequences](General.Sequences.md)**  
+_Type_: **[Sequences](Systems.Core.Sequences.md)**  
 _Indexed_: **True**  
 _Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  

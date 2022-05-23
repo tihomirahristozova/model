@@ -414,7 +414,7 @@ Code Data Member:<br>
 </tr>
 <tr>
 <td><a href="General.Contacts.Activities.html#sequence">Sequence</a></td>
-<td><a href="General.Sequences.html">Sequences</a> (nullable)</td>
+<td><a href="Systems.Core.Sequences.html">Sequences</a> (nullable)</td>
 <td>The sequence that will be used to give new numbers to the documents of this type. <code>Filter(multi eq)</code> <code>ReadOnly</code> (Inherited from <a href="General.Documents.html">Documents</a>)</td>
 </tr>
 <tr>
@@ -989,7 +989,7 @@ Allowed values for the <code>SystemType</code>(General.Contacts.Activities.md#sy
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="sequence">Sequence</h3>
 <p>The sequence that will be used to give new numbers to the documents of this type. <code>Filter(multi eq)</code> <code>ReadOnly</code> (Inherited from <a href="General.Documents.html">Documents</a>)</p>
-<p><em>Type</em>: <strong><a href="General.Sequences.html">Sequences</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="Systems.Core.Sequences.html">Sequences</a> (nullable)</strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="targetparty">TargetParty</h3>
@@ -1166,6 +1166,12 @@ Specifies the type of void operation<br>
 </table>
 <p><em>Optional</em>: True<br>
 <em>Default Value</em>: VoidDocument</p>
+</li>
+<li><p><strong>resetParentState</strong><br>
+Resets the parent state of document.<br>
+<em>Type</em>: boolean<br>
+<em>Optional</em>: True<br>
+<em>Default Value</em>: True</p>
 </li>
 </ul>
 <h3 id="getprintout">GetPrintout</h3>

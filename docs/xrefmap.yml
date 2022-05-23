@@ -1072,6 +1072,9 @@ references:
 - uid: General.Products.CodingSystems
   name: General.Products.CodingSystems Entity
   href: entities/General.Products.CodingSystems.html
+- uid: General.Products.ProductCatalogs
+  name: General.Products.ProductCatalogs Entity
+  href: entities/General.Products.ProductCatalogs.html
 - uid: General.Products.ProductCodes
   name: General.Products.ProductCodes Entity
   href: entities/General.Products.ProductCodes.html
@@ -1720,6 +1723,12 @@ references:
 - uid: Systems.Core.ResolvedConflicts
   name: Systems.Core.ResolvedConflicts Entity
   href: entities/Systems.Core.ResolvedConflicts.html
+- uid: Systems.Core.ScheduledDocumentEvents
+  name: Systems.Core.ScheduledDocumentEvents Entity
+  href: entities/Systems.Core.ScheduledDocumentEvents.html
+- uid: Systems.Core.Sequences
+  name: Systems.Core.Sequences Entity
+  href: entities/Systems.Core.Sequences.html
 - uid: Systems.Core.TextTranslations
   name: Systems.Core.TextTranslations Entity
   href: entities/Systems.Core.TextTranslations.html

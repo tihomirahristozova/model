@@ -103,7 +103,7 @@ Aggregate Tree
 | [ResponsibleParty](Applications.AssetManagement.MaintenanceOrders.md#responsibleparty) | [Parties](General.Contacts.Parties.md) | Who is responsible for executing the task. Initially this is the owner of the task. `Required` `Filter(multi eq)` (Inherited from [Activities](General.Contacts.Activities.md)) |
 | [ResponsiblePerson](Applications.AssetManagement.MaintenanceOrders.md#responsibleperson) | [Persons](General.Contacts.Persons.md) (nullable) | The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc. `Filter(multi eq)` (Inherited from [Documents](General.Documents.md)) |
 | [ReverseOfDocument](Applications.AssetManagement.MaintenanceOrders.md#reverseofdocument) | [Documents](General.Documents.md) (nullable) | The document which the current document is reverse of. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) |
-| [Sequence](Applications.AssetManagement.MaintenanceOrders.md#sequence) | [Sequences](General.Sequences.md) (nullable) | The sequence that will be used to give new numbers to the documents of this type. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) |
+| [Sequence](Applications.AssetManagement.MaintenanceOrders.md#sequence) | [Sequences](Systems.Core.Sequences.md) (nullable) | The sequence that will be used to give new numbers to the documents of this type. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) |
 | [ServiceCenter](Applications.AssetManagement.MaintenanceOrders.md#servicecenter) | [ServiceCenters](Applications.AssetManagement.ServiceCenters.md) | The service center, which will perform the maintenance. `Required` `Filter(multi eq)` |
 | [TargetParty](Applications.AssetManagement.MaintenanceOrders.md#targetparty) | [Parties](General.Contacts.Parties.md) (nullable) | External participant or target of the task. `Filter(multi eq)` (Inherited from [Activities](General.Contacts.Activities.md)) |
 | [ToCompanyDivision](Applications.AssetManagement.MaintenanceOrders.md#tocompanydivision) | [CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable) | The division of the company, receiving the document. null when the document is not received by any specific division. `Filter(multi eq)` (Inherited from [Documents](General.Documents.md)) |
@@ -712,7 +712,7 @@ _Supported Filters_: **Equals, EqualsIn**
 
 The sequence that will be used to give new numbers to the documents of this type. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.md))
 
-_Type_: **[Sequences](General.Sequences.md) (nullable)**  
+_Type_: **[Sequences](Systems.Core.Sequences.md) (nullable)**  
 _Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
@@ -865,6 +865,12 @@ _Domain API Request_: **POST**
 
      _Optional_: True  
     _Default Value_: VoidDocument  
+
+  * **resetParentState**  
+    Resets the parent state of document.  
+    _Type_: boolean  
+     _Optional_: True  
+    _Default Value_: True  
 
 
 ### GetPrintout

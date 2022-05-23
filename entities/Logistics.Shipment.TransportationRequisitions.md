@@ -86,7 +86,7 @@ Aggregate Tree
 | [PrimeCauseDocument](Logistics.Shipment.TransportationRequisitions.md#primecausedocument) | [Documents](General.Documents.md) (nullable) | The document that is the prime cause for creation of the current document. `Filter(multi eq)` (Inherited from [Documents](General.Documents.md)) |
 | [ResponsiblePerson](Logistics.Shipment.TransportationRequisitions.md#responsibleperson) | [Persons](General.Contacts.Persons.md) (nullable) | The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc. `Filter(multi eq)` (Inherited from [Documents](General.Documents.md)) |
 | [ReverseOfDocument](Logistics.Shipment.TransportationRequisitions.md#reverseofdocument) | [Documents](General.Documents.md) (nullable) | The document which the current document is reverse of. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) |
-| [Sequence](Logistics.Shipment.TransportationRequisitions.md#sequence) | [Sequences](General.Sequences.md) (nullable) | The sequence that will be used to give new numbers to the documents of this type. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) |
+| [Sequence](Logistics.Shipment.TransportationRequisitions.md#sequence) | [Sequences](Systems.Core.Sequences.md) (nullable) | The sequence that will be used to give new numbers to the documents of this type. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) |
 | [ToCompanyDivision](Logistics.Shipment.TransportationRequisitions.md#tocompanydivision) | [CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable) | The division of the company, receiving the document. null when the document is not received by any specific division. `Filter(multi eq)` (Inherited from [Documents](General.Documents.md)) |
 | [ToParty](Logistics.Shipment.TransportationRequisitions.md#toparty) | [Parties](General.Contacts.Parties.md) (nullable) | The party which should receive the document. `Filter(multi eq)` (Inherited from [Documents](General.Documents.md)) |
 | [TransportFromGeoPoint](Logistics.Shipment.TransportationRequisitions.md#transportfromgeopoint) | [GeoPoints](General.Geography.GeoPoints.md) (nullable) | Geographical location of the loading, if available. `Filter(multi eq)` |
@@ -544,7 +544,7 @@ _Supported Filters_: **Equals, EqualsIn**
 
 The sequence that will be used to give new numbers to the documents of this type. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.md))
 
-_Type_: **[Sequences](General.Sequences.md) (nullable)**  
+_Type_: **[Sequences](Systems.Core.Sequences.md) (nullable)**  
 _Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
@@ -729,6 +729,12 @@ _Domain API Request_: **POST**
 
      _Optional_: True  
     _Default Value_: VoidDocument  
+
+  * **resetParentState**  
+    Resets the parent state of document.  
+    _Type_: boolean  
+     _Optional_: True  
+    _Default Value_: True  
 
 
 ### GetPrintout

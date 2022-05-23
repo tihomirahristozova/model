@@ -5,6 +5,7 @@ uid: General.Products
 
 ## Entities
 - [CodingSystems](General.Products.CodingSystems.md)  
+- [ProductCatalogs](General.Products.ProductCatalogs.md)  
 - [ProductCodes](General.Products.ProductCodes.md)  
 - [ProductDimensions](General.Products.ProductDimensions.md)  
 - [ProductDocumentAmounts](General.Products.ProductDocumentAmounts.md)  

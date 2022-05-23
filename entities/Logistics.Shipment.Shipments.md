@@ -87,7 +87,7 @@ Aggregate Tree
 | [ReceivedByPerson](Logistics.Shipment.Shipments.md#receivedbyperson) | [Persons](General.Contacts.Persons.md) (nullable) | The person who received the goods for/from the shipment . `Filter(multi eq)` |
 | [ResponsiblePerson](Logistics.Shipment.Shipments.md#responsibleperson) | [Persons](General.Contacts.Persons.md) (nullable) | The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc. `Filter(multi eq)` (Inherited from [Documents](General.Documents.md)) |
 | [ReverseOfDocument](Logistics.Shipment.Shipments.md#reverseofdocument) | [Documents](General.Documents.md) (nullable) | The document which the current document is reverse of. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) |
-| [Sequence](Logistics.Shipment.Shipments.md#sequence) | [Sequences](General.Sequences.md) (nullable) | The sequence that will be used to give new numbers to the documents of this type. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) |
+| [Sequence](Logistics.Shipment.Shipments.md#sequence) | [Sequences](Systems.Core.Sequences.md) (nullable) | The sequence that will be used to give new numbers to the documents of this type. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) |
 | [ShipFromStore](Logistics.Shipment.Shipments.md#shipfromstore) | [Stores](Logistics.Inventory.Stores.md) | The store from which the shipment should be effected. `Required` `Filter(multi eq)` |
 | [ShipToPartyContact<br />Mechanism](Logistics.Shipment.Shipments.md#shiptopartycontactmechanism) | [PartyContactMechanisms](General.Contacts.PartyContactMechanisms.md) | Destination address where the goods should be shipped. `Required` `Filter(multi eq)` |
 | [ToCompanyDivision](Logistics.Shipment.Shipments.md#tocompanydivision) | [CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable) | The division of the company, receiving the document. null when the document is not received by any specific division. `Filter(multi eq)` (Inherited from [Documents](General.Documents.md)) |
@@ -552,7 +552,7 @@ _Supported Filters_: **Equals, EqualsIn**
 
 The sequence that will be used to give new numbers to the documents of this type. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.md))
 
-_Type_: **[Sequences](General.Sequences.md) (nullable)**  
+_Type_: **[Sequences](Systems.Core.Sequences.md) (nullable)**  
 _Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
@@ -705,6 +705,12 @@ _Domain API Request_: **POST**
 
      _Optional_: True  
     _Default Value_: VoidDocument  
+
+  * **resetParentState**  
+    Resets the parent state of document.  
+    _Type_: boolean  
+     _Optional_: True  
+    _Default Value_: True  
 
 
 ### GetPrintout

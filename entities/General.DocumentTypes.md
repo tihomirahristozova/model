@@ -37,6 +37,7 @@ Aggregate Tree
   * [General.Printouts](General.Printouts.md)  
   * [Logistics.Inventory.CostCorrectionsOptions](Logistics.Inventory.CostCorrectionsOptions.md)  
   * [Logistics.Inventory.TransferOrdersOptions](Logistics.Inventory.TransferOrdersOptions.md)  
+  * [Production.WorkOrderDocumentTypesOptions](Production.WorkOrderDocumentTypesOptions.md)  
   * [Logistics.Procurement.PurchaseInvoicesOptions](Logistics.Procurement.PurchaseInvoicesOptions.md)  
   * [Systems.Workflow.Routes](Systems.Workflow.Routes.md)  
     * [Finance.Accounting.TemplateRouteLinks](Finance.Accounting.TemplateRouteLinks.md)  
@@ -71,7 +72,7 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [AccessKey](General.DocumentTypes.md#accesskey) | [AccessKeys](Systems.Security.AccessKeys.md) (nullable) | The access key, containing the user permissions for this DocumentType. Null means that all users have unlimited permissions. `Filter(multi eq)` |
-| [Sequence](General.DocumentTypes.md#sequence) | [Sequences](General.Sequences.md) (nullable) | The sequence that will be used to give new numbers to the documents of this type. `Filter(multi eq)` |
+| [Sequence](General.DocumentTypes.md#sequence) | [Sequences](Systems.Core.Sequences.md) (nullable) | The sequence that will be used to give new numbers to the documents of this type. `Filter(multi eq)` |
 
 ## Child Collections
 
@@ -94,6 +95,7 @@ Aggregate Tree
 | SecurityConditions | [DocumentTypeSecurityConditions](General.DocumentTypeSecurityConditions.md) | List of `DocumentTypeSecurity<br />Condition`(General.DocumentTypeSecurity<br />Conditions.md) child objects, based on the `General.DocumentTypeSecurity<br />Condition.DocumentType`(General.DocumentTypeSecurity<br />Conditions.md#documenttype) back reference 
 | TransferOrdersOptions | [TransferOrdersOptions](Logistics.Inventory.TransferOrdersOptions.md) | List of `TransferOrdersOption`(Logistics.Inventory.TransferOrdersOptions.md) child objects, based on the `Logistics.Inventory.TransferOrdersOption.DocumentType`(Logistics.Inventory.TransferOrdersOptions.md#documenttype) back reference 
 | UserStatuses | [DocumentTypeUserStatuses](General.DocumentTypeUserStatuses.md) | List of `DocumentTypeUserStatus`(General.DocumentTypeUserStatuses.md) child objects, based on the `General.DocumentTypeUserStatus.DocumentType`(General.DocumentTypeUserStatuses.md#documenttype) back reference 
+| WorkOrderDocument<br />TypesOptions | [WorkOrderDocumentTypesOptions](Production.WorkOrderDocumentTypesOptions.md) | List of `WorkOrderDocument<br />TypesOption`(Production.WorkOrderDocument<br />TypesOptions.md) child objects, based on the `Production.WorkOrderDocument<br />TypesOption.DocumentType`(Production.WorkOrderDocument<br />TypesOptions.md#documenttype) back reference 
 
 
 ## Attribute Details
@@ -254,7 +256,7 @@ _Supported Filters_: **Equals, EqualsIn**
 
 The sequence that will be used to give new numbers to the documents of this type. `Filter(multi eq)`
 
-_Type_: **[Sequences](General.Sequences.md) (nullable)**  
+_Type_: **[Sequences](Systems.Core.Sequences.md) (nullable)**  
 _Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 

@@ -111,6 +111,7 @@ Name Data Member:<br>
 <li><a href="General.Printouts.html">General.Printouts</a></li>
 <li><a href="Logistics.Inventory.CostCorrectionsOptions.html">Logistics.Inventory.CostCorrectionsOptions</a></li>
 <li><a href="Logistics.Inventory.TransferOrdersOptions.html">Logistics.Inventory.TransferOrdersOptions</a></li>
+<li><a href="Production.WorkOrderDocumentTypesOptions.html">Production.WorkOrderDocumentTypesOptions</a></li>
 <li><a href="Logistics.Procurement.PurchaseInvoicesOptions.html">Logistics.Procurement.PurchaseInvoicesOptions</a></li>
 <li><a href="Systems.Workflow.Routes.html">Systems.Workflow.Routes</a>
 <ul>
@@ -231,7 +232,7 @@ Name Data Member:<br>
 </tr>
 <tr>
 <td><a href="General.DocumentTypes.html#sequence">Sequence</a></td>
-<td><a href="General.Sequences.html">Sequences</a> (nullable)</td>
+<td><a href="Systems.Core.Sequences.html">Sequences</a> (nullable)</td>
 <td>The sequence that will be used to give new numbers to the documents of this type. <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
@@ -330,6 +331,11 @@ Name Data Member:<br>
 <td>UserStatuses</td>
 <td><a href="General.DocumentTypeUserStatuses.html">DocumentTypeUserStatuses</a></td>
 <td>List of <code>DocumentTypeUserStatus</code>(General.DocumentTypeUserStatuses.md) child objects, based on the <code>General.DocumentTypeUserStatus.DocumentType</code>(General.DocumentTypeUserStatuses.md#documenttype) back reference</td>
+</tr>
+<tr>
+<td>WorkOrderDocument<br>TypesOptions</td>
+<td><a href="Production.WorkOrderDocumentTypesOptions.html">WorkOrderDocumentTypesOptions</a></td>
+<td>List of <code>WorkOrderDocument&lt;br /&gt;TypesOption</code>(Production.WorkOrderDocument<br>TypesOptions.md) child objects, based on the <code>Production.WorkOrderDocument&lt;br /&gt;TypesOption.DocumentType</code>(Production.WorkOrderDocument<br>TypesOptions.md#documenttype) back reference</td>
 </tr>
 </tbody>
 </table>
@@ -442,7 +448,7 @@ Name Data Member:<br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="sequence">Sequence</h3>
 <p>The sequence that will be used to give new numbers to the documents of this type. <code>Filter(multi eq)</code></p>
-<p><em>Type</em>: <strong><a href="General.Sequences.html">Sequences</a> (nullable)</strong><br>
+<p><em>Type</em>: <strong><a href="Systems.Core.Sequences.html">Sequences</a> (nullable)</strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="api-methods">API Methods</h2>

@@ -9,15 +9,19 @@ Options for user-defined Work Order document types. Entity: Prd_Work_Order_Docum
 
 ## Default Visualization
 Default Display Text Format:  
-_{Id}: {DocumentTypeId}_  
+_{DocumentType.EntityName}_  
 Default Search Members:  
-__  
+_DocumentType.EntityName_  
+Name Data Member:  
+_DocumentType.EntityName_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
 
-Aggregate Tree  
-* [Production.WorkOrderDocumentTypesOptions](Production.WorkOrderDocumentTypesOptions.md)  
+Aggregate Parent:  
+[General.DocumentTypes](General.DocumentTypes.md)  
+Aggregate Root:  
+[General.DocumentTypes](General.DocumentTypes.md)  
 
 ## Attributes
 
@@ -32,7 +36,7 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [CompletingOutput<br />OrderDocumentType](Production.WorkOrderDocumentTypesOptions.md#completingoutputorderdocumenttype) | [DocumentTypes](General.DocumentTypes.md) (nullable) | User-defined Completing Output Order document type. `Filter(multi eq)` |
-| [DocumentType](Production.WorkOrderDocumentTypesOptions.md#documenttype) | [DocumentTypes](General.DocumentTypes.md) | User-defined Work Order document type. `Required` `Filter(multi eq)` |
+| [DocumentType](Production.WorkOrderDocumentTypesOptions.md#documenttype) | [DocumentTypes](General.DocumentTypes.md) | User-defined Work Order document type. `Required` `Filter(multi eq)` `Owner` |
 
 
 ## Attribute Details
@@ -76,12 +80,13 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### DocumentType
 
-User-defined Work Order document type. `Required` `Filter(multi eq)`
+User-defined Work Order document type. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[DocumentTypes](General.DocumentTypes.md)**  
 _Indexed_: **True**  
 _Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
+_[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
 
 
 ## API Methods

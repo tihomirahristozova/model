@@ -85,7 +85,7 @@ Aggregate Tree
 | [PrimeCauseDocument](Applications.Service.ServiceOrders.md#primecausedocument) | [Documents](General.Documents.md) (nullable) | The document that is the prime cause for creation of the current document. `Filter(multi eq)` (Inherited from [Documents](General.Documents.md)) |
 | [ResponsiblePerson](Applications.Service.ServiceOrders.md#responsibleperson) | [Persons](General.Contacts.Persons.md) (nullable) | The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc. `Filter(multi eq)` (Inherited from [Documents](General.Documents.md)) |
 | [ReverseOfDocument](Applications.Service.ServiceOrders.md#reverseofdocument) | [Documents](General.Documents.md) (nullable) | The document which the current document is reverse of. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) |
-| [Sequence](Applications.Service.ServiceOrders.md#sequence) | [Sequences](General.Sequences.md) (nullable) | The sequence that will be used to give new numbers to the documents of this type. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) |
+| [Sequence](Applications.Service.ServiceOrders.md#sequence) | [Sequences](Systems.Core.Sequences.md) (nullable) | The sequence that will be used to give new numbers to the documents of this type. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) |
 | [ServiceAgreement](Applications.Service.ServiceOrders.md#serviceagreement) | [ServiceAgreements](Applications.Service.ServiceAgreements.md) (nullable) | When not null denotes that the order will be bound to the terms in the specified agreement. `Filter(multi eq)` |
 | [ShipToCustomer](Applications.Service.ServiceOrders.md#shiptocustomer) | [Customers](Crm.Customers.md) (nullable) | Customer location of the main customer from which the service object is taken. `Filter(multi eq)` |
 | [Store](Applications.Service.ServiceOrders.md#store) | [Stores](Logistics.Inventory.Stores.md) (nullable) | The store in which to physically store service objects, received for servicing. Need to be specified only when serviced objects are managed through warehouse; otherwise, it is null. `Filter(multi eq)` |
@@ -534,7 +534,7 @@ _Supported Filters_: **Equals, EqualsIn**
 
 The sequence that will be used to give new numbers to the documents of this type. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.md))
 
-_Type_: **[Sequences](General.Sequences.md) (nullable)**  
+_Type_: **[Sequences](Systems.Core.Sequences.md) (nullable)**  
 _Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 
@@ -697,6 +697,12 @@ _Domain API Request_: **POST**
 
      _Optional_: True  
     _Default Value_: VoidDocument  
+
+  * **resetParentState**  
+    Resets the parent state of document.  
+    _Type_: boolean  
+     _Optional_: True  
+    _Default Value_: True  
 
 
 ### GetPrintout

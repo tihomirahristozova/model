@@ -47,7 +47,6 @@ uid: General
 - [PartyLocationNumbers](General.PartyLocationNumbers.md)  
 - [PrintoutLayouts](General.PrintoutLayouts.md)  
 - [Printouts](General.Printouts.md)  
-- [ProductCatalogs](General.ProductCatalogs.md)  
 - [ProductGroupsLevelNames](General.ProductGroupsLevelNames.md)  
 - [ProductVariants](General.ProductVariants.md)  
 - [PropertiesCategories](General.PropertiesCategories.md)  
@@ -55,7 +54,5 @@ uid: General
 - [PropertyValues](General.PropertyValues.md)  
 - [ReportQueries](General.ReportQueries.md)  
 - [Reports](General.Reports.md)  
-- [ScheduledDocumentEvents](General.ScheduledDocumentEvents.md)  
 - [SequenceGenerators](General.SequenceGenerators.md)  
-- [Sequences](General.Sequences.md)  
 

@@ -702,8 +702,6 @@
     href: General.PrintoutLayouts.md
   - name: Printouts
     href: General.Printouts.md
-  - name: ProductCatalogs
-    href: General.ProductCatalogs.md
   - name: ProductGroupsLevelNames
     href: General.ProductGroupsLevelNames.md
   - name: Products
@@ -711,6 +709,8 @@
     items:
     - name: CodingSystems
       href: General.Products.CodingSystems.md
+    - name: ProductCatalogs
+      href: General.Products.ProductCatalogs.md
     - name: ProductCodes
       href: General.Products.ProductCodes.md
     - name: ProductDimensions
@@ -768,12 +768,8 @@
       href: General.Resources.WorkSchedules.md
     - name: WorkScheduleWorkingTime
       href: General.Resources.WorkScheduleWorkingTime.md
-  - name: ScheduledDocumentEvents
-    href: General.ScheduledDocumentEvents.md
   - name: SequenceGenerators
     href: General.SequenceGenerators.md
-  - name: Sequences
-    href: General.Sequences.md
 - name: Logistics
   href: Logistics.md
   items:
@@ -1117,6 +1113,10 @@
       href: Systems.Core.ObjectVersions.md
     - name: ResolvedConflicts
       href: Systems.Core.ResolvedConflicts.md
+    - name: ScheduledDocumentEvents
+      href: Systems.Core.ScheduledDocumentEvents.md
+    - name: Sequences
+      href: Systems.Core.Sequences.md
     - name: Translations
       href: Systems.Core.Translations.md
     - name: UpdateProcedureExecutes
