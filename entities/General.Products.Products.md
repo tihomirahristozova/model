@@ -23,11 +23,11 @@ An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a
 Aggregate Tree  
 * [General.Products.Products](General.Products.Products.md)  
   * [Crm.Marketing.ProductDistributionChannels](Crm.Marketing.ProductDistributionChannels.md)  
-  * [General.ProductVariants](General.ProductVariants.md)  
   * [General.Products.ProductCodes](General.Products.ProductCodes.md)  
   * [General.Products.ProductDimensions](General.Products.ProductDimensions.md)  
   * [General.Products.ProductDocumentAmounts](General.Products.ProductDocumentAmounts.md)  
   * [General.Products.ProductPictures](General.Products.ProductPictures.md)  
+  * [General.Products.ProductVariants](General.Products.ProductVariants.md)  
   * [Logistics.Inventory.ProductDefaultStoreBins](Logistics.Inventory.ProductDefaultStoreBins.md)  
 
 ## Attributes
@@ -103,7 +103,7 @@ Aggregate Tree
 | Prices | [ProductPrices](Crm.ProductPrices.md) | List of `ProductPrice`(Crm.ProductPrices.md) child objects, based on the `Crm.ProductPrice.Product`(Crm.ProductPrices.md#product) back reference 
 | PurchaseProductPrices | [PurchaseProductPrices](Logistics.Procurement.PurchaseProductPrices.md) | List of `PurchaseProductPrice`(Logistics.Procurement.PurchaseProductPrices.md) child objects, based on the `Logistics.Procurement.PurchaseProductPrice.Product`(Logistics.Procurement.PurchaseProductPrices.md#product) back reference 
 | SerialNumbers | [SerialNumbers](Logistics.Inventory.SerialNumbers.md) | List of `SerialNumber`(Logistics.Inventory.SerialNumbers.md) child objects, based on the `Logistics.Inventory.SerialNumber.Product`(Logistics.Inventory.SerialNumbers.md#product) back reference 
-| Variants | [ProductVariants](General.ProductVariants.md) | List of `ProductVariant`(General.ProductVariants.md) child objects, based on the `General.ProductVariant.Product`(General.ProductVariants.md#product) back reference 
+| Variants | [ProductVariants](General.Products.ProductVariants.md) | List of `ProductVariant`(General.Products.ProductVariants.md) child objects, based on the `General.Products.ProductVariant.Product`(General.Products.ProductVariants.md#product) back reference 
 
 
 ## Attribute Details

@@ -44,7 +44,7 @@ Aggregate Root:
 | [Lot](Logistics.Inventory.ReconciliationLines.md#lot) | [Lots](Logistics.Inventory.Lots.md) (nullable) | The lot, which was reconciled. `Filter(multi eq)` |
 | [Product](Logistics.Inventory.ReconciliationLines.md#product) | [Products](General.Products.Products.md) | The id of the reconciled product. `Required` `Filter(multi eq)` |
 | [ProductCode](Logistics.Inventory.ReconciliationLines.md#productcode) | [ProductCodes](General.Products.ProductCodes.md) (nullable) | Selects the product thru some of the product codes. `Filter(multi eq)` |
-| [ProductVariant](Logistics.Inventory.ReconciliationLines.md#productvariant) | [ProductVariants](General.ProductVariants.md) (nullable) | The product variant, which was reconciled. `Filter(multi eq)` `Introduced in version 22.1.6.15` |
+| [ProductVariant](Logistics.Inventory.ReconciliationLines.md#productvariant) | [ProductVariants](General.Products.ProductVariants.md) (nullable) | The product variant, which was reconciled. `Filter(multi eq)` `Introduced in version 22.1.6.15` |
 | [QuantityUnit](Logistics.Inventory.ReconciliationLines.md#quantityunit) | [MeasurementUnits](General.MeasurementUnits.md) | The measurement unit of Quantity. `Required` `Filter(multi eq)` |
 | [Reconciliation](Logistics.Inventory.ReconciliationLines.md#reconciliation) | [Reconciliations](Logistics.Inventory.Reconciliations.md) | Parent reconciliation Id. `Required` `Filter(multi eq)` `Owner` |
 | [SerialNumber](Logistics.Inventory.ReconciliationLines.md#serialnumber) | [SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable) | Item serial number for serialized items. null for non-serializable items. `Filter(multi eq)` |
@@ -204,7 +204,7 @@ _Front-End Recalc Expressions:_
 
 The product variant, which was reconciled. `Filter(multi eq)` `Introduced in version 22.1.6.15`
 
-_Type_: **[ProductVariants](General.ProductVariants.md) (nullable)**  
+_Type_: **[ProductVariants](General.Products.ProductVariants.md) (nullable)**  
 _Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 

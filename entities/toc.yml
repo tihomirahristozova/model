@@ -733,14 +733,14 @@
       href: General.Products.ProductTypePurchaseInvoiceLineProperties.md
     - name: ProductTypes
       href: General.Products.ProductTypes.md
+    - name: ProductVariants
+      href: General.Products.ProductVariants.md
     - name: VariantColors
       href: General.Products.VariantColors.md
     - name: VariantSizes
       href: General.Products.VariantSizes.md
     - name: VariantStyles
       href: General.Products.VariantStyles.md
-  - name: ProductVariants
-    href: General.ProductVariants.md
   - name: PropertiesCategories
     href: General.PropertiesCategories.md
   - name: PropertyEnterpriseCompanyFilters

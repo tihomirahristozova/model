@@ -48,7 +48,6 @@ uid: General
 - [PrintoutLayouts](General.PrintoutLayouts.md)  
 - [Printouts](General.Printouts.md)  
 - [ProductGroupsLevelNames](General.ProductGroupsLevelNames.md)  
-- [ProductVariants](General.ProductVariants.md)  
 - [PropertiesCategories](General.PropertiesCategories.md)  
 - [PropertyEnterpriseCompanyFilters](General.PropertyEnterpriseCompanyFilters.md)  
 - [PropertyValues](General.PropertyValues.md)  

@@ -3,7 +3,7 @@
 
 ## Entity
 
-Entity: [General.ProductVariants](~/entities/General.ProductVariants.md)
+Entity: [General.Products.ProductVariants](~/entities/General.Products.ProductVariants.md)
 
 Contains definitions of different variants of a product. The variants are differentiated by color, size and style. Entity: Gen_Product_Variants
 

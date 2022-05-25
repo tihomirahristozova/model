@@ -1108,6 +1108,9 @@ references:
 - uid: General.Products.ProductTypes
   name: General.Products.ProductTypes Entity
   href: entities/General.Products.ProductTypes.html
+- uid: General.Products.ProductVariants
+  name: General.Products.ProductVariants Entity
+  href: entities/General.Products.ProductVariants.html
 - uid: General.Products.VariantColors
   name: General.Products.VariantColors Entity
   href: entities/General.Products.VariantColors.html

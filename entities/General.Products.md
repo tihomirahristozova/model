@@ -17,6 +17,7 @@ uid: General.Products
 - [ProductSupply](General.Products.ProductSupply.md)  
 - [ProductTypePurchaseInvoiceLineProperties](General.Products.ProductTypePurchaseInvoiceLineProperties.md)  
 - [ProductTypes](General.Products.ProductTypes.md)  
+- [ProductVariants](General.Products.ProductVariants.md)  
 - [VariantColors](General.Products.VariantColors.md)  
 - [VariantSizes](General.Products.VariantSizes.md)  
 - [VariantStyles](General.Products.VariantStyles.md)  
