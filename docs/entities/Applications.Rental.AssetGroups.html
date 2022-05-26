@@ -94,15 +94,7 @@ Name Data Member:<br>
 <p>An <a href="https://docs.erp.net/tech/advanced/concepts/aggregates.html">aggregate</a> is a cluster of domain objects that can be treated as a single unit.</p>
 <p>Aggregate Tree</p>
 <ul>
-<li><a href="Applications.Rental.AssetGroups.html">Applications.Rental.AssetGroups</a>
-<ul>
-<li><a href="Applications.Rental.Assets.html">Applications.Rental.Assets</a>
-<ul>
-<li><a href="Applications.Rental.AssetConsumables.html">Applications.Rental.AssetConsumables</a></li>
-</ul>
-</li>
-</ul>
-</li>
+<li><a href="Applications.Rental.AssetGroups.html">Applications.Rental.AssetGroups</a></li>
 </ul>
 <h2 id="attributes">Attributes</h2>
 <table>
@@ -153,23 +145,6 @@ Name Data Member:<br>
 <td><a href="Applications.Rental.AssetGroups.html#rentalassetgroupname">RentalAssetGroupName</a></td>
 <td>string (254)</td>
 <td>Asset group name, unique within the parent node. <code>Required</code> <code>Filter(eq;like)</code></td>
-</tr>
-</tbody>
-</table>
-<h2 id="child-collections">Child Collections</h2>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Assets</td>
-<td><a href="Applications.Rental.Assets.html">Assets</a></td>
-<td>List of <code>Asset</code>(Applications.Rental.Assets.md) child objects, based on the <code>Applications.Rental.Asset.RentalAssetGroup</code>(Applications.Rental.Assets.md#rentalassetgroup) back reference</td>
 </tr>
 </tbody>
 </table>

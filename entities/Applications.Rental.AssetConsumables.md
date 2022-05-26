@@ -21,7 +21,7 @@ An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a
 Aggregate Parent:  
 [Applications.Rental.Assets](Applications.Rental.Assets.md)  
 Aggregate Root:  
-[Applications.Rental.AssetGroups](Applications.Rental.AssetGroups.md)  
+[Applications.Rental.Assets](Applications.Rental.Assets.md)  
 
 ## Attributes
 

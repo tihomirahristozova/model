@@ -22,8 +22,6 @@ An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a
 
 Aggregate Tree  
 * [Applications.Rental.AssetGroups](Applications.Rental.AssetGroups.md)  
-  * [Applications.Rental.Assets](Applications.Rental.Assets.md)  
-    * [Applications.Rental.AssetConsumables](Applications.Rental.AssetConsumables.md)  
 
 ## Attributes
 
@@ -37,12 +35,6 @@ Aggregate Tree
 | [ParentFullPath](Applications.Rental.AssetGroups.md#parentfullpath) | string (25) __nullable__ | The full path of the parent node. `Filter(eq)` 
 | [RentalAssetGroupCode](Applications.Rental.AssetGroups.md#rentalassetgroupcode) | string (3) | Asset group code, unique within the parent node. `Required` `Filter(eq;like)` 
 | [RentalAssetGroupName](Applications.Rental.AssetGroups.md#rentalassetgroupname) | string (254) | Asset group name, unique within the parent node. `Required` `Filter(eq;like)` 
-
-## Child Collections
-
-| Name | Type | Description |
-| ---- | ---- | --- |
-| Assets | [Assets](Applications.Rental.Assets.md) | List of `Asset`(Applications.Rental.Assets.md) child objects, based on the `Applications.Rental.Asset.RentalAssetGroup`(Applications.Rental.Assets.md#rentalassetgroup) back reference 
 
 
 ## Attribute Details
