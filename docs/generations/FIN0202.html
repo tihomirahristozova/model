@@ -228,9 +228,9 @@ Entry.ReferenceDate =
         PurchaseInvoice.ReferenceDate 
     else PurchaseInvoice.DocumentDate
 
-Entry.AmountBase = Remaining(AmountBase)
+Entry.AmountBase = CONVERT( Remaining(AmountBase), BaseCurrency)
 
-Entry.VATAmountBase = Remaining(VATAmountBase)
+Entry.VATAmountBase = CONVERT( Remaining(VATAmountBase), BaseCurrency)
 
 Entry.ApplyDate = PurchaseInvoice.ApplyDate
 
