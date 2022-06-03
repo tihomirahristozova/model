@@ -7,6 +7,10 @@ Entity: [Finance.Excise.ExciseDeclarations](~/entities/Finance.Excise.ExciseDecl
 
 Represents the data, sent to the customs authorities for the Excise Declarations. Entity: Exc_Excise_Declarations (Introduced in version 22.1.4.93)
 
+## Owner Tables Hierarchy
+
+* [Gen_Documents](Gen_Documents.md)
+
 ## Summary
 
 | Name | Type | Description |
@@ -36,7 +40,7 @@ Excise Declaration
 |Is Entity Name|no|
 |Max Length|-1|
 |Order|1|
-|Ownership Reference|no|
+|Ownership Reference|yes|
 |Pasword|no|
 |Picture|no|
 |Primary Key|no|

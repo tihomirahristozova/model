@@ -980,7 +980,7 @@ references:
   name: General.DocumentPrints Entity
   href: entities/General.DocumentPrints.html
 - uid: General.Documents
-  name: General.Documents Namespace
+  name: General.Documents Entity
   href: entities/General.Documents.html
 - uid: General.Documents.DocumentParties
   name: General.Documents.DocumentParties Entity
