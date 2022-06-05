@@ -20,7 +20,6 @@ An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a
 
 Aggregate Tree  
 * [General.PrintoutLayouts](General.PrintoutLayouts.md)  
-  * [General.DocumentPrintImages](General.DocumentPrintImages.md)  
 
 ## Attributes
 
@@ -41,12 +40,6 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [DataSource](General.PrintoutLayouts.md#datasource) | [DataSources](Systems.Reporting.DataSources.md) (nullable) | The data source for the printout. `Filter(multi eq)` |
-
-## Child Collections
-
-| Name | Type | Description |
-| ---- | ---- | --- |
-| DocumentPrintImages | [DocumentPrintImages](General.DocumentPrintImages.md) | List of `DocumentPrintImage`(General.DocumentPrintImages.md) child objects, based on the `General.DocumentPrintImage.PrintoutLayout`(General.DocumentPrintImages.md#printoutlayout) back reference 
 
 
 ## Attribute Details

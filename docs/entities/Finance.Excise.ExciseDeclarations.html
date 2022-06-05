@@ -235,7 +235,7 @@ Code Data Member:<br>
 <tr>
 <td><a href="Finance.Excise.ExciseDeclarations.html#todate">ToDate</a></td>
 <td>date</td>
-<td>End date of the period fot which the Excise declaration is made. <code>Required</code> <code>Filter(eq;ge;le)</code></td>
+<td>End date of the period fot which the Excise declaration is made. <code>Required</code> <code>Filter(eq;ge;le)</code> <code>ORD</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Excise.ExciseDeclarations.html#void">Void</a></td>
@@ -648,11 +648,12 @@ Enumeration of document system states<br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>0</strong></p>
 <h3 id="todate">ToDate</h3>
-<p>End date of the period fot which the Excise declaration is made. <code>Required</code> <code>Filter(eq;ge;le)</code></p>
+<p>End date of the period fot which the Excise declaration is made. <code>Required</code> <code>Filter(eq;ge;le)</code> <code>ORD</code></p>
 <p><em>Type</em>: <strong>date</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
-<em>Supports Order By</em>: <strong>False</strong></p>
+<em>Supports Order By</em>: <strong>True</strong></p>
 <h3 id="void">Void</h3>
 <p>True if the document is null and void. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code> (Inherited from <a href="General.Documents.html">Documents</a>)</p>
 <p><em>Type</em>: <strong>boolean</strong><br>

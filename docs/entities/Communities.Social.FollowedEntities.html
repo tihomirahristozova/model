@@ -127,12 +127,12 @@ __</p>
 <tr>
 <td><a href="Communities.Social.FollowedEntities.html#dataobject">DataObject</a></td>
 <td><a href="Systems.Core.ExtensibleDataObjects.html">ExtensibleDataObjects</a></td>
-<td>. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Sys_Objects_Table.Object_Id</code> <code>Introduced in version 22.1.6.8</code></td>
+<td>The data object subject to the social follow. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Sys_Objects_Table.Object_Id</code> <code>Introduced in version 22.1.6.8</code></td>
 </tr>
 <tr>
 <td><a href="Communities.Social.FollowedEntities.html#user">User</a></td>
 <td><a href="Systems.Security.Users.html">Users</a></td>
-<td></td>
+<td>The user which follows the entity. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Sec_Users_Table.User_Id</code></td>
 </tr>
 </tbody>
 </table>
@@ -151,13 +151,14 @@ __</p>
 <em>Maximum Length</em>: <strong>64</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="dataobject">DataObject</h3>
-<p>. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Sys_Objects_Table.Object_Id</code> <code>Introduced in version 22.1.6.8</code></p>
+<p>The data object subject to the social follow. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Sys_Objects_Table.Object_Id</code> <code>Introduced in version 22.1.6.8</code></p>
 <p><em>Type</em>: <strong><a href="Systems.Core.ExtensibleDataObjects.html">ExtensibleDataObjects</a></strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Inherited From</em>: <strong>Sys_Objects_Table.Object_Id</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="user">User</h3>
+<p>The user which follows the entity. <code>Required</code> <code>Default(New Guid)</code> <code>Filter(multi eq)</code> <code>Inherited from Sec_Users_Table.User_Id</code></p>
 <p><em>Type</em>: <strong><a href="Systems.Security.Users.html">Users</a></strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Inherited From</em>: <strong>Sec_Users_Table.User_Id</strong><br>

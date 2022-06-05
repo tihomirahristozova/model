@@ -9,19 +9,15 @@ Contains the data of a printout of a document as it was obtained from the data s
 
 ## Default Visualization
 Default Display Text Format:  
-_{PrintoutLayout.Name}_  
+_{Id}: {PrintoutLayoutId}_  
 Default Search Members:  
-_PrintoutLayout.Name_  
-Name Data Member:  
-_PrintoutLayout.Name_  
+__  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
 
-Aggregate Parent:  
-[General.PrintoutLayouts](General.PrintoutLayouts.md)  
-Aggregate Root:  
-[General.PrintoutLayouts](General.PrintoutLayouts.md)  
+Aggregate Tree  
+* [General.DocumentPrintImages](General.DocumentPrintImages.md)  
 
 ## Attributes
 
@@ -37,7 +33,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [PrintoutLayout](General.DocumentPrintImages.md#printoutlayout) | [PrintoutLayouts](General.PrintoutLayouts.md) | The print layout, which was used for the current printout. `Required` `Filter(multi eq)` `Owner` |
+| [PrintoutLayout](General.DocumentPrintImages.md#printoutlayout) | [PrintoutLayouts](General.PrintoutLayouts.md) | The print layout, which was used for the current printout. `Required` `Filter(multi eq)` |
 
 
 ## Attribute Details
@@ -93,12 +89,11 @@ _Default Value_: **CDS**
 
 ### PrintoutLayout
 
-The print layout, which was used for the current printout. `Required` `Filter(multi eq)` `Owner`
+The print layout, which was used for the current printout. `Required` `Filter(multi eq)`
 
 _Type_: **[PrintoutLayouts](General.PrintoutLayouts.md)**  
 _Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
-_[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
 
 
 ## API Methods

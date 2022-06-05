@@ -83,17 +83,15 @@
 <p>Contains the data of a printout of a document as it was obtained from the data source in the moment of printing. Entity: Gen_Document_Print_Images</p>
 <h2 id="default-visualization">Default Visualization</h2>
 <p>Default Display Text Format:<br>
-<em>{PrintoutLayout.Name}</em><br>
+<em>{Id}: {PrintoutLayoutId}</em><br>
 Default Search Members:<br>
-<em>PrintoutLayout.Name</em><br>
-Name Data Member:<br>
-<em>PrintoutLayout.Name</em></p>
+__</p>
 <h2 id="aggregate">Aggregate</h2>
 <p>An <a href="https://docs.erp.net/tech/advanced/concepts/aggregates.html">aggregate</a> is a cluster of domain objects that can be treated as a single unit.</p>
-<p>Aggregate Parent:<br>
-<a href="General.PrintoutLayouts.html">General.PrintoutLayouts</a><br>
-Aggregate Root:<br>
-<a href="General.PrintoutLayouts.html">General.PrintoutLayouts</a></p>
+<p>Aggregate Tree</p>
+<ul>
+<li><a href="General.DocumentPrintImages.html">General.DocumentPrintImages</a></li>
+</ul>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -144,7 +142,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.DocumentPrintImages.html#printoutlayout">PrintoutLayout</a></td>
 <td><a href="General.PrintoutLayouts.html">PrintoutLayouts</a></td>
-<td>The print layout, which was used for the current printout. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
+<td>The print layout, which was used for the current printout. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -183,11 +181,10 @@ Aggregate Root:<br>
 <em>Default Value</em>: <strong>CDS</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="printoutlayout">PrintoutLayout</h3>
-<p>The print layout, which was used for the current printout. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
+<p>The print layout, which was used for the current printout. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.PrintoutLayouts.html">PrintoutLayouts</a></strong><br>
 <em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em><a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a></em>: <strong>True</strong></p>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h2 id="api-methods">API Methods</h2>
 <p>Methods that can be invoked in public APIs.</p>
 <h3 id="getallowedcustompropertyvalues">GetAllowedCustomPropertyValues</h3>
