@@ -138,7 +138,6 @@ Indicates whether the document is Receipt('R') or Issue('I') of the Tax Warehous
 | Property | Value |
 | - | - |
 |Auto Complete|no|
-|Base Table.Column|[Gen_Documents](Gen_Documents.md).[Id](Gen_Documents.md#id)|
 |Data Filter|no|
 |Default Value|None|
 |Enter Stop|yes|
@@ -239,7 +238,6 @@ The other party, sending or receiving the goods.
 | Property | Value |
 | - | - |
 |Auto Complete|no|
-|Base Table.Column|[Gen_Parties](Gen_Parties.md).[Id](Gen_Parties.md#id)|
 |Data Filter|no|
 |Default Value|None|
 |Enter Stop|yes|
@@ -277,7 +275,6 @@ This is the person submitting the declaration.
 | Property | Value |
 | - | - |
 |Auto Complete|no|
-|Base Table.Column|[Cm_Persons](Cm_Persons.md).[Person_Id](Cm_Persons.md#person_id)|
 |Data Filter|no|
 |Default Value|None|
 |Enter Stop|yes|
@@ -379,7 +376,6 @@ The carrier used for the transportation of the goods.
 | Property | Value |
 | - | - |
 |Auto Complete|no|
-|Base Table.Column|[Log_Carriers](Log_Carriers.md).[Carrier_Id](Log_Carriers.md#carrier_id)|
 |Data Filter|no|
 |Default Value|None|
 |Enter Stop|yes|
