@@ -115,7 +115,6 @@ _Default Value_: **NewGuid**
 ### Warehouse
 
 _Type_: **[Warehouses](Logistics.Wms.Warehouses.md)**  
-_Indexed_: **True**  
 _Category_: **System**  
 _Inherited From_: **Wms_Warehouses_Table.Warehouse_Id**  
 _Supported Filters_: **Equals, EqualsIn**  
