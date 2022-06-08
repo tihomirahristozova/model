@@ -31,10 +31,10 @@ Aggregate Tree
   * [General.DocumentFileAttachments](General.DocumentFileAttachments.md)  
   * [General.DocumentFulfillments](General.DocumentFulfillments.md)  
   * [General.DocumentLineAmounts](General.DocumentLineAmounts.md)  
+  * [General.DocumentParties](General.DocumentParties.md)  
   * [General.DocumentPrints](General.DocumentPrints.md)  
   * [General.DocumentStateChanges](General.DocumentStateChanges.md)  
   * [General.DocumentVersions](General.DocumentVersions.md)  
-  * [General.Documents.DocumentParties](General.Documents.DocumentParties.md)  
 
 ## Attributes
 
@@ -104,7 +104,7 @@ Aggregate Tree
 | Fulfillments | [DocumentFulfillments](General.DocumentFulfillments.md) | List of `DocumentFulfillment`(General.DocumentFulfillments.md) child objects, based on the `General.DocumentFulfillment.Document`(General.DocumentFulfillments.md#document) back reference (Inherited from [Documents](General.Documents.md)) 
 | LineAmounts | [DocumentLineAmounts](General.DocumentLineAmounts.md) | List of `DocumentLineAmount`(General.DocumentLineAmounts.md) child objects, based on the `General.DocumentLineAmount.Document`(General.DocumentLineAmounts.md#document) back reference (Inherited from [Documents](General.Documents.md)) 
 | Outputs | [DistributionOutputs](Finance.Cost.DistributionOutputs.md) | List of `DistributionOutput`(Finance.Cost.DistributionOutputs.md) child objects, based on the `Finance.Cost.DistributionOutput.CostDistribution`(Finance.Cost.DistributionOutputs.md#costdistribution) back reference 
-| Parties | [DocumentParties](General.Documents.DocumentParties.md) | List of `DocumentParty`(General.Documents.DocumentParties.md) child objects, based on the `General.Documents.DocumentParty.Document`(General.Documents.DocumentParties.md#document) back reference (Inherited from [Documents](General.Documents.md)) 
+| Parties | [DocumentParties](General.DocumentParties.md) | List of `DocumentParty`(General.DocumentParties.md) child objects, based on the `General.DocumentParty.Document`(General.DocumentParties.md#document) back reference (Inherited from [Documents](General.Documents.md)) 
 | Prints | [DocumentPrints](General.DocumentPrints.md) | List of `DocumentPrint`(General.DocumentPrints.md) child objects, based on the `General.DocumentPrint.Document`(General.DocumentPrints.md#document) back reference (Inherited from [Documents](General.Documents.md)) 
 | Results | [DistributionResults](Finance.Cost.DistributionResults.md) | List of `DistributionResult`(Finance.Cost.DistributionResults.md) child objects, based on the `Finance.Cost.DistributionResult.CostDistribution`(Finance.Cost.DistributionResults.md#costdistribution) back reference 
 | StateChanges | [DocumentStateChanges](General.DocumentStateChanges.md) | List of `DocumentStateChange`(General.DocumentStateChanges.md) child objects, based on the `General.DocumentStateChange.Document`(General.DocumentStateChanges.md#document) back reference (Inherited from [Documents](General.Documents.md)) 

@@ -4,7 +4,6 @@ uid: General
 # General Namespace
 ## Namespaces
 - [Contacts](General.Contacts.md)  
-- [Documents](General.Documents.md)  
 - [Geography](General.Geography.md)  
 - [Products](General.Products.md)  
 - [Resources](General.Resources.md)  
@@ -27,8 +26,11 @@ uid: General
 - [DocumentLineAmounts](General.DocumentLineAmounts.md)  
 - [DocumentLinks](General.DocumentLinks.md)  
 - [DocumentManualDistributedAmounts](General.DocumentManualDistributedAmounts.md)  
+- [DocumentParties](General.DocumentParties.md)  
+- [DocumentPartyRoles](General.DocumentPartyRoles.md)  
 - [DocumentPrintImages](General.DocumentPrintImages.md)  
 - [DocumentPrints](General.DocumentPrints.md)  
+- [Documents](General.Documents.md)  
 - [DocumentStateChanges](General.DocumentStateChanges.md)  
 - [DocumentTypeAmounts](General.DocumentTypeAmounts.md)  
 - [DocumentTypeEnterpriseCompanies](General.DocumentTypeEnterpriseCompanies.md)  

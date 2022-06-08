@@ -32,10 +32,10 @@ Aggregate Tree
   * [General.DocumentFileAttachments](General.DocumentFileAttachments.md)  
   * [General.DocumentFulfillments](General.DocumentFulfillments.md)  
   * [General.DocumentLineAmounts](General.DocumentLineAmounts.md)  
+  * [General.DocumentParties](General.DocumentParties.md)  
   * [General.DocumentPrints](General.DocumentPrints.md)  
   * [General.DocumentStateChanges](General.DocumentStateChanges.md)  
   * [General.DocumentVersions](General.DocumentVersions.md)  
-  * [General.Documents.DocumentParties](General.Documents.DocumentParties.md)  
 
 ## Attributes
 
@@ -123,7 +123,7 @@ Aggregate Tree
 | LineAmounts | [DocumentLineAmounts](General.DocumentLineAmounts.md) | List of `DocumentLineAmount`(General.DocumentLineAmounts.md) child objects, based on the `General.DocumentLineAmount.Document`(General.DocumentLineAmounts.md#document) back reference (Inherited from [Documents](General.Documents.md)) 
 | Lines | [MarketingActivityLines](Crm.Marketing.MarketingActivityLines.md) | List of `MarketingActivityLine`(Crm.Marketing.MarketingActivityLines.md) child objects, based on the `Crm.Marketing.MarketingActivityLine.MarketingActivity`(Crm.Marketing.MarketingActivityLines.md#marketingactivity) back reference 
 | Participants | [ActivityParticipants](General.Contacts.ActivityParticipants.md) | List of `ActivityParticipant`(General.Contacts.ActivityParticipants.md) child objects, based on the `General.Contacts.ActivityParticipant.Activity`(General.Contacts.ActivityParticipants.md#activity) back reference (Inherited from [Activities](General.Contacts.Activities.md)) 
-| Parties | [DocumentParties](General.Documents.DocumentParties.md) | List of `DocumentParty`(General.Documents.DocumentParties.md) child objects, based on the `General.Documents.DocumentParty.Document`(General.Documents.DocumentParties.md#document) back reference (Inherited from [Documents](General.Documents.md)) 
+| Parties | [DocumentParties](General.DocumentParties.md) | List of `DocumentParty`(General.DocumentParties.md) child objects, based on the `General.DocumentParty.Document`(General.DocumentParties.md#document) back reference (Inherited from [Documents](General.Documents.md)) 
 | Prints | [DocumentPrints](General.DocumentPrints.md) | List of `DocumentPrint`(General.DocumentPrints.md) child objects, based on the `General.DocumentPrint.Document`(General.DocumentPrints.md#document) back reference (Inherited from [Documents](General.Documents.md)) 
 | Reminders | [Reminders](General.Contacts.Reminders.md) | List of `Reminder`(General.Contacts.Reminders.md) child objects, based on the `General.Contacts.Reminder.Activity`(General.Contacts.Reminders.md#activity) back reference (Inherited from [Activities](General.Contacts.Activities.md)) 
 | Resources | [ActivityResources](General.Contacts.ActivityResources.md) | List of `ActivityResource`(General.Contacts.ActivityResources.md) child objects, based on the `General.Contacts.ActivityResource.Activity`(General.Contacts.ActivityResources.md#activity) back reference (Inherited from [Activities](General.Contacts.Activities.md)) 

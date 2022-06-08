@@ -29,10 +29,10 @@ Aggregate Tree
   * [General.DocumentFileAttachments](General.DocumentFileAttachments.md)  
   * [General.DocumentFulfillments](General.DocumentFulfillments.md)  
   * [General.DocumentLineAmounts](General.DocumentLineAmounts.md)  
+  * [General.DocumentParties](General.DocumentParties.md)  
   * [General.DocumentPrints](General.DocumentPrints.md)  
   * [General.DocumentStateChanges](General.DocumentStateChanges.md)  
   * [General.DocumentVersions](General.DocumentVersions.md)  
-  * [General.Documents.DocumentParties](General.Documents.DocumentParties.md)  
 
 ## Attributes
 
@@ -121,7 +121,7 @@ Aggregate Tree
 | Fulfillments | [DocumentFulfillments](General.DocumentFulfillments.md) | List of `DocumentFulfillment`(General.DocumentFulfillments.md) child objects, based on the `General.DocumentFulfillment.Document`(General.DocumentFulfillments.md#document) back reference (Inherited from [Documents](General.Documents.md)) 
 | LineAmounts | [DocumentLineAmounts](General.DocumentLineAmounts.md) | List of `DocumentLineAmount`(General.DocumentLineAmounts.md) child objects, based on the `General.DocumentLineAmount.Document`(General.DocumentLineAmounts.md#document) back reference (Inherited from [Documents](General.Documents.md)) 
 | Lines | [InvoiceLines](Crm.Invoicing.InvoiceLines.md) | List of `InvoiceLine`(Crm.Invoicing.InvoiceLines.md) child objects, based on the `Crm.Invoicing.InvoiceLine.Invoice`(Crm.Invoicing.InvoiceLines.md#invoice) back reference 
-| Parties | [DocumentParties](General.Documents.DocumentParties.md) | List of `DocumentParty`(General.Documents.DocumentParties.md) child objects, based on the `General.Documents.DocumentParty.Document`(General.Documents.DocumentParties.md#document) back reference (Inherited from [Documents](General.Documents.md)) 
+| Parties | [DocumentParties](General.DocumentParties.md) | List of `DocumentParty`(General.DocumentParties.md) child objects, based on the `General.DocumentParty.Document`(General.DocumentParties.md#document) back reference (Inherited from [Documents](General.Documents.md)) 
 | Prints | [DocumentPrints](General.DocumentPrints.md) | List of `DocumentPrint`(General.DocumentPrints.md) child objects, based on the `General.DocumentPrint.Document`(General.DocumentPrints.md#document) back reference (Inherited from [Documents](General.Documents.md)) 
 | StateChanges | [DocumentStateChanges](General.DocumentStateChanges.md) | List of `DocumentStateChange`(General.DocumentStateChanges.md) child objects, based on the `General.DocumentStateChange.Document`(General.DocumentStateChanges.md#document) back reference (Inherited from [Documents](General.Documents.md)) 
 | Versions | [DocumentVersions](General.DocumentVersions.md) | List of `DocumentVersion`(General.DocumentVersions.md) child objects, based on the `General.DocumentVersion.Document`(General.DocumentVersions.md#document) back reference (Inherited from [Documents](General.Documents.md)) 
