@@ -118,11 +118,11 @@
 </tr>
 <tr>
 <td>Action</td>
-<td><br> - NotificationClass = NT_SOC_NEW_POST <br> - Subject = {SocialComment.User.FullName} commented on a object that you're following.</td>
+<td>If Social.Comments.DataObjectId == Social.Follows.DataObjectId, <br> then create a new Notification as follows: <br> <br> - NotificationUserId = Follows.UserId <br> - CreationTimeUtc = NOW <br> - Notification.DataObjectId = SocialComments.DataObjectId <br> - NotificationClass = NT_SOC_NEW_POST <br> - Subject = {SocialComment.User.FullName} commented on a object that you're following.</td>
 </tr>
 <tr>
 <td>Description</td>
-<td>When a user commented in object, the rule creates notifications to all users whose following the object. These notifications will then be sent to the users by the <a class="xref" href="https://erpnetdocs.github.io/tech/modules/community/social-interactions/notifications/index.html">Notifications</a> system.</td>
+<td>When a user commented on an object, the rule creates notifications for all users who follow the object. These notifications will then be sent to the users by the <a class="xref" href="https://erpnetdocs.github.io/tech/modules/community/social-interactions/notifications/index.html">Notifications</a> system.</td>
 </tr>
 <tr>
 <td>Message</td>
