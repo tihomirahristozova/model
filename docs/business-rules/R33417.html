@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>R32943 Social Comment - Notify The Mentioned User | ERP.net Domain Model </title>
+    <title>R33417 Social Comment - Notify All Object Followers | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="R32943 Social Comment - Notify The Mentioned User | ERP.net Domain Model ">
+    <meta name="title" content="R33417 Social Comment - Notify All Object Followers | ERP.net Domain Model ">
     <meta name="generator" content="docfx 2.56.9.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
@@ -70,7 +70,7 @@
         <div class="article row grid">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="r32943-social-comment---notify-the-mentioned-user">R32943 Social Comment - Notify The Mentioned User</h1>
+<h1 id="r33417-social-comment---notify-all-object-followers">R33417 Social Comment - Notify All Object Followers</h1>
 
 <table>
 <thead>
@@ -82,7 +82,7 @@
 <tbody>
 <tr>
 <td>Code</td>
-<td>R32943</td>
+<td>R33417</td>
 </tr>
 <tr>
 <td>Entity</td>
@@ -90,7 +90,7 @@
 </tr>
 <tr>
 <td>Name</td>
-<td>NotifyTheMentionedUser</td>
+<td>NotifyAllObjectFollowers</td>
 </tr>
 <tr>
 <td>Attribute</td>
@@ -118,11 +118,11 @@
 </tr>
 <tr>
 <td>Action</td>
-<td>If Comment_Text contains &quot;{Public_Users(&quot; , <br> then create a new Notification as follows: <br><br> - Notification.UserId = the UserId from the mention in the comment text {Public_Users(UserId).FullName} <br> - CreationTimeUtc =  NOW <br> - Notification.DataObjectId = SocialComments.DataObjectId <br> - NotificationClass = NT_SOC_MENTION <br> - Subject = {SocialComment.User.FullName} mentioned you in a comment.</td>
+<td>If User follows the object , <br> then create new Notifications as follows: <br><br> - Notification.UserId = Follows.UserId <br> - CreationTimeUtc =  NOW <br> - Notification.DataObjectId = SocialComments.DataObjectId <br> - NotificationClass = NT_SOC_NEW_POST <br> - Subject = {SocialComment.User.FullName} commented on a object that you're following.</td>
 </tr>
 <tr>
 <td>Description</td>
-<td>When a user is mentioned in a comment, the rule creates a notification to this user. These notifications will then be sent to the user by the <a class="xref" href="https://erpnetdocs.github.io/tech/modules/community/social-interactions/notifications/index.html">Notifications</a> system.</td>
+<td>When a user commented in object, the rule creates notifications to all users whose following the object. These notifications will then be sent to the users by the <a class="xref" href="https://erpnetdocs.github.io/tech/modules/community/social-interactions/notifications/index.html">Notifications</a> system.</td>
 </tr>
 <tr>
 <td>Message</td>
@@ -130,7 +130,7 @@
 </tr>
 <tr>
 <td>Version</td>
-<td>Introduced: 22</td>
+<td>Introduced:</td>
 </tr>
 <tr>
 <td>Revocable</td>
@@ -148,7 +148,7 @@ topic <a href="../templates/template-description-system-business-rules.html">Sys
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/ErpNetDocs/model/blob/master/business-rules/R32943.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/ErpNetDocs/model/blob/master/business-rules/R33417.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
