@@ -175,7 +175,7 @@ _Allowed Values (Logistics.Wms.WarehouseOrderLinesRepository.TaskType Enum Membe
 | AssembleKit | AssembleKit value. Stored as 'KIT'. <br /> _Database Value:_ 'KIT' <br /> _Model Value:_ 7 <br /> _Domain API Value:_ 'AssembleKit' |
 | ReverseKitting | ReverseKitting value. Stored as 'RKT'. <br /> _Database Value:_ 'RKT' <br /> _Model Value:_ 8 <br /> _Domain API Value:_ 'ReverseKitting' |
 | Count | Count value. Stored as 'CNT'. <br /> _Database Value:_ 'CNT' <br /> _Model Value:_ 9 <br /> _Domain API Value:_ 'Count' |
-| Task | Task value. Stored as 'TSK'. <br /> _Database Value:_ 'TSK' <br /> _Model Value:_ 10 <br /> _Domain API Value:_ 'Task' |
+| UserTask | UserTask value. Stored as 'TSK'. <br /> _Database Value:_ 'TSK' <br /> _Model Value:_ 10 <br /> _Domain API Value:_ 'UserTask' |
 
 _Supported Filters_: **Equals, EqualsIn**  
 _Supports Order By_: **False**  
