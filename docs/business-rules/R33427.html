@@ -118,7 +118,7 @@
 </tr>
 <tr>
 <td>Action</td>
-<td>Create a new Notification as follows: <br><br> - Notification.UserId = Reaction.SocialComment.UserId <br> - CreationTimeUtc =  NOW <br> - Notification.DataObjectId = Social.Comments.DataObjectId <br> - NotificationClass = NT_SOC_REACTION <br> - Subject = {Reaction.User.FullName} reacted to your comment.</td>
+<td>If Reaction.User != Reaction.SocialComment.User, <br> then create a new Notification as follows: <br><br> - Notification.UserId = Reaction.SocialComment.UserId <br> - CreationTimeUtc =  NOW <br> - Notification.DataObjectId = Social.Comments.DataObjectId <br> - NotificationClass = NT_SOC_REACTION <br> - Subject = {Reaction.User.FullName} reacted to your comment.</td>
 </tr>
 <tr>
 <td>Description</td>
