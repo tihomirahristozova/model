@@ -15904,7 +15904,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Logistics.Wms.WarehouseOrderLines.html",
-          "hash": "ZmJObP/It2+ByaVqEtfSnw=="
+          "hash": "8+oscwVevuKsfMTB6QbGtw=="
         }
       },
       "is_incremental": false,
@@ -25194,7 +25194,31 @@
       "output": {
         ".html": {
           "relative_path": "tables/Wms.html",
-          "hash": "aY7mi4o6mykFUEM2/64zZg=="
+          "hash": "0auD31oEeQepQogySQCKNA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tables/Wms_Composite_Product_Components.md",
+      "output": {
+        ".html": {
+          "relative_path": "tables/Wms_Composite_Product_Components.html",
+          "hash": "e4HAowio4yBOMsjnOVjOxQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tables/Wms_Composite_Products.md",
+      "output": {
+        ".html": {
+          "relative_path": "tables/Wms_Composite_Products.html",
+          "hash": "ZDXiOHXmi9FyenolPYzYtg=="
         }
       },
       "is_incremental": false,
@@ -25338,7 +25362,7 @@
       "output": {
         ".html": {
           "relative_path": "tables/index.html",
-          "hash": "jUI+YM7iYNlUjVmggCMHIA=="
+          "hash": "i+RUX35k0Dfit5B+yBqPvw=="
         }
       },
       "is_incremental": false,
@@ -25350,7 +25374,7 @@
       "output": {
         ".html": {
           "relative_path": "tables/toc.html",
-          "hash": "as1kvnJPpt+W0YiuPHuhIw=="
+          "hash": "L0Codx/kQm3WmLP526DSQQ=="
         }
       },
       "is_incremental": false,
