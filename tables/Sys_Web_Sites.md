@@ -13,6 +13,7 @@ Contains the web sites, which are hosted for the database. Entity: Sys_Web_Sites
 | - | - | --- |
 |[Enterprise_Company_Id](#enterprise_company_id)|`uniqueidentifier` |The enterprise company, for which is the site. NULL means, that the web site should not be enterprise company specific.|
 |[Is_Active](#is_active)|`bit` |Indicates whether the web site is active and will be instantiated upon next web server restart.|
+|[Is_Private](#is_private)|`bit` |Specifies that the web site address will not be publicly listed. The web site itself will still be publicly accessible; only its URL would not be listed in the auto-discovery service.|
 |[Notes](#notes)|`nvarchar(max)` ||
 |[Relative_Url](#relative_url)|`nvarchar(254)` |The relative Url of the site. This is the text after the first slash after the protocol and host name. The text should not include the protocol and host name. NULL means that the site will be hosted as the root site in the speicified web host.|
 |[Row_Version](#row_version)|`timestamp` ||
@@ -91,6 +92,42 @@ Indicates whether the web site is active and will be instantiated upon next web 
 |Visible|yes|
 
 #### Is_Active - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|no|no|
+
+### Is_Private
+
+
+Specifies that the web site address will not be publicly listed. The web site itself will still be publicly accessible; only its URL would not be listed in the auto-discovery service.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|False|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|bit|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Is_Private - Supported Filters
 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |

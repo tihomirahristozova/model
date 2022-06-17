@@ -118,6 +118,11 @@ __</p>
 <td>Indicates whether the web site is active and will be instantiated upon next web server restart. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
+<td><a href="Systems.Core.WebSites.html#isprivate">IsPrivate</a></td>
+<td>boolean</td>
+<td>Specifies that the web site address will not be publicly listed. The web site itself will still be publicly accessible; only its URL would not be listed in the auto-discovery service. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>Introduced in version 23.1.0.8</code></td>
+</tr>
+<tr>
 <td><a href="Systems.Core.WebSites.html#notes">Notes</a></td>
 <td>string (max) <strong>nullable</strong></td>
 <td>Notes for this WebSite.</td>
@@ -186,6 +191,13 @@ __</p>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>True</strong></p>
+<h3 id="isprivate">IsPrivate</h3>
+<p>Specifies that the web site address will not be publicly listed. The web site itself will still be publicly accessible; only its URL would not be listed in the auto-discovery service. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>Introduced in version 23.1.0.8</code></p>
+<p><em>Type</em>: <strong>boolean</strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>Equals</strong><br>
+<em>Supports Order By</em>: <strong>False</strong><br>
+<em>Default Value</em>: <strong>False</strong></p>
 <h3 id="notes">Notes</h3>
 <p>Notes for this WebSite.</p>
 <p><em>Type</em>: <strong>string (max) <strong>nullable</strong></strong><br>
