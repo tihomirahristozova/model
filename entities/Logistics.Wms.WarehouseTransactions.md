@@ -155,7 +155,7 @@ _Allowed Values (Logistics.Wms.WarehouseOrderLinesRepository.TaskType Enum Membe
 | Value | Description |
 | ---- | --- |
 | Receive | Receive value. Stored as 'REC'. <br /> _Database Value:_ 'REC' <br /> _Model Value:_ 0 <br /> _Domain API Value:_ 'Receive' |
-| Despatch | Despatch value. Stored as 'DES'. <br /> _Database Value:_ 'DES' <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'Despatch' |
+| Dispatch | Dispatch value. Stored as 'DIS'. <br /> _Database Value:_ 'DIS' <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'Dispatch' |
 | Move | Move value. Stored as 'MOV'. <br /> _Database Value:_ 'MOV' <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'Move' |
 | Label | Label value. Stored as 'LBL'. <br /> _Database Value:_ 'LBL' <br /> _Model Value:_ 3 <br /> _Domain API Value:_ 'Label' |
 | Inspect | Inspect value. Stored as 'INS'. <br /> _Database Value:_ 'INS' <br /> _Model Value:_ 4 <br /> _Domain API Value:_ 'Inspect' |

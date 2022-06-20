@@ -10588,7 +10588,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Applications.Cms.NewsWebModuleArticles.html",
-          "hash": "t5NU+mo6kW3a3Z7w3O5Zfw=="
+          "hash": "jZSykueGTZCQHWTO3Libjg=="
         }
       },
       "is_incremental": false,
@@ -10600,7 +10600,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Applications.Cms.NewsWebModules.html",
-          "hash": "WUES90JDr0sPqR2RMwTziA=="
+          "hash": "NNtBj9uWsKCy5PksI6CbpQ=="
         }
       },
       "is_incremental": false,
@@ -10612,7 +10612,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Applications.Cms.ProductCatalogWebModules.html",
-          "hash": "8XxMWdzbED9nWA5jMpS/MQ=="
+          "hash": "6NRxgK61kvalw5LdcFfChA=="
         }
       },
       "is_incremental": false,
@@ -10624,7 +10624,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Applications.Cms.StaticWebModules.html",
-          "hash": "3EiJ/k29lgJ1f7KjjGtlMQ=="
+          "hash": "vzjImCJZWAsuA0n/qEyT4w=="
         }
       },
       "is_incremental": false,
@@ -10636,7 +10636,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Applications.Cms.WebModules.html",
-          "hash": "neQzqcH6FFWSNVk4fKNBjg=="
+          "hash": "T9cFFOS0KpnuF5VboVxe+A=="
         }
       },
       "is_incremental": false,
@@ -10648,7 +10648,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Applications.Cms.WebSiteLanguages.html",
-          "hash": "d5KYkQtNlacnm1C4V5ywJA=="
+          "hash": "CFGu//HDI0dvcbC52aFwRA=="
         }
       },
       "is_incremental": false,
@@ -10660,7 +10660,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Applications.Cms.WebSites.html",
-          "hash": "pcJgSyBMbDZTUgjWHHpFNA=="
+          "hash": "TJa/mHXlnoWLSJ9GIDIUSw=="
         }
       },
       "is_incremental": false,
@@ -12232,7 +12232,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Crm.Presales.Deals.html",
-          "hash": "TuoXX0CHHX8rZ0vt1jPXMA=="
+          "hash": "oLJlRDIfZbULIZKaBFJ0Rw=="
         }
       },
       "is_incremental": false,
@@ -14860,7 +14860,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/General.ReportQueries.html",
-          "hash": "z6yDVeFhxH/utbA4dzrXzQ=="
+          "hash": "q29kAYMewOaZq3vg3j61Mg=="
         }
       },
       "is_incremental": false,
@@ -15340,7 +15340,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Logistics.Inventory.SupplySchemaRoutes.html",
-          "hash": "M13Mpg80EfBVfTKxmwiOKQ=="
+          "hash": "8Z/AV5alzBNpWu+2i3BYWQ=="
         }
       },
       "is_incremental": false,
@@ -15484,7 +15484,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Logistics.Procurement.PurchaseControlDocumentLines.html",
-          "hash": "X5UvTKpLxsL7r3DJ/nevOg=="
+          "hash": "4M0g2tJxPaZJHmmiSMzkDw=="
         }
       },
       "is_incremental": false,
@@ -15864,6 +15864,30 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "entities/Logistics.Wms.CompositeProductComponents.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Logistics.Wms.CompositeProductComponents.html",
+          "hash": "O02OG84IeYOhMNA21d4c7Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "entities/Logistics.Wms.CompositeProducts.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Logistics.Wms.CompositeProducts.html",
+          "hash": "4xhqcCiKwZg9HVb9Gy/1+w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "entities/Logistics.Wms.WarehouseAvailabilityView.md",
       "output": {
         ".html": {
@@ -15916,7 +15940,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Logistics.Wms.WarehouseOrderLines.html",
-          "hash": "8+oscwVevuKsfMTB6QbGtw=="
+          "hash": "xT+ROkDOr+2rJPpmpFCcmw=="
         }
       },
       "is_incremental": false,
@@ -16000,7 +16024,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Logistics.Wms.WarehouseTransactions.html",
-          "hash": "fZcD2vwQnjHCyrFqi3r4Ig=="
+          "hash": "XiwvPE30/0s9/X/BzMU40g=="
         }
       },
       "is_incremental": false,
@@ -16048,7 +16072,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Logistics.Wms.html",
-          "hash": "7DIJOZmn3GOnqgmJFP46OQ=="
+          "hash": "UoXA5fqfBEB+0LbYSrK2Uw=="
         }
       },
       "is_incremental": false,
@@ -17284,7 +17308,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Systems.External.PublicUsers.html",
-          "hash": "NTchCN3SL4j067oVdP/Zlg=="
+          "hash": "DCYF3qu24CkGp7OZluGa1g=="
         }
       },
       "is_incremental": false,
@@ -17644,7 +17668,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/toc.html",
-          "hash": "wjopC7Ez6y6FeSlMzCJSgQ=="
+          "hash": "MXy2Yv1eN7MgTGRjolzZFw=="
         }
       },
       "is_incremental": false,
@@ -25218,7 +25242,7 @@
       "output": {
         ".html": {
           "relative_path": "tables/Wms_Composite_Product_Components.html",
-          "hash": "e4HAowio4yBOMsjnOVjOxQ=="
+          "hash": "7RptnDLl51G0PKYa+SGrTg=="
         }
       },
       "is_incremental": false,
@@ -25230,7 +25254,7 @@
       "output": {
         ".html": {
           "relative_path": "tables/Wms_Composite_Products.html",
-          "hash": "ZDXiOHXmi9FyenolPYzYtg=="
+          "hash": "X4P77AcwTYdGdwVRL3ycEg=="
         }
       },
       "is_incremental": false,
@@ -25266,7 +25290,7 @@
       "output": {
         ".html": {
           "relative_path": "tables/Wms_Warehouse_Order_Lines.html",
-          "hash": "U8c66jlk7KbTuJ/TXFubrg=="
+          "hash": "c1jLL7unjPlDjUCYpLIdxw=="
         }
       },
       "is_incremental": false,
@@ -25326,7 +25350,7 @@
       "output": {
         ".html": {
           "relative_path": "tables/Wms_Warehouse_Transactions.html",
-          "hash": "CrlCYS26HoESTV/olwVZyA=="
+          "hash": "ZU+VVhubq1Zrl6UG+DMthQ=="
         }
       },
       "is_incremental": false,

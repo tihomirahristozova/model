@@ -1390,6 +1390,12 @@ references:
 - uid: Logistics.Wms
   name: Logistics.Wms Namespace
   href: entities/Logistics.Wms.html
+- uid: Logistics.Wms.CompositeProductComponents
+  name: Logistics.Wms.CompositeProductComponents Entity
+  href: entities/Logistics.Wms.CompositeProductComponents.html
+- uid: Logistics.Wms.CompositeProducts
+  name: Logistics.Wms.CompositeProducts Entity
+  href: entities/Logistics.Wms.CompositeProducts.html
 - uid: Logistics.Wms.WarehouseAvailabilityView
   name: Logistics.Wms.WarehouseAvailabilityView View
   href: entities/Logistics.Wms.WarehouseAvailabilityView.html

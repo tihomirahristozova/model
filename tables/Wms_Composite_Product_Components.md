@@ -1,6 +1,12 @@
 # Table Wms_Composite_Product_Components
 
 
+## Entity
+
+Entity: [Logistics.Wms.CompositeProductComponents](~/entities/Logistics.Wms.CompositeProductComponents.md)
+
+Separate components of a product which are stored individually within the warehouse. Entity: Wms_Composite_Product_Components (Introduced in version 23.1.0.7)
+
 ## Summary
 
 | Name | Type | Description |
@@ -39,7 +45,7 @@
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
-|Visible|yes|
+|Visible|no|
 
 #### Composite_Product_Component_Id - Supported Filters
 
@@ -92,6 +98,7 @@ The product which is a component of the composite product.
 | Property | Value |
 | - | - |
 |Auto Complete|no|
+|Base Table.Column|[Gen_Products](Gen_Products.md).[Id](Gen_Products.md#id)|
 |Data Filter|no|
 |Default Value|None|
 |Enter Stop|yes|
@@ -166,6 +173,7 @@ The measurement unit of the quantity.
 | Property | Value |
 | - | - |
 |Auto Complete|no|
+|Base Table.Column|[Gen_Measurement_Units](Gen_Measurement_Units.md).[Id](Gen_Measurement_Units.md#id)|
 |Data Filter|no|
 |Default Value|None|
 |Enter Stop|yes|

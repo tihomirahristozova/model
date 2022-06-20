@@ -10,7 +10,7 @@ Potential deals (Opportunities). Entity: Crm_Deals
 
 ## Default Visualization
 Default Display Text Format:  
-_{DocumentType.TypeName:T} {DocumentNo}_  
+_{Party} - {DocumentType} {DocumentNo}_  
 Default Search Members:  
 _DocumentNo_  
 Code Data Member:  

@@ -1,6 +1,12 @@
 # Table Wms_Composite_Products
 
 
+## Entity
+
+Entity: [Logistics.Wms.CompositeProducts](~/entities/Logistics.Wms.CompositeProducts.md)
+
+Products which are stored as two or more separate components in the warehouse. Entity: Wms_Composite_Products (Introduced in version 23.1.0.7)
+
 ## Summary
 
 | Name | Type | Description |
@@ -37,7 +43,7 @@
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
-|Visible|yes|
+|Visible|no|
 
 #### Composite_Product_Id - Supported Filters
 
@@ -53,6 +59,7 @@ The product which is stored as separate components.
 | Property | Value |
 | - | - |
 |Auto Complete|no|
+|Base Table.Column|[Gen_Products](Gen_Products.md).[Id](Gen_Products.md#id)|
 |Data Filter|no|
 |Default Value|None|
 |Enter Stop|yes|
