@@ -727,6 +727,8 @@
     href: Log_Cargo_Types.md
   - name: Log_Carriers
     href: Log_Carriers.md
+  - name: Log_Composite_Product_Components
+    href: Log_Composite_Product_Components.md
   - name: Log_Logistic_Unit_Contents
     href: Log_Logistic_Unit_Contents.md
   - name: Log_Logistic_Unit_Specifications

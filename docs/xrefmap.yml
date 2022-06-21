@@ -1177,6 +1177,9 @@ references:
 - uid: Logistics
   name: Logistics Namespace
   href: entities/Logistics.html
+- uid: Logistics.CompositeProductComponents
+  name: Logistics.CompositeProductComponents Entity
+  href: entities/Logistics.CompositeProductComponents.html
 - uid: Logistics.Inventory
   name: Logistics.Inventory Namespace
   href: entities/Logistics.Inventory.html

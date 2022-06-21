@@ -772,6 +772,8 @@
 - name: Logistics
   href: Logistics.md
   items:
+  - name: CompositeProductComponents
+    href: Logistics.CompositeProductComponents.md
   - name: Inventory
     href: Logistics.Inventory.md
     items:

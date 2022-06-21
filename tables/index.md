@@ -391,6 +391,7 @@
 
 * [Log_Cargo_Types](Log_Cargo_Types.md)
 * [Log_Carriers](Log_Carriers.md)
+* [Log_Composite_Product_Components](Log_Composite_Product_Components.md)
 * [Log_Logistic_Unit_Contents](Log_Logistic_Unit_Contents.md)
 * [Log_Logistic_Unit_Specifications](Log_Logistic_Unit_Specifications.md)
 * [Log_Logistic_Unit_Types](Log_Logistic_Unit_Types.md)

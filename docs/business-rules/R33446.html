@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>R33446 Composite Products - Variable Ratios Products Not Allowed | ERP.net Domain Model </title>
+    <title>R33446 CompositeProductComponents - Variable Ratios Products Not Allowed | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="R33446 Composite Products - Variable Ratios Products Not Allowed | ERP.net Domain Model ">
+    <meta name="title" content="R33446 CompositeProductComponents - Variable Ratios Products Not Allowed | ERP.net Domain Model ">
     <meta name="generator" content="docfx 2.56.9.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
@@ -70,7 +70,7 @@
         <div class="article row grid">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="r33446-composite-products---variable-ratios-products-not-allowed">R33446 Composite Products - Variable Ratios Products Not Allowed</h1>
+<h1 id="r33446-compositeproductcomponents---variable-ratios-products-not-allowed">R33446 CompositeProductComponents - Variable Ratios Products Not Allowed</h1>
 
 <table>
 <thead>
@@ -102,7 +102,7 @@
 </tr>
 <tr>
 <td>Events</td>
-<td>AggregateClientCommit</td>
+<td>ClientCommit</td>
 </tr>
 <tr>
 <td>Priority</td>
@@ -118,7 +118,7 @@
 </tr>
 <tr>
 <td>Action</td>
-<td>Validate that: <br> CompositeProduct.Product.VariableMeasurementRatios == false <br> AND <br> COUNT(CompositeProductComponents, where CompositeProduct == current.CompositeProduct AND Product.VariableMeasurementRatios == true) = 0</td>
+<td>Validate that: <br> CompositeProduct.Product.VariableMeasurementRatios == false <br> AND <br> ComponentProduct.Product.VariableMeasurementRatios == false</td>
 </tr>
 <tr>
 <td>Description</td>
@@ -126,7 +126,7 @@
 </tr>
 <tr>
 <td>Message</td>
-<td>Composite product &quot;{CompositeProduct}&quot; uses products with variable measurement ratios, which is not allowed. <br> Please make sure that the main product of the composition and its components do not use variable measurement ratios.</td>
+<td>Composite products do not support variable measurement ratios, but component &quot;{CompositeProductCoponent}&quot; violates this rule <br> Please make sure that both the composite product and the component product do not use variable measurement ratios.</td>
 </tr>
 <tr>
 <td>Version</td>

@@ -161,10 +161,14 @@ _Allowed Values (Logistics.Wms.WarehouseOrderLinesRepository.TaskType Enum Membe
 | Inspect | Inspect value. Stored as 'INS'. <br /> _Database Value:_ 'INS' <br /> _Model Value:_ 4 <br /> _Domain API Value:_ 'Inspect' |
 | Pack | Pack value. Stored as 'PCK'. <br /> _Database Value:_ 'PCK' <br /> _Model Value:_ 5 <br /> _Domain API Value:_ 'Pack' |
 | Unpack | Unpack value. Stored as 'UPK'. <br /> _Database Value:_ 'UPK' <br /> _Model Value:_ 6 <br /> _Domain API Value:_ 'Unpack' |
-| AssembleKit | AssembleKit value. Stored as 'KIT'. <br /> _Database Value:_ 'KIT' <br /> _Model Value:_ 7 <br /> _Domain API Value:_ 'AssembleKit' |
-| ReverseKitting | ReverseKitting value. Stored as 'RKT'. <br /> _Database Value:_ 'RKT' <br /> _Model Value:_ 8 <br /> _Domain API Value:_ 'ReverseKitting' |
+| Kit | Kit value. Stored as 'KIT'. <br /> _Database Value:_ 'KIT' <br /> _Model Value:_ 7 <br /> _Domain API Value:_ 'Kit' |
+| Dekit | Dekit value. Stored as 'DKT'. <br /> _Database Value:_ 'DKT' <br /> _Model Value:_ 8 <br /> _Domain API Value:_ 'Dekit' |
 | Count | Count value. Stored as 'CNT'. <br /> _Database Value:_ 'CNT' <br /> _Model Value:_ 9 <br /> _Domain API Value:_ 'Count' |
 | UserTask | UserTask value. Stored as 'TSK'. <br /> _Database Value:_ 'TSK' <br /> _Model Value:_ 10 <br /> _Domain API Value:_ 'UserTask' |
+| ComponentDispatch | ComponentDispatch value. Stored as 'CDP'. <br /> _Database Value:_ 'CDP' <br /> _Model Value:_ 11 <br /> _Domain API Value:_ 'ComponentDispatch' |
+| ComponentReceive | ComponentReceive value. Stored as 'CRC'. <br /> _Database Value:_ 'CRC' <br /> _Model Value:_ 12 <br /> _Domain API Value:_ 'ComponentReceive' |
+| Assemble | Assemble value. Stored as 'ASM'. <br /> _Database Value:_ 'ASM' <br /> _Model Value:_ 13 <br /> _Domain API Value:_ 'Assemble' |
+| Disassemble | Disassemble value. Stored as 'DSM'. <br /> _Database Value:_ 'DSM' <br /> _Model Value:_ 14 <br /> _Domain API Value:_ 'Disassemble' |
 
 _Supported Filters_: **Equals, EqualsIn**  
 _Supports Order By_: **False**  
