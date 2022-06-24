@@ -19,7 +19,7 @@ The availability of goods in the warehouse locations of the warehouse. Entity: W
 |[Quantity_Base_Available](#quantity_base_available)|`decimal(38, 3)` ||
 |[Serial_Number_Id](#serial_number_id)|`uniqueidentifier` |The serial number which was transacted. NULL when the transaction was not for a specific serial number.|
 |[Standard_Quantity_Available](#standard_quantity_available)|`decimal(38, 3)` ||
-|[Warehouse_Id](#warehouse_id)|`uniqueidentifier` ||
+|[Warehouse_Id](#warehouse_id)|`uniqueidentifier` |The warehouse in which the transaction occurred.|
 |[Warehouse_Location_Id](#warehouse_location_id)|`uniqueidentifier` |The warehouse location, where the transaction occurred.|
 
 ## Columns
@@ -295,6 +295,9 @@ The serial number which was transacted. NULL when the transaction was not for a 
 |Visible|yes|
 
 ### Warehouse_Id
+
+
+The warehouse in which the transaction occurred.
 
 | Property | Value |
 | - | - |

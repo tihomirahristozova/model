@@ -82,6 +82,10 @@
 <h2 id="entity">Entity</h2>
 <p>Entity: <a href="../entities/Logistics.CompositeProductComponents.html">Logistics.CompositeProductComponents</a></p>
 <p>Separate components of a product which are packaged and stored individually. Used when a single product is stored in multiple packages. Entity: Log_Composite_Product_Components (Introduced in version 23.1.0.15)</p>
+<h2 id="owner-tables-hierarchy">Owner Tables Hierarchy</h2>
+<ul>
+<li><a href="Gen_Products.html">Gen_Products</a></li>
+</ul>
 <h2 id="summary">Summary</h2>
 <table>
 <thead>
@@ -115,7 +119,7 @@
 <tr>
 <td><a href="#from_date">From_Date</a></td>
 <td><code>date</code></td>
-<td>When set, specifies the activation date of the component for this product.</td>
+<td>Starting date (inclusive) of the validity of the component. Null means that the component does not have an activation date.</td>
 </tr>
 <tr>
 <td><a href="#is_active">Is_Active</a></td>
@@ -140,7 +144,7 @@
 <tr>
 <td><a href="#to_date">To_Date</a></td>
 <td><code>date</code></td>
-<td>When set, specifies the de-activation date of the component for this product.</td>
+<td>Ending date (inclusive) of the validity of the component. Null means that the component does not have a deactivation date.</td>
 </tr>
 </tbody>
 </table>
@@ -331,6 +335,10 @@
 <td>no</td>
 </tr>
 <tr>
+<td>Referenced Table</td>
+<td><a href="Gen_Products.html">Gen_Products</a></td>
+</tr>
+<tr>
 <td>RTF</td>
 <td>no</td>
 </tr>
@@ -449,10 +457,6 @@
 <td>no</td>
 </tr>
 <tr>
-<td>Referenced Table</td>
-<td><a href="Gen_Products.html">Gen_Products</a></td>
-</tr>
-<tr>
 <td>RTF</td>
 <td>no</td>
 </tr>
@@ -557,7 +561,7 @@
 </tr>
 <tr>
 <td>Ownership Reference</td>
-<td>no</td>
+<td>yes</td>
 </tr>
 <tr>
 <td>Pasword</td>
@@ -574,6 +578,10 @@
 <tr>
 <td>Readonly</td>
 <td>no</td>
+</tr>
+<tr>
+<td>Referenced Table</td>
+<td><a href="Gen_Products.html">Gen_Products</a></td>
 </tr>
 <tr>
 <td>RTF</td>
@@ -633,7 +641,7 @@
 </tbody>
 </table>
 <h3 id="from_date">From_Date</h3>
-<p>When set, specifies the activation date of the component for this product.</p>
+<p>Starting date (inclusive) of the validity of the component. Null means that the component does not have an activation date.</p>
 <table>
 <thead>
 <tr>
@@ -1201,7 +1209,7 @@
 </tbody>
 </table>
 <h3 id="to_date">To_Date</h3>
-<p>When set, specifies the de-activation date of the component for this product.</p>
+<p>Ending date (inclusive) of the validity of the component. Null means that the component does not have a deactivation date.</p>
 <table>
 <thead>
 <tr>

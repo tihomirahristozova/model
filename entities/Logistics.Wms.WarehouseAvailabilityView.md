@@ -35,7 +35,7 @@ Aggregate Tree
 | [Product](Logistics.Wms.WarehouseAvailabilityView.md#product) | [Products](General.Products.Products.md) | The product, which was transacted. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Gen_Products_Table.Id` |
 | [ProductVariant](Logistics.Wms.WarehouseAvailabilityView.md#productvariant) | [ProductVariants](General.Products.ProductVariants.md) | The product variant, which was transacted. null when the transaction was not for a product variant. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Gen_Product_Variants_Table.Product_Variant_Id` |
 | [SerialNumber](Logistics.Wms.WarehouseAvailabilityView.md#serialnumber) | [SerialNumbers](Logistics.Inventory.SerialNumbers.md) | The serial number which was transacted. null when the transaction was not for a specific serial number. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Inv_Serial_Numbers_Table.Id` |
-| [Warehouse](Logistics.Wms.WarehouseAvailabilityView.md#warehouse) | [Warehouses](Logistics.Wms.Warehouses.md) |  |
+| [Warehouse](Logistics.Wms.WarehouseAvailabilityView.md#warehouse) | [Warehouses](Logistics.Wms.Warehouses.md) | The warehouse in which the transaction occurred. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Wms_Warehouses_Table.Warehouse_Id` |
 | [WarehouseLocation](Logistics.Wms.WarehouseAvailabilityView.md#warehouselocation) | [WarehouseLocations](Logistics.Wms.WarehouseLocations.md) | The warehouse location, where the transaction occurred. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Wms_Warehouse_<br />Locations_Table.Warehouse_Location_Id` |
 
 
@@ -113,6 +113,8 @@ _Supported Filters_: **Equals, EqualsIn**
 _Default Value_: **NewGuid**  
 
 ### Warehouse
+
+The warehouse in which the transaction occurred. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Wms_Warehouses_Table.Warehouse_Id`
 
 _Type_: **[Warehouses](Logistics.Wms.Warehouses.md)**  
 _Category_: **System**  

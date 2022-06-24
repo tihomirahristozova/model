@@ -29,6 +29,7 @@ Aggregate Tree
   * [General.Products.ProductPictures](General.Products.ProductPictures.md)  
   * [General.Products.ProductVariants](General.Products.ProductVariants.md)  
   * [Logistics.Inventory.ProductDefaultStoreBins](Logistics.Inventory.ProductDefaultStoreBins.md)  
+  * [Logistics.CompositeProductComponents](Logistics.CompositeProductComponents.md)  
 
 ## Attributes
 
@@ -93,6 +94,7 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | Codes | [ProductCodes](General.Products.ProductCodes.md) | List of `ProductCode`(General.Products.ProductCodes.md) child objects, based on the `General.Products.ProductCode.Product`(General.Products.ProductCodes.md#product) back reference 
+| CompositeProductComponents | [CompositeProductComponents](Logistics.CompositeProductComponents.md) | List of `CompositeProduct<br />Component`(Logistics.CompositeProductComponents.md) child objects, based on the `Logistics.CompositeProductComponent.CompositeProduct`(Logistics.CompositeProductComponents.md#compositeproduct) back reference 
 | DefaultStoreBins | [ProductDefaultStoreBins](Logistics.Inventory.ProductDefaultStoreBins.md) | List of `ProductDefaultStoreBin`(Logistics.Inventory.ProductDefaultStoreBins.md) child objects, based on the `Logistics.Inventory.ProductDefaultStoreBin.Product`(Logistics.Inventory.ProductDefaultStoreBins.md#product) back reference 
 | Dimensions | [ProductDimensions](General.Products.ProductDimensions.md) | List of `ProductDimension`(General.Products.ProductDimensions.md) child objects, based on the `General.Products.ProductDimension.Product`(General.Products.ProductDimensions.md#product) back reference 
 | DistributionChannels | [ProductDistributionChannels](Crm.Marketing.ProductDistributionChannels.md) | List of `ProductDistribution<br />Channel`(Crm.Marketing.ProductDistribution<br />Channels.md) child objects, based on the `Crm.Marketing.ProductDistributionChannel.Product`(Crm.Marketing.ProductDistribution<br />Channels.md#product) back reference 

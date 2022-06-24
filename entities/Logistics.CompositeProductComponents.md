@@ -9,36 +9,40 @@ Separate components of a product which are packaged and stored individually. Use
 
 ## Default Visualization
 Default Display Text Format:  
-_{Id}: {CompositeProductComponentId}_  
+_{ComponentNo}: {ComponentProduct}_  
 Default Search Members:  
-__  
+_CompositeProduct.Name_  
+Name Data Member:  
+_CompositeProduct.Name_  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
 
-Aggregate Tree  
-* [Logistics.CompositeProductComponents](Logistics.CompositeProductComponents.md)  
+Aggregate Parent:  
+[General.Products.Products](General.Products.Products.md)  
+Aggregate Root:  
+[General.Products.Products](General.Products.Products.md)  
 
 ## Attributes
 
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [ComponentNo](Logistics.CompositeProductComponents.md#componentno) | int32 | Consecutive number of the component within this composite product. `Required` `Filter(multi eq)` 
-| [ComponentProductId](Logistics.CompositeProductComponents.md#componentproductid) | guid | The product which is a component of the composite product. `Required` `Filter(multi eq)` 
-| [CompositeProductId](Logistics.CompositeProductComponents.md#compositeproductid) | guid | The product of which the current component is a part. `Required` `Filter(multi eq)` 
 | [DisplayText](Logistics.CompositeProductComponents.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
-| [FromDate](Logistics.CompositeProductComponents.md#fromdate) | date __nullable__ | When set, specifies the activation date of the component for this product. `Filter(eq;ge;le)` 
+| [FromDate](Logistics.CompositeProductComponents.md#fromdate) | date __nullable__ | Starting date (inclusive) of the validity of the component. Null means that the component does not have an activation date. `Filter(eq;ge;le)` 
+| [Id](Logistics.CompositeProductComponents.md#id) | guid |  
 | [IsActive](Logistics.CompositeProductComponents.md#isactive) | boolean | Indicates whether the component is currently active for this composite product. `Required` `Default(true)` `Filter(eq)` 
 | [Notes](Logistics.CompositeProductComponents.md#notes) | string (max) __nullable__ | Notes for this composite product component. 
 | [ObjectVersion](Logistics.CompositeProductComponents.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 | [Quantity](Logistics.CompositeProductComponents.md#quantity) | decimal (12, 3) | The number of packages of this component that are needed to compose the product. `Required` `Default(1)` `Filter(multi eq;ge;le)` 
-| [ToDate](Logistics.CompositeProductComponents.md#todate) | date __nullable__ | When set, specifies the de-activation date of the component for this product. `Filter(eq;ge;le)` 
+| [ToDate](Logistics.CompositeProductComponents.md#todate) | date __nullable__ | Ending date (inclusive) of the validity of the component. Null means that the component does not have a deactivation date. `Filter(eq;ge;le)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [GeneralProducts<br />CompositeProduct<br />Component](Logistics.CompositeProductComponents.md#generalproductscompositeproductcomponent) | [Products](General.Products.Products.md) |  |
+| [ComponentProduct](Logistics.CompositeProductComponents.md#componentproduct) | [Products](General.Products.Products.md) | The product which is a component of the composite product. `Required` `Filter(multi eq)` |
+| [CompositeProduct](Logistics.CompositeProductComponents.md#compositeproduct) | [Products](General.Products.Products.md) | The product of which the current component is a part. `Required` `Filter(multi eq)` `Owner` |
 
 
 ## Attribute Details
@@ -52,22 +56,6 @@ _Category_: **System**
 _Supported Filters_: **Equals, EqualsIn**  
 _Supports Order By_: **False**  
 
-### ComponentProductId
-
-The product which is a component of the composite product. `Required` `Filter(multi eq)`
-
-_Type_: **guid**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-
-### CompositeProductId
-
-The product of which the current component is a part. `Required` `Filter(multi eq)`
-
-_Type_: **guid**  
-_Category_: **System**  
-_Supported Filters_: **Equals, EqualsIn**  
-
 ### DisplayText
 
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
@@ -79,12 +67,20 @@ _Supports Order By_: ****
 
 ### FromDate
 
-When set, specifies the activation date of the component for this product. `Filter(eq;ge;le)`
+Starting date (inclusive) of the validity of the component. Null means that the component does not have an activation date. `Filter(eq;ge;le)`
 
 _Type_: **date __nullable__**  
 _Category_: **System**  
 _Supported Filters_: **Equals, GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
+
+### Id
+
+_Type_: **guid**  
+_Indexed_: **True**  
+_Category_: **System**  
+_Supported Filters_: **Equals, EqualsIn**  
+_Default Value_: **NewGuid**  
 
 ### IsActive
 
@@ -127,7 +123,7 @@ _Default Value_: **1**
 
 ### ToDate
 
-When set, specifies the de-activation date of the component for this product. `Filter(eq;ge;le)`
+Ending date (inclusive) of the validity of the component. Null means that the component does not have a deactivation date. `Filter(eq;ge;le)`
 
 _Type_: **date __nullable__**  
 _Category_: **System**  
@@ -137,13 +133,22 @@ _Supports Order By_: **False**
 
 ## Reference Details
 
-### GeneralProductsCompositeProductComponent
+### ComponentProduct
+
+The product which is a component of the composite product. `Required` `Filter(multi eq)`
 
 _Type_: **[Products](General.Products.Products.md)**  
-_Indexed_: **True**  
 _Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Default Value_: **NewGuid**  
+
+### CompositeProduct
+
+The product of which the current component is a part. `Required` `Filter(multi eq)` `Owner`
+
+_Type_: **[Products](General.Products.Products.md)**  
+_Category_: **System**  
+_Supported Filters_: **Equals, EqualsIn**  
+_[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
 
 
 ## API Methods

@@ -83,15 +83,17 @@
 <p>Separate components of a product which are packaged and stored individually. Used when a single product is stored in multiple packages. Entity: Log_Composite_Product_Components (Introduced in version 23.1.0.15)</p>
 <h2 id="default-visualization">Default Visualization</h2>
 <p>Default Display Text Format:<br>
-<em>{Id}: {CompositeProductComponentId}</em><br>
+<em>{ComponentNo}: {ComponentProduct}</em><br>
 Default Search Members:<br>
-__</p>
+<em>CompositeProduct.Name</em><br>
+Name Data Member:<br>
+<em>CompositeProduct.Name</em></p>
 <h2 id="aggregate">Aggregate</h2>
 <p>An <a href="https://docs.erp.net/tech/advanced/concepts/aggregates.html">aggregate</a> is a cluster of domain objects that can be treated as a single unit.</p>
-<p>Aggregate Tree</p>
-<ul>
-<li><a href="Logistics.CompositeProductComponents.html">Logistics.CompositeProductComponents</a></li>
-</ul>
+<p>Aggregate Parent:<br>
+<a href="General.Products.Products.html">General.Products.Products</a><br>
+Aggregate Root:<br>
+<a href="General.Products.Products.html">General.Products.Products</a></p>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -108,16 +110,6 @@ __</p>
 <td>Consecutive number of the component within this composite product. <code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
-<td><a href="Logistics.CompositeProductComponents.html#componentproductid">ComponentProductId</a></td>
-<td>guid</td>
-<td>The product which is a component of the composite product. <code>Required</code> <code>Filter(multi eq)</code></td>
-</tr>
-<tr>
-<td><a href="Logistics.CompositeProductComponents.html#compositeproductid">CompositeProductId</a></td>
-<td>guid</td>
-<td>The product of which the current component is a part. <code>Required</code> <code>Filter(multi eq)</code></td>
-</tr>
-<tr>
 <td><a href="Logistics.CompositeProductComponents.html#displaytext">DisplayText</a></td>
 <td>string</td>
 <td>Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.</td>
@@ -125,7 +117,12 @@ __</p>
 <tr>
 <td><a href="Logistics.CompositeProductComponents.html#fromdate">FromDate</a></td>
 <td>date <strong>nullable</strong></td>
-<td>When set, specifies the activation date of the component for this product. <code>Filter(eq;ge;le)</code></td>
+<td>Starting date (inclusive) of the validity of the component. Null means that the component does not have an activation date. <code>Filter(eq;ge;le)</code></td>
+</tr>
+<tr>
+<td><a href="Logistics.CompositeProductComponents.html#id">Id</a></td>
+<td>guid</td>
+<td></td>
 </tr>
 <tr>
 <td><a href="Logistics.CompositeProductComponents.html#isactive">IsActive</a></td>
@@ -150,7 +147,7 @@ __</p>
 <tr>
 <td><a href="Logistics.CompositeProductComponents.html#todate">ToDate</a></td>
 <td>date <strong>nullable</strong></td>
-<td>When set, specifies the de-activation date of the component for this product. <code>Filter(eq;ge;le)</code></td>
+<td>Ending date (inclusive) of the validity of the component. Null means that the component does not have a deactivation date. <code>Filter(eq;ge;le)</code></td>
 </tr>
 </tbody>
 </table>
@@ -165,9 +162,14 @@ __</p>
 </thead>
 <tbody>
 <tr>
-<td><a href="Logistics.CompositeProductComponents.html#generalproductscompositeproductcomponent">GeneralProducts<br>CompositeProduct<br>Component</a></td>
+<td><a href="Logistics.CompositeProductComponents.html#componentproduct">ComponentProduct</a></td>
 <td><a href="General.Products.Products.html">Products</a></td>
-<td></td>
+<td>The product which is a component of the composite product. <code>Required</code> <code>Filter(multi eq)</code></td>
+</tr>
+<tr>
+<td><a href="Logistics.CompositeProductComponents.html#compositeproduct">CompositeProduct</a></td>
+<td><a href="General.Products.Products.html">Products</a></td>
+<td>The product of which the current component is a part. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></td>
 </tr>
 </tbody>
 </table>
@@ -178,16 +180,6 @@ __</p>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
-<h3 id="componentproductid">ComponentProductId</h3>
-<p>The product which is a component of the composite product. <code>Required</code> <code>Filter(multi eq)</code></p>
-<p><em>Type</em>: <strong>guid</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
-<h3 id="compositeproductid">CompositeProductId</h3>
-<p>The product of which the current component is a part. <code>Required</code> <code>Filter(multi eq)</code></p>
-<p><em>Type</em>: <strong>guid</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <h3 id="displaytext">DisplayText</h3>
 <p>Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.</p>
 <p><em>Type</em>: <strong>string</strong><br>
@@ -195,11 +187,17 @@ __</p>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: ****</p>
 <h3 id="fromdate">FromDate</h3>
-<p>When set, specifies the activation date of the component for this product. <code>Filter(eq;ge;le)</code></p>
+<p>Starting date (inclusive) of the validity of the component. Null means that the component does not have an activation date. <code>Filter(eq;ge;le)</code></p>
 <p><em>Type</em>: <strong>date <strong>nullable</strong></strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
+<h3 id="id">Id</h3>
+<p><em>Type</em>: <strong>guid</strong><br>
+<em>Indexed</em>: <strong>True</strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Default Value</em>: <strong>NewGuid</strong></p>
 <h3 id="isactive">IsActive</h3>
 <p>Indicates whether the component is currently active for this composite product. <code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>
@@ -228,18 +226,23 @@ __</p>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>1</strong></p>
 <h3 id="todate">ToDate</h3>
-<p>When set, specifies the de-activation date of the component for this product. <code>Filter(eq;ge;le)</code></p>
+<p>Ending date (inclusive) of the validity of the component. Null means that the component does not have a deactivation date. <code>Filter(eq;ge;le)</code></p>
 <p><em>Type</em>: <strong>date <strong>nullable</strong></strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
-<h3 id="generalproductscompositeproductcomponent">GeneralProductsCompositeProductComponent</h3>
+<h3 id="componentproduct">ComponentProduct</h3>
+<p>The product which is a component of the composite product. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p><em>Type</em>: <strong><a href="General.Products.Products.html">Products</a></strong><br>
-<em>Indexed</em>: <strong>True</strong><br>
+<em>Category</em>: <strong>System</strong><br>
+<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
+<h3 id="compositeproduct">CompositeProduct</h3>
+<p>The product of which the current component is a part. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>
+<p><em>Type</em>: <strong><a href="General.Products.Products.html">Products</a></strong><br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Default Value</em>: <strong>NewGuid</strong></p>
+<em><a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a></em>: <strong>True</strong></p>
 <h2 id="api-methods">API Methods</h2>
 <p>Methods that can be invoked in public APIs.</p>
 <h3 id="getallowedcustompropertyvalues">GetAllowedCustomPropertyValues</h3>

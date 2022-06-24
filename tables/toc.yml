@@ -349,6 +349,11 @@
     href: Crm_Target_Group_Members.md
   - name: Crm_Target_Groups
     href: Crm_Target_Groups.md
+- name: Dmv
+  href: Dmv.md
+  items:
+  - name: Dmv_Exec_Stats
+    href: Dmv_Exec_Stats.md
 - name: Dw
   href: Dw.md
   items:

@@ -7,6 +7,10 @@ Entity: [Logistics.CompositeProductComponents](~/entities/Logistics.CompositePro
 
 Separate components of a product which are packaged and stored individually. Used when a single product is stored in multiple packages. Entity: Log_Composite_Product_Components (Introduced in version 23.1.0.15)
 
+## Owner Tables Hierarchy
+
+* [Gen_Products](Gen_Products.md)
+
 ## Summary
 
 | Name | Type | Description |
@@ -15,12 +19,12 @@ Separate components of a product which are packaged and stored individually. Use
 |[Component_Product_Id](#component_product_id)|`uniqueidentifier` |The product which is a component of the composite product.|
 |[Composite_Product_Component_Id](#composite_product_component_id)|`uniqueidentifier` `PK`||
 |[Composite_Product_Id](#composite_product_id)|`uniqueidentifier` |The product of which the current component is a part.|
-|[From_Date](#from_date)|`date` |When set, specifies the activation date of the component for this product.|
+|[From_Date](#from_date)|`date` |Starting date (inclusive) of the validity of the component. Null means that the component does not have an activation date.|
 |[Is_Active](#is_active)|`bit` |Indicates whether the component is currently active for this composite product.|
 |[Notes](#notes)|`nvarchar(max)` |Notes for this composite product component.|
 |[Quantity](#quantity)|`decimal(12, 3)` |The number of packages of this component that are needed to compose the product.|
 |[Row_Version](#row_version)|`timestamp` ||
-|[To_Date](#to_date)|`date` |When set, specifies the de-activation date of the component for this product.|
+|[To_Date](#to_date)|`date` |Ending date (inclusive) of the validity of the component. Null means that the component does not have a deactivation date.|
 
 ## Columns
 
@@ -81,6 +85,7 @@ The product which is a component of the composite product.
 |Picture|no|
 |Primary Key|no|
 |Readonly|no|
+|Referenced Table|[Gen_Products](Gen_Products.md)|
 |RTF|no|
 |Sortable|no|
 |Summary Type|None|
@@ -114,7 +119,6 @@ The product which is a component of the composite product.
 |Picture|no|
 |Primary Key|yes (order: 1)|
 |Readonly|no|
-|Referenced Table|[Gen_Products](Gen_Products.md)|
 |RTF|no|
 |Sortable|no|
 |Summary Type|None|
@@ -147,11 +151,12 @@ The product of which the current component is a part.
 |Is Entity Name|no|
 |Max Length|-1|
 |Order|2147483647|
-|Ownership Reference|no|
+|Ownership Reference|yes|
 |Pasword|no|
 |Picture|no|
 |Primary Key|no|
 |Readonly|no|
+|Referenced Table|[Gen_Products](Gen_Products.md)|
 |RTF|no|
 |Sortable|no|
 |Summary Type|None|
@@ -171,7 +176,7 @@ The product of which the current component is a part.
 ### From_Date
 
 
-When set, specifies the activation date of the component for this product.
+Starting date (inclusive) of the validity of the component. Null means that the component does not have an activation date.
 
 | Property | Value |
 | - | - |
@@ -338,7 +343,7 @@ The number of packages of this component that are needed to compose the product.
 ### To_Date
 
 
-When set, specifies the de-activation date of the component for this product.
+Ending date (inclusive) of the validity of the component. Null means that the component does not have a deactivation date.
 
 | Property | Value |
 | - | - |
