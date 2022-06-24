@@ -25,7 +25,7 @@ erp.type: generation
 
 ## Business Logic
 
-This generation is used to create Warehouse Orders from Warehouse Requisitions fo the Composite Products. Thе generation takes the Warehouse Order Lines with Composite Products and
+This generation is used to create Warehouse Orders from Warehouse Requisitions for the Composite Products. Thе generation takes the Warehouse Order Lines with Composite Products and
 splits them into several Warehouse Order Lines - one for each of the Composite Product's Components.
 
 **The Warehouse Order’s header is created based on the Warehouse Requisition’s header as follows:**
