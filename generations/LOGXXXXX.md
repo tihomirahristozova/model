@@ -231,7 +231,9 @@ Once all of the Warehouse Order Lines are created and before the document is sav
 These records reflect the quantities fulfilled by the current iteration of the generation procedure and are needed to determine the quantities for subsequent generation iterations.
 
 **The new Document Fulfillment is created as follows:**
-**Important: Note that document fulfillments are NOT created for the warehouse order lines which are executing the product's components. **
+
+**Important:** Note that document fulfillments are NOT created for the warehouse order lines with the product's components.
+
 ```
 DocumentFulfillment.Document = WarehouseRequisition
 
