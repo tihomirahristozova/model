@@ -42,22 +42,22 @@ WarehouseOrder.WarehouseWorker = NULL
 
 > [!Note]
 > The new Warehouse Order is saved then and only when there is at least one line in it.
-
 ## Fulfillments
 
-| Fulfilment Name                              | CompositeProductToWarehouseOrderLine                               |
+| Fulfilment Name                              | WarehouseRequisitionLineToWarehouseOrderLine                 |
 | :------------------------------------------- | ------------------------------------------------------------ |
 | Fulfilment Tracking Type                     | Fulfilment Table                                             |
-| Parent Entity                                | WarehouseRequisitionLine |
-| Fulfilment Table                             | DocumentFulfillment(where 'DocumentLineId == WarehouseRequisitionLineId')|
-| Parent Entity/ Fulfilment Table Relationship | WarehouseRequisitionLine.Product = DocumentFulfillment.Product |
+| Parent Entity                                | WarehouseRequisitionLine                                     |
+| Fulfilment Table                             | DocumentFulfillment                                          |
+| Parent Entity/ Fulfilment Table Relationship | WarehouseRequisitionLineId = DocumentFulfillment.DocumentLineId |
 
 ## [Metrics](../reference/metrics.md)
 
 | Fulfilment Name                              |  Metric Name  |                   Measurement Unit                   | Parent Value                              | Fulfilment Table Value           | New Record |
 | :------------------------------------------- | :-----------: | :--------------------------------------------------: | :---------------------------------------- | :------------------------------- | :--------- |
-| CompositeProductToWarehouseOrderLine | MQuantityBase | WarehouseRequisitionLine.Product.BaseMeasurementUnit | WarehouseRequisitionLineLine.QuantityBase | DocumentFulfillment.QuantityBase | NO |
-| CompositeProductToWarehouseOrderLine | MStandardQuantity | WarehouseRequisitionLine.Product.BaseMeasurementUnit | WarehouseRequisitionLineLine.StandardQuantity | DocumentFulfillment.StandardQuantity | YES |
+| WarehouseRequisitionLineToWarehouseOrderLine | MQuantityBase | WarehouseRequisitionLine.Product.BaseMeasurementUnit | WarehouseRequisitionLineLine.QuantityBase | DocumentFulfillment.QuantityBase | NO |
+| WarehouseRequisitionLineToWarehouseOrderLine | MStandardQuantity | WarehouseRequisitionLine.Product.BaseMeasurementUnit | WarehouseRequisitionLineLine.StandardQuantity | DocumentFulfillment.StandardQuantity | YES |
+
 
 **The Warehouse Order Lines creation**
 <br/><br/>
