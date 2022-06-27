@@ -25,7 +25,8 @@ erp.type: generation
 
 ## Business Logic
 
-This generation is used to create Warehouse Orders from Warehouse Requisitions when the company is using Composite Products. Thе generation takes the Warehouse Order Lines with Composite Products and splits them into several Warehouse Order Lines - one for each of the Composite Product's Components.
+This generation is used to create Warehouse Orders from Warehouse Requisitions when the company is using Composite Products. Thе generation creates warehouse orders for both the noncomposite products and the composite products. What is special about this generation is that it creates two kinds of lines for the execution of the composite products. One line for the composite product and one line for each of its components.
+
 
 **The Warehouse Order’s header is created based on the Warehouse Requisition’s header as follows:**
 ```
@@ -71,7 +72,7 @@ The table contains the information for the Fulfilled Part of quantities by the W
 The creation starts with determining the kind of the product (composite or not) and the direction of movement.
 
 Is the product a composite product?
-A product is considered as composite when it has valid componets. 
+A product is considered as composite when it has atleast one valid component. 
 Valid composite product components are those for which:
 - FromDate == null OR <= WarehouseOrder.DocumentDate
 - ToDate == null OR >= WarehouseOrder.DocumentDate
@@ -87,7 +88,7 @@ Depending on the answers on both questions system may create three types of ware
 
 **Non-composite products** 
 
-If the parent requsition line's products is non-composite, the system will create a "traditional" warehouse order line.
+If the parent requsition line's products is non-composite, the system will create a "traditional" warehouse order line with Receive or Dispatch task type.
 
 **Warehouse Order Lines executing a non-composite product is created as follows**
 
@@ -136,7 +137,7 @@ WarehouseOrderLine.ParentLineNo = WarehouseRequisitionLine.LineNo
 
 If the parent requsition line contains a composite product are created two sets of Warehouse Order Lines - one for the composite product and one for each of its components.
 
-**Warehouse Order Lines executing a non-composite product is created as follows**
+**The Warehouse Order Lines executing the composite product are created as follows**
 ```
 WarehouseOrderLine.TaskType = If (WarehouseRequisition.RequisitionType = Inbound )
 
@@ -179,7 +180,7 @@ WarehouseOrderLine.ParentLineNo = WarehouseRequisitionLine.LineNo
 
 
 <br/>
-**The Warehouse Order Lines which are executing the Components**
+**The Warehouse Order Lines executing the composite product's components are created as follows**
 
 First we are getting all Composite Product Components where Composite Product is equal to the Product of the Warehouse Requisition Line. Then we are filtering only the valid componets.
 Valid components are those for which:
@@ -203,19 +204,19 @@ WarehouseOrderLine.SerialNumber = NULL
 
 WarehouseOrderLine.ProductVariant = NULL
 
-WarehouseOrderLine.QuantityUnit = **PCS ?????????????????????????????????**
+WarehouseOrderLine.QuantityUnit = FIRST(MeasurementUnits where SystemUnit = Pieces)
 
-WarehouseOrderLine.Quantity = CONVERT(WarehouseOrderLine.StandardQuantity, WarehouseOrderLine.QuantityUnit)
+WarehouseOrderLine.Quantity = WarehouseRequisitionLine.StandardQuantity * Component.Quantity
 
-WarehouseOrderLine.QuantityBase = WarehouseRequisitionLine.REMAINING(MQuantityBase)
+WarehouseOrderLine.QuantityBase = WarehouseRequisitionLine.StandardQuantity * Component.Quantity
 
-WarehouseOrderLine.StandardQuantity = WarehouseRequisitionLine.REMAINING(MStandardQuantity)
+WarehouseOrderLine.StandardQuantity = WarehouseRequisitionLine.StandardQuantity * Component.Quantity
 
 WarehouseOrderLine.LogisticUnit = NULL
 
 WarehouseOrderLine.WarehouseZone = NULL
 
-WarehouseOrderLine.WarehouseLocation =NULL
+WarehouseOrderLine.WarehouseLocation = NULL
 
 WarehouseOrderLine.ToWarehouseLocation = NULL
 
@@ -232,7 +233,7 @@ Once all of the Warehouse Order Lines are created and before the document is sav
 These records reflect the quantities fulfilled by the current iteration of the generation procedure and are needed to determine the quantities for subsequent generation iterations.
 
 **The new Document Fulfillment is created as follows:**
-**Important: Note that document fulfillments are created for the composite product line only. **
+**Important: Note that document fulfillments are NOT created for the warehouse order lines which are executing the product's components. **
 ```
 DocumentFulfillment.Document = WarehouseRequisition
 
