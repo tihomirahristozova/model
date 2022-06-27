@@ -1,5 +1,5 @@
 ---
-erp.entity: Logistics.Wms.WarehouseRequisitions_
+erp.entity: 
 erp.type: generation
 ---
 
@@ -12,7 +12,7 @@ erp.type: generation
 | Code                            | LOGXXXXX                                                      |
 | Parent Document                 | Warehouse Requisition                                        |
 | Sub-document                    | Warehouse Order                                              |
-| Full Name                       | Create Warehouse Orders for Composite Products               |
+| Full Name                       | Create Simple Warehouse Orders (with saparate lines for the composite product components) |
 | Status                          | [NEW](xref:generation-procedures) |
 | Deterministic                   | [YES](xref:document-generation-and-transitional-documents) |
 | Supports Transitional Documents | [NO](xref:document-generation-and-transitional-documents) |
