@@ -1,6 +1,11 @@
 # View Dmv_Exec_Stats
 
 
+## Entity
+
+Entity: [Dmv.ExecStats](~/entities/Dmv.ExecStats.md)
+
+
 ## Summary
 
 | Name | Type | Description |

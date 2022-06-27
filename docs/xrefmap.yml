@@ -556,6 +556,12 @@ references:
 - uid: data-types
   name: Data Types
   href: data-types.html
+- uid: Dmv
+  name: Dmv Namespace
+  href: entities/Dmv.html
+- uid: Dmv.ExecStats
+  name: Dmv.ExecStats View
+  href: entities/Dmv.ExecStats.html
 - uid: Finance
   name: Finance Namespace
   href: entities/Finance.html

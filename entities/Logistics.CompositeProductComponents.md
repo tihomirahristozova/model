@@ -56,6 +56,11 @@ _Category_: **System**
 _Supported Filters_: **Equals, EqualsIn**  
 _Supports Order By_: **False**  
 
+_Back-End Default Expression:_  
+`( obj.CompositeProduct.CompositeProductComponents.Select( c => c.ComponentNo).DefaultIfEmpty( 0).Max( ) + 10)`
+
+_Front-End Recalc Expressions:_  
+`( obj.CompositeProduct.CompositeProductComponents.Select( c => c.ComponentNo).DefaultIfEmpty( 0).Max( ) + 10)`
 ### DisplayText
 
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.

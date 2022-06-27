@@ -36,6 +36,7 @@ Consecutive number of the component within this composite product.
 | Property | Value |
 | - | - |
 |Auto Complete|no|
+|Autoincrement|1|
 |Data Filter|no|
 |Default Value|None|
 |Enter Stop|yes|
@@ -72,7 +73,6 @@ The product which is a component of the composite product.
 | Property | Value |
 | - | - |
 |Auto Complete|no|
-|Base Table.Column|[Gen_Products](Gen_Products.md).[Id](Gen_Products.md#id)|
 |Data Filter|no|
 |Default Value|None|
 |Enter Stop|yes|
@@ -143,7 +143,6 @@ The product of which the current component is a part.
 | Property | Value |
 | - | - |
 |Auto Complete|no|
-|Base Table.Column|[Gen_Products](Gen_Products.md).[Id](Gen_Products.md#id)|
 |Data Filter|no|
 |Default Value|None|
 |Enter Stop|yes|
