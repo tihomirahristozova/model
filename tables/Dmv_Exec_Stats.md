@@ -3,7 +3,7 @@
 
 ## Entity
 
-Entity: [Dmv.ExecStats](~/entities/Dmv.ExecStats.md)
+Entity: [Systems.Dmv.ExecStats](~/entities/Systems.Dmv.ExecStats.md)
 
 
 ## Summary
