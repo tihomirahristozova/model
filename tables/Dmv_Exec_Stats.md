@@ -5,6 +5,7 @@
 
 Entity: [Systems.Dmv.ExecStats](~/entities/Systems.Dmv.ExecStats.md)
 
+Execution statistics dynamic management view. Entity: Dmv_Exec_Stats (Introduced in version 23.1.0.19)
 
 ## Summary
 

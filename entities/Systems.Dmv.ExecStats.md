@@ -5,6 +5,8 @@ uid: Systems.Dmv.ExecStats
 
 **Namespace:** [Systems.Dmv](Systems.Dmv.md)  
 
+Execution statistics dynamic management view. Entity: Dmv_Exec_Stats (Introduced in version 23.1.0.19)
+
 ## Default Visualization
 Default Display Text Format:  
 _{Application}: {Database}_  
