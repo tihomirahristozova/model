@@ -12076,7 +12076,7 @@
       "output": {
         ".html": {
           "relative_path": "entities/Crm.Marketing.MarketingActivities.html",
-          "hash": "hOCi8uyQREDPDy2ojlFemA=="
+          "hash": "5+DnenPBv8SYkmQzKrg+Ww=="
         }
       },
       "is_incremental": false,
@@ -17909,6 +17909,18 @@
         ".html": {
           "relative_path": "generations/CRM0207.html",
           "hash": "JULPKYpQiP18mwpx1uIz3g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "generations/CRM0601.md",
+      "output": {
+        ".html": {
+          "relative_path": "generations/CRM0601.html",
+          "hash": "eboG5cAYmksgVtKmgz6veg=="
         }
       },
       "is_incremental": false,
