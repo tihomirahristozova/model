@@ -346,11 +346,11 @@ WarehouseOrderLine.ProductVariant = NULL
 
 WarehouseOrderLine.QuantityUnit = FIRST(MeasurementUnits where SystemUnit = Pieces)
 
-WarehouseOrderLine.Quantity = WarehouseRequisitionLine.StandardQuantity * Component.Quantity
+WarehouseOrderLine.Quantity = the StandardQuantity of the WarehouseOrderLine created for the composite product * Component.Quantity
 
-WarehouseOrderLine.QuantityBase = WarehouseRequisitionLine.StandardQuantity * Component.Quantity
+WarehouseOrderLine.QuantityBase = the StandardQuantity of the WarehouseOrderLine created for the composite product * Component.Quantity
 
-WarehouseOrderLine.StandardQuantity = WarehouseRequisitionLine.StandardQuantity * Component.Quantity
+WarehouseOrderLine.StandardQuantity = the StandardQuantity of the WarehouseOrderLine created for the composite product * Component.Quantity
 
 WarehouseOrderLine.LogisticUnit = NULL
 
