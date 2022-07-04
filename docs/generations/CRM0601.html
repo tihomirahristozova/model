@@ -139,8 +139,9 @@
 <p>This generation is used to create Sales Orders from Marketing Activities.</p>
 <p>To create a sales order, the customer has to be specified. <br>
 The customer is extracted from the Target party, selected in the Marketing Activity (MarketingActivity.TargetParty) and the up-to-date,
-and active customer definition of this party in the enterprise company of the sales order (SalesOrder.EnterpriseCompany) or which is without enterprise company. <br>
-(so Customer.Party = MarketingActivity.TargetParty &amp;&amp; <br>
+and active customer definition of this party in the enterprise company of the sales order (SalesOrder.EnterpriseCompany) or which is without enterprise company.
+<br><br>
+(Customer.Party = MarketingActivity.TargetParty &amp;&amp; <br>
 (Customer.EnterpriseCompany == SalesOrder.EnterpriseCompany || Customer.EnterpriseCompany == null) &amp;&amp; <br>
 Customer.Active == true &amp;&amp; (Customer.FromDate &lt;= SalesOrder.DocumentDate || Customer.FromDate == null) &amp;&amp; <br>
 (Customer.ThruDate &gt;= SalesOrder.DocumentDate || Customer.ThruDate == null).</p>
