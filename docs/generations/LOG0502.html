@@ -321,8 +321,15 @@ WarehouseOrderLine.ParentDocument = WarehouseRequisition
 WarehouseOrderLine.ParentLineNo = WarehouseRequisitionLine.LineNo
 </code></pre>
 <br>
-**The Warehouse Order Lines for the the composite product's components are created as follows**
-<p>First we are getting all valid Composite Product's Components, then we are creating new Warehouse Order Line for each of them:</p>
+<p><strong>The Warehouse Order Lines for the the composite product's components are created as follows</strong></p>
+<p>First we are getting all <strong>valid</strong> Composite Product's Components.
+Valid composite product components are those for which:</p>
+<ul>
+<li>FromDate == null OR &lt;= WarehouseOrder.DocumentDate</li>
+<li>ToDate == null OR &gt;= WarehouseOrder.DocumentDate</li>
+<li>IsActive == true
+,then we are creating new Warehouse Order Line for each of them:</li>
+</ul>
 <pre><code>WarehouseOrderLine.TaskType = If (WarehouseRequisition.RequisitionType = Inbound )
 
                             , then WarehouseOrderLine.TaskType = ComponentReceive
