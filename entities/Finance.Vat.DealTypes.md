@@ -11,7 +11,9 @@ Contains deal types supported by the system as well as user-defined types. Entit
 Default Display Text Format:  
 _{Name}_  
 Default Search Members:  
-_Name_  
+_Code; Name_  
+Code Data Member:  
+_Code_  
 Name Data Member:  
 _Name_  
 
@@ -26,6 +28,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [Code](Finance.Vat.DealTypes.md#code) | string (32) | Code of the deal type. `Required` `Filter(multi eq;like)` `ORD` `Introduced in version 23.1.0.32` 
 | [DisplayText](Finance.Vat.DealTypes.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [EntryType](Finance.Vat.DealTypes.md#entrytype) | [EntryType](Finance.Vat.DealTypes.md#entrytype) | Type of the VAT entries, which are made for this deal type. S=Sales, P=Purchases. `Required` `Filter(eq)` 
 | [Id](Finance.Vat.DealTypes.md#id) | guid |  
@@ -47,6 +50,17 @@ Aggregate Tree
 
 
 ## Attribute Details
+
+### Code
+
+Code of the deal type. `Required` `Filter(multi eq;like)` `ORD` `Introduced in version 23.1.0.32`
+
+_Type_: **string (32)**  
+_Indexed_: **True**  
+_Category_: **System**  
+_Supported Filters_: **Equals, Like, EqualsIn**  
+_Supports Order By_: **True**  
+_Maximum Length_: **32**  
 
 ### DisplayText
 

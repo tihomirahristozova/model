@@ -12,6 +12,7 @@ Contains deal types supported by the system as well as user-defined types. Entit
 | Name | Type | Description |
 | - | - | --- |
 |[Country_Id](#country_id)|`uniqueidentifier` |The country for which this deal type applies. The country is matched against the country of the enterprise company.|
+|[Deal_Type_Code](#deal_type_code)|`nvarchar(32)` |Code of the deal type.|
 |[Deal_Type_Id](#deal_type_id)|`uniqueidentifier` `PK`|Unique Id for the deal type. Deal_Type_Id should be used for identifyind and updating system deal types.|
 |[Deal_Type_Name](#deal_type_name)|`nvarchar(254)` |Description of the deal type.|
 |[Entry_Type](#entry_type)|`nvarchar(1)` Allowed: `P`, `S`|Type of the VAT entries, which are made for this deal type. S=Sales, P=Purchases.|
@@ -34,7 +35,7 @@ The country for which this deal type applies. The country is matched against the
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|4|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -57,6 +58,43 @@ The country for which this deal type applies. The country is matched against the
 | - | - | - | - |
 |Equals|`NULL`|no|no|
 
+### Deal_Type_Code
+
+
+Code of the deal type.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|32|
+|Order|1|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|yes|
+|Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|nvarchar(32)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Deal_Type_Code - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|no|no|
+|Like|None|no|no|
+
 ### Deal_Type_Id
 
 
@@ -71,7 +109,7 @@ Unique Id for the deal type. Deal_Type_Id should be used for identifyind and upd
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|0|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -107,7 +145,7 @@ Description of the deal type.
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|254|
-|Order|2147483647|
+|Order|2|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -145,7 +183,7 @@ Type of the VAT entries, which are made for this deal type. S=Sales, P=Purchases
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|1|
-|Order|2147483647|
+|Order|3|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -181,7 +219,7 @@ Is_System is True for those deal types that are managed by the system via update
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|5|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
