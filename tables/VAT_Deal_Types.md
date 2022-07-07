@@ -18,6 +18,7 @@ Contains deal types supported by the system as well as user-defined types. Entit
 |[Entry_Type](#entry_type)|`nvarchar(1)` Allowed: `P`, `S`|Type of the VAT entries, which are made for this deal type. S=Sales, P=Purchases.|
 |[Is_System](#is_system)|`bit` Readonly|Is_System is True for those deal types that are managed by the system via update procedures and cannot be edited by the user.|
 |[Row_Version](#row_version)|`timestamp` ||
+|[Tax_Code](#tax_code)|`nvarchar(3)` Allowed: `STD`, `RED`, `SPR`, `INT`, `EXM`, `NS `|VAT rate type for this deal type. Can be among "STD"(Standard rate), "RED"(Reduced rate), "SPR"(Super-reduced rates), "INT"(Intermediary (Parking) rates), "EXM"(Tax Exempt), "NS"(Non-subject to tax).|
 
 ## Columns
 
@@ -267,5 +268,42 @@ Is_System is True for those deal types that are managed by the system via update
 |UI Width|Medium|
 |User Login|no|
 |Visible|no|
+
+### Tax_Code
+
+
+VAT rate type for this deal type. Can be among "STD"(Standard rate), "RED"(Reduced rate), "SPR"(Super-reduced rates), "INT"(Intermediary (Parking) rates), "EXM"(Tax Exempt), "NS"(Non-subject to tax).
+
+| Property | Value |
+| - | - |
+|Allowed Values|`STD`, `RED`, `SPR`, `INT`, `EXM`, `NS `|
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|3|
+|Order|6|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|nvarchar(3)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Tax_Code - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|no|no|
 
 

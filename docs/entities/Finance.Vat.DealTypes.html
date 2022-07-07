@@ -145,6 +145,11 @@ Name Data Member:<br>
 <td>int32</td>
 <td>The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.</td>
 </tr>
+<tr>
+<td><a href="Finance.Vat.DealTypes.html#taxcode">TaxCode</a></td>
+<td><a href="Finance.Vat.DealTypes.html#taxcode">TaxCode</a></td>
+<td>VAT rate type for this deal type. Can be among &quot;STD&quot;(Standard rate), &quot;RED&quot;(Reduced rate), &quot;SPR&quot;(Super-reduced rates), &quot;INT&quot;(Intermediary (Parking) rates), &quot;EXM&quot;(Tax Exempt), &quot;NS&quot;(Non-subject to tax). <code>Required</code> <code>Filter(multi eq)</code> <code>Introduced in version 23.1.0.33</code></td>
+</tr>
 </tbody>
 </table>
 <h2 id="references">References</h2>
@@ -248,6 +253,48 @@ Allowed values for the <code>EntryType</code>(Finance.Vat.DealTypes.md#entrytype
 <em>Category</em>: <strong>Extensible Data Object</strong><br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: ****</p>
+<h3 id="taxcode">TaxCode</h3>
+<p>VAT rate type for this deal type. Can be among &quot;STD&quot;(Standard rate), &quot;RED&quot;(Reduced rate), &quot;SPR&quot;(Super-reduced rates), &quot;INT&quot;(Intermediary (Parking) rates), &quot;EXM&quot;(Tax Exempt), &quot;NS&quot;(Non-subject to tax). <code>Required</code> <code>Filter(multi eq)</code> <code>Introduced in version 23.1.0.33</code></p>
+<p><em>Type</em>: <strong><a href="Finance.Vat.DealTypes.html#taxcode">TaxCode</a></strong><br>
+<em>Category</em>: <strong>System</strong><br>
+Allowed values for the <code>TaxCode</code>(Finance.Vat.DealTypes.md#taxcode) data attribute<br>
+<em>Allowed Values (Finance.Vat.DealTypesRepository.TaxCode Enum Members)</em></p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>StandardRate</td>
+<td>StandardRate value. Stored as 'STD'. <br> <em>Database Value:</em> 'STD' <br> <em>Model Value:</em> 0 <br> <em>Domain API Value:</em> 'StandardRate'</td>
+</tr>
+<tr>
+<td>ReducedRate</td>
+<td>ReducedRate value. Stored as 'RED'. <br> <em>Database Value:</em> 'RED' <br> <em>Model Value:</em> 1 <br> <em>Domain API Value:</em> 'ReducedRate'</td>
+</tr>
+<tr>
+<td>SuperReducedRates</td>
+<td>SuperReducedRates value. Stored as 'SPR'. <br> <em>Database Value:</em> 'SPR' <br> <em>Model Value:</em> 2 <br> <em>Domain API Value:</em> 'SuperReducedRates'</td>
+</tr>
+<tr>
+<td>IntermediaryParkingRates</td>
+<td>IntermediaryParkingRates value. Stored as 'INT'. <br> <em>Database Value:</em> 'INT' <br> <em>Model Value:</em> 3 <br> <em>Domain API Value:</em> 'IntermediaryParkingRates'</td>
+</tr>
+<tr>
+<td>TaxExempt</td>
+<td>TaxExempt value. Stored as 'EXM'. <br> <em>Database Value:</em> 'EXM' <br> <em>Model Value:</em> 4 <br> <em>Domain API Value:</em> 'TaxExempt'</td>
+</tr>
+<tr>
+<td>NonSubjectToTax</td>
+<td>NonSubjectToTax value. Stored as 'NS '. <br> <em>Database Value:</em> 'NS ' <br> <em>Model Value:</em> 5 <br> <em>Domain API Value:</em> 'NonSubjectToTax'</td>
+</tr>
+</tbody>
+</table>
+<p><em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
+<em>Supports Order By</em>: <strong>False</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="country">Country</h3>
 <p>The country for which this deal type applies. The country is matched against the country of the enterprise company. <code>Required</code> <code>Filter(multi eq)</code></p>

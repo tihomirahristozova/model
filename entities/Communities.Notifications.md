@@ -132,13 +132,6 @@ _Supported Filters_: **Equals, EqualsIn**
 
 Methods that can be invoked in public APIs.
 
-### Send
-
-Sends the notification via the DomainSystemHost.              Currently the destinations are the following:              1. Send to the server's real time events queue.              2. Send an e-mail.  
-_Return Type_: **void**  
-_Declaring Type_: **[Notifications](Communities.Notifications.md)**  
-_Domain API Request_: **POST**  
-
 ### GetAllowedCustomPropertyValues
 
 Gets the allowed values for the specified custom property for this entity object.              If supported the result is ordered by property value. Some property value sources do not support ordering - in that case the result is not ordered.  

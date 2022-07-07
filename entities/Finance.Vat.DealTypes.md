@@ -35,6 +35,7 @@ Aggregate Tree
 | [IsSystem](Finance.Vat.DealTypes.md#issystem) | boolean | Is_System is True for those deal types that are managed by the system via update procedures and cannot be edited by the user. `Required` `Default(false)` `Filter(eq)` `ReadOnly` 
 | [Name](Finance.Vat.DealTypes.md#name) | string (254) | Description of the deal type. `Required` `Filter(eq;like)` 
 | [ObjectVersion](Finance.Vat.DealTypes.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
+| [TaxCode](Finance.Vat.DealTypes.md#taxcode) | [TaxCode](Finance.Vat.DealTypes.md#taxcode) | VAT rate type for this deal type. Can be among "STD"(Standard rate), "RED"(Reduced rate), "SPR"(Super-reduced rates), "INT"(Intermediary (Parking) rates), "EXM"(Tax Exempt), "NS"(Non-subject to tax). `Required` `Filter(multi eq)` `Introduced in version 23.1.0.33` 
 
 ## References
 
@@ -124,6 +125,27 @@ _Type_: **int32**
 _Category_: **Extensible Data Object**  
 _Supported Filters_: **NotFilterable**  
 _Supports Order By_: ****  
+
+### TaxCode
+
+VAT rate type for this deal type. Can be among "STD"(Standard rate), "RED"(Reduced rate), "SPR"(Super-reduced rates), "INT"(Intermediary (Parking) rates), "EXM"(Tax Exempt), "NS"(Non-subject to tax). `Required` `Filter(multi eq)` `Introduced in version 23.1.0.33`
+
+_Type_: **[TaxCode](Finance.Vat.DealTypes.md#taxcode)**  
+_Category_: **System**  
+Allowed values for the `TaxCode`(Finance.Vat.DealTypes.md#taxcode) data attribute  
+_Allowed Values (Finance.Vat.DealTypesRepository.TaxCode Enum Members)_  
+
+| Value | Description |
+| ---- | --- |
+| StandardRate | StandardRate value. Stored as 'STD'. <br /> _Database Value:_ 'STD' <br /> _Model Value:_ 0 <br /> _Domain API Value:_ 'StandardRate' |
+| ReducedRate | ReducedRate value. Stored as 'RED'. <br /> _Database Value:_ 'RED' <br /> _Model Value:_ 1 <br /> _Domain API Value:_ 'ReducedRate' |
+| SuperReducedRates | SuperReducedRates value. Stored as 'SPR'. <br /> _Database Value:_ 'SPR' <br /> _Model Value:_ 2 <br /> _Domain API Value:_ 'SuperReducedRates' |
+| IntermediaryParkingRates | IntermediaryParkingRates value. Stored as 'INT'. <br /> _Database Value:_ 'INT' <br /> _Model Value:_ 3 <br /> _Domain API Value:_ 'IntermediaryParkingRates' |
+| TaxExempt | TaxExempt value. Stored as 'EXM'. <br /> _Database Value:_ 'EXM' <br /> _Model Value:_ 4 <br /> _Domain API Value:_ 'TaxExempt' |
+| NonSubjectToTax | NonSubjectToTax value. Stored as 'NS '. <br /> _Database Value:_ 'NS ' <br /> _Model Value:_ 5 <br /> _Domain API Value:_ 'NonSubjectToTax' |
+
+_Supported Filters_: **Equals, EqualsIn**  
+_Supports Order By_: **False**  
 
 
 ## Reference Details
