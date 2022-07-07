@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>LOG0202 Create Unmanaged Store transaction | ERP.net Domain Model </title>
+    <title>R32687 LogisticsDocument - Complete Requisition Fulfillments | ERP.net Domain Model </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="LOG0202 Create Unmanaged Store transaction | ERP.net Domain Model ">
+    <meta name="title" content="R32687 LogisticsDocument - Complete Requisition Fulfillments | ERP.net Domain Model ">
     <meta name="generator" content="docfx 2.56.9.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
@@ -70,65 +70,74 @@
         <div class="article row grid">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="log0202-create-unmanaged-store-transaction">LOG0202 Create Unmanaged Store transaction</h1>
+<h1 id="r32687-logisticsdocument---complete-requisition-fulfillments">R32687 LogisticsDocument - Complete Requisition Fulfillments</h1>
 
-<h2 id="basic-information">Basic Information</h2>
 <table>
 <thead>
 <tr>
-<th style="text-align: left;">Module</th>
-<th>Logistics.Inventory</th>
+<th>Name</th>
+<th>Value</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;">Code</td>
-<td>LOG0202</td>
+<td>Code</td>
+<td>R32687</td>
 </tr>
 <tr>
-<td style="text-align: left;">Parent Document</td>
-<td>StoreOrder</td>
+<td>Entity</td>
+<td>Logistics.Wms.WarehouseOrders</td>
 </tr>
 <tr>
-<td style="text-align: left;">Sub-document</td>
-<td>StoreTransaction</td>
+<td>Name</td>
+<td>CompleteRequisitionFulfillments</td>
 </tr>
 <tr>
-<td style="text-align: left;">Full Name</td>
-<td>Create Unmanaged Store transaction</td>
-</tr>
-<tr>
-<td style="text-align: left;">Status</td>
-<td><a class="xref" href="https://erpnetdocs.github.io/tech/advanced/document-flow/generation-procedures.html">ACTIVE</a></td>
-</tr>
-<tr>
-<td style="text-align: left;">Deterministic</td>
-<td><a class="xref" href="https://erpnetdocs.github.io/tech/advanced/document-flow/deterministic-generations.html">YES</a></td>
-</tr>
-<tr>
-<td style="text-align: left;">Supports Transitional Documents</td>
-<td><a class="xref" href="https://erpnetdocs.github.io/tech/advanced/document-flow/transitional-documents.html">NO</a></td>
-</tr>
-<tr>
-<td style="text-align: left;">Replaces</td>
-<td>GenerateTransactionsForUnmanaged</td>
-</tr>
-<tr>
-<td style="text-align: left;">Orphan Rows</td>
-<td>Ignore</td>
-</tr>
-<tr>
-<td style="text-align: left;">Introduced In Version</td>
-<td>2018.2</td>
-</tr>
-<tr>
-<td style="text-align: left;">Date of Suspension</td>
+<td>Attribute</td>
 <td>-</td>
+</tr>
+<tr>
+<td>Layer</td>
+<td>Back-End</td>
+</tr>
+<tr>
+<td>Events</td>
+<td>Completed</td>
+</tr>
+<tr>
+<td>Priority</td>
+<td>Normal</td>
+</tr>
+<tr>
+<td>Modify</td>
+<td>YES</td>
+</tr>
+<tr>
+<td>Applicable Legislations</td>
+<td>ALL // no condition needed</td>
+</tr>
+<tr>
+<td>Action</td>
+<td>If WarehouseOrder.DocumentType.CompleteParentFulfillments == true, then execute the following steps: <br><br> 1. Get the first Warehouse Order Line. <br> If (TaskType != Dispatch OR Receive OR Kit OR Dekit) OR (ParentDocument == null) OR (ParentLineNo == null), then skip this line. <br> Else, continue with step 2. <br><br>2. Find all Document Fulfillments, where DocumentFulfillment.DocumentLineId = current.LogisticsDocumentLine.Id AND DocumentFulfillment.FulfillmentType = Completed<br><br>3. For each record found in step 2, create a coresponding Completed record for the parent document line, as follows:<br><br>DocumentFulfillment.Document = LogisticsDocumentLine.ParentDocument<br>DocumentFulfillment.DocumentLineId = FIRST(LogisticsDocument.ParentDocument.ChildLines, where LineNo = LogisticsDocument.ParentLineNo).Id<br>DocumentFulfillment.LineNo = LogisticsDocument.ParentLineNo<br>DocumentFulfillment.FulfillmentType = Completed<br>DocumentFulfillment.IsFinal = false<br>DocumentFulfillment.LineType = the LineType of the DocumentFulfillment found in step 2<br>DocumentFulfillment.QuantityBase = the QuantityBase of the DocumentFulfillment found in step 2<br>DocumentFulfillment.Product = the Product of the DocumentFulfillment found in step 2<br>DocumentFulfillment.StandardQuantity = the StandardQuantity of the DocumentFulfillment found in step 2<br>DocumentFulfillment.SerialNumber = the SerialNumber of the DocumentFulfillment found in step 2<br>DocumentFulfillment.Lot = the Lot of the DocumentFulfillment found in step 2<br>DocumentFulfillment.ProductVariant = the ProductVariant of the DocumentFulfillment found in step 2 <br>DocumentFulfillment.CreationUser = the current user <br> DocumentFulfillment.DestinationEntityName = the entity name of the line of the current document <br><br> 5. Repeat step 1, 2 and 3 for all other (if any) Lines of the current document.</td>
+</tr>
+<tr>
+<td>Description</td>
+<td>When document state is changed to Completed, creates Completed document fulfillments for the executed quantities of the parent document lines. <br> The rule is activated only for documents in whose document type the 'Complete Parent Fulfillments' field is checked. This check-mark and respectively the business rule, are usually used combination with a generation procedure which uses document fulfillments.</td>
+</tr>
+<tr>
+<td>Message</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Introduced In Version</td>
+<td>Introduced: 2023<br>Updated: -</td>
+</tr>
+<tr>
+<td>Revocable</td>
+<td>NO</td>
 </tr>
 </tbody>
 </table>
-<p>This Generation Procedure is used to create Store Transactions from Store Orders (the Store Transactions are almost identical copies of the orders). They are used in cases when the execution of the orders is not performed by a user through a specialized navigator, but instead should be done automatically when generating or releasing the Store Order.</p>
-<p>The &quot;LOG0202 Create Unmanaged Store transaction&quot; generation procedure's action and business are the same as the described for LOG02201 (for more information, see <a href="LOG0201.html">LOG0201 Create Store transactions</a>). The only difference between the two procedures is that unlike &quot;<a href="LOG0201.html">LOG0201 Create Store transactions</a>&quot; the execution of the current generation procedure does not depend on whether &quot;Direct order execution&quot; in the Store’s definition is check-marked or not. A sub-document is created even if Direct order execution is not allowed.</p>
 </article>
           </div>
           
@@ -137,7 +146,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/ErpNetDocs/model/blob/master/generations/LOG0202.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/ErpNetDocs/model/blob/master/business-rules/Rxxxxx.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
