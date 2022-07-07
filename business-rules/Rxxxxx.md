@@ -3,13 +3,13 @@ erp.type: business-rule
 erp.entity: Logistics.Wms.WarehouseOrders
 ---
 
-# R32687 LogisticsDocument - Complete Requisition Fulfillments
+# R32687 LogisticsDocument - Complete Parent Fulfillments
 
 | Name | Value |
 | ---- | ----- |
 | Code | R32687 |
 | Entity | Logistics.Wms.WarehouseOrders |
-| Name | CompleteRequisitionFulfillments |
+| Name | CompleteParentFulfillments |
 | Attribute |- |
 | Layer | Back-End                                        |
 | Events | Completed |
