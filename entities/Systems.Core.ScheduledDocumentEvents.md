@@ -167,6 +167,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The document that has caused this event to be scheduled. `Required` `Filter(multi eq)` `ReadOnly`
 
 _Type_: **[Documents](General.Documents.md)**  
+_Indexed_: **True**  
 _Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 

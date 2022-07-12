@@ -116,7 +116,8 @@ Legislations</strong></td>
 <tr>
 <td><strong>Action</strong></td>
 <td>IIF(((BonusProgram != null) AndAlso (Convert(BonusProgram.BonusAction, Int32) == 0)),
-BonusProgram.BonusProduct, ProductCode.Product.IfNullThen(Product))</td>
+BonusProgram.BonusProduct, IIF(((ProductCode.Product != null) AndAlso (ProductCode.Product.
+Active == True)), ProductCode.Product, Product))</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>

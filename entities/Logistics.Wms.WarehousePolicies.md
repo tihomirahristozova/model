@@ -138,6 +138,8 @@ _Allowed Values (Logistics.Wms.WarehousePoliciesRepository.PolicyKind Enum Membe
 | RequireDestinationScan | Require scanning of the destination location when moving/receiving. Stored as 'RDS'. <br /> _Database Value:_ 'RDS' <br /> _Model Value:_ 5 <br /> _Domain API Value:_ 'RequireDestinationScan' |
 | AllowLineSkip | Allow skipping of an order line when executing (allow quantity = 0). Stored as 'ALS'. <br /> _Database Value:_ 'ALS' <br /> _Model Value:_ 6 <br /> _Domain API Value:_ 'AllowLineSkip' |
 | ZoneType | Specifies the type of zone. Eg for receiving, shipping, packing, etc.. Stored as 'ZTY'. <br /> _Database Value:_ 'ZTY' <br /> _Model Value:_ 7 <br /> _Domain API Value:_ 'ZoneType' |
+| CompositeKitting<br />ControllingLevel | Specifies the level of control during the kitting of the composite product’s components.. Stored as 'KCL'. <br /> _Database Value:_ 'KCL' <br /> _Model Value:_ 8 <br /> _Domain API Value:_ 'CompositeKitting<br />ControllingLevel' |
+| CompositeDekitting<br />ControllingLevel | Specifies the level of control during the dekitting of the composite product.. Stored as 'DCL'. <br /> _Database Value:_ 'DCL' <br /> _Model Value:_ 9 <br /> _Domain API Value:_ 'CompositeDekitting<br />ControllingLevel' |
 
 _Supported Filters_: **Equals, EqualsIn**  
 _Supports Order By_: **False**  
