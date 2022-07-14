@@ -17,7 +17,7 @@ Contains the web sites, which are hosted for the database. Entity: Sys_Web_Sites
 |[Notes](#notes)|`nvarchar(max)` ||
 |[Relative_Url](#relative_url)|`nvarchar(254)` |The relative Url of the site. This is the text after the first slash after the protocol and host name. The text should not include the protocol and host name. NULL means that the site will be hosted as the root site in the speicified web host.|
 |[Row_Version](#row_version)|`timestamp` ||
-|[Settings_Json](#settings_json)|`nvarchar(max)` |The field specifies the settings for this website. NULL means that there are no specific settings for this website.|
+|[Settings_Json](#settings_json)|`nvarchar(max)` |The field specifies the JSON settings for this website. NULL means that there are no specific settings for this website.|
 |[Trusted_Application_Id](#trusted_application_id)|`uniqueidentifier` |The trusted application related to this web site|
 |[Web_Host_Id](#web_host_id)|`uniqueidentifier` |The web host in which to host the site.|
 |[Web_Site_Id](#web_site_id)|`uniqueidentifier` `PK`||
@@ -222,7 +222,7 @@ The relative Url of the site. This is the text after the first slash after the p
 ### Settings_Json
 
 
-The field specifies the settings for this website. NULL means that there are no specific settings for this website.
+The field specifies the JSON settings for this website. NULL means that there are no specific settings for this website.
 
 | Property | Value |
 | - | - |
