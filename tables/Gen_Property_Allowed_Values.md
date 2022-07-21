@@ -194,7 +194,7 @@ The value of the parent property, for which this allowed value is valid.
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
-|Visible|no|
+|Visible|yes|
 
 #### Parent_Allowed_Value_Id - Supported Filters
 

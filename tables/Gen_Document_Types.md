@@ -13,7 +13,7 @@ List of user-defined document types. Each type has associated system entity (obj
 | - | - | --- |
 |[Access_Key_Id](#access_key_id)|`uniqueidentifier` ||
 |[Code](#code)|`nvarchar(16)` |Unique descriptive code of the document type|
-|[Create_Fulfillments_on_Completion](#create_fulfillments_on_completion)|`bit` |When document state is changed to Completed, creates completed document fulfillments for the parent document. Used only for logistic documents.|
+|[Create_Fulfillments_On_Completion](#create_fulfillments_on_completion)|`bit` |When document state is changed to Completed, creates completed document fulfillments for the parent document. Used only for logistic documents.|
 |[Create_Manully](#create_manully)|`bit` |0 if documents with this document type only can be generated; 1 - the user can create documents with this type|
 |[Description](#description)|`nvarchar(max)` `ML`||
 |[Disallow_Opposite_Values_Generation](#disallow_opposite_values_generation)|`bit` |Disallow the generation of decreasing scalar values (values with opposite directions than the original values determined by the parent document) through this document type|
@@ -100,7 +100,7 @@ Unique descriptive code of the document type
 |Equals|`NULL`|no|no|
 |Like|None|no|no|
 
-### Create_Fulfillments_on_Completion
+### Create_Fulfillments_On_Completion
 
 
 When document state is changed to Completed, creates completed document fulfillments for the parent document. Used only for logistic documents.

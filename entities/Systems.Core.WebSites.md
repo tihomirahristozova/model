@@ -30,7 +30,7 @@ Aggregate Tree
 | [Notes](Systems.Core.WebSites.md#notes) | string (max) __nullable__ | Notes for this WebSite. 
 | [ObjectVersion](Systems.Core.WebSites.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
 | [RelativeUrl](Systems.Core.WebSites.md#relativeurl) | string (254) __nullable__ | The relative Url of the site. This is the text after the first slash after the protocol and host name. The text should not include the protocol and host name. null means that the site will be hosted as the root site in the speicified web host. 
-| [SettingsJson](Systems.Core.WebSites.md#settingsjson) | string (max) __nullable__ | The field specifies the settings for this website. null means that there are no specific settings for this website. `Introduced in version 23.1.0.37` 
+| [SettingsJson](Systems.Core.WebSites.md#settingsjson) | string (max) __nullable__ | The field specifies the JSON settings for this website. null means that there are no specific settings for this website. `Introduced in version 23.1.0.37` 
 | [WebSiteType](Systems.Core.WebSites.md#websitetype) | [WebSiteType](Systems.Core.WebSites.md#websitetype) | The type of web site - Api, Client Center, Id, etc. `Required` `Filter(multi eq)` 
 
 ## References
@@ -112,7 +112,7 @@ _Maximum Length_: **254**
 
 ### SettingsJson
 
-The field specifies the settings for this website. null means that there are no specific settings for this website. `Introduced in version 23.1.0.37`
+The field specifies the JSON settings for this website. null means that there are no specific settings for this website. `Introduced in version 23.1.0.37`
 
 _Type_: **string (max) __nullable__**  
 _Category_: **System**  

@@ -28,7 +28,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Applications.Service.Services.md#code) | string (16) | Unique code of the service. `Required` `Filter(eq;like)` 
+| [Code](Applications.Service.Services.md#code) | string (16) | Unique code of the service. `Required` `Filter(eq;like)` `ORD` 
 | [DisplayText](Applications.Service.Services.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [Id](Applications.Service.Services.md#id) | guid |  
 | [IsActive](Applications.Service.Services.md#isactive) | boolean | Indicates wheather this service is currently used. `Required` `Default(true)` `Filter(eq)` 
@@ -52,13 +52,17 @@ Aggregate Tree
 
 ### Code
 
-Unique code of the service. `Required` `Filter(eq;like)`
+Unique code of the service. `Required` `Filter(eq;like)` `ORD`
 
 _Type_: **string (16)**  
+_Indexed_: **True**  
 _Category_: **System**  
 _Supported Filters_: **Equals, Like**  
-_Supports Order By_: **False**  
+_Supports Order By_: **True**  
 _Maximum Length_: **16**  
+
+_Back-End Default Expression:_  
+`obj.GetNextDefaultCode( )`
 
 ### DisplayText
 
