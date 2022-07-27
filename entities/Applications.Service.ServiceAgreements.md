@@ -51,7 +51,7 @@ Aggregate Tree
 | [DocumentNo](Applications.Service.ServiceAgreements.md#documentno) | string (20) | Document number, unique within Document_Type_Id. `Required` `Filter(eq;like)` `ORD` (Inherited from [Documents](General.Documents.md)) 
 | [DocumentNotes](Applications.Service.ServiceAgreements.md#documentnotes) | string (max) __nullable__ | Notes for this Document. (Inherited from [Documents](General.Documents.md)) 
 | [DocumentVersion](Applications.Service.ServiceAgreements.md#documentversion) | int32 | Consecutive version number, starting with 1. Each update produces a new version of the document. `Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
-| [EndDateTime](Applications.Service.ServiceAgreements.md#enddatetime) | datetime | End date and time of the validity of the agreement. `Required` `Filter(ge;le)` 
+| [EndDateTime](Applications.Service.ServiceAgreements.md#enddatetime) | datetime __nullable__ | End date and time of the validity of the agreement. `Filter(ge;le)` 
 | [EntityName](Applications.Service.ServiceAgreements.md#entityname) | string (64) | The entity name of the document header. `Required` `Filter(eq)` `ORD` `ReadOnly` (Inherited from [Documents](General.Documents.md)) 
 | [Id](Applications.Service.ServiceAgreements.md#id) | guid |  
 | [<s>IsReleased</s>](Applications.Service.ServiceAgreements.md#isreleased) | boolean | **OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated. `Obsolete` `Required` `Default(false)` `Filter(eq)` `ReadOnly` `Obsoleted in version 22.1.6.61` 
@@ -226,9 +226,9 @@ _Default Value_: **1**
 
 ### EndDateTime
 
-End date and time of the validity of the agreement. `Required` `Filter(ge;le)`
+End date and time of the validity of the agreement. `Filter(ge;le)`
 
-_Type_: **datetime**  
+_Type_: **datetime __nullable__**  
 _Category_: **System**  
 _Supported Filters_: **GreaterThanOrLessThan**  
 _Supports Order By_: **False**  
