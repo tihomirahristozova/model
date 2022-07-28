@@ -123,7 +123,7 @@ _Supports Order By_: **False**
 _Default Value_: **Constant**  
 
 _Front-End Recalc Expressions:_  
-`IIF( ( ( obj.Recipe != null) AndAlso ( obj.ProducedQuantityUnit != null)), obj.Recipe.ProduceQuantity, obj.ProducedQuantity)`
+`obj.Recipe.ProduceQuantity`
 ### Notes
 
 Notes for this WorkOrderItem.
@@ -192,7 +192,7 @@ _Supports Order By_: **False**
 _Default Value_: **Constant**  
 
 _Front-End Recalc Expressions:_  
-`IIF( ( ( obj.Recipe != null) AndAlso ( obj.ProducedQuantityUnit != null)), obj.Recipe.ProduceQuantity, obj.ProducedQuantity)`
+`obj.Recipe.ProduceQuantity`
 ### ProducedQuantityBase
 
 The equivalence of Produced Quantity in the base measurement category of the product. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly`
