@@ -309,7 +309,7 @@ Aggregate Root:<br>
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
-<code>obj.Recipe.ProduceQuantity</code></p>
+<code>new Quantity( obj.Recipe.ProduceQuantity.Value, obj.ProducedQuantity.Unit)</code></p>
 <h3 id="notes">Notes</h3>
 <p>Notes for this WorkOrderItem.</p>
 <p><em>Type</em>: <strong>string (max) <strong>nullable</strong></strong><br>
@@ -381,7 +381,7 @@ Allowed values for the <code>Priority</code>(Production.ShopFloor.WorkOrderItems
 <em>Supports Order By</em>: <strong>False</strong><br>
 <em>Default Value</em>: <strong>Constant</strong></p>
 <p><em>Front-End Recalc Expressions:</em><br>
-<code>obj.Recipe.ProduceQuantity</code></p>
+<code>new Quantity( obj.Recipe.ProduceQuantity.Value, obj.ProducedQuantity.Unit)</code></p>
 <h3 id="producedquantitybase">ProducedQuantityBase</h3>
 <p>The equivalence of Produced Quantity in the base measurement category of the product. <code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>ReadOnly</code></p>
 <p><em>Type</em>: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a></strong><br>
