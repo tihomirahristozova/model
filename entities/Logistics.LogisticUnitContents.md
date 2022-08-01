@@ -106,10 +106,10 @@ _Supported Filters_: **Equals, EqualsIn**
 _Supports Order By_: **False**  
 
 _Back-End Default Expression:_  
-`( obj.LogisticUnit.Contents.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)`
+`( obj.LogisticUnit.Contents.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 1)`
 
 _Front-End Recalc Expressions:_  
-`( obj.LogisticUnit.Contents.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)`
+`( obj.LogisticUnit.Contents.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 1)`
 ### LotNumber
 
 The production lot number. null means unknown. `Filter(multi eq;like)`
