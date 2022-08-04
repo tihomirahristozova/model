@@ -75,6 +75,29 @@ _Supported Filters_: **Equals, EqualsIn**
 _Default Value_: **NewGuid**  
 
 
+## API Methods
+
+Methods that can be invoked in public APIs.
+
+### GetAccessKeyPermissions
+
+Gets the permissions this user has to access resources protected by the provided access key.  
+_Return Type_: **[SecurityPermissions](../data-types.md#systems.security.securitypermissions)**  
+_Declaring Type_: **[Users](Public.Users.md)**  
+_Domain API Request_: **POST**  
+
+**Parameters**  
+  * **accessKeyId**  
+    The access key id  
+    _Type_: guid  
+
+  * **idToken**  
+    The identity token of the logged in user. Required when the currently logged user is different from the public user.  
+    _Type_: string  
+     _Optional_: True  
+    _Default Value_: null  
+
+
 ## API
 
 Domain API Query:

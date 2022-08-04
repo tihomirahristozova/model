@@ -162,6 +162,26 @@ Default Search Members:<br>
 <em>Inherited From</em>: <strong>Cm_Persons_Table.Person_Id</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
 <em>Default Value</em>: <strong>NewGuid</strong></p>
+<h2 id="api-methods">API Methods</h2>
+<p>Methods that can be invoked in public APIs.</p>
+<h3 id="getaccesskeypermissions">GetAccessKeyPermissions</h3>
+<p>Gets the permissions this user has to access resources protected by the provided access key.<br>
+<em>Return Type</em>: <strong><a href="../data-types.html#systems.security.securitypermissions">SecurityPermissions</a></strong><br>
+<em>Declaring Type</em>: <strong><a href="Public.Users.html">Users</a></strong><br>
+<em>Domain API Request</em>: <strong>POST</strong></p>
+<p><strong>Parameters</strong></p>
+<ul>
+<li><p><strong>accessKeyId</strong><br>
+The access key id<br>
+<em>Type</em>: guid</p>
+</li>
+<li><p><strong>idToken</strong><br>
+The identity token of the logged in user. Required when the currently logged user is different from the public user.<br>
+<em>Type</em>: string<br>
+<em>Optional</em>: True<br>
+<em>Default Value</em>: null</p>
+</li>
+</ul>
 <h2 id="api">API</h2>
 <p>Domain API Query:
 <a href="https://demodb.my.erp.net/api/domain/odata/Public_Users?$top=10">https://demodb.my.erp.net/api/domain/odata/Public_Users?$top=10</a></p>
