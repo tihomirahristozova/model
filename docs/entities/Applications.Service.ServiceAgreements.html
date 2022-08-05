@@ -1067,12 +1067,33 @@ The skip clause - default is 0<br>
 <em>Default Value</em>: 0</p>
 </li>
 </ul>
+<h3 id="createnotification">CreateNotification</h3>
+<p>Creates a notification a sends a real time event to the user.<br>
+<em>Return Type</em>: <strong>void</strong><br>
+<em>Declaring Type</em>: <strong>EntityObject</strong><br>
+<em>Domain API Request</em>: <strong>POST</strong></p>
+<p><strong>Parameters</strong></p>
+<ul>
+<li><p><strong>user</strong><br>
+The user.<br>
+<em>Type</em>: <a href="Systems.Security.Users.html">Users</a></p>
+</li>
+<li><p><strong>notificationClass</strong><br>
+The notification class.<br>
+<em>Type</em>: string</p>
+</li>
+<li><p><strong>subject</strong><br>
+The subject.<br>
+<em>Type</em>: string</p>
+</li>
+</ul>
 <h2 id="business-rules">Business Rules</h2>
 <ul>
 <li><a href="../business-rules/R28212.html">R28212 ServiceAgreement - Services Quantity Unit</a></li>
 <li><a href="../business-rules/R28214.html">R28214 ServiceAgreement - Materials Quantity</a></li>
 <li><a href="../business-rules/R28221.html">R28221 ServiceAgreement - Services Quantity</a></li>
-<li><a href="../business-rules/R33690.html">R33690 ServiceAgreement - Materials Quantity Can Not Be Changed</a></li>
+<li><a href="../business-rules/R33690.html">R33690 ServiceAgreement - Materials Quantity Old Value</a></li>
+<li><a href="../business-rules/R33691.html">R33691 ServiceAgreement - Services Quantity Old Value</a></li>
 </ul>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>
 <ul>

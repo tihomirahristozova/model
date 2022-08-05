@@ -16,6 +16,7 @@ A planned task (operation) in a warehouse order. Entity: Wms_Warehouse_Order_Lin
 
 | Name | Type | Description |
 | - | - | --- |
+|[Line_Group_No](#line_group_no)|`int` |Line group number. Used to indicate which lines are part of the same group e.g. group of components of the same composite product.|
 |[Line_No](#line_no)|`int` |Unique consecutive line number within the order.|
 |[Logistic_Unit_Id](#logistic_unit_id)|`uniqueidentifier` |Logistic unit, which should be used in the operation.|
 |[Lot_Id](#lot_id)|`uniqueidentifier` |The lot of the product, which should be used. NULL for operations, which are not lot-specific, or when any lot can be used.|
@@ -40,6 +41,43 @@ A planned task (operation) in a warehouse order. Entity: Wms_Warehouse_Order_Lin
 
 ## Columns
 
+### Line_Group_No
+
+
+Line group number. Used to indicate which lines are part of the same group e.g. group of components of the same composite product.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|1|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Line_Group_No - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|no|
+
 ### Line_No
 
 
@@ -48,7 +86,7 @@ Unique consecutive line number within the order.
 | Property | Value |
 | - | - |
 |Auto Complete|no|
-|Autoincrement|1|
+|Autoincrement|10|
 |Data Filter|no|
 |Default Value|None|
 |Enter Stop|yes|

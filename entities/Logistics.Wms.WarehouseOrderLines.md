@@ -27,6 +27,7 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [DisplayText](Logistics.Wms.WarehouseOrderLines.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [Id](Logistics.Wms.WarehouseOrderLines.md#id) | guid |  
+| [LineGroupNo](Logistics.Wms.WarehouseOrderLines.md#linegroupno) | int32 | Line group number. Used to indicate which lines are part of the same group e.g. group of components of the same composite product. `Required` `Default(1)` `Filter(eq;ge;le)` `Introduced in version 23.1.0.67` 
 | [LineNo](Logistics.Wms.WarehouseOrderLines.md#lineno) | int32 | Unique consecutive line number within the order. `Required` `Filter(eq)` 
 | [Notes](Logistics.Wms.WarehouseOrderLines.md#notes) | string (max) __nullable__ | Notes for this WarehouseOrderLine. 
 | [ObjectVersion](Logistics.Wms.WarehouseOrderLines.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
@@ -73,6 +74,16 @@ _Indexed_: **True**
 _Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _Default Value_: **NewGuid**  
+
+### LineGroupNo
+
+Line group number. Used to indicate which lines are part of the same group e.g. group of components of the same composite product. `Required` `Default(1)` `Filter(eq;ge;le)` `Introduced in version 23.1.0.67`
+
+_Type_: **int32**  
+_Category_: **System**  
+_Supported Filters_: **Equals, GreaterThanOrLessThan**  
+_Supports Order By_: **False**  
+_Default Value_: **1**  
 
 ### LineNo
 
@@ -347,6 +358,27 @@ _Domain API Request_: **GET**
     _Type_: int32  
      _Optional_: True  
     _Default Value_: 0  
+
+
+### CreateNotification
+
+Creates a notification a sends a real time event to the user.  
+_Return Type_: **void**  
+_Declaring Type_: **EntityObject**  
+_Domain API Request_: **POST**  
+
+**Parameters**  
+  * **user**  
+    The user.  
+    _Type_: [Users](Systems.Security.Users.md)  
+
+  * **notificationClass**  
+    The notification class.  
+    _Type_: string  
+
+  * **subject**  
+    The subject.  
+    _Type_: string  
 
 
 

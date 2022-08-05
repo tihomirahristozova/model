@@ -151,6 +151,7 @@ _Supported Filters_: **Equals, EqualsIn**
 The product of which the current component is a part. `Required` `Filter(multi eq)` `Owner`
 
 _Type_: **[Products](General.Products.Products.md)**  
+_Indexed_: **True**  
 _Category_: **System**  
 _Supported Filters_: **Equals, EqualsIn**  
 _[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html)_: **True**  
@@ -201,6 +202,27 @@ _Domain API Request_: **GET**
     _Type_: int32  
      _Optional_: True  
     _Default Value_: 0  
+
+
+### CreateNotification
+
+Creates a notification a sends a real time event to the user.  
+_Return Type_: **void**  
+_Declaring Type_: **EntityObject**  
+_Domain API Request_: **POST**  
+
+**Parameters**  
+  * **user**  
+    The user.  
+    _Type_: [Users](Systems.Security.Users.md)  
+
+  * **notificationClass**  
+    The notification class.  
+    _Type_: string  
+
+  * **subject**  
+    The subject.  
+    _Type_: string  
 
 
 
