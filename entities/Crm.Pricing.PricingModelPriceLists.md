@@ -70,10 +70,10 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 
 _Back-End Default Expression:_  
-`( obj.PricingModel.PriceLists.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)`
+`( obj.PricingModel.PriceLists.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 1)`
 
 _Front-End Recalc Expressions:_  
-`( obj.PricingModel.PriceLists.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)`
+`( obj.PricingModel.PriceLists.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 1)`
 ### MarginPercent
 
 Used, when the price will be automatically calculated as percentage difference from standard price. It is usually a negative value. null, when the price will not be automatically calculated in this way.

@@ -111,10 +111,10 @@ _Supports Order By_: **False**
 _Default Value_: **0**  
 
 _Back-End Default Expression:_  
-`( obj.ProductGroup.RequiredProperties.Select( c => c.PropertyNo).DefaultIfEmpty( 0).Max( ) + 10)`
+`( obj.ProductGroup.RequiredProperties.Select( c => c.PropertyNo).DefaultIfEmpty( 0).Max( ) + 1)`
 
 _Front-End Recalc Expressions:_  
-`( obj.ProductGroup.RequiredProperties.Select( c => c.PropertyNo).DefaultIfEmpty( 0).Max( ) + 10)`
+`( obj.ProductGroup.RequiredProperties.Select( c => c.PropertyNo).DefaultIfEmpty( 0).Max( ) + 1)`
 ### Required
 
 Specifies whether the property is required (or only suggested) to be set for new products. Suggested properties are used by product configuration and other product creation services. true=Required, false=Suggested. `Required` `Default(false)`

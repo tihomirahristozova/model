@@ -218,9 +218,9 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Back-End Default Expression:</em><br>
-<code>( obj.Party.Pictures.Select( c =&gt; c.PictureNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
+<code>( obj.Party.Pictures.Select( c =&gt; c.PictureNo).DefaultIfEmpty( 0).Max( ) + 1)</code></p>
 <p><em>Front-End Recalc Expressions:</em><br>
-<code>( obj.Party.Pictures.Select( c =&gt; c.PictureNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
+<code>( obj.Party.Pictures.Select( c =&gt; c.PictureNo).DefaultIfEmpty( 0).Max( ) + 1)</code></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="party">Party</h3>
 <p>The <see cref="Party"></see> to which this PartyPicture belongs. <code>Required</code> <code>Filter(multi eq)</code> <code>Owner</code></p>

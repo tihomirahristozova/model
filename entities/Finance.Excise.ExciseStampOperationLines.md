@@ -88,10 +88,10 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 
 _Back-End Default Expression:_  
-`( obj.ExciseStampOperation.Lines.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)`
+`( obj.ExciseStampOperation.Lines.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 1)`
 
 _Front-End Recalc Expressions:_  
-`( obj.ExciseStampOperation.Lines.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)`
+`( obj.ExciseStampOperation.Lines.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 1)`
 ### Notes
 
 Notes for this ExciseStampOperationLine.

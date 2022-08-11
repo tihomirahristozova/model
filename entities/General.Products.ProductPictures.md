@@ -122,10 +122,10 @@ _Supported Filters_: **Equals, Like**
 _Supports Order By_: **False**  
 
 _Back-End Default Expression:_  
-`( obj.Product.Pictures.Select( c => c.PictureNo).DefaultIfEmpty( 0).Max( ) + 10)`
+`( obj.Product.Pictures.Select( c => c.PictureNo).DefaultIfEmpty( 0).Max( ) + 1)`
 
 _Front-End Recalc Expressions:_  
-`( obj.Product.Pictures.Select( c => c.PictureNo).DefaultIfEmpty( 0).Max( ) + 10)`
+`( obj.Product.Pictures.Select( c => c.PictureNo).DefaultIfEmpty( 0).Max( ) + 1)`
 ### PictureSizeClass
 
 Specifies the relative picture size and usage. S=Small picture (thumbnail), L=Large picture (full size), null=unspecified.

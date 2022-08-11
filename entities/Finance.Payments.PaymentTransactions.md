@@ -682,10 +682,10 @@ _Category_: **System**
 _Supported Filters_: **Equals, EqualsIn**  
 
 _Back-End Default Expression:_  
-`obj.Transaction.Query( ).OnlyIfSingle( op => ( ( ( ( ( op.PosLocation == obj.PosLocation) AndAlso ( op.User == obj.Transaction.CurrentUser)) AndAlso op.IsActive) AndAlso ( op.StartingDate <= DateTime.Today)) AndAlso Convert( op.TerminationDate, Object).GreaterEqualNull( Convert( DateTime.Today, Object))))`
+`obj.Transaction.Query( ).OnlyIfSingle( op => ( ( ( ( ( op.PosLocation == obj.PosLocation) AndAlso ( op.User == obj.Transaction.CurrentUser.ToSecurityUser( ))) AndAlso op.IsActive) AndAlso ( op.StartingDate <= DateTime.Today)) AndAlso Convert( op.TerminationDate, Object).GreaterEqualNull( Convert( DateTime.Today, Object))))`
 
 _Front-End Recalc Expressions:_  
-`obj.Transaction.Query( ).OnlyIfSingle( op => ( ( ( ( ( op.PosLocation == obj.PosLocation) AndAlso ( op.User == obj.Transaction.CurrentUser)) AndAlso op.IsActive) AndAlso ( op.StartingDate <= DateTime.Today)) AndAlso Convert( op.TerminationDate, Object).GreaterEqualNull( Convert( DateTime.Today, Object))))`
+`obj.Transaction.Query( ).OnlyIfSingle( op => ( ( ( ( ( op.PosLocation == obj.PosLocation) AndAlso ( op.User == obj.Transaction.CurrentUser.ToSecurityUser( ))) AndAlso op.IsActive) AndAlso ( op.StartingDate <= DateTime.Today)) AndAlso Convert( op.TerminationDate, Object).GreaterEqualNull( Convert( DateTime.Today, Object))))`
 ### PrimeCauseDocument
 
 The document that is the prime cause for creation of the current document. `Filter(multi eq)` (Inherited from [Documents](General.Documents.md))

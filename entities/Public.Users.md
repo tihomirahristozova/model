@@ -23,39 +23,67 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Email](Public.Users.md#email) | string (254) | Unique email of the user. Can be null because there may be login providers that don't use emails. `Required` `Filter(eq;like)` 
-| [Name](Public.Users.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | The full name of the user. `Required` `Filter(eq;like)` 
-| [UserId](Public.Users.md#userid) | guid |  
+| [Email](Public.Users.md#email) | string (254) __nullable__ | Unique email of the user. Can be null because there may be login providers that don't use emails. `Filter(multi eq;like)` `Inherited from Sec_Users_Table.Email` 
+| [IsAdmin](Public.Users.md#isadmin) | boolean | True if the user is administrator, otherwise false. `Required` `Default(false)` `Filter(eq)` `Inherited from Sec_Users_Table.Is_Admin` 
+| [Login](Public.Users.md#login) | string (64) | The login name of the user, which is usually the email. `Required` `Filter(multi eq;like)` `Inherited from Sec_Users_Table.Login` 
+| [Name](Public.Users.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | The full name of the user. `Required` `Filter(like)` `Inherited from Sec_Users_Table.User_Name` 
+| [UserId](Public.Users.md#userid) | guid | The Id of the security user. `Required` `Filter(multi eq)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Person](Public.Users.md#person) | [Persons](General.Contacts.Persons.md) | The person from within the system, which is authenticated with this login. null means that this user is not associated with a person record in the database. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Cm_Persons_Table.Person_Id` |
+| [Person](Public.Users.md#person) | [Persons](General.Contacts.Persons.md) (nullable) | The person from within the system, which is authenticated with this login. null means that this user is not associated with a person record in the database. `Filter(multi eq)` `Inherited from Sec_Users_Table.Person_Id` |
 
 
 ## Attribute Details
 
 ### Email
 
-Unique email of the user. Can be null because there may be login providers that don't use emails. `Required` `Filter(eq;like)`
+Unique email of the user. Can be null because there may be login providers that don't use emails. `Filter(multi eq;like)` `Inherited from Sec_Users_Table.Email`
 
-_Type_: **string (254)**  
+_Type_: **string (254) __nullable__**  
 _Category_: **System**  
-_Supported Filters_: **Equals, Like**  
+_Inherited From_: **Sec_Users_Table.Email**  
+_Supported Filters_: **Equals, Like, EqualsIn**  
 _Supports Order By_: **False**  
 _Maximum Length_: **254**  
 
+### IsAdmin
+
+True if the user is administrator, otherwise false. `Required` `Default(false)` `Filter(eq)` `Inherited from Sec_Users_Table.Is_Admin`
+
+_Type_: **boolean**  
+_Category_: **System**  
+_Inherited From_: **Sec_Users_Table.Is_Admin**  
+_Supported Filters_: **Equals**  
+_Supports Order By_: **False**  
+_Default Value_: **False**  
+
+### Login
+
+The login name of the user, which is usually the email. `Required` `Filter(multi eq;like)` `Inherited from Sec_Users_Table.Login`
+
+_Type_: **string (64)**  
+_Category_: **System**  
+_Inherited From_: **Sec_Users_Table.Login**  
+_Supported Filters_: **Equals, Like, EqualsIn**  
+_Supports Order By_: **False**  
+_Maximum Length_: **64**  
+
 ### Name
 
-The full name of the user. `Required` `Filter(eq;like)`
+The full name of the user. `Required` `Filter(like)` `Inherited from Sec_Users_Table.User_Name`
 
 _Type_: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 _Category_: **System**  
-_Supported Filters_: **Equals, Like**  
+_Inherited From_: **Sec_Users_Table.User_Name**  
+_Supported Filters_: **Like**  
 _Supports Order By_: **False**  
 
 ### UserId
+
+The Id of the security user. `Required` `Filter(multi eq)`
 
 _Type_: **guid**  
 _Category_: **System**  
@@ -66,13 +94,12 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### Person
 
-The person from within the system, which is authenticated with this login. null means that this user is not associated with a person record in the database. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Cm_Persons_Table.Person_Id`
+The person from within the system, which is authenticated with this login. null means that this user is not associated with a person record in the database. `Filter(multi eq)` `Inherited from Sec_Users_Table.Person_Id`
 
-_Type_: **[Persons](General.Contacts.Persons.md)**  
+_Type_: **[Persons](General.Contacts.Persons.md) (nullable)**  
 _Category_: **System**  
-_Inherited From_: **Cm_Persons_Table.Person_Id**  
+_Inherited From_: **Sec_Users_Table.Person_Id**  
 _Supported Filters_: **Equals, EqualsIn**  
-_Default Value_: **NewGuid**  
 
 
 ## API Methods

@@ -173,9 +173,9 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>Equals</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Back-End Default Expression:</em><br>
-<code>( obj.SalesOrder.PromotionalPackages.Select( c =&gt; c.LineNumber).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
+<code>( obj.SalesOrder.PromotionalPackages.Select( c =&gt; c.LineNumber).DefaultIfEmpty( 0).Max( ) + 1)</code></p>
 <p><em>Front-End Recalc Expressions:</em><br>
-<code>( obj.SalesOrder.PromotionalPackages.Select( c =&gt; c.LineNumber).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
+<code>( obj.SalesOrder.PromotionalPackages.Select( c =&gt; c.LineNumber).DefaultIfEmpty( 0).Max( ) + 1)</code></p>
 <h3 id="numberofpackages">NumberOfPackages</h3>
 <p>Number of packages sold. <code>Required</code> <code>Default(0)</code></p>
 <p><em>Type</em>: <strong>int32</strong><br>

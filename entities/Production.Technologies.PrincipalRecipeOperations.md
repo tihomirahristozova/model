@@ -104,10 +104,10 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 
 _Back-End Default Expression:_  
-`( obj.PrincipalRecipe.Operations.Select( c => c.LineOrd).DefaultIfEmpty( 0).Max( ) + 10)`
+`( obj.PrincipalRecipe.Operations.Select( c => c.LineOrd).DefaultIfEmpty( 0).Max( ) + 1)`
 
 _Front-End Recalc Expressions:_  
-`( obj.PrincipalRecipe.Operations.Select( c => c.LineOrd).DefaultIfEmpty( 0).Max( ) + 10)`
+`( obj.PrincipalRecipe.Operations.Select( c => c.LineOrd).DefaultIfEmpty( 0).Max( ) + 1)`
 ### MinimumConcurrentStartTimeMinutes
 
 How many minutes after the start of the previous operation can this operation start. null means that this operation should wait the previous operation to finish before starting.

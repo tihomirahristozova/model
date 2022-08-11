@@ -70,10 +70,10 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 
 _Back-End Default Expression:_  
-`( obj.Account.RequiredProperties.Select( c => c.KeyOrder).DefaultIfEmpty( 0).Max( ) + 10)`
+`( obj.Account.RequiredProperties.Select( c => c.KeyOrder).DefaultIfEmpty( 0).Max( ) + 1)`
 
 _Front-End Recalc Expressions:_  
-`( obj.Account.RequiredProperties.Select( c => c.KeyOrder).DefaultIfEmpty( 0).Max( ) + 10)`
+`( obj.Account.RequiredProperties.Select( c => c.KeyOrder).DefaultIfEmpty( 0).Max( ) + 1)`
 ### KeyProperty
 
 Key properties particiate in forming the grouping key, which is the smallest unit of calculation for account balance. Non-key properties simply serve for comment and clarification purposes. `Required` `Default(true)` `Filter(eq)`

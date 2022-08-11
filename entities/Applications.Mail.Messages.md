@@ -43,7 +43,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [MailBoxFolder](Applications.Mail.Messages.md#mailboxfolder) | [BoxFolders](Applications.Mail.BoxFolders.md) |  |
+| [MailBoxFolder](Applications.Mail.Messages.md#mailboxfolder) | [BoxFolders](Applications.Mail.BoxFolders.md) | The folder where the message belongs. `Required` `Filter(multi eq)` |
 | [RelatedToParty](Applications.Mail.Messages.md#relatedtoparty) | [Parties](General.Contacts.Parties.md) (nullable) | The party id of the external participating (sender/receiver) party (customer, supplier, etc.) in this mail. null means that the email is still not related to any specific party. `Filter(multi eq)` |
 
 ## Child Collections
@@ -194,6 +194,8 @@ _Maximum Length_: **2048**
 ## Reference Details
 
 ### MailBoxFolder
+
+The folder where the message belongs. `Required` `Filter(multi eq)`
 
 _Type_: **[BoxFolders](Applications.Mail.BoxFolders.md)**  
 _Indexed_: **True**  

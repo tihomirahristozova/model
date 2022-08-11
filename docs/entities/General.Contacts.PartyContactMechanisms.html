@@ -229,9 +229,9 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Back-End Default Expression:</em><br>
-<code>( obj.Party.ContactMechanisms.Select( c =&gt; c.LineOrd).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
+<code>( obj.Party.ContactMechanisms.Select( c =&gt; c.LineOrd).DefaultIfEmpty( 0).Max( ) + 1)</code></p>
 <p><em>Front-End Recalc Expressions:</em><br>
-<code>( obj.Party.ContactMechanisms.Select( c =&gt; c.LineOrd).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
+<code>( obj.Party.ContactMechanisms.Select( c =&gt; c.LineOrd).DefaultIfEmpty( 0).Max( ) + 1)</code></p>
 <h3 id="nonsolicitation">NonSolicitation</h3>
 <p>If true then Don't use the mechanism for solicitation purposes. <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></p>
 <p><em>Type</em>: <strong>boolean</strong><br>

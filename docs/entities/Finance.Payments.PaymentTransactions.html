@@ -976,9 +976,9 @@ Enumeration of document system states<br>
 <em>Category</em>: <strong>System</strong><br>
 <em>Supported Filters</em>: <strong>Equals, EqualsIn</strong></p>
 <p><em>Back-End Default Expression:</em><br>
-<code>obj.Transaction.Query( ).OnlyIfSingle( op =&gt; ( ( ( ( ( op.PosLocation == obj.PosLocation) AndAlso ( op.User == obj.Transaction.CurrentUser)) AndAlso op.IsActive) AndAlso ( op.StartingDate &lt;= DateTime.Today)) AndAlso Convert( op.TerminationDate, Object).GreaterEqualNull( Convert( DateTime.Today, Object))))</code></p>
+<code>obj.Transaction.Query( ).OnlyIfSingle( op =&gt; ( ( ( ( ( op.PosLocation == obj.PosLocation) AndAlso ( op.User == obj.Transaction.CurrentUser.ToSecurityUser( ))) AndAlso op.IsActive) AndAlso ( op.StartingDate &lt;= DateTime.Today)) AndAlso Convert( op.TerminationDate, Object).GreaterEqualNull( Convert( DateTime.Today, Object))))</code></p>
 <p><em>Front-End Recalc Expressions:</em><br>
-<code>obj.Transaction.Query( ).OnlyIfSingle( op =&gt; ( ( ( ( ( op.PosLocation == obj.PosLocation) AndAlso ( op.User == obj.Transaction.CurrentUser)) AndAlso op.IsActive) AndAlso ( op.StartingDate &lt;= DateTime.Today)) AndAlso Convert( op.TerminationDate, Object).GreaterEqualNull( Convert( DateTime.Today, Object))))</code></p>
+<code>obj.Transaction.Query( ).OnlyIfSingle( op =&gt; ( ( ( ( ( op.PosLocation == obj.PosLocation) AndAlso ( op.User == obj.Transaction.CurrentUser.ToSecurityUser( ))) AndAlso op.IsActive) AndAlso ( op.StartingDate &lt;= DateTime.Today)) AndAlso Convert( op.TerminationDate, Object).GreaterEqualNull( Convert( DateTime.Today, Object))))</code></p>
 <h3 id="primecausedocument">PrimeCauseDocument</h3>
 <p>The document that is the prime cause for creation of the current document. <code>Filter(multi eq)</code> (Inherited from <a href="General.Documents.html">Documents</a>)</p>
 <p><em>Type</em>: <strong><a href="General.Documents.html">Documents</a> (nullable)</strong><br>

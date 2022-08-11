@@ -160,10 +160,10 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 
 _Back-End Default Expression:_  
-`( obj.Template.Lines.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)`
+`( obj.Template.Lines.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 1)`
 
 _Front-End Recalc Expressions:_  
-`( obj.Template.Lines.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)`
+`( obj.Template.Lines.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 1)`
 ### Multiplier
 
 Factor by which the amount from the source will be multiplied. `Required` `Default(1)`

@@ -16,7 +16,7 @@ A planned task (operation) in a warehouse order. Entity: Wms_Warehouse_Order_Lin
 
 | Name | Type | Description |
 | - | - | --- |
-|[Line_Group_No](#line_group_no)|`int` |Line group number. Used to indicate which lines are part of the same group e.g. group of components of the same composite product.|
+|[Line_Group_No](#line_group_no)|`int` |Line group number. Indicates which lines are part of the same group e.g. group of components of the same composite product.|
 |[Line_No](#line_no)|`int` |Unique consecutive line number within the order.|
 |[Logistic_Unit_Id](#logistic_unit_id)|`uniqueidentifier` |Logistic unit, which should be used in the operation.|
 |[Lot_Id](#lot_id)|`uniqueidentifier` |The lot of the product, which should be used. NULL for operations, which are not lot-specific, or when any lot can be used.|
@@ -44,7 +44,7 @@ A planned task (operation) in a warehouse order. Entity: Wms_Warehouse_Order_Lin
 ### Line_Group_No
 
 
-Line group number. Used to indicate which lines are part of the same group e.g. group of components of the same composite product.
+Line group number. Indicates which lines are part of the same group e.g. group of components of the same composite product.
 
 | Property | Value |
 | - | - |

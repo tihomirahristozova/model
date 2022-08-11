@@ -309,9 +309,9 @@ Allowed values for the <code>AmountCondition</code>(Finance.Accounting.TemplateL
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Back-End Default Expression:</em><br>
-<code>( obj.Template.Lines.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
+<code>( obj.Template.Lines.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 1)</code></p>
 <p><em>Front-End Recalc Expressions:</em><br>
-<code>( obj.Template.Lines.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
+<code>( obj.Template.Lines.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 1)</code></p>
 <h3 id="multiplier">Multiplier</h3>
 <p>Factor by which the amount from the source will be multiplied. <code>Required</code> <code>Default(1)</code></p>
 <p><em>Type</em>: <strong>decimal (18, 6)</strong><br>

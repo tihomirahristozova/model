@@ -12,8 +12,10 @@ Public users profile data. Entity: Public_Users (Introduced in version 22.1.4.22
 | Name | Type | Description |
 | - | - | --- |
 |[Email](#email)|`nvarchar(254)` |Unique email of the user. Can be NULL because there may be login providers that don't use emails.|
+|[Is_Admin](#is_admin)|`bit` |1 if the user is administrator, otherwise 0.|
+|[Login](#login)|`nvarchar(64)` |The login name of the user, which is usually the email|
 |[Person_Id](#person_id)|`uniqueidentifier` |The person from within the system, which is authenticated with this login. NULL means that this user is not associated with a person record in the database.|
-|[User_Id](#user_id)|`uniqueidentifier` ||
+|[User_Id](#user_id)|`uniqueidentifier` |The Id of the security user|
 |[User_Name](#user_name)|`nvarchar(254)` `ML`|The full name of the user|
 
 ## Columns
@@ -41,14 +43,87 @@ Unique email of the user. Can be NULL because there may be login providers that 
 |RTF|no|
 |Sortable|no|
 |Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|nvarchar(254)|
+|Supports EQUALS_IN|yes|
+|Type|nvarchar(254) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
 |Visible|yes|
 
 #### Email - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
+|Like|None|no|no|
+
+### Is_Admin
+
+
+1 if the user is administrator, otherwise 0.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|False|
+|Enter Stop|no|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|bit|
+|UI Memo Editor|no|
+|UI Width|Short|
+|User Login|no|
+|Visible|yes|
+
+#### Is_Admin - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|no|no|
+
+### Login
+
+
+The login name of the user, which is usually the email
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|64|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|nvarchar(64)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Login - Supported Filters
 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
@@ -64,7 +139,7 @@ The person from within the system, which is authenticated with this login. NULL 
 | - | - |
 |Auto Complete|no|
 |Data Filter|no|
-|Default Value|NewGuid|
+|Default Value|None|
 |Enter Stop|yes|
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
@@ -75,11 +150,12 @@ The person from within the system, which is authenticated with this login. NULL 
 |Picture|no|
 |Primary Key|no|
 |Readonly|no|
+|Referenced Table|[Cm_Persons](Cm_Persons.md)|
 |RTF|no|
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|yes|
-|Type|uniqueidentifier|
+|Type|uniqueidentifier (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -89,9 +165,12 @@ The person from within the system, which is authenticated with this login. NULL 
 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|`NULL`|no|no|
+|Equals|`NULL`|yes|no|
 
 ### User_Id
+
+
+The Id of the security user
 
 | Property | Value |
 | - | - |
@@ -158,7 +237,6 @@ The full name of the user
 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|`NULL`|no|no|
 |Like|None|no|no|
 
 

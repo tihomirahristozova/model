@@ -27,7 +27,7 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [DisplayText](Logistics.Wms.WarehouseOrderLines.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 | [Id](Logistics.Wms.WarehouseOrderLines.md#id) | guid |  
-| [LineGroupNo](Logistics.Wms.WarehouseOrderLines.md#linegroupno) | int32 | Line group number. Used to indicate which lines are part of the same group e.g. group of components of the same composite product. `Required` `Default(1)` `Filter(eq;ge;le)` `Introduced in version 23.1.0.67` 
+| [LineGroupNo](Logistics.Wms.WarehouseOrderLines.md#linegroupno) | int32 | Line group number. Indicates which lines are part of the same group e.g. group of components of the same composite product. `Required` `Default(1)` `Filter(eq;ge;le)` `Introduced in version 23.1.0.67` 
 | [LineNo](Logistics.Wms.WarehouseOrderLines.md#lineno) | int32 | Unique consecutive line number within the order. `Required` `Filter(eq)` 
 | [Notes](Logistics.Wms.WarehouseOrderLines.md#notes) | string (max) __nullable__ | Notes for this WarehouseOrderLine. 
 | [ObjectVersion](Logistics.Wms.WarehouseOrderLines.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
@@ -77,7 +77,7 @@ _Default Value_: **NewGuid**
 
 ### LineGroupNo
 
-Line group number. Used to indicate which lines are part of the same group e.g. group of components of the same composite product. `Required` `Default(1)` `Filter(eq;ge;le)` `Introduced in version 23.1.0.67`
+Line group number. Indicates which lines are part of the same group e.g. group of components of the same composite product. `Required` `Default(1)` `Filter(eq;ge;le)` `Introduced in version 23.1.0.67`
 
 _Type_: **int32**  
 _Category_: **System**  

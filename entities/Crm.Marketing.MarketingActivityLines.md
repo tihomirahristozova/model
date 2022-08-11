@@ -114,10 +114,10 @@ _Supported Filters_: **Equals**
 _Supports Order By_: **False**  
 
 _Back-End Default Expression:_  
-`( obj.MarketingActivity.Lines.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)`
+`( obj.MarketingActivity.Lines.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 1)`
 
 _Front-End Recalc Expressions:_  
-`( obj.MarketingActivity.Lines.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)`
+`( obj.MarketingActivity.Lines.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 1)`
 ### Notes
 
 Notes for this MarketingActivityLine.

@@ -19,8 +19,8 @@ The details of the movement of each excise product for each excise document. Ent
 |[Excise_Administrative_Document_Id](#excise_administrative_document_id)|`uniqueidentifier` ||
 |[Excise_Administrative_Document_Line_Id](#excise_administrative_document_line_id)|`uniqueidentifier` `PK`||
 |[Excise_Alcoholic_Strength](#excise_alcoholic_strength)|`decimal(5, 2)` |The alcoholic strength, which will be used for Excise reporting purposes. NULL  if the product is not subject to alcoholic Excise reporting.|
-|[Excise_Amount](#excise_amount)|`decimal(14, 2)` ||
-|[Excise_Amount_Base](#excise_amount_base)|`decimal(14, 2)` ||
+|[Excise_Amount](#excise_amount)|`decimal(14, 2)` |The excise amount |
+|[Excise_Amount_Base](#excise_amount_base)|`decimal(14, 2)` |The excise amount in base currency|
 |[Excise_Duty_Rate_Id](#excise_duty_rate_id)|`uniqueidentifier` |The Duty rate specified by the taxation and customs authorities.|
 |[Excise_Duty_Rate_Value](#excise_duty_rate_value)|`decimal(10, 6)` |The rate which should be applied for the specified product and purpose. NULL means not assigned yet.|
 |[Excise_Product_Id](#excise_product_id)|`uniqueidentifier` |The Excise product code defined by the taxation and customs authorities.|
@@ -139,6 +139,9 @@ The alcoholic strength, which will be used for Excise reporting purposes. NULL  
 
 ### Excise_Amount
 
+
+The excise amount 
+
 | Property | Value |
 | - | - |
 |Auto Complete|no|
@@ -172,6 +175,9 @@ The alcoholic strength, which will be used for Excise reporting purposes. NULL  
 |GreaterThanOrLessThan|None|no|no|
 
 ### Excise_Amount_Base
+
+
+The excise amount in base currency
 
 | Property | Value |
 | - | - |

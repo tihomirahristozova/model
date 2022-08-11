@@ -222,9 +222,9 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>Equals, Like</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Back-End Default Expression:</em><br>
-<code>( obj.Product.Pictures.Select( c =&gt; c.PictureNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
+<code>( obj.Product.Pictures.Select( c =&gt; c.PictureNo).DefaultIfEmpty( 0).Max( ) + 1)</code></p>
 <p><em>Front-End Recalc Expressions:</em><br>
-<code>( obj.Product.Pictures.Select( c =&gt; c.PictureNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
+<code>( obj.Product.Pictures.Select( c =&gt; c.PictureNo).DefaultIfEmpty( 0).Max( ) + 1)</code></p>
 <h3 id="picturesizeclass">PictureSizeClass</h3>
 <p>Specifies the relative picture size and usage. S=Small picture (thumbnail), L=Large picture (full size), null=unspecified.</p>
 <p><em>Type</em>: <strong><a href="General.Products.ProductPictures.html#picturesizeclass">PictureSizeClass</a> <strong>nullable</strong></strong><br>

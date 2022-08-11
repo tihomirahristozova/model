@@ -66,10 +66,10 @@ _Supported Filters_: **GreaterThanOrLessThan**
 _Supports Order By_: **False**  
 
 _Back-End Default Expression:_  
-`( obj.DocumentType.UserStatuses.Select( c => c.DisplayOrder).DefaultIfEmpty( 0).Max( ) + 10)`
+`( obj.DocumentType.UserStatuses.Select( c => c.DisplayOrder).DefaultIfEmpty( 0).Max( ) + 1)`
 
 _Front-End Recalc Expressions:_  
-`( obj.DocumentType.UserStatuses.Select( c => c.DisplayOrder).DefaultIfEmpty( 0).Max( ) + 10)`
+`( obj.DocumentType.UserStatuses.Select( c => c.DisplayOrder).DefaultIfEmpty( 0).Max( ) + 1)`
 ### DisplayText
 
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.

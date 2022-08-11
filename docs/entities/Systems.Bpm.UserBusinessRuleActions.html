@@ -186,9 +186,9 @@ Aggregate Root:<br>
 <em>Supported Filters</em>: <strong>NotFilterable</strong><br>
 <em>Supports Order By</em>: <strong>False</strong></p>
 <p><em>Back-End Default Expression:</em><br>
-<code>( obj.UserBusinessRule.Actions.Select( c =&gt; c.ActionNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
+<code>( obj.UserBusinessRule.Actions.Select( c =&gt; c.ActionNo).DefaultIfEmpty( 0).Max( ) + 1)</code></p>
 <p><em>Front-End Recalc Expressions:</em><br>
-<code>( obj.UserBusinessRule.Actions.Select( c =&gt; c.ActionNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
+<code>( obj.UserBusinessRule.Actions.Select( c =&gt; c.ActionNo).DefaultIfEmpty( 0).Max( ) + 1)</code></p>
 <h3 id="actiontype">ActionType</h3>
 <p>Specifies the type of action to perform. <code>Required</code></p>
 <p><em>Type</em>: <strong><a href="Systems.Bpm.UserBusinessRuleActions.html#actiontype">ActionType</a></strong><br>

@@ -17,7 +17,7 @@ Represents email messages. Entity: Mail_Messages
 |[From_Email_Address](#from_email_address)|`nvarchar(512)` |Sending email address|
 |[Is_Encrypted](#is_encrypted)|`bit` |1 when the message is stored in encrypted format|
 |[Is_Read](#is_read)|`bit` |1 when the message was read by the user|
-|[Mail_Box_Folder_Id](#mail_box_folder_id)|`uniqueidentifier` ||
+|[Mail_Box_Folder_Id](#mail_box_folder_id)|`uniqueidentifier` |The folder where the message belongs|
 |[Mail_Message_Id](#mail_message_id)|`uniqueidentifier` `PK`||
 |[Received_Date_Time](#received_date_time)|`datetime` |Date and time when the message was received|
 |[Related_To_Party_Id](#related_to_party_id)|`uniqueidentifier` |The party id of the external participating (sender/receiver) party (customer, supplier, etc.) in this mail. NULL means that the email is still not related to any specific party|
@@ -240,6 +240,9 @@ Sending email address
 |Equals|`NULL`|no|no|
 
 ### Mail_Box_Folder_Id
+
+
+The folder where the message belongs
 
 | Property | Value |
 | - | - |

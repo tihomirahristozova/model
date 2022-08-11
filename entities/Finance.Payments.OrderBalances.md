@@ -5,7 +5,7 @@ uid: Finance.Payments.OrderBalances
 
 **Namespace:** [Finance.Payments](Finance.Payments.md)  
 
-Represents the payment orders with their covered amounts. Entity: Cash_Payment_Balances_View
+Represents the payment orders with their covered amounts. Entity: Cash_Payment_Balances_View (Introduced in version 23.1.0.79)
 
 ## Default Visualization
 Default Display Text Format:  
@@ -24,29 +24,29 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Direction](Finance.Payments.OrderBalances.md#direction) | [Direction](Finance.Payments.OrderBalances.md#direction) | I for Payment issue, R for payment receipt. `Required` `Default("I")` `Filter(eq)` `Inherited from Cash_Payment_Orders_Table.Direction` 
-| [DueDate](Finance.Payments.OrderBalances.md#duedate) | datetime __nullable__ | End date on which the payment is executable. null means that the payment is executable at all times. `Filter(eq;ge;le)` `Inherited from Cash_Payment_Orders_Table.Due_Date` 
-| [DueStartDate](Finance.Payments.OrderBalances.md#duestartdate) | date __nullable__ | Initial date on which the payment is executable. null means that the payment is executable at all times. `Filter(eq;ge;le)` `Inherited from Cash_Payment_Orders_Table.Due_Start_Date` 
+| [DueDate](Finance.Payments.OrderBalances.md#duedate) | datetime __nullable__ | The due date of the payment. null means there is no due date. `Filter(eq;ge;le)` `Inherited from Cash_Payment_Orders_Table.Due_Date` 
+| [DueStartDate](Finance.Payments.OrderBalances.md#duestartdate) | date __nullable__ | The date at which the payment becomes executable. null means the payment is executable at all times. `Filter(eq;ge;le)` `Inherited from Cash_Payment_Orders_Table.Due_Start_Date` 
 | [IsInvoiced](Finance.Payments.OrderBalances.md#isinvoiced) | boolean | When Is_Invoiced = true, then in the view results will be included only the Payment Orders which do have a RefInvoiceDocument. If Is_Invoiced = false, then in the view results will be included only the Payment Orders which do NOT have a RefInvoiceDocument. `Required` `Filter(multi eq)` 
-| [OrderAmount](Finance.Payments.OrderBalances.md#orderamount) | [Amount (18, 2)](../data-types.md#amount) | Total amount that should be payed. `Currency: Currency` `Required` `Default(0)` `Filter(eq;ge;le)` `Inherited from Cash_Payment_Orders_Table.Total_Amount` 
+| [OrderAmount](Finance.Payments.OrderBalances.md#orderamount) | [Amount (18, 2)](../data-types.md#amount) | The total amount of the payment order. `Currency: Currency` `Required` `Default(0)` `Filter(eq;ge;le)` `Inherited from Cash_Payment_Orders_Table.Total_Amount` 
 | [PaidAmount](Finance.Payments.OrderBalances.md#paidamount) | [Amount (38, 2)](../data-types.md#amount) | The paid amount. Taken from released payment transactions. `Currency: Currency` `Required` 
 | [RefDocumentDate](Finance.Payments.OrderBalances.md#refdocumentdate) | datetime __nullable__ | The date of the original document. null means that it is unknown. `Filter(eq)` `Inherited from Cash_Payment_Orders_Table.Ref_Document_Date` 
 | [RefDocumentNo](Finance.Payments.OrderBalances.md#refdocumentno) | string (20) | The number of the document which has created the payment order and is the basis for the payment. `Required` `Filter(eq)` `Inherited from Cash_Payment_Orders_Table.Ref_Document_No` 
-| [RefInvoiceDocumentDate](Finance.Payments.OrderBalances.md#refinvoicedocumentdate) | datetime __nullable__ | The date of the related invoice. Not specified when the payment order isn't related to any invoice or the date is unknown. `Filter(eq;ge;le)` `Inherited from Cash_Payment_Orders_Table.Ref_Invoice_Document_Date` 
-| [RefInvoiceDocumentNo](Finance.Payments.OrderBalances.md#refinvoicedocumentno) | string (20) __nullable__ | The number of the invoice which has created or is related to the payment order and is the basis for the payment. Not specified when the payment order isn't created or related to any invoice. `Filter(eq)` `Inherited from Cash_Payment_Orders_Table.Ref_Invoice_Document_No` 
+| [RefInvoiceDocumentDate](Finance.Payments.OrderBalances.md#refinvoicedocumentdate) | datetime __nullable__ | The date of the related invoice. null means that the payment order isn't related to any invoice or the date is unknown. `Filter(eq;ge;le)` `Inherited from Cash_Payment_Orders_Table.Ref_Invoice_Document_Date` 
+| [RefInvoiceDocumentNo](Finance.Payments.OrderBalances.md#refinvoicedocumentno) | string (20) __nullable__ | The number of the invoice which has created or is related to the payment order and is the basis for the payment. null means that the payment order isn't created or related to any invoice. `Filter(eq)` `Inherited from Cash_Payment_Orders_Table.Ref_Invoice_Document_No` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Currency](Finance.Payments.OrderBalances.md#currency) | [Currencies](General.Currencies.md) | The currency of Total Amount. `Required` `Filter(multi eq)` `Inherited from Cash_Payment_Orders_Table.Total_Amount_Currency_Id` |
+| [Currency](Finance.Payments.OrderBalances.md#currency) | [Currencies](General.Currencies.md) | The currency of amounts. `Required` `Filter(multi eq)` `Inherited from Cash_Payment_Orders_Table.Total_Amount_Currency_Id` |
 | [EnterpriseCompany](Finance.Payments.OrderBalances.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company which issued the document. `Required` `Filter(multi eq)` `Inherited from Gen_Documents_Table.Enterprise_Company_Id` |
-| [LocationParty](Finance.Payments.OrderBalances.md#locationparty) | [Parties](General.Contacts.Parties.md) (nullable) | Location or sub-party of the main party in the payment order. `Filter(multi eq)` `Inherited from Cash_Payment_Orders_Table.Location_Party_Id` |
+| [LocationParty](Finance.Payments.OrderBalances.md#locationparty) | [Parties](General.Contacts.Parties.md) (nullable) | Location or sub-party of the Party_Id in the order. `Filter(multi eq)` `Inherited from Cash_Payment_Orders_Table.Location_Party_Id` |
 | [Party](Finance.Payments.OrderBalances.md#party) | [Parties](General.Contacts.Parties.md) | The party which is to pay or receive the amount. `Required` `Filter(multi eq)` `Inherited from Cash_Payment_Orders_Table.Party_Id` |
-| [PaymentOrder](Finance.Payments.OrderBalances.md#paymentorder) | [PaymentOrders](Finance.Payments.PaymentOrders.md) |  |
-| [RefDocument](Finance.Payments.OrderBalances.md#refdocument) | [Documents](General.Documents.md) (nullable) | The document which is the basis for the payment order. If this column is filled then 'Ref document type', 'Ref document no' and 'Ref document date' must be equal to the type, number and date of the specified document. `Filter(multi eq)` `Inherited from Cash_Payment_Orders_Table.Ref_Document_Id` |
+| [PaymentOrder](Finance.Payments.OrderBalances.md#paymentorder) | [PaymentOrders](Finance.Payments.PaymentOrders.md) | The payment order. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Cash_Payment_Orders_Table.Payment_Order_Id` |
+| [RefDocument](Finance.Payments.OrderBalances.md#refdocument) | [Documents](General.Documents.md) (nullable) | The document which has created the payment order and is the basis for the payment. If this column is filled then Ref_Document_Type_Id, Ref_Document_No and Ref_Document_Date must be equal to the type, number and date of the specified document. `Filter(multi eq)` `Inherited from Cash_Payment_Orders_Table.Ref_Document_Id` |
 | [RefDocumentType](Finance.Payments.OrderBalances.md#refdocumenttype) | [DocumentTypes](General.DocumentTypes.md) | The type of the document which has created the payment order and is the basis for the payment. `Required` `Filter(multi eq)` `Inherited from Cash_Payment_Orders_Table.Ref_Document_Type_Id` |
 | [RefInvoiceDocument](Finance.Payments.OrderBalances.md#refinvoicedocument) | [Documents](General.Documents.md) (nullable) | The invoice document which has created or is related to the payment order and is the basis for the payment. null means that the payment order isn't created or related to any invoice or the invoice isn't present in the database. If this column is filled then Ref_Invoice_Document_<br />Type_Id, Ref_Invoice_Document_No and Ref_Invoice_Document_Date must be equal to the type, number and date of the specified invoice document. `Filter(multi eq)` `Inherited from Cash_Payment_Orders_Table.Ref_Invoice_Document_Id` |
-| [RefInvoiceDocumentType](Finance.Payments.OrderBalances.md#refinvoicedocumenttype) | [DocumentTypes](General.DocumentTypes.md) (nullable) | The document type of the invoice which has created or is related to the payment order and is the basis for the payment. Not specified when the payment order isn't created or related to any invoice. `Filter(multi eq)` `Inherited from Cash_Payment_Orders_Table.Ref_Invoice_Document_<br />Type_Id` |
+| [RefInvoiceDocumentType](Finance.Payments.OrderBalances.md#refinvoicedocumenttype) | [DocumentTypes](General.DocumentTypes.md) (nullable) | The document type of the invoice which has created or is related to the payment order and is the basis for the payment. null means that the payment order isn't created or related to any invoice. `Filter(multi eq)` `Inherited from Cash_Payment_Orders_Table.Ref_Invoice_Document_<br />Type_Id` |
 
 
 ## Attribute Details
@@ -72,7 +72,7 @@ _Default Value_: **Expense**
 
 ### DueDate
 
-End date on which the payment is executable. null means that the payment is executable at all times. `Filter(eq;ge;le)` `Inherited from Cash_Payment_Orders_Table.Due_Date`
+The due date of the payment. null means there is no due date. `Filter(eq;ge;le)` `Inherited from Cash_Payment_Orders_Table.Due_Date`
 
 _Type_: **datetime __nullable__**  
 _Category_: **System**  
@@ -82,7 +82,7 @@ _Supports Order By_: **False**
 
 ### DueStartDate
 
-Initial date on which the payment is executable. null means that the payment is executable at all times. `Filter(eq;ge;le)` `Inherited from Cash_Payment_Orders_Table.Due_Start_Date`
+The date at which the payment becomes executable. null means the payment is executable at all times. `Filter(eq;ge;le)` `Inherited from Cash_Payment_Orders_Table.Due_Start_Date`
 
 _Type_: **date __nullable__**  
 _Category_: **System**  
@@ -101,7 +101,7 @@ _Supports Order By_: **False**
 
 ### OrderAmount
 
-Total amount that should be payed. `Currency: Currency` `Required` `Default(0)` `Filter(eq;ge;le)` `Inherited from Cash_Payment_Orders_Table.Total_Amount`
+The total amount of the payment order. `Currency: Currency` `Required` `Default(0)` `Filter(eq;ge;le)` `Inherited from Cash_Payment_Orders_Table.Total_Amount`
 
 _Type_: **[Amount (18, 2)](../data-types.md#amount)**  
 _Category_: **System**  
@@ -152,7 +152,7 @@ _Front-End Recalc Expressions:_
 `obj.RefDocument.DocumentNo`
 ### RefInvoiceDocumentDate
 
-The date of the related invoice. Not specified when the payment order isn't related to any invoice or the date is unknown. `Filter(eq;ge;le)` `Inherited from Cash_Payment_Orders_Table.Ref_Invoice_Document_Date`
+The date of the related invoice. null means that the payment order isn't related to any invoice or the date is unknown. `Filter(eq;ge;le)` `Inherited from Cash_Payment_Orders_Table.Ref_Invoice_Document_Date`
 
 _Type_: **datetime __nullable__**  
 _Category_: **System**  
@@ -167,7 +167,7 @@ _Front-End Recalc Expressions:_
 `obj.RefInvoiceDocument.DocumentDate`
 ### RefInvoiceDocumentNo
 
-The number of the invoice which has created or is related to the payment order and is the basis for the payment. Not specified when the payment order isn't created or related to any invoice. `Filter(eq)` `Inherited from Cash_Payment_Orders_Table.Ref_Invoice_Document_No`
+The number of the invoice which has created or is related to the payment order and is the basis for the payment. null means that the payment order isn't created or related to any invoice. `Filter(eq)` `Inherited from Cash_Payment_Orders_Table.Ref_Invoice_Document_No`
 
 _Type_: **string (20) __nullable__**  
 _Category_: **System**  
@@ -186,7 +186,7 @@ _Front-End Recalc Expressions:_
 
 ### Currency
 
-The currency of Total Amount. `Required` `Filter(multi eq)` `Inherited from Cash_Payment_Orders_Table.Total_Amount_Currency_Id`
+The currency of amounts. `Required` `Filter(multi eq)` `Inherited from Cash_Payment_Orders_Table.Total_Amount_Currency_Id`
 
 _Type_: **[Currencies](General.Currencies.md)**  
 _Category_: **System**  
@@ -204,7 +204,7 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### LocationParty
 
-Location or sub-party of the main party in the payment order. `Filter(multi eq)` `Inherited from Cash_Payment_Orders_Table.Location_Party_Id`
+Location or sub-party of the Party_Id in the order. `Filter(multi eq)` `Inherited from Cash_Payment_Orders_Table.Location_Party_Id`
 
 _Type_: **[Parties](General.Contacts.Parties.md) (nullable)**  
 _Category_: **System**  
@@ -222,6 +222,8 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### PaymentOrder
 
+The payment order. `Required` `Default(New Guid)` `Filter(multi eq)` `Inherited from Cash_Payment_Orders_Table.Payment_Order_Id`
+
 _Type_: **[PaymentOrders](Finance.Payments.PaymentOrders.md)**  
 _Category_: **System**  
 _Inherited From_: **Cash_Payment_Orders_Table.Payment_Order_Id**  
@@ -230,7 +232,7 @@ _Default Value_: **NewGuid**
 
 ### RefDocument
 
-The document which is the basis for the payment order. If this column is filled then 'Ref document type', 'Ref document no' and 'Ref document date' must be equal to the type, number and date of the specified document. `Filter(multi eq)` `Inherited from Cash_Payment_Orders_Table.Ref_Document_Id`
+The document which has created the payment order and is the basis for the payment. If this column is filled then Ref_Document_Type_Id, Ref_Document_No and Ref_Document_Date must be equal to the type, number and date of the specified document. `Filter(multi eq)` `Inherited from Cash_Payment_Orders_Table.Ref_Document_Id`
 
 _Type_: **[Documents](General.Documents.md) (nullable)**  
 _Category_: **System**  
@@ -262,7 +264,7 @@ _Supported Filters_: **Equals, EqualsIn**
 
 ### RefInvoiceDocumentType
 
-The document type of the invoice which has created or is related to the payment order and is the basis for the payment. Not specified when the payment order isn't created or related to any invoice. `Filter(multi eq)` `Inherited from Cash_Payment_Orders_Table.Ref_Invoice_Document_Type_Id`
+The document type of the invoice which has created or is related to the payment order and is the basis for the payment. null means that the payment order isn't created or related to any invoice. `Filter(multi eq)` `Inherited from Cash_Payment_Orders_Table.Ref_Invoice_Document_Type_Id`
 
 _Type_: **[DocumentTypes](General.DocumentTypes.md) (nullable)**  
 _Category_: **System**  
