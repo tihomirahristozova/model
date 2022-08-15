@@ -185,6 +185,13 @@ _Domain API Request_: **POST**
     _Type_: string  
 
 
+### CreateCopy
+
+Duplicates the object and its child objects belonging to the same aggregate.              The duplicated objects are not saved to the data source but remain in the same transaction as the original object.  
+_Return Type_: **EntityObject**  
+_Declaring Type_: **EntityObject**  
+_Domain API Request_: **POST**  
+
 
 ## Business Rules
 

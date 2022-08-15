@@ -195,8 +195,6 @@ _Supported Filters_: **NotFilterable**
 _Supports Order By_: **False**  
 _Default Value_: **Constant**  
 
-_Front-End Recalc Expressions:_  
-`( obj.UnitPrice * obj.Quantity.Value).Round( )`
 ### LineNo
 
 Consecutive line number within the invoice. `Required`
@@ -484,6 +482,13 @@ _Domain API Request_: **POST**
     The subject.  
     _Type_: string  
 
+
+### CreateCopy
+
+Duplicates the object and its child objects belonging to the same aggregate.              The duplicated objects are not saved to the data source but remain in the same transaction as the original object.  
+_Return Type_: **EntityObject**  
+_Declaring Type_: **EntityObject**  
+_Domain API Request_: **POST**  
 
 
 ## Business Rules
